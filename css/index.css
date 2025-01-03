@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(245, 240, 235);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hr-between {
+  height: 3px;
+  background-color: rgb(233, 199, 105);
+  border: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: rgb(252, 252, 252);
+}
+
+.header .header-top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: rgb(233, 199, 105);
+}
+.header .header-top .logo .logo-img {
+  width: 80px;
+}
+
+main {
+  flex: 1;
+}
+main .main-block {
+  display: flex;
+}
+main .main-block .aside-left {
+  height: 900px;
+  width: 20%;
+  border-right: 3px solid rgb(233, 199, 105);
+}
+main .main-block .aside-left ul {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+main .main-block .aside-left ul li a {
+  font-size: 25px;
+}
+main .main-block .aside-left ul li a:hover {
+  color: red;
+}
+main .main-block .aside-main {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+}
+main .main-block .aside-main h2 {
+  padding: 20px 0 10px 0;
+}
+main .main-block .aside-main a {
+  line-height: 2.5rem;
+  text-decoration: underline;
+  color: blue;
+  font-size: 25px;
+}
+main .p-vars {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+main .p-vars a:hover {
+  text-decoration: underline;
+  color: red;
+}/*# sourceMappingURL=index.css.map */

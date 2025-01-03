@@ -1,0 +1,108 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    
+}
+
+$back-top-color:  rgb(233, 199, 105);
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: rgb(245, 240, 235);
+    display: flex;
+    flex-direction: column;
+    height: 100%;   
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hr-between{
+    height: 3px;
+    background-color: $back-top-color;
+    border: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: rgb(252, 252, 252);
+    
+}
+
+.header{   
+    .header-top{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background-color: $back-top-color; 
+        .logo{
+            .logo-img{
+                width: 80px;
+            }       
+        }      
+    }
+}
+
+main{
+    flex: 1;
+    .main-block{
+        display: flex;
+        
+        .aside-left{ 
+            height: 900px;
+            width: calc(100% - 80%);
+            border-right: 3px solid $back-top-color;
+            ul{
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                li{
+                    a{
+                        font-size: 25px;
+                    }
+                    a:hover{
+                        color: red;
+                    }
+                }
+            }         
+        }
+        .aside-main{
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 22px;
+            h2{
+                padding: 20px 0 10px 0;
+            }
+            a{
+                line-height: 2.5rem;
+                text-decoration:underline;
+                color: blue;
+                font-size: 25px;
+            }
+        }
+    }
+    
+    .p-vars{
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+        
+        a:hover{
+            text-decoration:underline;
+            color: red;
+        }
+    }
+}
