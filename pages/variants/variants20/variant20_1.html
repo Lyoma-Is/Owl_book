@@ -148,7 +148,7 @@
                 <b>1.</b> В одной из кодировок Unicode каждый символ кодируется <b>32 битами</b>.	При подготовке сообщения по истории математики Вова написал текст (в нём нет	
                 лишних пробелов):	 
                 <hr class="hr-pd_20">
-                «В математике до сих пор используются такие буквы греческого алфавита, как пи, кси, бета, гамма, лямбда, эпсилов».
+                «В математике до сих пор используются такие буквы греческого алфавита, как <em>пи, кси, бета, гамма, лямбда, эпсилон</em>».
                 <hr class="hr-pd_20">
                 Затем Вова удалил из списка название одной буквы, а также лишние запятую	
                 и пробел — два пробела не должны идти подряд.	
@@ -341,9 +341,9 @@
                       </tr>
                       <tr>
                           <td class="table-6_td">
-                              DIM k, s AS INTEGER<br>
+                              DIM t, s AS INTEGER<br>
                               &emsp;INPUT s<br>
-                              &emsp;INPUT k<br>
+                              &emsp;INPUT t<br>
                               &emsp;IF s <= 70 AND t < 80 THEN<br>
                               &emsp;&emsp;PRINT "YES"<br>
                               &emsp;ELSE<br>
@@ -352,10 +352,10 @@
                            </td>
 
                           <td class="table-6_td">
-                                var s, k: integer;<br>
+                                var s, t: integer;<br>
                                 begin <br>
                                 &emsp;readln(s);<br>
-                                &emsp;readln(k);<br>
+                                &emsp;readln(t);<br>
                                 &emsp;if s <= 70 и t < 80<br>
                                 &emsp;&emsp;then writeln ('YES')<br>
                                 &emsp;&emsp;else writeln ('NO')<br>
@@ -363,9 +363,9 @@
                           </td>
                           <td class="table-6_td">алг<br>
                             нач <br>
-                            цел s, k<br>
+                            цел s, t<br>
                             ввод s<br>
-                            ввод k<br>
+                            ввод t<br>
                             если (s <= 70) AND (t < 80)<br>
                             &emsp;то вывод "YES"<br>
                             &emsp;иначе вывод "NO"<br>
@@ -383,18 +383,18 @@
                         <td class="table-6_td" scope="row" colspan="2">#include <iostream><br>
                           using namespace std;<br>
                           int main() {<br>
-                          &emsp;int s, k;<br>
+                          &emsp;int s, t;<br>
                           &emsp;cin >> s;<br>
-                          &emsp;cin >> k;<br>
+                          &emsp;cin >> t;<br>
                           &emsp;if (s <= 70 && t < 80)<br>
                           &emsp;&emsp;cout << "YES";<br>
                               &emsp;else <br>
                               &emsp;&emsp;cout << "NO";<br>
-                                  &emsp;return 0;}<br>
+                                  &emsp;return 0;}
                          </td>
                         <td class="table-6_td">
                           s = int(input())<br>
-                          k = int(input())<br>
+                          t = int(input())<br>
                           if s <= 70 and t < 80:<br>
                           &emsp;print("YES")<br>
                           else:<br>
@@ -406,9 +406,9 @@
                   </tbody>
               </table>
               <hr class="hr-pd_20">
-              <p>Было проведено 10 запусков программы, при которых в качестве значений переменных в и ( вводились следующие пары чисел вида (s. t):	
+              <p>Было проведено 10 запусков программы, при которых в качестве значений переменных s и t вводились следующие пары чисел вида (s, t):	
               <hr class="hr-pd_20">      
-                  <span class="span-centr_6">(-10, 2): (-5, 85); (0, 29); (0, 77): (44, -4); (41, 105): (70, 60); (70, 80); (76, 200); (100, 100).</span>
+                  <span class="span-centr_6">(-10, 2); (-5, 85); (0, 29); (0, 77); (44, -4); (41, 105); (70, 60); (70, 80); (76, 200); (100, 100).</span>
               <hr class="hr-pd_20">
                   Сколько было запусков, при которых программа напечатала YES»?
               </p>
