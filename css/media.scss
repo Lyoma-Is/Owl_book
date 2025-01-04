@@ -95,7 +95,6 @@ $back-top-color:  rgb(233, 199, 105);
             }  
             .span-centr{
                 font-size: 25px;
-                padding: 0;
             }
             .span-centr_6{
                 font-size: 25px;
@@ -107,8 +106,7 @@ $back-top-color:  rgb(233, 199, 105);
                 font-size: 20px;
             }
             .img-task_9{
-                width: 350px;
-                padding-top: 15px;
+                width: 550px;
             }
             .answer-block{
                 .input_answer, .input_answer-green, .input_answer-red{
@@ -142,8 +140,7 @@ $back-top-color:  rgb(233, 199, 105);
             grid-template-columns: 1fr;
             }
         }//breadcrumb
-    } 
-
+} 
 
 @media (max-width: 800px){
     .container{
@@ -203,11 +200,9 @@ $back-top-color:  rgb(233, 199, 105);
         .slider-item{
             .span-centr{
                 font-size: 30px;
-                padding: 10px 0 0 0;
             }
             .span-centr_6{
                 font-size: 20px;
-
             }
             td{
                 font-size: 17px;
@@ -219,6 +214,9 @@ $back-top-color:  rgb(233, 199, 105);
            } 
             .table-6_td{
                 font-size: 15px;
+            }
+            .img-task_9{
+                width: 450px;
             }
             .answer-block{
                 .input_answer, .input_answer-green, .input_answer-red{
@@ -306,7 +304,6 @@ $back-top-color:  rgb(233, 199, 105);
             
             .span-centr{
                 font-size: 15px;
-                padding: 10px 0 0 0;
             }
             .span-centr_6{
                 font-size: 15px;
@@ -323,6 +320,9 @@ $back-top-color:  rgb(233, 199, 105);
             .table-6_td{
                 font-size: 10px;
                 line-height: 1rem;
+            }
+            .img-task_9{
+                width: 350px;
             }
             .answer-block{
                 margin-top: 20px;

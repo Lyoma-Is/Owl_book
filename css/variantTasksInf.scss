@@ -22,7 +22,7 @@ $back-top-color:  rgb(233, 199, 105);
             border: 1px solid;
             border-collapse: collapse;
             padding: 5px 15px;
-            margin: auto;
+            margin:  auto;
             text-align: center;
             
         }
@@ -38,7 +38,7 @@ $back-top-color:  rgb(233, 199, 105);
             display: block;
             text-align: center;
             font-size: 35px;
-            padding: 20px 0 0 0;
+            letter-spacing: 2px;
         }
         .span-centr_6{
             display: block;
@@ -49,12 +49,12 @@ $back-top-color:  rgb(233, 199, 105);
             text-align: left;
             line-height: 2rem;
             font-size: 25px;
+            vertical-align: top;
         }
         .img-task_9{
             display: block; 
             margin: auto;
-            width: 500px;
-            padding-top: 15px;
+            width: 650px;
         }  
         
         #button{

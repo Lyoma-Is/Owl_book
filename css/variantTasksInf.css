@@ -28,7 +28,7 @@
   display: block;
   text-align: center;
   font-size: 35px;
-  padding: 20px 0 0 0;
+  letter-spacing: 2px;
 }
 .slider .slider-item .span-centr_6 {
   display: block;
@@ -39,12 +39,12 @@
   text-align: left;
   line-height: 2rem;
   font-size: 25px;
+  vertical-align: top;
 }
 .slider .slider-item .img-task_9 {
   display: block;
   margin: auto;
-  width: 500px;
-  padding-top: 15px;
+  width: 650px;
 }
 .slider .slider-item #button {
   padding: 15px 25px;
