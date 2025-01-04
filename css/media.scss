@@ -19,6 +19,14 @@ $back-top-color:  rgb(233, 199, 105);
             }
         } 
     }//main
+
+    .slider{
+        .slider-item{
+            .span-centr{
+                padding: 0;
+            }
+        }
+    }
 }
 
 @media (max-width: 1000px){
@@ -87,6 +95,7 @@ $back-top-color:  rgb(233, 199, 105);
             }  
             .span-centr{
                 font-size: 25px;
+                padding: 0;
             }
             .span-centr_6{
                 font-size: 25px;
@@ -126,15 +135,14 @@ $back-top-color:  rgb(233, 199, 105);
 }
 
 @media (width: 1000px){
-    .breadcrumb {
-        
+    .breadcrumb {    
         font-size: 18px;
         .breadcrumb-item{
             display: grid;
             grid-template-columns: 1fr;
             }
-        }
-    } //breadcrumb
+        }//breadcrumb
+    } 
 
 
 @media (max-width: 800px){
@@ -195,9 +203,11 @@ $back-top-color:  rgb(233, 199, 105);
         .slider-item{
             .span-centr{
                 font-size: 30px;
+                padding: 10px 0 0 0;
             }
             .span-centr_6{
                 font-size: 20px;
+
             }
             td{
                 font-size: 17px;
@@ -274,11 +284,11 @@ $back-top-color:  rgb(233, 199, 105);
     .slider{
         .slider-item{
             .task-block__text{
-                font-size: 10px;
+                font-size: 12px;
                 line-height: 1.2rem;
             }
             .task-block{
-                font-size: 10px;
+                font-size: 12px;
                 line-height: 1.2rem;
                 margin-top: 20px;
             }
@@ -295,10 +305,11 @@ $back-top-color:  rgb(233, 199, 105);
             }
             
             .span-centr{
-                font-size: 12px;
+                font-size: 15px;
+                padding: 10px 0 0 0;
             }
             .span-centr_6{
-                font-size: 12px;
+                font-size: 15px;
             }
             td{
                 font-size: 10px;
@@ -314,6 +325,7 @@ $back-top-color:  rgb(233, 199, 105);
                 line-height: 1rem;
             }
             .answer-block{
+                margin-top: 20px;
                 .input_answer, .input_answer-green, .input_answer-red{
                     width: 75%;
                     margin-top: 2px;
@@ -332,14 +344,14 @@ $back-top-color:  rgb(233, 199, 105);
                 font-size: 15px;
             }
             .answer-block__ans{
-                // .answer_td{
-                //     padding: 10px;
-                //     font-size: 20px;
-                // }
-                // .answer_table-border{
-                //     padding: 10px;
-                //     font-size: 15px;
-                // }
+                .answer_td{
+                    width: 100px;
+                }
+                .answer_table-border{
+                    padding: 7px;
+                    font-size: 15px;
+                    
+                }
             }
 
         } //slider-item 
