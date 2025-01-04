@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -17,11 +18,6 @@ body {
 
 li {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
 
 .hr-between {
@@ -65,7 +61,7 @@ main .main-block .aside-left ul {
   padding: 20px;
 }
 main .main-block .aside-left ul li a {
-  font-size: 25px;
+  font-size: 24px;
 }
 main .main-block .aside-left ul li a:hover {
   color: red;

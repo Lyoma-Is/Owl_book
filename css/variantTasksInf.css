@@ -13,10 +13,9 @@
   font-size: 20px;
   border: 1px solid;
   border-collapse: collapse;
-  padding: 15px 20px;
+  padding: 5px 15px;
   margin: auto;
   text-align: center;
-  font-weight: 800;
 }
 .slider .slider-item .table-block {
   display: flex;
@@ -67,6 +66,7 @@
   justify-content: center;
   align-items: center;
   color: #020202;
+  text-decoration: none;
 }
 .slider .slider-item .answer-block .download a img {
   width: 50px;

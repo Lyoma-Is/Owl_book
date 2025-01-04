@@ -9,7 +9,7 @@ $back-top-color:  rgb(233, 199, 105);
             ul{
                 li{
                     a{
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
             }         
@@ -58,6 +58,9 @@ $back-top-color:  rgb(233, 199, 105);
     .breadcrumb {
         font-size: 18px;
         .breadcrumb-item{
+            display: grid;
+            grid-template-columns: 1fr;
+
             .last{
                 a{
                     font-size: 22px;    
@@ -99,7 +102,7 @@ $back-top-color:  rgb(233, 199, 105);
                 padding-top: 15px;
             }
             .answer-block{
-                .input_answer{
+                .input_answer, .input_answer-green, .input_answer-red{
                     width: 35%;
                 }
             } 
@@ -121,6 +124,18 @@ $back-top-color:  rgb(233, 199, 105);
     }
     
 }
+
+@media (width: 1000px){
+    .breadcrumb {
+        
+        font-size: 18px;
+        .breadcrumb-item{
+            display: grid;
+            grid-template-columns: 1fr;
+            }
+        }
+    } //breadcrumb
+
 
 @media (max-width: 800px){
     .container{
@@ -196,7 +211,7 @@ $back-top-color:  rgb(233, 199, 105);
                 font-size: 15px;
             }
             .answer-block{
-                .input_answer{
+                .input_answer, .input_answer-green, .input_answer-red{
                     width: 45%;
                 }
             }  
@@ -231,7 +246,21 @@ $back-top-color:  rgb(233, 199, 105);
         .p-vars{
             font-size: 15px;
         }
+        
     }//main
+
+    .breadcrumb {
+        font-size: 13px;
+        padding: 0;      
+        .breadcrumb-item{    
+            .last{
+                a{
+                    font-size: 15px;    
+                } 
+            }
+        }
+        
+    } //breadcrumb
 
     .vars-block{
         grid-template-columns: 1fr 1fr 1fr;  
@@ -245,65 +274,74 @@ $back-top-color:  rgb(233, 199, 105);
     .slider{
         .slider-item{
             .task-block__text{
-                font-size: 15px;
-                line-height: 1.5rem;
+                font-size: 10px;
+                line-height: 1.2rem;
             }
             .task-block{
-                font-size: 15px;
-                line-height: 1.5rem;
+                font-size: 10px;
+                line-height: 1.2rem;
+                margin-top: 20px;
             }
             .table-block{
                 display: block;
                 table{
                     margin-bottom: 15px;
-                    font-size: 15px;
+                    
                     td{
-                        padding: 5px 10px;
+                        font-size: 10px;
+                        padding: 4px;
                     }
                 }
             }
+            
             .span-centr{
-                font-size: 20px;
+                font-size: 12px;
             }
             .span-centr_6{
-                font-size: 24px;
+                font-size: 12px;
             }
             td{
-                font-size: 12px;
+                font-size: 10px;
                 padding: 1px 10px; 
             }
             .table-6_td_h{
                 padding: 5px;
-                font-size: 15px;
+                font-size: 10px;
+                line-height: 1rem;
            } 
             .table-6_td{
-                font-size: 15px;
+                font-size: 10px;
+                line-height: 1rem;
             }
             .answer-block{
-                .input_answer{
+                .input_answer, .input_answer-green, .input_answer-red{
                     width: 75%;
+                    margin-top: 2px;
                 }
-                .download{
-                    
-                    a{
-                        
+                .download{       
+                    a{     
                         align-items: start;
+                        font-size: 10px;
                         img{
-                            width: 40px;
+                            width: 30px;
                         }  
                     }  
                 }
             } 
-            .answer-block__ans{
-                .answer_td{
-                    padding: 10px;
-                    font-size: 20px;
-                }
-                .answer_table-border{
-                    padding: 10px;
-                    font-size: 15px;
-                }
+            .centerResult{
+                font-size: 15px;
             }
+            .answer-block__ans{
+                // .answer_td{
+                //     padding: 10px;
+                //     font-size: 20px;
+                // }
+                // .answer_table-border{
+                //     padding: 10px;
+                //     font-size: 15px;
+                // }
+            }
+
         } //slider-item 
         .slick-dots{
             button{

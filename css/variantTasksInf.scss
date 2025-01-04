@@ -15,15 +15,16 @@ $back-top-color:  rgb(233, 199, 105);
             padding-top: 30px;
             font-size: 25px; 
             line-height: 2.5rem;
+            //text-align: justify;
         }
         table, td {
             font-size: 20px;
             border: 1px solid;
             border-collapse: collapse;
-            padding: 15px 20px;
+            padding: 5px 15px;
             margin: auto;
             text-align: center;
-            font-weight: 800;
+            
         }
         .table-block{
             display: flex;
@@ -82,6 +83,7 @@ $back-top-color:  rgb(233, 199, 105);
                     justify-content: center;
                     align-items: center;
                     color: #020202;
+                    text-decoration: none;
                     img{
                         width: 50px;
                     }  

@@ -17,6 +17,8 @@ $back-top-color:  rgb(233, 199, 105);
         text-align: center;
         font-size: 22px;
         transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        color: black;
         cursor: pointer;
         &:hover{
             background-color: $back-top-color;
@@ -30,12 +32,18 @@ $back-top-color:  rgb(233, 199, 105);
 .breadcrumb {
     padding: 20px 30px;
     font-size: 20px;
+    
     .breadcrumb-item{
         display: flex;
+        
         li+li:before {
             padding: 10px;
             color: black;
             content: ">>";
+        }
+        a{
+            color: black;
+            text-decoration: none;
         }
         a:hover {
             color: red;

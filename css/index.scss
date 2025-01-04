@@ -2,8 +2,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
-    
+    box-sizing: border-box;
+    //font-family: 'Arial', sans-serif;  
+    font-family: 'Roboto', sans-serif;
+    //text-wrap: balance;
 }
 
 $back-top-color:  rgb(233, 199, 105);
@@ -21,10 +23,10 @@ body{
 li {
     list-style: none;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
+// a{
+//     text-decoration: none;
+//     color: black;
+// }
 
 .hr-between{
     height: 3px;
@@ -53,6 +55,7 @@ a{
             }       
         }      
     }
+    
 }
 
 main{
@@ -70,7 +73,8 @@ main{
                 padding: 20px;
                 li{
                     a{
-                        font-size: 25px;
+                        font-size: 24px;
+
                     }
                     a:hover{
                         color: red;
