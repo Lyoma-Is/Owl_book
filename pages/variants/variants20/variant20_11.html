@@ -24,7 +24,7 @@
               <li><a href="../../../index.html">Главная</a></li>
               <li><a href="../../../pages/pageOgeInf.html">Информатика ОГЭ</a></li>
               <li><a href="../../variants/variants20/pageOge20.html">Варианты от Крылова</a></li> 
-              <li class="last"><a href="../variants20/variant20_10.html">Вариант 10</a></li>
+              <li class="last"><a href="../variants20/variant20_11.html">Вариант 11</a></li>
             </ul>
           </section>
         </div>
@@ -148,19 +148,19 @@
            <!-- Zadanie 1 -->
           <div class="slider-item">
             <section class="task-block">
-              <p><b>1.</b> В кодировке KOI8-R каждый символ кодируется <b>8 битами</b>. 
+              <p><b>1.</b> В одной ка кодировок Unicode каждый символ кодируется <b>32 битами</b>. 
                 Ученик написал текст (в нём нет лишних пробелов):	
                 <hr class="hr-pd_20">
-                «Самыми известными поэтами -«шестидесятниками» являются <em>Юрий Визбор, Булат Окуджава, Белла Ахмадулина, Евгений Евтушенко, Андрей Вознесенский, Роберт Рождественский</em>».
+                «В русском языке используется много иностранных префиксой, например, <em>а-, ре-, суб-, анти-, гипер-, мульти-</em>».
                 <hr class="hr-pd_20">
-                Ученик полностью удалил из списка упоминание об одном из поэтов, а также	лишние запятую и пробел — два пробела не должны идти подряд.	
-                При этом размер нового предложения в данной кодировке оказался на <b>13 байт</b> 	
-                меньше, чем размер исходного предложения. Напишите в ответе фамилию удаленного автора (имя писать не нужно).
+                Ученик полностью удалил из списка один из префиксов, а также	лишние запятую и пробел — два пробела не должны идти подряд.	
+                При этом размер нового предложения в данной кодировке оказался на <b>24 байта</b> 	
+                меньше, чем размер исходного предложения. Напишите в ответе удаленный префикс (без знака дефиса).
             </p><br>        
             </section>
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="ВИЗБОР"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="СУБ"/>
               
             </section>
           </div>
@@ -170,32 +170,32 @@
             <section class="task-block">
               <p> <b>2.</b> От разведчика было получено сообщение:</p>
               <hr class="hr-pd_20">
-              <span class="span-centr">0111000100000101011010</span>
+              <span class="span-centr">1110111111101101101100</span>
               <hr class="hr-pd_20">
-              <p> В этом сообщении зашифрован пароль - последовательность русских букв. В пароле использовались только буквы А, Г, З, И, М, Н, Т; каждая буква	
+              <p> В этом сообщении зашифрован пароль - последовательность русских букв. В пароле использовались только буквы А, В, И, К, Л, С, У; каждая буква	
                 кодировалась двоичным словом по следующей таблице.</p>
               <hr class="hr-pd_20">
               <table>
                   <thead>
                       <tr class="tr__head">
                           <td>А</td>
-                          <td>Г</td>
-                          <td>З</td>
+                          <td>В</td>
                           <td>И</td>
-                          <td>М</td>
-                          <td>Н</td>
-                          <td>Т</td>
+                          <td>К</td>
+                          <td>Л</td>
+                          <td>С</td>
+                          <td>У</td>
                       </tr>
                   </thead>
                   <tbody>
                       <tr class="tr__body">
                           <td>00</td>
-                          <td>0100</td>
-                          <td>0101</td>
-                          <td>0110</td>
-                          <td>0111</td>
+                          <td>01</td>
                           <td>10</td>
-                          <td>11</td>
+                          <td>1100</td>
+                          <td>1101</td>
+                          <td>1110</td>
+                          <td>1111</td>
                       </tr>
                   </tbody>
               </table>
@@ -205,22 +205,22 @@
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="МАГАЗИН"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="СУСЛИК"/>
             </section>
           </div>
 
           <!-- Zadanie 3 -->
           <div class="slider-item">
             <section class="task-block">
-               <p><b>3.</b> Напишите наибольшее натуральное число x, для которого <b>истинно</b> высказывание:</p>
+               <p><b>3.</b> Напишите наименьшее натуральное число x, для которого <b>истинно</b> высказывание:</p>
                <hr class="hr-pd_20">
-               <span class="span-centr"> (x < 903) И <b>НЕ</b>(x чётное)</span> 
+               <span class="span-centr"> (x > 714) И <b>НЕ</b>(x нечётное)</span> 
                <hr class="hr-pd_20">  
             </section>
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="901"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="716"/>
             </section>
            
           </div>
@@ -243,25 +243,25 @@
                         <tr>
                             <td>A</td>
                             <td style="text-align: center; background-color: #ffbf80;"></td>
-                            <td>7</td>
-                            <td>4</td>
-                            <td>8</td>
+                            <td>17</td>
+                            <td>19</td>
+                            <td></td>
                             <td></td>
                             
                         </tr>
                         <tr>
                             <td>B</td>
-                            <td>7</td>
+                            <td>17</td>
                             <td style="text-align: center; background-color: #ffbf80;"></td>
-                            <td>3</td>
-                            <td></td>
-                            <td>9</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>8</td>
                             
                         </tr>
                         <tr>
                             <td>C</td>
-                            <td>4</td>
-                            <td>3</td>
+                            <td>19</td>
+                            <td>2</td>
                             <td style="text-align: center; background-color: #ffbf80;"></td>
                             <td></td>
                             <td>6</td>
@@ -269,19 +269,19 @@
                         </tr>
                         <tr>
                             <td>D</td>
-                            <td>8</td>
                             <td></td>
+                            <td>2</td>
                             <td></td>
                             <td style="text-align: center; background-color: #ffbf80;"></td>
-                            <td>10</td>
+                            <td>1</td>
                             
                         </tr>
                         <tr>
                             <td>E</td>
                             <td></td>
-                            <td>9</td>
+                            <td>8</td>
                             <td>6</td>
-                            <td>10</td>
+                            <td>1</td>
                             <td style="text-align: center; background-color: #ffbf80;"></td> 
                         </tr>
                     </tbody>
@@ -292,7 +292,7 @@
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="14"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="24"/>
             </section>
           </div>
           
@@ -301,28 +301,20 @@
             <section class="task-block">
               <p class="variant-text__inner"> <b>5.</b> У исполнителя Омега две команды, которым присвоены номера:
                 <hr class="hr-pd_10">
-                <b>1. обнули справа</b><br>
-                <b>2. увеличь на 12</b><br>
-          
+                <b>1. прибавь b</b><br>
+                <b>2. умножь на 4</b><br>
+                (b - неизвестное натуральное число).      
                 <hr class="hr-pd_10">
-                Первая из них заменяет цифру младшего разряда числа на 0, вторая увеличивает	
-                число на 12. Составьте алгоритм получения <b> из числа 15 числа 60</b>, содержащий	
-                не более 5 команд. В ответе запишите только номера команд.
-                <hr class="hr-pd_10">
-                (Например, 22121 - это алгоритм:	<br>
-                увеличь на 12	<br>
-                увеличь на 12	<br>
-                обнули справа	<br>
-                увеличь на 12	<br>
-                обнули справа	<br>
-                который преобразует число 1 в 30.)	<br>
-                Если таких алгоритмов более одного, то запишите любой из них.	
+                Выполняя первую из них, Омега увеличивает число на экраве на b, а выполняя вторую, умножает это число на 4.<br>
+                Программа для исполнителя Омега - это последовательность номеров команд.	
+                Известно, что программа 12121 переводит число <b> 2 в число 95</b>.<br>
+                Определите значение b.
                 </p>   
             </section>
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="22221"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="3"/>
             </section>
           </div>
           
@@ -343,7 +335,7 @@
                               DIM t, s AS INTEGER<br>
                               &emsp;INPUT s<br>
                               &emsp;INPUT t<br>
-                              &emsp;IF s <= 17 OR t < 5 THEN<br>
+                              &emsp;IF s >= 6 OR t < -5 THEN<br>
                               &emsp;&emsp;PRINT "YES"<br>
                               &emsp;ELSE<br>
                               &emsp;&emsp;PRINT "NO"<br>
@@ -355,7 +347,7 @@
                                 begin <br>
                                 &emsp;readln(s);<br>
                                 &emsp;readln(t);<br>
-                                &emsp;if s <= 17 или t < 5<br>
+                                &emsp;if s >= 6 или t < -5<br>
                                 &emsp;&emsp;then writeln ('YES')<br>
                                 &emsp;&emsp;else writeln ('NO')<br>
                                 end.<br>
@@ -365,12 +357,11 @@
                             цел s, t<br>
                             ввод s<br>
                             ввод t<br>
-                            если (s <= 17) or (t < 5)<br>
+                            если (s >= 6) or (t < -5)<br>
                             &emsp;то вывод "YES"<br>
                             &emsp;иначе вывод "NO"<br>
                             все <br>
                             кон<br>
-
                         </td>
                       </tr>
                       <tr style="background-color: #ffbf80;">
@@ -386,7 +377,7 @@
                           &emsp;int s, t;<br>
                           &emsp;cin >> s;<br>
                           &emsp;cin >> t;<br>
-                          &emsp;if (s <= 17 || t < 5)<br>
+                          &emsp;if (s >= 6 || t < -5)<br>
                           &emsp;&emsp;cout << "YES";<br>
                               &emsp;else <br>
                               &emsp;&emsp;cout << "NO";<br>
@@ -395,7 +386,7 @@
                         <td class="table-6_td" >
                           s = int(input())<br>
                           t = int(input())<br>
-                          if s <= 17 or t < 5:<br>
+                          if s >= 6 or t < -5:<br>
                           &emsp;print("YES")<br>
                           else:<br>
                           &emsp;print("NO")<br>
@@ -408,14 +399,14 @@
               <hr class="hr-pd_20">
               <p class="variant-text__inner">Было проведено 10 запусков программы, при которых в качестве значений переменных s и t вводились следующие пары чисел вида (s, t):</p>
               <hr class="hr-pd_20">     
-              <span class="span-centr_6">(11, 1); (12, 2); (13, 3); (14, 7); (17, 4); (19, 14); (21, -5); (29, 5); (-1, 8); (-7, 4).</span>
+              <span class="span-centr_6">(1, 1); (2, 2); (3, -3); (1, 7); (17, 4); (20, -1); (24, -6); (-1, 8); (-1, -2); (-7, -9).</span>
               <hr class="hr-pd_20">
               <p>  Сколько было запусков, при которых программа напечатала «YES»?</p>
             </section>
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="8"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="4"/>
             </section>
           </div>
           
@@ -423,21 +414,21 @@
           <div class="slider-item">
             <section class="task-block">
               <p> <b>7.</b>
-                Доступ к файлу с именем <b>class.pdf</b>, находящемуся на сервере <b>school.ru</b>, осуществляется по протоколу <b>https</b>. 
+                Доступ к файлу с именем <b>com.doc</b>, находящемуся на сервере <b>org.ru</b>, осуществляется по протоколу <b>http</b>. 
                 Фрагменты адреса файла закодированы цифрами от 1 до 7. Запишите последовательность этих цифр, кодирующую адрес указанного файла в сети Интернет.
                 <hr class="hr-pd_20">
-                1) school.<br>
-                2) https<br>
-                3) /<br>
-                4) pdf<br>
-                5) class.<br>
-                6) ://<br>
-                7) ru
+                1) http<br>
+                2) org<br>
+                3) .ru<br>
+                4) com<br>
+                5) .doc<br>
+                6) /<br>
+                7) ://
             </p>
             </section>
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="2617354"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="1723645"/>
             </section>
           </div>
           
@@ -456,28 +447,28 @@
                           <td><strong>Найдено страниц (в тысячах)</strong></td>
                       </tr>
                       <tr>
-                          <td><em>Комикс | Черепашка</em></td>
-                          <td>2000</td>
+                          <td><em>Музыка | Вальс</em></td>
+                          <td>1700</td>
                       </tr>
                       <tr>
-                          <td><em>Черепашка</em></td>
-                          <td>1400</td>
+                          <td><em>Музыка</em></td>
+                          <td>590</td>
                       </tr>
                       <tr>
-                          <td><em>Комикс & Черепашка</em></td>
-                          <td>900</td>
+                          <td><em>Музыка & Вальс</em></td>
+                          <td>340</td>
                       </tr>
                   </tbody>
               </table>
               <hr class="hr-pd_20">
-            <p class="variant-text__inner">Какое количество страниц (в тысячах) будет найдено по запросу <em>Комикс</em>?
+            <p class="variant-text__inner">Какое количество страниц (в тысячах) будет найдено по запросу <em>Вальс</em>?
               <hr class="hr-pd_20">
                 Считается, что все запросы выполнялись практически одновременно, так что набор страниц, содержащих все искомые слова, не изменялся за время выполнения запросов.</p>
             </section>
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="1500"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="1450"/>
             </section>
           </div>
           
@@ -486,31 +477,31 @@
             <section class="task-block">
               <p> <b>9. </b>
                 На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И и К. По каждой дороге можно
-                двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей из города А в город К, <b>проходящих через город В</b>?</p>
+                двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей из города А в город К, <b>проходящих через город З</b>?</p>
                 <hr class="hr-pd_20">
-                <img class="img-task_9" src="../../../img/task9/var2025/task9_10.png" alt="task9_20_10">
+                <img class="img-task_9" src="../../../img/task9/var2025/task9_11.png" alt="task9_20_11">
             
             </section>
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="4"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="5"/>
             </section>
           </div>
           
           <!-- Zadanie 10 -->
           <div class="slider-item">
             <section class="task-block">
-              <p> <b>10.</b> Среди приведённых ниже трёх чисел, записанных в различных системах счисления, найдите минимальное число, делящееся нацело на 5, 
+              <p> <b>10.</b> Среди приведённых ниже трёх чисел, записанных в различных системах счисления, найдите максимальное простое число 
                 и запишите его в ответе в десятичной системе счисления. В ответе запишите только число, основание системы счисления	указывать не нужно.</p>
               <hr class="hr-pd_20">	
 
-              <span class="span-centr">2D<sub>16</sub>, 24<sub>8</sub>, 100101<sub>2</sub></span>
+              <span class="span-centr">1D<sub>16</sub>, 37<sub>8</sub>, 11000<sub>2</sub></span>
             </section>
 
             <section class="answer-block">
               <p></p>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="20"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="31"/>
             </section>
           </div>
           
@@ -518,11 +509,10 @@
           <div class="slider-item">
             <section class="task-block">
               <p> <b>11.</b>
-                В одном из произведений Н. А. Некрасова, текст которого приведён в подкаталоге	
-                каталога Стихи <b style="color: red;">(Поэзия)</b>, героиню встречает «начальник городской» в сползшей с плеча дохе,	
-                под которой мундир с крестами. <br>С помощью поисковых средств операционной системы	
-                и текстового редактора или браузера выясните название города, в котором происходила	
-                встреча.
+                В одном из произведений С. А. Есенина, текст которого приведён в подкаталоге	
+                каталога Стихи <b style="color: red;">(Поэзия)</b>, герой говорит друзьям, что «зелено вино — мыслям пагуба».<br>
+                С помощью поисковых средств операционной системы и текстового редактора или	
+                браузера выясните имя этого героя.
             </p>
             </section>
 
@@ -530,15 +520,15 @@
               <div class="download">  
                 <a href="../../../src/inf_file/z11.rar"><img src="../../../img/download.svg" alt="download">Скачать файл</a>
               </div>
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="ИРКУТСК"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="ЕВПАТИЙ"/>
             </section>
           </div>
           
           <!-- Zadanie 12 -->
           <div class="slider-item">
             <section class="task-block">
-              <p><b>12.</b> Сколько всего файлов с расширением .pdf содержится в подкаталогах Блок,	Есенин, Пушкин каталога <b>Классика/Стихи</b>? В ответе укажите только число. <b style=" color: red">(нет файла для данного задания)</b> <b>ответ: 9</b></p><br>
-              <p><b>12.</b> Сколько всего файлов с расширением .pdf содержится в подкаталогах Блок,	Есенин, Пушкин каталога <b>DEMO-12/Поэзия</b>? В ответе укажите только число.</p>
+              <p><b>12.</b> Сколько всего файлов с расширением .doc содержится в подкаталогах Гончаров,	Пушкин, Тургенев каталога <b>Классика/Проза</b>? В ответе укажите только число. <b style=" color: red">(нет файла для данного задания)</b> <b>ответ: 1</b></p><br>
+              <p><b>12.</b> Сколько всего файлов с расширением .doc содержится в подкаталогах Гончаров,	Пушкин, Гоголь каталога <b>DEMO-12/Проза</b>? В ответе укажите только число.</p>
             </section>
 
             <section class="answer-block">
@@ -546,7 +536,7 @@
                 <a href="../../../src/inf_file/z12.rar"><img src="../../../img/download.svg" alt="download">Скачать файл</a>
               </div>
               
-              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="8"/>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ" data-right="5"/>
             </section>
           </div>
 
