@@ -194,6 +194,7 @@
   }
   .vars-block {
     grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 15px;
   }
   .vars-block .vars-block__inner {
     padding: 10px 20px;
