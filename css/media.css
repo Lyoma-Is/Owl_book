@@ -87,6 +87,9 @@
   .slider .slick-dots button {
     font-size: 18px;
   }
+  .h2-centr {
+    font-size: 30px;
+  }
 }
 @media (width: 1000px) {
   .breadcrumb {
@@ -118,6 +121,7 @@
   }
   .vars-block {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 15px;
   }
   .vars-block .vars-block__inner {
     padding: 10px 20px;
@@ -156,6 +160,10 @@
   }
   .slider .slider-item .answer-block .input_answer, .slider .slider-item .answer-block .input_answer-green, .slider .slider-item .answer-block .input_answer-red {
     width: 45%;
+  }
+  .h2-centr {
+    padding: 15px 0 0 0;
+    font-size: 25px;
   }
 }
 @media (max-width: 600px) {
@@ -261,5 +269,8 @@
     height: 40px;
     font-size: 15px;
     padding: 5px;
+  }
+  .h2-centr {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=media.css.map */

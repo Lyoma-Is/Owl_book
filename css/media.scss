@@ -129,6 +129,10 @@ $back-top-color:  rgb(233, 199, 105);
             }
         }
     }
+    .h2-centr{
+       
+        font-size: 30px;
+    }
     
 }
 
@@ -172,6 +176,7 @@ $back-top-color:  rgb(233, 199, 105);
 
     .vars-block{
         grid-template-columns: 1fr 1fr 1fr 1fr;  
+        padding-top: 15px;
         .vars-block__inner{         
             padding: 10px 20px; 
             font-size: 15px;
@@ -225,6 +230,10 @@ $back-top-color:  rgb(233, 199, 105);
             }  
         }  
         
+    }
+    .h2-centr{
+        padding: 15px 0 0 0;
+        font-size: 25px;
     }
 }
 
@@ -363,5 +372,8 @@ $back-top-color:  rgb(233, 199, 105);
                 padding: 5px;  
             }
         }
+    }
+    .h2-centr{
+        font-size: 18px;
     }
 }
