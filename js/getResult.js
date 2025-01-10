@@ -7,7 +7,7 @@ let arrayAnswer = [];
 let countReset = 0;
 let button = document.querySelector('#button');
 button.addEventListener('click', function (){
-    let inputs = document.querySelectorAll('#input_answer');
+    let inputs = document.querySelectorAll('#input_answer'); 
     let countResult = 0;
 
     for (let input of inputs){

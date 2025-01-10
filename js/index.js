@@ -24,3 +24,9 @@ $(document).ready(function(){
     });
 
 });
+
+// let rules = document.querySelector('#rules');
+// let pRules = document.createElement('p');
+// pRules.classList.add('h2-centr')
+// pRules.textContent = "gbgbghjhfgg";
+// rules.appendChild(pRules);
