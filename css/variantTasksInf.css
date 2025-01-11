@@ -52,8 +52,16 @@
   display: block;
   margin: 0 auto;
   cursor: pointer;
+  border: 1px solid rgb(233, 199, 105);
+  border-radius: 10px;
 }
 
+.slider .slider-item .details-raz_otv {
+  display: none;
+}
+.slider .slider-item .details-raz_otv_active {
+  display: block;
+}
 .slider .slider-item .answer-block {
   margin-top: 50px;
   border-top: 3px solid rgb(233, 199, 105);

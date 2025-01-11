@@ -9,6 +9,7 @@ $back-top-color:  rgb(233, 199, 105);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 30px;
     gap: 10px 0;
+    align-items: center;
     .vars-block__inner{
         border: 1px solid $back-top-color;
         border-radius: 10px;
@@ -95,16 +96,20 @@ $back-top-color:  rgb(233, 199, 105);
         right: -50px;
         background: url('../img/right-arrow.svg') 0 0 / 100% no-repeat;
     }
-    .slick-dots{
-        display: flex;
+    .slick-dots{  
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
         top: 0;
-        //background-color: black;
         position: absolute;
         width: 100%;
         justify-content: space-between;
+        border-bottom: 3px solid $back-top-color;
+
+        //display: flex;
+        //background-color: black;
         //left: -150px;
         //height: 50%;
-        border-bottom: 3px solid $back-top-color;
+        
             
         li{
             margin: 10px;  

@@ -7,6 +7,8 @@ let arrayAnswer = [];
 let countReset = 0;
 let button = document.querySelector('#button');
 button.addEventListener('click', function (){
+
+
     let inputs = document.querySelectorAll('#input_answer'); 
     let countResult = 0;
 
@@ -109,8 +111,9 @@ button.addEventListener('click', function (){
     ansRes.appendChild(table);
     
     countReset += 1;
-    
+    button.textContent = "УБРАТЬ";
     if (countReset == 2){
+        button.textContent = "ПРОВЕРИТЬ";
         while (ansRes.firstChild) {
             ansRes.removeChild(ansRes.firstChild);
         }    
@@ -121,6 +124,9 @@ button.addEventListener('click', function (){
         arrayInput.pop(inputs[i].value);
         arrayAnswer.pop(inputs[i].dataset.right)
     }
+
+    let razOtv = document.querySelector('.details-raz_otv');
+    razOtv.classList.add('details-raz_otv_active');
 
 });
 
