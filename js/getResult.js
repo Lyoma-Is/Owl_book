@@ -127,6 +127,7 @@ button.addEventListener('click', function (){
 
     let razOtv = document.querySelector('.details-raz_otv');
     razOtv.classList.add('details-raz_otv_active');
+    razOtv.classList.remove('details-raz_otv');
 
 });
 
