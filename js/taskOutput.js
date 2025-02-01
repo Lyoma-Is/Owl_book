@@ -1,6 +1,6 @@
 // Подключаем файл JSON
 
-const taskTen = '/src/oge_inf/taskTen.json';
+const taskTen = './src/oge_inf/taskTen.json';
 
 // Используем fetch для получения содержимого файла
 fetch(taskTen)
@@ -33,15 +33,13 @@ fetch(taskTen)
           </td> 
         </tr>  
       `;
-
-      case 2:
+      break;
 
       }
       
     }
     document.querySelector('.task-numbers__block').innerHTML = taskTenOutput;
-   // document.querySelector('.task-numbers__block').classList.add("task-block")
   })
-  .catch((error) => console.error('Ошибка:', error));
+  //.catch((error) => console.error('Ошибка:', error));
 
   //Переведите число <b>1011101</b> из двоичной системы счисления в десятичную систему счисления. В ответе запишите полученное число.
