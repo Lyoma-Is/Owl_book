@@ -88,7 +88,6 @@ main{
                 li{
                     a{
                         font-size: 24px;
-
                     }
                     a:hover{
                         color: red;
@@ -123,10 +122,36 @@ main{
             color: red;
         }
     }
+
+    .p-task{  
+        padding: 20px 40px;
+        font-size: 25px;
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration:underline;
+            color: red;
+        }
+    }
 }
 
 .h2-centr{
     text-align: center;
     padding: 30px 0 0 0;
     font-size: 35px;
+}
+
+.task-numbers__block{
+    padding: 20px;
+    font-size: 20px;
+    .p-num{
+        font-size: 16px;
+    }
+}
+
+.number-block{
+    padding: 4px 10px;
+    border: 1px solid black; 
+    font-size: 18px;
 }

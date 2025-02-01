@@ -111,7 +111,7 @@ button.addEventListener('click', function (){
     ansRes.appendChild(table);
     
     countReset += 1;
-    button.textContent = "УБРАТЬ";
+    button.textContent = "СКРЫТЬ";
     if (countReset == 2){
         button.textContent = "ПРОВЕРИТЬ";
         while (ansRes.firstChild) {
