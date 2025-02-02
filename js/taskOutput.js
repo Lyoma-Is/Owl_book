@@ -1,6 +1,6 @@
 
-//const taskTen = '/src/oge_inf/taskTen.json'; // Проверьте путь!
-const taskTen = 'https://Lyoma-Is/Owl_book/blob/main/src/oge_inf/taskTen.json'; // Проверьте путь!
+const taskTen = '/src/oge_inf/taskTen.json'; // Проверьте путь!
+//const taskTen = 'https://Lyoma-Is/Owl_book/blob/main/src/oge_inf/taskTen.json'; // Проверьте путь!
 
 fetch(taskTen)
   .then((response) => {
