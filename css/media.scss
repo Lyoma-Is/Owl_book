@@ -263,6 +263,13 @@ $back-top-color:  rgb(233, 199, 105);
         .p-vars{
             font-size: 15px;
         }
+
+        .p-task{
+            padding: 5px 15px;
+            a{
+                font-size: 15px;  
+            } 
+        }
         
     }//main
 
@@ -376,5 +383,19 @@ $back-top-color:  rgb(233, 199, 105);
     }
     .h2-centr{
         font-size: 18px;
+    }
+
+    .task-numbers__block{
+        padding: 10px;
+        font-size: 15px;
+        .p-num{
+            font-size: 12px;
+        }
+    }
+    
+    .number-block{
+        padding: 4px 9px;
+        border: 1px solid black; 
+        font-size: 13px;
     }
 }
