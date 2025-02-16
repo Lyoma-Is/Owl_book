@@ -386,7 +386,7 @@ $back-top-color:  rgb(233, 199, 105);
     }
 
     .task-numbers__block{
-        padding: 10px;
+        padding: 15px;
         font-size: 15px;
         .p-num{
             font-size: 12px;
@@ -397,5 +397,27 @@ $back-top-color:  rgb(233, 199, 105);
         padding: 4px 9px;
         border: 1px solid black; 
         font-size: 13px;
+    }
+
+    .select-task{
+        display: flex;
+        padding: 10px 15px 15px;
+        font-size: 12px;
+        gap: 10px;
+        label{
+            padding-left: 5px;
+        }
+        .select-task__inner{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 135px;
+        }
+        select{
+            font-size: 11px;
+            padding: 10px 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
     }
 }

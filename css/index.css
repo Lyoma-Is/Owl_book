@@ -135,4 +135,26 @@ main .p-task a:hover {
   padding: 4px 10px;
   border: 1px solid black;
   font-size: 18px;
+}
+
+.select-task {
+  display: flex;
+  padding: 10px 20px 20px;
+  font-size: 18px;
+  gap: 15px;
+}
+.select-task label {
+  padding-left: 5px;
+}
+.select-task .select-task__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+.select-task select {
+  font-size: 15px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

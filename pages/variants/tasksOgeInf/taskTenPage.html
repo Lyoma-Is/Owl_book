@@ -32,9 +32,29 @@
     
     <main>
         <div class="container">
-           <table class="task-numbers__block">
-
-           </table>
+           <!-- <table class="task-numbers__block" style="text-align: justify;"></table>            -->
+           <div class="select-task">
+                <div class="select-task__inner">
+                    <label for="taskType">Выберите тип задачи</label>
+                    <select  id="taskType">
+                        <option value='0'>Показать все типы</option>
+                        <option value='1'>Тип 1</option>
+                        <option value='2'>Тип 2</option>
+                        <option value='3'>Тип 3</option>
+                    </select>
+                </div>
+                <div class="select-task__inner">
+                    <label for="taskSort">Сортировка</label>
+                    <select  id="taskSort">
+                        <option value='0'>по возрастанию</option>
+                        <option value='1'>по убыванию</option>
+                        <option value='2'>случайный порядок</option>
+                        
+                    </select>
+                </div>
+           </div>
+           <hr class="hr-between">
+           <div class="task-numbers__block" style="text-align: justify;"></div>
            
         </div>
     </main>
