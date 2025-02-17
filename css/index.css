@@ -130,6 +130,12 @@ main .p-task a:hover {
 .task-numbers__block .p-num {
   font-size: 16px;
 }
+.task-numbers__block .span-centr {
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1.2px;
+}
 
 .number-block {
   padding: 4px 10px;

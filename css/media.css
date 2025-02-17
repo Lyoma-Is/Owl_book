@@ -168,7 +168,7 @@
 }
 @media (max-width: 600px) {
   .container {
-    width: 390px;
+    width: 100%;
   }
   main .main-block .aside-left {
     width: 35%;
@@ -286,6 +286,12 @@
   }
   .task-numbers__block .p-num {
     font-size: 12px;
+  }
+  .task-numbers__block .span-centr {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1.2px;
   }
   .number-block {
     padding: 4px 9px;

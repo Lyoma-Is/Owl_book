@@ -239,7 +239,7 @@ $back-top-color:  rgb(233, 199, 105);
 
 @media (max-width: 600px){
     .container{
-        width: 390px;
+        width: 100%;
     }
     main{  
         .main-block{
@@ -390,6 +390,12 @@ $back-top-color:  rgb(233, 199, 105);
         font-size: 15px;
         .p-num{
             font-size: 12px;
+        }
+        .span-centr{
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 1.2px;
         }
     }
     
