@@ -1,6 +1,6 @@
 @media (max-width: 1280px) {
   .container {
-    width: 1030px;
+    width: 100%;
   }
   main .main-block .aside-left ul li a {
     font-size: 18px;
@@ -14,7 +14,7 @@
 }
 @media (max-width: 1000px) {
   .container {
-    width: 800px;
+    width: 100%;
   }
   main .main-block .aside-left {
     width: 27%;
@@ -102,7 +102,7 @@
 }
 @media (max-width: 800px) {
   .container {
-    width: 600px;
+    width: 100%;
   }
   main .main-block .aside-left {
     width: 35%;
@@ -164,6 +164,13 @@
   .h2-centr {
     padding: 15px 0 0 0;
     font-size: 25px;
+  }
+  .task-numbers__block {
+    font-size: 20px;
+  }
+  .task-numbers__block .span-centr {
+    font-size: 20px;
+    letter-spacing: 1.2px;
   }
 }
 @media (max-width: 600px) {
@@ -290,7 +297,7 @@
   .task-numbers__block .span-centr {
     display: block;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 1.2px;
   }
   .number-block {
