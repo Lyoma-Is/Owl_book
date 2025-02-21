@@ -1,12 +1,12 @@
 
-// const tasks = {
-//   one: '/src/oge_inf/taskOne.json',
-//   ten: '/src/oge_inf/taskTen.json'
-// };
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+  one: '/src/oge_inf/taskOne.json',
+  ten: '/src/oge_inf/taskTen.json'
 };
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+// };
 
 
 async function fetchTasks(taskKey) {
@@ -72,7 +72,7 @@ function generateTaskHTML(taskKey, item) {
             <p><em>${item.task2}</em></p>
             <hr class="hr-pd_20">
             <p>${item.task3}</p>
-            <hr class="hr-pd_20">
+            
             <p>${item.task4}</p>
             <hr class="hr-pd_20">
             <details>
@@ -97,7 +97,39 @@ function generateTaskHTML(taskKey, item) {
             <hr class="hr-between">
             <hr class="hr-pd_20">
           `; return answerBlock
-    }
+       case 2:
+          answerBlock += `
+              <p class="p-num">№ ${item.taskCounter}</p>
+              <p>${item.task1}</p>
+              <hr class="hr-pd_20">
+              <p>${item.task2}</p>
+              <hr class="hr-pd_20">
+              <p>${item.task3}</p>
+              <p>${item.task4}</p>
+              <hr class="hr-pd_20">
+              <details>
+                <summary class="p-num">Решение</summary>
+                <hr class="hr-pd_10">
+                <p>1) Один символ кодируется ${item.taskAnswer[1]} бит = ${item.taskAnswer[1]/8 < 2 ?  `${item.taskAnswer[1]/8} байт ` : `${item.taskAnswer[1]/8} байта`}</p> 
+                <hr class="hr-pd_10">
+                <p>2) ${item.taskAnswer[3] == "м" ? 
+                `Вычеркнутое слово занимает ${item.taskAnswer[2]} байта</p> 
+                <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов` : 
+                `Добавленное слово занимает ${item.taskAnswer[2]} байта</p>
+                <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов`} 
+                </p> 
+                <hr class="hr-pd_10">
+                <p>4) C учетом пробела: ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))} - 1 = ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} символа</p>
+                <hr class="hr-pd_20">
+                <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} букв - ${item.taskAnswer[0]}.</p>
+                <hr class="hr-pd_20">
+                Ответ: <b>${item.taskAnswer[0]}</b>
+              </details>  
+              <hr class="hr-pd_20">
+              <hr class="hr-between">
+              <hr class="hr-pd_20">
+            `; return answerBlock
+        }
   }
   if (taskKey === 'ten'){  
     switch(item.typeTask){     
@@ -175,189 +207,4 @@ function generateTaskHTML(taskKey, item) {
 
 fetchTasks('one');
 fetchTasks('ten');
-
-
-
-
-
-// const taskOne = '/src/oge_inf/taskOne.json';
-
-// const taskTen = '/src/oge_inf/taskTen.json'; // Проверьте путь!
-// //const taskTen = 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'; // Проверьте путь!
-// tasks = [taskOne, taskTen] 
-// console.log(taskTen.length)
-  
-// if (tasks[1] === taskTen){
-//     fetch(tasks[1])
-//     .then((response) => {return response.text();})
-//     .then(data => {
-//       const taskTenData = JSON.parse(data); 
-//        let dt = taskTenData.length
-//        console.log(dt-1)
-//       //const taskNumber = taskTenData[0].taskNumber;
-    
-//       document.getElementById("taskType").addEventListener("change", filterTasks);
-//       document.getElementById("taskSort").addEventListener("change", filterTasks);
-            
-//     function filterTasks() {
-        
-//         const selectedType = parseInt(document.getElementById('taskType').value);
-//         const sortedTasks = parseInt(document.getElementById('taskSort').value);
-
-//         let filteredTasks = selectedType === 0 ? taskTenData : taskTenData.filter(task => task.typeTask === selectedType);
-//         filteredTasks.sort((a, b) => {
-//           if (sortedTasks === 0) return a.taskCounter - b.taskCounter;
-//           if (sortedTasks === 1) return b.taskCounter - a.taskCounter;
-//           if (sortedTasks === 2) return Math.random() - 0.5;
-//       });
-//       displayTasks(filteredTasks);      
-//     } //filterTasks()
-
-//     function displayTasks(filteredTasks) {
-//         const output = document.querySelector('.task-ten-numbers__block');
-//         let taskTenOutput = '';
-        
-//         // task 10
-//         filteredTasks.forEach( item => {
-//                 switch (item.typeTask) {
-                  
-//                   case 1:
-//                       taskTenOutput +=`
-//                         <p class="p-num">№ ${item.taskCounter}</p>
-//                           <p>${item.task}</p>
-//                           <hr class="hr-pd_20">
-//                           <details>
-//                             <summary class="p-num">Решение</summary>
-//                             <hr class="hr-pd_10">
-//                             ${item.taskAnswer[0]}<sub>10</sub> = ${item.taskAnswer[1]}<sub>2</sub>
-//                             <hr class="hr-pd_10">
-//                             Ответ: ${item.taskAnswer[2]}
-//                           </details>  
-//                           <hr class="hr-pd_20">
-//                           <hr class="hr-between">
-//                           <hr class="hr-pd_20">
-//                       `
-//                       break;
-//                   case 2:
-//                       taskTenOutput +=`
-//                         <p class="p-num">№ ${item.taskCounter}</p>
-//                           <p>${item.task}</p>
-//                           <hr class="hr-pd_20">
-//                           <details>
-//                             <summary class="p-num">Решение</summary>
-//                             <hr class="hr-pd_10">
-//                             ${item.taskAnswer[0]}<sub>2</sub> = ${item.taskAnswer[1]}<sub>10</sub>
-//                             <hr class="hr-pd_10">
-//                             Ответ: ${item.taskAnswer[2]}
-//                           </details>  
-//                           <hr class="hr-pd_20">
-//                           <hr class="hr-between">
-//                           <hr class="hr-pd_20">
-//                     `
-//                     break;
-//                   case 3:
-//                       let summaAns = 0;
-//                       const num1 = parseInt(item.taskAnswer[0], 2);  // Двоичное число
-//                       const num2 = parseInt(item.taskAnswer[1], 8);  // Восьмеричное число
-//                       const num3 = parseInt(item.taskAnswer[2], 16); // Шестнадцатеричное число
-
-//                       const operator1 = item.taskAnswer[3]; // Первый оператор
-//                       const operator2 = item.taskAnswer[4]; // Второй оператор
-
-//                       summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
-//                       taskTenOutput +=`
-//                         <p class="p-num">№ ${item.taskCounter}</p>
-//                           <p>${item.task}</p>
-//                           <hr class="hr-pd_10">
-//                           <span class="span-centr">${item.taskAnswer[0]}<sub>2</sub> ${item.taskAnswer[3]} ${item.taskAnswer[1]}<sub>8</sub> ${item.taskAnswer[4]} ${item.taskAnswer[2]}<sub>16</sub></span>
-//                           <hr class="hr-pd_10">
-//                           <p>${item.task2}</p>
-//                           <hr class="hr-pd_20">
-//                           <details>
-//                             <summary class="p-num">Решение</summary>
-//                             <hr class="hr-pd_10">
-//                             ${item.taskAnswer[0]}<sub>2</sub> = ${parseInt(item.taskAnswer[0], 2)}<sub>10</sub>
-//                             <hr class="hr-pd_10">
-//                             ${item.taskAnswer[1]}<sub>8</sub> = ${parseInt(item.taskAnswer[1], 8)}<sub>10</sub>
-//                             <hr class="hr-pd_10">
-//                             ${item.taskAnswer[2]}<sub>16</sub> = ${parseInt(item.taskAnswer[2], 16)}<sub>10</sub>
-//                             <hr class="hr-pd_20">
-//                             ${num1} ${operator1} ${num2} ${operator2} ${num3} = ${summaAns}
-//                             <hr class="hr-pd_20">
-//                             Ответ: ${summaAns}
-//                           </details>  
-//                           <hr class="hr-pd_20">
-//                           <hr class="hr-between">
-//                           <hr class="hr-pd_20">
-//                     `
-//                     break;
-//                   }
-//                   //console.log(item.taskCounter)
-//               }); 
-//               output.innerHTML = taskTenOutput;                   
-//     } //displayTasks()  
-//     filterTasks()
-//   });
-// }
-// if (tasks[0] === taskOne){
-//   fetch(tasks[0])
-//   .then((response) => {return response.text();})
-//   .then(data => {
-//     const taskOneData = JSON.parse(data); 
-//      let dt = taskOneData.length
-//      console.log(dt-1)
-//     //const taskNumber = taskTenData[0].taskNumber;
-  
-//     document.getElementById("taskType").addEventListener("change", filterTasks);
-//     document.getElementById("taskSort").addEventListener("change", filterTasks);
-          
-//   function filterTasks() {
-      
-//       const selectedType = parseInt(document.getElementById('taskType').value);
-//       const sortedTasks = parseInt(document.getElementById('taskSort').value);
-
-//       let filteredTasks = selectedType === 0 ? taskOneData : taskOneData.filter(task => task.typeTask === selectedType);
-//       filteredTasks.sort((a, b) => {
-//         if (sortedTasks === 0) return a.taskCounter - b.taskCounter;
-//         if (sortedTasks === 1) return b.taskCounter - a.taskCounter;
-//         if (sortedTasks === 2) return Math.random() - 0.5;
-//     });
-//     displayTasks(filteredTasks);      
-//   } //filterTasks()
-
-//   function displayTasks(filteredTasks) {
-//       const output = document.querySelector('.task-one-numbers__block');
-//       let taskOneOutput = '';
-      
-//       // task 10
-//       filteredTasks.forEach( item => {
-//               switch (item.typeTask) {
-                
-//                 case 1:
-//                   taskOneOutput +=`
-//                           <p class="p-num">№ ${item.taskCounter}</p>
-//                           <p>${item.task}</p>
-//                           <hr class="hr-pd_20">
-//                           <details>
-//                             <summary class="p-num">Решение</summary>
-//                             <hr class="hr-pd_10">
-//                             ${item.taskAnswer[0]}<sub>10</sub> = ${item.taskAnswer[1]}<sub>2</sub>
-//                             <hr class="hr-pd_10">
-//                             Ответ: ${item.taskAnswer[2]}
-//                           </details>  
-//                           <hr class="hr-pd_20">
-//                           <hr class="hr-between">
-//                           <hr class="hr-pd_20">
-//                     `
-//                     break;
-           
-//                 }
-//                 //console.log(item.taskCounter)
-//             }); 
-//             output.innerHTML = taskOneOutput;                   
-//   } //displayTasksTen()  
-//   filterTasks()
-// });
-// }  
-  
 
