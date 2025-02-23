@@ -1,14 +1,14 @@
 
 import  generateTaskHTML  from "./viewTask.js";
 
-const tasks = {
-  one: '/src/oge_inf/taskOne.json',
-  ten: '/src/oge_inf/taskTen.json'
-};
 // const tasks = {
-//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+//   one: '/src/oge_inf/taskOne.json',
+//   ten: '/src/oge_inf/taskTen.json'
 // };
+const tasks = {
+  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+};
 
 async function fetchTasks(taskKey) {
   try {

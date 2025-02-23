@@ -1,11 +1,15 @@
 import generateTaskHTML from "./viewTask.js";
 
 // Пути к JSON-файлам
+// const tasks = {
+//     one: '/src/oge_inf/taskOne.json',
+//     ten: '/src/oge_inf/taskTen.json'
+// };
 const tasks = {
-    one: '/src/oge_inf/taskOne.json',
-    ten: '/src/oge_inf/taskTen.json'
-};
-
+    one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+    ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+  };
+  
 // Функция для загрузки JSON
 async function fetchJSON(url) {
     try {
