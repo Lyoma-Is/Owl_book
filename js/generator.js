@@ -1,15 +1,5 @@
 import generateTaskHTML from "./viewTask.js";
-
-// Пути к JSON-файлам
-// const tasks = {
-//     one: '/src/oge_inf/taskOne.json',
-//     ten: '/src/oge_inf/taskTen.json'
-// };
-const tasks = {
-    one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-    ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
-  };
-  
+import {tasks} from "./viewTask.js";
 // Функция для загрузки JSON
 async function fetchJSON(url) {
     try {
@@ -58,8 +48,8 @@ async function displayTasks() {
     }
 
     generatorDiv.innerHTML = `
-            Задани 1.${generateTaskHTML('one', randomTasks.one)}
-             Задани 10.${generateTaskHTML('ten', randomTasks.ten)}
+            ${generateTaskHTML('one', randomTasks.one)}
+            ${generateTaskHTML('ten', randomTasks.ten)}
        
     `;
 }

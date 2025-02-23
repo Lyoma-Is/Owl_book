@@ -1,28 +1,25 @@
 
 import  generateTaskHTML  from "./viewTask.js";
-
-// const tasks = {
-//   one: '/src/oge_inf/taskOne.json',
-//   ten: '/src/oge_inf/taskTen.json'
-// };
-const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
-};
+import {tasks} from "./viewTask.js";
 
 async function fetchTasks(taskKey) {
   try {
-  
       const response = await fetch(tasks[taskKey]);
       const data = await response.json();
       setupFilters(taskKey, data);
       dt.push(data.length - 1)
+      //f.push(data[0].taskNumber);
+      //const taskNumber = data[0].taskNumber;
+      //console.log(taskNumber)
   } catch (error) {
       console.error(`Ошибка загрузки ${taskKey}:`, error);
   }
-} // fetchTasks
+} // fetchTasks 
 
+//let f = []  
+//console.log(f);
 let dt = []
+
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
   
