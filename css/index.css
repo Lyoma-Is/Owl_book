@@ -139,6 +139,17 @@ main .p-gen {
   font-size: 25px;
   letter-spacing: 1.2px;
 }
+.task-numbers__block .span-centr__font {
+  font-size: 40px;
+}
+.task-numbers__block .table_2_1, .task-numbers__block td {
+  font-size: 25px;
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 5px 15px;
+  margin: auto;
+  text-align: center;
+}
 
 .number-block {
   padding: 4px 10px;

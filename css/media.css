@@ -172,6 +172,9 @@
     font-size: 20px;
     letter-spacing: 1.2px;
   }
+  .task-numbers__block .span-centr__font {
+    font-size: 35px;
+  }
 }
 @media (max-width: 600px) {
   .container {
@@ -299,6 +302,17 @@
     text-align: center;
     font-size: 15px;
     letter-spacing: 1.2px;
+  }
+  .task-numbers__block .span-centr__font {
+    font-size: 20px;
+  }
+  .task-numbers__block .table_2_1, .task-numbers__block td {
+    font-size: 15px;
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 5px 15px;
+    margin: auto;
+    text-align: center;
   }
   .number-block {
     padding: 4px 9px;

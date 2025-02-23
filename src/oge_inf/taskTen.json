@@ -1,8 +1,5 @@
 [
     {
-        "taskNumber": 10
-    },
-    {
         "taskCounter": 45,
         "typeTask": 3,
         "taskAnswer": [111110101, 1001, 101, "-", "+"],

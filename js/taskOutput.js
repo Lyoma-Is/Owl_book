@@ -7,19 +7,13 @@ async function fetchTasks(taskKey) {
       const response = await fetch(tasks[taskKey]);
       const data = await response.json();
       setupFilters(taskKey, data);
-      dt.push(data.length - 1)
-      //f.push(data[0].taskNumber);
-      //const taskNumber = data[0].taskNumber;
-      //console.log(taskNumber)
+      dt.push(data.length)
   } catch (error) {
       console.error(`Ошибка загрузки ${taskKey}:`, error);
   }
 } // fetchTasks 
 
-//let f = []  
-//console.log(f);
 let dt = []
-
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
   
@@ -60,5 +54,6 @@ function displayTasks(taskKey, tasks) {
 
 
 fetchTasks('one');
+fetchTasks('two');
 fetchTasks('ten');
 

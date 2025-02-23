@@ -71,7 +71,6 @@ li {
 }
 
 
-
 main{
     flex: 1;
     .main-block{
@@ -157,6 +156,18 @@ main{
         text-align: center;
         font-size: 25px;
         letter-spacing: 1.2px;
+    }
+    .span-centr__font{
+        font-size: 40px;
+    }
+    .table_2_1, td{
+        
+            font-size: 25px;
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 5px 15px;
+            margin: auto;
+            text-align: center; 
     }
 }
 

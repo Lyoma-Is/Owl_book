@@ -1,10 +1,12 @@
 // const tasks = {
 //   one: '/src/oge_inf/taskOne.json',
+//   two: '/src/oge_inf/taskTwo.json',
 //   ten: '/src/oge_inf/taskTen.json'
 // };
 
 const tasks = {
   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
 };
 
@@ -129,5 +131,76 @@ export default function generateTaskHTML(taskKey, item) {
           answerBlock += generateFooter(); 
           return answerBlock
       } 
+    }
+    if (taskKey === 'two'){
+      switch(item.typeTask){
+        case 1:
+          answerBlock =`
+            <p class="p-num"><b>2.</b> № ${item.taskCounter}</p>
+            <p>${item.task1}</p>
+            <hr class="hr-pd_10">
+            <span class="span-centr span-centr__font">${item.task2}</span>
+            <hr class="hr-pd_10">
+            <p>${item.task3}</p>
+            <hr class="hr-pd_20">
+            ${item.taskTable.length === 10 ? `
+              <table class="table_2_1">
+                <tbody>
+                  <tr>
+                      <td>${item.taskTable[0]}</td> <td>${item.taskTable[2]}</td>
+                      <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                      <td>${item.taskTable[8]}</td>
+                  </tr>
+                  <tr>
+                    <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                    <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                    <td>${item.taskTable[9]}</td>
+                </tr>
+                </tbody>
+              </table>
+              `: item.taskTable.length === 12 ?`
+                  <table class="table_2_1">
+                  <tbody>
+                    <tr>
+                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
+                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                    </tr>
+                    <tr>
+                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              `:`
+                <table class="table_2_1">
+                  <tbody>
+                    <tr>
+                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
+                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                        <td>${item.taskTable[12]}</td>
+                    </tr>
+                    <tr>
+                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                      <td>${item.taskTable[13]}</td>
+                  </tr>
+                  </tbody>
+              </table>`}
+            <hr class="hr-pd_20">
+             <p>${item.task4}</p>
+             <hr class="hr-pd_20">`
+          answerBlock += generateHeader();
+          answerBlock += `
+           <p>${item.taskAnswer[1]}</p>
+           <hr class="hr-pd_20">
+           <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
+           <hr class="hr-pd_10">`;
+          answerBlock += generateFooter(); 
+          return answerBlock
+      }
     }
 }

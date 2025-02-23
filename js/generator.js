@@ -15,7 +15,7 @@ async function fetchJSON(url) {
 // Функция выбора случайного элемента из массива
 function getRandomItem(arr) {
     if (!arr || arr.length === 0) return null;
-    return arr[Math.floor(Math.random() * arr.length)+1];
+    return arr[Math.floor(Math.random() * arr.length)];
 }
 
 // Главная функция генератора задач
@@ -42,13 +42,14 @@ async function displayTasks() {
 
     const randomTasks = await generateRandomTasks();
 
-    if (!randomTasks.one || !randomTasks.ten) {
+    if (!randomTasks.one || !randomTasks.ten || !randomTasks.two) {
         generatorDiv.innerHTML = '<p>Ошибка загрузки задач. Пожалуйста, попробуйте снова.</p>';
         return;
     }
 
     generatorDiv.innerHTML = `
             ${generateTaskHTML('one', randomTasks.one)}
+            ${generateTaskHTML('two', randomTasks.two)}
             ${generateTaskHTML('ten', randomTasks.ten)}
        
     `;

@@ -1,8 +1,5 @@
 [
     {
-        "taskNumber": 1
-    },
-    {
         "taskCounter": 65,
         "typeTask": 2,
         "taskAnswer": ["Гром", 16, 10, "м"],

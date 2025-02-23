@@ -244,6 +244,9 @@ $back-top-color:  rgb(233, 199, 105);
             font-size: 20px;
             letter-spacing: 1.2px;
         }
+        .span-centr__font{
+            font-size: 35px;
+        }
     }
 }
 
@@ -406,6 +409,17 @@ $back-top-color:  rgb(233, 199, 105);
             text-align: center;
             font-size: 15px;
             letter-spacing: 1.2px;
+        }
+        .span-centr__font{
+            font-size: 20px;
+        }
+        .table_2_1, td{
+            font-size: 15px;
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 5px 15px;
+            margin: auto;
+            text-align: center; 
         }
     }
     
