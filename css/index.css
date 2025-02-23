@@ -116,6 +116,9 @@ main .p-task a:hover {
   text-decoration: underline;
   color: red;
 }
+main .p-gen {
+  text-align: center;
+}
 
 .h2-centr {
   text-align: center;
