@@ -160,14 +160,28 @@ main{
     .span-centr__font{
         font-size: 40px;
     }
-    .table_2_1, td{
-        
+    .span-centr__font_2{
+        font-size: 40px;
+    }
+    .table_2_1{
+            margin: auto; 
+            border-collapse: collapse;
+        td{
+            font-size: 30px;
+            border: 1px solid;
+            padding: 5px 15px; 
+            text-align: center; 
+        }
+    } 
+    .table_2_3{ 
+         margin: auto; 
+         border-collapse: collapse;
+        td{
             font-size: 25px;
             border: 1px solid;
-            border-collapse: collapse;
-            padding: 5px 15px;
-            margin: auto;
             text-align: center; 
+            padding: 7px 10px 7px 5px;
+        }
     }
 }
 

@@ -306,13 +306,25 @@
   .task-numbers__block .span-centr__font {
     font-size: 20px;
   }
-  .task-numbers__block .table_2_1, .task-numbers__block td {
+  .task-numbers__block .table_2_1 {
+    margin: auto;
+    border-collapse: collapse;
+  }
+  .task-numbers__block .table_2_1 td {
     font-size: 15px;
     border: 1px solid;
-    border-collapse: collapse;
     padding: 5px 15px;
-    margin: auto;
     text-align: center;
+  }
+  .task-numbers__block .table_2_3 {
+    margin: auto;
+    border-collapse: collapse;
+  }
+  .task-numbers__block .table_2_3 td {
+    font-size: 15px;
+    border: 1px solid;
+    text-align: center;
+    padding: 5px 10px 5px 5px;
   }
   .number-block {
     padding: 4px 9px;

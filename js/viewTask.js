@@ -138,8 +138,10 @@ export default function generateTaskHTML(taskKey, item) {
           answerBlock =`
             <p class="p-num"><b>2.</b> № ${item.taskCounter}</p>
             <p>${item.task1}</p>
-            <hr class="hr-pd_10">
-            <span class="span-centr span-centr__font">${item.task2}</span>
+            
+             ${item.taskAnswer[2] === 1 ? `
+              <hr class="hr-pd_10">
+              <span class="span-centr span-centr__font">${item.task2}</span>
             <hr class="hr-pd_10">
             <p>${item.task3}</p>
             <hr class="hr-pd_20">
@@ -190,9 +192,66 @@ export default function generateTaskHTML(taskKey, item) {
                   </tr>
                   </tbody>
               </table>`}
-            <hr class="hr-pd_20">
+             <hr class="hr-pd_20">
              <p>${item.task4}</p>
-             <hr class="hr-pd_20">`
+             <hr class="hr-pd_20">
+              `:
+            `<hr class="hr-pd_20">
+            ${item.taskTable.length === 10 ? `
+              <table class="table_2_1">
+                <tbody>
+                  <tr>
+                      <td>${item.taskTable[0]}</td> <td>${item.taskTable[2]}</td>
+                      <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                      <td>${item.taskTable[8]}</td>
+                  </tr>
+                  <tr>
+                    <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                    <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                    <td>${item.taskTable[9]}</td>
+                </tr>
+                </tbody>
+              </table>
+              `: item.taskTable.length === 12 ?`
+                  <table class="table_2_1">
+                  <tbody>
+                    <tr>
+                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
+                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                    </tr>
+                    <tr>
+                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              `:`
+                <table class="table_2_1">
+                  <tbody>
+                    <tr>
+                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
+                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                        <td>${item.taskTable[12]}</td>
+                    </tr>
+                    <tr>
+                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                      <td>${item.taskTable[13]}</td>
+                  </tr>
+                  </tbody>
+              </table>`}
+            <hr class="hr-pd_20">
+            <p>${item.task3}</p>  
+            <hr class="hr-pd_10">
+            <span class="span-centr span-centr__font">${item.task2}</span>
+            <hr class="hr-pd_10">
+             <p>${item.task4}</p>
+             <hr class="hr-pd_20">
+              `}`
           answerBlock += generateHeader();
           answerBlock += `
            <p>${item.taskAnswer[1]}</p>
@@ -201,6 +260,142 @@ export default function generateTaskHTML(taskKey, item) {
            <hr class="hr-pd_10">`;
           answerBlock += generateFooter(); 
           return answerBlock
+        case 2:
+          answerBlock =`
+          <p class="p-num"><b>2.</b> № ${item.taskCounter}</p>
+          <p>${item.task1}</p>
+           <hr class="hr-pd_20">
+            ${item.taskTable.length === 10 ? `
+              <table class="table_2_1">
+                <tbody>
+                  <tr>
+                      <td>${item.taskTable[0]}</td> <td>${item.taskTable[2]}</td>
+                      <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                      <td>${item.taskTable[8]}</td>
+                  </tr>
+                  <tr>
+                    <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                    <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                    <td>${item.taskTable[9]}</td>
+                </tr>
+                </tbody>
+              </table>
+              `: item.taskTable.length === 12 ?`
+                  <table class="table_2_1">
+                  <tbody>
+                    <tr>
+                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
+                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                    </tr>
+                    <tr>
+                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              `:`
+                <table class="table_2_1">
+                  <tbody>
+                    <tr>
+                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
+                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
+                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                        <td>${item.taskTable[12]}</td>
+                    </tr>
+                    <tr>
+                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
+                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
+                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                      <td>${item.taskTable[13]}</td>
+                  </tr>
+                  </tbody>
+              </table>`}
+            <hr class="hr-pd_20">
+            <p>${item.task3}</p>  
+            <hr class="hr-pd_10">
+            <p>Даны три кодовые цепочки:</p>
+            <hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[0]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[1]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[2]}</p>
+            <hr class="hr-pd_10">
+             <p>${item.task4}</p>
+             <hr class="hr-pd_20">`
+            answerBlock += generateHeader();
+            answerBlock += `
+            <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>
+            <hr class="hr-pd_20">
+            <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
+            <hr class="hr-pd_10">`;
+            answerBlock += generateFooter(); 
+            return answerBlock
+        case 3:
+          answerBlock =`
+          <p class="p-num"><b>2.</b> № ${item.taskCounter}</p>
+          <p>${item.task1}</p>
+            <hr class="hr-pd_20">
+            <table class="table_2_3">
+                <tbody >
+                  <tr >
+                    <td>А 1</td> <td>Й 11</td> <td>У 21</td> <td>Э 21</td>
+                  </tr>
+                  <tr>
+                    <td>Б 2</td> <td>К 12</td> <td>Ф 22</td> <td>Ю 32</td> 
+                  </tr>
+                  <tr>
+                    <td>В 3</td> <td>Л 13</td> <td>Х 23</td> <td>Я 33</td> 
+                  </tr>
+                  <tr>
+                    <td>Г 4</td> <td>М 14</td> <td>Ц 24</td> <td></td> 
+                  </tr>
+                  <tr>
+                    <td>Д 5</td> <td>Н 15</td> <td>Ч 25</td> <td></td> 
+                  </tr>
+                  <tr>
+                    <td>Е 6</td> <td>О 16</td> <td>Ш 26</td> <td></td> 
+                  </tr>
+                  <tr>
+                    <td>Ё 7</td> <td>П 17</td> <td>Щ 27</td> <td></td> 
+                  </tr>
+                  <tr>
+                    <td>Ж 8</td> <td>Р 18</td> <td>Ъ 28</td> <td></td> 
+                  </tr>
+                  <tr>
+                    <td>З 9</td> <td>С 19</td> <td>Ы 29</td> <td></td> 
+                  </tr>
+                  <tr>
+                    <td>И 10</td> <td>Т 20</td> <td>Ь 30</td> <td></td> 
+                  </tr>
+                </tbody>
+              </table>
+            <hr class="hr-pd_20">
+            <p>${item.task3}</p>  
+            <hr class="hr-pd_10">
+            <p>Даны четыре шифровки:</p>
+            <hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[0]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[1]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[2]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[3]}</p><hr class="hr-pd_10">
+             <p>${item.task4}</p>
+             <hr class="hr-pd_20">`
+            answerBlock += generateHeader();
+            answerBlock += `
+            <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>
+            ${item.task5 === "" ? `<hr class="hr-pd_20">` : 
+              `
+              <hr class="hr-pd_20">
+              <p>${item.task5}</p> 
+              <hr class="hr-pd_20">
+              `
+            }        
+            <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
+            <hr class="hr-pd_10">`;
+            answerBlock += generateFooter(); 
+            return answerBlock
+
       }
     }
 }

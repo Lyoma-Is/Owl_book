@@ -413,14 +413,26 @@ $back-top-color:  rgb(233, 199, 105);
         .span-centr__font{
             font-size: 20px;
         }
-        .table_2_1, td{
-            font-size: 15px;
-            border: 1px solid;
+        .table_2_1{
+            margin: auto; 
             border-collapse: collapse;
-            padding: 5px 15px;
-            margin: auto;
-            text-align: center; 
-        }
+            td{
+                font-size: 15px;
+                border: 1px solid;
+                padding: 5px 15px; 
+                text-align: center; 
+            }
+        } 
+        .table_2_3{ 
+            margin: auto; 
+            border-collapse: collapse;
+            td{
+               font-size: 15px;
+               border: 1px solid;
+               text-align: center; 
+               padding: 5px 10px 5px 5px;
+            }
+       }
     }
     
     .number-block{
