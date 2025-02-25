@@ -418,10 +418,38 @@ export default function generateTaskHTML(taskKey, item) {
     }
     if (taskKey === 'three'){
       switch(item.typeTask){
-        case 1: break
+        case 1:
+          answerBlock =`
+          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>${item.task1}</p>
+           <hr class="hr-pd_20">
+            <span class="span-centr">${item.task2}</span>
+          <hr class="hr-pd_20">`
+          answerBlock += generateHeader();
+          answerBlock += `
+              <p>Избавимся от НЕ, применяя закон де Моргана:</p>
+              <hr class="hr-pd_10">
+              ${item.task4 !== "" ? 
+              `
+              <p>Было: ${item.task2} – истинно</p>
+              <hr class="hr-pd_10">
+              <p>Стало: ${item.task3} – истинно</p>
+              <hr class="hr-pd_10">
+              ${item.task4}
+              <hr class="hr-pd_10">
+              `
+              : `
+              <p>Было: ${item.task2} – истинно</p>
+              <hr class="hr-pd_10">
+              <p>Стало: ${item.task3} – истинно</p>
+              <hr class="hr-pd_10">
+              `}
+              Ответ: <b>${item.taskAnswer}</b>`;
+          answerBlock += generateFooter(); 
+          return answerBlock
         case 2:
           answerBlock =`
-          <p class="p-num"><b>3.</b> № ${item.taskCounter}</p>
+          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
           <p>${item.task1}</p>
            <hr class="hr-pd_20">
             <span class="span-centr">${item.task2}</span>
@@ -430,8 +458,21 @@ export default function generateTaskHTML(taskKey, item) {
           answerBlock += `
               <p>Переделаем ложное высказывание в истинное, применяя закон де Моргана:</p>
               <hr class="hr-pd_10">
-              <p>${item.task3} - истинно</p>
+              ${item.task4 !== "" ? 
+              `
+              <p>Было: ${item.task2} – ложно</p>
               <hr class="hr-pd_10">
+              <p>Стало: ${item.task3} – истинно</p>
+              <hr class="hr-pd_10">
+              ${item.task4}
+              <hr class="hr-pd_10">
+              `
+              : `
+              <p>Было: ${item.task2} – ложно</p>
+              <hr class="hr-pd_10">
+              <p>Стало: ${item.task3} – истинно</p>
+              <hr class="hr-pd_10">
+              `}
               Ответ: <b>${item.taskAnswer}</b>`;
           answerBlock += generateFooter(); 
           return answerBlock

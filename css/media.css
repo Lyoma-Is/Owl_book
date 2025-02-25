@@ -119,6 +119,9 @@
   main .p-vars {
     font-size: 25px;
   }
+  .info-taskThree {
+    font-size: 20px;
+  }
   .vars-block {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 15px;
@@ -200,6 +203,9 @@
   }
   main .p-task a {
     font-size: 15px;
+  }
+  .info-taskThree {
+    font-size: 12px;
   }
   .breadcrumb {
     font-size: 13px;

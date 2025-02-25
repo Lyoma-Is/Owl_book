@@ -166,6 +166,19 @@ main .p-gen {
   padding: 7px 10px 7px 5px;
 }
 
+.info-taskThree {
+  padding: 15px;
+  font-size: 25px;
+}
+.info-taskThree .info-taskThree__inner {
+  margin: auto;
+  border-collapse: collapse;
+}
+.info-taskThree .info-taskThree__inner td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
 .number-block {
   padding: 4px 10px;
   border: 1px solid black;

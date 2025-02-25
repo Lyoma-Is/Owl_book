@@ -40,7 +40,7 @@
                         <option value='0'>Показать все типы</option>
                         <option value='1'>Тип 1 (истинно)</option>
                         <option value='2'>Тип 2 (ложно)</option>
-                        <option value='3'>Тип 3</option>
+                        <!-- <option value='3'>Тип 3</option> -->
                     </select>
                 </div>
                 <div class="select-task__inner">
@@ -54,6 +54,45 @@
                     </select>
                 </div>
            </div>
+           <hr class="hr-between">
+           <div class="info-taskThree">
+            <p>Логическое отрицание. Обозначение: НЕ(A), not(A), ¬A, <span style="text-decoration-line: overline;">A</span>.</p>
+            <hr class="hr-pd_10">
+            <p>Конъюнкция (логическое умножение). Обозначение: И, and, &, ×, ∧.</p>
+            <hr class="hr-pd_10">
+            <p>Дизъюнкция (логическое сложение). Обозначение: ИЛИ, or, |, +, ∨.</p>
+            <hr class="hr-pd_20">
+            <table class="info-taskThree__inner">
+                <tbody>      
+                    <tr>
+                        
+                        <td>
+                            <span style="text-decoration-line: overline;">A ∨ B</span> = 
+                            <span style="text-decoration-line: overline;">A</span> ∧
+                            <span style="text-decoration-line: overline;">B</span>
+                        </td>
+                        <td>НЕ(А ИЛИ В) = НЕ(А) И НЕ(В)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="text-decoration-line: overline;">A ∧ B</span> = 
+                            <span style="text-decoration-line: overline;">A</span> ∨
+                            <span style="text-decoration-line: overline;">B</span>
+                        </td>
+                        <td>НЕ(А И В) = НЕ(А) ИЛИ НЕ(В)</td>
+                    </tr>
+                </tbody>  
+            </table>
+            <hr class="hr-pd_20">
+            <p>I закон де Моргана: Отрицание дизъюнкции двух простых высказываний равносильно конъюнкции отрицаний этих высказываний.<br>
+                II закон де Моргана: Отрицание конъюнкции двух простых высказываний равносильно дизъюнкции отрицаний этих высказываний.</p>
+            <hr class="hr-pd_10">
+            <p>Если высказываение <b>истинно</b>, то меняем знаки на противоположные там где есть <b>НЕ</b>.</p><hr class="hr-pd_10">
+            <p>Если высказываение <b>ложно</b>, то меняем знаки на противоположные там где нет <b>НЕ</b>.</p><hr class="hr-pd_10">
+            <p>Если это >, меняем на ≤<br>Если <, меняем на ≥<hr class="hr-pd_10">Четное меняется на нечетное, все остальное тоже меняется на противоположное.</p>
+           
+            </div>
+
            <hr class="hr-between">
            <div class="task-three-numbers__block task-numbers__block" style="text-align: justify;"></div>
            

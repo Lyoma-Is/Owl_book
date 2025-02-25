@@ -176,7 +176,9 @@ $back-top-color:  rgb(233, 199, 105);
             font-size: 25px;
         }
     }//main
-
+    .info-taskThree{
+        font-size: 20px;
+    }
     .vars-block{
         grid-template-columns: 1fr 1fr 1fr 1fr;  
         padding-top: 15px;
@@ -285,7 +287,9 @@ $back-top-color:  rgb(233, 199, 105);
         }
         
     }//main
-
+    .info-taskThree{
+        font-size: 12px;
+    }
     .breadcrumb {
         font-size: 13px;
         padding: 0;      
