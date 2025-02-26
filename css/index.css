@@ -131,7 +131,7 @@ main .p-gen {
   font-size: 25px;
 }
 .task-numbers__block .p-num {
-  font-size: 18px;
+  font-size: 20px;
 }
 .task-numbers__block .span-centr {
   display: block;
@@ -164,6 +164,16 @@ main .p-gen {
   border: 1px solid;
   text-align: center;
   padding: 7px 10px 7px 5px;
+}
+.task-numbers__block .table_4 {
+  margin: auto;
+  border-collapse: collapse;
+}
+.task-numbers__block .table_4 td {
+  font-size: 30px;
+  border: 1px solid;
+  padding: 5px 25px;
+  text-align: center;
 }
 
 .info-taskThree {

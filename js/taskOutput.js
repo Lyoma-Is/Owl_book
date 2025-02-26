@@ -56,7 +56,7 @@ function displayTasks(taskKey, tasks) {
 fetchTasks('one');
 fetchTasks('two');
 fetchTasks('three');
-// fetchTasks('four');
+fetchTasks('four');
 // fetchTasks('five');
 // fetchTasks('six');
 // fetchTasks('seven');
