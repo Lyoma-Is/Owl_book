@@ -7,13 +7,17 @@ async function fetchTasks(taskKey) {
       const response = await fetch(tasks[taskKey]);
       const data = await response.json();
       setupFilters(taskKey, data);
-      dt.push(data.length)
+      if (dtMap[taskKey] !== data.length) {
+        dtMap[taskKey] = data.length; // Запоминаем новую длину
+        dt.push(data.length); // Добавляем в массив
+    }
   } catch (error) {
       console.error(`Ошибка загрузки ${taskKey}:`, error);
   }
 } // fetchTasks 
-
+let dtMap = {};
 let dt = []
+
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
   
@@ -26,7 +30,6 @@ loadAllTasks(Object.keys(tasks));
 function setupFilters(taskKey, data) {
   const taskTypeEl = document.getElementById("taskType");
   const taskSortEl = document.getElementById("taskSort");
-  
   const filterTasks = () => {
       const selectedType = parseInt(taskTypeEl.value);
       const sortedTasks = parseInt(taskSortEl.value);
@@ -57,8 +60,8 @@ fetchTasks('one');
 fetchTasks('two');
 fetchTasks('three');
 fetchTasks('four');
-// fetchTasks('five');
-// fetchTasks('six');
+fetchTasks('five');
+fetchTasks('six');
 // fetchTasks('seven');
 // fetchTasks('eight');
 // fetchTasks('nine');

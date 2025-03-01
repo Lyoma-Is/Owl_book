@@ -1,31 +1,31 @@
-// const tasks = {
-//   one: '/src/oge_inf/taskOne.json',
-//   two: '/src/oge_inf/taskTwo.json',
-//   three: '/src/oge_inf/taskThree.json',
-//   four:  '/src/oge_inf/taskFour.json',
-//   ten: '/src/oge_inf/taskTen.json'
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+  one: '/src/oge_inf/taskOne.json',
+  two: '/src/oge_inf/taskTwo.json',
+  three: '/src/oge_inf/taskThree.json',
+  four:  '/src/oge_inf/taskFour.json',
+  five: '/src/oge_inf/taskFive.json',
+  six: '/src/oge_inf/taskSix.json',
+  ten: '/src/oge_inf/taskTen.json'
 };
 
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+// };
 
 
-// five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json'
-// six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json'
+// 
 // seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json'
 // eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json'
 // nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json'
 
 
-
-// five: '/src/oge_inf/taskFive.json'
-// six: '/src/oge_inf/taskSix.json'
+// 
 // seven: '/src/oge_inf/taskSeven.json'
 // eight: '/src/oge_inf/taskEight.json'
 // nine: '/src/oge_inf/taskNine.json'
@@ -543,4 +543,212 @@ export default function generateTaskHTML(taskKey, item) {
       
       
     }
+    if (taskKey === 'five'){
+      const { taskAn } = item; 
+      function fiveAn(item){    
+        let resCount = 0
+        let res = ''
+        let res1 = ''
+          if (taskAn[4] === "/"){
+           item = taskAn[0] 
+           while(item !== taskAn[1]){
+            if(item / taskAn[2] === Math.floor(item / taskAn[2])){
+              item /=  taskAn[2];
+              res += '1'
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. раздели на ${taskAn[2]} = <span style="background-color: rgb(252, 210, 94);">${item}</span><br>`
+              }
+              else{
+                res1 += `1. раздели на ${taskAn[2]} = ${item}<br>`
+              }        
+            } 
+            else{
+              item +=  taskAn[3];
+              res += '2'
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. прибавь ${taskAn[3]} = <span style="background-color:rgb(252, 210, 94);">${item}</span><br>`
+              }
+              else{
+                res1 += `2. прибавь ${taskAn[3]} = ${item}<br>`
+              }
+            }
+          }
+        } return res1
+      }
+      switch(item.typeTask){
+        case 1:
+          answerBlock =`
+          <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>${item.task1}</p>
+          <hr class="hr-pd_10">
+          <p><b style="font-weight: 500;">${item.task2}</b></p>
+          <hr class="hr-pd_10">
+          <p>${item.task3}</p>
+          <p>Составьте алгоритм получения <b style="font-weight: 500;">${item.task4}</b>. В ответе запишите только номера команд.</p>
+          <hr class="hr-pd_10">
+          <p><em>${item.task5}</em></p>
+          <hr class="hr-pd_10">
+          Если таких алгоритмов более одного, то запишите любой из них.
+          <hr class="hr-pd_10">
+          `
+          answerBlock += generateHeader();
+          answerBlock += `
+              <span style="background-color: rgb(252, 210, 94);">${taskAn[0]}</span><br>
+              ${fiveAn(taskAn[0])}
+              <hr class="hr-pd_20">
+              Ответ: <b>${item.taskAnswer}</b>`;
+          answerBlock += generateFooter(); 
+          console.log()
+          return answerBlock
+      }
+      
+    }
+    if (taskKey === 'six'){
+      switch(item.typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          Ниже приведена программа, записанная на трёх языках программирования.
+          <hr class="hr-pd_20">
+          <table class="table_6">
+            <tbody>
+              <tr>
+                <td style="text-align: center;">Алгоритмический язык</td>
+                <td style="text-align: center;">Python</td>
+                <td style="text-align: center;">С++</td>
+              </tr>
+                  <tr>
+                <td>
+                 <pre>
+алг
+нач
+цел s, t
+ввод s
+ввод t
+если ${item.task1[0]}
+    то вывод "YES"
+    иначе вывод "NO"
+все
+кон
+                 </pre>
+                </td>
+                <td>
+                <pre>
+s = int(input())
+t = int(input())
+if ${item.task1[1]}:
+    print("YES")
+else:
+    print("NO")
+                </pre>
+                </td>
+                <td>
+                <pre>
+#include <iostream>
+using namespace std;
+int main() {
+    int s, t;
+    cin >> s;
+    cin >> t;
+    if ${item.task1[2]}
+        cout << "YES";
+    else
+        cout << "NO";
+return 0;
+} </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <hr class="hr-pd_20">
+          Было проведено 9 запусков программы, при которых в качестве значений переменных s и t вводились следующие пары чисел:
+          <hr class="hr-pd_20">
+          <span class="span-centr">${item.task2}</span>
+          <hr class="hr-pd_20">
+          Сколько было запусков, при которых программа напечатала «${item.task1[3]}»?
+          <hr class="hr-pd_20">
+          `    
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${item.taskAnswer}</b>`;
+          answerBlock += generateFooter(); 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          Ниже приведена программа, записанная на трёх языках программирования.
+          <hr class="hr-pd_20">
+          <table class="table_6">
+            <tbody>
+              <tr>
+                <td style="text-align: center;">Алгоритмический язык</td>
+                <td style="text-align: center;">Python</td>
+                <td style="text-align: center;">С++</td>
+              </tr>
+                  <tr>
+                <td>
+                 <pre>
+алг
+нач
+цел s, t, A
+ввод s
+ввод t
+ввод A
+если ${item.task1[0]}
+ то вывод "YES"
+ иначе вывод "NO"
+все
+кон
+                 </pre>
+                </td>
+                <td>
+                <pre>
+s = int(input())
+t = int(input())
+A = int(input())
+if ${item.task1[1]}:
+    print("YES")
+else:
+    print("NO")
+                </pre>
+                </td>
+                <td>
+                <pre>
+#include <iostream>
+using namespace std;
+int main(){
+   int s, t, A;
+   cin >> s;
+   cin >> t;
+   cin >> A;
+   if ${item.task1[2]}
+     cout << "YES" << endl;
+   else
+     cout << "NO" << endl;
+   return 0;
+ } </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <hr class="hr-pd_20">
+          Было проведено 9 запусков программы, при которых в качестве значений переменных s и t вводились следующие пары чисел:
+          <hr class="hr-pd_20">
+          <span class="span-centr">${item.task2}</span>
+          <hr class="hr-pd_20">
+          ${item.task3}
+          <hr class="hr-pd_20">
+          `    
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${item.taskAnswer}</b>`;
+          answerBlock += generateFooter(); 
+          return answerBlock
+          }
+        
+    }   
 }

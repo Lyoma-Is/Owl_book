@@ -175,6 +175,16 @@ main .p-gen {
   padding: 5px 25px;
   text-align: center;
 }
+.task-numbers__block .table_6 {
+  margin: auto;
+  border-collapse: collapse;
+}
+.task-numbers__block .table_6 td {
+  vertical-align: top;
+  font-size: 20px;
+  border: 1px solid;
+  padding: 10px;
+}
 
 .info-taskThree {
   padding: 15px;
