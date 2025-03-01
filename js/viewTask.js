@@ -1,22 +1,22 @@
-const tasks = {
-  one: '/src/oge_inf/taskOne.json',
-  two: '/src/oge_inf/taskTwo.json',
-  three: '/src/oge_inf/taskThree.json',
-  four:  '/src/oge_inf/taskFour.json',
-  five: '/src/oge_inf/taskFive.json',
-  six: '/src/oge_inf/taskSix.json',
-  ten: '/src/oge_inf/taskTen.json'
-};
-
 // const tasks = {
-//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+//   one: '/src/oge_inf/taskOne.json',
+//   two: '/src/oge_inf/taskTwo.json',
+//   three: '/src/oge_inf/taskThree.json',
+//   four:  '/src/oge_inf/taskFour.json',
+//   five: '/src/oge_inf/taskFive.json',
+//   six: '/src/oge_inf/taskSix.json',
+//   ten: '/src/oge_inf/taskTen.json'
 // };
+
+const tasks = {
+  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+};
 
 
 // 
