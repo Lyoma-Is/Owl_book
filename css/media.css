@@ -184,6 +184,11 @@
   .task-numbers__block {
     font-size: 20px;
   }
+  .task-numbers__block .img-task_9 {
+    display: block;
+    margin: auto;
+    width: 400px;
+  }
   .task-numbers__block .span-centr {
     font-size: 20px;
     letter-spacing: 1.2px;
@@ -332,6 +337,12 @@
   .task-numbers__block {
     padding: 15px;
     font-size: 12px;
+    line-height: 1rem;
+  }
+  .task-numbers__block .img-task_9 {
+    display: block;
+    margin: auto;
+    width: 320px;
   }
   .task-numbers__block .p-num {
     font-size: 12px;

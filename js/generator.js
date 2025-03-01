@@ -54,14 +54,15 @@ async function displayTasks() {
             ${generateTaskHTML('four', randomTasks.four)}
             ${generateTaskHTML('five', randomTasks.five)}
             ${generateTaskHTML('six', randomTasks.six)}
+            ${generateTaskHTML('seven', randomTasks.seven)}
+            ${generateTaskHTML('eight', randomTasks.eight)}
+            ${generateTaskHTML('nine', randomTasks.nine)}
             ${generateTaskHTML('ten', randomTasks.ten)}
        
     `;
 }
 
-//             ${generateTaskHTML('seven', randomTasks.seven)}
-//             ${generateTaskHTML('eight', randomTasks.eight)}
-//             ${generateTaskHTML('nine', randomTasks.nine)}
+
 // Вызов функции для отображения задач
 displayTasks();
 

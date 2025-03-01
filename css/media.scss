@@ -257,6 +257,12 @@ $back-top-color:  rgb(233, 199, 105);
     }
     .task-numbers__block{
         font-size: 20px;
+
+        .img-task_9{
+            display: block; 
+            margin: auto;
+            width: 400px;
+        }
         .span-centr{
             font-size: 20px;
             letter-spacing: 1.2px;
@@ -440,6 +446,12 @@ $back-top-color:  rgb(233, 199, 105);
     .task-numbers__block{
         padding: 15px;
         font-size: 12px;
+        line-height: 1rem;
+        .img-task_9{
+            display: block; 
+            margin: auto;
+            width: 320px;
+        }
         .p-num{
             font-size: 12px;
         }

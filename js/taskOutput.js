@@ -62,8 +62,8 @@ fetchTasks('three');
 fetchTasks('four');
 fetchTasks('five');
 fetchTasks('six');
-// fetchTasks('seven');
-// fetchTasks('eight');
-// fetchTasks('nine');
+fetchTasks('seven');
+fetchTasks('eight');
+fetchTasks('nine');
 fetchTasks('ten');
 

@@ -1,34 +1,29 @@
-// const tasks = {
-//   one: '/src/oge_inf/taskOne.json',
-//   two: '/src/oge_inf/taskTwo.json',
-//   three: '/src/oge_inf/taskThree.json',
-//   four:  '/src/oge_inf/taskFour.json',
-//   five: '/src/oge_inf/taskFive.json',
-//   six: '/src/oge_inf/taskSix.json',
-//   ten: '/src/oge_inf/taskTen.json'
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+  one: '/src/oge_inf/taskOne.json',
+  two: '/src/oge_inf/taskTwo.json',
+  three: '/src/oge_inf/taskThree.json',
+  four:  '/src/oge_inf/taskFour.json',
+  five: '/src/oge_inf/taskFive.json',
+  six: '/src/oge_inf/taskSix.json',
+  seven: '/src/oge_inf/taskSeven.json',
+  eight: '/src/oge_inf/taskEight.json',
+  nine: '/src/oge_inf/taskNine.json',
+  ten: '/src/oge_inf/taskTen.json'
 };
 
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+// };
 
-// 
-// seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json'
-// eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json'
-// nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json'
-
-
-// 
-// seven: '/src/oge_inf/taskSeven.json'
-// eight: '/src/oge_inf/taskEight.json'
-// nine: '/src/oge_inf/taskNine.json'
 
 export {tasks};
 
@@ -656,8 +651,7 @@ int main() {
         cout << "YES";
     else
         cout << "NO";
-return 0;
-} </pre>
+return 0; } </pre>
                 </td>
               </tr>
             </tbody>
@@ -728,8 +722,7 @@ int main(){
      cout << "YES" << endl;
    else
      cout << "NO" << endl;
-   return 0;
- } </pre>
+   return 0; } </pre>
                 </td>
               </tr>
             </tbody>
@@ -750,5 +743,147 @@ int main(){
           return answerBlock
           }
         
-    }   
+    } 
+    if (taskKey === 'seven'){
+      switch(item.typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>7.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>Доступ к файлу <b style="font-weight: 500;">${item.task1[0]}</b>, находящемуся на сервере <b style="font-weight: 500;">${item.task1[1]}</b>, осуществляется по протоколу <b style="font-weight: 500;">${item.task1[2]}</b>.
+           Фрагменты адреса файла закодированы цифрами от 1 до 7. 
+           Запишите последовательность этих цифр, кодирующую адрес указанного файла в сети Интернет.</p>
+          <hr class="hr-pd_10">
+           ${item.task2}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateHeader();
+                    answerBlock += `
+                      <hr class="hr-pd_10">
+                      ${item.task1[2]} :// ${item.task1[1]} / ${item.task1[0]}
+                      <hr class="hr-pd_10">
+                      Ответ: <b>${item.taskAnswer}</b>`;
+                    answerBlock += generateFooter(); 
+                    return answerBlock
+      }
+    }  
+    if (taskKey === 'eight'){
+      switch(item.typeTask){
+        case 1:
+          let k = item.task1[3].split(' ')
+          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
+         <hr class="hr-pd_10">
+          В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
+          <hr class="hr-pd_20">
+          <table class="table_4">
+            <tbody>
+              <tr>
+                <td style="background-color: #ffbf80;">Запрос</td>
+                <td style="background-color: #ffbf80;">Найдено страниц (в тысячах)</td>
+              </tr>
+              <tr>
+                <td >${item.task1[0]}</td>
+                <td>${item.task2[0]}</td>
+              </tr>
+              <tr>
+                <td>${item.task1[1]}</td>
+                <td>${item.task2[1]}</td>
+              </tr>
+              <tr>
+                <td>${item.task1[2]}</td>
+                <td>${item.task2[2]}</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr class="hr-pd_20">
+          <p>Какое количество страниц (в тысячах) будет найдено по запросу <b><em>${item.task1[3]}</em></b>?</p>
+          <hr class="hr-pd_10">
+          <p>Считается, что все запросы выполнялись практически одновременно, так что хранящаяся на поисковом сервере информация о наборе страниц, содержащих все искомые слова, не изменялась за время выполнения запросов.</p>
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateHeader();
+                    answerBlock += `
+                      <hr class="hr-pd_10">
+                      ${item.task2[3] === 1 ? `
+                      ${k[1] === "&" ? 
+                      `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+                      N<sub>A&B</sub> = ${item.task2[1]} + ${item.task2[2]} - ${item.task2[0]}<br>
+                      N<sub>A&B</sub> = ${item.task2[1] + item.task2[2] - item.task2[0]}`
+                      : k[1] === "|" ? 
+                      `N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+                      N<sub>A|B</sub> = ${item.task2[1]} + ${item.task2[2]} - ${item.task2[0]}<br>
+                      N<sub>A|B</sub> = ${item.task2[1] + item.task2[2] - item.task2[0]}`
+                      : 
+                      `
+                      N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
+                      N<sub>A</sub> = ${item.task2[1]} + ${item.task2[2]} - ${item.task2[0]}<br>
+                      N<sub>A</sub> = ${item.task2[1] + item.task2[2] - item.task2[0]}
+                      `}
+                      ` : item.task2[3] === 2 ? `
+                      ${k[1] === "&" ? 
+                      `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+                      N<sub>A&B</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
+                      N<sub>A&B</sub> = ${item.task2[0] + item.task2[2] - item.task2[1]}`
+                      : k[1] === "|" ? 
+                      `N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+                      N<sub>A|B</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
+                      N<sub>A|B</sub> = ${item.task2[0] + item.task2[2] - item.task2[1]}`
+                      : 
+                      `
+                      N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
+                      N<sub>A</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
+                      N<sub>A</sub> = ${item.task2[0] + item.task2[2] - item.task2[1]}
+                      `}
+                      ` : item.task2[3] === 3 ? `
+                      ${k[1] === "&" ? 
+                      `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+                      N<sub>A&B</sub> = ${item.task2[0]} + ${item.task2[1]} - ${item.task2[2]}<br>
+                      N<sub>A&B</sub> = ${item.task2[0] + item.task2[1] - item.task2[2]}`
+                      : k[1] === "|" ? 
+                      `N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+                      N<sub>A|B</sub> = ${item.task2[0]} + ${item.task2[1]} - ${item.task2[2]}<br>
+                      N<sub>A|B</sub> = ${item.task2[0] + item.task2[1] - item.task2[2]}`
+                      : 
+                      `
+                      N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
+                      N<sub>A</sub> = ${item.task2[0]} + ${item.task2[1]} - ${item.task2[2]}<br>
+                      N<sub>A</sub> = ${item.task2[0] + item.task2[1] - item.task2[2]}
+                      `}
+                      ` : ``}
+                      <hr class="hr-pd_10">
+                      Ответ: <b>${item.taskAnswer}</b>`;
+                    answerBlock += generateFooter(); 
+                    return answerBlock
+      }
+    } 
+    if (taskKey === 'nine'){
+      switch(item.typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж и К. 
+          По каждой дороге можно двигаться только в одном направлении, указанном стрелкой.<br>
+          Сколько существует различных путей из города А в город К?</p>
+          <hr class="hr-pd_20">
+          <img class="img-task_9" src="/img/task9/task9/${item.task1[0]}.png">
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateHeader();
+                    answerBlock += `
+                      <hr class="hr-pd_10">
+                      <img class="img-task_9" src="/img/task9/task9/${item.task1[1]}.png">
+                      <hr class="hr-pd_10">
+                      Ответ: <b>${item.taskAnswer}</b>`;
+                    answerBlock += generateFooter(); 
+                    return answerBlock
+      }
+    }  
 }
+
+// answerBlock += `
+//           <p class="p-num"><b>6.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+// `
+// answerBlock += generateHeader();
+//           answerBlock += `
+//             <hr class="hr-pd_20">
+//             Ответ: <b>${item.taskAnswer}</b>`;
+//           answerBlock += generateFooter(); 
+//           return answerBlock
