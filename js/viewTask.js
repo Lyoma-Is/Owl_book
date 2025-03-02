@@ -1,28 +1,28 @@
-// const tasks = {
-//   one: '/src/oge_inf/taskOne.json',
-//   two: '/src/oge_inf/taskTwo.json',
-//   three: '/src/oge_inf/taskThree.json',
-//   four:  '/src/oge_inf/taskFour.json',
-//   five: '/src/oge_inf/taskFive.json',
-//   six: '/src/oge_inf/taskSix.json',
-//   seven: '/src/oge_inf/taskSeven.json',
-//   eight: '/src/oge_inf/taskEight.json',
-//   nine: '/src/oge_inf/taskNine.json',
-//   ten: '/src/oge_inf/taskTen.json'
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+  one: '/src/oge_inf/taskOne.json',
+  two: '/src/oge_inf/taskTwo.json',
+  three: '/src/oge_inf/taskThree.json',
+  four:  '/src/oge_inf/taskFour.json',
+  five: '/src/oge_inf/taskFive.json',
+  six: '/src/oge_inf/taskSix.json',
+  seven: '/src/oge_inf/taskSeven.json',
+  eight: '/src/oge_inf/taskEight.json',
+  nine: '/src/oge_inf/taskNine.json',
+  ten: '/src/oge_inf/taskTen.json'
 };
+
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+// };
 
 
 export {tasks};
@@ -863,13 +863,13 @@ int main(){
           По каждой дороге можно двигаться только в одном направлении, указанном стрелкой.<br>
           Сколько существует различных путей из города А в город К?</p>
           <hr class="hr-pd_20">
-          <img class="img-task_9" src="/img/task9/task9/${item.task1[0]}.png">
+          <img class="img-task_9" src="../../../img/task9/task9/${item.task1[0]}.png">
           <hr class="hr-pd_20">
           `
           answerBlock += generateHeader();
                     answerBlock += `
                       <hr class="hr-pd_10">
-                      <img class="img-task_9" src="/img/task9/task9/${item.task1[1]}.png">
+                      <img class="img-task_9" src="../../../img/task9/task9/${item.task1[1]}.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
                     answerBlock += generateFooter(); 
