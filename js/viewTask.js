@@ -1,28 +1,36 @@
-// const tasks = {
-//   one: '/src/oge_inf/taskOne.json',
-//   two: '/src/oge_inf/taskTwo.json',
-//   three: '/src/oge_inf/taskThree.json',
-//   four:  '/src/oge_inf/taskFour.json',
-//   five: '/src/oge_inf/taskFive.json',
-//   six: '/src/oge_inf/taskSix.json',
-//   seven: '/src/oge_inf/taskSeven.json',
-//   eight: '/src/oge_inf/taskEight.json',
-//   nine: '/src/oge_inf/taskNine.json',
-//   ten: '/src/oge_inf/taskTen.json'
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+  one: '/src/oge_inf/taskOne.json',
+  two: '/src/oge_inf/taskTwo.json',
+  three: '/src/oge_inf/taskThree.json',
+  four:  '/src/oge_inf/taskFour.json',
+  five: '/src/oge_inf/taskFive.json',
+  six: '/src/oge_inf/taskSix.json',
+  seven: '/src/oge_inf/taskSeven.json',
+  eight: '/src/oge_inf/taskEight.json',
+  nine: '/src/oge_inf/taskNine.json',
+  ten: '/src/oge_inf/taskTen.json'
 };
+
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+// };
+const currentDate = new Date();
+
+const options = { 
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric'
+};
+const formattedDate = currentDate.toLocaleDateString('ru-RU', options);
 
 
 export {tasks};
@@ -32,6 +40,8 @@ export default function generateTaskHTML(taskKey, item) {
     const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
     let answerBlock = "";
+  
+
     if (taskKey === 'one'){
       switch(item.typeTask){
          case 1:         
@@ -863,8 +873,17 @@ int main(){
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
           <img class="img-task_9" src="../../../img/task9/task9/${item.task1}.png">
-          <hr class="hr-pd_20">
-          `
+                ${ item.taskNum === "" && item.date === ""?
+             `<hr class="hr-pd_20">`: 
+             `${item.taskNum === ""? 
+             `<hr class="hr-pd_10">
+              <p class="p-num" style="text-align: right;">Добавлено: ${item.date} </p>
+              <hr class="hr-pd_10">`: 
+              `<hr class="hr-pd_10">
+              <p class="p-num" style="text-align: right;">Номер: ${item.taskNum}</p>
+              <p class="p-num" style="text-align: right;">Добавлено: ${item.date} </p>
+              <hr class="hr-pd_10">`}`
+             }  `
           answerBlock += generateHeader();
                     answerBlock += `
                       <hr class="hr-pd_10">
@@ -879,7 +898,17 @@ int main(){
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
           <img class="img-task_9" src="../../../img/task9/task9/${item.task1}.png">
-          <hr class="hr-pd_20">
+           ${ item.taskNum === "" && item.date === ""?
+             `<hr class="hr-pd_20">`: 
+             `${item.taskNum === ""? 
+             `<hr class="hr-pd_10">
+              <p class="p-num" style="text-align: right;">Добавлено: ${item.date} </p>
+              <hr class="hr-pd_10">`: 
+              `<hr class="hr-pd_10">
+              <p class="p-num" style="text-align: right;">Номер: ${item.taskNum}</p>
+              <p class="p-num" style="text-align: right;">Добавлено: ${item.date} </p>
+              <hr class="hr-pd_10">`}`
+             } 
           `
           answerBlock += generateHeader();
                     answerBlock += `
@@ -895,8 +924,17 @@ int main(){
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
           <img class="img-task_9" src="../../../img/task9/task9/${item.task1}.png">
-          <hr class="hr-pd_20">
-          `
+            ${ item.taskNum === "" && item.date === ""?
+             `<hr class="hr-pd_20">`: 
+             `${item.taskNum === ""? 
+             `<hr class="hr-pd_10">
+              <p class="p-num" style="text-align: right;">Добавлено: ${item.date} </p>
+              <hr class="hr-pd_10">`: 
+              `<hr class="hr-pd_10">
+              <p class="p-num" style="text-align: right;">Номер: ${item.taskNum}</p>
+              <p class="p-num" style="text-align: right;">Добавлено: ${item.date} </p>
+              <hr class="hr-pd_10">`}`
+             }  `
           answerBlock += generateHeader();
                     answerBlock += `
                       <hr class="hr-pd_10">

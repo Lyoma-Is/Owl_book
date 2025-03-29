@@ -8,8 +8,9 @@ async function fetchTasks(taskKey) {
       const data = await response.json();
       setupFilters(taskKey, data);
       if (dtMap[taskKey] !== data.length) {
-        dtMap[taskKey] = data.length; // Запоминаем новую длину
+        dtMap[taskKey] = data.length // Запоминаем новую длину
         dt.push(data.length); // Добавляем в массив
+        
     }
   } catch (error) {
       console.error(`Ошибка загрузки ${taskKey}:`, error);

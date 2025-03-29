@@ -10,6 +10,7 @@
         "taskTableV": ["A", "B", "C", "D", "E"],
         
         "taskTableS": [" ", 6, " ", " ", 3, 2, 5, 1, 2, " ", 6]
+
     },
     {
         "taskCounter": 109,
