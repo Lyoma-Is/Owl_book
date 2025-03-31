@@ -632,22 +632,151 @@ export default function generateTaskHTML(taskKey, item) {
           } // while
         } // 5 /
 
-        // vozvedenie
-        if (taskAn[4] === "**"){
+        // umnozhenie
+        if (taskAn[5] === "*"){
           item = taskAn[1]
           while(item !== taskAn[0]){
-            if(Math.sqrt(item) === Math.floor(Math.sqrt(item))){
-              item =  Math.sqrt(item);
+            if(item % taskAn[3] === 0 ){
+              if ((res.length === 4 || res.length === 3) && item/taskAn[3] === taskAn[0]){
+                item /= taskAn[3];
+                res += '2';  
+              }
+              else if ((res.length === 4 || res.length === 3) && item/taskAn[3] !== taskAn[0]){
+                item += taskAn[2];
+                res += '1';
+              }
+              else{
+                item /= taskAn[3];
+                res += '2';  
+              }  
+            }
+            else if(taskAn[4] === "-"){
+              item += taskAn[2]
               res += '1'
-              
+            }
+            else {break;}
+          }
+          res = res.split('').reverse().join('');
+          let item2 = taskAn[0]
+          for (let i in res){
+            let x = res[i]
+            if (x === '2' && taskAn[5] === '*'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. <b>умножить на ${taskAn[3]}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*3}</span><br>`
+                item2 *= 3;
+              }
+              else{
+                res1 += `2. <b>умножить на ${taskAn[3]}</b> число ${item2} = ${item2*3}<br>`
+                item2 *=3;
+              }        
+            }
+            else if(taskAn[4] === "-" && x === '1'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>вычти ${taskAn[2]}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - taskAn[2]}</span><br>`
+                item2 = item2 - taskAn[2]
+              }
+              else{
+                res1 += `1. <b>вычти ${taskAn[2]}</b> из числа ${item2} = ${item2 - taskAn[2]}<br>`
+                item2 = item2 - taskAn[2]
+              }        
+            }
+          }
+        }
+        if (taskAn[4] === "*"){
+          item = taskAn[1]
+          let uch = taskAn[2]
+          let vch = taskAn[3]
+          while(item !== taskAn[0]){
+            if(item % taskAn[2] === 0 ){
+              if ((res.length === 4 || res.length === 3) && item/taskAn[2] === taskAn[0]){
+                item /= taskAn[2];
+                res += '1';  
+              }
+              else if ((res.length === 4 || res.length === 3) && item/taskAn[2] !== taskAn[0] && taskAn[5] === "-"){
+                item += taskAn[3];
+                res += '2';
+              }
+              else{
+                item /= taskAn[2];
+                res += '1';  
+              }  
             }
             else if(taskAn[5] === "-"){
               item += taskAn[3]
               res += '2'
             }
+            else if(taskAn[5] === "+"){
+              item -= taskAn[3]
+              res += '2'
+            }
             else {break;}
           }
           res = res.split('').reverse().join('');
+          let item2 = taskAn[0]
+          for (let i in res){
+            let x = res[i]
+            if (x === '1' && taskAn[4] === '*'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>умножить на ${uch}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*uch}</span><br>`
+                item2 *= uch;
+              }
+              else{
+                res1 += `1. <b>умножить на ${uch}</b> число ${item2} = ${item2*uch}<br>`
+                item2 *=uch;
+              }        
+            }
+            else if(taskAn[5] === "-" && x === '2'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
+                item2 = item2 - vch
+              }
+              else{
+                res1 += `2. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
+                item2 = item2 - vch
+              }        
+            }
+            else if(taskAn[5] === "+" && x === '2'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. <b>прибавь ${vch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 + vch}</span><br>`
+                item2 = item2 + vch
+              }
+              else{
+                res1 += `2. <b>прибавь ${vch}</b> к числу ${item2} = ${item2 + vch}<br>`
+                item2 = item2 + vch
+              }        
+            }
+          }
+        }
+
+        // vozvedenie
+        if (taskAn[4] === "**"){
+          item = taskAn[1]
+          while(item !== taskAn[0]){
+            if(Math.sqrt(item) === Math.floor(Math.sqrt(item))){
+              item = Math.sqrt(item);
+              res += '1'
+            }
+            else if(taskAn[5] === "-"){
+              if (res.length === 4 && (item + taskAn[3] !== taskAn[0])){
+                item = Math.abs(item - taskAn[3])
+                res += '2'
+              }
+              else{
+                item += taskAn[3]
+                res += '2'
+              }
+             
+            }
+            else {break;}
+          }
+        
+          res = res.split('').reverse().join('');
+          
           let item2 = taskAn[0]
           for (let i in res){
             let x = res[i]
@@ -680,8 +809,10 @@ export default function generateTaskHTML(taskKey, item) {
         if (taskAn[4] === 'p'){
           item = taskAn[1]
           while(item !== taskAn[0]){
-            if(item.toString().includes('2')){
-              item =  (item-2)/10;
+            let st = taskAn[2];
+            st = st.toString();
+            if(item.toString().at(-1) === st){
+              item =  (item-taskAn[2])/10;
               res += '1'  
             }
             else if(taskAn[5] === "/"){
@@ -691,18 +822,19 @@ export default function generateTaskHTML(taskKey, item) {
             else {break;}
           }
           res = res.split('').reverse().join('');
+          //console.log(res)
           let item2 = taskAn[0]
           for (let i in res){
             let x = res[i]
             if (x === '1' && taskAn[4] === 'p'){
               resCount += 1
               if (resCount === 5){
-                res1 += `1. <b>приписать ${taskAn[2]}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${(item2*10)+2}</span><br>`
-                item2 = (item2*10)+2;
+                res1 += `1. <b>приписать ${taskAn[2]}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${(item2*10)+taskAn[2]}</span><br>`
+                item2 = (item2*10)+taskAn[2];
               }
               else{
-                res1 += `1. <b>приписать ${taskAn[2]}</b> к числу ${item2} = ${((item2*10)+2)}<br>`
-                item2 = (item2*10)+2;
+                res1 += `1. <b>приписать ${taskAn[2]}</b> к числу ${item2} = ${((item2*10)+taskAn[2])}<br>`
+                item2 = (item2*10)+taskAn[2];
               }        
             }
             else if(taskAn[5] === "/" && x === '2'){
@@ -714,6 +846,110 @@ export default function generateTaskHTML(taskKey, item) {
               else{
                 res1 += `2. <b>разделить на ${taskAn[3]}</b> число ${item2} = ${item2 / taskAn[3]}<br>`
                 item2 = item2 / taskAn[3]
+              }        
+            }
+          }
+        }
+        if (taskAn[5] === 'p'){
+          item = taskAn[1]
+          while(item !== taskAn[0]){
+            if(item.toString().at(-1) === taskAn[3].toString()){
+              item =  (item-taskAn[3])/10;
+              res += '2'  
+            }
+            else if(taskAn[4] === "/"){
+              item *= taskAn[2]
+              res += '1'
+            }
+            else if(taskAn[4] === "-"){
+              item += taskAn[2]
+              res += '1'
+            }
+            else {break;}
+          }
+          res = res.split('').reverse().join('');
+          //console.log(res)
+          let item2 = taskAn[0]
+          for (let i in res){
+            let x = res[i]
+            let pch = taskAn[3]
+            let vch = taskAn[2]
+            if (x === '2' && taskAn[5] === 'p'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. <b>приписать ${pch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${(item2*10)+pch}</span><br>`
+                item2 = (item2*10)+pch;
+              }
+              else{
+                res1 += `2. <b>приписать ${pch}</b> к числу ${item2} = ${((item2*10)+pch)}<br>`
+                item2 = (item2*10)+pch;
+              }        
+            }
+            else if(taskAn[4] === "/" && x === '1'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>разделить на ${vch}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 / vch}</span><br>`
+                item2 = item2 / vch
+              }
+              else{
+                res1 += `1. <b>разделить на ${vch}</b> число ${item2} = ${item2 / vch}<br>`
+                item2 = item2 / vch
+              }        
+            }
+            else if(taskAn[4] === "-" && x === '1'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
+                item2 = item2 - vch
+              }
+              else{
+                res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
+                item2 = item2 - vch
+              }        
+            }
+          }
+        }
+
+        // zacherkni
+        if (taskAn[5] === 'z'){
+          item = taskAn[0]
+          while(item !== taskAn[1]){
+            if(item.toString().length === 2){
+              
+              item = Math.floor(item/10)
+              res += '2'
+            }
+            else if(taskAn[4] == '**'){
+              item = item*item
+              res += "1"
+            }
+            else {break;}
+          }
+          //console.log(res)
+
+          let item2 = taskAn[0]
+          for (let i in res){
+            let x = res[i]
+            if (x === '1' && taskAn[4] === '**'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>возведи в квадрат</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*item2}</span><br>`
+                item2 = item2 *item2;
+              }
+              else{
+                res1 += `1. <b>возведи в квадрат</b> число ${item2} = ${item2*item2}<br>`
+                item2 = item2*item2;
+              }        
+            }
+            else if(taskAn[5] === "z" && x === '2'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. <b> зачеркни справа</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${Math.floor(item2/10)}</span><br>`
+                item2 = Math.floor(item2/10)
+              }
+              else{
+                res1 += `2. <b>зачеркни справа</b> число ${item2} = ${Math.floor(item2/10)}<br>`
+                item2 = Math.floor(item2/10)
               }        
             }
           }
@@ -769,7 +1005,7 @@ export default function generateTaskHTML(taskKey, item) {
                 Ответ: <b>${item.taskAnswer}</b>`;
             answerBlock += generateFooter(); 
             return answerBlock
-          case 3:
+        case 3:
               answerBlock =`
               <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
               <p>${item.task1}</p>
