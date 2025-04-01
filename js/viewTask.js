@@ -565,7 +565,7 @@ export default function generateTaskHTML(taskKey, item) {
         let resCount = 0
         let res = ''
         let res1 = ''
-
+        let steps = 0;
         // delenie
         if (taskAn[4] === "/"){
            while(item !== taskAn[1]){
@@ -658,28 +658,30 @@ export default function generateTaskHTML(taskKey, item) {
           }
           res = res.split('').reverse().join('');
           let item2 = taskAn[0]
+          let uch = taskAn[3]
+          let vch = taskAn[2]
           for (let i in res){
             let x = res[i]
             if (x === '2' && taskAn[5] === '*'){
               resCount += 1
               if (resCount === 5){
-                res1 += `2. <b>умножить на ${taskAn[3]}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*3}</span><br>`
-                item2 *= 3;
+                res1 += `2. <b>умножить на ${uch}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*uch}</span><br>`
+                item2 *= uch;
               }
               else{
-                res1 += `2. <b>умножить на ${taskAn[3]}</b> число ${item2} = ${item2*3}<br>`
-                item2 *=3;
+                res1 += `2. <b>умножить на ${uch}</b> число ${item2} = ${item2*uch}<br>`
+                item2 *=uch;
               }        
             }
             else if(taskAn[4] === "-" && x === '1'){
               resCount += 1
               if (resCount === 5){
-                res1 += `1. <b>вычти ${taskAn[2]}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - taskAn[2]}</span><br>`
-                item2 = item2 - taskAn[2]
+                res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
+                item2 = item2 - vch
               }
               else{
-                res1 += `1. <b>вычти ${taskAn[2]}</b> из числа ${item2} = ${item2 - taskAn[2]}<br>`
-                item2 = item2 - taskAn[2]
+                res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
+                item2 = item2 - vch
               }        
             }
           }
@@ -804,11 +806,92 @@ export default function generateTaskHTML(taskKey, item) {
             }
           }
         }
+        if (taskAn[5] === "**"){
+          item = taskAn[1]
+         
+          while(item !== taskAn[0] && steps < 5){
+            steps++
+            if(Math.sqrt(item) === Math.floor(Math.sqrt(item))){
+              if (res.length === 4){
+                item += taskAn[2]
+                res += '1'
+              }
+              else{
+                item = Math.sqrt(item);
+                res += '2'
+              }     
+            }
+            else if(taskAn[4] === "-" ){ 
+              if (res.length === 4 && (item + taskAn[2] !== taskAn[0])){
+                item = Math.abs(item - taskAn[2])
+                res += '1'
+              }
+              else  {
+                item += taskAn[2]
+                res += '1'
+              }
+            }
+            else if(taskAn[4] === "+"){
+              if (res.length === 4 && (item - taskAn[2] !== taskAn[0])){
+                item = Math.abs(item + taskAn[2])
+                res += '1'
+              }
+              else{
+                item -= taskAn[2]
+                res += '1'
+              }
+             
+            } 
+            else {break;} 
+          }
+        
+          res = res.split('').reverse().join('');
+          
+          let item2 = taskAn[0]
+          let vch = taskAn[2]
+          for (let i in res){
+            let x = res[i]
+            if (x === '2' && taskAn[5] === '**'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. <b>возведи в квадрат</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*item2}</span><br>`
+                item2 = item2 *item2;
+              }
+              else{
+                res1 += `2. <b>возведи в квадрат</b> число ${item2} = ${item2*item2}<br>`
+                item2 = item2*item2;
+              }        
+            }
+            else if(taskAn[4] === "-" && x === '1'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
+                item2 = item2 - vch
+              }
+              else{
+                res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
+                item2 = item2 - vch
+              }        
+            }
+            else if(taskAn[4] === "+" && x === '1'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>прибавь ${vch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 + vch}</span><br>`
+                item2 = item2 + vch
+              }
+              else{
+                res1 += `1. <b>прибавь ${vch}</b> к числу ${item2} = ${item2 + vch}<br>`
+                item2 = item2 + vch
+              }        
+            }
+          }
+        }
 
         // pripisat
         if (taskAn[4] === 'p'){
           item = taskAn[1]
-          while(item !== taskAn[0]){
+          while(item !== taskAn[0] && steps < 5){
+            steps++
             let st = taskAn[2];
             st = st.toString();
             if(item.toString().at(-1) === st){
