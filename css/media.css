@@ -233,6 +233,10 @@
   }
   main .main-block .aside-main a {
     font-size: 15px;
+    line-height: 2rem;
+  }
+  main .main-block .aside-main h2 {
+    padding: 10px 0 0 0;
   }
   main .p-vars {
     font-size: 15px;

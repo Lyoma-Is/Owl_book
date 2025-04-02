@@ -299,6 +299,7 @@ $back-top-color:  rgb(233, 199, 105);
         width: 100%;
     }
     main{  
+        
         .main-block{
             .aside-left{ 
                 width: 35%;
@@ -306,14 +307,20 @@ $back-top-color:  rgb(233, 199, 105);
                     li{
                         a{
                             font-size: 15px;
+                            
                         }
                     }
                 }         
             }
             .aside-main{
                 font-size: 12px;
+                
                 a{
                     font-size: 15px;
+                    line-height: 2rem;
+                }
+                h2{
+                    padding: 10px 0 0 0;
                 }
             }
         } 
