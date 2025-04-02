@@ -1,28 +1,28 @@
-// const tasks = {
-//   one: '/src/oge_inf/taskOne.json',
-//   two: '/src/oge_inf/taskTwo.json',
-//   three: '/src/oge_inf/taskThree.json',
-//   four:  '/src/oge_inf/taskFour.json',
-//   five: '/src/oge_inf/taskFive.json',
-//   six: '/src/oge_inf/taskSix.json',
-//   seven: '/src/oge_inf/taskSeven.json',
-//   eight: '/src/oge_inf/taskEight.json',
-//   nine: '/src/oge_inf/taskNine.json',
-//   ten: '/src/oge_inf/taskTen.json'
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+  one: '../../../src/oge_inf/taskOne.json',
+  two: '../../../src/oge_inf/taskTwo.json',
+  three: '../../../src/oge_inf/taskThree.json',
+  four:  '../../../src/oge_inf/taskFour.json',
+  five: '../../../src/oge_inf/taskFive.json',
+  six: '../../../src/oge_inf/taskSix.json',
+  seven: '../../../src/oge_inf/taskSeven.json',
+  eight: '../../../src/oge_inf/taskEight.json',
+  nine: '../../../src/oge_inf/taskNine.json',
+  ten: '../../../src/oge_inf/taskTen.json'
 };
+
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
+// };
 const currentDate = new Date();
 
 const options = { 
@@ -36,7 +36,7 @@ const formattedDate = currentDate.toLocaleDateString('ru-RU', options);
 export {tasks};
 
 export default function generateTaskHTML(taskKey, item) {
-   const { date, taskNum, taskAn} = item
+   const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5} = item
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
@@ -1133,9 +1133,9 @@ export default function generateTaskHTML(taskKey, item) {
                  <pre>
 алг
 нач
-цел s, t
-ввод s
-ввод t
+цел ${task4[0]}, ${task4[1]}
+ввод ${task4[0]}
+ввод ${task4[1]}
 если ${item.task1[0]}
     то вывод "YES"
     иначе вывод "NO"
@@ -1145,8 +1145,8 @@ export default function generateTaskHTML(taskKey, item) {
                 </td>
                 <td>
                 <pre>
-s = int(input())
-t = int(input())
+${task4[0]} = int(input())
+${task4[1]} = int(input())
 if ${item.task1[1]}:
     print("YES")
 else:
@@ -1158,9 +1158,9 @@ else:
 #include <iostream>
 using namespace std;
 int main() {
-    int s, t;
-    cin >> s;
-    cin >> t;
+    int ${task4[0]}, ${task4[1]};
+    cin >> ${task4[0]};
+    cin >> ${task4[1]};
     if ${item.task1[2]}
         cout << "YES";
     else
@@ -1171,13 +1171,14 @@ return 0; } </pre>
             </tbody>
           </table>
           <hr class="hr-pd_20">
-          Было проведено 9 запусков программы, при которых в качестве значений переменных s и t вводились следующие пары чисел:
+          Было проведено 9 запусков программы, при которых в качестве значений переменных ${task4[0]} и ${task4[1]} вводились следующие пары чисел:
           <hr class="hr-pd_20">
           <span class="span-centr">${item.task2}</span>
           <hr class="hr-pd_20">
           Сколько было запусков, при которых программа напечатала «${item.task1[3]}»?
           <hr class="hr-pd_20">
           `    
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
@@ -1201,10 +1202,10 @@ return 0; } </pre>
                  <pre>
 алг
 нач
-цел s, t, A
-ввод s
-ввод t
-ввод A
+цел ${task4[0]}, ${task4[1]}, ${task4[2]}
+ввод ${task4[0]}
+ввод ${task4[1]}
+ввод ${task4[2]}
 если ${item.task1[0]}
  то вывод "YES"
  иначе вывод "NO"
@@ -1214,9 +1215,9 @@ return 0; } </pre>
                 </td>
                 <td>
                 <pre>
-s = int(input())
-t = int(input())
-A = int(input())
+${task4[0]} = int(input())
+${task4[1]} = int(input())
+${task4[2]} = int(input())
 if ${item.task1[1]}:
     print("YES")
 else:
@@ -1228,10 +1229,10 @@ else:
 #include <iostream>
 using namespace std;
 int main(){
-   int s, t, A;
-   cin >> s;
-   cin >> t;
-   cin >> A;
+   int ${task4[0]}, ${task4[1]}, ${task4[2]};
+   cin >> ${task4[0]};
+   cin >> ${task4[1]};
+   cin >> ${task4[2]};
    if ${item.task1[2]}
      cout << "YES" << endl;
    else
@@ -1242,13 +1243,14 @@ int main(){
             </tbody>
           </table>
           <hr class="hr-pd_20">
-          Было проведено 9 запусков программы, при которых в качестве значений переменных s и t вводились следующие пары чисел:
+          Было проведено 9 запусков программы, при которых в качестве значений переменных ${task4[0]} и ${task4[1]} вводились следующие пары чисел:
           <hr class="hr-pd_20">
           <span class="span-centr">${item.task2}</span>
           <hr class="hr-pd_20">
           ${item.task3}
           <hr class="hr-pd_20">
-          `    
+          `
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
