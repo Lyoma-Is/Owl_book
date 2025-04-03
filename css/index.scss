@@ -136,6 +136,75 @@ main{
     .p-gen{
         text-align: center;
     }
+
+    .search-box__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    .search-box, .show-box {
+        padding: 20px;
+        
+    }
+    
+    .label-text {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .search-box-find {
+        display: flex;
+        gap: 10px;
+    }
+    #select-task{
+       
+        padding: 10px 15px;
+       
+        border-radius: 4px;
+        font-size: 16px;
+        flex-grow: 1;
+        transition: border-color 0.3s;
+    }
+    #taskNumber {
+        max-width: 220px;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        flex-grow: 1;
+        transition: border-color 0.3s;
+    }
+    
+    #taskNumber:focus, #select-task:focus {
+        outline: none;
+        border-color: #4285f4;
+        box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+    }
+    
+    #taskNumber::placeholder {
+        color: #999;
+    }
+    
+    .btn-primary {
+        padding: 10px 20px;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-primary:hover {
+        background-color: #3367d6;
+    }
+    
+    .btn-primary:active {
+        background-color: #2a56b7;
+    }
 }
 
 .h2-centr{

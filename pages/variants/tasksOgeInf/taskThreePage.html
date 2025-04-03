@@ -33,6 +33,32 @@
     <main>
         <div class="container">
            <!-- <table class="task-numbers__block" style="text-align: justify;"></table>  -->
+           <div class="search-box__inner">
+            <div class="search-box">
+                <label for="taskNumber" class="label-text">Поиск по номеру:</label>
+                <div class="search-box-find">
+                <input id="taskNumber" placeholder="Введите номер задачи">
+                <button id="searchBtn" class="btn-primary">Показать задачу</button>
+                </div>
+            </div>   
+            <div class="show-box">
+                <label class="label-text">Поиск по типу:</label>
+                <select id="select-task">
+                    <option value="">Выберите задание по типу</option>
+                    <option value="taskOnePage.html">1. Оценка объема памяти для хранения данных.</option>
+                    <option value="taskTwoPage.html">2. Кодирование и декодирование информации.</option>
+                    <option value="taskThreePage.html">3. Истинные и ложные высказывания.</option>
+                    <option value="taskFourPage.html">4. Анализ таблицы. Поиск кратчайшего пути.</option>
+                    <option value="taskFivePage.html">5. Анализ простых алгоритмов. Исполнители.</option>
+                    <option value="taskSixPage.html">6. Программа с условным оператором.</option>
+                    <option value="taskSevenPage.html">7. Принципы адресации в сети Интернет."></option>
+                    <option value="taskEightPage.html">8. Анализ поисковых запросов сервера.</option>
+                    <option value="taskNinePage.html">9. Анализ информации на схеме дорог.</option>
+                    <option value="taskTenPage.html">10. Запись чисел в различных системах счисления.</option>
+                </select>
+            </div> 
+        </div>
+        <hr class="hr-between">
            <div class="select-task">
                 <div class="select-task__inner">
                     <label for="taskType">Выберите тип задачи</label>
@@ -94,7 +120,7 @@
             </div>
 
            <hr class="hr-between">
-           <div class="task-three-numbers__block task-numbers__block" style="text-align: justify;"></div>
+           <div id="result" class="task-three-numbers__block task-numbers__block" style="text-align: justify;"></div>
            
         </div>
     </main>
