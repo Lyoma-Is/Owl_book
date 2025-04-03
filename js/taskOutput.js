@@ -20,7 +20,7 @@ async function fetchTasks(taskKey) {
     tasksCache.set(taskKey, data); // Сохраняем в кэш
     totalTasksLoaded += data.length;
     
-    //console.log(`Загружено ${data.length} задач из ${taskKey}`);
+    console.log(`Загружено ${data.length} задач из ${taskKey}`);
     setupFilters(taskKey, data); // Настраиваем фильтры после загрузки
 
     // Добавляем задачи в общий массив

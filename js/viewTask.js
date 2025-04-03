@@ -1,36 +1,37 @@
+const tasks = {
+  one: '../../../src/oge_inf/taskOne.json',
+  two: '../../../src/oge_inf/taskTwo.json',
+  three: '../../../src/oge_inf/taskThree.json',
+  four:  '../../../src/oge_inf/taskFour.json',
+  five: '../../../src/oge_inf/taskFive.json',
+  six: '../../../src/oge_inf/taskSix.json',
+  seven: '../../../src/oge_inf/taskSeven.json',
+  eight: '../../../src/oge_inf/taskEight.json',
+  nine: '../../../src/oge_inf/taskNine.json',
+  ten: '../../../src/oge_inf/taskTen.json'
+};
+
 // const tasks = {
-//   one: '../../../src/oge_inf/taskOne.json',
-//   two: '../../../src/oge_inf/taskTwo.json',
-//   three: '../../../src/oge_inf/taskThree.json',
-//   four:  '../../../src/oge_inf/taskFour.json',
-//   five: '../../../src/oge_inf/taskFive.json',
-//   six: '../../../src/oge_inf/taskSix.json',
-//   seven: '../../../src/oge_inf/taskSeven.json',
-//   eight: '../../../src/oge_inf/taskEight.json',
-//   nine: '../../../src/oge_inf/taskNine.json',
-//   ten: '../../../src/oge_inf/taskTen.json'
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
 // };
 
-const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json'
-};
-const currentDate = new Date();
+// const currentDate = new Date();
 
-const options = { 
-  day: 'numeric',
-  month: 'numeric',
-  year: 'numeric'
-};
-const formattedDate = currentDate.toLocaleDateString('ru-RU', options);
+// const options = { 
+//   day: 'numeric',
+//   month: 'numeric',
+//   year: 'numeric'
+// };
+// const formattedDate = currentDate.toLocaleDateString('ru-RU', options);
 
 
 export {tasks};
@@ -49,8 +50,7 @@ export default function generateTaskHTML(taskKey, item) {
               `<hr class="hr-pd_10">
               <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
               <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
-              <hr class="hr-pd_10">`}`
-             } `;
+              <hr class="hr-pd_10">`}`} `;
     let answerBlock = "";
   
     if (taskKey === 'one'){
@@ -1271,6 +1271,7 @@ int main(){
            ${item.task2}
           <hr class="hr-pd_20">
           `
+          answerBlock += generateDate();
           answerBlock += generateHeader();
                     answerBlock += `
                       <hr class="hr-pd_10">
