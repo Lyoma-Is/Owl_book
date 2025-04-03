@@ -97,7 +97,7 @@ main{
         .aside-main{
             display: block;
             //text-align: center;
-            margin: 0 10px;
+            margin: 0 20px;
             font-size: 22px;
             h2{
                 padding: 20px 0;
@@ -137,6 +137,24 @@ main{
     }
     .p-gen{
         text-align: center;
+        display: flex;
+        padding: 20px;
+        a{
+            border: 3px solid $back-top-color;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 22px;
+            margin: 0 10px;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                background-color: $back-top-color;
+                transition: all 0.3s ease-in-out;
+                color: red;
+            }
+        }
+
+
     }
 
     .search-box__inner{
@@ -188,7 +206,7 @@ main{
     #taskNumber::placeholder {
         color: #999;
     }
-    
+    // 4285f4 3367d6 2a56b7
     .btn-primary {
         padding: 10px 20px;
         background-color: #4285f4;

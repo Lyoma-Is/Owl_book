@@ -83,7 +83,7 @@ main .main-block .aside-left ul li a:hover {
 }
 main .main-block .aside-main {
   display: block;
-  margin: 0 10px;
+  margin: 0 20px;
   font-size: 22px;
 }
 main .main-block .aside-main h2 {
@@ -117,6 +117,22 @@ main .p-task a:hover {
 }
 main .p-gen {
   text-align: center;
+  display: flex;
+  padding: 20px;
+}
+main .p-gen a {
+  border: 3px solid rgb(233, 199, 105);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  margin: 0 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+main .p-gen a:hover {
+  background-color: rgb(233, 199, 105);
+  transition: all 0.3s ease-in-out;
+  color: red;
 }
 main .search-box__inner {
   display: flex;
