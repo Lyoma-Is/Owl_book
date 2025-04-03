@@ -1,6 +1,116 @@
 
 [
     {
+        "taskCounter": 181,
+        "typeTask": 1,
+        "taskAnswer": 5426173,
+        "task1": ["http.exe", "page.com", "http"],
+
+        "task2": "1) /<br> 2) page<br>3) exe<br>4) ://<br>5) http<br>6) .com<br>7) http.",
+        "date": "03.04.2025",
+        "taskNum": "0AAD64"
+    },
+    {
+        "taskCounter": 180,
+        "typeTask": 1,
+        "taskAnswer": 6231547,
+        "task1": ["net.txt", "html.ru", "http"],
+
+        "task2": "1) .ru<br> 2) ://<br>3) html<br>4) net<br>5) /<br>6) http<br>7) .txt",
+        "date": "03.04.2025",
+        "taskNum": "D82F60"
+    },
+    {
+        "taskCounter": 179,
+        "typeTask": 1,
+        "taskAnswer": 6425173,
+        "task1": ["txt.com", "net.ru", "http"],
+
+        "task2": "1) /<br> 2) net<br>3) .com<br>4) ://<br>5) .ru<br>6) http<br>7) txt",
+        "date": "03.04.2025",
+        "taskNum": "DA7D6A"
+    },
+    {
+        "taskCounter": 178,
+        "typeTask": 1,
+        "taskAnswer": 2473156,
+        "task1": ["ru.txt", "htm.com", "http"],
+
+        "task2": "1) /<br> 2) http<br>3) .com<br>4) ://<br>5) ru<br>6) .txt<br>7) htm",
+        "date": "03.04.2025",
+        "taskNum": "3D5966"
+    },
+    {
+        "taskCounter": 177,
+        "typeTask": 1,
+        "taskAnswer": 4731652,
+        "task1": ["privet.xls", "text.com", "http"],
+
+        "task2": "1) com<br> 2) .xls<br>3) text.<br>4) http<br>5) privet<br>6) /<br>7) ://",
+        "date": "03.04.2025",
+        "taskNum": "F0DA3E"
+    },
+    {
+        "taskCounter": 176,
+        "typeTask": 1,
+        "taskAnswer": 4127653,
+        "task1": ["hi.txt", "txt.ru", "https"],
+
+        "task2": "1) ://<br> 2) txt.<br>3) .txt<br>4) https<br>5) hi<br>6) /<br>7) ru",
+        "date": "03.04.2025",
+        "taskNum": "164236"
+    },
+    {
+        "taskCounter": 175,
+        "typeTask": 1,
+        "taskAnswer": 6135724,
+        "task1": ["book.txt", "bibl.ru", "http"],
+
+        "task2": "1) ://<br> 2) book.<br>3) bibl<br>4) txt<br>5) .ru<br>6) http<br>7) /",
+        "date": "03.04.2025",
+        "taskNum": "588C3B"
+    },
+    {
+        "taskCounter": 174,
+        "typeTask": 1,
+        "taskAnswer": 1457623,
+        "task1": ["ftp.doc", "pochta.net", "ftp"],
+
+        "task2": "1) ftp:<br> 2) ftp.<br>3) doc<br>4) //<br>5) pochta<br>6) /<br>7) .net",
+        "date": "03.04.2025",
+        "taskNum": "900D30"
+    },
+    {
+        "taskCounter": 173,
+        "typeTask": 1,
+        "taskAnswer": 5473216,
+        "task1": ["img.bmp", "pic.kz", "http"],
+
+        "task2": "1) img<br> 2) /<br>3) kz<br>4) ://<br>5) http<br>6) .bmp<br>7) pic.",
+        "date": "03.04.2025",
+        "taskNum": "FA288E"
+    },
+    {
+        "taskCounter": 172,
+        "typeTask": 1,
+        "taskAnswer": 1753264,
+        "task1": ["https.doc", "top.net", "https"],
+
+        "task2": "1) https<br> 2) /<br>3) .net<br>4) doc<br>5) top<br>6) https.<br>7) ://",
+        "date": "03.04.2025",
+        "taskNum": "183280"
+    },
+    {
+        "taskCounter": 171,
+        "typeTask": 1,
+        "taskAnswer": 2457613,
+        "task1": ["hi.jpg", "dom.com", "ftp"],
+
+        "task2": "1) hi<br> 2) ftp<br>3) .jpg<br>4) ://<br>5) dom.<br>6) /<br>7) com",
+        "date": "03.04.2025",
+        "taskNum": "529483"
+    },
+    {
         "taskCounter": 170,
         "typeTask": 1,
         "taskAnswer": 3627541,
