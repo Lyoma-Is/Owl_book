@@ -234,7 +234,7 @@ $back-top-color:  rgb(233, 199, 105);
             font-size: 25px;
         }
         .label-text {
-            font-size: 14px;
+            font-size: 16px;
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
@@ -244,27 +244,28 @@ $back-top-color:  rgb(233, 199, 105);
         #select-task{
             padding: 5px;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 14px;
             flex-grow: 1;
             transition: border-color 0.3s;
         }
         #taskNumber {
-            max-width: 150px;
+            max-width: 220px;
             padding: 5px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 14px;
             flex-grow: 1;
             transition: border-color 0.3s;
         }
         
         .btn-primary {
+            
             padding: 5px 10px;
             background-color: #4285f4;
             color: white;
             border: none;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 14px;
             cursor: pointer;
             transition: background-color 0.3s;
         } 
@@ -406,13 +407,13 @@ $back-top-color:  rgb(233, 199, 105);
             padding-bottom: 0;
         }
         .btn-primary {
-            width: 150px;
+            width: 220px;
             padding: 5px 10px;
             background-color: #4285f4;
             color: white;
             border: none;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 14px;
             cursor: pointer;
             transition: background-color 0.3s;
         } 

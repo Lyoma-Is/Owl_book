@@ -170,8 +170,8 @@ main #taskNumber {
 }
 main #taskNumber:focus, main #select-task:focus {
   outline: none;
-  border-color: #4285f4;
-  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+  border-color: rgb(233, 199, 105);
+  box-shadow: 0 0 0 1px rgb(233, 199, 105);
 }
 main #taskNumber::-moz-placeholder {
   color: #999;
