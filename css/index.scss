@@ -96,13 +96,15 @@ main{
         }
         .aside-main{
             display: block;
-            text-align: center;
-            margin: 0 auto;
+            //text-align: center;
+            margin: 0 10px;
             font-size: 22px;
             h2{
-                padding: 20px 0 10px 0;
+                padding: 20px 0;
+                
             }
             a{
+                
                 line-height: 2.5rem;
                 text-decoration:underline;
                 color: blue;
