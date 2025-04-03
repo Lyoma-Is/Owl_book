@@ -121,7 +121,7 @@ main .p-gen {
   padding: 20px;
 }
 main .p-gen a {
-  border: 3px solid rgb(233, 199, 105);
+  border: 1px solid rgb(233, 199, 105);
   padding: 20px;
   border-radius: 10px;
   font-size: 22px;

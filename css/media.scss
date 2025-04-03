@@ -268,6 +268,25 @@ $back-top-color:  rgb(233, 199, 105);
             cursor: pointer;
             transition: background-color 0.3s;
         } 
+        .p-gen{
+            text-align: center;
+            display: flex;
+            padding: 20px;
+            a{
+                border: 1px solid $back-top-color;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 19px;
+                margin: 0 10px;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: $back-top-color;
+                    transition: all 0.3s ease-in-out;
+                    color: red;
+                }
+            }
+        }
     }//main
     .info-taskThree{
         font-size: 20px;
@@ -435,6 +454,25 @@ $back-top-color:  rgb(233, 199, 105);
                 font-size: 15px;  
             } 
         }
+        .p-gen{
+            text-align: center;
+            display: flex;
+            padding: 20px;
+            a{
+                border: 1px solid $back-top-color;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 14px;
+                margin: 0 5px 0;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: $back-top-color;
+                    transition: all 0.3s ease-in-out;
+                    color: red;
+                }
+            }
+        }
         
     }//main
     .info-taskThree{
@@ -462,7 +500,7 @@ $back-top-color:  rgb(233, 199, 105);
         }
         
     }//vars-block
-
+    
     .slider{
         .slider-item{
             .task-block__text{

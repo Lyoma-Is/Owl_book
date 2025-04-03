@@ -140,7 +140,7 @@ main{
         display: flex;
         padding: 20px;
         a{
-            border: 3px solid $back-top-color;
+            border: 1px solid $back-top-color;
             padding: 20px;
             border-radius: 10px;
             font-size: 22px;
@@ -153,8 +153,6 @@ main{
                 color: red;
             }
         }
-
-
     }
 
     .search-box__inner{
