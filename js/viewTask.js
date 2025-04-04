@@ -37,7 +37,7 @@ const tasks = {
 export {tasks};
 
 export default function generateTaskHTML(taskKey, item) {
-   const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5} = item
+   const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask} = item
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
@@ -1283,9 +1283,35 @@ int main(){
       }
     }  
     if (taskKey === 'eight'){
-      switch(item.typeTask){
-        case 1:
-          let k = item.task1[3].split(' ')
+      let k = item.task1[3].split(' ')
+      let r = ''
+      function EightAn(t, v){
+          if(t === 1){
+            
+
+          }
+          if (t === 2){
+            if (v === 1){
+              r += `<b>${task1[6]}</b> = ${task1[0]} + ${task1[1]} + ${task1[2]} - ${task1[3]} - ${task1[4]} - ${task1[5]}<hr class="hr-pd_10">
+              <b>${task1[6]}</b> = ${task2[0]} + ${task2[1]} + ${task2[2]} - ${task2[3]} - ${task2[4]} - ${task2[5]}<hr class="hr-pd_10">
+              <b>${task1[6]}</b> = ${task2[0] + task2[1] + task2[2] - task2[3] - task2[4] - task2[5]} `  
+            }
+            if (v === 2){
+              r += `<b>${task1[6]}</b> = ${task1[2]} + ${task1[3]} + ${task1[4]} + ${task1[5]} - ${task1[0]} - ${task1[1]}<hr class="hr-pd_10">
+              <b>${task1[6]}</b> = ${task2[2]} + ${task2[3]} + ${task2[4]} + ${task2[5]} - ${task2[0]} - ${task2[1]}<hr class="hr-pd_10">
+              <b>${task1[6]}</b> = ${task2[2] + task2[3] + task2[4] + task2[5] - task2[0] - task2[1]} ` 
+            }
+            if (v === 3){
+              r += `<b>${task1[6]}</b> = ${task1[0]} + ${task1[1]} + ${task1[2]} - ${task1[3]} - ${task1[4]} - ${task1[5]}<hr class="hr-pd_10">
+              <b>${task1[6]}</b> = ${task2[0]} + ${task2[1]} + ${task2[2]} - ${task2[3]} - ${task2[4]} - ${task2[5]}<hr class="hr-pd_10">
+              <b>${task1[6]}</b> = ${task2[0] + task2[1] + task2[2] - task2[3] - task2[4] - task2[5]} ` 
+            }
+            
+          }return r
+      } 
+      switch(item.typeTask){ 
+        
+        case 1: 
           answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
          <hr class="hr-pd_10">
@@ -1317,8 +1343,10 @@ int main(){
           <p>Считается, что все запросы выполнялись практически одновременно, так что хранящаяся на поисковом сервере информация о наборе страниц, содержащих все искомые слова, не изменялась за время выполнения запросов.</p>
           <hr class="hr-pd_20">
           `
+          answerBlock += generateDate();
           answerBlock += generateHeader();
                     answerBlock += `
+                      N<sub>A&B</sub> + N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> 
                       <hr class="hr-pd_10">
                       ${item.task2[3] === 1 ? `
                       ${k[1] === "&" ? 
@@ -1335,7 +1363,8 @@ int main(){
                       N<sub>A</sub> = ${item.task2[1]} + ${item.task2[2]} - ${item.task2[0]}<br>
                       N<sub>A</sub> = ${item.task2[1] + item.task2[2] - item.task2[0]}
                       `}
-                      ` : item.task2[3] === 2 ? `
+                      ` : 
+                      item.task2[3] === 2 ? `
                       ${k[1] === "&" ? 
                       `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
                       N<sub>A&B</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
@@ -1350,7 +1379,8 @@ int main(){
                       N<sub>A</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
                       N<sub>A</sub> = ${item.task2[0] + item.task2[2] - item.task2[1]}
                       `}
-                      ` : item.task2[3] === 3 ? `
+                      ` : 
+                      item.task2[3] === 3 ? `
                       ${k[1] === "&" ? 
                       `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
                       N<sub>A&B</sub> = ${item.task2[0]} + ${item.task2[1]} - ${item.task2[2]}<br>
@@ -1370,7 +1400,120 @@ int main(){
                       Ответ: <b>${item.taskAnswer}</b>`;
                     answerBlock += generateFooter(); 
                     return answerBlock
-      }
+        case 2:
+          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
+         <hr class="hr-pd_10">
+          В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
+          <hr class="hr-pd_20">
+          <table class="table_6">
+            <tbody>
+              <tr>
+                <td style="text-align: center; background-color: #ffbf80;">Запрос</td>
+                <td style="text-align: center; background-color: #ffbf80;">Найдено страниц (в тысячах)</td>
+              </tr>
+              <tr>
+                <td >${item.task1[0]}</td>
+                <td>${item.task2[0]}</td>
+              </tr>
+              <tr>
+                <td>${item.task1[1]}</td>
+                <td>${item.task2[1]}</td>
+              </tr>
+              <tr>
+                <td>${item.task1[2]}</td>
+                <td>${item.task2[2]}</td>
+              </tr>
+                  <tr>
+                <td>${item.task1[3]}</td>
+                <td>${item.task2[3]}</td>
+              </tr>
+                  <tr>
+                <td>${item.task1[4]}</td>
+                <td>${item.task2[4]}</td>
+              </tr>
+                  <tr>
+                <td>${item.task1[5]}</td>
+                <td>${item.task2[5]}</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr class="hr-pd_20">
+          <p>Какое количество страниц (в тысячах) будет найдено по запросу <b><em>${item.task1[6]}</em></b>?</p>
+          <hr class="hr-pd_10">
+          <p>Считается, что все запросы выполнялись практически одновременно, так что хранящаяся на поисковом сервере информация о наборе страниц, содержащих все искомые слова, не изменялась за время выполнения запросов.</p>
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+                    answerBlock += `
+                      <p>N<sub>A|B|C</sub> - N<sub>A&amp;B&amp;C</sub>&nbsp;= 
+                      N<sub>A</sub>&nbsp;+ N<sub>B</sub>&nbsp;+ N<span><sub>C</sub></span>&nbsp;
+                      – N<sub>A&amp;B</sub>&nbsp;– N<sub>A&amp;C</sub>&nbsp;– N<sub>B&amp;C</sub>&nbsp;</p>
+                      <hr class="hr-pd_10">
+                      N<sub>A&amp;B&amp;C</sub>&nbsp;= 0, так как пересечение трёх множеств нет. 
+                      <hr class="hr-pd_10">
+                      ${EightAn(typeTask, task2[6])}
+                      <hr class="hr-pd_20">
+                      Ответ: <b>${taskAnswer}</b>`;
+                    answerBlock += generateFooter(); 
+                    return answerBlock
+        case 3:
+          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>Некоторый сегмент сети Интернет состоит из 1000 сайтов. Поисковый сервер в автоматическом режиме составил таблицу ключевых слов для сайтов этого сегмента. Вот её фрагмент.</p>
+          <hr class="hr-pd_20">
+          <table class="table_6">
+            <tbody>
+              <tr>
+                <td style="text-align: center;  vertical-align: middle; background-color: #ffbf80;">Ключевое слово</td>
+                <td style="text-align: center; background-color: #ffbf80;">Количество сайтов, для которых <br>данное слово является ключевым</td>
+              </tr>
+              <tr>
+                <td >${item.task1[0]}</td>
+                <td>${item.task2[0]}</td>
+              </tr>
+              <tr>
+                <td>${item.task1[1]}</td>
+                <td>${item.task2[1]}</td>
+              </tr>
+              <tr>
+                <td>${item.task1[2]}</td>
+                <td>${item.task2[2]}</td>
+              </tr>
+ 
+            </tbody>
+          </table>
+          <hr class="hr-pd_20">
+          <p>Сколько сайтов будет найдено по запросу <b><em>${item.task1[3]}</em></b>?  
+          ${task1.length === 7 
+            ?
+             `если по запросу <b>${task1[4]}</b> было найдено <b>${task2[4]}</b> сайтов; 
+              по запросу <b>${task1[5]}</b> было найдено <b>${task2[5]}</b> сайтов; 
+              по запросу <b>${task1[6]}</b> было найдено <b>${task2[6]}</b> сайтов`
+              : 
+              `${task1.length === 6 
+              ? 
+              `если по запросу <b>${task1[4]}</b> было найдено <b>${task2[4]}</b> сайтов; 
+               по запросу <b>${task1[5]}</b> было найдено <b>${task2[5]}</b> сайтов` 
+              :
+              `если по запросу <b>${task1[4]}</b> было найдено <b>${task2[4]}</b> сайтов; 
+              по запросу <b>${task1[5]}</b> было найдено <b>${task2[5]}</b> сайтов; 
+              по запросу <b>${task1[6]}</b> было найдено <b>${task2[6]}</b> сайтов;
+              по запросу <b>${task1[7]}</b> было найдено <b>${task2[7]}</b> сайтов`}` 
+              }.</p>
+          <hr class="hr-pd_10">
+          <p>Для обозначения логической операции «ИЛИ» в запросах используется символ «|», а для обозначения логической операции «И» – символ «&».</p>
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+                    answerBlock += `
+                
+                      <hr class="hr-pd_20">
+                      Ответ: <b>${taskAnswer}</b>`;
+                    answerBlock += generateFooter(); 
+                    return answerBlock
+        }
     } 
     if (taskKey === 'nine'){
       switch(item.typeTask){
