@@ -37,7 +37,7 @@ const tasks = {
 export {tasks};
 
 export default function generateTaskHTML(taskKey, item) {
-   const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask} = item
+   const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask, taskCounter} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
@@ -1286,8 +1286,118 @@ int main(){
       let k = item.task1[3].split(' ')
       let r = ''
       function EightAn(t, v){
-          if(t === 1){
-            
+          if(t === 3){
+             if (taskCounter === 196){
+              r +=  `
+              -------------------------------------------------------------------<br>
+              ${task1[4]} = B = ${task2[4]}<hr class="hr-pd_10">
+              ${task1[6]} = E = ${task2[6]}<hr class="hr-pd_10">
+              ${task1[5]} = A + B + D + E + F = ${task2[5]}<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = ?<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = B + D + E + F = 100 + 500 = ${taskAnswer}
+              `
+             }
+             if(taskCounter === 197){
+              r +=  `
+              -------------------------------------------------------------------<br>
+              ${task1[5]} = B = ${task2[5]}<hr class="hr-pd_10">
+              ${task1[6]} = E = ${task2[6]}<hr class="hr-pd_10">
+              ${task1[4]} = A + B + D + E + F = ${task2[4]}<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = ?<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = B + E = 40 + 70 = ${taskAnswer}
+              `
+             }
+             if(taskCounter === 198){
+              r +=  `
+              -------------------------------------------------------------------<br>
+              ${task1[5]} = E = ${task2[5]}<hr class="hr-pd_10">
+              ${task1[6]} = D = ${task2[6]}<hr class="hr-pd_10">
+              ${task1[7]} = B = ${task2[7]}<hr class="hr-pd_10">
+              ${task1[4]} = ${task2[4]}<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = ?<br>
+              -------------------------------------------------------------------<br>
+              ${task1[2]} = D + E + F = ${task2[2]}<hr class="hr-pd_10">
+              Из ${task1[0]} = A + B + D = ${task2[0]} -> A = 250 - B - D = 250 - 20 - 30 = 200<hr class="hr-pd_10">
+              A = 200<hr class="hr-pd_10">
+              Из ${task1[1]} = B + C + E = ${task2[1]} -> C = 200 - B - E = 200 - 20 - 60 = 120<hr class="hr-pd_10">
+              C = 120<hr class="hr-pd_10">
+              Отсюда A + B + C + D + E + F = 200 + 20 + 120 + 500 = 840<hr class="hr-pd_10">
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = A + B + C + D + E + F = 200 + 20 + 120 + 500 = ${taskAnswer}
+              `
+             }
+             if (taskCounter === 199){
+              r +=  `
+              -------------------------------------------------------------------<br>
+              ${task1[6]} = B = ${task2[6]}<hr class="hr-pd_10">
+              ${task1[5]} = E = ${task2[5]}<hr class="hr-pd_10">
+              ${task1[4]} = A + B + D + E + F = ${task2[4]}<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = ?<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = B + E = 50 + 40 = ${taskAnswer}
+              `
+             }
+             if(taskCounter === 200){
+              r +=  `
+              -------------------------------------------------------------------<br>
+              ${task1[5]} = E = ${task2[5]}<hr class="hr-pd_10">
+              ${task1[6]} = B = ${task2[6]}<hr class="hr-pd_10">
+              ${task1[4]} = A + B + D + E + F = ${task2[4]}<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = ?<br>
+              -------------------------------------------------------------------<br>
+              ${task1[1]} = D + E + F = ${task2[1]}<hr class="hr-pd_10">
+              
+              Из ${task1[2]} = B + C + E = ${task2[2]} -> C = 450 - B - E = 450 - 50 - 40 = 360<hr class="hr-pd_10">
+              C = 360<hr class="hr-pd_10">
+              Из ${task1[4]} = A + B + D + E + F = ${task2[4]} -> A + B = 450 - (D + E + F) = 450 - 250 = 200<hr class="hr-pd_10">
+              A + B = 200<hr class="hr-pd_10">
+              Отсюда A + B + C + D + E + F = 200 + 360 + 250 = 810<hr class="hr-pd_10">
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = A + B + C + D + E + F = 200 + 360 + 250 = ${taskAnswer}
+              `
+             }
+             if(taskCounter === 201){
+              r +=  `
+              -------------------------------------------------------------------<br>
+              ${task1[4]} = D = ${task2[4]}<hr class="hr-pd_10">
+              ${task1[5]} = B = ${task2[5]}<hr class="hr-pd_10">
+              ${task1[6]} = E = ${task2[6]}<br>
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = ?<br>
+              -------------------------------------------------------------------<br>
+              ${task1[2]} = D + E + F = ${task2[2]}<hr class="hr-pd_10">
+              Из ${task1[0]} = A + B + D = ${task2[0]} -> A + B = 250 - D = 250 - 0 = 250<hr class="hr-pd_10">
+              A + B = 250<hr class="hr-pd_10">
+              Из ${task1[1]} = B + C + E = ${task2[1]} -> C = 200 - B - E = 200 - 20 - 10 = 170<hr class="hr-pd_10">
+              C = 170<hr class="hr-pd_10">
+              Отсюда A + B + C + D + E + F = 250 + 170 + 500 = 920<hr class="hr-pd_10">
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = A + B + C + D + E + F = 250 + 170 + 500 = ${taskAnswer}
+              `
+             }
+             if(taskCounter === 202){
+              r +=  `
+              -------------------------------------------------------------------<br>
+              ${task1[4]} = B + G = ${task2[4]}<hr class="hr-pd_10">
+              ${task1[5]} = E + G = ${task2[5]}<br> 
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = G = ?<br>
+              -------------------------------------------------------------------<br>
+              Из ${task1[1]} = B + C + E + G = ${task2[1]} -> C + E = 200 - (B + G) = 200 - 200 = 0<hr class="hr-pd_10">
+              C + E = 0 -> C = 0, E = 0<hr class="hr-pd_10">
+              Из ${task1[5]} = E + G = ${task2[5]} -> G = 60 - 0 <hr class="hr-pd_10">
+              G = 60<hr class="hr-pd_10">
+              -------------------------------------------------------------------<br>
+              ${task1[3]} = G = ${taskAnswer}
+              `
+             }
 
           }
           if (t === 2){
@@ -1508,7 +1618,31 @@ int main(){
           answerBlock += generateDate();
           answerBlock += generateHeader();
                     answerBlock += `
-                
+                      <hr class="hr-pd_20">
+                      ${ task2[3] === 4 
+                        ? 
+                        `<img class="img-task_9" src="../../../img/task8/somG.png">
+                        <hr class="hr-pd_10">
+                        ${task1[0]} = A + B + D + G = ${task2[0]}<hr class="hr-pd_10">
+                        ${task1[1]} = B + C + E + G = ${task2[1]}<hr class="hr-pd_10">
+                        ${task1[2]} = D + E + F + G = ${task2[2]}<br>`
+                        :
+                        task1[0] === "Сомики" 
+                        ? 
+                        `<img class="img-task_9" src="../../../img/task8/som.png">
+                        <hr class="hr-pd_10">
+                        ${task1[0]} = A + B + D = ${task2[0]}<hr class="hr-pd_10">
+                        ${task1[1]} = B + C + E = ${task2[1]}<hr class="hr-pd_10">
+                        ${task1[2]} = D + E + F = ${task2[2]}<br>
+                        `
+                        : 
+                        `<img class="img-task_9" src="../../../img/task8/ska.png">
+                        <hr class="hr-pd_10">
+                        ${task1[0]} = A + B + D = ${task2[0]}<hr class="hr-pd_10">
+                        ${task1[2]} = B + C + E = ${task2[2]}<hr class="hr-pd_10">
+                        ${task1[1]} = D + E + F = ${task2[1]}<hr class="hr-pd_10">
+                        `}
+                        ${EightAn(typeTask, taskCounter)}
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
                     answerBlock += generateFooter(); 
