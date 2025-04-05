@@ -1,134 +1,107 @@
 let resh = document.querySelector('.reshenie');
 let input = document.querySelector('#input_answer');
-
-let arrayInput = [];
-let arrayAnswer = [];
-
-let countReset = 0;
 let button = document.querySelector('#button');
-button.addEventListener('click', function (){
 
-
-    let inputs = document.querySelectorAll('#input_answer'); 
+button.addEventListener('click', function () {
+    let inputs = document.querySelectorAll('#input_answer');
+    let arrayInput = [];
+    let arrayAnswer = [];
     let countResult = 0;
 
-    for (let input of inputs){
-        
-       // resh.classList.remove('reshenie');
-        input.classList.remove('input_answer-green');
-        input.classList.remove('input_answer');
-        input.classList.remove('input_answer-red');
-        
-        
-        if (input.dataset.right.includes(" | ")){
-            strOne = input.dataset.right
-            strTwo = strOne.slice(strOne[0], strOne.indexOf('|')-1)
-            strThree = strOne.slice(strOne.indexOf('|')+2, strOne[-1])
+    let ansRes = document.getElementById("answer_results");
+    while (ansRes.firstChild) {
+        ansRes.removeChild(ansRes.firstChild);
+    }
 
-            if (strTwo == input.value.toUpperCase().replaceAll(' ', '') | strThree == input.value.toUpperCase().replaceAll(' ', '')){
-                input.classList.add('input_answer-green');      
-                countResult += 1
-            } else{
+    for (let input of inputs) {
+        input.classList.remove('input_answer-green', 'input_answer-red', 'input_answer');
+
+        let correct = input.dataset.right.toUpperCase();
+        let userInput = input.value.toUpperCase().replaceAll(' ', '');
+
+        if (correct.includes(' | ')) {
+            let [alt1, alt2] = correct.split(' | ').map(str => str.trim());
+            if (userInput === alt1 || userInput === alt2) {
+                input.classList.add('input_answer-green');
+                countResult++;
+            } else {
                 input.classList.add('input_answer-red');
-            }    
-            
-        } else if (input.value.toUpperCase().replaceAll(' ', '') == input.dataset.right.toUpperCase()){
-            input.classList.add('input_answer-green');        
-            countResult += 1
-        } else{
-            input.classList.add('input_answer-red');
+            }
+        } else {
+            if (userInput === correct) {
+                input.classList.add('input_answer-green');
+                countResult++;
+            } else {
+                input.classList.add('input_answer-red');
+            }
         }
-    }
-    let pResult = document.createElement('p')
-    pResult.classList.add("centerResult")
-    
-    if (countResult < 5){
-        pResult.textContent = "Ваша оценка: 2 |  Количество баллов: " + countResult + " из " + inputs.length
 
-    } else if (4 < countResult && countResult < 11){
-        pResult.textContent = "Ваша оценка: 3 |  Количество баллов: " + countResult + " из " + inputs.length 
-
-    } else if (10 < countResult && countResult < 16){
-        pResult.textContent = "Ваша оценка: 4 |  Количество баллов: " + countResult + " из " + inputs.length 
-
-    } else{
-        pResult.textContent = "Ваша оценка: 5 |  Количество баллов: " + countResult + " из " + inputs.length 
+        arrayInput.push(userInput);
+        arrayAnswer.push(correct);
     }
 
-    
-    for (let i = 0; i < inputs.length; i++){
-        arrayInput.push(inputs[i].value.replaceAll(' ', ''));
-        arrayAnswer.push(inputs[i].dataset.right)
+    // Создание текста с оценкой
+    let pResult = document.createElement('p');
+    pResult.classList.add("centerResult");
+
+    if (countResult < 5) {
+        pResult.textContent = `Ваша оценка: 2 |  Количество баллов: ${countResult} из ${inputs.length}`;
+    } else if (countResult < 11) {
+        pResult.textContent = `Ваша оценка: 3 |  Количество баллов: ${countResult} из ${inputs.length}`;
+    } else if (countResult < 16) {
+        pResult.textContent = `Ваша оценка: 4 |  Количество баллов: ${countResult} из ${inputs.length}`;
+    } else {
+        pResult.textContent = `Ваша оценка: 5 |  Количество баллов: ${countResult} из ${inputs.length}`;
     }
 
+    // Создание таблицы с ответами
     let table = document.createElement("table");
 
-    for (let i = 0; i < inputs.length; i++){
+    for (let i = 0; i < inputs.length; i++) {
         let row = document.createElement("tr");
 
-        let cell = document.createElement("td");
-        cell.textContent = i+1;
-        row.appendChild(cell);
-        cell.classList.add('answer_table-border')
+        let cell1 = document.createElement("td");
+        cell1.textContent = i + 1;
+        cell1.classList.add('answer_table-border');
+        row.appendChild(cell1);
 
-        cell = document.createElement("td");
-        cell.textContent = arrayInput[i];
-        row.appendChild(cell);
-        cell.classList.add("answer_td")
-        cell.classList.add('answer_table-border')
+        let cell2 = document.createElement("td");
+        cell2.textContent = arrayInput[i];
+        cell2.classList.add('answer_td', 'answer_table-border');
 
-        if (arrayAnswer[i].includes(" | ")){
-            strOne = arrayAnswer[i].toUpperCase()
-            strTwo = strOne.slice(strOne[0], strOne.indexOf('|')-1)
-            strThree = strOne.slice(strOne.indexOf('|')+2, strOne[-1])
-
-            if (strTwo == arrayInput[i].toUpperCase() | strThree == arrayInput[i].toUpperCase()){
-                cell.classList.add('answer_bg-green')   
-            } else if(arrayInput[i] == ""){
-            
+        if (arrayAnswer[i].includes(' | ')) {
+            let [alt1, alt2] = arrayAnswer[i].split(' | ').map(str => str.trim());
+            if (arrayInput[i] === alt1 || arrayInput[i] === alt2) {
+                cell2.classList.add('answer_bg-green');
+            } else if (arrayInput[i] !== "") {
+                cell2.classList.add('answer_bg-red');
             }
-            else{
-                cell.classList.add('answer_bg-red')
-            }       
-        } else if (arrayInput[i].toUpperCase() == arrayAnswer[i].toUpperCase()){
-            cell.classList.add('answer_bg-green')
-        } else if(arrayInput[i] == ""){
-            
-        } else{
-            cell.classList.add('answer_bg-red')
+        } else {
+            if (arrayInput[i] === arrayAnswer[i]) {
+                cell2.classList.add('answer_bg-green');
+            } else if (arrayInput[i] !== "") {
+                cell2.classList.add('answer_bg-red');
+            }
         }
 
-        cell = document.createElement("td");
-        cell.textContent = arrayAnswer[i];
-        row.appendChild(cell);
-        cell.classList.add('answer_table-border')
+        row.appendChild(cell2);
+
+        let cell3 = document.createElement("td");
+        cell3.textContent = arrayAnswer[i];
+        cell3.classList.add('answer_table-border');
+        row.appendChild(cell3);
 
         table.appendChild(row);
     }
 
-    let ansRes = document.getElementById("answer_results");
-    ansRes.appendChild(pResult)
+    ansRes.appendChild(pResult);
     ansRes.appendChild(table);
-    
-    countReset += 1;
-    button.textContent = "СКРЫТЬ";
-    if (countReset == 2){
-        button.textContent = "ПРОВЕРИТЬ";
-        while (ansRes.firstChild) {
-            ansRes.removeChild(ansRes.firstChild);
-        }    
-        countReset = 0
-    }
-    
-    for (let i = 0; i < inputs.length; i++){
-        arrayInput.pop(inputs[i].value);
-        arrayAnswer.pop(inputs[i].dataset.right)
-    }
 
+    // Показываем блок с разбором
     let razOtv = document.querySelector('.details-raz_otv');
-    razOtv.classList.add('details-raz_otv_active');
-    razOtv.classList.remove('details-raz_otv');
-
+    if (razOtv) {
+        razOtv.classList.add('details-raz_otv_active');
+        razOtv.classList.remove('details-raz_otv');
+    }
 });
-
 
