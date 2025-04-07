@@ -547,9 +547,12 @@ export default function generateTaskHTML(taskKey, item) {
           <hr class="hr-pd_20">
           <p>${item.task2}</p>
           <hr class="hr-pd_20">`
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
               <hr class="hr-pd_10">
+              <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
+              <hr class="hr-pd_20">
               Кратчайший путь: ${item.taskAnswer[1]} = ${item.taskAnswer[0]} км
               <hr class="hr-pd_20">
               Ответ: <b>${item.taskAnswer[0]}</b>`;
