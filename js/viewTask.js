@@ -1729,14 +1729,14 @@ int main(){
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
-          <img class="img-task_9" src="../../../img/task9/task9/${item.task1}.png">
+          <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}.png">
           <hr class="hr-pd_10">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
                     answerBlock += `
                       <hr class="hr-pd_10">
-                      <img class="img-task_9" src="../../../img/task9/task9/${item.task1}_a.png">
+                      <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
                     answerBlock += generateFooter(); 
@@ -1746,14 +1746,14 @@ int main(){
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
-          <img class="img-task_9" src="../../../img/task9/task9/${item.task1}.png">
+          <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}.png">
            <hr class="hr-pd_10">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
                     answerBlock += `
                       <hr class="hr-pd_10">
-                      <img class="img-task_9" src="../../../img/task9/task9/${item.task1}_a.png">
+                      <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
                     answerBlock += generateFooter(); 
@@ -1763,14 +1763,14 @@ int main(){
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
-          <img class="img-task_9" src="../../../img/task9/task9/${item.task1}.png">
+          <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}.png">
           <hr class="hr-pd_10">  
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
                     answerBlock += `
                       <hr class="hr-pd_10">
-                      <img class="img-task_9" src="../../../img/task9/task9/${item.task1}_a.png">
+                      <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
                     answerBlock += generateFooter(); 
