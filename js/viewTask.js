@@ -298,6 +298,7 @@ export default function generateTaskHTML(taskKey, item) {
              <p>${item.task4}</p>
              <hr class="hr-pd_20">
               `}`
+              answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
            <p>${item.taskAnswer[1]}</p>
@@ -369,6 +370,7 @@ export default function generateTaskHTML(taskKey, item) {
             <hr class="hr-pd_10">
              <p>${item.task4}</p>
              <hr class="hr-pd_20">`
+             answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
             <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>
@@ -427,6 +429,7 @@ export default function generateTaskHTML(taskKey, item) {
             <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[3]}</p><hr class="hr-pd_10">
              <p>${item.task4}</p>
              <hr class="hr-pd_20">`
+            answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
             <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>

@@ -100,9 +100,6 @@
     border: 1px solid;
     padding: 10px;
   }
-  .task-numbers__block .span-centr {
-    font-size: 23px;
-  }
 }
 @media (width: 1000px) {
   .breadcrumb {
