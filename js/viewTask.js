@@ -44,23 +44,28 @@ export default function generateTaskHTML(taskKey, item) {
     const generateDate = () => ` ${ taskNum === "" && date === ""
       ?
         `<hr class="hr-pd_20">`
-      : 
-      `${taskNum === ""
-        ? 
-             `<hr class="hr-pd_10">
-              <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
-              <hr class="hr-pd_10">`
-        : 
-        date === ""
-        ? 
-        `<hr class="hr-pd_10">
-              <p class="p-num" style="text-align: right;">Номер: ${taskNum} </p>
-              <hr class="hr-pd_10">`
-         :
-              `<hr class="hr-pd_10">
-              <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
-              <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
-              <hr class="hr-pd_10">`}`} `;
+      :  
+        `
+        <hr class="hr-pd_10">
+        <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
+        <hr class="hr-pd_10">
+        `}`;
+      // `${taskNum === ""
+      //   ? 
+      //        `<hr class="hr-pd_10">
+      //         <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
+      //         <hr class="hr-pd_10">`
+      //   : 
+      //   date === ""
+      //   ? 
+      //   `<hr class="hr-pd_10">
+      //         <p class="p-num" style="text-align: right;">Номер: ${taskNum} </p>
+      //         <hr class="hr-pd_10">`
+      //    :
+      //         `<hr class="hr-pd_10">
+      //         <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
+      //         <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
+      //         <hr class="hr-pd_10">`}`} `;
     let answerBlock = "";
   
     if (taskKey === 'one'){
