@@ -41,12 +41,8 @@ export default function generateTaskHTML(taskKey, item) {
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
-    const generateDate = () => ` ${ taskNum === "" && date === ""
-      ?
-        `<hr class="hr-pd_20">`
-      :  
-        `
-        <hr class="hr-pd_10">
+    const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` :  
+        ` <hr class="hr-pd_10">
         <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
         <hr class="hr-pd_10">
         `}`;
@@ -75,7 +71,9 @@ export default function generateTaskHTML(taskKey, item) {
               <p class="p-num"><b>1.</b> № ${item.taskCounter}</p>
               <p>${item.task1}</p><hr class="hr-pd_20">
               <p><em>${item.task2}</em></p><hr class="hr-pd_20">
-              <p>${item.task3}</p><p>${item.task4}</p><hr class="hr-pd_20">`
+              <p>${item.task3}</p>
+              <p>${item.task4}</p><hr class="hr-pd_20">`
+            answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
                 <p>1) Один символ кодируется ${item.taskAnswer[1]} бит = ${item.taskAnswer[1]/8 < 2 ?  `${item.taskAnswer[1]/8} байт ` : `${item.taskAnswer[1]/8} байта`}</p> 
@@ -87,9 +85,9 @@ export default function generateTaskHTML(taskKey, item) {
                 <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов`} 
                 </p> 
                 <hr class="hr-pd_10">
-                <p>4) C учетом пробела и запятой: ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))} - 2 = ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-2} символа</p>
+                <p>4) C учетом пробела и запятой: ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))} – 2 = ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-2} символа</p>
                 <hr class="hr-pd_20">
-                <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-2} букв - ${item.taskAnswer[0]}.</p>
+                <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-2} букв – ${item.taskAnswer[0]}.</p>
                 <hr class="hr-pd_20">
                 Ответ: <b>${item.taskAnswer[0]}</b>`;
               answerBlock += generateFooter(); 
@@ -104,6 +102,7 @@ export default function generateTaskHTML(taskKey, item) {
                 <p>${item.task3}</p>
                 <p>${item.task4}</p>
                 <hr class="hr-pd_20">`
+            answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
                   <p>1) Один символ кодируется ${item.taskAnswer[1]} бит = ${item.taskAnswer[1]/8 < 2 ?  `${item.taskAnswer[1]/8} байт ` : `${item.taskAnswer[1]/8} байта`}</p> 
@@ -115,9 +114,9 @@ export default function generateTaskHTML(taskKey, item) {
                   <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов`} 
                   </p> 
                   <hr class="hr-pd_10">
-                  <p>4) C учетом пробела: ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))} - 1 = ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} символа</p>
+                  <p>4) C учетом пробела: ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))} – 1 = ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} символа</p>
                   <hr class="hr-pd_20">
-                  <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} букв - ${item.taskAnswer[0]}.</p>
+                  <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} букв – ${item.taskAnswer[0]}.</p>
                   <hr class="hr-pd_20">
                   Ответ: <b>${item.taskAnswer[0]}</b>`; 
               answerBlock += generateFooter(); 
