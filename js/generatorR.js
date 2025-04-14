@@ -39,7 +39,7 @@ function createSlider(tasksHTML) {
     let sliderContainer = document.querySelector('.task-generator');
     const slider = document.createElement('div');
     slider.className = 'slider';
-    
+
     // Добавляем слайды
     tasksHTML.forEach((taskHTML, index) => {
         const slide = document.createElement('div');
@@ -151,14 +151,12 @@ function addSliderStyles() {
         }
         .slider-navigation {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             flex-wrap: wrap;
             gap: 20px;
-            padding-bottom: 10px;
+            padding: 0 10px 10px 10px;
             border-bottom: 3px solid  rgb(233, 199, 105);
-            
-
-            
+  
         }
         .slider-btn {
             display: block;
@@ -167,7 +165,6 @@ function addSliderStyles() {
             background: #f0f0f0;
             border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 5px ;
             cursor: pointer;
             font-size: 20px;
             text-align: center;
