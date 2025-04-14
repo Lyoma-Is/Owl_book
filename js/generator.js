@@ -35,7 +35,6 @@ async function generateRandomTasks() {
 // Функция для отображения задач в HTML
 async function displayTasks() {
     const generatorDiv = document.querySelector('.task-numbers__block');
-    const generatorSlide = document.querySelector('.slider-item');
     if (!generatorDiv) {
         console.error('Элемент .generator не найден!');
         return;
@@ -43,7 +42,7 @@ async function displayTasks() {
 
     const randomTasks = await generateRandomTasks();
 
-    if (!randomTasks.one || !randomTasks.ten || !randomTasks.two) {
+    if (!randomTasks.one ) {
         generatorDiv.innerHTML = '<p>Ошибка загрузки задач. Пожалуйста, попробуйте снова.</p>';
         return;
     }

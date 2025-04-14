@@ -202,66 +202,66 @@ main .btn-primary:active {
   font-size: 35px;
 }
 
-.task-numbers__block {
+.task-numbers__block, .slide {
   padding: 20px;
   font-size: 25px;
   line-height: 2rem;
 }
-.task-numbers__block .p-num {
+.task-numbers__block .p-num, .slide .p-num {
   font-size: 20px;
 }
-.task-numbers__block .img-task_9 {
+.task-numbers__block .img-task_9, .slide .img-task_9 {
   display: block;
   margin: auto;
   width: 600px;
 }
-.task-numbers__block .span-centr {
+.task-numbers__block .span-centr, .slide .span-centr {
   display: block;
   text-align: center;
   font-size: 25px;
   letter-spacing: 1.2px;
 }
-.task-numbers__block .span-centr__font {
+.task-numbers__block .span-centr__font, .slide .span-centr__font {
   font-size: 40px;
 }
-.task-numbers__block .span-centr__font_2 {
+.task-numbers__block .span-centr__font_2, .slide .span-centr__font_2 {
   font-size: 40px;
 }
-.task-numbers__block .table_2_1 {
+.task-numbers__block .table_2_1, .slide .table_2_1 {
   margin: auto;
   border-collapse: collapse;
 }
-.task-numbers__block .table_2_1 td {
+.task-numbers__block .table_2_1 td, .slide .table_2_1 td {
   font-size: 30px;
   border: 1px solid;
   padding: 5px 15px;
   text-align: center;
 }
-.task-numbers__block .table_2_3 {
+.task-numbers__block .table_2_3, .slide .table_2_3 {
   margin: auto;
   border-collapse: collapse;
 }
-.task-numbers__block .table_2_3 td {
+.task-numbers__block .table_2_3 td, .slide .table_2_3 td {
   font-size: 25px;
   border: 1px solid;
   text-align: center;
   padding: 7px 10px 7px 5px;
 }
-.task-numbers__block .table_4 {
+.task-numbers__block .table_4, .slide .table_4 {
   margin: auto;
   border-collapse: collapse;
 }
-.task-numbers__block .table_4 td {
+.task-numbers__block .table_4 td, .slide .table_4 td {
   font-size: 30px;
   border: 1px solid;
   padding: 5px 25px;
   text-align: center;
 }
-.task-numbers__block .table_6 {
+.task-numbers__block .table_6, .slide .table_6 {
   margin: auto;
   border-collapse: collapse;
 }
-.task-numbers__block .table_6 td {
+.task-numbers__block .table_6 td, .slide .table_6 td {
   vertical-align: top;
   font-size: 20px;
   border: 1px solid;

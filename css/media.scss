@@ -135,7 +135,7 @@ $back-top-color:  rgb(233, 199, 105);
        
         font-size: 30px;
     }
-    .task-numbers__block{
+    .task-numbers__block, .slide{
         .table_6{
             margin: auto; 
             border-collapse: collapse;
@@ -353,7 +353,7 @@ $back-top-color:  rgb(233, 199, 105);
         padding: 15px 0 0 0;
         font-size: 25px;
     }
-    .task-numbers__block{
+    .task-numbers__block, .slide{
         font-size: 20px;
 
         .img-task_9{
@@ -591,7 +591,7 @@ $back-top-color:  rgb(233, 199, 105);
         font-size: 18px;
     }
 
-    .task-numbers__block{
+    .task-numbers__block, .slide{
         padding: 15px;
         font-size: 12px;
         line-height: 1rem;
@@ -679,6 +679,7 @@ $back-top-color:  rgb(233, 199, 105);
             padding: 10px 5px;
             border-radius: 10px;
             cursor: pointer;
+            
         }
     }
 }
