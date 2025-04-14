@@ -151,10 +151,10 @@ function addSliderStyles() {
         }
         .slider-navigation {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            padding: 0 10px 10px 10px;
+            gap: 30px;
+            padding: 0 10px 20px 10px;
             border-bottom: 3px solid  rgb(233, 199, 105);
   
         }

@@ -149,6 +149,14 @@
   .container {
     width: 100%;
   }
+  main .slider-navigation {
+    gap: 10px;
+  }
+  main .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
   main .main-block .aside-left {
     width: 35%;
   }
@@ -310,6 +318,15 @@
 @media (max-width: 600px) {
   .container {
     width: 100%;
+  }
+  main .slider-navigation {
+    gap: 7px;
+  }
+  main .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 6px;
   }
   main .search-box {
     padding-bottom: 0;

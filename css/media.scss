@@ -212,6 +212,14 @@ $back-top-color:  rgb(233, 199, 105);
         width: 100%;
     }
     main{  
+        .slider-navigation{
+            gap: 10px;
+        }
+        .slider-btn{
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
         .main-block{
             .aside-left{ 
                 width: 35%;
@@ -403,6 +411,15 @@ $back-top-color:  rgb(233, 199, 105);
         width: 100%;
     }
     main{  
+        .slider-navigation{
+            gap: 7px;
+        }
+        .slider-btn{
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+            border-radius: 6px;
+        }
         .search-box{
             padding-bottom: 0;
         }
