@@ -172,4 +172,120 @@
   border-color: #bdbdbd;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.task-generator .details-raz_otv {
+  display: none;
+}
+.task-generator .details-raz_otv_active {
+  display: block;
+}
+.task-generator .answer-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.task-generator .answer-block .download a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #020202;
+  text-decoration: none;
+}
+.task-generator .answer-block .download a img {
+  width: 50px;
+}
+.task-generator .answer-block .input_answer {
+  padding: 10px;
+  width: 25%;
+  height: 50px;
+  font-size: 17px;
+  background-color: #eee;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+}
+.task-generator .answer-block .input_answer:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(158, 158, 158, 0.25);
+}
+.task-generator .answer-block__ans {
+  margin-top: 5px;
+  border-top: 3px solid rgb(233, 199, 105);
+  padding: 10px;
+}
+.task-generator .reshenie {
+  display: none;
+}
+.task-generator .answer_bg-green {
+  background-color: #c0ffc0;
+}
+.task-generator .answer_bg-red {
+  background-color: #ffc0c0;
+}
+.task-generator .answer_td {
+  width: 190px;
+}
+.task-generator .answer_table-border {
+  border-left: 0;
+  border-right: 0;
+}
+.task-generator .centerResult {
+  text-align: center;
+  font-size: 25px;
+  padding: 25px 0;
+}
+.task-generator .input_answer-green {
+  padding: 10px;
+  width: 25%;
+  height: 50px;
+  margin-top: 25px;
+  font-size: 17px;
+  background-color: #eee;
+  border: 1px solid #17b83a;
+  border-radius: 0.25rem;
+}
+.task-generator .input_answer-green:focus {
+  color: #212529;
+  background-color: #eee;
+  border-color: 1px solid #17b83a;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+.task-generator .input_answer-red {
+  padding: 10px;
+  width: 25%;
+  height: 50px;
+  margin-top: 25px;
+  font-size: 17px;
+  background-color: #eee;
+  border: 1px solid #cd4848;
+  border-radius: 0.25rem;
+}
+.task-generator .input_answer-red:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #cd4848;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+.task-generator .input_answer {
+  padding: 5px;
+  margin-top: 25px;
+  width: 30%;
+  height: 35px;
+  font-size: 17px;
+  background-color: #eee;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+}
+.task-generator .input_answer:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
 }/*# sourceMappingURL=variantTasksInf.css.map */
