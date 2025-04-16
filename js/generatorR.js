@@ -212,6 +212,8 @@ async function displayTasks() {
     
                 arrayInput.push(userInput || '—');
                 arrayAnswer.push(correctAnswer);
+                let reshOtv = document.querySelector('.reshenie');
+                reshOtv.classList.remove('reshenie');
             });
     
             // Создаем HTML для слайда с результатами
@@ -227,11 +229,9 @@ async function displayTasks() {
             slider.goToSlide(resultsIndex);
     
             // Показываем блок с разбором
-            let razOtv = document.querySelector('.details-raz_otv');
-            if (razOtv) {
-                razOtv.classList.add('details-raz_otv_active');
-                razOtv.classList.remove('details-raz_otv');
-            }
+            let razOtv = document.querySelector('.details-raz_otv'); 
+            if (razOtv) {razOtv.classList.remove('details-raz_otv'); }
+    
 
         });
     }
