@@ -252,8 +252,7 @@ function getResultText(countResult, total) {
 // Вспомогательная функция для создания таблицы результатов
 function createResultsTable(arrayInput, arrayAnswer) {
     let tableHTML = `
-        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
-            <tbody>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;"><tbody>
     `;
 
     for (let i = 0; i < arrayInput.length; i++) {
@@ -264,10 +263,10 @@ function createResultsTable(arrayInput, arrayAnswer) {
         const textColor = arrayInput[i] === "—" ? "" : isCorrect ? " #c0ffc0" : "#ffc0c0";
 
         tableHTML += `
-            <tr>
-                <td style="padding: 8px; border: 1px solid #000;  border-right: 0;">${i + 1}</td>
-                <td style="padding: 8px; border: 1px solid #000;  border-left: 0; border-right: 0; background-color: ${textColor};">${arrayInput[i]}</td>
-                <td style="padding: 8px; border: 1px solid #000;  border-left: 0; ">${arrayAnswer[i]}</td>
+            <tr class="answer-td">
+                <td style="padding: 8px; width: 10%; border: 1px solid #000; border-right: 0;">${i + 1}</td>
+                <td style="padding: 8px; width: 30%; border: 1px solid #000; border-left: 0; border-right: 0; background-color: ${textColor};">${arrayInput[i]}</td>
+                <td style="padding: 8px; width: 30%; border: 1px solid #000; border-left: 0; ">${arrayAnswer[i]}</td>
             </tr>
         `;
     }
