@@ -59,7 +59,7 @@ function createSlider(tasksHTML) {
         slider.appendChild(slide);
         slides.push(slide);
     });
-    
+   // <button id="button">ПРОВЕРИТЬ</button><br></br>
     // Добавляем навигацию с кнопками номеров заданий
     const navigation = document.createElement('div');
     navigation.className = 'slider-navigation';
@@ -152,7 +152,7 @@ async function displayTasks() {
         nine: randomTasks.nine.taskAnswer,
         ten: randomTasks.ten.taskAnswer[0]
     };
-    console.log(correctAnswers);
+    //console.log(correctAnswers);
 
     // Генерируем HTML для всех задач
     const tasksHTML = [
@@ -262,23 +262,18 @@ function createResultsTable(arrayInput, arrayAnswer) {
             ? arrayAnswer[i].split(' | ').map(str => str.trim()).includes(arrayInput[i])
             : arrayInput[i] === arrayAnswer[i];
 
-        const textColor = arrayInput[i] === "—" ? "" : isCorrect ? "green" : "red";
-        const fontWeight = isCorrect ? "bold" : "normal";
+        const textColor = arrayInput[i] === "—" ? "" : isCorrect ? " #c0ffc0" : "#ffc0c0";
 
         tableHTML += `
             <tr>
-                <td style="padding: 8px; border-bottom: 1px solid #ddd;">${i + 1}</td>
-                <td style="padding: 8px; border-bottom: 1px solid #ddd; color: ${textColor}; font-weight: ${fontWeight}">${arrayInput[i]}</td>
-                <td style="padding: 8px; border-bottom: 1px solid #ddd;">${arrayAnswer[i]}</td>
+                <td style="padding: 8px; border: 1px solid #ddd;  border-right: 0;">${i + 1}</td>
+                <td style="padding: 8px; border: 1px solid #ddd;  border-left: 0; border-right: 0; background-color: ${textColor};">${arrayInput[i]}</td>
+                <td style="padding: 8px; border: 1px solid #ddd;  border-left: 0; ">${arrayAnswer[i]}</td>
             </tr>
         `;
     }
 
-    tableHTML += `
-            </tbody>
-        </table>
-    `;
-
+    tableHTML += `</tbody></table>`;
     return tableHTML;
 }
 

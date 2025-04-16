@@ -43,6 +43,22 @@ li {
 .header .header-top .logo .logo-img {
   width: 80px;
 }
+.header .header-top button {
+  margin-left: auto;
+  margin-right: 50px;
+  text-align: center;
+  background-color: #ddd;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.header .header-top button:hover {
+  background-color: #b3e660;
+  transition: all 0.3s ease-in-out;
+}
 
 .hr-pd_10 {
   padding: 5px 0;
