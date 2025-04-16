@@ -183,9 +183,13 @@ async function displayTasks() {
             let arrayInput = [];
             let arrayAnswer = [];
             let countResult = 0;
-    
+            
+            inputs.forEach(() => {
+                
+            })
             // Проверяем каждый ответ
             inputs.forEach((input, index) => {
+                
                 const taskId = input.closest('.slide').getAttribute('data-task-id') || 
                               Object.keys(correctAnswers)[index];
                 
@@ -213,7 +217,10 @@ async function displayTasks() {
                 arrayInput.push(userInput || '—');
                 arrayAnswer.push(correctAnswer);
                 let reshOtv = document.querySelector('.reshenie');
-                reshOtv.classList.remove('reshenie');
+                if (reshOtv){  
+                    reshOtv.classList.remove('reshenie');
+                }
+                
             });
     
             // Создаем HTML для слайда с результатами
