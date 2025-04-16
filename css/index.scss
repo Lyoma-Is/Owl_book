@@ -54,26 +54,28 @@ li {
                 width: 80px;
             }       
         } 
-        button{
-            margin-left: auto;
-            margin-right: 50px;
-            text-align: center;
-            background-color: #ddd;
-            border: 1px solid ;
-            cursor: pointer;
-            font-size: 22px;
-            padding: 7px 12px;
-            border-radius: 10px;
-            transition: all 0.3s ease-in-out;
-            &:hover{
-                background-color: #b3e660;
-                transition: all 0.3s ease-in-out;
-            }       
-        } 
+        
            
     }
     
 }
+#button-finish{
+    display: flex;
+    margin-left: auto;
+    
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid ;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px 15px;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: #b3e660;
+        transition: all 0.3s ease-in-out;
+    }       
+} 
 .hr-pd_10{
     padding: 5px 0;
     border: 0;  

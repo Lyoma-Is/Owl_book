@@ -59,7 +59,6 @@ function createSlider(tasksHTML) {
         slider.appendChild(slide);
         slides.push(slide);
     });
-   // <button id="button">ПРОВЕРИТЬ</button><br></br>
     // Добавляем навигацию с кнопками номеров заданий
     const navigation = document.createElement('div');
     navigation.className = 'slider-navigation';
@@ -175,7 +174,7 @@ async function displayTasks() {
     const slider = createSlider(tasksHTML);
     if (!slider) return;
 
-    let button = document.querySelector('#button');
+    let button = document.querySelector('#button-finish');
 
     if (button) {
         button.addEventListener('click', function() {
@@ -266,9 +265,9 @@ function createResultsTable(arrayInput, arrayAnswer) {
 
         tableHTML += `
             <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;  border-right: 0;">${i + 1}</td>
-                <td style="padding: 8px; border: 1px solid #ddd;  border-left: 0; border-right: 0; background-color: ${textColor};">${arrayInput[i]}</td>
-                <td style="padding: 8px; border: 1px solid #ddd;  border-left: 0; ">${arrayAnswer[i]}</td>
+                <td style="padding: 8px; border: 1px solid #000;  border-right: 0;">${i + 1}</td>
+                <td style="padding: 8px; border: 1px solid #000;  border-left: 0; border-right: 0; background-color: ${textColor};">${arrayInput[i]}</td>
+                <td style="padding: 8px; border: 1px solid #000;  border-left: 0; ">${arrayAnswer[i]}</td>
             </tr>
         `;
     }
@@ -291,8 +290,7 @@ function addSliderStyles() {
         }
         .slider {
             display: flex;
-            transition: transform 0.5s ease;  
-            
+            transition: transform 0.5s ease;        
             padding: 5px 0;
             font-size: 25px; 
             line-height: 2.5rem;
@@ -319,13 +317,13 @@ function addSliderStyles() {
         }
         .slider-btn {
             display: block;
-            width: 50px;
-            height: 50px;
+            width: 65px;
+            height: 65px;
             background: #f0f0f0;
             border: 1px solid #ddd;
             border-radius: 10px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 25px;
             text-align: center;
             transition: all 0.3s ease;
             

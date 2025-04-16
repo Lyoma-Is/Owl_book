@@ -212,35 +212,19 @@ $font-size17: 17px;
         //width: 600px;
         width: 100%;
     }
-    .header{
-        .header-top{
-            button{
-                margin-left: auto;
-                margin-right: 40px;
-                text-align: center;
-                
-                border: 1px solid ;
-                cursor: pointer;
-                font-size: 17px;
-                padding: 7px 12px;
-                border-radius: 10px;
-                transition: all 0.3s ease-in-out;
-                &:hover{
-                    
-                    transition: all 0.3s ease-in-out;
-                }       
-            } 
-        }
-    }
- 
+    #button-finish{
+        font-size: 25px;
+        padding: 10px 15px;
+        border-radius: 10px 0 0 10px;  
+    } 
     main{  
         .slider-navigation{
             gap: 10px;
         }
         .slider-btn{
-            width: 40px;
-            height: 40px;
-            font-size: 18px;
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
         }
         .main-block{
             .aside-left{ 
@@ -432,34 +416,25 @@ $font-size17: 17px;
     .container{
         width: 100%;
     }
-    .header{
-        .header-top{
-            button{
-                margin-left: auto;
-                margin-right: 20px;
-                text-align: center;
-                border: 1px solid ;
-                cursor: pointer;
-                font-size: 14px;
-                padding: 7px 12px;
-                border-radius: 10px;
-                transition: all 0.3s ease-in-out;
-                &:hover{
-                    
-                    transition: all 0.3s ease-in-out;
-                }       
-            } 
-        }
-    }
-    
+    #button-finish{
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 10px 0 0 10px;  
+        
+    } 
+
     main{  
         .slider-navigation{
-            gap: 7px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            align-self: center;
+
         }
         .slider-btn{
-            width: 30px;
-            height: 30px;
-            font-size: 12px;
+            justify-self: center;
+            width: 40px;
+            height: 40px;
+            font-size: 15px;
             border-radius: 6px;
         }
         .search-box{
@@ -845,32 +820,6 @@ $font-size17: 17px;
                 outline: 0;
                 box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
             }
-        }
-    }
-}
-
-@media (max-width: 500px){
-    .header{
-        .header-top{
-            button{
-                margin-right: 10px;
-                font-size: 10px;
-                padding: 5px 10px;
-                border-radius: 8px;
-            } 
-        }
-    }
-}
-@media (max-width: 455px){
-    .header{
-        .header-top{
-            button{
-                margin-right: 5px;
-                font-size: 9px;
-                padding: 3px 7px;
-                border-radius: 6px;
-    
-            } 
         }
     }
 }
