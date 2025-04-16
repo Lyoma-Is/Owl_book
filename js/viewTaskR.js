@@ -39,7 +39,7 @@ export {tasks};
 export default function generateTaskHTML(taskKey, item) {
    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask, taskCounter} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
-    const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
+    const generateHeader = () => `<details><summary class="p-num details-raz_otv">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
     const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` :  
         ` <hr class="hr-pd_10">

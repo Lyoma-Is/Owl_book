@@ -232,6 +232,7 @@ async function displayTasks() {
                 razOtv.classList.add('details-raz_otv_active');
                 razOtv.classList.remove('details-raz_otv');
             }
+
         });
     }
 }
