@@ -48,7 +48,7 @@ $back-top-color: rgb(233, 199, 105);
 
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 
     .download a {
       display: flex;
@@ -146,7 +146,7 @@ $back-top-color: rgb(233, 199, 105);
       border-top: 3px solid $back-top-color;
       display: flex;
       justify-content: space-between;
-      padding: 20px;
+      padding: 0 20px 20px 20px;
 
       .download a {
         display: flex;

@@ -40,7 +40,7 @@ export default function generateTaskHTML(taskKey, item) {
    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask, taskCounter} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHeader = () => `<details><summary class="p-num reshenie">Решение</summary><hr class="hr-pd_10">`;
-    const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
+    const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between">`;
     const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` :  
         ` <hr class="hr-pd_10">
         <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
@@ -84,7 +84,8 @@ export default function generateTaskHTML(taskKey, item) {
               <p>${item.task1}</p><hr class="hr-pd_20">
               <p><em>${item.task2}</em></p><hr class="hr-pd_20">
               <p>${item.task3}</p>
-              <p>${item.task4}</p><hr class="hr-pd_20">`
+              <p>${item.task4}</p>
+              <hr class="hr-pd_20">`
             answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `

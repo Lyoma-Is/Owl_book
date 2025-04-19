@@ -70,7 +70,7 @@
 .answer-block {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .answer-block .download a {
   display: flex;
@@ -154,7 +154,7 @@
   border-top: 3px solid rgb(233, 199, 105);
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .slider .slider-item .answer-block .download a, .task-generator .slider-item .answer-block .download a {
   display: flex;
