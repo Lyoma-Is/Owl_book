@@ -476,12 +476,27 @@ function createVariants() {
 }
 
 // ------------------ Загрузка вариантов ------------------
+// async function loadVariants() {
+//     try {
+//         const response = await fetch('/src/oge_inf/showVarsMonth.json');
+//        // const response = await fetch('https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVarsMonth.json');
+//         if (!response.ok) throw new Error('Не удалось загрузить варианты');
+//         variants = await response.json();
+//         createVariants();
+//     } catch (e) {
+//         console.error('Ошибка загрузки вариантов:', e);
+//     }
+// }
 async function loadVariants() {
     try {
-        const response = await fetch('/src/oge_inf/showVarsMonth.json');
-       // const response = await fetch('https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVarsMonth.json');
+        console.log('loadVariants вызван');
+        //const response = await fetch('/src/oge_inf/showVarsMonth.json'); // или твой путь
+        const response = await fetch('https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVarsMonth.json');
+        console.log('Ответ получен:', response);
+
         if (!response.ok) throw new Error('Не удалось загрузить варианты');
         variants = await response.json();
+        console.log('Variants:', variants);
         createVariants();
     } catch (e) {
         console.error('Ошибка загрузки вариантов:', e);
