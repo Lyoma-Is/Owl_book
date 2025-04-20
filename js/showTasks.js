@@ -209,8 +209,8 @@ function createVariants() {
 // ------------------ Загрузка вариантов ------------------
 async function loadVariants() {
     try {
-       // const response = await fetch('../../../src/oge_inf/showVarsMonth.json');
-        const response = await fetch(' https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVarsMonth.json');
+       //const response = await fetch('../../../src/oge_inf/showVarsMonth.json');
+       const response = await fetch(' https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVarsMonth.json');
        
         if (!response.ok) throw new Error('Не удалось загрузить варианты');
         variants = await response.json();
@@ -251,19 +251,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     displayTasksByVariantWithSlider(tasksToDisplay);
 });
-// ------------------ Инициализация ------------------
-async function init() {
-    await loadVariants();
 
-    const selectedVariant = JSON.parse(localStorage.getItem('selectedVariant'));
-    if (!selectedVariant) return;
 
-    await loadAllTasks(Object.keys(tasks));
-    const tasksToDisplay = selectedVariant.tasksVars
-        .map(counter => allTasks.find(task => task.taskCounter === counter))
-        .filter(Boolean);
 
-    displayTasksByVariantWithSlider(tasksToDisplay);
-}
 
-document.addEventListener('DOMContentLoaded', init);
