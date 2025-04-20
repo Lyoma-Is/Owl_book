@@ -314,6 +314,16 @@
     border: 1px solid;
     padding: 5px;
   }
+  .answer-block_11 {
+    padding: 10px;
+  }
+  .answer-block_11 .download a {
+    font-size: 20px;
+    gap: 10px;
+  }
+  .answer-block_11 .download a img {
+    width: 45px;
+  }
 }
 @media (max-width: 700px) {
   main .search-box-find {
@@ -323,6 +333,13 @@
 @media (max-width: 600px) {
   .container {
     width: 100%;
+  }
+  .answer-block_11 .download a {
+    font-size: 15px;
+    gap: 10px;
+  }
+  .answer-block_11 .download a img {
+    width: 35px;
   }
   #button-finish {
     font-size: 18px;
@@ -592,7 +609,7 @@
   .task-generator .answer-block {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 15px;
   }
   .task-generator .answer-block .download a {
     display: flex;
@@ -603,7 +620,7 @@
     text-decoration: none;
   }
   .task-generator .answer-block .download a img {
-    width: 50px;
+    width: 40px;
   }
   .task-generator .answer-block .input_answer {
     padding: 10px;

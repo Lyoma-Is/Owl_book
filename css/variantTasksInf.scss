@@ -25,6 +25,29 @@ $back-top-color: rgb(233, 199, 105);
   padding: 0;
   box-sizing: border-box;
 }
+
+.answer-block_11{
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+
+    .download a {
+      display: flex;
+      font-size: 25px;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      color: #020202;
+      text-decoration: none;
+      img {
+        width: 50px;
+      }
+      &:hover{
+      color: #cd4848;
+    }
+  }    
+}
+
 .input_answer {  
     @include input-style();
     width: 25%;
@@ -48,7 +71,7 @@ $back-top-color: rgb(233, 199, 105);
 
     display: flex;
     justify-content: space-between;
-    padding: 0 20px 20px 20px;
+    padding: 20px;
 
     .download a {
       display: flex;

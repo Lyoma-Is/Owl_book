@@ -4,6 +4,27 @@
   box-sizing: border-box;
 }
 
+.answer-block_11 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.answer-block_11 .download a {
+  display: flex;
+  font-size: 25px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #020202;
+  text-decoration: none;
+}
+.answer-block_11 .download a img {
+  width: 50px;
+}
+.answer-block_11 .download a:hover {
+  color: #cd4848;
+}
+
 .input_answer {
   padding: 5px;
   margin-top: 25px;
@@ -70,7 +91,7 @@
 .answer-block {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px 20px 20px;
+  padding: 20px;
 }
 .answer-block .download a {
   display: flex;
