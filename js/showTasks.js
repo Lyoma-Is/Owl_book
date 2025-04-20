@@ -88,13 +88,13 @@ function createSlider(tasksHTML, correctAnswers) {
 function setupCheckButton(slider, correctAnswers) {
     const button = document.querySelector('#button-finish');
     if (!button) return;
-
+    
     button.addEventListener('click', () => {
         const inputs = document.querySelectorAll('.slide:not(.results-slide) #input_answer');
         const userAnswers = [];
         const correctList = [];
         let score = 0;
-
+        
         inputs.forEach((input) => {
             const taskId = input.closest('.slide')?.getAttribute('data-task-id');
             const correct = Array.isArray(correctAnswers[taskId])
@@ -111,10 +111,11 @@ function setupCheckButton(slider, correctAnswers) {
 
             input.classList.add(isCorrect ? 'input_answer-green' : 'input_answer-red');
             if (isCorrect) score++;
+            let reshOtv = document.querySelector('.reshenie');
+                if (reshOtv){  
+                    reshOtv.classList.remove('reshenie');
+                }
         });
-
-        const reshOtv = document.querySelector('.reshenie');
-        if (reshOtv) reshOtv.classList.remove('reshenie');
 
         const resultHTML = `
             <div id="answer_results">
