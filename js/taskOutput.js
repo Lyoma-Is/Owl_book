@@ -123,20 +123,24 @@ document.getElementById('select-task').addEventListener('change', function() {
   }
 });
 
-// const selectTask = document.querySelectorAll('#select-task');
-// const selectOption = 
-// ` 
-// <option value="">Выберите задание по типу</option>
-// <option value="taskOnePage.html">1. Оценка объема памяти для хранения данных.</option>
-// <option value="taskTwoPage.html">2. Кодирование и декодирование информации.</option>
-// <option value="taskThreePage.html">3. Истинные и ложные высказывания.</option>
-// <option value="taskFourPage.html">4. Анализ таблицы. Поиск кратчайшего пути.</option>
-// <option value="taskFivePage.html">5. Анализ простых алгоритмов. Исполнители.</option>
-// <option value="taskSixPage.html">6. Программа с условным оператором.</option>
-// <option value="taskSevenPage.html">7. Принципы адресации в сети Интернет.</option>
-// <option value="taskEightPage.html">8. Анализ поисковых запросов сервера.</option>
-// <option value="taskNinePage.html">9. Анализ информации на схеме дорог.</option>
-// <option value="taskTenPage.html">10. Запись чисел в различных системах счисления.</option>
-// <option value="taskElevenPage.html">11. Поиск текста.</option>`
+document.getElementById('select-task').innerHTML =` 
+<option value="">Выберите задание по типу</option>
+<option value="taskOnePage.html">1. Оценка объема памяти для хранения данных.</option>
+<option value="taskTwoPage.html">2. Кодирование и декодирование информации.</option>
+<option value="taskThreePage.html">3. Истинные и ложные высказывания.</option>
+<option value="taskFourPage.html">4. Анализ таблицы. Поиск кратчайшего пути.</option>
+<option value="taskFivePage.html">5. Анализ простых алгоритмов. Исполнители.</option>
+<option value="taskSixPage.html">6. Программа с условным оператором.</option>
+<option value="taskSevenPage.html">7. Принципы адресации в сети Интернет.</option>
+<option value="taskEightPage.html">8. Анализ поисковых запросов сервера.</option>
+<option value="taskNinePage.html">9. Анализ информации на схеме дорог.</option>
+<option value="taskTenPage.html">10. Запись чисел в различных системах счисления.</option>
+<option value="taskElevenPage.html">11. Поиск текста.</option>`
 
-// selectTask.appendChild(selectOption);
+document.getElementById('taskSort').innerHTML = `
+       <option value='1'>новые</option>
+       <option value='0'>по возрастанию</option>
+       <option value='1'>по убыванию</option>
+       <option value='2'>случайный порядок</option>
+
+`
