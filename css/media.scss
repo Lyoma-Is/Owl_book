@@ -112,6 +112,7 @@ $font-size17: 17px;
                 width: 550px;
             }
             .answer-block{
+                padding: 20px;
                 .input_answer, .input_answer-green, .input_answer-red{
                     width: 35%;
                 }
@@ -356,6 +357,7 @@ $font-size17: 17px;
                 width: 450px;
             }
             .answer-block{
+                padding: 20px;
                 .input_answer, .input_answer-green, .input_answer-red{
                     width: 45%;
                 }
@@ -602,17 +604,19 @@ $font-size17: 17px;
                 width: 350px;
             }
             .answer-block{
-                margin-top: 20px;
+                 padding: 20px;
                 .input_answer, .input_answer-green, .input_answer-red{
                     width: 75%;
                     margin-top: 2px;
                 }
-                .download{       
+                .download{   
+                    
                     a{     
                         align-items: start;
                         font-size: 10px;
                         img{
                             width: 30px;
+                            margin: auto;
                         }  
                     }  
                 }

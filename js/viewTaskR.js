@@ -72,7 +72,7 @@ export default function generateTaskHTML(taskKey, item) {
     const generateInputD = () =>
           `<section class="answer-block">
               <div class="download">  
-                <a href="../../../src/inf_file/DEMO-12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a>
+                <a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a>
               </div>
               <input id="input_answer" class="input_answer" placeholder="Введите ответ"/>
             </section>`;
@@ -1830,6 +1830,7 @@ int main(){
           <p>${task1}</p>
           <p>${task2}</p>      
           <hr class="hr-pd_10">
+
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
