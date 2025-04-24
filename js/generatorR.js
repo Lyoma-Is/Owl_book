@@ -150,7 +150,8 @@ async function displayTasks() {
         eight: randomTasks.eight.taskAnswer,
         nine: randomTasks.nine.taskAnswer,
         ten: randomTasks.ten.taskAnswer[0],
-        eleven: randomTasks.eleven.taskAnswer
+        eleven: randomTasks.eleven.taskAnswer,
+        twelve: randomTasks.twelve.taskAnswer
     };
     //console.log(correctAnswers);
 
@@ -166,7 +167,8 @@ async function displayTasks() {
         generateTaskHTML('eight', randomTasks.eight),
         generateTaskHTML('nine', randomTasks.nine),
         generateTaskHTML('ten', randomTasks.ten),
-        generateTaskHTML('eleven', randomTasks.eleven)
+        generateTaskHTML('eleven', randomTasks.eleven),
+        generateTaskHTML('twelve', randomTasks.twelve)
     ].filter(html => html);
 
     // Очищаем контейнер перед созданием нового слайдера

@@ -9,7 +9,8 @@
 //   eight: '../../../src/oge_inf/taskEight.json',
 //   nine: '../../../src/oge_inf/taskNine.json',
 //   ten: '../../../src/oge_inf/taskTen.json',
-//   eleven: '../../../src/oge_inf/taskEleven.json'
+//   eleven: '../../../src/oge_inf/taskEleven.json',
+//   twelve: '../../../src/oge_inf/taskTwelve.json' 
 // };
 
 const tasks = {
@@ -23,7 +24,8 @@ const tasks = {
   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json'
+  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
 };
 
 // const currentDate = new Date();
@@ -73,6 +75,13 @@ export default function generateTaskHTML(taskKey, item) {
           `<section class="answer-block">
               <div class="download">  
                 <a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a>
+              </div>
+              <input id="input_answer" class="input_answer" placeholder="Введите ответ"/>
+            </section>`;
+    const generateInputD12 = () =>
+          `<section class="answer-block">
+              <div class="download">  
+                <a href="../../../src/inf_file/zadanie_12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a>
               </div>
               <input id="input_answer" class="input_answer" placeholder="Введите ответ"/>
             </section>`;
@@ -1843,6 +1852,29 @@ int main(){
                       Ответ: <b>${taskAnswer}</b>`;
                     answerBlock += generateFooter(); 
                     answerBlock += generateInputD();
+                    return answerBlock
+         }
+    }
+    if (taskKey === 'twelve'){
+      switch(item.typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>12.</b> № ${taskCounter} ${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Легкий)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p>${task1}</p>
+          <p>${task2}</p>      
+          <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+                    answerBlock += `
+                      <hr class="hr-pd_10">
+                      <p>${task3}</p>
+                      <hr class="hr-pd_10">
+                      <p>${task4}</p>   
+                      <hr class="hr-pd_20">
+                      Ответ: <b>${taskAnswer}</b>`;
+                    answerBlock += generateFooter(); 
+                    answerBlock += generateInputD12();
                     return answerBlock
          }
     }

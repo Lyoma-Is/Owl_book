@@ -123,7 +123,7 @@ document.getElementById('select-task').addEventListener('change', function() {
   }
 });
 
-document.getElementById('select-task').innerHTML =` 
+document.getElementById('select-task').innerHTML = ` 
 <option value="">Выберите задание по типу</option>
 <option value="taskOnePage.html">1. Оценка объема памяти для хранения данных.</option>
 <option value="taskTwoPage.html">2. Кодирование и декодирование информации.</option>
@@ -135,12 +135,13 @@ document.getElementById('select-task').innerHTML =`
 <option value="taskEightPage.html">8. Анализ поисковых запросов сервера.</option>
 <option value="taskNinePage.html">9. Анализ информации на схеме дорог.</option>
 <option value="taskTenPage.html">10. Запись чисел в различных системах счисления.</option>
-<option value="taskElevenPage.html">11. Поиск текста.</option>`
+<option value="taskElevenPage.html">11. Поиск текста.</option>
+<option value="taskTwelvePage.html">12. Подсчет количества файлов.</option>`
+
 
 document.getElementById('taskSort').innerHTML = `
        <option value='1'>новые</option>
        <option value='0'>по возрастанию</option>
        <option value='1'>по убыванию</option>
        <option value='2'>случайный порядок</option>
-
 `
