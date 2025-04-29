@@ -139,13 +139,8 @@
   }
   main .btn-primary {
     padding: 10px 15px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
     border-radius: 4px;
     font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s;
   }
 }
 @media (max-width: 800px) {
@@ -205,13 +200,8 @@
   }
   main .btn-primary {
     padding: 5px 10px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
     border-radius: 4px;
     font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s;
   }
   main .p-gen {
     text-align: center;
@@ -370,13 +360,8 @@
   main .btn-primary {
     width: 220px;
     padding: 5px 10px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
     border-radius: 4px;
     font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s;
   }
   main .search-box__inner {
     display: flex;
@@ -705,5 +690,34 @@
     border-color: #cd4848;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  }
+}
+@media (max-width: 400px) {
+  main .main-block .aside-left {
+    width: 40%;
+  }
+  main .main-block .aside-left ul {
+    padding-left: 5px;
+  }
+  main .main-block .aside-left ul li a {
+    font-size: 15px;
+  }
+  main .slider-navigation {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-self: center;
+    gap: 6px;
+  }
+  main .slider-btn {
+    justify-self: center;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 500px) {
+  main .main-block .aside-left ul {
+    padding: 20px 10px;
   }
 }/*# sourceMappingURL=media.css.map */

@@ -194,13 +194,10 @@ $font-size17: 17px;
         
         .btn-primary {
             padding: 10px 15px;
-            background-color: #4285f4;
-            color: white;
-            border: none;
+           
             border-radius: 4px;
             font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+         
         }  
     }
     
@@ -276,13 +273,10 @@ $font-size17: 17px;
         .btn-primary {
             
             padding: 5px 10px;
-            background-color: #4285f4;
-            color: white;
-            border: none;
+           
             border-radius: 4px;
             font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            
         } 
         .p-gen{
             text-align: center;
@@ -465,13 +459,10 @@ $font-size17: 17px;
         .btn-primary {
             width: 220px;
             padding: 5px 10px;
-            background-color: #4285f4;
-            color: white;
-            border: none;
+         
             border-radius: 4px;
             font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+           
         } 
         .search-box__inner{
             display: flex;
@@ -846,4 +837,42 @@ $font-size17: 17px;
             }
         }
     }
+}
+
+@media (max-width: 400px){
+    main{
+        .main-block .aside-left{
+            width: 40%;
+           ul{
+            padding-left: 5px;
+            li a {
+            font-size: 15px;
+               }  
+     
+            }  
+        } 
+        .slider-navigation{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            align-self: center;
+            gap: 6px;
+
+        }
+        .slider-btn{
+            justify-self: center;
+            width: 35px;
+            height: 35px;
+            font-size: 15px;
+            border-radius: 4px;
+        }
+    }
+
+  
+}
+@media (max-width: 500px){
+    main .main-block .aside-left ul {
+        
+        padding: 20px 10px;
+    }
+
 }
