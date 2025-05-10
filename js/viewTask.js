@@ -1,32 +1,32 @@
-// const tasks = {
-//   one: '../../../src/oge_inf/taskOne.json',
-//   two: '../../../src/oge_inf/taskTwo.json',
-//   three: '../../../src/oge_inf/taskThree.json',
-//   four:  '../../../src/oge_inf/taskFour.json',
-//   five: '../../../src/oge_inf/taskFive.json',
-//   six: '../../../src/oge_inf/taskSix.json',
-//   seven: '../../../src/oge_inf/taskSeven.json',
-//   eight: '../../../src/oge_inf/taskEight.json',
-//   nine: '../../../src/oge_inf/taskNine.json',
-//   ten: '../../../src/oge_inf/taskTen.json',
-//   eleven: '../../../src/oge_inf/taskEleven.json',
-//   twelve: '../../../src/oge_inf/taskTwelve.json' 
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+  one: '../../../src/oge_inf/taskOne.json',
+  two: '../../../src/oge_inf/taskTwo.json',
+  three: '../../../src/oge_inf/taskThree.json',
+  four:  '../../../src/oge_inf/taskFour.json',
+  five: '../../../src/oge_inf/taskFive.json',
+  six: '../../../src/oge_inf/taskSix.json',
+  seven: '../../../src/oge_inf/taskSeven.json',
+  eight: '../../../src/oge_inf/taskEight.json',
+  nine: '../../../src/oge_inf/taskNine.json',
+  ten: '../../../src/oge_inf/taskTen.json',
+  eleven: '../../../src/oge_inf/taskEleven.json',
+  twelve: '../../../src/oge_inf/taskTwelve.json' 
 };
+
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+// };
 
 // const currentDate = new Date();
 
@@ -43,6 +43,7 @@ export {tasks};
 export default function generateTaskHTML(taskKey, item) {
    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask, taskCounter, taskHard} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
+    const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
     const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` :  
@@ -644,52 +645,103 @@ export default function generateTaskHTML(taskKey, item) {
       
     }
     if (taskKey === 'five'){
-      
+      function examp(item){
+        
+        let ex = '';
+        for(let i in item){
+    
+          if (item[i] === '1'){
+            ex += `${task2[0].slice(3)}<br>`
+           
+
+          }
+          if (item[i] === '2'){
+            ex += `${task2[1].slice(3)}<br>`
+          }
+
+        } return ex;
+
+      }
       function fiveAn(item){    
-        let resCount = 0
         let res = ''
         let res1 = ''
         let steps = 0;
+        let resCount = 0;
         // delenie
         if (taskAn[4] === "/"){
-           while(item !== taskAn[1]){
-            if(item / taskAn[2] === Math.floor(item / taskAn[2])){
-              item /=  taskAn[2];
-              res += '1'
-              resCount += 1
-              if (resCount === 5){
-                res1 += `1. раздели на ${taskAn[2]} = <span style="background-color: rgb(252, 210, 94);">${item}</span><br>`
-              }
-              else{
-                res1 += `1. раздели на ${taskAn[2]} = ${item}<br>`
-              }        
+           while(item !== taskAn[1] && steps < 5){
+            steps++;
+            if(item / taskAn[2] === Math.floor(item / taskAn[2])){ 
+              if (item / taskAn[2] !== taskAn[1]){
+                if (taskAn[5] === "-" && item - taskAn[3] === taskAn[1]){
+                  item -=  taskAn[3];
+                  res += '2'
+                }
+                else{
+                  item /=  taskAn[2];
+                  res += '1'      
+                }
+                
+              }else{
+                item /=  taskAn[2];
+                res += '1'      
+              }   
+              
             } 
             else if(taskAn[5] === "+"){
               item +=  taskAn[3];
               res += '2'
-              resCount += 1
-              if (resCount === 5){
-                res1 += `2. прибавь ${taskAn[3]} = <span style="background-color:rgb(252, 210, 94);">${item}</span><br>`
-              }
-              else{
-                res1 += `2. прибавь ${taskAn[3]} = ${item}<br>`
-              }
             }
             else if(taskAn[5] === "-"){
               item -=  taskAn[3];
               res += '2'
-              resCount += 1
-              if (resCount === 5){
-                res1 += `2. вычти ${taskAn[3]} = <span style="background-color:rgb(252, 210, 94);">${item}</span><br>`
-              }
-              else{
-                res1 += `2. вычти ${taskAn[3]} = ${item}<br>`
-              }
             }
           }//while
+
+          let item2 = taskAn[0]
+          let vch = taskAn[2]
+          
+
+          for(let i in res){
+           resCount += 1
+           let x = res[i];
+           if(x === '1' && taskAn[4] === "/"){
+              if (resCount === 5){
+                res1 += `1. раздели на ${taskAn[2]} = <span style="background-color: rgb(252, 210, 94);">${item2/vch}</span><br>`
+                item2 = item2/vch
+              }
+              else{
+                res1 += `1. раздели на ${taskAn[2]} = ${item2/vch}<br>`
+                item2 = item2/vch
+              }   
+           }
+           else if(x === '2' && taskAn[5] === "+"){
+              if (resCount === 5){
+                res1 += `2. прибавь ${taskAn[3]} = <span style="background-color:rgb(252, 210, 94);">${item2+taskAn[3]}</span><br>`
+                item2 += taskAn[3]
+              }
+              else{
+                res1 += `2. прибавь ${taskAn[3]} = ${item+taskAn[3]}<br>`
+                item2 += taskAn[3]
+              }
+           }
+           else if(x === '2' && taskAn[5] === "-"){
+             if (resCount === 5){
+                res1 += `2. вычти ${taskAn[3]} = <span style="background-color:rgb(252, 210, 94);">${item2-taskAn[3]}</span><br>`
+                item2 -= taskAn[3]
+              }
+              else{
+                res1 += `2. вычти ${taskAn[3]} = ${item2-taskAn[3]}<br>`
+                item2 -= taskAn[3]
+              }
+            }
+            else {break;}
+          }
+          
         } //  4 /
         if (taskAn[5] === "/"){
-          while(item !== taskAn[1]){
+          while(item !== taskAn[1] && steps < 5){
+            steps++;
             if(Math.floor(item / taskAn[3]) >= taskAn[1] && item / taskAn[3] === Math.floor(item / taskAn[3])){
               item /=  taskAn[3];
               res += '2'
@@ -719,15 +771,18 @@ export default function generateTaskHTML(taskKey, item) {
         // umnozhenie
         if (taskAn[5] === "*"){
           item = taskAn[1]
-          while(item !== taskAn[0]){
+          while(item !== taskAn[0] && steps < 5){
+            steps++;
             if(item % taskAn[3] === 0 ){
-              if ((res.length === 4 || res.length === 3) && item/taskAn[3] === taskAn[0]){
+              if ((res.length === 4 || res.length === 3) && (item/taskAn[3] === taskAn[0] || item/taskAn[3]/taskAn[3] === taskAn[0])){
                 item /= taskAn[3];
                 res += '2';  
               }
-              else if ((res.length === 4 || res.length === 3) && item/taskAn[3] !== taskAn[0]){
-                item += taskAn[2];
-                res += '1';
+         
+              else if ((res.length === 4 || res.length === 3) && item/taskAn[3] !== taskAn[0]){  
+                        
+                  item += taskAn[2];
+                  res += '1';
               }
               else{
                 item /= taskAn[3];
@@ -738,7 +793,12 @@ export default function generateTaskHTML(taskKey, item) {
               item += taskAn[2]
               res += '1'
             }
+            else if(taskAn[4] === "+"){
+              item -= taskAn[2]
+              res += '1'
+            }
             else {break;}
+            //console.log(taskCounter,item, res)
           }
           res = res.split('').reverse().join('');
           let item2 = taskAn[0]
@@ -768,25 +828,38 @@ export default function generateTaskHTML(taskKey, item) {
                 item2 = item2 - vch
               }        
             }
+            else if(taskAn[4] === "+" && x === '1'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `1. <b>прибавь ${vch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 + vch}</span><br>`
+                item2 = item2 + vch
+              }
+              else{
+                res1 += `1. <b>прибавь ${vch}</b> к числу ${item2} = ${item2 + vch}<br>`
+                item2 = item2 + vch
+              }        
+            }
           }
         }
         if (taskAn[4] === "*"){
           item = taskAn[1]
           let uch = taskAn[2]
           let vch = taskAn[3]
-          while(item !== taskAn[0]){
+          while(item !== taskAn[0]  && steps < 5){
+            steps++;
             if(item % taskAn[2] === 0 ){
               if ((res.length === 4 || res.length === 3) && item/taskAn[2] === taskAn[0]){
                 item /= taskAn[2];
                 res += '1';  
               }
-              else if ((res.length === 4 || res.length === 3) && item/taskAn[2] !== taskAn[0] && taskAn[5] === "-"){
+              else if ((res.length === 4 || res.length === 3) && (item/taskAn[2] !== taskAn[0] && item/taskAn[2] === 0) && taskAn[5] === "-" ){
                 item += taskAn[3];
                 res += '2';
               }
               else{
                 item /= taskAn[2];
                 res += '1';  
+                
               }  
             }
             else if(taskAn[5] === "-"){
@@ -798,8 +871,29 @@ export default function generateTaskHTML(taskKey, item) {
               res += '2'
             }
             else {break;}
+
+            if (res.length === 5 && item !== taskAn[0]){
+              res = ''
+              steps = 0
+              item = taskAn[0]
+             
+              while(item !== taskAn[1]  && steps < 5){
+                 steps++;
+                 if (item*taskAn[2] > taskAn[1]){
+                  item -= taskAn[3]
+                  res += '2'
+                 }
+                 else { 
+                  item *= taskAn[2];
+                  res += '1'
+                 }
+              }
+              res = res.split('').reverse().join('');
+            }
           }
+          
           res = res.split('').reverse().join('');
+          //console.log(taskCounter, res)
           let item2 = taskAn[0]
           for (let i in res){
             let x = res[i]
@@ -842,10 +936,20 @@ export default function generateTaskHTML(taskKey, item) {
         // vozvedenie
         if (taskAn[4] === "**"){
           item = taskAn[1]
-          while(item !== taskAn[0]){
+          
+          while(item !== taskAn[0] && steps < 5){
+            
+            steps++;
             if(Math.sqrt(item) === Math.floor(Math.sqrt(item))){
-              item = Math.sqrt(item);
-              res += '1'
+              if (res.length === 4 && (item - taskAn[3] === taskAn[0])){
+                item = item - taskAn[3]
+                res += '2'
+              }
+              else{
+                item = Math.sqrt(item);
+                res += '1'
+              }
+              
             }
             else if(taskAn[5] === "-"){
               if (res.length === 4 && (item + taskAn[3] !== taskAn[0])){
@@ -858,12 +962,25 @@ export default function generateTaskHTML(taskKey, item) {
               }
              
             }
-            else {break;}
+            else if(taskAn[5] === "+"){
+              if (res.length === 4 && (item - taskAn[3] === taskAn[0])){
+                item = item - taskAn[3]
+                res += '2'
+              }
+              else {
+                item = item - taskAn[3] 
+                res += '2'
+              }
+              
+            } 
+            else {break;} 
+            //console.log(taskCounter, item, res, res.length)
           }
         
           res = res.split('').reverse().join('');
           
           let item2 = taskAn[0]
+          let vch = taskAn[3]
           for (let i in res){
             let x = res[i]
             if (x === '1' && taskAn[4] === '**'){
@@ -888,6 +1005,18 @@ export default function generateTaskHTML(taskKey, item) {
                 item2 = item2 - taskAn[3]
               }        
             }
+            else if(taskAn[5] === "+" && x === '2'){
+              resCount += 1
+              if (resCount === 5){
+                res1 += `2. <b>прибавь ${vch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 + vch}</span><br>`
+                item2 = item2 + vch
+              }
+              else{
+                res1 += `2. <b>прибавь ${vch}</b> к числу ${item2} = ${item2 + vch}<br>`
+                item2 = item2 + vch
+              }        
+            }
+
           }
         }
         if (taskAn[5] === "**"){
@@ -896,9 +1025,17 @@ export default function generateTaskHTML(taskKey, item) {
           while(item !== taskAn[0] && steps < 5){
             steps++
             if(Math.sqrt(item) === Math.floor(Math.sqrt(item))){
+              
               if (res.length === 4){
-                item += taskAn[2]
-                res += '1'
+                if (Math.floor(Math.sqrt(item)) === taskAn[0]){
+                  item = Math.sqrt(item);
+                  res += '2'
+                }
+                else{
+                  item += taskAn[2]
+                  res += '1'
+                }
+                
               }
               else{
                 item = Math.sqrt(item);
@@ -924,7 +1061,6 @@ export default function generateTaskHTML(taskKey, item) {
                 item -= taskAn[2]
                 res += '1'
               }
-             
             } 
             else {break;} 
           }
@@ -1019,7 +1155,8 @@ export default function generateTaskHTML(taskKey, item) {
         }
         if (taskAn[5] === 'p'){
           item = taskAn[1]
-          while(item !== taskAn[0]){
+          while(item !== taskAn[0] && steps < 5){
+            steps++;
             if(item.toString().at(-1) === taskAn[3].toString()){
               item =  (item-taskAn[3])/10;
               res += '2'  
@@ -1080,7 +1217,8 @@ export default function generateTaskHTML(taskKey, item) {
         // zacherkni
         if (taskAn[5] === 'z'){
           item = taskAn[0]
-          while(item !== taskAn[1]){
+          while(item !== taskAn[1] && steps < 5){
+            steps++;
             if(item.toString().length === 2){
               
               item = Math.floor(item/10)
@@ -1126,15 +1264,15 @@ export default function generateTaskHTML(taskKey, item) {
       switch(item.typeTask){
         case 1:
           answerBlock =`
-          <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
-          <p>${item.task1}</p>
+          <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          <p>${task1}</p>
           <hr class="hr-pd_10">
-          <p><b style="font-weight: 500;">${item.task2}</b></p>
+          <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
           <hr class="hr-pd_10">
-          <p>${item.task3}</p>
-          <p>Составьте алгоритм получения <b style="font-weight: 500;">${item.task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+          <p>${task3}</p>
+          <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
           <hr class="hr-pd_10">
-          <p><em>${item.task5}</em></p>
+          <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
           <hr class="hr-pd_10">
           Если таких алгоритмов более одного, то запишите любой из них.
           <hr class="hr-pd_10">
@@ -1150,15 +1288,15 @@ export default function generateTaskHTML(taskKey, item) {
           return answerBlock
         case 2:
             answerBlock =`
-            <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+            <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
             <p>${item.task1}</p>
             <hr class="hr-pd_10">
-            <p><b style="font-weight: 500;">${item.task2}</b></p>
+            <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
             <hr class="hr-pd_10">
             <p>${item.task3}</p>
             <p>Составьте алгоритм получения <b style="font-weight: 500;">${item.task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
             <hr class="hr-pd_10">
-            <p><em>${item.task5}</em></p>
+            <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
             <hr class="hr-pd_10">
             Если таких алгоритмов более одного, то запишите любой из них.
             <hr class="hr-pd_10">
@@ -1174,15 +1312,15 @@ export default function generateTaskHTML(taskKey, item) {
             return answerBlock
         case 3:
               answerBlock =`
-              <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+              <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
               <p>${item.task1}</p>
               <hr class="hr-pd_10">
-              <p><b style="font-weight: 500;">${item.task2}</b></p>
+              <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
               <hr class="hr-pd_10">
               <p>${item.task3}</p>
               <p>Составьте алгоритм получения <b style="font-weight: 500;">${item.task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
               <hr class="hr-pd_10">
-              <p><em>${item.task5}</em></p>
+              <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
               <hr class="hr-pd_10">
               Если таких алгоритмов более одного, то запишите любой из них.
               <hr class="hr-pd_10">
