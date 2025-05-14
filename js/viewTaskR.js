@@ -871,7 +871,6 @@ export default function generateTaskHTML(taskKey, item) {
               }        
             }
             else if(x === '2' && z === "+" ){
-              resCount += 1
               if (resCount === 5){
                 res1 += `2. <b>прибавь ${vch}</b> к числу ${item_el} = <span style="background-color: rgb(252, 210, 94);">${item_el + vch}</span><br>`
                 item_el += vch
@@ -1008,6 +1007,50 @@ export default function generateTaskHTML(taskKey, item) {
         }
       
         // zacherkni
+        if (taskAn[4] === 'z'){
+         let item_el = taskAn[0]
+         let z = taskAn[5] 
+         let t2 = taskAn[2]
+         //let vch = taskAn[2]
+         //let uch = taskAn[3]
+         for (let i in item_an){
+            let x = item_an[i]
+            resCount++;
+            if(x === '2' && z === "**"){                      
+              if (resCount === 5){
+                res1 += `2. <b>возведи в квадрат</b> число ${item_el} = <span style="background-color: rgb(252, 210, 94);">${item_el*item_el}</span><br>`
+                item_el = item_el * item_el;
+              }
+              else{
+                res1 += `2. <b>возведи в квадрат</b> число ${item_el} = ${item_el*item_el}<br>`
+                item_el = item_el * item_el;
+              }  
+            }
+            else if(t2 === 1){
+              let d = item_el.toString().length
+              let p = Math.pow(10, d-1)
+              if (resCount === 5){
+                res1 += `1. <b> зачеркни слева</b> число ${item_el} = <span style="background-color: rgb(252, 210, 94);">${Math.floor(item_el%p)}</span><br>`
+                item_el = Math.floor(item_el%p)
+              }
+              else{
+                res1 += `1. <b>зачеркни слева</b> число ${item_el} = ${Math.floor(item_el%p)}<br>`
+                item_el = Math.floor(item_el%p)
+              }        
+
+            }
+            else {
+              if (resCount === 5){
+                res1 += `1. <b> зачеркни справа</b> число ${item_el} = <span style="background-color: rgb(252, 210, 94);">${Math.floor(item_el/10)}</span><br>`
+                item_el = Math.floor(item_el/10)
+              }
+              else{
+                res1 += `1. <b>зачеркни справа</b> число ${item_el} = ${Math.floor(item_el/10)}<br>`
+                item_el = Math.floor(item_el/10)
+              }        
+            }
+          }
+        }
         if (taskAn[5] === 'z'){
          let item_el = taskAn[0]
          let z = taskAn[4] 
