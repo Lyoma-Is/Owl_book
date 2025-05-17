@@ -1,42 +1,32 @@
-const tasks = {
-  one: '../../../src/oge_inf/taskOne.json',
-  two: '../../../src/oge_inf/taskTwo.json',
-  three: '../../../src/oge_inf/taskThree.json',
-  four:  '../../../src/oge_inf/taskFour.json',
-  five: '../../../src/oge_inf/taskFive.json',
-  six: '../../../src/oge_inf/taskSix.json',
-  seven: '../../../src/oge_inf/taskSeven.json',
-  eight: '../../../src/oge_inf/taskEight.json',
-  nine: '../../../src/oge_inf/taskNine.json',
-  ten: '../../../src/oge_inf/taskTen.json',
-  eleven: '../../../src/oge_inf/taskEleven.json',
-  twelve: '../../../src/oge_inf/taskTwelve.json' 
-};
-
 // const tasks = {
-//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+//   one: '../../../src/oge_inf/taskOne.json',
+//   two: '../../../src/oge_inf/taskTwo.json',
+//   three: '../../../src/oge_inf/taskThree.json',
+//   four:  '../../../src/oge_inf/taskFour.json',
+//   five: '../../../src/oge_inf/taskFive.json',
+//   six: '../../../src/oge_inf/taskSix.json',
+//   seven: '../../../src/oge_inf/taskSeven.json',
+//   eight: '../../../src/oge_inf/taskEight.json',
+//   nine: '../../../src/oge_inf/taskNine.json',
+//   ten: '../../../src/oge_inf/taskTen.json',
+//   eleven: '../../../src/oge_inf/taskEleven.json',
+//   twelve: '../../../src/oge_inf/taskTwelve.json' 
 // };
 
-// const currentDate = new Date();
-
-// const options = { 
-//   day: 'numeric',
-//   month: 'numeric',
-//   year: 'numeric'
-// };
-// const formattedDate = currentDate.toLocaleDateString('ru-RU', options);
-
+const tasks = {
+  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+};
 
 export {tasks};
 
@@ -51,22 +41,7 @@ export default function generateTaskHTML(taskKey, item) {
         <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
         <hr class="hr-pd_10">
         `}`;
-      // `${taskNum === ""
-      //   ? 
-      //        `<hr class="hr-pd_10">
-      //         <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
-      //         <hr class="hr-pd_10">`
-      //   : 
-      //   date === ""
-      //   ? 
-      //   `<hr class="hr-pd_10">
-      //         <p class="p-num" style="text-align: right;">Номер: ${taskNum} </p>
-      //         <hr class="hr-pd_10">`
-      //    :
-      //         `<hr class="hr-pd_10">
-      //         <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
-      //         <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
-      //         <hr class="hr-pd_10">`}`} `;
+
     let answerBlock = "";
   
     if (taskKey === 'one'){
@@ -128,61 +103,102 @@ export default function generateTaskHTML(taskKey, item) {
               return answerBlock
           }
     }
-    if (taskKey === 'ten'){  
-      switch(item.typeTask){     
+    if (taskKey === 'ten'){ 
+      function AnsTenRed(item_an){
+        let res = ''
+        let x_el = taskAn[2]
+        item_an = item_an.toString()
+        if(x_el === 0){
+          for(let i in item_an){
+            let x = item_an[i]
+            if( x === '0'){
+              res += `<span style="color: red;">${x}</span>`
+            }
+            else{
+               res += '1'
+            }
+          }
+        }
+        else if(x_el === 1){
+          for(let i in item_an){
+            let x = item_an[i]
+            if( x === '1'){
+              res += `<span style="color: red;">${x}</span>`
+            }
+            else{
+               res += '0'
+            }
+          }
+        }
+        else{
+          res = item_an
+        }
+        return res
+        
+      } 
+      switch(typeTask){     
         case 1:
           answerBlock =`
-            <p class="p-num"><b>10.</b> № ${item.taskCounter}</p>
-            <p>${item.task}</p>
+            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
+            Переведите число <b>${taskAn[0]}</b> из десятичной системы счисления в двоичную систему счисления.
+            ${taskAn[2] === 0 ? `Сколько нулей содержит полученное число? В ответе укажите одно число – количество нулей.` :
+              taskAn[2] === 1 ? `Сколько единиц содержит полученное число? В ответе укажите одно число – количество единиц.` :
+              `В ответе укажите двоичное число. Основание системы счисления указывать не нужно.`}
             <hr class="hr-pd_20">`
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-              ${item.taskAnswer[0]}<sub>10</sub> = ${item.taskAnswer[1]}<sub>2</sub>
+              <b>${taskAn[0]}</b><sub>10</sub> = <b>${AnsTenRed(taskAn[1])}</b><sub>2</sub>
               <hr class="hr-pd_10">
-              Ответ: ${item.taskAnswer[2]}`;
+              Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter(); 
           return answerBlock
         case 2:
           answerBlock =`
-            <p class="p-num"><b>10.</b> № ${item.taskCounter}</p>
-            <p>${item.task}</p>
+            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
+            ${taskAn[2] === 1 ? `Переведите число <b>${taskAn[0]}</b> из двоичной системы счисления в десятичную систему счисления. В ответе запишите полученное число.`: 
+              taskAn[2] === 2 ? `Некоторое число в двоичной системе счисления записывается как <b>${taskAn[0]}</b>. Запишите это число в десятичной системе.`: 
+              `Переведите двоичное число <b>${taskAn[0]}</b> в десятичную систему счисления.`
+            }
             <hr class="hr-pd_20">`
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-              ${item.taskAnswer[0]}<sub>2</sub> = ${item.taskAnswer[1]}<sub>10</sub>
+              <b>${taskAn[0]}</b><sub>2</sub> = <b>${taskAn[1]}</b><sub>10</sub>
               <hr class="hr-pd_10">
-              Ответ: ${item.taskAnswer[2]}`;
+              Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter(); 
           return answerBlock
         case 3:
           let summaAns = 0;
-          const num1 = parseInt(item.taskAnswer[0], 2);  // Двоичное число
-          const num2 = parseInt(item.taskAnswer[1], 8);  // Восьмеричное число
-          const num3 = parseInt(item.taskAnswer[2], 16); // Шестнадцатеричное число
+          const num1 = parseInt(taskAn[0], 2);  // Двоичное число
+          const num2 = parseInt(taskAn[1], 8);  // Восьмеричное число
+          const num3 = parseInt(taskAn[2], 16); // Шестнадцатеричное число
   
-          const operator1 = item.taskAnswer[3]; // Первый оператор
-          const operator2 = item.taskAnswer[4]; // Второй оператор
+          const operator1 = taskAn[3]; // Первый оператор
+          const operator2 = taskAn[4]; // Второй оператор
   
           summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
           answerBlock =`
-            <p class="p-num"><b>10.</b> № ${item.taskCounter}</p>
-            <p>${item.task}</p>
+            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
+            <p>Вычислите значение арифметического выражения:</p>
             <hr class="hr-pd_10">
-            <span class="span-centr">${item.taskAnswer[0]}<sub>2</sub> ${item.taskAnswer[3]} ${item.taskAnswer[1]}<sub>8</sub> ${item.taskAnswer[4]} ${item.taskAnswer[2]}<sub>16</sub></span>
+            <span class="span-centr">${taskAn[0]}<sub>2</sub> ${taskAn[3]} ${taskAn[1]}<sub>8</sub> ${taskAn[4]} ${taskAn[2]}<sub>16</sub></span>
             <hr class="hr-pd_10">
-            <p>${item.task2}</p>
+            <p>В ответе запишите десятичное число, основание системы счисления указывать не нужно.</p>
             <hr class="hr-pd_20">`
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-              ${item.taskAnswer[0]}<sub>2</sub> = ${parseInt(item.taskAnswer[0], 2)}<sub>10</sub>
+              ${taskAn[0]}<sub>2</sub> = ${parseInt(taskAn[0], 2)}<sub>10</sub>
               <hr class="hr-pd_10">
-              ${item.taskAnswer[1]}<sub>8</sub> = ${parseInt(item.taskAnswer[1], 8)}<sub>10</sub>
+              ${taskAn[1]}<sub>8</sub> = ${parseInt(taskAn[1], 8)}<sub>10</sub>
               <hr class="hr-pd_10">
-              ${item.taskAnswer[2]}<sub>16</sub> = ${parseInt(item.taskAnswer[2], 16)}<sub>10</sub>
+              ${taskAn[2]}<sub>16</sub> = ${parseInt(taskAn[2], 16)}<sub>10</sub>
               <hr class="hr-pd_20">
               ${num1} ${operator1} ${num2} ${operator2} ${num3} = ${summaAns}
               <hr class="hr-pd_20">
-              Ответ: ${summaAns}`;
+              Ответ: ${taskAnswer}`;
           answerBlock += generateFooter(); 
           return answerBlock
       } 

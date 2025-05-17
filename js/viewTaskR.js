@@ -31,8 +31,9 @@ const tasks = {
 export {tasks};
 
 export default function generateTaskHTML(taskKey, item) {
-   const { taskHard, date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask, taskCounter} = item;
+    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask, taskCounter, taskHard} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
+    const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}`
     const generateHeader = () => `<details><summary class="p-num reshenie">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between">`;
     const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` :  
@@ -40,22 +41,6 @@ export default function generateTaskHTML(taskKey, item) {
         <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
         <hr class="hr-pd_10">
         `}`;
-      // `${taskNum === ""
-      //   ? 
-      //        `<hr class="hr-pd_10">
-      //         <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
-      //         <hr class="hr-pd_10">`
-      //   : 
-      //   date === ""
-      //   ? 
-      //   `<hr class="hr-pd_10">
-      //         <p class="p-num" style="text-align: right;">Номер: ${taskNum} </p>
-      //         <hr class="hr-pd_10">`
-      //    :
-      //         `<hr class="hr-pd_10">
-      //         <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
-      //         <p class="p-num" style="text-align: right;">Добавлено: ${date} </p>
-      //         <hr class="hr-pd_10">`}`} `;
     const generateInput = () =>
       ` <section class="answer-block">
               <p></p>
@@ -76,7 +61,9 @@ export default function generateTaskHTML(taskKey, item) {
               <input id="input_answer" class="input_answer" placeholder="Введите ответ"/>
             </section>`;
     let answerBlock = "";
-  
+   
+// answerBlock += generateInput();
+
     if (taskKey === 'one'){
       switch(item.typeTask){
          case 1:         
@@ -85,8 +72,7 @@ export default function generateTaskHTML(taskKey, item) {
               <p>${item.task1}</p><hr class="hr-pd_20">
               <p><em>${item.task2}</em></p><hr class="hr-pd_20">
               <p>${item.task3}</p>
-              <p>${item.task4}</p>
-              <hr class="hr-pd_20">`
+              <p>${item.task4}</p><hr class="hr-pd_20">`
             answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
@@ -104,8 +90,8 @@ export default function generateTaskHTML(taskKey, item) {
                 <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-2} букв – ${item.taskAnswer[0]}.</p>
                 <hr class="hr-pd_20">
                 Ответ: <b>${item.taskAnswer[0]}</b>`;
-              answerBlock += generateFooter(); 
-              answerBlock += generateInput();
+              answerBlock += generateFooter();
+              answerBlock += generateInput(); 
               return answerBlock
          case 2:
             answerBlock += `
@@ -138,69 +124,7 @@ export default function generateTaskHTML(taskKey, item) {
               answerBlock += generateInput();
               return answerBlock
           }
-    }
-    if (taskKey === 'ten'){  
-      switch(item.typeTask){     
-        case 1:
-          answerBlock =`
-            <p class="p-num"><b>10.</b> № ${item.taskCounter}</p>
-            <p>${item.task}</p>
-            <hr class="hr-pd_20">`
-          answerBlock += generateHeader();
-          answerBlock += `
-              ${item.taskAnswer[0]}<sub>10</sub> = ${item.taskAnswer[1]}<sub>2</sub>
-              <hr class="hr-pd_10">
-              Ответ: ${item.taskAnswer[2]}`;
-          answerBlock += generateFooter();
-          answerBlock += generateInput(); 
-          return answerBlock
-        case 2:
-          answerBlock =`
-            <p class="p-num"><b>10.</b> № ${item.taskCounter}</p>
-            <p>${item.task}</p>
-            <hr class="hr-pd_20">`
-          answerBlock += generateHeader();
-          answerBlock += `
-              ${item.taskAnswer[0]}<sub>2</sub> = ${item.taskAnswer[1]}<sub>10</sub>
-              <hr class="hr-pd_10">
-              Ответ: ${item.taskAnswer[2]}`;
-          answerBlock += generateFooter();
-          answerBlock += generateInput(); 
-          return answerBlock
-        case 3:
-          let summaAns = 0;
-          const num1 = parseInt(item.taskAnswer[0], 2);  // Двоичное число
-          const num2 = parseInt(item.taskAnswer[1], 8);  // Восьмеричное число
-          const num3 = parseInt(item.taskAnswer[2], 16); // Шестнадцатеричное число
-  
-          const operator1 = item.taskAnswer[3]; // Первый оператор
-          const operator2 = item.taskAnswer[4]; // Второй оператор
-  
-          summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
-          answerBlock =`
-            <p class="p-num"><b>10.</b> № ${item.taskCounter}</p>
-            <p>${item.task}</p>
-            <hr class="hr-pd_10">
-            <span class="span-centr">${item.taskAnswer[0]}<sub>2</sub> ${item.taskAnswer[3]} ${item.taskAnswer[1]}<sub>8</sub> ${item.taskAnswer[4]} ${item.taskAnswer[2]}<sub>16</sub></span>
-            <hr class="hr-pd_10">
-            <p>${item.task2}</p>
-            <hr class="hr-pd_20">`
-          answerBlock += generateHeader();
-          answerBlock += `
-              ${item.taskAnswer[0]}<sub>2</sub> = ${parseInt(item.taskAnswer[0], 2)}<sub>10</sub>
-              <hr class="hr-pd_10">
-              ${item.taskAnswer[1]}<sub>8</sub> = ${parseInt(item.taskAnswer[1], 8)}<sub>10</sub>
-              <hr class="hr-pd_10">
-              ${item.taskAnswer[2]}<sub>16</sub> = ${parseInt(item.taskAnswer[2], 16)}<sub>10</sub>
-              <hr class="hr-pd_20">
-              ${num1} ${operator1} ${num2} ${operator2} ${num3} = ${summaAns}
-              <hr class="hr-pd_20">
-              Ответ: ${summaAns}`;
-          answerBlock += generateFooter(); 
-          answerBlock += generateInput();
-          return answerBlock
-      } 
-    }
+    }    
     if (taskKey === 'two'){
       switch(item.typeTask){
         case 1:
@@ -209,7 +133,7 @@ export default function generateTaskHTML(taskKey, item) {
             <p>${item.task1}</p>
             
              ${item.taskAnswer[2] === 1 ? `
-              <hr class="hr-pd_10">
+              <hr class="hr-pd_20">
               <span class="span-centr span-centr__font">${item.task2}</span>
             <hr class="hr-pd_10">
             <p>${item.task3}</p>
@@ -321,15 +245,16 @@ export default function generateTaskHTML(taskKey, item) {
              <p>${item.task4}</p>
              <hr class="hr-pd_20">
               `}`
-              answerBlock += generateDate();
+          answerBlock += generateDate();
           answerBlock += generateHeader();
+
           answerBlock += `
            <p>${item.taskAnswer[1]}</p>
            <hr class="hr-pd_20">
            <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
            <hr class="hr-pd_10">`;
-          answerBlock += generateFooter(); 
-          answerBlock += generateInput();
+          answerBlock += generateFooter();
+          answerBlock += generateInput(); 
           return answerBlock
         case 2:
           answerBlock =`
@@ -666,7 +591,7 @@ export default function generateTaskHTML(taskKey, item) {
       
     }
     if (taskKey === 'five'){
-            function examp(item){      
+      function examp(item){      
         let ex = '';
         for(let i in item){
           if (item[i] === '1'){
@@ -878,7 +803,7 @@ export default function generateTaskHTML(taskKey, item) {
               else{
                 res1 += `2. <b>прибавь ${vch}</b> к числу ${item_el} = ${item_el + vch}<br>`
                 item_el += vch
-              }        
+              }      
             }
             else{                      
               if (resCount === 5){
@@ -1051,6 +976,7 @@ export default function generateTaskHTML(taskKey, item) {
             }
           }
         }
+
         if (taskAn[5] === 'z'){
          let item_el = taskAn[0]
          let z = taskAn[4] 
@@ -1084,494 +1010,17 @@ export default function generateTaskHTML(taskKey, item) {
       
         return res1
       }
-      // function fiveAn(item){    
-      //   let resCount = 0
-      //   let res = ''
-      //   let res1 = ''
-      //   let steps = 0;
-      //   // delenie
-      //   if (taskAn[4] === "/"){
-      //      while(item !== taskAn[1]){
-      //       if(item / taskAn[2] === Math.floor(item / taskAn[2])){
-      //         item /=  taskAn[2];
-      //         res += '1'
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. раздели на ${taskAn[2]} = <span style="background-color: rgb(252, 210, 94);">${item}</span><br>`
-      //         }
-      //         else{
-      //           res1 += `1. раздели на ${taskAn[2]} = ${item}<br>`
-      //         }        
-      //       } 
-      //       else if(taskAn[5] === "+"){
-      //         item +=  taskAn[3];
-      //         res += '2'
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. прибавь ${taskAn[3]} = <span style="background-color:rgb(252, 210, 94);">${item}</span><br>`
-      //         }
-      //         else{
-      //           res1 += `2. прибавь ${taskAn[3]} = ${item}<br>`
-      //         }
-      //       }
-      //       else if(taskAn[5] === "-"){
-      //         item -=  taskAn[3];
-      //         res += '2'
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. вычти ${taskAn[3]} = <span style="background-color:rgb(252, 210, 94);">${item}</span><br>`
-      //         }
-      //         else{
-      //           res1 += `2. вычти ${taskAn[3]} = ${item}<br>`
-      //         }
-      //       }
-      //     }//while
-      //   } //  4 /
-      //   if (taskAn[5] === "/"){
-      //     while(item !== taskAn[1]){
-      //       if(Math.floor(item / taskAn[3]) >= taskAn[1] && item / taskAn[3] === Math.floor(item / taskAn[3])){
-      //         item /=  taskAn[3];
-      //         res += '2'
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. разделить на ${taskAn[3]} = <span style="background-color: rgb(252, 210, 94);">${item}</span><br>`
-      //         }
-      //         else{
-      //           res1 += `2. разделить на ${taskAn[3]} = ${item}<br>`
-      //         }        
-      //       } 
-      //       else if(taskAn[4] === "-"){
-      //         item -=  taskAn[2];
-      //         res += '1'
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. вычти ${taskAn[2]} = <span style="background-color:rgb(252, 210, 94);">${item}</span><br>`
-      //         }
-      //         else{
-      //           res1 += `1. вычти ${taskAn[2]} = ${item}<br>`
-      //         }
-      //       }
-      //       else {break;}
-      //     } // while
-      //   } // 5 /
-
-      //   // umnozhenie
-      //   if (taskAn[5] === "*"){
-      //     item = taskAn[1]
-      //     while(item !== taskAn[0]){
-      //       if(item % taskAn[3] === 0 ){
-      //         if ((res.length === 4 || res.length === 3) && item/taskAn[3] === taskAn[0]){
-      //           item /= taskAn[3];
-      //           res += '2';  
-      //         }
-      //         else if ((res.length === 4 || res.length === 3) && item/taskAn[3] !== taskAn[0]){
-      //           item += taskAn[2];
-      //           res += '1';
-      //         }
-      //         else{
-      //           item /= taskAn[3];
-      //           res += '2';  
-      //         }  
-      //       }
-      //       else if(taskAn[4] === "-"){
-      //         item += taskAn[2]
-      //         res += '1'
-      //       }
-      //       else {break;}
-      //     }
-      //     res = res.split('').reverse().join('');
-      //     let item2 = taskAn[0]
-      //     let uch = taskAn[3]
-      //     let vch = taskAn[2]
-      //     for (let i in res){
-      //       let x = res[i]
-      //       if (x === '2' && taskAn[5] === '*'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b>умножить на ${uch}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*uch}</span><br>`
-      //           item2 *= uch;
-      //         }
-      //         else{
-      //           res1 += `2. <b>умножить на ${uch}</b> число ${item2} = ${item2*uch}<br>`
-      //           item2 *=uch;
-      //         }        
-      //       }
-      //       else if(taskAn[4] === "-" && x === '1'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
-      //           item2 = item2 - vch
-      //         }
-      //         else{
-      //           res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
-      //           item2 = item2 - vch
-      //         }        
-      //       }
-      //     }
-      //   }
-      //   if (taskAn[4] === "*"){
-      //     item = taskAn[1]
-      //     let uch = taskAn[2]
-      //     let vch = taskAn[3]
-      //     while(item !== taskAn[0]){
-      //       if(item % taskAn[2] === 0 ){
-      //         if ((res.length === 4 || res.length === 3) && item/taskAn[2] === taskAn[0]){
-      //           item /= taskAn[2];
-      //           res += '1';  
-      //         }
-      //         else if ((res.length === 4 || res.length === 3) && item/taskAn[2] !== taskAn[0] && taskAn[5] === "-"){
-      //           item += taskAn[3];
-      //           res += '2';
-      //         }
-      //         else{
-      //           item /= taskAn[2];
-      //           res += '1';  
-      //         }  
-      //       }
-      //       else if(taskAn[5] === "-"){
-      //         item += taskAn[3]
-      //         res += '2'
-      //       }
-      //       else if(taskAn[5] === "+"){
-      //         item -= taskAn[3]
-      //         res += '2'
-      //       }
-      //       else {break;}
-      //     }
-      //     res = res.split('').reverse().join('');
-      //     let item2 = taskAn[0]
-      //     for (let i in res){
-      //       let x = res[i]
-      //       if (x === '1' && taskAn[4] === '*'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>умножить на ${uch}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*uch}</span><br>`
-      //           item2 *= uch;
-      //         }
-      //         else{
-      //           res1 += `1. <b>умножить на ${uch}</b> число ${item2} = ${item2*uch}<br>`
-      //           item2 *=uch;
-      //         }        
-      //       }
-      //       else if(taskAn[5] === "-" && x === '2'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
-      //           item2 = item2 - vch
-      //         }
-      //         else{
-      //           res1 += `2. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
-      //           item2 = item2 - vch
-      //         }        
-      //       }
-      //       else if(taskAn[5] === "+" && x === '2'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b>прибавь ${vch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 + vch}</span><br>`
-      //           item2 = item2 + vch
-      //         }
-      //         else{
-      //           res1 += `2. <b>прибавь ${vch}</b> к числу ${item2} = ${item2 + vch}<br>`
-      //           item2 = item2 + vch
-      //         }        
-      //       }
-      //     }
-      //   }
-
-      //   // vozvedenie
-      //   if (taskAn[4] === "**"){
-      //     item = taskAn[1]
-      //     while(item !== taskAn[0]){
-      //       if(Math.sqrt(item) === Math.floor(Math.sqrt(item))){
-      //         item = Math.sqrt(item);
-      //         res += '1'
-      //       }
-      //       else if(taskAn[5] === "-"){
-      //         if (res.length === 4 && (item + taskAn[3] !== taskAn[0])){
-      //           item = Math.abs(item - taskAn[3])
-      //           res += '2'
-      //         }
-      //         else{
-      //           item += taskAn[3]
-      //           res += '2'
-      //         }
-             
-      //       }
-      //       else {break;}
-      //     }
-        
-      //     res = res.split('').reverse().join('');
-          
-      //     let item2 = taskAn[0]
-      //     for (let i in res){
-      //       let x = res[i]
-      //       if (x === '1' && taskAn[4] === '**'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>возведи в квадрат</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*item2}</span><br>`
-      //           item2 = item2 *item2;
-      //         }
-      //         else{
-      //           res1 += `1. <b>возведи в квадрат</b> число ${item2} = ${item2*item2}<br>`
-      //           item2 = item2*item2;
-      //         }        
-      //       }
-      //       else if(taskAn[5] === "-" && x === '2'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b>вычти ${taskAn[3]}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - taskAn[3]}</span><br>`
-      //           item2 = item2 - taskAn[3]
-      //         }
-      //         else{
-      //           res1 += `2. <b>вычти ${taskAn[3]}</b> из числа ${item2} = ${item2 - taskAn[3]}<br>`
-      //           item2 = item2 - taskAn[3]
-      //         }        
-      //       }
-      //     }
-      //   }
-      //   if (taskAn[5] === "**"){
-      //     item = taskAn[1]
-         
-      //     while(item !== taskAn[0] && steps < 5){
-      //       steps++
-      //       if(Math.sqrt(item) === Math.floor(Math.sqrt(item))){
-      //         if (res.length === 4){
-      //           item += taskAn[2]
-      //           res += '1'
-      //         }
-      //         else{
-      //           item = Math.sqrt(item);
-      //           res += '2'
-      //         }     
-      //       }
-      //       else if(taskAn[4] === "-" ){ 
-      //         if (res.length === 4 && (item + taskAn[2] !== taskAn[0])){
-      //           item = Math.abs(item - taskAn[2])
-      //           res += '1'
-      //         }
-      //         else  {
-      //           item += taskAn[2]
-      //           res += '1'
-      //         }
-      //       }
-      //       else if(taskAn[4] === "+"){
-      //         if (res.length === 4 && (item - taskAn[2] !== taskAn[0])){
-      //           item = Math.abs(item + taskAn[2])
-      //           res += '1'
-      //         }
-      //         else{
-      //           item -= taskAn[2]
-      //           res += '1'
-      //         }
-             
-      //       } 
-      //       else {break;} 
-      //     }
-        
-      //     res = res.split('').reverse().join('');
-          
-      //     let item2 = taskAn[0]
-      //     let vch = taskAn[2]
-      //     for (let i in res){
-      //       let x = res[i]
-      //       if (x === '2' && taskAn[5] === '**'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b>возведи в квадрат</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*item2}</span><br>`
-      //           item2 = item2 *item2;
-      //         }
-      //         else{
-      //           res1 += `2. <b>возведи в квадрат</b> число ${item2} = ${item2*item2}<br>`
-      //           item2 = item2*item2;
-      //         }        
-      //       }
-      //       else if(taskAn[4] === "-" && x === '1'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
-      //           item2 = item2 - vch
-      //         }
-      //         else{
-      //           res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
-      //           item2 = item2 - vch
-      //         }        
-      //       }
-      //       else if(taskAn[4] === "+" && x === '1'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>прибавь ${vch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 + vch}</span><br>`
-      //           item2 = item2 + vch
-      //         }
-      //         else{
-      //           res1 += `1. <b>прибавь ${vch}</b> к числу ${item2} = ${item2 + vch}<br>`
-      //           item2 = item2 + vch
-      //         }        
-      //       }
-      //     }
-      //   }
-
-      //   // pripisat
-      //   if (taskAn[4] === 'p'){
-      //     item = taskAn[1]
-      //     while(item !== taskAn[0] && steps < 5){
-      //       steps++
-      //       let st = taskAn[2];
-      //       st = st.toString();
-      //       if(item.toString().at(-1) === st){
-      //         item =  (item-taskAn[2])/10;
-      //         res += '1'  
-      //       }
-      //       else if(taskAn[5] === "/"){
-      //         item *= taskAn[3]
-      //         res += '2'
-      //       }
-      //       else {break;}
-      //     }
-      //     res = res.split('').reverse().join('');
-      //     //console.log(res)
-      //     let item2 = taskAn[0]
-      //     for (let i in res){
-      //       let x = res[i]
-      //       if (x === '1' && taskAn[4] === 'p'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>приписать ${taskAn[2]}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${(item2*10)+taskAn[2]}</span><br>`
-      //           item2 = (item2*10)+taskAn[2];
-      //         }
-      //         else{
-      //           res1 += `1. <b>приписать ${taskAn[2]}</b> к числу ${item2} = ${((item2*10)+taskAn[2])}<br>`
-      //           item2 = (item2*10)+taskAn[2];
-      //         }        
-      //       }
-      //       else if(taskAn[5] === "/" && x === '2'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b>разделить на ${taskAn[3]}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 / taskAn[3]}</span><br>`
-      //           item2 = item2 / taskAn[3]
-      //         }
-      //         else{
-      //           res1 += `2. <b>разделить на ${taskAn[3]}</b> число ${item2} = ${item2 / taskAn[3]}<br>`
-      //           item2 = item2 / taskAn[3]
-      //         }        
-      //       }
-      //     }
-      //   }
-      //   if (taskAn[5] === 'p'){
-      //     item = taskAn[1]
-      //     while(item !== taskAn[0]){
-      //       if(item.toString().at(-1) === taskAn[3].toString()){
-      //         item =  (item-taskAn[3])/10;
-      //         res += '2'  
-      //       }
-      //       else if(taskAn[4] === "/"){
-      //         item *= taskAn[2]
-      //         res += '1'
-      //       }
-      //       else if(taskAn[4] === "-"){
-      //         item += taskAn[2]
-      //         res += '1'
-      //       }
-      //       else {break;}
-      //     }
-      //     res = res.split('').reverse().join('');
-      //     //console.log(res)
-      //     let item2 = taskAn[0]
-      //     for (let i in res){
-      //       let x = res[i]
-      //       let pch = taskAn[3]
-      //       let vch = taskAn[2]
-      //       if (x === '2' && taskAn[5] === 'p'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b>приписать ${pch}</b> к числу ${item2} = <span style="background-color: rgb(252, 210, 94);">${(item2*10)+pch}</span><br>`
-      //           item2 = (item2*10)+pch;
-      //         }
-      //         else{
-      //           res1 += `2. <b>приписать ${pch}</b> к числу ${item2} = ${((item2*10)+pch)}<br>`
-      //           item2 = (item2*10)+pch;
-      //         }        
-      //       }
-      //       else if(taskAn[4] === "/" && x === '1'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>разделить на ${vch}</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 / vch}</span><br>`
-      //           item2 = item2 / vch
-      //         }
-      //         else{
-      //           res1 += `1. <b>разделить на ${vch}</b> число ${item2} = ${item2 / vch}<br>`
-      //           item2 = item2 / vch
-      //         }        
-      //       }
-      //       else if(taskAn[4] === "-" && x === '1'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2 - vch}</span><br>`
-      //           item2 = item2 - vch
-      //         }
-      //         else{
-      //           res1 += `1. <b>вычти ${vch}</b> из числа ${item2} = ${item2 - vch}<br>`
-      //           item2 = item2 - vch
-      //         }        
-      //       }
-      //     }
-      //   }
-
-      //   // zacherkni
-      //   if (taskAn[5] === 'z'){
-      //     item = taskAn[0]
-      //     while(item !== taskAn[1]){
-      //       if(item.toString().length === 2){
-              
-      //         item = Math.floor(item/10)
-      //         res += '2'
-      //       }
-      //       else if(taskAn[4] == '**'){
-      //         item = item*item
-      //         res += "1"
-      //       }
-      //       else {break;}
-      //     }
-      //     //console.log(res)
-
-      //     let item2 = taskAn[0]
-      //     for (let i in res){
-      //       let x = res[i]
-      //       if (x === '1' && taskAn[4] === '**'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `1. <b>возведи в квадрат</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${item2*item2}</span><br>`
-      //           item2 = item2 *item2;
-      //         }
-      //         else{
-      //           res1 += `1. <b>возведи в квадрат</b> число ${item2} = ${item2*item2}<br>`
-      //           item2 = item2*item2;
-      //         }        
-      //       }
-      //       else if(taskAn[5] === "z" && x === '2'){
-      //         resCount += 1
-      //         if (resCount === 5){
-      //           res1 += `2. <b> зачеркни справа</b> число ${item2} = <span style="background-color: rgb(252, 210, 94);">${Math.floor(item2/10)}</span><br>`
-      //           item2 = Math.floor(item2/10)
-      //         }
-      //         else{
-      //           res1 += `2. <b>зачеркни справа</b> число ${item2} = ${Math.floor(item2/10)}<br>`
-      //           item2 = Math.floor(item2/10)
-      //         }        
-      //       }
-      //     }
-      //   }
-      //   return res1
-      // }
+      
       switch(item.typeTask){
         case 1:
           answerBlock =`
-          <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
-          <p>${item.task1}</p>
+          <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          <p>${task1}</p>
           <hr class="hr-pd_10">
           <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
           <hr class="hr-pd_10">
-          <p>${item.task3}</p>
-          <p>Составьте алгоритм получения <b style="font-weight: 500;">${item.task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+          <p>${task3}</p>
+          <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
           <hr class="hr-pd_10">
           <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
           <hr class="hr-pd_10">
@@ -1590,7 +1039,7 @@ export default function generateTaskHTML(taskKey, item) {
           return answerBlock
         case 2:
             answerBlock =`
-            <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+            <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
             <p>${item.task1}</p>
             <hr class="hr-pd_10">
             <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
@@ -1615,7 +1064,7 @@ export default function generateTaskHTML(taskKey, item) {
             return answerBlock
         case 3:
               answerBlock =`
-              <p class="p-num"><b>5.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+              <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
               <p>${item.task1}</p>
               <hr class="hr-pd_10">
               <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
@@ -1802,15 +1251,15 @@ int main(){
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-                      <hr class="hr-pd_10">
-                      ${item.task1[2]} :// ${item.task1[1]} / ${item.task1[0]}
-                      <hr class="hr-pd_10">
-                      Ответ: <b>${item.taskAnswer}</b>`;
+            <hr class="hr-pd_10">
+            ${item.task1[2]} :// ${item.task1[1]} / ${item.task1[0]}
+            <hr class="hr-pd_10">
+            Ответ: <b>${item.taskAnswer}</b>`;
           answerBlock += generateFooter(); 
           answerBlock += generateInput();
-                    return answerBlock
+          return answerBlock
       }
-    }  
+    } 
     if (taskKey === 'eight'){
       let k = item.task1[3].split(' ')
       let r = ''
@@ -1984,7 +1433,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       N<sub>A&B</sub> + N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> 
                       <hr class="hr-pd_10">
                       ${item.task2[3] === 1 ? `
@@ -2037,9 +1486,9 @@ int main(){
                       ` : ``}
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInput();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput();
+          return answerBlock
         case 2:
           answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
@@ -2086,7 +1535,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <p>N<sub>A|B|C</sub> - N<sub>A&amp;B&amp;C</sub>&nbsp;= 
                       N<sub>A</sub>&nbsp;+ N<sub>B</sub>&nbsp;+ N<span><sub>C</sub></span>&nbsp;
                       – N<sub>A&amp;B</sub>&nbsp;– N<sub>A&amp;C</sub>&nbsp;– N<sub>B&amp;C</sub>&nbsp;</p>
@@ -2096,9 +1545,9 @@ int main(){
                       ${EightAn(typeTask, task2[6])}
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInput();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput();
+          return answerBlock
         case 3:
           answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
           <p>Некоторый сегмент сети Интернет состоит из 1000 сайтов. Поисковый сервер в автоматическом режиме составил таблицу ключевых слов для сайтов этого сегмента. Вот её фрагмент.</p>
@@ -2148,7 +1597,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_20">
                       ${ task2[3] === 4 
                         ? 
@@ -2176,9 +1625,9 @@ int main(){
                         ${EightAn(typeTask, taskCounter)}
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInput();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput();
+          return answerBlock
         }
     } 
     if (taskKey === 'nine'){
@@ -2193,14 +1642,14 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInput();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput();
+          return answerBlock
         case 2:
           answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
@@ -2211,14 +1660,14 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInput();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput();
+          return answerBlock
         case 3:
           answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
@@ -2229,16 +1678,119 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInput();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput();
+          return answerBlock
       }
-    }  
+    } 
+    if (taskKey === 'ten'){ 
+      function AnsTenRed(item_an){
+        let res = ''
+        let x_el = taskAn[2]
+        item_an = item_an.toString()
+        if(x_el === 0){
+          for(let i in item_an){
+            let x = item_an[i]
+            if( x === '0'){
+              res += `<span style="color: red;">${x}</span>`
+            }
+            else{
+               res += '1'
+            }
+          }
+        }
+        else if(x_el === 1){
+          for(let i in item_an){
+            let x = item_an[i]
+            if( x === '1'){
+              res += `<span style="color: red;">${x}</span>`
+            }
+            else{
+               res += '0'
+            }
+          }
+        }
+        else{
+          res = item_an
+        }
+        return res
+        
+      }  
+      switch(typeTask){     
+        case 1:
+          answerBlock =`
+            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
+            Переведите число <b>${taskAn[0]}</b> из десятичной системы счисления в двоичную систему счисления.
+            ${taskAn[2] === 0 ? `Сколько нулей содержит полученное число? В ответе укажите одно число – количество нулей.` :
+              taskAn[2] === 1 ? `Сколько единиц содержит полученное число? В ответе укажите одно число – количество единиц.` :
+              `В ответе укажите двоичное число. Основание системы счисления указывать не нужно.`}
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+              <b>${taskAn[0]}</b><sub>10</sub> = <b>${AnsTenRed(taskAn[1])}</b><sub>2</sub>
+              <hr class="hr-pd_10">
+              Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput(); 
+          return answerBlock
+        case 2:
+          answerBlock =`
+            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
+            ${taskAn[2] === 1 ? `Переведите число <b>${taskAn[0]}</b> из двоичной системы счисления в десятичную систему счисления. В ответе запишите полученное число.`: 
+              taskAn[2] === 2 ? `Некоторое число в двоичной системе счисления записывается как <b>${taskAn[0]}</b>. Запишите это число в десятичной системе.`: 
+              `Переведите двоичное число <b>${taskAn[0]}</b> в десятичную систему счисления.`
+            }
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+              <b>${taskAn[0]}</b><sub>2</sub> = <b>${taskAn[1]}</b><sub>10</sub>
+              <hr class="hr-pd_10">
+              Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          answerBlock += generateInput(); 
+          return answerBlock
+        case 3:
+          let summaAns = 0;
+          const num1 = parseInt(taskAn[0], 2);  // Двоичное число
+          const num2 = parseInt(taskAn[1], 8);  // Восьмеричное число
+          const num3 = parseInt(taskAn[2], 16); // Шестнадцатеричное число
+  
+          const operator1 = taskAn[3]; // Первый оператор
+          const operator2 = taskAn[4]; // Второй оператор
+  
+          summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
+          answerBlock =`
+            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
+            <p>Вычислите значение арифметического выражения:</p>
+            <hr class="hr-pd_10">
+            <span class="span-centr">${taskAn[0]}<sub>2</sub> ${taskAn[3]} ${taskAn[1]}<sub>8</sub> ${taskAn[4]} ${taskAn[2]}<sub>16</sub></span>
+            <hr class="hr-pd_10">
+            <p>В ответе запишите десятичное число, основание системы счисления указывать не нужно.</p>
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+              ${taskAn[0]}<sub>2</sub> = ${parseInt(taskAn[0], 2)}<sub>10</sub>
+              <hr class="hr-pd_10">
+              ${taskAn[1]}<sub>8</sub> = ${parseInt(taskAn[1], 8)}<sub>10</sub>
+              <hr class="hr-pd_10">
+              ${taskAn[2]}<sub>16</sub> = ${parseInt(taskAn[2], 16)}<sub>10</sub>
+              <hr class="hr-pd_20">
+              ${num1} ${operator1} ${num2} ${operator2} ${num3} = ${summaAns}
+              <hr class="hr-pd_20">
+              Ответ: ${taskAnswer}`;
+          answerBlock += generateFooter(); 
+          answerBlock += generateInput();
+          return answerBlock
+      } 
+    }
     if (taskKey === 'eleven'){
       switch(item.typeTask){
         case 1:
@@ -2246,43 +1798,43 @@ int main(){
           <p>${task1}</p>
           <p>${task2}</p>      
           <hr class="hr-pd_10">
-
+          
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <p>${task3}</p>
                       <hr class="hr-pd_10">
                       <p>${task4}</p>   
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInputD();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInputD();
+          return answerBlock
          }
-    }
+    }   
     if (taskKey === 'twelve'){
       switch(item.typeTask){
         case 1:
           answerBlock += `<p class="p-num"><b>12.</b> № ${taskCounter} ${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Легкий)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
           <p>${task1}</p>
-          <p>${task2}</p>      
+          <p>В ответе укажите только число.</p>      
           <hr class="hr-pd_10">
           
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <p>${task3}</p>
                       <hr class="hr-pd_10">
                       <p>${task4}</p>   
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    answerBlock += generateInputD12();
-                    return answerBlock
+          answerBlock += generateFooter(); 
+          answerBlock += generateInputD12();
+          return answerBlock
          }
     }
 }

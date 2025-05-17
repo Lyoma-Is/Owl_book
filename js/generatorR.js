@@ -149,7 +149,7 @@ async function displayTasks() {
         seven: randomTasks.seven.taskAnswer,
         eight: randomTasks.eight.taskAnswer,
         nine: randomTasks.nine.taskAnswer,
-        ten: randomTasks.ten.taskAnswer[0],
+        ten: randomTasks.ten.taskAnswer,
         eleven: randomTasks.eleven.taskAnswer,
         twelve: randomTasks.twelve.taskAnswer
     };
