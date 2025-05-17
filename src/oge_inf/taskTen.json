@@ -1,5 +1,680 @@
 [
     {
+        "taskCounter": 737,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [69, 1000101, 0],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 736,
+        "typeTask": 1,
+        "taskAnswer": 3,
+
+        "taskAn": [69, 1000101, 1],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 735,
+        "typeTask": 1,
+        "taskAnswer": 1000101,
+
+        "taskAn": [69, 1000101, 2],
+
+        "taskNum": "cD31F2"
+    },
+    {
+        "taskCounter": 734,
+        "typeTask": 1,
+        "taskAnswer": 11001100,
+
+        "taskAn": [204, 11001100, 2],
+
+        "taskNum": "06EB4F"
+    },
+    {
+        "taskCounter": 733,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [135, 10000111, 1],
+
+        "taskNum": "4500F4"
+    },
+    {
+        "taskCounter": 732,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [141, 10001101, 1],
+
+        "taskNum": "B744F2"
+    },
+    {
+        "taskCounter": 731,
+        "typeTask": 1,
+        "taskAnswer": 3,
+
+        "taskAn": [100, 1100100, 1],
+
+        "taskNum": "5F2AF2"
+    },
+    {
+        "taskCounter": 730,
+        "typeTask": 1,
+        "taskAnswer": 11001001,
+
+        "taskAn": [201, 11001001, 2],
+
+        "taskNum": "5C9C09"
+    },
+    {
+        "taskCounter": 729,
+        "typeTask": 1,
+        "taskAnswer": 5,
+
+        "taskAn": [211, 11010011, 1],
+
+        "taskNum": "e75506"
+    },
+    {
+        "taskCounter": 728,
+        "typeTask": 1,
+        "taskAnswer": 1011010,
+
+        "taskAn": [90, 1011010, 2],
+
+        "taskNum": "251973"
+    },
+    {
+        "taskCounter": 727,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [105, 1101001, 1],
+
+        "taskNum": "5EB370"
+    },
+     {
+        "taskCounter": 726,
+        "typeTask": 1,
+        "taskAnswer": 5,
+
+        "taskAn": [121, 1111001, 1],
+
+        "taskNum": "67EE78"
+    },
+    {
+        "taskCounter": 725,
+        "typeTask": 1,
+        "taskAnswer": 6,
+
+        "taskAn": [140, 1101111, 1],
+
+        "taskNum": "2437B2"
+    },
+    {
+        "taskCounter": 724,
+        "typeTask": 1,
+        "taskAnswer": 6,
+
+        "taskAn": [126, 1111110, 1],
+
+        "taskNum": "E10EB1"
+    },
+    {
+        "taskCounter": 723,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [156, 10011100, 1],
+
+        "taskNum": "c105B9"
+    },
+    {
+        "taskCounter": 722,
+        "typeTask": 1,
+        "taskAnswer": 1010111,
+
+        "taskAn": [87, 1010111, 2],
+
+        "taskNum": "23502E"
+    },
+    {
+        "taskCounter": 721,
+        "typeTask": 1,
+        "taskAnswer": 5,
+
+        "taskAn": [110, 1101110, 1],
+
+        "taskNum": "048B07"
+    },
+    {
+        "taskCounter": 720,
+        "typeTask": 1,
+        "taskAnswer": 1100010,
+
+        "taskAn": [98, 1100010, 2],
+
+        "taskNum": "5cF0DA"
+    },
+    {
+        "taskCounter": 719,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [101, 1100101, 1],
+
+        "taskNum": "908FDF"
+    },
+    {
+        "taskCounter": 718,
+        "typeTask": 1,
+        "taskAnswer": 5,
+
+        "taskAn": [151 , 10010111, 1],
+
+        "taskNum": "923ED8"
+    },
+    {
+        "taskCounter": 717,
+        "typeTask": 1,
+        "taskAnswer": 3,
+
+        "taskAn": [100, 1100100, 1],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 716,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [100, 1100100, 0],
+
+        "taskNum": "FFCB5C"
+    },
+    {
+        "taskCounter": 715,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [149, 10010101, 0],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 714,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [149, 10010101, 1],
+
+        "taskNum": "503557"
+    },
+    {
+        "taskCounter": 713,
+        "typeTask": 1,
+        "taskAnswer": 2,
+
+        "taskAn": [516, 1000000100, 1],
+
+        "taskNum": "525653"
+    },
+    {
+        "taskCounter": 712,
+        "typeTask": 1,
+        "taskAnswer": 5,
+
+        "taskAn": [143, 10001111, 1],
+
+        "taskNum": "C7EEAB"
+    },
+    {
+        "taskCounter": 711,
+        "typeTask": 1,
+        "taskAnswer": 1111110,
+
+        "taskAn": [126, 1111110, 2],
+
+        "taskNum": "E586A4"
+    },
+    {
+        "taskCounter": 710,
+        "typeTask": 1,
+        "taskAnswer": 6,
+
+        "taskAn": [125, 1111101, 1],
+
+        "taskNum": "4B3DCA"
+    },
+    {
+        "taskCounter": 709,
+        "typeTask": 1,
+        "taskAnswer": 2,
+
+        "taskAn": [144, 10010000, 1],
+
+        "taskNum": "0298CE"
+    },
+    {
+        "taskCounter": 708,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [147, 10010011, 1],
+
+        "taskNum": "499097"
+    },
+    {
+        "taskCounter": 707,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [147, 10010011, 0],
+
+        "taskNum": "c7F3F1"
+    },
+    {
+        "taskCounter": 706,
+        "typeTask": 1,
+        "taskAnswer": 4,
+
+        "taskAn": [142, 10001110, 1],
+
+        "taskNum": "045093"
+    },
+    {
+        "taskCounter": 705,
+        "typeTask": 1,
+        "taskAnswer": 3,
+
+        "taskAn": [140, 10001100, 1],
+
+        "taskNum": "1D039F"
+    },
+    {
+        "taskCounter": 704,
+        "typeTask": 1,
+        "taskAnswer": 6,
+
+        "taskAn": [119, 1110111, 1],
+
+        "taskNum": "6F7A94"
+    },
+    {
+        "taskCounter": 703,
+        "typeTask": 1,
+        "taskAnswer": 2,
+
+        "taskAn": [136, 10001000, 1],
+
+        "taskNum": "73DEEB"
+    },
+    {
+        "taskCounter": 702,
+        "typeTask": 1,
+        "taskAnswer": 5,
+
+        "taskAn": [167, 10100111, 1],
+
+        "taskNum": "B261ED"
+    },
+    {
+        "taskCounter": 701,
+        "typeTask": 1,
+        "taskAnswer": 5,
+
+        "taskAn": [157, 10011101, 1],
+
+        "taskNum": "49766D"
+    },
+    {
+        "taskCounter": 700,
+        "typeTask": 1,
+        "taskAnswer": 3,
+
+        "taskAn": [134, 10000110, 1],
+
+        "taskNum": "25D13F"
+    },
+    {
+        "taskCounter": 699,
+        "typeTask": 1,
+        "taskAnswer": 11000111,
+
+        "taskAn": [199, 11000111, 2],
+
+        "taskNum": "A9BF8F"
+    },
+    {
+        "taskCounter": 698,
+        "typeTask": 1,
+        "taskAnswer": 1,
+
+        "taskAn": [126, 1111110, 0],
+
+        "taskNum": "5e48c0"
+    },
+    {
+        "taskCounter": 697,
+        "typeTask": 1,
+        "taskAnswer": 3,
+
+        "taskAn": [259, 100000011, 1],
+
+        "taskNum": "eB51c5"
+    },
+    {
+        "taskCounter": 696,
+        "typeTask": 2,
+        "taskAnswer": 54,
+
+        "taskAn": [110110, 54, 1],
+
+        "taskNum": "053448"
+    },
+    {
+        "taskCounter": 695,
+        "typeTask": 2,
+        "taskAnswer": 57,
+
+        "taskAn": [111001, 57, 1],
+
+        "taskNum": "21251B"
+    },
+    {
+        "taskCounter": 694,
+        "typeTask": 2,
+        "taskAnswer": 311,
+
+        "taskAn": [100110111, 311, 1],
+
+        "taskNum": "cFB81c"
+    },
+    {
+        "taskCounter": 693,
+        "typeTask": 2,
+        "taskAnswer": 169,
+
+        "taskAn": [10101001, 169, 1],
+
+        "taskNum": "3AA91D"
+    },
+    {
+        "taskCounter": 692,
+        "typeTask": 2,
+        "taskAnswer": 46,
+
+        "taskAn": [101110, 46, 1],
+
+        "taskNum": "58A021"
+    },
+    {
+        "taskCounter": 691,
+        "typeTask": 2,
+        "taskAnswer": 107,
+
+        "taskAn": [1101011, 107, 1],
+
+        "taskNum": "ce12e8"
+    },
+    {
+        "taskCounter": 690,
+        "typeTask": 2,
+        "taskAnswer": 93,
+
+        "taskAn": [1011101, 93, 1],
+
+        "taskNum": "4F2683"
+    },
+    {
+        "taskCounter": 689,
+        "typeTask": 2,
+        "taskAnswer": 47,
+
+        "taskAn": [101111, 47, 2],
+
+        "taskNum": "E09C4C"
+    },
+    {
+        "taskCounter": 688,
+        "typeTask": 2,
+        "taskAnswer": 75,
+
+        "taskAn": [1001011, 75, 2],
+
+        "taskNum": "834C4F"
+    },
+    {
+        "taskCounter": 687,
+        "typeTask": 2,
+        "taskAnswer": 210,
+
+        "taskAn": [11010010, 210, 2],
+
+        "taskNum": "863C4B"
+    },
+    {
+        "taskCounter": 686,
+        "typeTask": 2,
+        "taskAnswer": 218,
+
+        "taskAn": [11011010, 218, 2],
+
+        "taskNum": "00FF77"
+    },
+    {
+        "taskCounter": 685,
+        "typeTask": 2,
+        "taskAnswer": 109,
+
+        "taskAn": [1101101 , 109, 0],
+
+        "taskNum": "470B00"
+    },
+    {
+        "taskCounter": 684,
+        "typeTask": 2,
+        "taskAnswer": 45,
+
+        "taskAn": [101101, 45, 2],
+
+        "taskNum": "3033FC"
+    },
+    {
+        "taskCounter": 683,
+        "typeTask": 2,
+        "taskAnswer": 101,
+
+        "taskAn": [1100101, 101, 2],
+
+        "taskNum": "ABA97D"
+    },
+    {
+        "taskCounter": 682,
+        "typeTask": 2,
+        "taskAnswer": 49,
+
+        "taskAn": [110001, 49, 2],
+
+        "taskNum": "4BC111"
+    },
+    {
+        "taskCounter": 681,
+        "typeTask": 2,
+        "taskAnswer": 43,
+
+        "taskAn": [101011, 43, 2],
+
+        "taskNum": "88ED1A"
+    },
+    {
+        "taskCounter": 680,
+        "typeTask": 2,
+        "taskAnswer": 123,
+
+        "taskAn": [1111011, 123, 2],
+
+        "taskNum": "676E23"
+    },
+    {
+        "taskCounter": 679,
+        "typeTask": 2,
+        "taskAnswer": 120,
+
+        "taskAn": [1111000, 120, 2],
+
+        "taskNum": "D48355"
+    },
+    {
+        "taskCounter": 678,
+        "typeTask": 2,
+        "taskAnswer": 206,
+
+        "taskAn": [11001110, 206, 2],
+
+        "taskNum": "640FC2"
+    },
+    {
+        "taskCounter": 677,
+        "typeTask": 2,
+        "taskAnswer": 53,
+
+        "taskAn": [110101, 53, 2],
+
+        "taskNum": "D36BAD"
+    },
+    {
+        "taskCounter": 676,
+        "typeTask": 2,
+        "taskAnswer": 51,
+
+        "taskAn": [110011, 51, 2],
+
+        "taskNum": "965693"
+    },
+    {
+        "taskCounter": 675,
+        "typeTask": 2,
+        "taskAnswer": 102,
+
+        "taskAn": [1100110, 102, 2],
+
+        "taskNum": "ED1691"
+    },
+    {
+        "taskCounter": 674,
+        "typeTask": 2,
+        "taskAnswer": 47,
+
+        "taskAn": [101111, 47, 2],
+
+        "taskNum": "E857E6"
+    },
+    {
+        "taskCounter": 673,
+        "typeTask": 2,
+        "taskAnswer": 102,
+
+        "taskAn": [1100110, 102, 0],
+
+        "taskNum": "A1530C"
+    },
+    {
+        "taskCounter": 672,
+        "typeTask": 2,
+        "taskAnswer": 93,
+
+        "taskAn": [1011101, 93, 2],
+
+        "taskNum": "6ED8E8"
+    },
+    {
+        "taskCounter": 671,
+        "typeTask": 2,
+        "taskAnswer": 202,
+
+        "taskAn": [11001010, 202, 2],
+
+        "taskNum": "091E63"
+    },
+    {
+        "taskCounter": 670,
+        "typeTask": 2,
+        "taskAnswer": 38,
+
+        "taskAn": [100110, 38, 2],
+
+        "taskNum": "B4F03C"
+    },
+    {
+        "taskCounter": 669,
+        "typeTask": 2,
+        "taskAnswer": 85,
+
+        "taskAn": [1010101, 85, 0],
+
+        "taskNum": "C41DEE"
+    },
+    {
+        "taskCounter": 668,
+        "typeTask": 2,
+        "taskAnswer": 85,
+
+        "taskAn": [1010101, 85, 2],
+
+        "taskNum": "C91546"
+    },
+    {
+        "taskCounter": 667,
+        "typeTask": 2,
+        "taskAnswer": 86,
+
+        "taskAn": [1010110, 86, 0],
+
+        "taskNum": "EA2EFB"
+    },
+    {
+        "taskCounter": 666,
+        "typeTask": 2,
+        "taskAnswer": 113,
+
+        "taskAn": [1110001, 113, 0],
+
+        "taskNum": "6898EC"
+    },
+    {
+        "taskCounter": 665,
+        "typeTask": 2,
+        "taskAnswer": 83,
+
+        "taskAn": [1010011, 83, 0],
+
+        "taskNum": "7C077C"
+    },
+    {
+        "taskCounter": 664,
+        "typeTask": 2,
+        "taskAnswer": 105,
+
+        "taskAn": [1101001, 105, 0],
+
+        "taskNum": "FAA0B0"
+    },
+    {
+        "taskCounter": 663,
+        "typeTask": 2,
+        "taskAnswer": 166,
+
+        "taskAn": [10100110, 166, 0],
+
+        "taskNum": "BA1eB0"
+    },
+    {
         "taskCounter": 45,
         "typeTask": 3,
         "taskAnswer": 245,
