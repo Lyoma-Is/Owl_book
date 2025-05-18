@@ -402,11 +402,12 @@ export default function generateTaskHTML(taskKey, item) {
       switch(item.typeTask){
         case 1:
           answerBlock =`
-          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>${item.task1}</p>
            <hr class="hr-pd_20">
             <span class="span-centr">${item.task2}</span>
           <hr class="hr-pd_20">`
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
               <p>Избавимся от НЕ, применяя закон де Моргана:</p>
@@ -432,11 +433,12 @@ export default function generateTaskHTML(taskKey, item) {
           return answerBlock
         case 2:
           answerBlock =`
-          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>${item.task1}</p>
            <hr class="hr-pd_20">
             <span class="span-centr">${item.task2}</span>
           <hr class="hr-pd_20">`
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
               <p>Переделаем ложное высказывание в истинное, применяя закон де Моргана:</p>
