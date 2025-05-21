@@ -412,7 +412,7 @@ export default function generateTaskHTML(taskKey, item) {
             <table class="table_2_3">
                 <tbody >
                   <tr >
-                    <td>А 1</td> <td>Й 11</td> <td>У 21</td> <td>Э 21</td>
+                    <td>А 1</td> <td>Й 11</td> <td>У 21</td> <td>Э 31</td>
                   </tr>
                   <tr>
                     <td>Б 2</td> <td>К 12</td> <td>Ф 22</td> <td>Ю 32</td> 
