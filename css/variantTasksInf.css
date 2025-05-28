@@ -92,6 +92,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  padding-top: 0;
 }
 .answer-block .download a {
   display: flex;

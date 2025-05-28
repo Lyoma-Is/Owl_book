@@ -71,7 +71,9 @@ $back-top-color: rgb(233, 199, 105);
 
     display: flex;
     justify-content: space-between;
+
     padding: 20px;
+    padding-top: 0;
 
     .download a {
       display: flex;
@@ -91,9 +93,10 @@ $back-top-color: rgb(233, 199, 105);
     font-size: 25px;
     padding: 25px 0;
   }
-  .details-raz_otv, .reshenie{
+.details-raz_otv, .reshenie{
     display: none;
   }
+
 
 .slider, .task-generator {
   .slider-item {

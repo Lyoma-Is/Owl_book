@@ -1,5 +1,5 @@
-import generateTaskHTML from "./viewTaskR.js";
-import { tasks } from "./viewTaskR.js";
+import generateTaskHTML from "./viewTask.js";
+import { tasks } from "./viewTask.js";
 
 // ------------------ Глобальные переменные ------------------
 let variants = [];
@@ -82,20 +82,25 @@ function createSlider(tasksHTML, correctAnswers) {
         },
         getCurrentSlide: () => currentSlide
     };
+    
 }
 
 // ------------------ Проверка ответов ------------------
 function setupCheckButton(slider, correctAnswers) {
     const button = document.querySelector('#button-finish');
+
     if (!button) return;
     
+    document.querySelectorAll('.resh').forEach(el => {el.classList.add('reshenie');});
+
     button.addEventListener('click', () => {
         const inputs = document.querySelectorAll('.slide:not(.results-slide) #input_answer');
         const userAnswers = [];
         const correctList = [];
         let score = 0;
-        
+
         inputs.forEach((input) => {
+
             const taskId = input.closest('.slide')?.getAttribute('data-task-id');
             const correct = Array.isArray(correctAnswers[taskId])
                 ? correctAnswers[taskId][0]?.toString().toUpperCase()
@@ -112,9 +117,10 @@ function setupCheckButton(slider, correctAnswers) {
             input.classList.add(isCorrect ? 'input_answer-green' : 'input_answer-red');
             if (isCorrect) score++;
             let reshOtv = document.querySelector('.reshenie');
-                if (reshOtv){  
-                    reshOtv.classList.remove('reshenie');
-                }
+            if (reshOtv){  
+                reshOtv.classList.remove('reshenie');
+            }
+
         });
 
         const resultHTML = `
@@ -182,7 +188,7 @@ function displayTasksByVariantWithSlider(tasksToDisplay) {
         correctAnswers[task.source] = task.taskAnswer;
     });
 
-    const tasksHTML = tasksToDisplay.map(task => generateTaskHTML(task.source, task));
+    const tasksHTML = tasksToDisplay.map(task => generateTaskHTML(task.source, task, false));
     const slider = createSlider(tasksHTML, correctAnswers);
     setupCheckButton(slider, correctAnswers);
 }

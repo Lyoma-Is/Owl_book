@@ -1,5 +1,5 @@
-import generateTaskHTML from "./viewTaskR.js";
-import {tasks} from "./viewTaskR.js";
+import generateTaskHTML from "./viewTask.js";
+import {tasks} from "./viewTask.js";
 
 // Функция для загрузки JSON
 async function fetchJSON(url) {
@@ -157,18 +157,18 @@ async function displayTasks() {
 
     // Генерируем HTML для всех задач
     const tasksHTML = [
-        generateTaskHTML('one', randomTasks.one),
-        generateTaskHTML('two', randomTasks.two),
-        generateTaskHTML('three', randomTasks.three),
-        generateTaskHTML('four', randomTasks.four),
-        generateTaskHTML('five', randomTasks.five),
-        generateTaskHTML('six', randomTasks.six),
-        generateTaskHTML('seven', randomTasks.seven),
-        generateTaskHTML('eight', randomTasks.eight),
-        generateTaskHTML('nine', randomTasks.nine),
-        generateTaskHTML('ten', randomTasks.ten),
-        generateTaskHTML('eleven', randomTasks.eleven),
-        generateTaskHTML('twelve', randomTasks.twelve)
+        generateTaskHTML('one', randomTasks.one, false),
+        generateTaskHTML('two', randomTasks.two, false),
+        generateTaskHTML('three', randomTasks.three, false),
+        generateTaskHTML('four', randomTasks.four, false),
+        generateTaskHTML('five', randomTasks.five, false),
+        generateTaskHTML('six', randomTasks.six, false),
+        generateTaskHTML('seven', randomTasks.seven, false),
+        generateTaskHTML('eight', randomTasks.eight, false),
+        generateTaskHTML('nine', randomTasks.nine, false),
+        generateTaskHTML('ten', randomTasks.ten, false),
+        generateTaskHTML('eleven', randomTasks.eleven, false),
+        generateTaskHTML('twelve', randomTasks.twelve, false)
     ].filter(html => html);
 
     // Очищаем контейнер перед созданием нового слайдера
@@ -179,7 +179,7 @@ async function displayTasks() {
     if (!slider) return;
 
     let button = document.querySelector('#button-finish');
-
+    document.querySelectorAll('.resh').forEach(el => {el.classList.add('reshenie');});
     if (button) {
         button.addEventListener('click', function() {
             // Собираем все ответы со всех слайдов
@@ -188,9 +188,6 @@ async function displayTasks() {
             let arrayAnswer = [];
             let countResult = 0;
             
-            inputs.forEach(() => {
-                
-            })
             // Проверяем каждый ответ
             inputs.forEach((input, index) => {
                 
@@ -220,6 +217,7 @@ async function displayTasks() {
     
                 arrayInput.push(userInput || '—');
                 arrayAnswer.push(correctAnswer);
+
                 let reshOtv = document.querySelector('.reshenie');
                 if (reshOtv){  
                     reshOtv.classList.remove('reshenie');
@@ -242,8 +240,6 @@ async function displayTasks() {
             // Показываем блок с разбором
             let razOtv = document.querySelector('.details-raz_otv'); 
             if (razOtv) {razOtv.classList.remove('details-raz_otv'); }
-    
-
         });
     }
 }

@@ -1,222 +1,127 @@
-// const tasks = {
-//   one: '../../../src/oge_inf/taskOne.json',
-//   two: '../../../src/oge_inf/taskTwo.json',
-//   three: '../../../src/oge_inf/taskThree.json',
-//   four:  '../../../src/oge_inf/taskFour.json',
-//   five: '../../../src/oge_inf/taskFive.json',
-//   six: '../../../src/oge_inf/taskSix.json',
-//   seven: '../../../src/oge_inf/taskSeven.json',
-//   eight: '../../../src/oge_inf/taskEight.json',
-//   nine: '../../../src/oge_inf/taskNine.json',
-//   ten: '../../../src/oge_inf/taskTen.json',
-//   eleven: '../../../src/oge_inf/taskEleven.json',
-//   twelve: '../../../src/oge_inf/taskTwelve.json' 
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+  one: '../../../src/oge_inf/taskOne.json',
+  two: '../../../src/oge_inf/taskTwo.json',
+  three: '../../../src/oge_inf/taskThree.json',
+  four:  '../../../src/oge_inf/taskFour.json',
+  five: '../../../src/oge_inf/taskFive.json',
+  six: '../../../src/oge_inf/taskSix.json',
+  seven: '../../../src/oge_inf/taskSeven.json',
+  eight: '../../../src/oge_inf/taskEight.json',
+  nine: '../../../src/oge_inf/taskNine.json',
+  ten: '../../../src/oge_inf/taskTen.json',
+  eleven: '../../../src/oge_inf/taskEleven.json',
+  twelve: '../../../src/oge_inf/taskTwelve.json' 
 };
+
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+// };
 
 export {tasks};
 
-export default function generateTaskHTML(taskKey, item) {
-   const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAnswer, typeTask, taskCounter, taskHard} = item;
+export default function generateTaskHTML(taskKey, item, tumbler = true) {
+    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskTable, taskAnswer, typeTask, taskCounter, taskHard} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
-    const generateHeader = () => `<details><summary class="p-num">Решение</summary><hr class="hr-pd_10">`;
+    const generateHeader = () => `<details><summary class="p-num resh">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
-    const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` :  
-        ` <hr class="hr-pd_10">
-        <p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>
-        <hr class="hr-pd_10">
-        `}`;
+    const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` : ` <hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p> <hr class="hr-pd_10">`}`;
+    
+    const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
+    const generateInputD = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
+    const generateInputD12 = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
 
     let answerBlock = "";
-  
+
     if (taskKey === 'one'){
-      switch(item.typeTask){
+      switch(typeTask){
          case 1:         
-            answerBlock += `
-              <p class="p-num"><b>1.</b> № ${item.taskCounter}</p>
-              <p>${item.task1}</p><hr class="hr-pd_20">
-              <p><em>${item.task2}</em></p><hr class="hr-pd_20">
-              <p>${item.task3}</p>
-              <p>${item.task4}</p><hr class="hr-pd_20">`
+            answerBlock += `<p class="p-num"><b>1.</b> № ${taskCounter} ${generateHard()}</p>
+              <p>${task1}</p><hr class="hr-pd_20">
+              <p><em>${task2}</em></p><hr class="hr-pd_20">
+              <p>${task3}</p>
+              <p>${task4}</p><hr class="hr-pd_20">`
             answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
-                <p>1) Один символ кодируется ${item.taskAnswer[1]} бит = ${item.taskAnswer[1]/8 < 2 ?  `${item.taskAnswer[1]/8} байт ` : `${item.taskAnswer[1]/8} байта`}</p> 
+                <p>1) Один символ кодируется ${taskAnswer[1]} бит = ${taskAnswer[1]/8 < 2 ?  `${taskAnswer[1]/8} байт ` : `${taskAnswer[1]/8} байта`}</p> 
                 <hr class="hr-pd_10">
-                <p>2) ${item.taskAnswer[3] == "м" ? 
-                `Вычеркнутое (Удалённое) слово занимает ${item.taskAnswer[2]} байта</p> 
-                <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов` : 
-                `Добавленное слово занимает ${item.taskAnswer[2]} байта</p>
-                <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов`} 
+                <p>2) ${taskAnswer[3] == "м" ? 
+                `Вычеркнутое (Удалённое) слово занимает ${taskAnswer[2]} байта</p> 
+                <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов` : 
+                `Добавленное слово занимает ${taskAnswer[2]} байта</p>
+                <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов`} 
                 </p> 
                 <hr class="hr-pd_10">
-                <p>4) C учетом пробела и запятой: ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))} – 2 = ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-2} символа</p>
+                <p>4) C учетом пробела и запятой: ${(taskAnswer[2]/(taskAnswer[1]/8))} – 2 = ${(taskAnswer[2]/(taskAnswer[1]/8))-2} символа</p>
                 <hr class="hr-pd_20">
-                <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-2} букв – ${item.taskAnswer[0]}.</p>
+                <p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-2} букв – ${taskAnswer[0]}.</p>
                 <hr class="hr-pd_20">
-                Ответ: <b>${item.taskAnswer[0]}</b>`;
-              answerBlock += generateFooter(); 
-              return answerBlock
+                Ответ: <b>${taskAnswer[0]}</b>`;
+            answerBlock += generateFooter(); 
+            if(tumbler === false){
+              answerBlock += generateInput();
+            }
+            return answerBlock
          case 2:
             answerBlock += `
-                <p class="p-num"><b>1.</b> № ${item.taskCounter}</p>
-                <p>${item.task1}</p>
+                <p class="p-num"><b>1.</b> № ${taskCounter} ${generateHard()}</p>
+                <p>${task1}</p>
                 <hr class="hr-pd_20">
-                <p>${item.task2}</p>
+                <p>${task2}</p>
                 <hr class="hr-pd_20">
-                <p>${item.task3}</p>
-                <p>${item.task4}</p>
+                <p>${task3}</p>
+                <p>${task4}</p>
                 <hr class="hr-pd_20">`
             answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
-                  <p>1) Один символ кодируется ${item.taskAnswer[1]} бит = ${item.taskAnswer[1]/8 < 2 ?  `${item.taskAnswer[1]/8} байт ` : `${item.taskAnswer[1]/8} байта`}</p> 
+                  <p>1) Один символ кодируется ${taskAnswer[1]} бит = ${taskAnswer[1]/8 < 2 ?  `${taskAnswer[1]/8} байт ` : `${taskAnswer[1]/8} байта`}</p> 
                   <hr class="hr-pd_10">
-                  <p>2) ${item.taskAnswer[3] == "м" ? 
-                  `Вычеркнутое слово занимает ${item.taskAnswer[2]} байта</p> 
-                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов` : 
-                  `Добавленное слово занимает ${item.taskAnswer[2]} байта</p>
-                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${item.taskAnswer[2]}/${item.taskAnswer[1]/8} = ${item.taskAnswer[2]/(item.taskAnswer[1]/8)} символов`} 
+                  <p>2) ${taskAnswer[3] == "м" ? 
+                  `Вычеркнутое слово занимает ${taskAnswer[2]} байта</p> 
+                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов` : 
+                  `Добавленное слово занимает ${taskAnswer[2]} байта</p>
+                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов`} 
                   </p> 
                   <hr class="hr-pd_10">
-                  <p>4) C учетом пробела: ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))} – 1 = ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} символа</p>
+                  <p>4) C учетом пробела: ${(taskAnswer[2]/(taskAnswer[1]/8))} – 1 = ${(taskAnswer[2]/(taskAnswer[1]/8))-1} символа</p>
                   <hr class="hr-pd_20">
-                  <p>Слово из ${(item.taskAnswer[2]/(item.taskAnswer[1]/8))-1} букв – ${item.taskAnswer[0]}.</p>
+                  <p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-1} букв – ${taskAnswer[0]}.</p>
                   <hr class="hr-pd_20">
-                  Ответ: <b>${item.taskAnswer[0]}</b>`; 
-              answerBlock += generateFooter(); 
-              return answerBlock
+                  Ответ: <b>${taskAnswer[0]}</b>`; 
+            answerBlock += generateFooter(); 
+            if(tumbler === false){
+              answerBlock += generateInput();
+            }
+            return answerBlock
           }
-    }
-    if (taskKey === 'ten'){ 
-      function AnsTenRed(item_an){
-        let res = ''
-        let x_el = taskAn[2]
-        item_an = item_an.toString()
-        if(x_el === 0){
-          for(let i in item_an){
-            let x = item_an[i]
-            if( x === '0'){
-              res += `<span style="color: red;">${x}</span>`
-            }
-            else{
-               res += '1'
-            }
-          }
-        }
-        else if(x_el === 1){
-          for(let i in item_an){
-            let x = item_an[i]
-            if( x === '1'){
-              res += `<span style="color: red;">${x}</span>`
-            }
-            else{
-               res += '0'
-            }
-          }
-        }
-        else{
-          res = item_an
-        }
-        return res
-        
-      } 
-      switch(typeTask){     
-        case 1:
-          answerBlock =`
-            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
-            Переведите число <b>${taskAn[0]}</b> из десятичной системы счисления в двоичную систему счисления.
-            ${taskAn[2] === 0 ? `Сколько нулей содержит полученное число? В ответе укажите одно число – количество нулей.` :
-              taskAn[2] === 1 ? `Сколько единиц содержит полученное число? В ответе укажите одно число – количество единиц.` :
-              `В ответе укажите двоичное число. Основание системы счисления указывать не нужно.`}
-            <hr class="hr-pd_20">`
-          answerBlock += generateDate();
-          answerBlock += generateHeader();
-          answerBlock += `
-              <b>${taskAn[0]}</b><sub>10</sub> = <b>${AnsTenRed(taskAn[1])}</b><sub>2</sub>
-              <hr class="hr-pd_10">
-              Ответ: <b>${taskAnswer}</b>`;
-          answerBlock += generateFooter(); 
-          return answerBlock
-        case 2:
-          answerBlock =`
-            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
-            ${taskAn[2] === 1 ? `Переведите число <b>${taskAn[0]}</b> из двоичной системы счисления в десятичную систему счисления. В ответе запишите полученное число.`: 
-              taskAn[2] === 2 ? `Некоторое число в двоичной системе счисления записывается как <b>${taskAn[0]}</b>. Запишите это число в десятичной системе.`: 
-              `Переведите двоичное число <b>${taskAn[0]}</b> в десятичную систему счисления.`
-            }
-            <hr class="hr-pd_20">`
-          answerBlock += generateDate();
-          answerBlock += generateHeader();
-          answerBlock += `
-              <b>${taskAn[0]}</b><sub>2</sub> = <b>${taskAn[1]}</b><sub>10</sub>
-              <hr class="hr-pd_10">
-              Ответ: <b>${taskAnswer}</b>`;
-          answerBlock += generateFooter(); 
-          return answerBlock
-        case 3:
-          let summaAns = 0;
-          const num1 = parseInt(taskAn[0], 2);  // Двоичное число
-          const num2 = parseInt(taskAn[1], 8);  // Восьмеричное число
-          const num3 = parseInt(taskAn[2], 16); // Шестнадцатеричное число
-  
-          const operator1 = taskAn[3]; // Первый оператор
-          const operator2 = taskAn[4]; // Второй оператор
-  
-          summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
-          answerBlock =`
-            <p class="p-num"><b>10.</b> № ${taskCounter}</p>
-            <p>Вычислите значение арифметического выражения:</p>
-            <hr class="hr-pd_10">
-            <span class="span-centr">${taskAn[0]}<sub>2</sub> ${taskAn[3]} ${taskAn[1]}<sub>8</sub> ${taskAn[4]} ${taskAn[2]}<sub>16</sub></span>
-            <hr class="hr-pd_10">
-            <p>В ответе запишите десятичное число, основание системы счисления указывать не нужно.</p>
-            <hr class="hr-pd_20">`
-          answerBlock += generateDate();
-          answerBlock += generateHeader();
-          answerBlock += `
-              ${taskAn[0]}<sub>2</sub> = ${parseInt(taskAn[0], 2)}<sub>10</sub>
-              <hr class="hr-pd_10">
-              ${taskAn[1]}<sub>8</sub> = ${parseInt(taskAn[1], 8)}<sub>10</sub>
-              <hr class="hr-pd_10">
-              ${taskAn[2]}<sub>16</sub> = ${parseInt(taskAn[2], 16)}<sub>10</sub>
-              <hr class="hr-pd_20">
-              ${num1} ${operator1} ${num2} ${operator2} ${num3} = ${summaAns}
-              <hr class="hr-pd_20">
-              Ответ: ${taskAnswer}`;
-          answerBlock += generateFooter(); 
-          return answerBlock
-      } 
     }
     if (taskKey === 'two'){
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
           answerBlock =`
-            <p class="p-num"><b>2.</b> № ${item.taskCounter}</p>
-            <p>${item.task1}</p>
+            <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()}</p>
+            <p>${task1}</p>
             
-             ${item.taskAnswer[2] === 1 ? `
+             ${taskAnswer[2] === 1 ? `
               <hr class="hr-pd_10">
               <span class="span-centr span-centr__font">${item.task2}</span>
             <hr class="hr-pd_10">
-            <p>${item.task3}</p>
+            <p>${task3}</p>
             <hr class="hr-pd_20">
-            ${item.taskTable.length === 10 ? `
+            ${taskTable.length === 10 ? `
               <table class="table_2_1">
                 <tbody>
                   <tr>
@@ -323,18 +228,21 @@ export default function generateTaskHTML(taskKey, item) {
              <p>${item.task4}</p>
              <hr class="hr-pd_20">
               `}`
-              answerBlock += generateDate();
+          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
            <p>${item.taskAnswer[1]}</p>
            <hr class="hr-pd_20">
            <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
            <hr class="hr-pd_10">`;
-          answerBlock += generateFooter(); 
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
           return answerBlock
         case 2:
           answerBlock =`
-          <p class="p-num"><b>2.</b> № ${item.taskCounter}</p>
+          <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()}</p>
           <p>${item.task1}</p>
            <hr class="hr-pd_20">
             ${item.taskTable.length === 10 ? `
@@ -395,19 +303,22 @@ export default function generateTaskHTML(taskKey, item) {
             <hr class="hr-pd_10">
              <p>${item.task4}</p>
              <hr class="hr-pd_20">`
-             answerBlock += generateDate();
-            answerBlock += generateHeader();
-            answerBlock += `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
             <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>
             <hr class="hr-pd_20">
             <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
             <hr class="hr-pd_10">`;
-            answerBlock += generateFooter(); 
-            return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
         case 3:
           answerBlock =`
-          <p class="p-num"><b>2.</b> № ${item.taskCounter}</p>
-          <p>${item.task1}</p>
+          <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()}</p>
+          <p>${task1}</p>
             <hr class="hr-pd_20">
             <table class="table_2_3">
                 <tbody >
@@ -454,9 +365,9 @@ export default function generateTaskHTML(taskKey, item) {
             <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[3]}</p><hr class="hr-pd_10">
              <p>${item.task4}</p>
              <hr class="hr-pd_20">`
-            answerBlock += generateDate();
-            answerBlock += generateHeader();
-            answerBlock += `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
             <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>
             ${item.task5 === "" ? `<hr class="hr-pd_20">` : 
               `
@@ -467,16 +378,18 @@ export default function generateTaskHTML(taskKey, item) {
             }        
             <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
             <hr class="hr-pd_10">`;
-            answerBlock += generateFooter(); 
-            return answerBlock
-
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
       }
     }
     if (taskKey === 'three'){
       switch(item.typeTask){
         case 1:
           answerBlock =`
-          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          <p class="p-num"><b>3.</b> № ${taskCounter} ${generateHard()}</p> 
           <p>${item.task1}</p>
            <hr class="hr-pd_20">
             <span class="span-centr">${item.task2}</span>
@@ -502,7 +415,10 @@ export default function generateTaskHTML(taskKey, item) {
               <hr class="hr-pd_10">
               `}
               Ответ: <b>${item.taskAnswer}</b>`;
-          answerBlock += generateFooter(); 
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
           return answerBlock
         case 2:
           answerBlock =`
@@ -532,7 +448,10 @@ export default function generateTaskHTML(taskKey, item) {
               <hr class="hr-pd_10">
               `}
               Ответ: <b>${item.taskAnswer}</b>`;
-          answerBlock += generateFooter(); 
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
           return answerBlock
       }
     }
@@ -540,7 +459,7 @@ export default function generateTaskHTML(taskKey, item) {
       switch (item.typeTask) {
         case 1:
           answerBlock =`
-          <p class="p-num"><b>4.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p class="p-num"><b>4.</b> № ${taskCounter} ${generateHard()}</p> 
           <p>${item.task1}</p>
           
           <hr class="hr-pd_20">
@@ -596,11 +515,14 @@ export default function generateTaskHTML(taskKey, item) {
               Кратчайший путь: ${item.taskAnswer[1]} = ${item.taskAnswer[0]} км
               <hr class="hr-pd_20">
               Ответ: <b>${item.taskAnswer[0]}</b>`;
-          answerBlock += generateFooter(); 
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
           return answerBlock
         case 2:
-            answerBlock =`
-            <p class="p-num"><b>4.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock =`
+            <p class="p-num"><b>4.</b> № ${taskCounter} ${generateHard()}</p> 
             <p>${item.task1}</p>
             
             <hr class="hr-pd_20">
@@ -647,20 +569,21 @@ export default function generateTaskHTML(taskKey, item) {
             <hr class="hr-pd_20">
             <p>${item.task2}</p>
             <hr class="hr-pd_20">`
-            answerBlock += generateDate();
-            answerBlock += generateHeader();
-            answerBlock += `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
                 <hr class="hr-pd_10">
                 <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
                 <hr class="hr-pd_20">
                 Кратчайший путь: ${item.taskAnswer[1]} = ${item.taskAnswer[0]} км
                 <hr class="hr-pd_20">
                 Ответ: <b>${item.taskAnswer[0]}</b>`;
-            answerBlock += generateFooter(); 
-            return answerBlock                              
-        }
-      
-      
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock                              
+        }    
     }
     if (taskKey === 'five'){
       function examp(item){      
@@ -674,7 +597,6 @@ export default function generateTaskHTML(taskKey, item) {
           }
         } return ex;
       }
-
       function fiveGetAn(item_an){  
          let resCount = 0;
          let res1 = ''
@@ -1081,8 +1003,7 @@ export default function generateTaskHTML(taskKey, item) {
         }
       
         return res1
-      }
-      
+      }    
       switch(item.typeTask){
         case 1:
           answerBlock =`
@@ -1106,10 +1027,13 @@ export default function generateTaskHTML(taskKey, item) {
               ${fiveGetAn(taskAnswer)}
               <hr class="hr-pd_20">
               Ответ: <b>${item.taskAnswer}</b>`;
-          answerBlock += generateFooter(); 
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
           return answerBlock
         case 2:
-            answerBlock =`
+          answerBlock =`
             <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
             <p>${item.task1}</p>
             <hr class="hr-pd_10">
@@ -1123,17 +1047,20 @@ export default function generateTaskHTML(taskKey, item) {
             Если таких алгоритмов более одного, то запишите любой из них.
             <hr class="hr-pd_10">
             `
-            answerBlock += generateDate();
-            answerBlock += generateHeader();
-            answerBlock += `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
                 <span style="background-color: rgb(252, 210, 94);">${taskAn[0]}</span><br>
                 ${fiveGetAn(taskAnswer)}
                 <hr class="hr-pd_20">
                 Ответ: <b>${item.taskAnswer}</b>`;
-            answerBlock += generateFooter(); 
-            return answerBlock
+          answerBlock += generateFooter(); 
+          if(tumbler === false){
+            answerBlock += generateInput();
+          }
+          return answerBlock
         case 3:
-              answerBlock =`
+          answerBlock =`
               <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
               <p>${item.task1}</p>
               <hr class="hr-pd_10">
@@ -1147,22 +1074,25 @@ export default function generateTaskHTML(taskKey, item) {
               Если таких алгоритмов более одного, то запишите любой из них.
               <hr class="hr-pd_10">
               `
-              answerBlock += generateDate();
-              answerBlock += generateHeader();
-              answerBlock += `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
                   <span style="background-color: rgb(252, 210, 94);">${taskAn[0]}</span><br>
                   ${fiveGetAn(taskAnswer)}
                   <hr class="hr-pd_20">
                   Ответ: <b>${item.taskAnswer}</b>`;
-              answerBlock += generateFooter(); 
-              return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
       } 
     }
     if (taskKey === 'six'){
       switch(item.typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${generateHard()}</p> 
           Ниже приведена программа, записанная на трёх языках программирования.
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1227,11 +1157,14 @@ return 0; } </pre>
           answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${item.taskAnswer}</b>`;
-          answerBlock += generateFooter(); 
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${generateHard()}</p> 
           Ниже приведена программа, записанная на трёх языках программирования.
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1299,15 +1232,17 @@ int main(){
           answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${item.taskAnswer}</b>`;
-          answerBlock += generateFooter(); 
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
           return answerBlock
-          }
-        
+        }   
     } 
     if (taskKey === 'seven'){
       switch(item.typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>7.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>7.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>Доступ к файлу <b style="font-weight: 500;">${item.task1[0]}</b>, находящемуся на сервере <b style="font-weight: 500;">${item.task1[1]}</b>, осуществляется по протоколу <b style="font-weight: 500;">${item.task1[2]}</b>.
            Фрагменты адреса файла закодированы цифрами от 1 до 7. 
            Запишите последовательность этих цифр, кодирующую адрес указанного файла в сети Интернет.</p>
@@ -1317,13 +1252,16 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       ${item.task1[2]} :// ${item.task1[1]} / ${item.task1[0]}
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
       }
     }  
     if (taskKey === 'eight'){
@@ -1466,7 +1404,7 @@ int main(){
       switch(item.typeTask){ 
         
         case 1: 
-          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
          <hr class="hr-pd_10">
           В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
@@ -1499,7 +1437,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       N<sub>A&B</sub> + N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> 
                       <hr class="hr-pd_10">
                       ${item.task2[3] === 1 ? `
@@ -1552,10 +1490,13 @@ int main(){
                       ` : ``}
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
         case 2:
-          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
          <hr class="hr-pd_10">
           В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
@@ -1600,7 +1541,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <p>N<sub>A|B|C</sub> - N<sub>A&amp;B&amp;C</sub>&nbsp;= 
                       N<sub>A</sub>&nbsp;+ N<sub>B</sub>&nbsp;+ N<span><sub>C</sub></span>&nbsp;
                       – N<sub>A&amp;B</sub>&nbsp;– N<sub>A&amp;C</sub>&nbsp;– N<sub>B&amp;C</sub>&nbsp;</p>
@@ -1610,10 +1551,13 @@ int main(){
                       ${EightAn(typeTask, task2[6])}
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
         case 3:
-          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>Некоторый сегмент сети Интернет состоит из 1000 сайтов. Поисковый сервер в автоматическом режиме составил таблицу ключевых слов для сайтов этого сегмента. Вот её фрагмент.</p>
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1661,7 +1605,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_20">
                       ${ task2[3] === 4 
                         ? 
@@ -1689,14 +1633,17 @@ int main(){
                         ${EightAn(typeTask, taskCounter)}
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
-        }
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+      }
     } 
     if (taskKey === 'nine'){
       switch(item.typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
@@ -1705,15 +1652,18 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
         case 2:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
@@ -1722,15 +1672,18 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
         case 3:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${item.taskHard === 0 ? "" : item.taskHard === 1 ? "<em>(Легкий)</em>": item.taskHard === 2 ? "<em>(Средний)</em>": item.taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${generateHard()}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
           <hr class="hr-pd_20">
@@ -1739,19 +1692,131 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
                       Ответ: <b>${item.taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+        answerBlock += generateFooter();
+        if(tumbler === false){
+          answerBlock += generateInput();
+        } 
+        return answerBlock
       }
+    }    
+    if (taskKey === 'ten'){ 
+      function AnsTenRed(item_an){
+        let res = ''
+        let x_el = taskAn[2]
+        item_an = item_an.toString()
+        if(x_el === 0){
+          for(let i in item_an){
+            let x = item_an[i]
+            if( x === '0'){
+              res += `<span style="color: red;">${x}</span>`
+            }
+            else{
+               res += '1'
+            }
+          }
+        }
+        else if(x_el === 1){
+          for(let i in item_an){
+            let x = item_an[i]
+            if( x === '1'){
+              res += `<span style="color: red;">${x}</span>`
+            }
+            else{
+               res += '0'
+            }
+          }
+        }
+        else{
+          res = item_an
+        }
+        return res
+        
+      } 
+      switch(typeTask){     
+        case 1:
+          answerBlock =`
+            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateHard()}</p>
+            Переведите число <b>${taskAn[0]}</b> из десятичной системы счисления в двоичную систему счисления.
+            ${taskAn[2] === 0 ? `Сколько нулей содержит полученное число? В ответе укажите одно число – количество нулей.` :
+              taskAn[2] === 1 ? `Сколько единиц содержит полученное число? В ответе укажите одно число – количество единиц.` :
+              `В ответе укажите двоичное число. Основание системы счисления указывать не нужно.`}
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+              <b>${taskAn[0]}</b><sub>10</sub> = <b>${AnsTenRed(taskAn[1])}</b><sub>2</sub>
+              <hr class="hr-pd_10">
+              Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock =`
+            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateHard()}</p>
+            ${taskAn[2] === 1 ? `Переведите число <b>${taskAn[0]}</b> из двоичной системы счисления в десятичную систему счисления. В ответе запишите полученное число.`: 
+              taskAn[2] === 2 ? `Некоторое число в двоичной системе счисления записывается как <b>${taskAn[0]}</b>. Запишите это число в десятичной системе.`: 
+              `Переведите двоичное число <b>${taskAn[0]}</b> в десятичную систему счисления.`
+            }
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+              <b>${taskAn[0]}</b><sub>2</sub> = <b>${taskAn[1]}</b><sub>10</sub>
+              <hr class="hr-pd_10">
+              Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          let summaAns = 0;
+          const num1 = parseInt(taskAn[0], 2);  // Двоичное число
+          const num2 = parseInt(taskAn[1], 8);  // Восьмеричное число
+          const num3 = parseInt(taskAn[2], 16); // Шестнадцатеричное число
+  
+          const operator1 = taskAn[3]; // Первый оператор
+          const operator2 = taskAn[4]; // Второй оператор
+  
+          summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
+          answerBlock =`
+            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateHard()}</p>
+            <p>Вычислите значение арифметического выражения:</p>
+            <hr class="hr-pd_10">
+            <span class="span-centr">${taskAn[0]}<sub>2</sub> ${taskAn[3]} ${taskAn[1]}<sub>8</sub> ${taskAn[4]} ${taskAn[2]}<sub>16</sub></span>
+            <hr class="hr-pd_10">
+            <p>В ответе запишите десятичное число, основание системы счисления указывать не нужно.</p>
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+              ${taskAn[0]}<sub>2</sub> = ${parseInt(taskAn[0], 2)}<sub>10</sub>
+              <hr class="hr-pd_10">
+              ${taskAn[1]}<sub>8</sub> = ${parseInt(taskAn[1], 8)}<sub>10</sub>
+              <hr class="hr-pd_10">
+              ${taskAn[2]}<sub>16</sub> = ${parseInt(taskAn[2], 16)}<sub>10</sub>
+              <hr class="hr-pd_20">
+              ${num1} ${operator1} ${num2} ${operator2} ${num3} = ${summaAns}
+              <hr class="hr-pd_20">
+              Ответ: ${taskAnswer}`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+      } 
     }  
     if (taskKey === 'eleven'){
       switch(item.typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>11.</b> № ${taskCounter} ${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Легкий)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>11.</b> № ${taskCounter} ${generateHard()}</p> 
           <p>${task1}</p>
           <p>${task2}</p>      
           <hr class="hr-pd_10">
@@ -1759,21 +1824,24 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <p>${task3}</p>
                       <hr class="hr-pd_10">
                       <p>${task4}</p>   
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputD();
+          } 
+          return answerBlock
          }
     }
     if (taskKey === 'twelve'){
       switch(item.typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>12.</b> № ${taskCounter} ${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Легкий)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}</p> 
+          answerBlock += `<p class="p-num"><b>12.</b> № ${taskCounter} ${generateHard()}</p> 
           <p>${task1}</p>
           <p>В ответе укажите только число.</p>      
           <hr class="hr-pd_10">
@@ -1781,15 +1849,19 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
-                    answerBlock += `
+          answerBlock += `
                       <hr class="hr-pd_10">
                       <p>${task3}</p>
                       <hr class="hr-pd_10">
                       <p>${task4}</p>   
                       <hr class="hr-pd_20">
                       Ответ: <b>${taskAnswer}</b>`;
-                    answerBlock += generateFooter(); 
-                    return answerBlock
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputD12();
+          } 
+          return answerBlock
          }
     }
+   
 }

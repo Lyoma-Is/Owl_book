@@ -113,6 +113,7 @@ $font-size17: 17px;
             }
             .answer-block{
                 padding: 20px;
+                padding-top: 0;
                 .input_answer, .input_answer-green, .input_answer-red{
                     width: 35%;
                 }
@@ -352,6 +353,7 @@ $font-size17: 17px;
             }
             .answer-block{
                 padding: 20px;
+                padding-top: 0;
                 .input_answer, .input_answer-green, .input_answer-red{
                     width: 45%;
                 }
@@ -743,6 +745,7 @@ $font-size17: 17px;
             display: flex;
             justify-content: space-between;
             padding: 15px;
+            padding-top: 0;
             .download{
                 a{
                     display: flex;
