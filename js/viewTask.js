@@ -1,32 +1,32 @@
-const tasks = {
-  one: '../../../src/oge_inf/taskOne.json',
-  two: '../../../src/oge_inf/taskTwo.json',
-  three: '../../../src/oge_inf/taskThree.json',
-  four:  '../../../src/oge_inf/taskFour.json',
-  five: '../../../src/oge_inf/taskFive.json',
-  six: '../../../src/oge_inf/taskSix.json',
-  seven: '../../../src/oge_inf/taskSeven.json',
-  eight: '../../../src/oge_inf/taskEight.json',
-  nine: '../../../src/oge_inf/taskNine.json',
-  ten: '../../../src/oge_inf/taskTen.json',
-  eleven: '../../../src/oge_inf/taskEleven.json',
-  twelve: '../../../src/oge_inf/taskTwelve.json' 
-};
-
 // const tasks = {
-//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+//   one: '../../../src/oge_inf/taskOne.json',
+//   two: '../../../src/oge_inf/taskTwo.json',
+//   three: '../../../src/oge_inf/taskThree.json',
+//   four:  '../../../src/oge_inf/taskFour.json',
+//   five: '../../../src/oge_inf/taskFive.json',
+//   six: '../../../src/oge_inf/taskSix.json',
+//   seven: '../../../src/oge_inf/taskSeven.json',
+//   eight: '../../../src/oge_inf/taskEight.json',
+//   nine: '../../../src/oge_inf/taskNine.json',
+//   ten: '../../../src/oge_inf/taskTen.json',
+//   eleven: '../../../src/oge_inf/taskEleven.json',
+//   twelve: '../../../src/oge_inf/taskTwelve.json' 
 // };
+
+const tasks = {
+  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+};
 
 export {tasks};
 
@@ -37,7 +37,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const generateHeader = () => `<details><summary class="p-num resh">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
     const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` : ` <hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p> <hr class="hr-pd_10">`}`;
-    const generateAuthor = () => `${taskAuthor === "" ? "": `<em>(${taskAuthor})</em>`}`
+    const generateAuthor = () => `${taskAuthor === "" ? ``: `<em>(${taskAuthor})</em>`}`
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD12 = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
