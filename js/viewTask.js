@@ -1,32 +1,32 @@
-// const tasks = {
-//   one: '../../../src/oge_inf/taskOne.json',
-//   two: '../../../src/oge_inf/taskTwo.json',
-//   three: '../../../src/oge_inf/taskThree.json',
-//   four:  '../../../src/oge_inf/taskFour.json',
-//   five: '../../../src/oge_inf/taskFive.json',
-//   six: '../../../src/oge_inf/taskSix.json',
-//   seven: '../../../src/oge_inf/taskSeven.json',
-//   eight: '../../../src/oge_inf/taskEight.json',
-//   nine: '../../../src/oge_inf/taskNine.json',
-//   ten: '../../../src/oge_inf/taskTen.json',
-//   eleven: '../../../src/oge_inf/taskEleven.json',
-//   twelve: '../../../src/oge_inf/taskTwelve.json' 
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+  one: '../../../src/oge_inf/taskOne.json',
+  two: '../../../src/oge_inf/taskTwo.json',
+  three: '../../../src/oge_inf/taskThree.json',
+  four:  '../../../src/oge_inf/taskFour.json',
+  five: '../../../src/oge_inf/taskFive.json',
+  six: '../../../src/oge_inf/taskSix.json',
+  seven: '../../../src/oge_inf/taskSeven.json',
+  eight: '../../../src/oge_inf/taskEight.json',
+  nine: '../../../src/oge_inf/taskNine.json',
+  ten: '../../../src/oge_inf/taskTen.json',
+  eleven: '../../../src/oge_inf/taskEleven.json',
+  twelve: '../../../src/oge_inf/taskTwelve.json' 
 };
+
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+// };
 
 export {tasks};
 
@@ -154,31 +154,31 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock =`
-            <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()}</p>
+            <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p>
             <p>${task1}</p>
             
-             ${taskAnswer[2] === 1 ? `
-              <hr class="hr-pd_10">
-              <span class="span-centr span-centr__font">${item.task2}</span>
-            <hr class="hr-pd_10">
+            ${taskAnswer[2] === 1 ? `
+            <hr class="hr-pd_20">
+            <span class="span-centr span-centr__font">${task2}</span>
+            <hr class="hr-pd_20">
             <p>${task3}</p>
             <hr class="hr-pd_20">
             ${taskTable.length === 10 ? `
               <table class="table_2_1">
                 <tbody>
                   <tr>
-                      <td>${item.taskTable[0]}</td> <td>${item.taskTable[2]}</td>
-                      <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                      <td>${item.taskTable[8]}</td>
+                      <td>${taskTable[0]}</td> <td>${taskTable[2]}</td>
+                      <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                      <td>${taskTable[8]}</td>
                   </tr>
                   <tr>
-                    <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                    <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                    <td>${item.taskTable[9]}</td>
+                    <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                    <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                    <td>${taskTable[9]}</td>
                 </tr>
                 </tbody>
               </table>
-              `: item.taskTable.length === 12 ?`
+              `: taskTable.length === 12 ?`
                   <table class="table_2_1">
                   <tbody>
                     <tr>
@@ -284,7 +284,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock =`
-          <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()}</p>
+          <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p>
           <p>${item.task1}</p>
            <hr class="hr-pd_20">
             ${item.taskTable.length === 10 ? `
@@ -359,7 +359,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock =`
-          <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()}</p>
+          <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p>
           <p>${task1}</p>
             <hr class="hr-pd_20">
             <table class="table_2_3">
