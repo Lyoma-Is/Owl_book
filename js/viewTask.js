@@ -1,37 +1,37 @@
-const tasks = {
-  one: '../../../src/oge_inf/taskOne.json',
-  two: '../../../src/oge_inf/taskTwo.json',
-  three: '../../../src/oge_inf/taskThree.json',
-  four:  '../../../src/oge_inf/taskFour.json',
-  five: '../../../src/oge_inf/taskFive.json',
-  six: '../../../src/oge_inf/taskSix.json',
-  seven: '../../../src/oge_inf/taskSeven.json',
-  eight: '../../../src/oge_inf/taskEight.json',
-  nine: '../../../src/oge_inf/taskNine.json',
-  ten: '../../../src/oge_inf/taskTen.json',
-  eleven: '../../../src/oge_inf/taskEleven.json',
-  twelve: '../../../src/oge_inf/taskTwelve.json' 
-};
-
 // const tasks = {
-//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+//   one: '../../../src/oge_inf/taskOne.json',
+//   two: '../../../src/oge_inf/taskTwo.json',
+//   three: '../../../src/oge_inf/taskThree.json',
+//   four:  '../../../src/oge_inf/taskFour.json',
+//   five: '../../../src/oge_inf/taskFive.json',
+//   six: '../../../src/oge_inf/taskSix.json',
+//   seven: '../../../src/oge_inf/taskSeven.json',
+//   eight: '../../../src/oge_inf/taskEight.json',
+//   nine: '../../../src/oge_inf/taskNine.json',
+//   ten: '../../../src/oge_inf/taskTen.json',
+//   eleven: '../../../src/oge_inf/taskEleven.json',
+//   twelve: '../../../src/oge_inf/taskTwelve.json' 
 // };
+
+const tasks = {
+  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+};
 
 export {tasks};
 
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
-    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard} = item;
+    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num resh">Решение</summary><hr class="hr-pd_10">`;
@@ -182,14 +182,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <table class="table_2_1">
                   <tbody>
                     <tr>
-                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
-                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                        <td>${taskTable[0]}</td><td>${taskTable[2]}</td>
+                        <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                        <td>${taskTable[8]}</td><td>${taskTable[10]}</td>
                     </tr>
                     <tr>
-                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                      <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                      <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                      <td>${taskTable[9]}</td><td>${taskTable[11]}</td>
                   </tr>
                   </tbody>
                 </table>
@@ -197,51 +197,51 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <table class="table_2_1">
                   <tbody>
                     <tr>
-                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
-                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
-                        <td>${item.taskTable[12]}</td>
+                        <td>${taskTable[0]}</td><td>${taskTable[2]}</td>
+                        <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                        <td>${taskTable[8]}</td><td>${taskTable[10]}</td>
+                        <td>${taskTable[12]}</td>
                     </tr>
                     <tr>
-                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
-                      <td>${item.taskTable[13]}</td>
+                      <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                      <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                      <td>${taskTable[9]}</td><td>${taskTable[11]}</td>
+                      <td>${taskTable[13]}</td>
                   </tr>
                   </tbody>
               </table>`}
              <hr class="hr-pd_20">
-             <p>${item.task4}</p>
+             <p>${task4}</p>
              <hr class="hr-pd_20">
               `:
             `<hr class="hr-pd_20">
-            ${item.taskTable.length === 10 ? `
+            ${taskTable.length === 10 ? `
               <table class="table_2_1">
                 <tbody>
                   <tr>
-                      <td>${item.taskTable[0]}</td> <td>${item.taskTable[2]}</td>
-                      <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                      <td>${item.taskTable[8]}</td>
+                      <td>${taskTable[0]}</td> <td>${taskTable[2]}</td>
+                      <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                      <td>${taskTable[8]}</td>
                   </tr>
                   <tr>
-                    <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                    <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                    <td>${item.taskTable[9]}</td>
+                    <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                    <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                    <td>${taskTable[9]}</td>
                 </tr>
                 </tbody>
               </table>
-              `: item.taskTable.length === 12 ?`
+              `: taskTable.length === 12 ?`
                   <table class="table_2_1">
                   <tbody>
                     <tr>
-                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
-                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                        <td>${taskTable[0]}</td><td>${taskTable[2]}</td>
+                        <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                        <td>${taskTable[8]}</td><td>${taskTable[10]}</td>
                     </tr>
                     <tr>
-                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                      <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                      <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                      <td>${taskTable[9]}</td><td>${taskTable[11]}</td>
                   </tr>
                   </tbody>
                 </table>
@@ -249,33 +249,33 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <table class="table_2_1">
                   <tbody>
                     <tr>
-                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
-                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
-                        <td>${item.taskTable[12]}</td>
+                        <td>${taskTable[0]}</td><td>${taskTable[2]}</td>
+                        <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                        <td>${taskTable[8]}</td><td>${taskTable[10]}</td>
+                        <td>${taskTable[12]}</td>
                     </tr>
                     <tr>
-                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
-                      <td>${item.taskTable[13]}</td>
+                      <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                      <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                      <td>${taskTable[9]}</td><td>${taskTable[11]}</td>
+                      <td>${taskTable[13]}</td>
                   </tr>
                   </tbody>
               </table>`}
             <hr class="hr-pd_20">
-            <p>${item.task3}</p>  
+            <p>${task3}</p>  
             <hr class="hr-pd_10">
-            <span class="span-centr span-centr__font">${item.task2}</span>
+            <span class="span-centr span-centr__font">${task2}</span>
             <hr class="hr-pd_10">
-             <p>${item.task4}</p>
+             <p>${task4}</p>
              <hr class="hr-pd_20">
               `}`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-           <p>${item.taskAnswer[1]}</p>
+           <p>${taskAnswer[1]}</p>
            <hr class="hr-pd_20">
-           <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
+           <p><b>Ответ:</b> ${taskAnswer[0]}</p>
            <hr class="hr-pd_10">`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -285,35 +285,35 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock =`
           <p class="p-num"><b>2.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p>
-          <p>${item.task1}</p>
+          <p>${task1}</p>
            <hr class="hr-pd_20">
-            ${item.taskTable.length === 10 ? `
+            ${taskTable.length === 10 ? `
               <table class="table_2_1">
                 <tbody>
                   <tr>
-                      <td>${item.taskTable[0]}</td> <td>${item.taskTable[2]}</td>
-                      <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                      <td>${item.taskTable[8]}</td>
+                      <td>${taskTable[0]}</td> <td>${taskTable[2]}</td>
+                      <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                      <td>${taskTable[8]}</td>
                   </tr>
                   <tr>
-                    <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                    <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                    <td>${item.taskTable[9]}</td>
+                    <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                    <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                    <td>${taskTable[9]}</td>
                 </tr>
                 </tbody>
               </table>
-              `: item.taskTable.length === 12 ?`
+              `: taskTable.length === 12 ?`
                   <table class="table_2_1">
                   <tbody>
                     <tr>
-                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
-                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
+                        <td>${taskTable[0]}</td><td>${taskTable[2]}</td>
+                        <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                        <td>${taskTable[8]}</td><td>${taskTable[10]}</td>
                     </tr>
                     <tr>
-                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
+                      <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                      <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                      <td>${taskTable[9]}</td><td>${taskTable[11]}</td>
                   </tr>
                   </tbody>
                 </table>
@@ -321,36 +321,36 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <table class="table_2_1">
                   <tbody>
                     <tr>
-                        <td>${item.taskTable[0]}</td><td>${item.taskTable[2]}</td>
-                        <td>${item.taskTable[4]}</td><td>${item.taskTable[6]}</td>
-                        <td>${item.taskTable[8]}</td><td>${item.taskTable[10]}</td>
-                        <td>${item.taskTable[12]}</td>
+                        <td>${taskTable[0]}</td><td>${taskTable[2]}</td>
+                        <td>${taskTable[4]}</td><td>${taskTable[6]}</td>
+                        <td>${taskTable[8]}</td><td>${taskTable[10]}</td>
+                        <td>${taskTable[12]}</td>
                     </tr>
                     <tr>
-                      <td>${item.taskTable[1]}</td><td>${item.taskTable[3]}</td>
-                      <td>${item.taskTable[5]}</td><td>${item.taskTable[7]}</td>
-                      <td>${item.taskTable[9]}</td><td>${item.taskTable[11]}</td>
-                      <td>${item.taskTable[13]}</td>
+                      <td>${taskTable[1]}</td><td>${taskTable[3]}</td>
+                      <td>${taskTable[5]}</td><td>${taskTable[7]}</td>
+                      <td>${taskTable[9]}</td><td>${taskTable[11]}</td>
+                      <td>${taskTable[13]}</td>
                   </tr>
                   </tbody>
               </table>`}
             <hr class="hr-pd_20">
-            <p>${item.task3}</p>  
+            <p>${task3}</p>  
             <hr class="hr-pd_10">
             <p>Даны три кодовые цепочки:</p>
             <hr class="hr-pd_10">
-            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[0]}</p><hr class="hr-pd_10">
-            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[1]}</p><hr class="hr-pd_10">
-            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[2]}</p>
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${task2[0]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${task2[1]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${task2[2]}</p>
             <hr class="hr-pd_10">
-             <p>${item.task4}</p>
+             <p>${task4}</p>
              <hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>
+            <p>${taskAnswer[1]} – <b>${taskAnswer[0]}</b></p>
             <hr class="hr-pd_20">
-            <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
+            <p><b>Ответ:</b> ${taskAnswer[0]}</p>
             <hr class="hr-pd_10">`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -397,28 +397,28 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tbody>
               </table>
             <hr class="hr-pd_20">
-            <p>${item.task3}</p>  
+            <p>${task3}</p>  
             <hr class="hr-pd_10">
             <p>Даны четыре шифровки:</p>
             <hr class="hr-pd_10">
-            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[0]}</p><hr class="hr-pd_10">
-            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[1]}</p><hr class="hr-pd_10">
-            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[2]}</p><hr class="hr-pd_10">
-            <p style="letter-spacing: 1px;">&emsp;&emsp;${item.task2[3]}</p><hr class="hr-pd_10">
-             <p>${item.task4}</p>
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${task2[0]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${task2[1]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${task2[2]}</p><hr class="hr-pd_10">
+            <p style="letter-spacing: 1px;">&emsp;&emsp;${task2[3]}</p><hr class="hr-pd_10">
+             <p>${task4}</p>
              <hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <p>${item.taskAnswer[1]} – <b>${item.taskAnswer[0]}</b></p>
-            ${item.task5 === "" ? `<hr class="hr-pd_20">` : 
+            <p>${taskAnswer[1]} – <b>${taskAnswer[0]}</b></p>
+            ${task5 === "" ? `<hr class="hr-pd_20">` : 
               `
               <hr class="hr-pd_20">
-              <p>${item.task5}</p> 
+              <p>${task5}</p> 
               <hr class="hr-pd_20">
               `
             }        
-            <p><b>Ответ:</b> ${item.taskAnswer[0]}</p>
+            <p><b>Ответ:</b> ${taskAnswer[0]}</p>
             <hr class="hr-pd_10">`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -428,35 +428,35 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       }
     }
     if (taskKey === 'three'){
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
           answerBlock =`
           <p class="p-num"><b>3.</b> № ${taskCounter} ${generateHard()}</p> 
-          <p>${item.task1}</p>
+          <p>${task1}</p>
            <hr class="hr-pd_20">
-            <span class="span-centr">${item.task2}</span>
+            <span class="span-centr">${task2}</span>
           <hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
               <p>Избавимся от НЕ, применяя закон де Моргана:</p>
               <hr class="hr-pd_10">
-              ${item.task4 !== "" ? 
+              ${task4 !== "" ? 
               `
-              <p>Было: ${item.task2} – истинно</p>
+              <p>Было: ${task2} – истинно</p>
               <hr class="hr-pd_10">
-              <p>Стало: ${item.task3} – истинно</p>
+              <p>Стало: ${task3} – истинно</p>
               <hr class="hr-pd_10">
-              ${item.task4}
+              ${task4}
               <hr class="hr-pd_10">
               `
               : `
-              <p>Было: ${item.task2} – истинно</p>
+              <p>Было: ${task2} – истинно</p>
               <hr class="hr-pd_10">
-              <p>Стало: ${item.task3} – истинно</p>
+              <p>Стало: ${task3} – истинно</p>
               <hr class="hr-pd_10">
               `}
-              Ответ: <b>${item.taskAnswer}</b>`;
+              Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -464,32 +464,32 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock =`
-          <p class="p-num"><b>3.</b> № ${item.taskCounter} ${generateHard()}</p> 
-          <p>${item.task1}</p>
+          <p class="p-num"><b>3.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p>${task1}</p>
            <hr class="hr-pd_20">
-            <span class="span-centr">${item.task2}</span>
+            <span class="span-centr">${task2}</span>
           <hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
               <p>Переделаем ложное высказывание в истинное, применяя закон де Моргана:</p>
               <hr class="hr-pd_10">
-              ${item.task4 !== "" ? 
+              ${task4 !== "" ? 
               `
-              <p>Было: ${item.task2} – ложно</p>
+              <p>Было: ${task2} – ложно</p>
               <hr class="hr-pd_10">
-              <p>Стало: ${item.task3} – истинно</p>
+              <p>Стало: ${task3} – истинно</p>
               <hr class="hr-pd_10">
-              ${item.task4}
+              ${task4}
               <hr class="hr-pd_10">
               `
               : `
-              <p>Было: ${item.task2} – ложно</p>
+              <p>Было: ${task2} – ложно</p>
               <hr class="hr-pd_10">
-              <p>Стало: ${item.task3} – истинно</p>
+              <p>Стало: ${task3} – истинно</p>
               <hr class="hr-pd_10">
               `}
-              Ответ: <b>${item.taskAnswer}</b>`;
+              Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -498,55 +498,55 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       }
     }
     if (taskKey === 'four'){
-      switch (item.typeTask) {
+      switch (typeTask) {
         case 1:
           answerBlock =`
           <p class="p-num"><b>4.</b> № ${taskCounter} ${generateHard()}</p> 
-          <p>${item.task1}</p>
+          <p>${task1}</p>
           
           <hr class="hr-pd_20">
-          ${ item.taskTableV.length === 4 ? 
+          ${ taskTableV.length === 4 ? 
           `
           <table class="table_4">
             <tbody>
-              <tr><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableV[0]}</td><td>${item.taskTableV[1]}</td><td>${item.taskTableV[2]}</td><td>${item.taskTableV[3]}</td></tr>
-              <tr><td>${item.taskTableV[0]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[1]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[3]}</td></tr>
-              <tr><td>${item.taskTableV[1]}</td><td>${item.taskTableS[1]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[5]}</td></tr>
-              <tr><td>${item.taskTableV[2]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[4]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[6]}</td></tr>
-              <tr><td>${item.taskTableV[3]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[5]}</td><td>${item.taskTableS[6]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td></tr> 
+              <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td></tr>
+              <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td></tr>
+              <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[4]}</td><td>${taskTableS[5]}</td></tr>
+              <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[4]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[6]}</td></tr>
+              <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[5]}</td><td>${taskTableS[6]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr> 
             </tbody>
           </table>
 
-          `: item.taskTableV.length === 5 ? 
+          `: taskTableV.length === 5 ? 
           `
           <table class="table_4">
             <tbody>
-              <tr><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableV[0]}</td><td>${item.taskTableV[1]}</td><td>${item.taskTableV[2]}</td><td>${item.taskTableV[3]}</td><td>${item.taskTableV[4]}</td></tr>
-              <tr><td>${item.taskTableV[0]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[1]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[4]}</td></tr>
-              <tr><td>${item.taskTableV[1]}</td><td>${item.taskTableS[1]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[5]}</td><td>${item.taskTableS[6]}</td><td>${item.taskTableS[7]}</td></tr>
-              <tr><td>${item.taskTableV[2]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[5]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[8]}</td><td>${item.taskTableS[9]}</td></tr>
-              <tr><td>${item.taskTableV[3]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[6]}</td><td>${item.taskTableS[8]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[10]}</td></tr>
-              <tr><td>${item.taskTableV[4]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[7]}</td><td>${item.taskTableS[9]}</td><td>${item.taskTableS[10]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td></tr> 
+              <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td><td>${taskTableV[4]}</td></tr>
+              <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td><td>${taskTableS[4]}</td></tr>
+              <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[5]}</td><td>${taskTableS[6]}</td><td>${taskTableS[7]}</td></tr>
+              <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[5]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[8]}</td><td>${taskTableS[9]}</td></tr>
+              <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[6]}</td><td>${taskTableS[8]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[10]}</td></tr>
+              <tr><td>${taskTableV[4]}</td><td>${taskTableS[4]}</td><td>${taskTableS[7]}</td><td>${taskTableS[9]}</td><td>${taskTableS[10]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr> 
             </tbody>
           </table>
 
-          `: item.taskTableV.length === 6 ? 
+          `: taskTableV.length === 6 ? 
           `
           <table class="table_4">
             <tbody>
-              <tr><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableV[0]}</td><td>${item.taskTableV[1]}</td><td>${item.taskTableV[2]}</td><td>${item.taskTableV[3]}</td><td>${item.taskTableV[4]}</td><td>${item.taskTableV[5]}</td></tr>
-              <tr><td>${item.taskTableV[0]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[1]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[5]}</td></tr>
-              <tr><td>${item.taskTableV[1]}</td><td>${item.taskTableS[1]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[6]}</td><td>${item.taskTableS[7]}</td><td>${item.taskTableS[8]}</td><td>${item.taskTableS[9]}</td></tr>
-              <tr><td>${item.taskTableV[2]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[6]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[10]}</td><td>${item.taskTableS[11]}</td><td>${item.taskTableS[12]}</td></tr>
-              <tr><td>${item.taskTableV[3]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[7]}</td><td>${item.taskTableS[10]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[13]}</td><td>${item.taskTableS[14]}</td></tr>
-              <tr><td>${item.taskTableV[4]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[8]}</td><td>${item.taskTableS[11]}</td><td>${item.taskTableS[13]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[15]}</td></tr>
-              <tr><td>${item.taskTableV[5]}</td><td>${item.taskTableS[5]}</td><td>${item.taskTableS[9]}</td><td>${item.taskTableS[12]}</td><td>${item.taskTableS[14]}</td><td>${item.taskTableS[15]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td></tr>  
+              <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td><td>${taskTableV[4]}</td><td>${taskTableV[5]}</td></tr>
+              <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td><td>${taskTableS[4]}</td><td>${taskTableS[5]}</td></tr>
+              <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[6]}</td><td>${taskTableS[7]}</td><td>${taskTableS[8]}</td><td>${taskTableS[9]}</td></tr>
+              <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[6]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[10]}</td><td>${taskTableS[11]}</td><td>${taskTableS[12]}</td></tr>
+              <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[7]}</td><td>${taskTableS[10]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[13]}</td><td>${taskTableS[14]}</td></tr>
+              <tr><td>${taskTableV[4]}</td><td>${taskTableS[4]}</td><td>${taskTableS[8]}</td><td>${taskTableS[11]}</td><td>${taskTableS[13]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[15]}</td></tr>
+              <tr><td>${taskTableV[5]}</td><td>${taskTableS[5]}</td><td>${taskTableS[9]}</td><td>${taskTableS[12]}</td><td>${taskTableS[14]}</td><td>${taskTableS[15]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr>  
             </tbody>
           </table>
 
           `: ""}  
           <hr class="hr-pd_20">
-          <p>${item.task2}</p>
+          <p>${task2}</p>
           <hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -554,9 +554,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <hr class="hr-pd_10">
               <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
               <hr class="hr-pd_20">
-              Кратчайший путь: ${item.taskAnswer[1]} = ${item.taskAnswer[0]} км
+              Кратчайший путь: ${taskAnswer[1]} = ${taskAnswer[0]} км
               <hr class="hr-pd_20">
-              Ответ: <b>${item.taskAnswer[0]}</b>`;
+              Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -565,51 +565,51 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock =`
             <p class="p-num"><b>4.</b> № ${taskCounter} ${generateHard()}</p> 
-            <p>${item.task1}</p>
+            <p>${task1}</p>
             
             <hr class="hr-pd_20">
-            ${ item.taskTableV.length === 4 ? 
+            ${ taskTableV.length === 4 ? 
             `
             <table class="table_4">
               <tbody>
-                <tr><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableV[0]}</td><td>${item.taskTableV[1]}</td><td>${item.taskTableV[2]}</td><td>${item.taskTableV[3]}</td></tr>
-                <tr><td>${item.taskTableV[0]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[1]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[3]}</td></tr>
-                <tr><td>${item.taskTableV[1]}</td><td>${item.taskTableS[1]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[5]}</td></tr>
-                <tr><td>${item.taskTableV[2]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[4]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[6]}</td></tr>
-                <tr><td>${item.taskTableV[3]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[5]}</td><td>${item.taskTableS[6]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td></tr> 
+                <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td></tr>
+                <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td></tr>
+                <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[4]}</td><td>${taskTableS[5]}</td></tr>
+                <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[4]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[6]}</td></tr>
+                <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[5]}</td><td>${taskTableS[6]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr> 
               </tbody>
             </table>
   
-            `: item.taskTableV.length === 5 ? 
+            `: taskTableV.length === 5 ? 
             `
             <table class="table_4">
               <tbody>
-                <tr><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableV[0]}</td><td>${item.taskTableV[1]}</td><td>${item.taskTableV[2]}</td><td>${item.taskTableV[3]}</td><td>${item.taskTableV[4]}</td></tr>
-                <tr><td>${item.taskTableV[0]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[1]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[4]}</td></tr>
-                <tr><td>${item.taskTableV[1]}</td><td>${item.taskTableS[1]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[5]}</td><td>${item.taskTableS[6]}</td><td>${item.taskTableS[7]}</td></tr>
-                <tr><td>${item.taskTableV[2]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[5]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[8]}</td><td>${item.taskTableS[9]}</td></tr>
-                <tr><td>${item.taskTableV[3]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[6]}</td><td>${item.taskTableS[8]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[10]}</td></tr>
-                <tr><td>${item.taskTableV[4]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[7]}</td><td>${item.taskTableS[9]}</td><td>${item.taskTableS[10]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td></tr> 
+                <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td><td>${taskTableV[4]}</td></tr>
+                <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td><td>${taskTableS[4]}</td></tr>
+                <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[5]}</td><td>${taskTableS[6]}</td><td>${taskTableS[7]}</td></tr>
+                <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[5]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[8]}</td><td>${taskTableS[9]}</td></tr>
+                <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[6]}</td><td>${taskTableS[8]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[10]}</td></tr>
+                <tr><td>${taskTableV[4]}</td><td>${taskTableS[4]}</td><td>${taskTableS[7]}</td><td>${taskTableS[9]}</td><td>${taskTableS[10]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr> 
               </tbody>
             </table>
   
-            `: item.taskTableV.length === 6 ? 
+            `: taskTableV.length === 6 ? 
             `
             <table class="table_4">
               <tbody>
-                <tr><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableV[0]}</td><td>${item.taskTableV[1]}</td><td>${item.taskTableV[2]}</td><td>${item.taskTableV[3]}</td><td>${item.taskTableV[4]}</td><td>${item.taskTableV[5]}</td></tr>
-                <tr><td>${item.taskTableV[0]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[1]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[5]}</td></tr>
-                <tr><td>${item.taskTableV[1]}</td><td>${item.taskTableS[1]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[6]}</td><td>${item.taskTableS[7]}</td><td>${item.taskTableS[8]}</td><td>${item.taskTableS[9]}</td></tr>
-                <tr><td>${item.taskTableV[2]}</td><td>${item.taskTableS[2]}</td><td>${item.taskTableS[6]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[10]}</td><td>${item.taskTableS[11]}</td><td>${item.taskTableS[12]}</td></tr>
-                <tr><td>${item.taskTableV[3]}</td><td>${item.taskTableS[3]}</td><td>${item.taskTableS[7]}</td><td>${item.taskTableS[10]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[13]}</td><td>${item.taskTableS[14]}</td></tr>
-                <tr><td>${item.taskTableV[4]}</td><td>${item.taskTableS[4]}</td><td>${item.taskTableS[8]}</td><td>${item.taskTableS[11]}</td><td>${item.taskTableS[13]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td><td>${item.taskTableS[15]}</td></tr>
-                <tr><td>${item.taskTableV[5]}</td><td>${item.taskTableS[5]}</td><td>${item.taskTableS[9]}</td><td>${item.taskTableS[12]}</td><td>${item.taskTableS[14]}</td><td>${item.taskTableS[15]}</td><td style="background-color: #ffbf80;">${item.taskTableS[0]}</td></tr>  
+                <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td><td>${taskTableV[4]}</td><td>${taskTableV[5]}</td></tr>
+                <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td><td>${taskTableS[4]}</td><td>${taskTableS[5]}</td></tr>
+                <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[6]}</td><td>${taskTableS[7]}</td><td>${taskTableS[8]}</td><td>${taskTableS[9]}</td></tr>
+                <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[6]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[10]}</td><td>${taskTableS[11]}</td><td>${taskTableS[12]}</td></tr>
+                <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[7]}</td><td>${taskTableS[10]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[13]}</td><td>${taskTableS[14]}</td></tr>
+                <tr><td>${taskTableV[4]}</td><td>${taskTableS[4]}</td><td>${taskTableS[8]}</td><td>${taskTableS[11]}</td><td>${taskTableS[13]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[15]}</td></tr>
+                <tr><td>${taskTableV[5]}</td><td>${taskTableS[5]}</td><td>${taskTableS[9]}</td><td>${taskTableS[12]}</td><td>${taskTableS[14]}</td><td>${taskTableS[15]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr>  
               </tbody>
             </table>
   
             `: ""}  
             <hr class="hr-pd_20">
-            <p>${item.task2}</p>
+            <p>${task2}</p>
             <hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -617,9 +617,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <hr class="hr-pd_10">
                 <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
                 <hr class="hr-pd_20">
-                Кратчайший путь: ${item.taskAnswer[1]} = ${item.taskAnswer[0]} км
+                Кратчайший путь: ${taskAnswer[1]} = ${taskAnswer[0]} км
                 <hr class="hr-pd_20">
-                Ответ: <b>${item.taskAnswer[0]}</b>`;
+                Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -1046,10 +1046,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       
         return res1
       }    
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
           answerBlock =`
-          <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          <p class="p-num"><b>5.</b> № ${taskCounter} ${generateHard()}</p> 
           <p>${task1}</p>
           <hr class="hr-pd_10">
           <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
@@ -1068,7 +1068,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <span style="background-color: rgb(252, 210, 94);">${taskAn[0]}</span><br>
               ${fiveGetAn(taskAnswer)}
               <hr class="hr-pd_20">
-              Ответ: <b>${item.taskAnswer}</b>`;
+              Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -1076,13 +1076,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock =`
-            <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
-            <p>${item.task1}</p>
+            <p class="p-num"><b>5.</b> № ${taskCounter} ${generateHard()}</p> 
+            <p>${task1}</p>
             <hr class="hr-pd_10">
             <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
             <hr class="hr-pd_10">
-            <p>${item.task3}</p>
-            <p>Составьте алгоритм получения <b style="font-weight: 500;">${item.task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+            <p>${task3}</p>
+            <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
             <hr class="hr-pd_10">
             <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
             <hr class="hr-pd_10">
@@ -1095,7 +1095,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <span style="background-color: rgb(252, 210, 94);">${taskAn[0]}</span><br>
                 ${fiveGetAn(taskAnswer)}
                 <hr class="hr-pd_20">
-                Ответ: <b>${item.taskAnswer}</b>`;
+                Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter(); 
           if(tumbler === false){
             answerBlock += generateInput();
@@ -1103,13 +1103,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock =`
-              <p class="p-num"><b>5.</b> № ${item.taskCounter} ${generateHard()}</p> 
-              <p>${item.task1}</p>
+              <p class="p-num"><b>5.</b> № ${taskCounter} ${generateHard()}</p> 
+              <p>${task1}</p>
               <hr class="hr-pd_10">
               <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
               <hr class="hr-pd_10">
-              <p>${item.task3}</p>
-              <p>Составьте алгоритм получения <b style="font-weight: 500;">${item.task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+              <p>${task3}</p>
+              <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
               <hr class="hr-pd_10">
               <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
               <hr class="hr-pd_10">
@@ -1122,7 +1122,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <span style="background-color: rgb(252, 210, 94);">${taskAn[0]}</span><br>
                   ${fiveGetAn(taskAnswer)}
                   <hr class="hr-pd_20">
-                  Ответ: <b>${item.taskAnswer}</b>`;
+                  Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -1131,10 +1131,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       } 
     }
     if (taskKey === 'six'){
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          <p class="p-num"><b>6.</b> № ${taskCounter} ${generateHard()}</p> 
           Ниже приведена программа, записанная на трёх языках программирования.
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1152,7 +1152,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 цел ${task4[0]}, ${task4[1]}
 ввод ${task4[0]}
 ввод ${task4[1]}
-если ${item.task1[0]}
+если ${task1[0]}
     то вывод "YES"
     иначе вывод "NO"
 все
@@ -1163,7 +1163,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <pre>
 ${task4[0]} = int(input())
 ${task4[1]} = int(input())
-if ${item.task1[1]}:
+if ${task1[1]}:
     print("YES")
 else:
     print("NO")
@@ -1177,7 +1177,7 @@ int main() {
     int ${task4[0]}, ${task4[1]};
     cin >> ${task4[0]};
     cin >> ${task4[1]};
-    if ${item.task1[2]}
+    if ${task1[2]}
         cout << "YES";
     else
         cout << "NO";
@@ -1189,16 +1189,16 @@ return 0; } </pre>
           <hr class="hr-pd_20">
           Было проведено 9 запусков программы, при которых в качестве значений переменных ${task4[0]} и ${task4[1]} вводились следующие пары чисел:
           <hr class="hr-pd_20">
-          <span class="span-centr">${item.task2}</span>
+          <span class="span-centr">${task2}</span>
           <hr class="hr-pd_20">
-          Сколько было запусков, при которых программа напечатала «${item.task1[3]}»?
+          Сколько было запусков, при которых программа напечатала «${task1[3]}»?
           <hr class="hr-pd_20">
           `    
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
-            Ответ: <b>${item.taskAnswer}</b>`;
+            Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -1206,7 +1206,7 @@ return 0; } </pre>
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>6.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          <p class="p-num"><b>6.</b> № ${taskCounter} ${generateHard()}</p> 
           Ниже приведена программа, записанная на трёх языках программирования.
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1225,7 +1225,7 @@ return 0; } </pre>
 ввод ${task4[0]}
 ввод ${task4[1]}
 ввод ${task4[2]}
-если ${item.task1[0]}
+если ${task1[0]}
  то вывод "YES"
  иначе вывод "NO"
 все
@@ -1237,7 +1237,7 @@ return 0; } </pre>
 ${task4[0]} = int(input())
 ${task4[1]} = int(input())
 ${task4[2]} = int(input())
-if ${item.task1[1]}:
+if ${task1[1]}:
     print("YES")
 else:
     print("NO")
@@ -1252,7 +1252,7 @@ int main(){
    cin >> ${task4[0]};
    cin >> ${task4[1]};
    cin >> ${task4[2]};
-   if ${item.task1[2]}
+   if ${task1[2]}
      cout << "YES" << endl;
    else
      cout << "NO" << endl;
@@ -1264,16 +1264,16 @@ int main(){
           <hr class="hr-pd_20">
           Было проведено 9 запусков программы, при которых в качестве значений переменных ${task4[0]} и ${task4[1]} вводились следующие пары чисел:
           <hr class="hr-pd_20">
-          <span class="span-centr">${item.task2}</span>
+          <span class="span-centr">${task2}</span>
           <hr class="hr-pd_20">
-          ${item.task3}
+          ${task3}
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
-            Ответ: <b>${item.taskAnswer}</b>`;
+            Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -1282,23 +1282,23 @@ int main(){
         }   
     } 
     if (taskKey === 'seven'){
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>7.</b> № ${item.taskCounter} ${generateHard()}</p> 
-          <p>Доступ к файлу <b style="font-weight: 500;">${item.task1[0]}</b>, находящемуся на сервере <b style="font-weight: 500;">${item.task1[1]}</b>, осуществляется по протоколу <b style="font-weight: 500;">${item.task1[2]}</b>.
+          answerBlock += `<p class="p-num"><b>7.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p>Доступ к файлу <b style="font-weight: 500;">${task1[0]}</b>, находящемуся на сервере <b style="font-weight: 500;">${task1[1]}</b>, осуществляется по протоколу <b style="font-weight: 500;">${task1[2]}</b>.
            Фрагменты адреса файла закодированы цифрами от 1 до 7. 
            Запишите последовательность этих цифр, кодирующую адрес указанного файла в сети Интернет.</p>
           <hr class="hr-pd_10">
-           ${item.task2}
+           ${task2}
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
                       <hr class="hr-pd_10">
-                      ${item.task1[2]} :// ${item.task1[1]} / ${item.task1[0]}
+                      ${task1[2]} :// ${task1[1]} / ${task1[0]}
                       <hr class="hr-pd_10">
-                      Ответ: <b>${item.taskAnswer}</b>`;
+                      Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -1307,7 +1307,7 @@ int main(){
       }
     }  
     if (taskKey === 'eight'){
-      let k = item.task1[3].split(' ')
+      let k = task1[3].split(' ')
       let r = ''
       function EightAn(t, v){
           if(t === 3){
@@ -1443,12 +1443,11 @@ int main(){
             
           }return r
       } 
-      switch(item.typeTask){ 
-        
+      switch(typeTask){       
         case 1: 
-          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
-         <hr class="hr-pd_10">
+          <hr class="hr-pd_10">
           В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1458,87 +1457,80 @@ int main(){
                 <td style="text-align: center; background-color: #ffbf80;">Найдено страниц (в тысячах)</td>
               </tr>
               <tr>
-                <td >${item.task1[0]}</td>
-                <td>${item.task2[0]}</td>
+                <td>${task1[0]}</td>
+                <td>${task2[0]}</td>
               </tr>
               <tr>
-                <td>${item.task1[1]}</td>
-                <td>${item.task2[1]}</td>
+                <td>${task1[1]}</td>
+                <td>${task2[1]}</td>
               </tr>
               <tr>
-                <td>${item.task1[2]}</td>
-                <td>${item.task2[2]}</td>
+                <td>${task1[2]}</td>
+                <td>${task2[2]}</td>
               </tr>
             </tbody>
           </table>
           <hr class="hr-pd_20">
-          <p>Какое количество страниц (в тысячах) будет найдено по запросу <b><em>${item.task1[3]}</em></b>?</p>
+          <p>Какое количество страниц (в тысячах) будет найдено по запросу <b><em>${task1[3]}</em></b>?</p>
           <hr class="hr-pd_10">
           <p>Считается, что все запросы выполнялись практически одновременно, так что хранящаяся на поисковом сервере информация о наборе страниц, содержащих все искомые слова, не изменялась за время выполнения запросов.</p>
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
-          answerBlock += generateHeader();
+          answerBlock += generateHeader();        
           answerBlock += `
-                      N<sub>A&B</sub> + N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> 
-                      <hr class="hr-pd_10">
-                      ${item.task2[3] === 1 ? `
-                      ${k[1] === "&" ? 
-                      `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
-                      N<sub>A&B</sub> = ${item.task2[1]} + ${item.task2[2]} - ${item.task2[0]}<br>
-                      N<sub>A&B</sub> = ${item.task2[1] + item.task2[2] - item.task2[0]}`
-                      : k[1] === "|" ? 
-                      `N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
-                      N<sub>A|B</sub> = ${item.task2[1]} + ${item.task2[2]} - ${item.task2[0]}<br>
-                      N<sub>A|B</sub> = ${item.task2[1] + item.task2[2] - item.task2[0]}`
-                      : 
-                      `
-                      N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
-                      N<sub>A</sub> = ${item.task2[1]} + ${item.task2[2]} - ${item.task2[0]}<br>
-                      N<sub>A</sub> = ${item.task2[1] + item.task2[2] - item.task2[0]}
-                      `}
-                      ` : 
-                      item.task2[3] === 2 ? `
-                      ${k[1] === "&" ? 
-                      `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
-                      N<sub>A&B</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
-                      N<sub>A&B</sub> = ${item.task2[0] + item.task2[2] - item.task2[1]}`
-                      : k[1] === "|" ? 
-                      `N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
-                      N<sub>A|B</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
-                      N<sub>A|B</sub> = ${item.task2[0] + item.task2[2] - item.task2[1]}`
-                      : 
-                      `
-                      N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
-                      N<sub>A</sub> = ${item.task2[0]} + ${item.task2[2]} - ${item.task2[1]}<br>
-                      N<sub>A</sub> = ${item.task2[0] + item.task2[2] - item.task2[1]}
-                      `}
-                      ` : 
-                      item.task2[3] === 3 ? `
-                      ${k[1] === "&" ? 
-                      `N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
-                      N<sub>A&B</sub> = ${item.task2[0]} + ${item.task2[1]} - ${item.task2[2]}<br>
-                      N<sub>A&B</sub> = ${item.task2[0] + item.task2[1] - item.task2[2]}`
-                      : k[1] === "|" ? 
-                      `N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
-                      N<sub>A|B</sub> = ${item.task2[0]} + ${item.task2[1]} - ${item.task2[2]}<br>
-                      N<sub>A|B</sub> = ${item.task2[0] + item.task2[1] - item.task2[2]}`
-                      : 
-                      `
-                      N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
-                      N<sub>A</sub> = ${item.task2[0]} + ${item.task2[1]} - ${item.task2[2]}<br>
-                      N<sub>A</sub> = ${item.task2[0] + item.task2[1] - item.task2[2]}
-                      `}
-                      ` : ``}
-                      <hr class="hr-pd_10">
-                      Ответ: <b>${item.taskAnswer}</b>`;
+            N<sub>A&B</sub> + N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub><hr class="hr-pd_10">
+            ${task2[3] === 1 ? `
+            ${k[1] === "&" ? `
+              N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+              N<sub>A&B</sub> = ${task2[1]} + ${task2[2]} - ${task2[0]}<br>
+              N<sub>A&B</sub> = ${task2[1] + task2[2] - task2[0]}`
+              : k[1] === "|" ? `
+              N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+              N<sub>A|B</sub> = ${task2[1]} + ${task2[2]} - ${task2[0]}<br>
+              N<sub>A|B</sub> = ${task2[1] + task2[2] - task2[0]}`
+              : `
+              N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
+              N<sub>A</sub> = ${task2[1]} + ${task2[2]} - ${task2[0]}<br>
+              N<sub>A</sub> = ${task2[1] + task2[2] - task2[0]}`}` 
+              : 
+            task2[3] === 2 ? `
+            ${k[1] === "&" ? `
+              N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+              N<sub>A&B</sub> = ${task2[0]} + ${task2[2]} - ${task2[1]}<br>
+              N<sub>A&B</sub> = ${task2[0] + task2[2] - task2[1]}`
+              : k[1] === "|" ? `
+              N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+              N<sub>A|B</sub> = ${task2[0]} + ${task2[2]} - ${task2[1]}<br>
+              N<sub>A|B</sub> = ${task2[0] + task2[2] - task2[1]}`
+              : `
+              N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
+              N<sub>A</sub> = ${task2[0]} + ${task2[2]} - ${task2[1]}<br>
+              N<sub>A</sub> = ${task2[0] + task2[2] - task2[1]}`}` 
+              : 
+            task2[3] === 3 ? `
+            ${k[1] === "&" ? `
+              N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+              N<sub>A&B</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
+              N<sub>A&B</sub> = ${task2[0] + task2[1] - task2[2]}`
+              : k[1] === "|" ? `
+              N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+              N<sub>A|B</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
+              N<sub>A|B</sub> = ${task2[0] + task2[1] - task2[2]}`
+              :`
+              N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
+              N<sub>A</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
+              N<sub>A</sub> = ${task2[0] + task2[1] - task2[2]}
+              `}` : ``}
+              <hr class="hr-pd_10">
+              Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
           return answerBlock
         case 2:
-          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
          <hr class="hr-pd_10">
           В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
@@ -1550,33 +1542,33 @@ int main(){
                 <td style="text-align: center; background-color: #ffbf80;">Найдено страниц (в тысячах)</td>
               </tr>
               <tr>
-                <td >${item.task1[0]}</td>
-                <td>${item.task2[0]}</td>
+                <td >${task1[0]}</td>
+                <td>${task2[0]}</td>
               </tr>
               <tr>
-                <td>${item.task1[1]}</td>
-                <td>${item.task2[1]}</td>
+                <td>${task1[1]}</td>
+                <td>${task2[1]}</td>
               </tr>
               <tr>
-                <td>${item.task1[2]}</td>
-                <td>${item.task2[2]}</td>
+                <td>${task1[2]}</td>
+                <td>${task2[2]}</td>
               </tr>
                   <tr>
-                <td>${item.task1[3]}</td>
-                <td>${item.task2[3]}</td>
+                <td>${task1[3]}</td>
+                <td>${task2[3]}</td>
               </tr>
                   <tr>
-                <td>${item.task1[4]}</td>
-                <td>${item.task2[4]}</td>
+                <td>${task1[4]}</td>
+                <td>${task2[4]}</td>
               </tr>
                   <tr>
-                <td>${item.task1[5]}</td>
-                <td>${item.task2[5]}</td>
+                <td>${task1[5]}</td>
+                <td>${task2[5]}</td>
               </tr>
             </tbody>
           </table>
           <hr class="hr-pd_20">
-          <p>Какое количество страниц (в тысячах) будет найдено по запросу <b><em>${item.task1[6]}</em></b>?</p>
+          <p>Какое количество страниц (в тысячах) будет найдено по запросу <b><em>${task1[6]}</em></b>?</p>
           <hr class="hr-pd_10">
           <p>Считается, что все запросы выполнялись практически одновременно, так что хранящаяся на поисковом сервере информация о наборе страниц, содержащих все искомые слова, не изменялась за время выполнения запросов.</p>
           <hr class="hr-pd_20">
@@ -1599,7 +1591,7 @@ int main(){
           } 
           return answerBlock
         case 3:
-          answerBlock += `<p class="p-num"><b>8.</b> № ${item.taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p> 
           <p>Некоторый сегмент сети Интернет состоит из 1000 сайтов. Поисковый сервер в автоматическом режиме составил таблицу ключевых слов для сайтов этого сегмента. Вот её фрагмент.</p>
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1609,22 +1601,22 @@ int main(){
                 <td style="text-align: center; background-color: #ffbf80;">Количество сайтов, для которых <br>данное слово является ключевым</td>
               </tr>
               <tr>
-                <td >${item.task1[0]}</td>
-                <td>${item.task2[0]}</td>
+                <td >${task1[0]}</td>
+                <td>${task2[0]}</td>
               </tr>
               <tr>
-                <td>${item.task1[1]}</td>
-                <td>${item.task2[1]}</td>
+                <td>${task1[1]}</td>
+                <td>${task2[1]}</td>
               </tr>
               <tr>
-                <td>${item.task1[2]}</td>
-                <td>${item.task2[2]}</td>
+                <td>${task1[2]}</td>
+                <td>${task2[2]}</td>
               </tr>
  
             </tbody>
           </table>
           <hr class="hr-pd_20">
-          <p>Сколько сайтов будет найдено по запросу <b><em>${item.task1[3]}</em></b>?  
+          <p>Сколько сайтов будет найдено по запросу <b><em>${task1[3]}</em></b>?  
           ${task1.length === 7 
             ?
              `если по запросу <b>${task1[4]}</b> было найдено <b>${task2[4]}</b> сайтов; 
@@ -1683,11 +1675,11 @@ int main(){
       }
     } 
     if (taskKey === 'nine'){
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${generateHard()}</p> 
-          <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
-          Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
+          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
+          Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
           <hr class="hr-pd_20">
           <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}.png">
           <hr class="hr-pd_10">
@@ -1698,16 +1690,16 @@ int main(){
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
-                      Ответ: <b>${item.taskAnswer}</b>`;
+                      Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
           return answerBlock
         case 2:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${generateHard()}</p> 
-          <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
-          Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
+          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
+          Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
           <hr class="hr-pd_20">
           <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}.png">
            <hr class="hr-pd_10">
@@ -1718,16 +1710,16 @@ int main(){
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
-                      Ответ: <b>${item.taskAnswer}</b>`;
+                      Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
           return answerBlock
         case 3:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${item.taskCounter} ${generateHard()}</p> 
-          <p>На рисунке  — схема дорог, связывающих города ${item.task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
-          Сколько существует различных путей ${item.task2[1]}<b>${item.task2[2]}</b>?</p>
+          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
+          Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
           <hr class="hr-pd_20">
           <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}.png">
           <hr class="hr-pd_10">  
@@ -1738,7 +1730,7 @@ int main(){
                       <hr class="hr-pd_10">
                       <img class="img-task_9" src="../../../img/task9/task9/task9_${taskCounter}_a.png">
                       <hr class="hr-pd_10">
-                      Ответ: <b>${item.taskAnswer}</b>`;
+                      Ответ: <b>${taskAnswer}</b>`;
         answerBlock += generateFooter();
         if(tumbler === false){
           answerBlock += generateInput();
@@ -1856,7 +1848,7 @@ int main(){
       } 
     }  
     if (taskKey === 'eleven'){
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
           answerBlock += `<p class="p-num"><b>11.</b> № ${taskCounter} ${generateHard()}</p> 
           <p>${task1}</p>
@@ -1881,7 +1873,7 @@ int main(){
          }
     }
     if (taskKey === 'twelve'){
-      switch(item.typeTask){
+      switch(typeTask){
         case 1:
           answerBlock += `<p class="p-num"><b>12.</b> № ${taskCounter} ${generateHard()}</p> 
           <p>${task1}</p>
