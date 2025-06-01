@@ -1307,7 +1307,7 @@ int main(){
       }
     }  
     if (taskKey === 'eight'){
-      let k = task1[3].split(' ')
+      let k = task
       let r = ''
       function EightAn(t, v){
           if(t === 3){
@@ -1481,11 +1481,23 @@ int main(){
           answerBlock += `
             N<sub>A&B</sub> + N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub><hr class="hr-pd_10">
             ${task2[3] === 1 ? `
-            ${k[1] === "&" ? `
+            ${
+              k === "&" ? `
               N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
               N<sub>A&B</sub> = ${task2[1]} + ${task2[2]} - ${task2[0]}<br>
               N<sub>A&B</sub> = ${task2[1] + task2[2] - task2[0]}`
-              : k[1] === "|" ? `
+              : 
+              k === "|" ? `
+              N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+              N<sub>A|B</sub> = ${task2[1]} + ${task2[2]} - ${task2[0]}<br>
+              N<sub>A|B</sub> = ${task2[1] + task2[2] - task2[0]}`
+              : 
+              k === "&&" ? `
+              N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+              N<sub>A&B</sub> = ${task2[1]} + ${task2[2]} - ${task2[0]}<br>
+              N<sub>A&B</sub> = ${task2[1] + task2[2] - task2[0]}`
+              :
+              k === "||" ? `
               N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
               N<sub>A|B</sub> = ${task2[1]} + ${task2[2]} - ${task2[0]}<br>
               N<sub>A|B</sub> = ${task2[1] + task2[2] - task2[0]}`
@@ -1495,11 +1507,23 @@ int main(){
               N<sub>A</sub> = ${task2[1] + task2[2] - task2[0]}`}` 
               : 
             task2[3] === 2 ? `
-            ${k[1] === "&" ? `
+            ${
+              k === "&" ? `
               N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
               N<sub>A&B</sub> = ${task2[0]} + ${task2[2]} - ${task2[1]}<br>
               N<sub>A&B</sub> = ${task2[0] + task2[2] - task2[1]}`
-              : k[1] === "|" ? `
+              : 
+              k === "|" ? `
+              N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+              N<sub>A|B</sub> = ${task2[0]} + ${task2[2]} - ${task2[1]}<br>
+              N<sub>A|B</sub> = ${task2[0] + task2[2] - task2[1]}`
+              : 
+              k === "&&" ? `
+              N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+              N<sub>A&B</sub> = ${task2[0]} + ${task2[2]} - ${task2[1]}<br>
+              N<sub>A&B</sub> = ${task2[0] + task2[2] - task2[1]}`
+              :
+              k === "||" ? `
               N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
               N<sub>A|B</sub> = ${task2[0]} + ${task2[2]} - ${task2[1]}<br>
               N<sub>A|B</sub> = ${task2[0] + task2[2] - task2[1]}`
@@ -1509,15 +1533,28 @@ int main(){
               N<sub>A</sub> = ${task2[0] + task2[2] - task2[1]}`}` 
               : 
             task2[3] === 3 ? `
-            ${k[1] === "&" ? `
+            ${
+              k === "&" ? `
               N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
               N<sub>A&B</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
               N<sub>A&B</sub> = ${task2[0] + task2[1] - task2[2]}`
-              : k[1] === "|" ? `
+              : 
+              k === "|" ? `
               N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
               N<sub>A|B</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
               N<sub>A|B</sub> = ${task2[0] + task2[1] - task2[2]}`
-              :`
+              :
+              k === "&&" ? `
+              N<sub>A&B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A|B</sub><br>
+              N<sub>A&B</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
+              N<sub>A&B</sub> = ${task2[0] + task2[1] - task2[2]}`
+              :
+              k === "||" ? `
+              N<sub>A|B</sub> = N<sub>A</sub> + N<sub>B</sub> - N<sub>A&B</sub><br>
+              N<sub>A|B</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
+              N<sub>A|B</sub> = ${task2[0] + task2[1] - task2[2]}`
+              :
+               `
               N<sub>A</sub> = N<sub>A&B</sub> + N<sub>A|B</sub> - N<sub>B</sub><br>
               N<sub>A</sub> = ${task2[0]} + ${task2[1]} - ${task2[2]}<br>
               N<sub>A</sub> = ${task2[0] + task2[1] - task2[2]}
