@@ -60,6 +60,7 @@ async function displayTasks() {
             ${generateTaskHTML('ten', randomTasks.ten)}
             ${generateTaskHTML('eleven', randomTasks.eleven)}
             ${generateTaskHTML('twelve', randomTasks.twelve)}
+            ${generateTaskHTML('thirteen', randomTasks.thirteen)}
        
     `;
     

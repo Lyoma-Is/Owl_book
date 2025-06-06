@@ -1,0 +1,91 @@
+[
+    {
+        "taskCounter": 922,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["DEMO-13", "Малая панда"],
+        "task2": [3, 5],
+
+        "taskNum": "E3F178"
+    },
+    {
+        "taskCounter": 921,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["DEMO-13", "Белый медведь"],
+        "task2": [2, 6],
+
+        "taskNum": "2CB179"
+    },
+    {
+        "taskCounter": 920,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["ЗАДАНИЕ 13", "Душица"],
+        "task2": [3, 2],
+
+        "taskNum": "BA7571"
+    },
+    {
+        "taskCounter": 919,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["DEMO-13", "Ягуар"],
+        "task2": [3, 5],
+
+        "taskNum": "7F2470"
+    },
+    {
+        "taskCounter": 918,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["DEMO-13", "Бишон фризе"],
+        "task2": [2, 4],
+
+        "taskNum": "165603"
+    },
+    {
+        "taskCounter": 917,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["ЗАДАНИЕ 13", "Брусника"],
+        "task2": [1, 1],
+
+        "taskNum": "DE20FB"
+    },
+    {
+        "taskCounter": 916,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["ЗАДАНИЕ 13", "Крыжовник"],
+        "task2": [1, 3],
+
+        "taskNum": "622644"
+    },
+    {
+        "taskCounter": 915,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["DEMO-13", "Каракал"],
+        "task2": [1, 3],
+
+        "taskNum": "9C1F40"
+    },
+    {
+        "taskCounter": 914,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["ЗАДАНИЕ 13", "Инжир"],
+        "task2": [1, 2],
+
+        "taskNum": "AE7749"
+    },
+    {
+        "taskCounter": 913,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "task1": ["DEMO-13", "Тигр"],
+        "task2": [1, 1],
+        "taskNum": "DCAD4C"
+    }
+]

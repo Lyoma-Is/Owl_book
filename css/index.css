@@ -229,10 +229,20 @@ main .btn-primary:active {
 .task-numbers__block .p-num, .slide .p-num {
   font-size: 20px;
 }
-.task-numbers__block .img-task_9, .slide .img-task_9 {
+.task-numbers__block .img-task_9, .task-numbers__block .img-13, .slide .img-task_9, .slide .img-13 {
   display: block;
   margin: auto;
   width: 600px;
+}
+.task-numbers__block .download a, .slide .download a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #020202;
+  text-decoration: none;
+}
+.task-numbers__block .download a img, .slide .download a img {
+  width: 70px;
 }
 .task-numbers__block .span-centr, .slide .span-centr {
   display: block;

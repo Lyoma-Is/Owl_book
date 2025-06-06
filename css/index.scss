@@ -261,10 +261,21 @@ main{
     .p-num{
         font-size: 20px;
     }
-    .img-task_9{
+    .img-task_9, .img-13{
         display: block; 
         margin: auto;
         width: 600px;
+    }
+    .download a {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #020202;
+      text-decoration: none;
+
+      img {
+        width: 70px;
+      }
     }
     .span-centr{
         display: block;

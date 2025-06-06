@@ -111,6 +111,7 @@ $font-size17: 17px;
             .img-task_9{
                 width: 550px;
             }
+            
             .answer-block{
                 padding: 20px;
                 padding-top: 0;
@@ -139,6 +140,9 @@ $font-size17: 17px;
         font-size: 30px;
     }
     .task-numbers__block, .slide{
+        .img-13{
+            width: 450px;
+        }
         .table_6{
             margin: auto; 
             border-collapse: collapse;
@@ -367,7 +371,9 @@ $font-size17: 17px;
     }
     .task-numbers__block, .slide{
         font-size: 20px;
-
+        .img-13{
+            width: 300px;
+        }
         .img-task_9{
             display: block; 
             margin: auto;
@@ -651,6 +657,9 @@ $font-size17: 17px;
             margin: auto;
             width: 320px;
         }
+        .img-13{
+            width: 200px;
+        }
         .p-num{
             font-size: 12px;
         }
@@ -868,6 +877,11 @@ $font-size17: 17px;
             font-size: 15px;
             border-radius: 4px;
         }
+        .task-numbers__block, .slide{
+            .img-13{
+                width: 150px;
+            }
+        }
     }
 
   
@@ -876,6 +890,15 @@ $font-size17: 17px;
     main .main-block .aside-left ul {
         
         padding: 20px 10px;
+
     }
-  
+    main {
+        .task-numbers__block, .slide{
+            .download a {
+                img {
+                    width: 50px;
+                }
+            }
+        }
+    }   
 }

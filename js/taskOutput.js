@@ -136,7 +136,9 @@ document.getElementById('select-task').innerHTML = `
 <option value="taskNinePage.html">9. Анализ информации на схеме дорог.</option>
 <option value="taskTenPage.html">10. Запись чисел в различных системах счисления.</option>
 <option value="taskElevenPage.html">11. Поиск текста.</option>
-<option value="taskTwelvePage.html">12. Подсчет количества файлов.</option>`
+<option value="taskTwelvePage.html">12. Подсчет количества файлов.</option>
+<option value="taskThirteenPage.html">13.1 Презентация.</option>
+`
 
 
 document.getElementById('taskSort').innerHTML = `

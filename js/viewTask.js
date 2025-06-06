@@ -1,32 +1,34 @@
-// const tasks = {
-//   one: '../../../src/oge_inf/taskOne.json',
-//   two: '../../../src/oge_inf/taskTwo.json',
-//   three: '../../../src/oge_inf/taskThree.json',
-//   four:  '../../../src/oge_inf/taskFour.json',
-//   five: '../../../src/oge_inf/taskFive.json',
-//   six: '../../../src/oge_inf/taskSix.json',
-//   seven: '../../../src/oge_inf/taskSeven.json',
-//   eight: '../../../src/oge_inf/taskEight.json',
-//   nine: '../../../src/oge_inf/taskNine.json',
-//   ten: '../../../src/oge_inf/taskTen.json',
-//   eleven: '../../../src/oge_inf/taskEleven.json',
-//   twelve: '../../../src/oge_inf/taskTwelve.json' 
-// };
-
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json'
+  one: '../../../src/oge_inf/taskOne.json',
+  two: '../../../src/oge_inf/taskTwo.json',
+  three: '../../../src/oge_inf/taskThree.json',
+  four:  '../../../src/oge_inf/taskFour.json',
+  five: '../../../src/oge_inf/taskFive.json',
+  six: '../../../src/oge_inf/taskSix.json',
+  seven: '../../../src/oge_inf/taskSeven.json',
+  eight: '../../../src/oge_inf/taskEight.json',
+  nine: '../../../src/oge_inf/taskNine.json',
+  ten: '../../../src/oge_inf/taskTen.json',
+  eleven: '../../../src/oge_inf/taskEleven.json',
+  twelve: '../../../src/oge_inf/taskTwelve.json',
+  thirteen: '../../../src/oge_inf/taskThirteen.json'
 };
+
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
+//   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json'
+// };
 
 export {tasks};
 
@@ -1931,6 +1933,61 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInputD12();
           } 
+          return answerBlock
+         }
+    }
+    if (taskKey === 'thirteen'){
+      switch(typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>13.1</b> № ${taskCounter} ${generateHard()}</p> 
+          Используя информацию и иллюстративный материал, содержащийся в каталоге <b>${task1[0]}</b>, создайте презентацию из трёх слайдов на тему <b>«${task1[1]}»</b>.<br>
+          В презентации должны содержаться краткие иллюстрированные сведения
+          о внешнем виде, ареале обитания, образе жизни и рационе тигров. Все слайды должны быть выполнены в едином стиле, каждый слайд должен быть озаглавлен.<br>
+          Презентацию сохраните в файле, имя которого Вам сообщат организаторы экзамена. Файл ответа необходимо сохранить в одном из следующих форматов: *.odp, *.ppt, *.pptx.
+          <hr class="hr-pd_20">
+          <b>Требования к оформлению работы</b><hr class="hr-pd_10">
+          1. Ровно три слайда без анимации. Параметры страницы (слайда): экран (16:9), ориентация альбомная.<hr class="hr-pd_10">
+          2. Содержание, структура, форматирование шрифта и размещение изображений на слайдах:<hr class="hr-pd_10">
+          ● первый слайд – титульный слайд с названием презентации, в подзаголовке титульного слайда в качестве информации об авторе презентации указывается идентификационный номер участника экзамена;<hr class="hr-pd_10">
+          ● второй слайд – основная информация в соответствии с заданием, размещённая по образцу на рисунке макета слайда 2:<hr class="hr-pd_10">
+          &emsp;• заголовок слайда;<hr class="hr-pd_10">
+          &emsp;• два изображения;<hr class="hr-pd_10">
+          &emsp;• два блока текста;<hr class="hr-pd_10">
+          ● третий слайд – дополнительная информация по теме презентации, размещённая по образцу на рисунке макета слайда 3:<hr class="hr-pd_10">
+          &emsp;• заголовок слайда;<hr class="hr-pd_10">
+          &emsp;• три изображения;<hr class="hr-pd_10">
+          &emsp;• три блока текста.<hr class="hr-pd_10">
+          На макетах слайдов существенным является наличие всех объектов, включая заголовки, их взаимное расположение. 
+          Выравнивание объектов, ориентация изображений выполняются произвольно в соответствии с замыслом автора работы и служат наилучшему раскрытию темы.<hr class="hr-pd_20">
+          <table class="table_2_3">
+            <tbody>
+              <tr >
+                <td><img class="img-13" src="../../../img/task13/task13_1.png"></td> 
+                <td>Макет 1 слайда<br> Тема презентации</td>
+              </tr>
+              <tr>
+                <td><img class="img-13" src="../../../img/task13/task13_2_${task2[0]}.png"></td> 
+                <td>Макет 2 слайда<br> Основная информация<br> по теме презентации</td>
+              </tr>
+              <tr>
+                <td><img class="img-13" src="../../../img/task13/task13_3_${task2[1]}.png"></td> 
+                <td>Макет 3 слайда<br> Дополнительная информация<br> по теме презентации</td>
+              </tr>
+          </table>
+          <hr class="hr-pd_20">
+          В презентации должен использоваться единый тип шрифта (рубленый, с засечками или моноширинный).<hr class="hr-pd_10">
+          Размер шрифта для названия презентации на титульном слайде –<hr class="hr-pd_10">
+          40 пунктов, для подзаголовка на титульном слайде и заголовков слайдов –<hr class="hr-pd_10">
+          24 пункта, для подзаголовков на втором и третьем слайдах и для основного текста – 20 пунктов.<hr class="hr-pd_10">
+          Текст не должен перекрывать основные изображения и сливаться с фоном.
+          <hr class="hr-pd_40">
+          <div class="download">  
+            <a href="../../../src/inf_file/task13/task_${taskCounter}.rar"><img src="../../../img/download.svg" alt="download" >Скачать файл</a>
+          </div>
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
           return answerBlock
          }
     }

@@ -68,12 +68,16 @@ function createSlider(tasksHTML) {
         const btn = document.createElement('button');
         btn.className = `slider-btn ${index === 0 ? 'active' : ''}`;
         btn.textContent = index + 1;
+        if (index+1 === 13){
+            btn.textContent = "13.1"
+        }
         btn.addEventListener('click', () => goToSlide(index));
         buttons.push(btn);
         navigation.appendChild(btn);
     });
     
     function goToSlide(index) {
+
         if (currentSlide === index) return;
         
         if (slides[currentSlide] && buttons[currentSlide]) {
@@ -168,7 +172,8 @@ async function displayTasks() {
         generateTaskHTML('nine', randomTasks.nine, false),
         generateTaskHTML('ten', randomTasks.ten, false),
         generateTaskHTML('eleven', randomTasks.eleven, false),
-        generateTaskHTML('twelve', randomTasks.twelve, false)
+        generateTaskHTML('twelve', randomTasks.twelve, false),
+        generateTaskHTML('thirteen', randomTasks.thirteen)
     ].filter(html => html);
 
     // Очищаем контейнер перед созданием нового слайдера
