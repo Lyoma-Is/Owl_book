@@ -97,6 +97,9 @@
   .task-numbers__block .img-13, .slide .img-13 {
     width: 450px;
   }
+  .task-numbers__block .img-13_2, .slide .img-13_2 {
+    width: 700px;
+  }
   .task-numbers__block .table_6, .slide .table_6 {
     margin: auto;
     border-collapse: collapse;
@@ -284,6 +287,9 @@
   }
   .task-numbers__block .img-13, .slide .img-13 {
     width: 300px;
+  }
+  .task-numbers__block .img-13_2, .slide .img-13_2 {
+    width: 500px;
   }
   .task-numbers__block .img-task_9, .slide .img-task_9 {
     display: block;
@@ -525,6 +531,9 @@
   .task-numbers__block .img-13, .slide .img-13 {
     width: 200px;
   }
+  .task-numbers__block .img-13_2, .slide .img-13_2 {
+    width: 350px;
+  }
   .task-numbers__block .p-num, .slide .p-num {
     font-size: 12px;
   }
@@ -730,12 +739,15 @@
   main .task-numbers__block .img-13, main .slide .img-13 {
     width: 150px;
   }
+  main .task-numbers__block .img-13_2, main .slide .img-13_2 {
+    width: 300px;
+  }
 }
 @media (max-width: 500px) {
   main .main-block .aside-left ul {
     padding: 20px 10px;
   }
   main .task-numbers__block .download a img, main .slide .download a img {
-    width: 50px;
+    width: 30px;
   }
 }/*# sourceMappingURL=media.css.map */

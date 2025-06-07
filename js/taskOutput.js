@@ -138,6 +138,7 @@ document.getElementById('select-task').innerHTML = `
 <option value="taskElevenPage.html">11. Поиск текста.</option>
 <option value="taskTwelvePage.html">12. Подсчет количества файлов.</option>
 <option value="taskThirteenPage.html">13.1 Презентация.</option>
+<option value="taskThirteenTwoPage.html">13.2 Создайте в текстовом редакторе документ.</option>
 `
 
 

@@ -234,6 +234,11 @@ main .btn-primary:active {
   margin: auto;
   width: 600px;
 }
+.task-numbers__block .img-13_2, .slide .img-13_2 {
+  display: block;
+  margin: auto;
+  width: 900px;
+}
 .task-numbers__block .download a, .slide .download a {
   display: flex;
   gap: 10px;

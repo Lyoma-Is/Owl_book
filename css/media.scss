@@ -8,14 +8,14 @@ $font-size17: 17px;
     main{  
         .main-block{
             .aside-left{ 
-            ul{
-                li{
-                    a{
-                        font-size: 20px;
+                ul{
+                    li{
+                        a{
+                            font-size: 20px;
+                        }
                     }
-                }
-            }         
-        }
+                }         
+            }
             .aside-main{
                 font-size: 20px;
             }
@@ -142,6 +142,9 @@ $font-size17: 17px;
     .task-numbers__block, .slide{
         .img-13{
             width: 450px;
+        }
+        .img-13_2{
+            width: 700px;
         }
         .table_6{
             margin: auto; 
@@ -373,6 +376,9 @@ $font-size17: 17px;
         font-size: 20px;
         .img-13{
             width: 300px;
+        }
+        .img-13_2{
+            width: 500px;
         }
         .img-task_9{
             display: block; 
@@ -660,6 +666,9 @@ $font-size17: 17px;
         .img-13{
             width: 200px;
         }
+        .img-13_2{
+            width: 350px;
+        }
         .p-num{
             font-size: 12px;
         }
@@ -881,6 +890,9 @@ $font-size17: 17px;
             .img-13{
                 width: 150px;
             }
+            .img-13_2{
+             width: 300px;
+            }
         }
     }
 
@@ -896,7 +908,7 @@ $font-size17: 17px;
         .task-numbers__block, .slide{
             .download a {
                 img {
-                    width: 50px;
+                    width: 30px;
                 }
             }
         }

@@ -71,6 +71,9 @@ function createSlider(tasksHTML) {
         if (index+1 === 13){
             btn.textContent = "13.1"
         }
+        if (index+1 === 14){
+            btn.textContent = "13.2"
+        }
         btn.addEventListener('click', () => goToSlide(index));
         buttons.push(btn);
         navigation.appendChild(btn);
@@ -173,7 +176,8 @@ async function displayTasks() {
         generateTaskHTML('ten', randomTasks.ten, false),
         generateTaskHTML('eleven', randomTasks.eleven, false),
         generateTaskHTML('twelve', randomTasks.twelve, false),
-        generateTaskHTML('thirteen', randomTasks.thirteen)
+        generateTaskHTML('thirteen', randomTasks.thirteen),
+        generateTaskHTML('thirteentwo', randomTasks.thirteentwo)
     ].filter(html => html);
 
     // Очищаем контейнер перед созданием нового слайдера

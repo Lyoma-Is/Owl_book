@@ -11,7 +11,8 @@ const tasks = {
   ten: '../../../src/oge_inf/taskTen.json',
   eleven: '../../../src/oge_inf/taskEleven.json',
   twelve: '../../../src/oge_inf/taskTwelve.json',
-  thirteen: '../../../src/oge_inf/taskThirteen.json'
+  thirteen: '../../../src/oge_inf/taskThirteen.json',
+  thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json'
 };
 
 // const tasks = {
@@ -27,7 +28,8 @@ const tasks = {
 //   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
 //   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
 //   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
-//   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json'
+//   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
+//   thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json'
 // };
 
 export {tasks};
@@ -1980,11 +1982,38 @@ int main(){
           40 пунктов, для подзаголовка на титульном слайде и заголовков слайдов –<hr class="hr-pd_10">
           24 пункта, для подзаголовков на втором и третьем слайдах и для основного текста – 20 пунктов.<hr class="hr-pd_10">
           Текст не должен перекрывать основные изображения и сливаться с фоном.
-          <hr class="hr-pd_40">
+          <hr class="hr-pd_20">
           <div class="download">  
             <a href="../../../src/inf_file/task13/task_${taskCounter}.rar"><img src="../../../img/download.svg" alt="download" >Скачать файл</a>
           </div>
           <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          return answerBlock
+         }
+    }
+    if (taskKey === 'thirteentwo'){
+      switch(typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>13.2</b> № ${taskCounter} ${generateHard()}</p> 
+          Создайте в текстовом редакторе документ и напишите в нём следующий текст, точно воспроизведя всё оформление текста, имеющееся в образце.<hr class="hr-pd_10">
+          Данный текст должен быть набран шрифтом размером 14 пунктов обычного начертания. Отступ первой строки абзацев основного текста – 1 см.<hr class="hr-pd_10">
+          Расстояние между строками текста не менее одинарного, но не более полуторного междустрочного интервала.<hr class="hr-pd_10">
+          Основной текст выровнен по ширине;<br>
+          ${task1}<br>
+          ${task2}<br>
+          ${task3}<hr class="hr-pd_10">
+          В основном тексте и таблице есть слова, выделенные полужирным шрифтом, курсивом или подчёркиванием. 
+          Таблица выровнена на странице по центру горизонтали. Ширина таблицы меньше ширины основного текста.<hr class="hr-pd_10">
+
+          При этом допустимо, чтобы ширина Вашего текста отличалась от ширины текста в примере, поскольку ширина текста зависит от размеров страницы и полей. 
+          В этом случае разбиение текста на строки должно соответствовать стандартной ширине абзаца.<br>
+          Интервал между заголовком текста и текстом, между абзацами текста, между текстом и таблицей не менее 12 пунктов, но не более 24 пунктов.<hr class="hr-pd_10">
+          Текст сохраните в файле, имя которого Вам сообщат организаторы.<br>
+          Файл ответа необходимо сохранить в одном из следующих форматов: *.odt, или *.doc, или *.docx.<hr class="hr-pd_10">
+          <hr>
+          <img class="img-13_2" src="../../../img/task13.2/task13.2_${taskCounter}.png"
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
