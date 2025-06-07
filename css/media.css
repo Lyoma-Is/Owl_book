@@ -750,4 +750,7 @@
   main .task-numbers__block .download a img, main .slide .download a img {
     width: 30px;
   }
+  main .main-block .aside-left ul {
+    padding-left: 20px;
+  }
 }/*# sourceMappingURL=media.css.map */
