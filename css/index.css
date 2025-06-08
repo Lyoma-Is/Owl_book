@@ -304,6 +304,15 @@ main .btn-primary:active {
   border: 1px solid;
   padding: 10px;
 }
+.task-numbers__block .table_16, .slide .table_16 {
+  border-collapse: collapse;
+}
+.task-numbers__block .table_16 td, .slide .table_16 td {
+  vertical-align: top;
+  font-size: 90%;
+  border: 1px solid;
+  padding: 10px;
+}
 
 .info-taskThree {
   padding: 15px;

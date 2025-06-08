@@ -141,6 +141,7 @@ document.getElementById('select-task').innerHTML = `
 <option value="taskThirteenTwoPage.html">13.2 Создайте в текстовом редакторе документ.</option>
 <option value="taskFourteenPage.html">14. Обработка большого массива данных.</option>
 <option value="taskFifteenPage.html">15. Исполнитель Робот.</option>
+<option value="taskSixteenPage.html">16. Напиши программу.</option>
 `
 
 

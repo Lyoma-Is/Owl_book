@@ -14,7 +14,8 @@ const tasks = {
   thirteen: '../../../src/oge_inf/taskThirteen.json',
   thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
   fourteen: '../../../src/oge_inf/taskFourteen.json',
-  fifteen: '../../../src/oge_inf/taskFifteen.json'
+  fifteen: '../../../src/oge_inf/taskFifteen.json',
+  sixteen: '../../../src/oge_inf/taskSixteen.json'
 };
 
 // const tasks = {
@@ -33,7 +34,8 @@ const tasks = {
 //   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
 //   thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json',
 //   fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json',
-//   fifteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFifteen.json'
+//   fifteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFifteen.json',
+//   sixteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSixteen.json'
 // };
 
 export {tasks};
@@ -2104,6 +2106,32 @@ int main(){
 
           Алгоритм может быть выполнен в среде формального исполнителя или записан в текстовом редакторе. 
           Сохраните алгоритм в формате программы Кумир или в текстовом файле. Название файла и каталог для сохранения Вам сообщат организаторы экзамена.
+          `
+          answerBlock += generateDate();
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+  
+          return answerBlock
+         }
+    }
+    if (taskKey === 'sixteen'){
+      switch(typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>16</b>. № ${taskCounter} ${generateHard()}</p> 
+          Дайте развернутый ответ.<hr class="hr-pd_10">
+          ${task1}<hr class="hr-pd_10">
+          ${task2}<hr class="hr-pd_10">
+          ${task3}<hr class="hr-pd_10">
+          <em>Пример работы программы</em><hr class="hr-pd_10">
+          <table class="table_16">
+            <tr>
+              <td>Входные данные</td>
+              <td>Выходные данные</td>
+            </tr>
+            <tr>
+              <td>${task4}</td>
+              <td>${task5}</td>
+            </tr>
+          </table>
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
