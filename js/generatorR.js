@@ -316,17 +316,18 @@ function addSliderStyles() {
             padding: 5px 0;
             font-size: 25px; 
             line-height: 2.5rem;
+            
         }
+
         .slide {
             min-width: 100%;    
             box-sizing: border-box;
-            display: none;
-            
+            display: none;     
         }
         .slide.active {
             display: block;
             padding: 5px 0;
-            
+            text-align: justify;     
         }
         .slider-navigation {
             display: flex;
@@ -337,6 +338,7 @@ function addSliderStyles() {
             border-bottom: 3px solid  rgb(233, 199, 105);
   
         }
+        
         .slider-btn {
             display: block;
             width: 65px;
