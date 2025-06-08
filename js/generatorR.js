@@ -74,6 +74,9 @@ function createSlider(tasksHTML) {
         if (index+1 === 14){
             btn.textContent = "13.2"
         }
+        if (index+1 > 14){
+            btn.textContent = index
+        }
         btn.addEventListener('click', () => goToSlide(index));
         buttons.push(btn);
         navigation.appendChild(btn);
@@ -177,7 +180,8 @@ async function displayTasks() {
         generateTaskHTML('eleven', randomTasks.eleven, false),
         generateTaskHTML('twelve', randomTasks.twelve, false),
         generateTaskHTML('thirteen', randomTasks.thirteen),
-        generateTaskHTML('thirteentwo', randomTasks.thirteentwo)
+        generateTaskHTML('thirteentwo', randomTasks.thirteentwo),
+        generateTaskHTML('fourteen', randomTasks.fourteen)
     ].filter(html => html);
 
     // Очищаем контейнер перед созданием нового слайдера
@@ -312,10 +316,10 @@ function addSliderStyles() {
             line-height: 2.5rem;
         }
         .slide {
-            min-width: 100%;
-            
+            min-width: 100%;    
             box-sizing: border-box;
             display: none;
+            
         }
         .slide.active {
             display: block;

@@ -356,6 +356,9 @@
     padding: 10px 15px;
     border-radius: 10px 0 0 10px;
   }
+  main .task-numbers__block .download a img, main .slide .download a img {
+    width: 40px;
+  }
   main .slider-navigation {
     display: grid;
     grid-template-columns: repeat(8, 1fr);

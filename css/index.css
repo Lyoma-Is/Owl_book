@@ -247,7 +247,7 @@ main .btn-primary:active {
   text-decoration: none;
 }
 .task-numbers__block .download a img, .slide .download a img {
-  width: 70px;
+  width: 55px;
 }
 .task-numbers__block .span-centr, .slide .span-centr {
   display: block;

@@ -452,7 +452,15 @@ $font-size17: 17px;
         border-radius: 10px 0 0 10px;  
         
     } 
-
+    main {
+        .task-numbers__block, .slide{
+            .download a {
+                img {
+                    width: 40px;
+                }
+            }
+        }
+    } 
     main{  
         .slider-navigation{
             display: grid;

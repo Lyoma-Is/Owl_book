@@ -139,6 +139,7 @@ document.getElementById('select-task').innerHTML = `
 <option value="taskTwelvePage.html">12. Подсчет количества файлов.</option>
 <option value="taskThirteenPage.html">13.1 Презентация.</option>
 <option value="taskThirteenTwoPage.html">13.2 Создайте в текстовом редакторе документ.</option>
+<option value="taskFourteenPage.html">14. Обработка большого массива данных.</option>
 `
 
 

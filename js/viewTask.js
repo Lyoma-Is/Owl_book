@@ -12,7 +12,8 @@ const tasks = {
   eleven: '../../../src/oge_inf/taskEleven.json',
   twelve: '../../../src/oge_inf/taskTwelve.json',
   thirteen: '../../../src/oge_inf/taskThirteen.json',
-  thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json'
+  thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
+  fourteen: '../../../src/oge_inf/taskFourteen.json'
 };
 
 // const tasks = {
@@ -29,13 +30,14 @@ const tasks = {
 //   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
 //   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
 //   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
-//   thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json'
+//   thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json',
+//   fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json'
 // };
 
 export {tasks};
 
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
-    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS} = item;
+    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS} = item;
    // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num resh">Решение</summary><hr class="hr-pd_10">`;
@@ -1990,6 +1992,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+  
           return answerBlock
          }
     }
@@ -2017,6 +2020,31 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          return answerBlock
+         }
+    }
+    if (taskKey === 'fourteen'){
+      switch(typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>14</b>. № ${taskCounter} ${generateHard()}</p> 
+          ${task1} Ниже приведены первые пять строк таблицы.
+          <img class="img-13_2" src="../../../img/task14/task14_${taskCounter}.png">
+          ${task2}<br>
+          ${task3}<br>          
+          Откройте файл с данной электронной таблицей (расположение файла Вам сообщат организаторы экзамена). 
+          На основании данных, содержащихся в этой таблице, выполните задания.<hr class="hr-pd_10">          
+          ${task4}<hr class="hr-pd_10"> 
+          ${task5}<hr class="hr-pd_10">          
+          ${task6}<hr class="hr-pd_10"> 
+
+          Полученную таблицу необходимо сохранить под именем, указанным организаторами экзамена.<hr class="hr-pd_10">
+          <div class="download">  
+            <a href="../../../src/inf_file/task14/task14_${taskCounter}.xlsx"><img src="../../../img/download.svg" alt="download" >Скачать файл</a>
+          </div>
+          `
+          answerBlock += generateDate();
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+  
           return answerBlock
          }
     }
