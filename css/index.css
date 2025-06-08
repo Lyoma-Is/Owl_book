@@ -239,6 +239,9 @@ main .btn-primary:active {
   margin: auto;
   width: 900px;
 }
+.task-numbers__block .img-14, .slide .img-14 {
+  width: 30%;
+}
 .task-numbers__block .download a, .slide .download a {
   display: flex;
   gap: 10px;

@@ -13,7 +13,8 @@ const tasks = {
   twelve: '../../../src/oge_inf/taskTwelve.json',
   thirteen: '../../../src/oge_inf/taskThirteen.json',
   thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
-  fourteen: '../../../src/oge_inf/taskFourteen.json'
+  fourteen: '../../../src/oge_inf/taskFourteen.json',
+  fifteen: '../../../src/oge_inf/taskFifteen.json'
 };
 
 // const tasks = {
@@ -31,7 +32,8 @@ const tasks = {
 //   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
 //   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
 //   thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json',
-//   fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json'
+//   fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json',
+//   fifteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFifteen.json'
 // };
 
 export {tasks};
@@ -2041,6 +2043,67 @@ int main(){
           <div class="download">  
             <a href="../../../src/inf_file/task14/task14_${taskCounter}.xlsx"><img src="../../../img/download.svg" alt="download" >Скачать файл</a>
           </div>
+          `
+          answerBlock += generateDate();
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+  
+          return answerBlock
+         }
+    }
+    if (taskKey === 'fifteen'){
+      switch(typeTask){
+        case 1:
+          answerBlock += `<p class="p-num"><b>15</b>. № ${taskCounter} ${generateHard()}</p> 
+          Дайте развернутый ответ.
+          <hr class="hr-pd_10"> 
+          <details><summary >Развернуть описание</summary>
+          <hr class="hr-pd_10">
+            Исполнитель Робот умеет перемещаться по лабиринту, начерченному на плоскости, разбитой на клетки. 
+            Между соседними (по сторонам) клетками может стоять стена, через которую Робот пройти не может.<br>
+            У Робота есть девять команд. Четыре команды – это команды-приказы:<br>
+            &emsp;<b>вверх   вниз   влево   вправо</b><br>
+            При выполнении любой из этих команд Робот перемещается на одну клетку соответственно: вверх ↑, вниз ↓, влево ←, вправо →. 
+            Если Робот получит команду передвижения сквозь стену, то он разрушится.<br>
+            Также у Робота есть команда <b>закрасить</b>. При её выполнении закрашивается клетка, в которой Робот находится в настоящий момент.
+            Ещё четыре команды – это команды проверки условий. Эти команды проверяют, свободен ли путь для Робота в каждом из четырёх возможных направлений:<br>
+            &emsp;<b>сверху свободно   снизу свободно   слева свободно   справа свободно</b><br>
+
+            Эти команды можно использовать вместе с условием «eсли», имеющим следующий вид:<br>
+            если условие то<br>
+            последовательность команд<br>
+            все<br>
+            Здесь условие – одна из команд проверки условия.<br>
+            Последовательность команд – это одна или несколько любых команд-приказов.<br>
+            Например, для передвижения на одну клетку вправо, если справа нет стенки, и закрашивания клетки можно использовать такой алгоритм:<br>
+            если справа свободно то<br>
+            вправо<br>
+            закрасить<br>
+            все<br>
+            В одном условии можно использовать несколько команд проверки условий, применяя логические связки и, или, не, например:<br>
+            если (справа свободно) и (не снизу свободно) то<br>
+            вправо<br>
+            все<br>
+            Для повторения последовательности команд можно использовать цикл «пока», имеющий следующий вид:<br>
+            нц пока условие<br>
+            последовательность команд<br>
+            кц<br>
+            Например, для движения вправо, пока это возможно, можно использовать следующий алгоритм:<br>
+            нц пока справа свободно<br>
+            вправо<br>
+            кц<br>
+          </details>
+          <hr class="hr-pd_20">
+          `
+          answerBlock += `<b><em>Выполните задание.</em></b><hr class="hr-pd_10">
+          ${task1}</b><br>
+          На рисунке указан один из возможных способов расположения стен и Робота (Робот обозначен буквой «Р»).<hr class="hr-pd_10">
+          <img class="img-14" src="../../../img/task15/task15_${taskCounter}_1.png"></b><hr class="hr-pd_10">
+          ${task2}</b><hr class="hr-pd_10">
+          <img class="img-14" src="../../../img/task15/task15_${taskCounter}_2.png"></b><hr class="hr-pd_10">
+          ${task3}</b><hr class="hr-pd_10">
+
+          Алгоритм может быть выполнен в среде формального исполнителя или записан в текстовом редакторе. 
+          Сохраните алгоритм в формате программы Кумир или в текстовом файле. Название файла и каталог для сохранения Вам сообщат организаторы экзамена.
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
