@@ -640,6 +640,69 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             answerBlock += generateInput();
           } 
           return answerBlock                              
+        case 3:
+          answerBlock =`
+            <p class="p-num"><b>4.</b> № ${taskCounter} ${generateHard()}</p> 
+            <p>${task1}</p>
+            
+            <hr class="hr-pd_20">
+            ${ taskTableV.length === 4 ? 
+            `
+            <table class="table_4">
+              <tbody>
+                <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td></tr>
+                <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td></tr>
+                <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[4]}</td><td>${taskTableS[5]}</td></tr>
+                <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[4]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[6]}</td></tr>
+                <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[5]}</td><td>${taskTableS[6]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr> 
+              </tbody>
+            </table>
+  
+            `: taskTableV.length === 5 ? 
+            `
+            <table class="table_4">
+              <tbody>
+                <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td><td>${taskTableV[4]}</td></tr>
+                <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td><td>${taskTableS[4]}</td></tr>
+                <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[5]}</td><td>${taskTableS[6]}</td><td>${taskTableS[7]}</td></tr>
+                <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[5]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[8]}</td><td>${taskTableS[9]}</td></tr>
+                <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[6]}</td><td>${taskTableS[8]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[10]}</td></tr>
+                <tr><td>${taskTableV[4]}</td><td>${taskTableS[4]}</td><td>${taskTableS[7]}</td><td>${taskTableS[9]}</td><td>${taskTableS[10]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr> 
+              </tbody>
+            </table>
+  
+            `: taskTableV.length === 6 ? 
+            `
+            <table class="table_4">
+              <tbody>
+                <tr><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableV[0]}</td><td>${taskTableV[1]}</td><td>${taskTableV[2]}</td><td>${taskTableV[3]}</td><td>${taskTableV[4]}</td><td>${taskTableV[5]}</td></tr>
+                <tr><td>${taskTableV[0]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[1]}</td><td>${taskTableS[2]}</td><td>${taskTableS[3]}</td><td>${taskTableS[4]}</td><td>${taskTableS[5]}</td></tr>
+                <tr><td>${taskTableV[1]}</td><td>${taskTableS[1]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[6]}</td><td>${taskTableS[7]}</td><td>${taskTableS[8]}</td><td>${taskTableS[9]}</td></tr>
+                <tr><td>${taskTableV[2]}</td><td>${taskTableS[2]}</td><td>${taskTableS[6]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[10]}</td><td>${taskTableS[11]}</td><td>${taskTableS[12]}</td></tr>
+                <tr><td>${taskTableV[3]}</td><td>${taskTableS[3]}</td><td>${taskTableS[7]}</td><td>${taskTableS[10]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[13]}</td><td>${taskTableS[14]}</td></tr>
+                <tr><td>${taskTableV[4]}</td><td>${taskTableS[4]}</td><td>${taskTableS[8]}</td><td>${taskTableS[11]}</td><td>${taskTableS[13]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td><td>${taskTableS[15]}</td></tr>
+                <tr><td>${taskTableV[5]}</td><td>${taskTableS[5]}</td><td>${taskTableS[9]}</td><td>${taskTableS[12]}</td><td>${taskTableS[14]}</td><td>${taskTableS[15]}</td><td style="background-color: #ffbf80;">${taskTableS[0]}</td></tr>  
+              </tbody>
+            </table>
+  
+            `: ""}  
+            <hr class="hr-pd_20">
+            <p>${task2}</p>
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+                <hr class="hr-pd_10">
+                <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
+                <hr class="hr-pd_20">
+                Кратчайший путь: ${taskAnswer[1]} = ${taskAnswer[0]} км
+                <hr class="hr-pd_20">
+                Ответ: <b>${taskAnswer[0]}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock  
         }    
     }
     if (taskKey === 'five'){
