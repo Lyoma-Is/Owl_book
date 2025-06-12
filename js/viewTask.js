@@ -1,42 +1,42 @@
-// const tasks = {
-//   one: '../../../src/oge_inf/taskOne.json',
-//   two: '../../../src/oge_inf/taskTwo.json',
-//   three: '../../../src/oge_inf/taskThree.json',
-//   four:  '../../../src/oge_inf/taskFour.json',
-//   five: '../../../src/oge_inf/taskFive.json',
-//   six: '../../../src/oge_inf/taskSix.json',
-//   seven: '../../../src/oge_inf/taskSeven.json',
-//   eight: '../../../src/oge_inf/taskEight.json',
-//   nine: '../../../src/oge_inf/taskNine.json',
-//   ten: '../../../src/oge_inf/taskTen.json',
-//   eleven: '../../../src/oge_inf/taskEleven.json',
-//   twelve: '../../../src/oge_inf/taskTwelve.json',
-//   thirteen: '../../../src/oge_inf/taskThirteen.json',
-//   thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
-//   fourteen: '../../../src/oge_inf/taskFourteen.json',
-//   fifteen: '../../../src/oge_inf/taskFifteen.json',
-//   sixteen: '../../../src/oge_inf/taskSixteen.json'
-// };
- 
 const tasks = {
-  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
-  thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
-  thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json',
-  fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json',
-  fifteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFifteen.json',
-  sixteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSixteen.json'
+  one: '../../../src/oge_inf/taskOne.json',
+  two: '../../../src/oge_inf/taskTwo.json',
+  three: '../../../src/oge_inf/taskThree.json',
+  four:  '../../../src/oge_inf/taskFour.json',
+  five: '../../../src/oge_inf/taskFive.json',
+  six: '../../../src/oge_inf/taskSix.json',
+  seven: '../../../src/oge_inf/taskSeven.json',
+  eight: '../../../src/oge_inf/taskEight.json',
+  nine: '../../../src/oge_inf/taskNine.json',
+  ten: '../../../src/oge_inf/taskTen.json',
+  eleven: '../../../src/oge_inf/taskEleven.json',
+  twelve: '../../../src/oge_inf/taskTwelve.json',
+  thirteen: '../../../src/oge_inf/taskThirteen.json',
+  thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
+  fourteen: '../../../src/oge_inf/taskFourteen.json',
+  fifteen: '../../../src/oge_inf/taskFifteen.json',
+  sixteen: '../../../src/oge_inf/taskSixteen.json'
 };
+ 
+// const tasks = {
+//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
+//   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
+//   thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json',
+//   fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json',
+//   fifteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFifteen.json',
+//   sixteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSixteen.json'
+// };
 
 export {tasks};
 
@@ -51,13 +51,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD12 = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
-
+// ${generateAuthor()}
     let answerBlock = "";
 
     if (taskKey === 'one'){
       switch(typeTask){
          case 1:         
-            answerBlock += `<p class="p-num"><b>1.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p>
+            answerBlock += `<p class="p-num"><b>1.</b> № ${taskCounter}  ${generateAuthor()} ${generateHard()}</p>
               <p>${task1}</p>
               <hr class="hr-pd_20">
               <p><em>${task2}</em>
@@ -131,7 +131,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             return answerBlock
          case 2:
             answerBlock += `
-                <p class="p-num"><b>1.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p>
+                <p class="p-num"><b>1.</b> № ${taskCounter}  ${generateAuthor()} ${generateHard()}</p>
 
                 <p>${task1}</p>
                 <hr class="hr-pd_20">
@@ -446,7 +446,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock =`
-          <p class="p-num"><b>3.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p class="p-num"><b>3.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>${task1}</p>
            <hr class="hr-pd_20">
             <span class="span-centr">${task2}</span>
@@ -479,7 +479,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock =`
-          <p class="p-num"><b>3.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p class="p-num"><b>3.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>${task1}</p>
            <hr class="hr-pd_20">
             <span class="span-centr">${task2}</span>
@@ -1525,7 +1525,7 @@ int main(){
       } 
       switch(typeTask){       
         case 1: 
-          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
           <hr class="hr-pd_10">
           В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
@@ -1647,7 +1647,7 @@ int main(){
           } 
           return answerBlock
         case 2:
-          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()} </p> 
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
          <hr class="hr-pd_10">
           В таблице приведены запросы и количество найденных по ним страниц некоторого сегмента сети Интернет.</p>
@@ -1708,7 +1708,7 @@ int main(){
           } 
           return answerBlock
         case 3:
-          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateHard()} ${generateAuthor()}</p> 
+          answerBlock += `<p class="p-num"><b>8.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()} </p> 
           <p>Некоторый сегмент сети Интернет состоит из 1000 сайтов. Поисковый сервер в автоматическом режиме составил таблицу ключевых слов для сайтов этого сегмента. Вот её фрагмент.</p>
           <hr class="hr-pd_20">
           <table class="table_6">
@@ -1891,7 +1891,7 @@ int main(){
       switch(typeTask){     
         case 1:
           answerBlock =`
-            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateHard()}</p>
+            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p>
             Переведите число <b>${taskAn[0]}</b> из десятичной системы счисления в двоичную систему счисления.
             ${taskAn[2] === 0 ? `Сколько нулей содержит полученное число? В ответе укажите одно число – количество нулей.` :
               taskAn[2] === 1 ? `Сколько единиц содержит полученное число? В ответе укажите одно число – количество единиц.` :
@@ -1910,7 +1910,7 @@ int main(){
           return answerBlock
         case 2:
           answerBlock =`
-            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateHard()}</p>
+            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p>
             ${taskAn[2] === 1 ? `Переведите число <b>${taskAn[0]}</b> из двоичной системы счисления в десятичную систему счисления. В ответе запишите полученное число.`: 
               taskAn[2] === 2 ? `Некоторое число в двоичной системе счисления записывается как <b>${taskAn[0]}</b>. Запишите это число в десятичной системе.`: 
               `Переведите двоичное число <b>${taskAn[0]}</b> в десятичную систему счисления.`
@@ -1938,7 +1938,7 @@ int main(){
   
           summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
           answerBlock =`
-            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateHard()}</p>
+            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateAuthor()}  ${generateHard()}</p>
             <p>Вычислите значение арифметического выражения:</p>
             <hr class="hr-pd_10">
             <span class="span-centr">${taskAn[0]}<sub>2</sub> ${taskAn[3]} ${taskAn[1]}<sub>8</sub> ${taskAn[4]} ${taskAn[2]}<sub>16</sub></span>
@@ -1962,12 +1962,37 @@ int main(){
             answerBlock += generateInput();
           } 
           return answerBlock
-      } 
+        case 4:
+          answerBlock =`
+            <p class="p-num"><b>10.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p>
+            <p>Определите ${task} среди чисел, записанных в двоичной, восьмеричной и шестнадцатеричной системах счисления:</p>
+            <hr class="hr-pd_10">
+            <span class="span-centr">${taskAn[0]}<sub>2</sub> , ${taskAn[1]}<sub>8</sub> , ${taskAn[2]}<sub>16</sub></span>
+            <hr class="hr-pd_10">
+            <p>В ответе запишите число десятичной системе счисления. Основание  системы счисления указывать не нужно.</p>
+            <hr class="hr-pd_20">`
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+              ${taskAn[0]}<sub>2</sub> = ${parseInt(taskAn[0], 2)}<sub>10</sub>
+              <hr class="hr-pd_10">
+              ${taskAn[1]}<sub>8</sub> = ${parseInt(taskAn[1], 8)}<sub>10</sub>
+              <hr class="hr-pd_10">
+              ${taskAn[2]}<sub>16</sub> = ${parseInt(taskAn[2], 16)}<sub>10</sub>
+              <hr class="hr-pd_20">
+              
+              Ответ: ${taskAnswer}`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        } 
     }  
     if (taskKey === 'eleven'){
       switch(typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>11.</b> № ${taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>11.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>${task1}</p>
           <p>${task2}</p>      
           <hr class="hr-pd_10">
@@ -1992,7 +2017,7 @@ int main(){
     if (taskKey === 'twelve'){
       switch(typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>12.</b> № ${taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>12.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>${task1}</p>
           <p>В ответе укажите только число.</p>      
           <hr class="hr-pd_10">

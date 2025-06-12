@@ -1,5 +1,34 @@
 [
     {
+        "taskCounter": 1068,
+        "typeTask": 4,
+        "task": "наибольшее",
+        "taskAuthor": "Основная волна 26.05.25",
+        "taskAnswer": 300,
+        "taskAn": [100001000, 454, "D5"],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 1067,
+        "typeTask": 4,
+        "task": "наибольшее",
+        "taskAuthor": "Основная волна 26.05.25",
+        "taskAnswer": 498,
+        "taskAn": [111110010, 630, "15C"],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 1066,
+        "typeTask": 3,
+        "taskAuthor": "Основная волна 26.05.25",
+        "taskAnswer": 1076,
+        "taskAn": [11011011, 1110, 111, "+", "+"],
+
+        "taskNum": "BB3ADC"
+    },
+    {
         "taskCounter": 737,
         "typeTask": 1,
         "taskAnswer": 4,
