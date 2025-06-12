@@ -1,10 +1,668 @@
 [
     {
-        "taskCounter": 268,
+        "taskCounter": 1050,
         "typeTask": 1,
+        "taskAuthor": "Основная волна 26.05.25",
+        "taskAnswer": 19,
+        "task2": ["А, Б, В, Г, Д, Е, Ж, З, И, К и Л",  "из города А в город Л", ""],
+
+        "taskNum": "3BD6B2"
+    },    
+    {
+        "taskCounter": 1049,
+        "taskAuthor": "Основная волна 26.05.25",
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "B91954"
+    },
+    {
+        "taskCounter": 1048,
+        "taskAuthor": "Основная волна 26.05.25",
+        "typeTask": 1,
+        
+        "taskAnswer": 9,
+
+        "task2": ["A, B, C, D, E, F, G, H",  "из пункта А в пункт H", ""],
+
+        "taskNum": "42D3BF"
+    },
+    {
+        "taskCounter": 1047,
+
+        "typeTask": 3,
+        
+        "taskAnswer": 16,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, 3, И, К, Л, М",  "из города А в город М, ", "проходящих через город Л, но не проходящих через город Е"],
+
+        "taskNum": "11027"
+    },
+    {
+        "taskCounter": 1046,
+        "typeTask": 3,
+        "taskAnswer": 9,
+        "task2": ["А, Б, В, Г, Д, Е, Ж, И, К",  "из пункта А в пункт Л, ", "не проходящих через пункт Е"],
+
+        "taskNum": "10256"
+    },
+    {
+        "taskCounter": 1045,
+
+        "typeTask": 3,
+        
+        "taskAnswer": 16,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, 3, И, К, Л, М",  "из города А в город М, ", "проходящих через город Ж, но не проходящих через город К"],
+
+        "taskNum": "11025"
+    },
+    {
+        "taskCounter": 1044,
+
+        "typeTask": 3,
+        
+        "taskAnswer": 5,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, И, К",  "из города А в город К, ", "не проходящих через пункт В"],
+
+        "taskNum": "11024"
+    },
+    {
+        "taskCounter": 1043,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["A, B, C, D, E, F, G",  "из города A в город G", ""],
+
+        "taskNum": "318704"
+    },
+    {
+        "taskCounter": 1042,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "348576"
+    },
+    {
+        "taskCounter": 1041,
+
+        "typeTask": 1,
+        
         "taskAnswer": 10,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, З, И, К",  "из города А в город К", ""],
+
+        "taskNum": "c6457A"
+    },
+    {
+        "taskCounter": 1040,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["A, B, C, D, E, F, G, H",  "из пункта А в пункт H", ""],
+
+        "taskNum": "e8FD7c"
+    },
+    {
+        "taskCounter": 1039,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "EDBA0C"
+    },
+    {
+        "taskCounter": 1038,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "F1E6B6"
+    },
+    {
+        "taskCounter": 1037,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "DD0BB6"
+    },
+    {
+        "taskCounter": 1036,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "C520BE"
+    },
+    {
+        "taskCounter": 1035,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "937DB7"
+    },
+    {
+        "taskCounter": 1034,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 10,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "EA32B6"
+    },
+    {
+        "taskCounter": 1033,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "3096B1"
+    },
+    {
+        "taskCounter": 1032,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "3AD0B5"
+    },
+    {
+        "taskCounter": 1031,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 9,
+
+        "task2": ["A, B, C, D, E, F, G, H",  "из города А в город F", ""],
+
+        "taskNum": "3178BD"
+    },
+    {
+        "taskCounter": 1030,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 9,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "04B014"
+    },
+    {
+        "taskCounter": 1029,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "D7BA1E"
+    },
+    {
+        "taskCounter": 1028,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 9,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "569918"
+    },
+    {
+        "taskCounter": 1027,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 10,
+
         "task2": ["A, B, C, D, E, F, G, H",  "из города А в город H", ""],
-        "date": "12.04.2025",
+
+        "taskNum": "e5c61c"
+    },
+    {
+        "taskCounter": 1026,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["A, B, C, D, E, F",  "из города А в город F", ""],
+
+        "taskNum": "4B7e2e"
+    },
+    {
+        "taskCounter": 1025,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 9,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "002729"
+    },
+    {
+        "taskCounter": 1024,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 14,
+
+        "task2": ["А, B, C, D, E, G, H, F",  "из города А в город D", ""],
+
+        "taskNum": "B9A72D"
+    },
+    {
+        "taskCounter": 1023,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 12,
+
+        "task2": ["A, B, C, D, E, F, G",  "из города А в город G", ""],
+
+        "taskNum": "53c12A"
+    },
+    {
+        "taskCounter": 1022,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 12,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "50A528"
+    },
+    {
+        "taskCounter": 1021,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 13,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "E6ED27"
+    },
+    {
+        "taskCounter": 1020,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 12,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "61E423"
+    },
+    {
+        "taskCounter": 1019,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["A, B, C, D, E, F, G",  "из города А в город G", ""],
+
+        "taskNum": "4FB7DB"
+    },
+    {
+        "taskCounter": 1018,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["A, B, C, D, E, F, G",  "из города А в город G", ""],
+
+        "taskNum": "32A3D9"
+    },
+    {
+        "taskCounter": 1017,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "B91954"
+    },
+    {
+        "taskCounter": 1016,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "B0C254"
+    },
+    {
+        "taskCounter": 1015,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 17,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, З, И, К и Л",  "из города А в город Л", ""],
+
+        "taskNum": "2D3359"
+    },
+    {
+        "taskCounter": 1014,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 10,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "5ED954"
+    },
+    {
+        "taskCounter": 1013,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 10,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "343951"
+    },
+    {
+        "taskCounter": 1012,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, B, C, D, E, F, G, H",  "из города А в город D", ""],
+
+        "taskNum": "4178A6"
+    },
+    {
+        "taskCounter": 1011,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 9,
+
+        "task2": ["A, B, C, D, E, F",  "из города А в город F", ""],
+
+        "taskNum": "0F72Ac"
+    },
+    {
+        "taskCounter": 1010,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 12,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, З, И, К",  "из города А в город К", ""],
+
+        "taskNum": "B97cA2"
+    },
+    {
+        "taskCounter": 1009,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 11,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "6BD9AB"
+    },
+    {
+        "taskCounter": 1008,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "82DBA4"
+    },
+    {
+        "taskCounter": 1007,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "7DCCC3"
+    },
+    {
+        "taskCounter": 1006,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "B898C4"
+    },
+    {
+        "taskCounter": 1005,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "FF4696"
+    },
+    {
+        "taskCounter": 1004,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 10,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "1D63E5"
+    },
+    {
+        "taskCounter": 1003,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж и К",  "из города А в город К", ""],
+
+        "taskNum": "08AD6A"
+    },
+    {
+        "taskCounter": 1002,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "8D5169"
+    },
+    {
+        "taskCounter": 1001,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "33203D"
+    },
+    {
+        "taskCounter": 1000,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "741380"
+    },
+    {
+        "taskCounter": 999,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "56A882"
+    },
+    {
+        "taskCounter": 998,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["А, Б, В, Г, Д, Е, К",  "из города А в город К", ""],
+
+        "taskNum": "658688"
+    },
+    {
+        "taskCounter": 997,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 7,
+
+        "task2": ["A, B, C, D, E, F, G",  "из города A в город D", ""],
+
+        "taskNum": "2A88cF"
+    },
+    {
+        "taskCounter": 996,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 10,
+
+        "task2": ["A, B, C, D, E, F, G, H",  "из города А в город D", ""],
+
+        "taskNum": "c5B2c0"
+    },
+    {
+        "taskCounter": 995,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 19,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, З, И, К и Л",  "из города А в город Л", ""],
+
+        "taskNum": "c49694"
+    },
+    {
+        "taskCounter": 994,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 8,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, З",  "из города А в город З", ""],
+
+        "taskNum": "4759eA"
+    },
+    {
+        "taskCounter": 993,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж, З",  "из города А в город З", ""],
+
+        "taskNum": "4FA9ec"
+    },
+    {
+        "taskCounter": 992,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 9,
+
+        "task2": ["А, Б, В, Г, Д, Е, Ж",  "из города А в город Ж", ""],
+
+        "taskNum": "5AD0eF"
+    },
+    {
+        "taskCounter": 991,
+
+        "typeTask": 1,
+        
+        "taskAnswer": 6,
+
+        "task2": ["A, B, C, D, E, F, G, H",  "из города А в город H", ""],
+
+        "taskNum": "53386c"
+    },
+    {
+        "taskCounter": 268,
+
+        "typeTask": 1,
+
+        "taskAnswer": 10,
+
+        "task2": ["A, B, C, D, E, F, G, H",  "из города А в город H", ""],
+
         "taskNum": "5F5F69"
     },
     {
@@ -132,7 +790,7 @@
         "typeTask": 1,
         "taskAnswer": 19,
         "task2": ["А, Б, В, Г, Д, Е, Ж, З, И, К и Л",  "из города А в город Л", ""],
-        "date": "12.04.2025",
+
         "taskNum": "3BD6B2"
     },
     {

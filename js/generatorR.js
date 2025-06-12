@@ -195,6 +195,8 @@ async function displayTasks() {
 
     let button = document.querySelector('#button-finish');
     document.querySelectorAll('.resh').forEach(el => {el.classList.add('reshenie');});
+    
+    
     if (button) {
         button.addEventListener('click', function() {
             // Собираем все ответы со всех слайдов
@@ -255,6 +257,7 @@ async function displayTasks() {
             // Показываем блок с разбором
             let razOtv = document.querySelector('.details-raz_otv'); 
             if (razOtv) {razOtv.classList.remove('details-raz_otv'); }
+
         });
     }
 }
@@ -270,6 +273,7 @@ function getResultText(countResult, total) {
     } else {
         return `Ваша оценка: 5 | Количество баллов: ${countResult} из ${total}`;
     }
+    
 }
 
 // Вспомогательная функция для создания таблицы результатов
@@ -364,7 +368,7 @@ function addSliderStyles() {
     `;
     document.head.appendChild(style);
 }
-
+// b3e660
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     addSliderStyles();

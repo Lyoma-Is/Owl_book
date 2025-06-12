@@ -17,7 +17,7 @@
 //   fifteen: '../../../src/oge_inf/taskFifteen.json',
 //   sixteen: '../../../src/oge_inf/taskSixteen.json'
 // };
-
+ 
 const tasks = {
   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
@@ -1794,7 +1794,7 @@ int main(){
     if (taskKey === 'nine'){
       switch(typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
           <hr class="hr-pd_20">
@@ -1814,7 +1814,7 @@ int main(){
           } 
           return answerBlock
         case 2:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
           <hr class="hr-pd_20">
@@ -1834,7 +1834,7 @@ int main(){
           } 
           return answerBlock
         case 3:
-          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>9.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
           <hr class="hr-pd_20">
