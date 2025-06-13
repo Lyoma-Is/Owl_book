@@ -1,5 +1,404 @@
 [
     {
+        "taskCounter": 1110,
+        "typeTask": 1,
+        "taskAnswer": 2435167,
+        "taskAuthor": "Основная волна 26.05.25",
+        "task1": ["net.txt", "org.ru", "http"],
+
+        "task2": "1) /<br> 2) http<br>3) org<br>4) ://<br>5) .ru<br>6) net<br>7) .txt",
+        "taskNum": "D6B794"
+    },
+    {
+        "taskCounter": 1109,
+        "typeTask": 1,
+        "taskAnswer": 4672531,
+        "taskAuthor": "Основная волна 26.05.25",
+        "task1": ["net.com", "www.ru", "http"],
+
+        "task2": "1) .com<br> 2) .ru<br>3) net<br>4) http<br>5) /<br>6) ://<br>7) www",
+        "taskNum": "9B939A"
+    },
+    {
+        "taskCounter": 1108,
+        "typeTask": 1,
+        "taskAnswer": 2531476,
+        "taskAuthor": "Основная волна 26.05.25",
+        "task1": ["name.gif", "jour.com", "ftp"],
+
+        "task2": "1) .com<br> 2) ftp<br>3) jour<br>4) /<br>5) ://<br>6) .gif<br>7) name",
+        "taskNum": "FD0C2E"
+    },
+    {
+        "taskCounter": 965,
+        "typeTask": 1,
+        "taskAnswer": 6231547,
+        "task1": ["net.txt", "html.ru", "http"],
+
+        "task2": "1) .ru<br> 2) ://<br>3) html<br>4) net<br>5) /<br>6) http<br>7) .txt",
+        "taskNum": "00DB50"
+    },
+    {
+        "taskCounter": 974,
+        "typeTask": 1,
+        "taskAnswer": 1572643,
+        "task1": ["pupil.pdf", "class.ru", "https"],
+
+        "task2": "1) https<br> 2) .ru<br>3) .pdf<br>4) pupil<br>5) ://<br>6) /<br>7) class",
+        "taskNum": "71E618"
+    },
+    {
+        "taskCounter": 1100,
+        "typeTask": 1,
+        "taskAnswer": 6354721,
+        "task1": ["sotr.pdf", "org.net", "https"],
+
+        "task2": "1) .pdf<br> 2) sotr<br>3) ://<br>4) .net<br>5) org<br>6) https<br>7) /",
+        "taskNum": "57B3C6"
+    },
+    {
+        "taskCounter": 1107,
+        "typeTask": 1,
+        "taskAnswer": 7413265,
+        "task1": ["rus.doc", "obr.org", "https"],
+
+        "task2": "1) obr.<br> 2) /<br>3) org<br>4) ://<br>5) doc<br>6) rus.<br>7) https",
+        "taskNum": "99209D"
+    },
+    {
+        "taskCounter": 1106,
+        "typeTask": 1,
+        "taskAnswer": 7513264,
+        "task1": ["math.doc", "obr.ru", "https"],
+
+        "task2": "1) obr<br> 2) /<br>3) .ru<br>4) .doc<br>5) ://<br>6) math<br>7) https",
+        "taskNum": "12BB94"
+    },
+    {
+        "taskCounter": 1105,
+        "typeTask": 1,
+        "taskAnswer": 3561247,
+        "task1": ["spis.xml", "book.net", "ftp"],
+
+        "task2": "1) .net<br> 2) /<br>3) ftp<br>4) spis<br>5) ://<br>6) book<br>7) .xml",
+        "taskNum": "3E59C2"
+    },
+    {
+        "taskCounter": 1104,
+        "typeTask": 1,
+        "taskAnswer": 2463157,
+        "task1": ["table.xls", "ofis.com", "ftp"],
+
+        "task2": "1) /<br> 2) ftp<br>3) com<br>4) ://<br>5) table.<br>6) ofis.<br>7) xls",
+        "taskNum": "CF6FEC"
+    },
+    {
+        "taskCounter": 1103,
+        "typeTask": 1,
+        "taskAnswer": 7425316,
+        "task1": ["test.xls", "school.org", "ftp"],
+
+        "task2": "1) test<br> 2) school<br>3) /<br>4) ://<br>5) .org<br>6) .xls<br>7) ftp",
+        "taskNum": "702314"
+    },
+    {
+        "taskCounter": 1102,
+        "typeTask": 1,
+        "taskAnswer": 1735246,
+        "task1": ["color.gif", "box.net", "ftp"],
+
+        "task2": "1) ftp<br> 2) /<br>3) box.<br>4) color<br>5) net<br>6) .gif<br>7) ://",
+        "taskNum": "508115"
+    },
+    {
+        "taskCounter": 1101,
+        "typeTask": 1,
+        "taskAnswer": 5163724,
+        "task1": ["spis.htm", "sch.net", "ftp"],
+
+        "task2": "1) ://<br> 2) spis<br>3) .net<br>4) .htm<br>5) ftp<br>6) sch<br>7) /",
+        "taskNum": "4AC676"
+    },
+    {
+        "taskCounter": 1099,
+        "typeTask": 1,
+        "taskAnswer": 7216435,
+        "task1": ["doc.htm", "site.com", "http"],
+
+        "task2": "1) site<br> 2) ://<br>3) doc<br>4) /<br>5) .htm<br>6) .com<br>7) http",
+        "taskNum": "C3447E"
+    },
+    {
+        "taskCounter": 1098,
+        "typeTask": 1,
+        "taskAnswer": 4756213,
+        "task1": ["start.exe", "game.com", "http"],
+
+        "task2": "1) start<br> 2) /<br>3) .exe<br>4) http<br>5) game<br>6) .com<br>7) ://",
+        "taskNum": "9F9291"
+    },
+    {
+        "taskCounter": 1097,
+        "typeTask": 1,
+        "taskAnswer": 7426351,
+        "task1": ["tiger.doc", "zoo.org", "http"],
+
+        "task2": "1) .doc<br> 2) zoo<br>3) /<br>4) ://<br>5) tiger<br>6) .org<br>7) http",
+        "taskNum": "3BC258"
+    },
+    {
+        "taskCounter": 1096,
+        "typeTask": 1,
+        "taskAnswer": 3246571,
+        "task1": ["slon.txt", "circ.org", "http"],
+
+        "task2": "1) .txt<br> 2) ://<br>3) http<br>4) circ<br>5) /<br>6) .org<br>7) slon",
+        "taskNum": "E5C5B4"
+    },
+    {
+        "taskCounter": 1095,
+        "typeTask": 1,
+        "taskAnswer": 5237164,
+        "task1": ["ru.gif", "last.ru", "https"],
+
+        "task2": "1) /<br> 2) ://<br>3) last.<br>4) gif<br>5) https<br>6) ru.<br>7) ru",
+        "taskNum": "7280F1"
+    },
+    {
+        "taskCounter": 1094,
+        "typeTask": 1,
+        "taskAnswer": 4751632,
+        "task1": ["com.xls", "tt.com", "http"],
+
+        "task2": "1) com<br> 2) xls<br>3) com.<br>4) http<br>5) tt.<br>6) /<br>7) ://",
+        "taskNum": "7EE3E1"
+    },
+    {
+        "taskCounter": 1093,
+        "typeTask": 1,
+        "taskAnswer": 1437562,
+        "task1": ["index.htm", "foto.ru", "http"],
+
+        "task2": "1) http<br> 2) .htm<br>3) foto<br>4) ://<br>5) /<br>6) index<br>7) .ru",
+        "taskNum": "0Bc60e"
+    },
+    {
+        "taskCounter": 1092,
+        "typeTask": 1,
+        "taskAnswer": 3154267,
+        "task1": ["game.doc", "doc.ru", "http"],
+
+        "task2": "1) //<br> 2) /<br>3) http:<br>4) ru<br>5) doc.<br>6) game<br>7) .doc",
+        "taskNum": "56AF74"
+    },
+    {
+        "taskCounter": 1091,
+        "typeTask": 1,
+        "taskAnswer": 3241765,
+        "task1": ["foto.jpg", "foto.ru", "ftp"],
+
+        "task2": "1) foto.ru<br> 2) :<br>3) ftp<br>4) //<br>5) .jpg<br>6) foto<br>7) /",
+        "taskNum": "B140AA"
+    },
+    {
+        "taskCounter": 1090,
+        "typeTask": 1,
+        "taskAnswer": 7364125,
+        "task1": ["page.htm", "book.ru", "http"],
+
+        "task2": "1) /<br> 2) page<br>3) ://<br>4) .ru<br>5) .htm<br>6) book<br>7) http",
+        "taskNum": "54DFDF"
+    },
+    {
+        "taskCounter": 1089,
+        "typeTask": 1,
+        "taskAnswer": 5247136,
+        "task1": ["lot.htm", "catalog.ru", "http"],
+
+        "task2": "1) /<br> 2) ://<br>3) lot<br>4) catalog<br>5) http<br>6) .htm<br>7) .ru",
+        "taskNum": "4e9210"
+    },
+    {
+        "taskCounter": 1088,
+        "typeTask": 1,
+        "taskAnswer": 2647135,
+        "task1": ["user.doc", "school.ru", "ftp"],
+
+        "task2": "1) /<br> 2) ftp<br>3) user<br>4) school<br>5) .doc<br>6) ://<br>7) .ru",
+        "taskNum": "52561F"
+    },
+    {
+        "taskCounter": 1087,
+        "typeTask": 1,
+        "taskAnswer": 7643125,
+        "task1": ["hello.ppt", "message.org", "http"],
+
+        "task2": "1) /<br> 2) hello<br>3) org<br>4) message.<br>5) .ppt<br>6) ://<br>7) http",
+        "taskNum": "D05F73"
+    },
+    {
+        "taskCounter": 1086,
+        "typeTask": 1,
+        "taskAnswer": 6327451,
+        "task1": ["poka.doc", "doc.ru", "https"],
+
+        "task2": "1) .doc<br> 2) doc.<br>3) ://<br>4) /<br>5) poka<br>6) https<br>7) ru",
+        "taskNum": "5876B3"
+    },
+    {
+        "taskCounter": 1085,
+        "typeTask": 1,
+        "taskAnswer": 4517632,
+        "task1": ["ciao.doc", "doc.com", "http"],
+
+        "task2": "1) doc.<br> 2) .doc<br>3) ciao<br>4) http<br>5) ://<br>6) /<br>7) com",
+        "taskNum": "60E7D0"
+    },
+    {
+        "taskCounter": 1084,
+        "typeTask": 1,
+        "taskAnswer": 3761542,
+        "task1": ["bye.doc", "doc.info", "ftp"],
+
+        "task2": "1) info<br> 2) .doc<br>3) ftp<br>4) bye<br>5) /<br>6) doc.<br>7) ://",
+        "taskNum": "6AA42F"
+    },
+    {
+        "taskCounter": 1083,
+        "typeTask": 1,
+        "taskAnswer": 1625347,
+        "task1": ["https.ppt", "smtp.org", "https"],
+
+        "task2": "1) https:<br> 2) smtp<br>3) /<br>4) https.<br>5) .org<br>6) //<br>7) ppt",
+        "taskNum": "23C35E"
+    },
+    {
+        "taskCounter": 1082,
+        "typeTask": 1,
+        "taskAnswer": 4675231,
+        "task1": ["ftp.xls", "mail.info", "ftp"],
+
+        "task2": "1) xls<br> 2) /<br>3) ftp.<br>4) ftp:<br>5) .info<br>6) //<br>7) mail",
+        "taskNum": "E8785B"
+    },
+    {
+        "taskCounter": 1081,
+        "typeTask": 1,
+        "taskAnswer": 5231764,
+        "task1": ["hi.gif", "past.ru", "https"],
+
+        "task2": "1) ru<br> 2) ://<br>3) past.<br>4) .gif<br>5) https<br>6) hi<br>7) /",
+        "taskNum": "B16B99"
+    },
+    {
+        "taskCounter": 1080,
+        "typeTask": 1,
+        "taskAnswer": 6231457,
+        "task1": ["hello.jpg", "home.info", "ftp"],
+
+        "task2": "1) info<br> 2) ://<br>3) home.<br>4) /<br>5) hello<br>6) ftp<br>7) .jpg",
+        "taskNum": "EE55EB"
+    },
+    {
+        "taskCounter": 1079,
+        "typeTask": 1,
+        "taskAnswer": 1735246,
+        "task1": ["http.txt", "smile.ru", "https"],
+
+        "task2": "1) https:<br> 2) /<br>3) smile<br>4) https.<br>5) .ru<br>6) txt<br>7) //",
+        "taskNum": "1D27FA"
+    },
+    {
+        "taskCounter": 1078,
+        "typeTask": 1,
+        "taskAnswer": 4365127,
+        "task1": ["http.txt", "book.com", "http"],
+
+        "task2": "1) /<br> 2) http.<br>3) //<br>4) http:<br>5) .com<br>6) book<br>7) txt",
+        "taskNum": "97AEB5"
+    },
+    {
+        "taskCounter": 1077,
+        "typeTask": 1,
+        "taskAnswer": 5471632,
+        "task1": ["ftp.jpg", "text.net", "ftp"],
+
+        "task2": "1) .net<br> 2) jpg<br>3) ftp.<br>4) //<br>5) ftp:<br>6) /<br>7) text",
+        "taskNum": "B982CA"
+    },
+    {
+        "taskCounter": 1076,
+        "typeTask": 1,
+        "taskAnswer": 5127346,
+        "task1": ["hello.txt", "txt.info", "ftp"],
+
+        "task2": "1) ://<br> 2) txt.<br>3) /<br>4) hello<br>5) ftp<br>6) .txt<br>7) info",
+        "taskNum": "399572"
+    },
+    {
+        "taskCounter": 1075,
+        "typeTask": 1,
+        "taskAnswer": 2657413,
+        "task1": ["http.doc", "letter.net", "http"],
+
+        "task2": "1) http.<br> 2) http:<br>3) doc<br>4) /<br>5) letter<br>6) //<br>7) .net",
+        "taskNum": "E8EA9F"
+    },
+    {
+        "taskCounter": 1074,
+        "typeTask": 1,
+        "taskAnswer": 1753264,
+        "task1": ["https.doc", "top.net", "https"],
+
+        "task2": "1) https:<br> 2) /<br>3) .net<br>4) doc<br>5) top<br>6) https.<br>7) //",
+        "taskNum": "183280"
+    },
+    {
+        "taskCounter": 1073,
+        "typeTask": 1,
+        "taskAnswer": 5346712,
+        "task1": ["tasks.rar", "contest.ru", "http"],
+
+        "task2": "1) tasks<br> 2) .rar<br>3) ://<br>4) contest<br>5) http<br>6) .ru<br>7) /",
+        "taskNum": "05FD9D"
+    },
+    {
+        "taskCounter": 1072,
+        "typeTask": 1,
+        "taskAnswer": 2654317,
+        "task1": ["tests.rar", "olympiada.ru", "http"],
+
+        "task2": "1) tests<br> 2) http<br>3) /<br>4) .ru<br>5) olympiada<br>6) ://<br>7) .rar",
+        "taskNum": "D08B4B"
+    },
+    {
+        "taskCounter": 1071,
+        "typeTask": 1,
+        "taskAnswer": 6724315,
+        "task1": ["GOA.png", "mytravel.com", "ftp"],
+
+        "task2": "1) GOA<br> 2) mytravel<br>3) /<br>4) .com<br>5) .png<br>6) ftp<br>7) ://",
+        "taskNum": "EC6DD1"
+    },
+    {
+        "taskCounter": 1070,
+        "typeTask": 1,
+        "taskAnswer": 5147326,
+        "task1": ["summer.jpeg", "weather.info", "ftp"],
+
+        "task2": "1) ://<br> 2) summer<br>3) /<br>4) weather<br>5) ftp<br>6) .jpeg<br>7) .info",
+        "taskNum": "084155"
+    },
+    {
+        "taskCounter": 1069,
+        "typeTask": 1,
+        "taskAnswer": 2614357,
+        "task1": ["lesson.xls", "personalsite.com", "ftp"],
+
+        "task2": "1) personalsite<br> 2) ftp<br>3) /<br>4) .com<br>5) lesson<br>6) ://<br>7) .xls",
+        "taskNum": "FB07ED"
+    },
+    {
         "taskCounter": 980,
         "typeTask": 1,
         "taskAnswer": 2517436,
@@ -52,15 +451,6 @@
 
         "task2": "1) /<br> 2) .org<br>3) ftp<br>4) ://<br>5) .ru<br>6) txt<br>7) http",
         "taskNum": "811AC6"
-    },
-    {
-        "taskCounter": 974,
-        "typeTask": 1,
-        "taskAnswer": 4672531,
-        "task1": ["net.com", "www.ru", "http"],
-
-        "task2": "1) .com<br> 2) .ru<br>3) net<br>4) http<br>5) /<br>6) ://<br>7) www",
-        "taskNum": "9B939A"
     },
     {
         "taskCounter": 973,
@@ -133,15 +523,6 @@
 
         "task2": "1) org<br> 2) .ru<br>3) /<br>4) ://<br>5) http<br>6) net<br>7) .txt",
         "taskNum": "E23600"
-    },
-    {
-        "taskCounter": 965,
-        "typeTask": 1,
-        "taskAnswer": 2435167,
-        "task1": ["net.txt", "org.ru", "http"],
-
-        "task2": "1) /<br> 2) http<br>3) org<br>4) ://<br>5) .ru<br>6) net<br>7) .txt",
-        "taskNum": "D6B794"
     },
     {
         "taskCounter": 964,

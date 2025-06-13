@@ -1362,7 +1362,7 @@ int main(){
     if (taskKey === 'seven'){
       switch(typeTask){
         case 1:
-          answerBlock += `<p class="p-num"><b>7.</b> № ${taskCounter} ${generateHard()}</p> 
+          answerBlock += `<p class="p-num"><b>7.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>Доступ к файлу <b style="font-weight: 500;">${task1[0]}</b>, 
              находящемуся на сервере <b style="font-weight: 500;">${task1[1]}</b>, 
              осуществляется по протоколу <b style="font-weight: 500;">${task1[2]}</b>.
