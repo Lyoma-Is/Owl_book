@@ -714,6 +714,7 @@
     {
         "taskCounter": 44,
         "typeTask": 3,
+        "taskAuthor": "Демоверсия 2025",
         "taskAnswer": 1039,
         "taskAn": [10111101, 1101, 111, "+", "+"],
 

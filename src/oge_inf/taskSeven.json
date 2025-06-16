@@ -293,6 +293,7 @@
     {
         "taskCounter": 1080,
         "typeTask": 1,
+        "taskAuthor": "Демоверсия 2025",
         "taskAnswer": 6231457,
         "task1": ["hello.jpg", "home.info", "ftp"],
 

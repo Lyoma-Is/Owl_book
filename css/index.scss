@@ -141,7 +141,7 @@ main{
     
     .p-vars{
         text-align: center;
-        padding: 20px 0;
+        padding: 20px 20px 0 20px;
         font-size: 30px;
         
         a:hover{
@@ -166,6 +166,8 @@ main{
         display: flex;
         padding: 20px;
         a{
+            display: flex;
+            align-items: center;
             border: 1px solid $back-top-color;
             padding: 20px;
             border-radius: 10px;

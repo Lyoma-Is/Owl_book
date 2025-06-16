@@ -1,42 +1,42 @@
-const tasks = {
-  one: '../../../src/oge_inf/taskOne.json',
-  two: '../../../src/oge_inf/taskTwo.json',
-  three: '../../../src/oge_inf/taskThree.json',
-  four:  '../../../src/oge_inf/taskFour.json',
-  five: '../../../src/oge_inf/taskFive.json',
-  six: '../../../src/oge_inf/taskSix.json',
-  seven: '../../../src/oge_inf/taskSeven.json',
-  eight: '../../../src/oge_inf/taskEight.json',
-  nine: '../../../src/oge_inf/taskNine.json',
-  ten: '../../../src/oge_inf/taskTen.json',
-  eleven: '../../../src/oge_inf/taskEleven.json',
-  twelve: '../../../src/oge_inf/taskTwelve.json',
-  thirteen: '../../../src/oge_inf/taskThirteen.json',
-  thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
-  fourteen: '../../../src/oge_inf/taskFourteen.json',
-  fifteen: '../../../src/oge_inf/taskFifteen.json',
-  sixteen: '../../../src/oge_inf/taskSixteen.json'
-};
- 
 // const tasks = {
-//   one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
-//   two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
-//   three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
-//   four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
-//   five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
-//   six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
-//   seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
-//   eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
-//   nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
-//   ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
-//   eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
-//   twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
-//   thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
-//   thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json',
-//   fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json',
-//   fifteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFifteen.json',
-//   sixteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSixteen.json'
+//   one: '../../../src/oge_inf/taskOne.json',
+//   two: '../../../src/oge_inf/taskTwo.json',
+//   three: '../../../src/oge_inf/taskThree.json',
+//   four:  '../../../src/oge_inf/taskFour.json',
+//   five: '../../../src/oge_inf/taskFive.json',
+//   six: '../../../src/oge_inf/taskSix.json',
+//   seven: '../../../src/oge_inf/taskSeven.json',
+//   eight: '../../../src/oge_inf/taskEight.json',
+//   nine: '../../../src/oge_inf/taskNine.json',
+//   ten: '../../../src/oge_inf/taskTen.json',
+//   eleven: '../../../src/oge_inf/taskEleven.json',
+//   twelve: '../../../src/oge_inf/taskTwelve.json',
+//   thirteen: '../../../src/oge_inf/taskThirteen.json',
+//   thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
+//   fourteen: '../../../src/oge_inf/taskFourteen.json',
+//   fifteen: '../../../src/oge_inf/taskFifteen.json',
+//   sixteen: '../../../src/oge_inf/taskSixteen.json'
 // };
+ 
+const tasks = {
+  one: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskOne.json',
+  two: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwo.json',
+  three: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThree.json',
+  four: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFour.json',
+  five: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFive.json',
+  six: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSix.json',
+  seven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSeven.json',
+  eight: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEight.json',
+  nine: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskNine.json',
+  ten: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTen.json',
+  eleven: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskEleven.json',
+  twelve: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskTwelve.json',
+  thirteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteen.json',
+  thirteentwo: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskThirteenTwo.json',
+  fourteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFourteen.json',
+  fifteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskFifteen.json',
+  sixteen: 'https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/taskSixteen.json'
+};
 
 export {tasks};
 
@@ -725,8 +725,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             item_an = item_an.slice(8)
          }
          
+        //  else if (task5[2] === 4 && resCount === 4){
+               
+        //   }
+
          // delenie
-         if(taskAn[4] === "/" && taskAn[5] !== "p"){
+         if(taskAn[4] === "/" && taskAn[5] !== "p" && taskAn[5] !== "**"){
            let item_el = taskAn[0]
            let z = taskAn[5] 
            let vch = taskAn[3]
@@ -821,6 +825,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 res1 += `2. <b>вычти ${vch}</b> из числа ${item_el} = <span style="background-color:rgb(252, 210, 94);">${item_el-vch}</span><br>`
                 item_el -= vch
               }
+              else if (task5[2] === 4 && resCount === 4){
+                res1 += `2. <b>вычти ${vch}</b> из числа ${item_el} = <span style="background-color:rgb(252, 210, 94);">${item_el-vch}</span><br>`
+                item_el -= vch   
+              }
               else{
                 res1 += `2. <b>вычти ${vch}</b> из числа ${item_el} = ${item_el-vch}<br>`
                 item_el -= vch
@@ -828,6 +836,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
              }
              else if(x === '2' && z === "+"){
               if (resCount === 5){
+                res1 += `2. <b>прибавь ${vch}</b> к числу ${item_el} = <span style="background-color:rgb(252, 210, 94);">${item_el+vch}</span><br>`
+                item_el += vch
+              }
+              else if (task5[2] === 4 && resCount === 4){
                 res1 += `2. <b>прибавь ${vch}</b> к числу ${item_el} = <span style="background-color:rgb(252, 210, 94);">${item_el+vch}</span><br>`
                 item_el += vch
               }
@@ -840,6 +852,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               if (resCount === 5){
                 res1 += `1. <b>умножить</b> число ${item_el} <b>на ${uch}</b> = <span style="background-color: rgb(252, 210, 94);">${item_el*uch}</span><br>`
                 item_el *= uch;
+              }
+              else if (task5[2] === 4 && resCount === 4){
+                res1 += `2. <b>вычти ${vch}</b> из числа ${item_el} = <span style="background-color:rgb(252, 210, 94);">${item_el-vch}</span><br>`
+                item_el -= vch               
               }
               else{
                 res1 += `1. <b>умножить</b> число ${item_el} <b>на ${uch}</b> = ${item_el*uch}<br>`
@@ -935,7 +951,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            let item_el = taskAn[0]
            let z = taskAn[4] 
            let vch = taskAn[2]
-           //let uch = taskAn[3]
+           let uch = taskAn[2]
            for (let i in item_an){
              let x = item_an[i]
              resCount++;
@@ -959,8 +975,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   item_el += vch
                 }
               }
+              else if(x === '1' && z === "/"){
+                if (resCount === 5){
+                  res1 += `1. <b>раздели</b> число ${item_el} <b>на ${uch}</b> = <span style="background-color: rgb(252, 210, 94);">${item_el/uch}</span><br>`
+                  item_el /= uch
+                }
+                else if (task5[2] === 4 && resCount === 4){
+                  res1 += `1. <b>раздели</b> число ${item_el} <b>на ${uch}</b> = <span style="background-color: rgb(252, 210, 94);">${item_el/uch}</span><br>`
+                  item_el /= uch
+                }
+                else{
+                  res1 += `1. <b>раздели</b> число ${item_el} <b>на ${uch}</b> = ${item_el/uch}<br>`
+                  item_el /= uch
+                }
+              }
               else{                      
                 if (resCount === 5){
+                  res1 += `2. <b>возведи в квадрат</b> число ${item_el} = <span style="background-color: rgb(252, 210, 94);">${item_el*item_el}</span><br>`
+                  item_el = item_el * item_el;
+                }
+                else if (task5[2] === 4 && resCount === 4){
                   res1 += `2. <b>возведи в квадрат</b> число ${item_el} = <span style="background-color: rgb(252, 210, 94);">${item_el*item_el}</span><br>`
                   item_el = item_el * item_el;
                 }
@@ -1127,13 +1161,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock =`
-          <p class="p-num"><b>5.</b> № ${taskCounter} ${generateHard()}</p> 
+          <p class="p-num"><b>5.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
           <p>${task1}</p>
           <hr class="hr-pd_10">
           <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
           <hr class="hr-pd_10">
           <p>${task3}</p>
-          <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+          <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, ${task5[2] === 4 ? `<b style="font-weight: 500;">содержащий не более 4 команд</b>`: `<b style="font-weight: 500;">содержащий не более 5 команд</b>`}. В ответе запишите только номера команд.</p>
           <hr class="hr-pd_10">
           <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
           <hr class="hr-pd_10">
@@ -1154,13 +1188,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock =`
-            <p class="p-num"><b>5.</b> № ${taskCounter} ${generateHard()}</p> 
+            <p class="p-num"><b>5.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
             <p>${task1}</p>
             <hr class="hr-pd_10">
             <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
             <hr class="hr-pd_10">
             <p>${task3}</p>
-            <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+            <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, ${task5[2] === 4 ? `<b style="font-weight: 500;">содержащий не более 4 команд</b>`: `<b style="font-weight: 500;">содержащий не более 5 команд</b>`}. В ответе запишите только номера команд.</p>
             <hr class="hr-pd_10">
             <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
             <hr class="hr-pd_10">
@@ -1181,13 +1215,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock =`
-              <p class="p-num"><b>5.</b> № ${taskCounter} ${generateHard()}</p> 
+              <p class="p-num"><b>5.</b> № ${taskCounter} ${generateAuthor()} ${generateHard()}</p> 
               <p>${task1}</p>
               <hr class="hr-pd_10">
               <p><b style="font-weight: 500;">${task2[0]}<br>${task2[1]}</b></p>
               <hr class="hr-pd_10">
               <p>${task3}</p>
-              <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+              <p>Составьте алгоритм получения <b style="font-weight: 500;">${task4}</b>, ${task5[2] === 4 ? `<b style="font-weight: 500;">содержащий не более 4 команд</b>`: `<b style="font-weight: 500;">содержащий не более 5 команд</b>`}. В ответе запишите только номера команд.</p>
               <hr class="hr-pd_10">
               <p><em>(Например, ${task5[0]} –<br>это алгоритм:<br> ${examp(task5[0])} который преобразует ${task5[1]}.)</em></p>
               <hr class="hr-pd_10">

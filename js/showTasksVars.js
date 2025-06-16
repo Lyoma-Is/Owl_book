@@ -203,13 +203,12 @@ function displayTasksByVariantWithSlider(tasksToDisplay) {
 }
 
 // ------------------ Варианты ------------------
-
 function createVariants() {
     const block = document.querySelector('.vars-block');
     if (!block) return;
 
     block.innerHTML = variants.map((variant, i) =>
-        `<a id="variant${i+1}" class="vars-block__inner" href="../../pages/variants/tasksOgeInf/showTasks.html" data-variant-index="${i}">${variant.name}</a>`
+        `<a id="variant${i+1}" class="vars-block__inner" href="../../pages/variants/tasksOgeInf/showTasksVars.html" data-variant-index="${i}">${variant.name}</a>`
     ).join('');
 
     document.querySelectorAll('.vars-block__inner').forEach(link => {
@@ -224,13 +223,13 @@ function createVariants() {
 // ------------------ Загрузка вариантов ------------------
 async function loadVariants() {
     try {
-        const response = await fetch('/src/oge_inf/showVarsMonth.json');
-        //const response = await fetch('https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVarsMonth.json');
+        //const response = await fetch('../../src/oge_inf/showVariants.json');
+        const response = await fetch('https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVariants.json');
         if (!response.ok) throw new Error('Не удалось загрузить варианты');
         variants = await response.json();
         createVariants();
     } catch (e) {
-        console.error('Ошибка загрузки вариантов:', e);
+        //console.error('Ошибка загрузки вариантов:', e);
     }
 }
 function updateBreadcrumbWithVariant() {
@@ -242,6 +241,7 @@ function updateBreadcrumbWithVariant() {
 
     // Use the variant's name property instead of calculating index
     breadcrumbLastLink.textContent = selectedVariant.name || 'Выбранный вариант';
+    
 }
 
 // ------------------ Инициализация ------------------
@@ -249,7 +249,7 @@ async function init() {
     await loadVariants();
     
     // Обновляем хлебные крошки только если мы на странице варианта
-    if (window.location.pathname.includes('showTasks.html')) {
+    if (window.location.pathname.includes('showTasksVars.html')) {
         updateBreadcrumbWithVariant();
         
         const selectedVariant = JSON.parse(localStorage.getItem('selectedVariant'));
