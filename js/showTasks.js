@@ -209,7 +209,7 @@ function createVariants() {
     if (!block) return;
 
     block.innerHTML = variants.map((variant, i) =>
-        `<a id="variant${i+1}" class="vars-block__inner" href="../../pages/variants/tasksOgeInf/showTasks.html" data-variant-index="${i}">${variant.name}</a>`
+        `<a id="variant${i+1}" class="vars-block__inner" href="../pages/variants/tasksOgeInf/showTasks.html" data-variant-index="${i}">${variant.name}</a>`
     ).join('');
 
     document.querySelectorAll('.vars-block__inner').forEach(link => {
@@ -224,7 +224,7 @@ function createVariants() {
 // ------------------ Загрузка вариантов ------------------
 async function loadVariants() {
     try {
-        //const response = await fetch('../../src/oge_inf/showVarsMonth.json');
+        //const response = await fetch('../src/oge_inf/showVarsMonth.json');
         const response = await fetch('https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVarsMonth.json');
         if (!response.ok) throw new Error('Не удалось загрузить варианты');
         variants = await response.json();
