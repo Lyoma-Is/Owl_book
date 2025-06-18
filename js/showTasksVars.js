@@ -204,7 +204,7 @@ function displayTasksByVariantWithSlider(tasksToDisplay) {
 
 // ------------------ Варианты ------------------
 function createVariants() {
-    const block = document.querySelector('.vars-block');
+    const block = document.querySelector('.vars-block_2025');
     if (!block) return;
 
     block.innerHTML = variants.map((variant, i) =>
