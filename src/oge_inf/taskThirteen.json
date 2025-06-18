@@ -1,5 +1,15 @@
 [
     {
+        "taskCounter": 1292,
+        "typeTask": 1,
+        "taskAuthor": "Демоверсия 2025",
+        "taskAnswer": "",
+        "task1": ["DEMO-13", "Хомяк"],
+        "task2": [3, 2],
+
+        "taskNum": "2B1B81"
+    },
+    {
         "taskCounter": 922,
         "typeTask": 1,
         "taskAnswer": "",

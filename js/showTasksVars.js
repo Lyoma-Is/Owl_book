@@ -203,14 +203,66 @@ function displayTasksByVariantWithSlider(tasksToDisplay) {
 }
 
 // ------------------ Варианты ------------------
+// function createVariants() {
+//     const block = document.querySelector('.vars-block_2025');
+//     if (!block) return;
+
+//     block.innerHTML = variants.map((variant, i) =>
+//         `<a id="variant${i+1}" class="vars-block__inner" href="../../pages/variants/tasksOgeInf/showTasksVars.html" data-variant-index="${i}">${variant.name}</a>`
+//     ).join('');
+
+//     document.querySelectorAll('.vars-block__inner').forEach(link => {
+//         link.addEventListener('click', (e) => {
+//             e.preventDefault();
+//             const variantIndex = parseInt(link.dataset.variantIndex);
+//             localStorage.setItem('selectedVariant', JSON.stringify(variants[variantIndex]));
+//             window.location.href = link.href;
+//         });
+//     });
+// }
+
+
 function createVariants() {
-    const block = document.querySelector('.vars-block_2025');
-    if (!block) return;
+    // Получаем секции для разных годов
+    const block2025 = document.querySelector('.vars-block_2025');
+    const block2026 = document.querySelector('.vars-block_2026');
 
-    block.innerHTML = variants.map((variant, i) =>
-        `<a id="variant${i+1}" class="vars-block__inner" href="../../pages/variants/tasksOgeInf/showTasksVars.html" data-variant-index="${i}">${variant.name}</a>`
-    ).join('');
+    // Группируем варианты по годам
+    const variantsByYear = variants.reduce((acc, variant) => {
+        const year = variant.year;
+        if (!acc[year]) {
+            acc[year] = [];
+        }
+        acc[year].push(variant);
+        return acc;
+    }, {});
 
+    // Функция для создания HTML группы вариантов (в обратном порядке)
+    const createYearGroupHTML = (yearVariants) => {
+        // Создаем копию массива и разворачиваем его
+        const reversedVariants = [...yearVariants].reverse();
+        
+        return reversedVariants.map((variant, i) => `
+            <a id="variant${i+1}" 
+               class="vars-block__inner" 
+               href="../../pages/variants/tasksOgeInf/showTasksVars.html" 
+               data-variant-index="${variants.indexOf(variant)}">
+                ${variant.name}
+            </a>
+        `).join('');
+    };
+
+    // Заполняем секцию 2025 года (если есть варианты и блок)
+    if (block2025 && variantsByYear[2025]) {
+        block2025.innerHTML = createYearGroupHTML(variantsByYear[2025]);
+    }
+
+    // Заполняем секцию 2026 года (если есть варианты и блок)
+    if (block2026 && variantsByYear[2026]) {
+        block2026.innerHTML = createYearGroupHTML(variantsByYear[2026]);
+    }
+
+    // Добавляем обработчики событий для всех ссылок вариантов
     document.querySelectorAll('.vars-block__inner').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -220,6 +272,7 @@ function createVariants() {
         });
     });
 }
+
 // ------------------ Загрузка вариантов ------------------
 async function loadVariants() {
     try {

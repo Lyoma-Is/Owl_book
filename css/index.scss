@@ -331,7 +331,7 @@ main{
         margin: auto; 
         border-collapse: collapse;
         td{
-            font-size: 30px;
+            font-size: 110%;
             border: 1px solid;
             padding: 5px 25px; 
             text-align: center; 
@@ -397,4 +397,9 @@ main{
         border-radius: 10px;
         cursor: pointer;
     }
+}
+.h1_center{
+    font-size: 250%;
+    padding: 20px 0 0 0;
+    text-align: center;
 }

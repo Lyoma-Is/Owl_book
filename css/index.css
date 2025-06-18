@@ -303,7 +303,7 @@ main .btn-primary:active {
   border-collapse: collapse;
 }
 .task-numbers__block .table_4 td, .slide .table_4 td {
-  font-size: 30px;
+  font-size: 110%;
   border: 1px solid;
   padding: 5px 25px;
   text-align: center;
@@ -367,4 +367,10 @@ main .btn-primary:active {
   padding: 10px 5px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.h1_center {
+  font-size: 250%;
+  padding: 20px 0 0 0;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */
