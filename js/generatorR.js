@@ -179,11 +179,11 @@ async function displayTasks() {
         generateTaskHTML('ten', randomTasks.ten, false),
         generateTaskHTML('eleven', randomTasks.eleven, false),
         generateTaskHTML('twelve', randomTasks.twelve, false),
-        generateTaskHTML('thirteen', randomTasks.thirteen),
-        generateTaskHTML('thirteentwo', randomTasks.thirteentwo),
-        generateTaskHTML('fourteen', randomTasks.fourteen),
-        generateTaskHTML('fifteen', randomTasks.fifteen),
-         generateTaskHTML('sixteen', randomTasks.sixteen)
+        generateTaskHTML('thirteen', randomTasks.thirteen, false),
+        generateTaskHTML('thirteentwo', randomTasks.thirteentwo, false),
+        generateTaskHTML('fourteen', randomTasks.fourteen, false),
+        generateTaskHTML('fifteen', randomTasks.fifteen, false),
+         generateTaskHTML('sixteen', randomTasks.sixteen, false)
     ].filter(html => html);
 
     // Очищаем контейнер перед созданием нового слайдера
