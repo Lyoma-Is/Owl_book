@@ -1,5 +1,25 @@
 [
     {
+        "taskCounter": 1297,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "taskAuthor": "Основная волна 16.06.25",
+        "task1": ["DEMO-13", "Коала"],
+        "task2": [4, 6],
+
+        "taskNum": "177F76"
+    },
+    {
+        "taskCounter": 1296,
+        "typeTask": 1,
+        "taskAnswer": "",
+        "taskAuthor": "Основная волна 06.06.25",
+        "task1": ["DEMO-13", "Такса"],
+        "task2": [4, 6],
+
+        "taskNum": "92BB33"
+    },
+    {
         "taskCounter": 1292,
         "typeTask": 1,
         "taskAuthor": "Демоверсия 2025",
@@ -22,6 +42,7 @@
         "taskCounter": 921,
         "typeTask": 1,
         "taskAnswer": "",
+        "taskAuthor": "Основная волна 26.05.25",
         "task1": ["DEMO-13", "Белый медведь"],
         "task2": [2, 6],
 

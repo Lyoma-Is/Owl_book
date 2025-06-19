@@ -82,6 +82,7 @@
         "taskCounter": 1224,
         "typeTask": 2,
         "taskAnswer": 5,
+        
         "task1": [
         
         "s > 10 или t > А",
@@ -170,6 +171,7 @@
         "taskCounter": 1220,
         "typeTask": 2,
         "taskAnswer": 5,
+        "taskAuthor": "Основная волна 06.06.25",
         "task1": [
         
         "s > А или t > 11",
@@ -986,6 +988,7 @@
         "taskCounter": 1182,
         "typeTask": 2,
         "taskAnswer": 2,
+        "taskAuthor": "Основная волна 16.06.25",
         "task1": [
         
         "s > А или t > 11",
@@ -1282,6 +1285,7 @@
         "taskCounter": 204,
         "typeTask": 2,
         "taskAnswer": 10,
+        "taskAuthor": "Основная волна 26.05.25",
         "task1": ["s > А или t > 11","(s > А) or (t > 11)", "(s > А || t > 11)", "YES"],
 
         "task2": "(–9, 11); (2, 7); (5, 12); (2, –2); (7, –9); (12, 6); (9, –1); (7, 11); (11, –5).",

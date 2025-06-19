@@ -102,6 +102,7 @@ main .main-block .aside-left {
 main .main-block .aside-left ul {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 main .main-block .aside-left ul li a {

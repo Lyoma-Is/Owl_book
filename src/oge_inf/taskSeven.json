@@ -3,7 +3,7 @@
         "taskCounter": 1110,
         "typeTask": 1,
         "taskAnswer": 2435167,
-        "taskAuthor": "Основная волна 26.05.25",
+        "taskAuthor": "Основная волна 16.06.25",
         "task1": ["net.txt", "org.ru", "http"],
 
         "task2": "1) /<br> 2) http<br>3) org<br>4) ://<br>5) .ru<br>6) net<br>7) .txt",
@@ -13,7 +13,7 @@
         "taskCounter": 1109,
         "typeTask": 1,
         "taskAnswer": 4672531,
-        "taskAuthor": "Основная волна 26.05.25",
+        "taskAuthor": "Основная волна 06.06.25",
         "task1": ["net.com", "www.ru", "http"],
 
         "task2": "1) .com<br> 2) .ru<br>3) net<br>4) http<br>5) /<br>6) ://<br>7) www",

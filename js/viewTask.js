@@ -46,8 +46,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num resh">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
-    const generateDate = () => ` ${ taskNum === "" ? `<hr class="hr-pd_20">` : ` <hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p> <hr class="hr-pd_10">`}`;
-    const generateAuthor = () => `${!taskAuthor? "": `<em>${taskAuthor}</em>`}`
+    const generateDate = () => ` ${ !taskNum ? `<hr class="hr-pd_20">` : ` <hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p> <hr class="hr-pd_10">`}`;
+    const generateAuthor = () => `${!taskAuthor ? "": `<em>${taskAuthor}</em>`}`
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD12 = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
@@ -2134,7 +2134,7 @@ int main(){
           Текст не должен перекрывать основные изображения и сливаться с фоном.
           <hr class="hr-pd_20">
           <div class="download">  
-            <a href="../../../src/inf_file/task13/task_${taskCounter}.rar"><img src="../../../img/download.svg" alt="download" >Скачать файл</a>
+            <a href="../../../src/inf_file/task13/task13_${taskCounter}.rar"><img src="../../../img/download.svg" alt="download" >Скачать файл</a>
           </div>
           <hr class="hr-pd_20">
           `
