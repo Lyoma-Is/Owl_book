@@ -290,7 +290,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-           <p>${taskAnswer[1]}</p>
+           <p>${taskAnswer[1]}&emsp;---&emsp; ${taskAnswer[3]}</p> 
            <hr class="hr-pd_20">
            <p><b>Ответ:</b> ${taskAnswer[0]}</p>
            <hr class="hr-pd_10">`;
