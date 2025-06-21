@@ -11,11 +11,14 @@ $back-top-color:  rgb(233, 199, 105);
     gap: 10px 0;
     align-items: center;
     .vars-block__inner{
+
         border: 1px solid $back-top-color;
         border-radius: 10px;
         padding: 10px 20px;
         margin: 5px;
+        
         text-align: center;
+        
         font-size: 110%;
         transition: all 0.3s ease-in-out;
         text-decoration: none;
