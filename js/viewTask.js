@@ -482,7 +482,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock =`
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> $${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
            <hr class="hr-pd_20">
             <span class="span-centr">${task2}</span>
