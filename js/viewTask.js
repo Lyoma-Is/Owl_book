@@ -2244,12 +2244,33 @@ int main(){
           <hr class="hr-pd_20">
           `
           answerBlock += `<b><em>Выполните задание.</em></b><hr class="hr-pd_10">
-          ${task1}</b><br>
-          На рисунке указан один из возможных способов расположения стен и Робота (Робот обозначен буквой «Р»).<hr class="hr-pd_10">
-          <img class="img-14" src="../../../img/task15/task15_${taskCounter}_1.png"></b><hr class="hr-pd_10">
-          ${task2}</b><hr class="hr-pd_10">
-          <img class="img-14" src="../../../img/task15/task15_${taskCounter}_2.png"></b><hr class="hr-pd_10">
-          ${task3}</b><hr class="hr-pd_10">
+          ${task1}<br>
+
+          На рисунке указан один из возможных способов расположения стен и Робота (Робот обозначен буквой «Р»).
+          <hr class="hr-pd_10">
+
+          ${taskCounter === 950 ? 
+            `
+          <img class="img-14" style="width: 15%;" src="../../../img/task15/task15_${taskCounter}_1.png"><hr class="hr-pd_10">
+
+          ${task2}<hr class="hr-pd_10">
+
+          <img class="img-14" style="width: 15%;" src="../../../img/task15/task15_${taskCounter}_2.png"><hr class="hr-pd_10">
+
+          ${task3}<hr class="hr-pd_10">
+            ` 
+            :
+            `
+          <img class="img-14" src="../../../img/task15/task15_${taskCounter}_1.png"><hr class="hr-pd_10">
+
+          ${task2}<hr class="hr-pd_10">
+
+          <img class="img-14" src="../../../img/task15/task15_${taskCounter}_2.png"><hr class="hr-pd_10">
+
+          ${task3}<hr class="hr-pd_10">
+            
+            `
+          }
 
           Алгоритм может быть выполнен в среде формального исполнителя или записан в текстовом редакторе. 
           Сохраните алгоритм в формате программы Кумир или в текстовом файле. Название файла и каталог для сохранения Вам сообщат организаторы экзамена.
