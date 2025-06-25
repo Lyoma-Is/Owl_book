@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     $('.slider').slick({
         arrows: false,
@@ -24,5 +23,7 @@ $(document).ready(function(){
     });
 
 });
+
+
 
 

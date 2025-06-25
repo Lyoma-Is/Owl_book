@@ -353,6 +353,40 @@
   .vars-block .vars-block__inner {
     font-size: 70%;
   }
+  .answer-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    padding-top: 0;
+  }
+  .answer-block .download a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #020202;
+    text-decoration: none;
+  }
+  .answer-block .download a img {
+    width: 40px;
+  }
+  .answer-block .input_answer {
+    padding: 10px;
+    width: 40%;
+    height: 50px;
+    margin-top: 5px;
+    font-size: 17px;
+    background-color: #eee;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+  }
+  .answer-block .input_answer:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(158, 158, 158, 0.25);
+  }
 }
 @media (max-width: 600px) {
   .container {

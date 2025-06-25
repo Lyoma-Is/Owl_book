@@ -8,6 +8,8 @@
 }
 
 $back-top-color:  rgb(233, 199, 105);
+$body-color: rgb(245, 240, 235);
+$btn-color-up: hsl(216, 56%, 52%);
 
 html{
     height: 100%;
@@ -34,6 +36,7 @@ li {
 }
 
 .container {
+
     width: 100%;
     height: 100%;
     max-width: 1280px;
@@ -52,11 +55,8 @@ li {
             .logo-img{
                 width: 80px;
             }       
-        } 
-        
-           
+        }    
     }
-    
 }
 #button-finish{
     display: flex;
@@ -403,4 +403,49 @@ main{
     font-size: 250%;
     padding: 20px 0 0 0;
     text-align: center;
+}
+
+.footer{
+    .footer-text{
+        display: flex;
+        background-color: #faf5ea;
+        //background-color: $body-color;
+        height: 60px;
+        padding-left: 20px;
+        align-items: center;
+        font-size: 90%;
+        border-top: 1px solid $back-top-color;
+
+    }
+    
+}
+
+.btn-up {
+      position: fixed;
+      background-color: $btn-color-up;
+      opacity: 0.4;
+      right: 20px;
+      bottom: 0px;
+      border-top-left-radius: 15%;
+      border-top-right-radius: 15%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10%;
+      height: 4%;
+      
+}
+
+.btn-up::before {
+      content: "";
+      width: 70%;
+      height: 70%;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+      display: none;
 }

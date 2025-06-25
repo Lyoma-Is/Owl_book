@@ -151,3 +151,4 @@ document.getElementById('taskSort').innerHTML = `
        <option value='1'>по убыванию</option>
        <option value='2'>случайный порядок</option>
 `
+
