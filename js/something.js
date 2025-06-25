@@ -4,7 +4,7 @@ document.querySelector('.footer-text').innerHTML = `
 
 `;
 
-const container = document.querySelector('.main .container');
+const container = document.querySelector('main .container');
 container.insertAdjacentHTML('beforeend', '<div class="btn-up btn-up_hide"></div>');
 
 const btnUp = {
