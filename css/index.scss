@@ -75,12 +75,24 @@ li {
         transition: all 0.3s ease-in-out;
     }       
 } 
+.hr-pd_5{
+    padding: 2.5px 0;
+    border: 0;  
+}
 .hr-pd_10{
     padding: 5px 0;
     border: 0;  
 }
+.hr-pd_15{
+    padding: 7.5px 0;
+    border: 0;  
+}
 .hr-pd_20{
     padding: 10px 0;
+    border: 0;  
+}
+.hr-pd_30{
+    padding: 15px 0;
     border: 0;  
 }
 .hr-pd_40{
@@ -433,7 +445,7 @@ main{
       align-items: center;
       justify-content: center;
       width: 10%;
-      height: 4%;
+      height: 5%;
       
 }
 

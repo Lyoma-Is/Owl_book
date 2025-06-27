@@ -241,7 +241,7 @@ function updateBreadcrumbWithVariant() {
     if (!breadcrumbLastLink) return;
 
     // Use the variant's name property instead of calculating index
-    breadcrumbLastLink.innerHTML = `${selectedVariant.name}` || 'Выбранный вариант';
+    breadcrumbLastLink.innerHTML = `${selectedVariant.name}`;
 }
 
 // ------------------ Инициализация ------------------

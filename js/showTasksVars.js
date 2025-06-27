@@ -252,15 +252,12 @@ function createVariants() {
         `).join('');
     };
 
-    // Заполняем секцию 2025 года (если есть варианты и блок)
-    if (block2025 && variantsByYear[2025]) {
-        block2025.innerHTML = createYearGroupHTML(variantsByYear[2025]);
-    }
+    // Заполняем секцию 2025 года
+    block2025.innerHTML = createYearGroupHTML(variantsByYear[2025]);
 
-    // Заполняем секцию 2026 года (если есть варианты и блок)
-    if (block2026 && variantsByYear[2026]) {
-        block2026.innerHTML = createYearGroupHTML(variantsByYear[2026]);
-    }
+    // Заполняем секцию 2026 года
+     block2026.innerHTML = createYearGroupHTML(variantsByYear[2026]);
+    
 
     // Добавляем обработчики событий для всех ссылок вариантов
     document.querySelectorAll('.vars-block__inner').forEach(link => {
@@ -293,7 +290,7 @@ function updateBreadcrumbWithVariant() {
     if (!breadcrumbLastLink) return;
 
     // Use the variant's name property instead of calculating index
-    breadcrumbLastLink.innerHTML = `${selectedVariant.name}` || 'Выбранный вариант';
+    breadcrumbLastLink.innerHTML = `${selectedVariant.name}`;
     
 }
 
