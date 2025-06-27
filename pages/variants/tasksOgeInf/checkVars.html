@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/ico.ico" type="image/x-icon">
+    <link rel="icon" href="../../../img/ico.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/pageOge.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../../../css/index.css" />
+    <link rel="stylesheet" href="../../../css/pageOge.css"/>
+    <link rel="stylesheet" href="../../../css/variantTasksInf.css">
+    <link rel="stylesheet" href="../../../css/media.css">
     <title>ОГЭ Информатика</title>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-top">
-                <div class="logo"> <a href="../index.html"><img class="logo-img" src="../img/logo.png" alt="logo"></a></div>
+                <div class="logo"> <a href="../../../index.html"><img class="logo-img" src="../../../img/logo.png" alt="logo"></a></div>
                 <section class="breadcrumb">
                     <ul class="breadcrumb-item">
-                        <li><a href="../index.html">Главная</a></li>
-                        <li class="last"><a href="../pages/pageOgeInf.html">Информатика ОГЭ</a></li>  
+                        <li><a href="../../../index.html">Главная</a></li>
+                        <li><a href="../../../pages/pageOgeInf.html">Информатика ОГЭ</a></li> 
+                        <li class="last"><a href="../../../pages/variants/tasksOgeInf/checkVars.html">Генератор заданий</a></li>  
                     </ul>
                 </section>
             </div>         
@@ -29,22 +31,8 @@
     </header>
     
     <main>
-        <div class="container">
-            <section class="p-gen">
-                <a  href="../pages/variants/tasksOgeInf/taskFoundPage.html">Банк заданий</a>
-                <a  href="../pages/variants/tasksOgeInf/taskgenR.html">Случайный вариант ОГЭ</a>
-                <!-- <a  href="../pages/variants/demovers2025.html">Демоверсия 2025</a> -->
-                <a  href="../pages/variants/variants.html">Варианты</a>
-            </section>
-            <!-- <hr class="hr-between"> -->
-            <!-- <p class="p-vars"><a href="../pages/variants/variants20/pageOge20.html">> > Варианты от Крылова (20 вариантов) 2025 < < </a></p> -->
-            <hr class="hr-between">
             
-            <section class="vars-block">          
-                
-            </section>
-            <hr class="hr-between">
-
+        <div class="container">
             <div class="controls">
                 <button class="deselect-all">Убрать все</button>
                 <button class="select-all">Выбрать все</button>
@@ -58,11 +46,19 @@
                 <a href="#" class="generate-btn">Сгенерировать задания</a>
             </div>
             <hr class="hr-between">
+           <div class="task-numbers__block" style="text-align: justify;"></div>
         </div>
+
     </main>
-  
+
     <footer class="footer"><div class="container"><p class="footer-text"></p></div></footer>
-    <script type="module" src="../js/something.js"></script>
-    <script type="module" src="../js/showTasks.js"></script>
+
+    <script type="module" src="../../../js/checkVars.js"> </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+     <script type="module" src="../../../js/viewTask.js"></script>
+    <!-- <script type="module" src="../../../js/generator.js"></script> -->
+
+   
 </body>
 </html>
