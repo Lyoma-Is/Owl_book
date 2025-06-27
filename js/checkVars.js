@@ -1,5 +1,7 @@
+document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
+
 import generateTaskHTML from "../../../js/viewTask.js";
-        import { tasks as taskSources } from "../../../js/viewTask.js";
+import { tasks as taskSources } from "../../../js/viewTask.js";
 
         document.addEventListener('DOMContentLoaded', async function() {
             const taskOutput = document.querySelector('.task-numbers__block');
