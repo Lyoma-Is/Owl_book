@@ -40,6 +40,7 @@ button.addEventListener('click', function () {
         arrayAnswer.push(correct);
     }
 
+    
     // Создание текста с оценкой
     let pResult = document.createElement('p');
     pResult.classList.add("centerResult");
