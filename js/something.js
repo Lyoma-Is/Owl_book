@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
         
         // Переходим на страницу checkVars.html
-        window.location.href = '../pages/variants/tasksOgeInf/checkVars.html';
+        window.location.href = 'variants/tasksOgeInf/checkVars.html';
     });
 
     // Инициализация при загрузке страницы
