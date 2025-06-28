@@ -124,6 +124,30 @@
   }
 }
 @media (max-width: 920px) {
+  .controls {
+    gap: 10px;
+    padding: 20px 0;
+    font-size: 15px;
+  }
+  .controls button {
+    font-size: 95%;
+  }
+  .checkbox-row {
+    grid-template-columns: repeat(6, 90px);
+    gap: 10px;
+    margin: 15px 0;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .checkbox-item .task-checkbox {
+    zoom: 2.5;
+  }
+  .checkbox-item label {
+    font-size: 20px;
+  }
   main .label-text {
     font-size: 17px;
     display: block;
@@ -795,7 +819,105 @@
     box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
   }
 }
+@media (max-width: 650px) {
+  .controls {
+    gap: 10px;
+    padding: 20px 0;
+    font-size: 15px;
+  }
+  .controls button {
+    font-size: 95%;
+  }
+  .checkbox-row {
+    grid-template-columns: repeat(6, 68px);
+    gap: 10px;
+    margin: 15px 0;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .checkbox-item .task-checkbox {
+    zoom: 2;
+  }
+  .checkbox-item label {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .controls {
+    gap: 10px;
+    padding: 20px 0;
+    font-size: 15px;
+  }
+  .controls button {
+    font-size: 95%;
+  }
+  .checkbox-row {
+    grid-template-columns: repeat(6, 50px);
+    gap: 10px;
+    margin: 15px 0;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .checkbox-item .task-checkbox {
+    zoom: 1.7;
+  }
+  .checkbox-item label {
+    font-size: 15px;
+  }
+  .variant-generator {
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+  }
+  .generate-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  main .main-block .aside-left ul {
+    padding: 20px 10px;
+  }
+  main .task-numbers__block .download a img, main .slide .download a img {
+    width: 30px;
+  }
+  main .main-block .aside-left ul {
+    padding-left: 20px;
+  }
+  .vars-block .vars-block__inner {
+    padding: 10px 5px;
+    font-size: 65%;
+  }
+}
 @media (max-width: 400px) {
+  .controls {
+    gap: 10px;
+    padding: 20px 0;
+    font-size: 15px;
+  }
+  .controls button {
+    font-size: 95%;
+  }
+  .checkbox-row {
+    grid-template-columns: repeat(6, 48px);
+    gap: 10px;
+    margin: 15px 0;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .checkbox-item .task-checkbox {
+    zoom: 1.5;
+  }
+  .checkbox-item label {
+    font-size: 14px;
+  }
   main .main-block .aside-left {
     width: 40%;
   }
@@ -823,52 +945,5 @@
   }
   main .task-numbers__block .img-13_2, main .slide .img-13_2 {
     width: 300px;
-  }
-}
-@media (max-width: 500px) {
-  .controls {
-    gap: 10px;
-    padding: 20px 0;
-    font-size: 15px;
-  }
-  .controls button {
-    font-size: 95%;
-  }
-  .checkbox-row {
-    gap: 10px;
-    margin: 15px 0;
-  }
-  .checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .checkbox-item .task-checkbox {
-    zoom: 1.7;
-  }
-  .checkbox-item label {
-    font-size: 18px;
-  }
-  .variant-generator {
-    display: flex;
-    margin: 30px auto;
-    justify-content: center;
-  }
-  .generate-btn {
-    padding: 10px 20px;
-    font-size: 15px;
-  }
-  main .main-block .aside-left ul {
-    padding: 20px 10px;
-  }
-  main .task-numbers__block .download a img, main .slide .download a img {
-    width: 30px;
-  }
-  main .main-block .aside-left ul {
-    padding-left: 20px;
-  }
-  .vars-block .vars-block__inner {
-    padding: 10px 5px;
-    font-size: 65%;
   }
 }/*# sourceMappingURL=media.css.map */

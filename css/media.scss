@@ -182,6 +182,33 @@ $font-size17: 17px;
 } 
 
 @media (max-width: 920px){
+    .controls { 
+        gap: 10px;
+        padding: 20px 0;
+        font-size: 15px;
+    }
+
+    .controls button {
+        font-size: 95%;
+    }
+
+    .checkbox-row {
+        grid-template-columns: repeat(6, 90px);
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .task-checkbox{
+            zoom: 2.5;  
+        }
+        label{
+            font-size: 20px;
+        }
+    }
     main{     
        .label-text {
             font-size: 17px;
@@ -970,46 +997,35 @@ $font-size17: 17px;
         }
     }
 }
-
-@media (max-width: 400px){
-    main{
-        .main-block .aside-left{
-            width: 40%;
-           ul{
-            padding-left: 5px;
-            li a {
-            font-size: 15px;
-               }  
-            }
-            
-        } 
-        .slider-navigation{
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            align-self: center;
-            gap: 6px;
-
-        }
-        .slider-btn{
-            justify-self: center;
-            width: 35px;
-            height: 35px;
-            font-size: 15px;
-            border-radius: 4px;
-        }
-        .task-numbers__block, .slide{
-            .img-13{
-                width: 150px;
-            }
-            .img-13_2{
-             width: 300px;
-            }
-        }
+@media (max-width: 650px){
+    .controls { 
+        gap: 10px;
+        padding: 20px 0;
+        font-size: 15px;
     }
 
-  
-}
+    .controls button {
+        font-size: 95%;
+    }
 
+    .checkbox-row {
+        grid-template-columns: repeat(6, 68px);
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .task-checkbox{
+            zoom: 2;  
+        }
+        label{
+            font-size: 18px;
+        }
+    }
+}
 @media (max-width: 500px){
     .controls { 
         gap: 10px;
@@ -1022,6 +1038,7 @@ $font-size17: 17px;
     }
 
     .checkbox-row {
+        grid-template-columns: repeat(6, 50px);
         gap: 10px;
         margin: 15px 0;
     }
@@ -1029,12 +1046,12 @@ $font-size17: 17px;
     .checkbox-item {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
         .task-checkbox{
             zoom: 1.7;  
         }
         label{
-            font-size: 18px;
+            font-size: 15px;
         }
     }
     .variant-generator{
@@ -1079,3 +1096,70 @@ $font-size17: 17px;
         }
     }//vars-block
 }
+
+@media (max-width: 400px){
+    .controls { 
+        gap: 10px;
+        padding: 20px 0;
+        font-size: 15px;
+    }
+
+    .controls button {
+        font-size: 95%;
+    }
+
+    .checkbox-row {
+        grid-template-columns: repeat(6, 48px);
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .task-checkbox{
+            zoom: 1.5;  
+        }
+        label{
+            font-size: 14px;
+        }
+    }
+    main{
+        .main-block .aside-left{
+            width: 40%;
+           ul{
+            padding-left: 5px;
+            li a {
+            font-size: 15px;
+               }  
+            }
+            
+        } 
+        .slider-navigation{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            align-self: center;
+            gap: 6px;
+
+        }
+        .slider-btn{
+            justify-self: center;
+            width: 35px;
+            height: 35px;
+            font-size: 15px;
+            border-radius: 4px;
+        }
+        .task-numbers__block, .slide{
+            .img-13{
+                width: 150px;
+            }
+            .img-13_2{
+             width: 300px;
+            }
+        }
+    }
+
+  
+}
+
