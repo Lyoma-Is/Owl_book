@@ -1038,7 +1038,7 @@ $font-size17: 17px;
     }
 
     .checkbox-row {
-        grid-template-columns: repeat(6, 50px);
+        grid-template-columns: repeat(6, 52px);
         gap: 10px;
         margin: 15px 0;
     }
@@ -1051,7 +1051,7 @@ $font-size17: 17px;
             zoom: 1.7;  
         }
         label{
-            font-size: 15px;
+            font-size: 14px;
         }
     }
     .variant-generator{

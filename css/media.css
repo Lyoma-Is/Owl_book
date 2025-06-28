@@ -855,7 +855,7 @@
     font-size: 95%;
   }
   .checkbox-row {
-    grid-template-columns: repeat(6, 50px);
+    grid-template-columns: repeat(6, 52px);
     gap: 10px;
     margin: 15px 0;
   }
@@ -868,7 +868,7 @@
     zoom: 1.7;
   }
   .checkbox-item label {
-    font-size: 15px;
+    font-size: 14px;
   }
   .variant-generator {
     display: flex;
