@@ -855,17 +855,17 @@
     font-size: 95%;
   }
   .checkbox-row {
-    grid-template-columns: repeat(6, 52px);
+    grid-template-columns: repeat(6, 53px);
     gap: 10px;
     margin: 15px 0;
   }
   .checkbox-item {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
   }
   .checkbox-item .task-checkbox {
-    zoom: 1.7;
+    zoom: 1.6;
   }
   .checkbox-item label {
     font-size: 14px;
