@@ -467,16 +467,11 @@
 
 document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
 
-// Добавляем проверку загрузки модулей
-console.log('Перед импортом viewTask.js');
-
 import generateTaskHTML from "../../../js/viewTask.js";
 import { tasks as taskSources } from "../../../js/viewTask.js";
 
-console.log('После импорта', { generateTaskHTML, taskSources });
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM загружен');
     
     // Элементы DOM с проверкой
     const checkboxesContainer = document.querySelector('.checkbox-container');
@@ -485,14 +480,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const generateBtn = document.querySelector('.generate-btn');
     const taskOutput = document.querySelector('.task-numbers__block');
     
-    console.log('Найденные элементы:', {
-        checkboxesContainer,
-        selectAllBtn,
-        deselectAllBtn,
-        generateBtn,
-        taskOutput
-    });
-
     if (!checkboxesContainer || !taskOutput) {
         console.error('Не найдены необходимые DOM элементы!');
         return;
@@ -506,7 +493,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Инициализация чекбоксов
     function initCheckboxes() {
-        console.log('Инициализация чекбоксов');
         checkboxesContainer.innerHTML = '';
         
         const rowsNeeded = Math.ceil(TOTAL_TASKS / TASKS_PER_ROW);
@@ -537,16 +523,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Восстанавливаем выбранные задания из localStorage
         const selectedTasks = JSON.parse(localStorage.getItem('selectedTasks')) || [];
-        console.log('Загруженные задания из localStorage:', selectedTasks);
         
         if (selectedTasks.length > 0) {
             selectedTasks.forEach(task => {
                 const checkbox = document.querySelector(`.task-checkbox[value="${task}"]`);
                 if (checkbox) {
                     checkbox.checked = true;
-                    console.log(`Чекбокс для задания ${task} отмечен`);
-                } else {
-                    console.warn(`Чекбокс для задания ${task} не найден`);
                 }
             });
         }
@@ -573,9 +555,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function fetchJSON(url) {
-        console.log('Загрузка данных из:', url);
         if (taskDataCache.has(url)) {
-            console.log('Данные из кэша:', url);
+            
             return taskDataCache.get(url);
         }
 
@@ -584,7 +565,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!response.ok) throw new Error(`Ошибка HTTP: ${response.status}`);
             const data = await response.json();
             taskDataCache.set(url, data);
-            console.log('Успешно загружено:', url);
             return data;
         } catch (error) {
             console.error('Ошибка загрузки:', url, error);
@@ -593,7 +573,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function generateTasks() {
-        console.log('Начало генерации заданий');
         taskOutput.innerHTML = '<p>Идет генерация заданий...</p>';
         
         const selectedTasks = Array.from(
@@ -603,7 +582,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return value.includes('.') ? value : parseInt(value);
         });
         
-        console.log('Выбранные задания:', selectedTasks);
         
         if (selectedTasks.length === 0) {
             console.warn('Не выбрано ни одного задания');
@@ -613,7 +591,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Сохраняем выбранные задания в localStorage
         localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
-        console.log('Задания сохранены в localStorage');
 
         try {
             // Загружаем данные только для выбранных заданий
@@ -623,14 +600,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     return selectedTasks.some(num => num.toString() === taskNum.toString());
                 })
                 .map(async ([key, url]) => {
-                    console.log(`Загрузка данных для ${key} (${url})`);
                     const data = await fetchJSON(url);
                     return [key, data];
                 });
             
             const fetchedData = await Promise.all(fetchPromises);
             const dataMap = Object.fromEntries(fetchedData);
-            console.log('Загруженные данные:', dataMap);
             
             // Генерируем HTML для выбранных заданий
             let tasksHTML = '';
@@ -642,7 +617,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     if (data && data.length > 0) {
                         const randomTask = data[Math.floor(Math.random() * data.length)];
-                        console.log(`Генерация задания ${taskNum} (${taskKey})`);
                         tasksHTML += generateTaskHTML(taskKey, randomTask);
                     } else {
                         console.warn(`Нет данных для задания ${taskNum} (${taskKey})`);
@@ -651,7 +625,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             taskOutput.innerHTML = tasksHTML;
-            console.log('Задания сгенерированы');
             
         } catch (error) {
             console.error('Ошибка генерации:', error);
@@ -687,14 +660,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Обработчики событий
     selectAllBtn?.addEventListener('click', function() {
-        console.log('Выбрать все');
+        
         document.querySelectorAll('.task-checkbox').forEach(checkbox => {
             checkbox.checked = true;
         });
     });
     
     deselectAllBtn?.addEventListener('click', function() {
-        console.log('Снять все');
+        
         document.querySelectorAll('.task-checkbox').forEach(checkbox => {
             checkbox.checked = false;
         });
@@ -702,7 +675,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     generateBtn?.addEventListener('click', function(e) {
         e.preventDefault();
-        console.log('Нажата кнопка генерации');
         generateTasks();
     });
 
@@ -712,7 +684,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Если есть выбранные задания в localStorage, сразу генерируем их
     const selectedTasks = JSON.parse(localStorage.getItem('selectedTasks')) || [];
     if (selectedTasks.length > 0) {
-        console.log('Автогенерация заданий из localStorage');
         generateTasks();
     }
 });
