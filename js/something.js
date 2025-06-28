@@ -1,5 +1,8 @@
 document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
 
+import generateTaskHTML from "../../../js/viewTask.js";
+import { tasks as taskSources } from "../../../js/viewTask.js";
+
 const container = document.querySelector('main .container');
 container.insertAdjacentHTML('beforeend', '<div class="btn-up btn-up_hide"></div>');
 
@@ -171,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
         
         // Переходим на страницу checkVars.html
-        window.location.href = '../../pages/variants/tasksOgeInf/checkVars.html';
+        window.location.href = '../pages/variants/tasksOgeInf/checkVars.html';
     });
 
     // Инициализация при загрузке страницы
