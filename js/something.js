@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
         localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
         // Используем абсолютный путь (пример):
-        location.href = '../pages/variants/tasksOgeInf/checkVars.html';
+        window.location.href = '../pages/variants/tasksOgeInf/checkVars.html';
 
     } catch (error) {
         console.error('Ошибка:', error);
