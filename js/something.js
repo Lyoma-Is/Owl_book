@@ -101,28 +101,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-   generateBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+//    generateBtn.addEventListener('click', function(e) {
+//     e.preventDefault();
     
-    const selectedTasks = Array.from(
-        document.querySelectorAll('.task-checkbox:checked')
-    ).map(checkbox => checkbox.value);
+//     const selectedTasks = Array.from(
+//         document.querySelectorAll('.task-checkbox:checked')
+//     ).map(checkbox => checkbox.value);
 
-    if (selectedTasks.length === 0) {
-        alert('Пожалуйста, выберите хотя бы одно задание');
-        return;
-    }
+//     if (selectedTasks.length === 0) {
+//         alert('Пожалуйста, выберите хотя бы одно задание');
+//         return;
+//     }
     
-    try {
-        localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
-        // Используем абсолютный путь (пример):
-        window.location.href = '/pages/variants/tasksOgeInf/checkVars.html';
+//     try {
+//         localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
+//         // Используем абсолютный путь (пример):
+//         window.location.href = '/pages/variants/tasksOgeInf/checkVars.html';
 
-    } catch (error) {
-        console.error('Ошибка:', error);
-        alert('Ошибка перехода. Проверьте консоль для подробностей.');
-    }
-});
+//     } catch (error) {
+//         console.error('Ошибка:', error);
+//         alert('Ошибка перехода. Проверьте консоль для подробностей.');
+//     }
+// });
 
     initCheckboxes();
 });

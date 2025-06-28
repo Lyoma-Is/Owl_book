@@ -256,11 +256,6 @@
 //     initCheckboxes();
 // });
 
-
-
-
-
-
 document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
 
 import generateTaskHTML from "../../../js/viewTask.js";
