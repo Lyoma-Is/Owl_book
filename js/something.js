@@ -1,7 +1,7 @@
 document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
 
-import generateTaskHTML from "../../../js/viewTask.js";
-import { tasks as taskSources } from "../../../js/viewTask.js";
+// import generateTaskHTML from "../../../js/viewTask.js";
+// import { tasks as taskSources } from "../../../js/viewTask.js";
 
 const container = document.querySelector('main .container');
 container.insertAdjacentHTML('beforeend', '<div class="btn-up btn-up_hide"></div>');
