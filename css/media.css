@@ -842,7 +842,7 @@
     zoom: 2;
   }
   .checkbox-item label {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 @media (max-width: 500px) {
@@ -903,7 +903,7 @@
     font-size: 95%;
   }
   .checkbox-row {
-    grid-template-columns: repeat(6, 48px);
+    grid-template-columns: repeat(6, 51px);
     gap: 10px;
     margin: 15px 0;
   }
