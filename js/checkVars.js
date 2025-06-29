@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const TOTAL_TASKS = 16;
     const TASKS_PER_ROW = 6;
     const taskDataCache = new Map();
-    const REPEAT_COUNT = 3;
+    const REPEAT_COUNT = 5;
 
     // Инициализация чекбоксов
     function initCheckboxes() {

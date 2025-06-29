@@ -1,6 +1,12 @@
 $font-size17: 17px;
 $back-top-color: rgb(233, 199, 105);
-
+input[type="checkbox"] {
+     -webkit-appearance: checkbox !important;
+     -moz-appearance: checkbox !important;
+     -ms-appearance: checkbox !important;
+     -o-appearance: checkbox !important;
+     appearance: checkbox !important;
+}
 @mixin input-style($border-color: #bdbdbd) {
   padding: 5px;
   margin-top: 25px;
