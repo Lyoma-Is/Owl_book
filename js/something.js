@@ -1,5 +1,8 @@
-document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
-
+//document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
+const footerText = document.querySelector('.footer-text');
+if (footerText) {
+  footerText.innerHTML = `<b>© OwlExams.ru</b>`;
+}
 const container = document.querySelector('main .container');
 container.insertAdjacentHTML('beforeend', '<div class="btn-up btn-up_hide"></div>');
 
@@ -37,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const TASKS_PER_ROW = 6;
 
     function initCheckboxes() {
+        if(!checkboxesContainer){
+           return 0
+        }
         checkboxesContainer.innerHTML = '';
         const rowsNeeded = Math.ceil(TOTAL_TASKS / TASKS_PER_ROW);
         let taskCounter = 0;
@@ -89,40 +95,41 @@ document.addEventListener('DOMContentLoaded', function() {
         return container;
     }
 
+    if(!selectAllBtn || !deselectAllBtn || !generateBtn){return 0 }
     selectAllBtn.addEventListener('click', function() {
         document.querySelectorAll('.task-checkbox').forEach(checkbox => {
             checkbox.checked = true;
         });
     });
-    
+
     deselectAllBtn.addEventListener('click', function() {
         document.querySelectorAll('.task-checkbox').forEach(checkbox => {
             checkbox.checked = false;
         });
     });
-    
-   generateBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const selectedTasks = Array.from(
-        document.querySelectorAll('.task-checkbox:checked')
-    ).map(checkbox => checkbox.value);
 
-    if (selectedTasks.length === 0) {
-        alert('Пожалуйста, выберите хотя бы одно задание');
-        return;
-    }
+    generateBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const selectedTasks = Array.from(
+            document.querySelectorAll('.task-checkbox:checked')
+        ).map(checkbox => checkbox.value);
+
+        if (selectedTasks.length === 0) {
+            alert('Пожалуйста, выберите хотя бы одно задание');
+            return;
+        }
+        
+        try {
+            localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
+            // Используем абсолютный путь (пример):
+            window.location.href = '../pages/variants/tasksOgeInf/checkVars.html';
+
+        } catch (error) {
+            console.error('Ошибка:', error);
+            alert('Ошибка перехода. Проверьте консоль для подробностей.');
+        }
+    });
     
-    try {
-        localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
-        // Используем абсолютный путь (пример):
-        window.location.href = '../pages/variants/tasksOgeInf/checkVars.html';
-
-    } catch (error) {
-        console.error('Ошибка:', error);
-        alert('Ошибка перехода. Проверьте консоль для подробностей.');
-    }
-});
-
     initCheckboxes();
 });

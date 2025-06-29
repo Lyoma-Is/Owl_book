@@ -159,6 +159,7 @@ $back-top-color:  rgb(233, 199, 105);
   background: #e0e0e0;
 }
 
+
 .checkbox-container {
     display: block;
     
@@ -176,18 +177,95 @@ $back-top-color:  rgb(233, 199, 105);
   
 }
 
+
 .checkbox-item {
   display: flex;
   align-items: center;
   gap: 10px;
   .task-checkbox{
-    zoom: 3; 
+
+   zoom: 3; 
     accent-color: $back-top-color;  
    }
    label{
     font-size: 25px;
    }
 }
+
+
+
+
+
+
+// .checkbox-container {
+//     display: block;
+// }
+
+// .checkbox-row {
+//     display: grid;
+//     grid-template-columns: repeat(6, 120px);
+//     align-items: center;
+//     justify-content: center;
+//     gap: 20px;
+//     margin: 15px 0;
+// }
+
+// .checkbox-item {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+    
+//     .task-checkbox {
+//         // Сброс стандартных стилей
+//         -webkit-appearance: none;
+//         -moz-appearance: none;
+//         appearance: none;
+        
+//         // Кастомные размеры
+//         width: 25px;
+//         height: 25px;
+//         min-width: 25px;
+//         border: 2px solid #ccc;
+//         border-radius: 4px;
+//         outline: none;
+//         cursor: pointer;
+//         position: relative;
+//         transition: all 0.2s;
+        
+//         // Увеличение без использования zoom (который не рекомендуется)
+//         transform: scale(1.5);
+//         transform-origin: left center;
+//         margin-right: 15px; // Компенсируем увеличение
+        
+//         // Стиль для отмеченного состояния
+//         &:checked {
+//             background-color: $back-top-color;
+//             border-color: $back-top-color;
+            
+//             // Галочка (можно использовать псевдоэлемент)
+//             &::after {
+//                 content: "";
+//                 position: absolute;
+//                 left: 7px;
+//                 top: 3px;
+//                 width: 5px;
+//                 height: 10px;
+//                 border: solid white;
+//                 border-width: 0 2px 2px 0;
+//                 transform: rotate(45deg);
+//             }
+//         }
+//     }
+    
+//     label {
+//         font-size: 25px;
+//         cursor: pointer;
+//     }
+// }
+
+
+
+
 .variant-generator{
     display: flex;
     margin:  30px auto;

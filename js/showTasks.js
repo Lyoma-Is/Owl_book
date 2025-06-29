@@ -230,7 +230,7 @@ async function loadVariants() {
         variants = await response.json();
         createVariants();
     } catch (e) {
-        console.error('Ошибка загрузки вариантов:', e);
+        //console.error('Ошибка загрузки вариантов:', e);
     }
 }
 function updateBreadcrumbWithVariant() {

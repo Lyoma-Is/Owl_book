@@ -1,5 +1,42 @@
 [
     {
+        "taskCounter": 1310,
+        "typeTask": 4,
+        "task": "наибольшее",
+        "taskAnswer": 305,
+        "taskAn": [100110001, 406, 130],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 1309,
+        "typeTask": 4,
+        "task": "наибольшее",
+        "taskAnswer": 369,
+        "taskAn": [100100110, 463, 171],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 1308,
+        "typeTask": 4,
+        "task": "наибольшее",
+        "taskAnswer": 491,
+        "taskAn": [111101011, 706, "1D6"],
+
+        "taskNum": ""
+    },
+    {
+        "taskCounter": 1307,
+        "typeTask": 4,
+        "task": "наименьшее",
+        
+        "taskAnswer": 308,
+        "taskAn": [101101000, 464, "1DA"],
+
+        "taskNum": ""
+    },
+    {
         "taskCounter": 1068,
         "typeTask": 4,
         "task": "наибольшее",

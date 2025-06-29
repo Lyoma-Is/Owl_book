@@ -143,12 +143,15 @@ document.getElementById('select-task').innerHTML = `
 <option value="taskFifteenPage.html">15. Исполнитель Робот.</option>
 <option value="taskSixteenPage.html">16. Напиши программу.</option>
 `
-
-
-document.getElementById('taskSort').innerHTML = `
+const taskSort = document.getElementById('taskSort');
+if (taskSort) {
+    taskSort.innerHTML = `
        <option value='1'>новые</option>
        <option value='0'>по возрастанию</option>
        <option value='1'>по убыванию</option>
        <option value='2'>случайный порядок</option>
 `
+}
+
+
 

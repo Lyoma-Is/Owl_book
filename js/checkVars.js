@@ -1,5 +1,8 @@
 
-document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
+const footerText = document.querySelector('.footer-text');
+if (footerText) {
+  footerText.innerHTML = `<b>© OwlExams.ru</b>`;
+}
 
 import generateTaskHTML from "./viewTask.js";
 import { tasks as taskSources } from "./viewTask.js";
