@@ -2301,17 +2301,35 @@ int main(){
               <td>Входные данные</td>
               <td>Выходные данные</td>
             </tr>
-            <tr>
-              <td>${task4}</td>
-              <td>${task5}</td>
+            ${task4.length === 2 ? 
+              `
+              <tr>
+              <td>${task4[0]}</td>
+              <td>${task5[0]}</td>
             </tr>
+            <tr>
+              <td>${task4[1]}</td>
+              <td>${task5[1]}</td>
+            </tr>
+              `
+              : 
+              `
+              <tr>
+                <td>${task4}</td>
+                <td>${task5}</td>
+              </tr>
+              `
+
+            }
+            
           </table>
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
   
           return answerBlock
-         }
+      
+      }
     }
    
 }
