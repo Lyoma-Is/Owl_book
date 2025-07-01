@@ -5,7 +5,7 @@ import { tasks } from "./viewTask.js";
 const tasksCache = new Map();
 let totalTasksLoaded = 0;
 let allTasks = []; // Массив для хранения всех задач
-let countData = 0;
+let countData = {};
 async function fetchTasks(taskKey) {
   try {
     // Если задачи уже в кэше - используем их
@@ -19,12 +19,17 @@ async function fetchTasks(taskKey) {
     const data = await response.json();
     tasksCache.set(taskKey, data); // Сохраняем в кэш
     totalTasksLoaded += data.length;
+    countData[taskKey] = data.length;
     console.log(`Загружено ${data.length} задач из ${taskKey}`);
     setupFilters(taskKey, data); // Настраиваем фильтры после загрузки
+
+   // countLabel2.innerHTML = `<hr class="hr-pd_5">Количество загруженных задач: ${totalTasksLoaded}`
+
     // Добавляем задачи в общий массив
     data.forEach(task => {
       task.source = taskKey; // Сохраняем источник задачи
       allTasks.push(task);
+
     });
 
     return data;
@@ -34,12 +39,14 @@ async function fetchTasks(taskKey) {
   }
 }
 
-// const showTaskCount = document.querySelector('.show-box');
-// const countLabel = document.createElement('label');
-// countLabel.className = 'label-text'
-// countLabel.innerHTML = `Количество загруженных задач: ${countData}`
+const showTaskCount = document.querySelector('.show-box');
+const countLabel = document.createElement('label');
+countLabel.className = 'label-text';
 
-// showTaskCount.appendChild(countLabel)
+showTaskCount.appendChild(countLabel);
+
+const countLabel2 = document.createElement('label');
+showTaskCount.appendChild(countLabel2);
 
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
@@ -85,6 +92,7 @@ function displayTasks(taskKey, tasksToDisplay) {
   if (!output) return;
   
   output.innerHTML = tasksToDisplay.map(item => generateTaskHTML(taskKey, item)).join('');
+  countLabel.innerHTML = `<hr class="hr-pd_5">Количество загруженных задач: ${countData[taskKey]}`
 }
 
 // Инициализация

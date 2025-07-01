@@ -2254,7 +2254,7 @@ int main(){
           На рисунке указан один из возможных способов расположения стен и Робота (Робот обозначен буквой «Р»).
           <hr class="hr-pd_10">
 
-          ${taskCounter === 950 ? 
+          ${taskCounter === 950 || taskCounter === 1457 || 1499 ? 
             `
           <img class="img-14" style="width: 15%;" src="../../../img/task15/task15_${taskCounter}_1.png"><hr class="hr-pd_10">
 
