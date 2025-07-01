@@ -5,30 +5,27 @@ import { tasks } from "./viewTask.js";
 const tasksCache = new Map();
 let totalTasksLoaded = 0;
 let allTasks = []; // Массив для хранения всех задач
-
+let countData = 0;
 async function fetchTasks(taskKey) {
   try {
     // Если задачи уже в кэше - используем их
     if (tasksCache.has(taskKey)) {
       return tasksCache.get(taskKey);
     }
-
+ 
     const response = await fetch(tasks[taskKey]);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     
     const data = await response.json();
     tasksCache.set(taskKey, data); // Сохраняем в кэш
     totalTasksLoaded += data.length;
-    
     console.log(`Загружено ${data.length} задач из ${taskKey}`);
     setupFilters(taskKey, data); // Настраиваем фильтры после загрузки
-
     // Добавляем задачи в общий массив
     data.forEach(task => {
       task.source = taskKey; // Сохраняем источник задачи
       allTasks.push(task);
     });
-
 
     return data;
   } catch (error) {
@@ -36,6 +33,13 @@ async function fetchTasks(taskKey) {
     return [];
   }
 }
+
+// const showTaskCount = document.querySelector('.show-box');
+// const countLabel = document.createElement('label');
+// countLabel.className = 'label-text'
+// countLabel.innerHTML = `Количество загруженных задач: ${countData}`
+
+// showTaskCount.appendChild(countLabel)
 
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
