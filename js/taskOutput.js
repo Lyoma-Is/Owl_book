@@ -22,8 +22,10 @@ async function fetchTasks(taskKey) {
     countData[taskKey] = data.length;
     console.log(`Загружено ${data.length} задач из ${taskKey}`);
     setupFilters(taskKey, data); // Настраиваем фильтры после загрузки
-
-   // countLabel2.innerHTML = `<hr class="hr-pd_5">Количество загруженных задач: ${totalTasksLoaded}`
+    if(showTaskCount2){
+      showTaskCount2.innerHTML = `<hr class="hr-pd_5">Общее количество задач: ${totalTasksLoaded}`
+    }
+    
 
     // Добавляем задачи в общий массив
     data.forEach(task => {
@@ -42,11 +44,11 @@ async function fetchTasks(taskKey) {
 const showTaskCount = document.querySelector('.show-box');
 const countLabel = document.createElement('label');
 countLabel.className = 'label-text';
-
 showTaskCount.appendChild(countLabel);
 
-const countLabel2 = document.createElement('label');
-showTaskCount.appendChild(countLabel2);
+const showTaskCount2 = document.querySelector('.label-text_two');
+
+
 
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
