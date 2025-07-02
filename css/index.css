@@ -108,9 +108,9 @@ main {
 }
 main .main-block {
   display: flex;
+  height: 100%;
 }
 main .main-block .aside-left {
-  height: 900px;
   width: 20%;
   border-right: 3px solid rgb(233, 199, 105);
 }

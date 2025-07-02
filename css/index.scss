@@ -120,9 +120,9 @@ main{
     flex: 1;
     .main-block{
         display: flex;
-        
+        height: 100%;
         .aside-left{ 
-            height: 900px;
+            
             width: calc(100% - 80%);
             border-right: 3px solid $back-top-color;
             ul{

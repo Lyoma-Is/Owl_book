@@ -104,6 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
 });
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('taskNumber');
   const searchBtn = document.getElementById('searchBtn');
@@ -131,14 +133,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// document.getElementById('select-task').addEventListener('change', function() {
+//   if(this.value) {
+//       window.location.href = this.value;
+//   }
+// });
+
 document.getElementById('select-task').addEventListener('change', function() {
   if(this.value) {
-      window.location.href = this.value;
+    // Сохраняем выбранное значение в localStorage
+    localStorage.setItem('selectedTaskPage', this.value);
+    window.location.href = this.value;
+  }
+});
+
+// При загрузке страницы восстанавливаем выбранное значение
+document.addEventListener('DOMContentLoaded', () => {
+  const savedSelection = localStorage.getItem('selectedTaskPage');
+  if (savedSelection) {
+    const select = document.getElementById('select-task');
+    select.value = savedSelection;
   }
 });
 
 document.getElementById('select-task').innerHTML = ` 
-<option value="">Выберите задание по типу</option>
+
+<option value="taskFoundPage.html">Выберите задание по типу</option>
 <option value="taskOnePage.html">1. Оценка объема памяти для хранения данных.</option>
 <option value="taskTwoPage.html">2. Кодирование и декодирование информации.</option>
 <option value="taskThreePage.html">3. Истинные и ложные высказывания.</option>
