@@ -133,28 +133,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.getElementById('select-task').addEventListener('change', function() {
+  if(this.value) {
+      window.location.href = this.value;
+  }
+});
+
 // document.getElementById('select-task').addEventListener('change', function() {
 //   if(this.value) {
-//       window.location.href = this.value;
+//     // Сохраняем выбранное значение в localStorage
+//     localStorage.setItem('selectedTaskPage', this.value);
+//     window.location.href = this.value;
 //   }
 // });
 
-document.getElementById('select-task').addEventListener('change', function() {
-  if(this.value) {
-    // Сохраняем выбранное значение в localStorage
-    localStorage.setItem('selectedTaskPage', this.value);
-    window.location.href = this.value;
-  }
-});
-
-// При загрузке страницы восстанавливаем выбранное значение
-document.addEventListener('DOMContentLoaded', () => {
-  const savedSelection = localStorage.getItem('selectedTaskPage');
-  if (savedSelection) {
-    const select = document.getElementById('select-task');
-    select.value = savedSelection;
-  }
-});
+// // При загрузке страницы восстанавливаем выбранное значение
+// document.addEventListener('DOMContentLoaded', () => {
+//   const savedSelection = localStorage.getItem('selectedTaskPage');
+//   if (savedSelection) {
+//     const select = document.getElementById('select-task');
+//     select.value = savedSelection;
+//   }
+// });
 
 document.getElementById('select-task').innerHTML = ` 
 
