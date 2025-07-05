@@ -343,6 +343,16 @@ main .btn-primary:active {
   border: 1px solid;
   padding: 10px;
 }
+.task-numbers__block .table_14, .slide .table_14 {
+  border-collapse: collapse;
+}
+.task-numbers__block .table_14 td, .slide .table_14 td {
+  text-align: center;
+  align-items: center;
+  font-size: 90%;
+  border: 1px solid;
+  padding: 5px;
+}
 
 .info-taskThree {
   padding: 15px;

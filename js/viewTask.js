@@ -2179,15 +2179,1736 @@ int main(){
     }
     if (taskKey === 'fourteen'){
       let Nomer = 14
+        function Tab14(taskTable){
+          
+          if (taskTable === 1){
+            return `
+            В электронную таблицу занесли данные о тестировании людей разного возраста.
+            <hr class="hr-pd_10"> 
+            <table class="table_14">
+              <tbody style="text-align: center; align-items: center;">
+                <tr>
+                  <td width="25"><p><strong>&nbsp;</strong></p></td>
+                  <td width="250"><p><strong>A</strong></p></td>
+                  <td ><p><strong>B</strong></p></td>
+                  <td ><p><strong>C</strong></p></td>
+                  <td ><p><strong>D</strong></p></td>
+                  <td ><p><strong>E</strong></p></td>
+                </tr>
+                <tr>
+                  <td><p>1</p></td>
+                  <td><p><strong>номер участника</strong></p></td>
+                  <td><p><strong>пол</strong></p></td>
+                  <td><p><strong>возраст</strong></p></td>
+                  <td><p><strong>тест 1</strong></p></td>
+                  <td><p><strong>тест 2</strong></p></td>
+                </tr>
+                <tr>
+                  <td width="24"><p>2</p></td>
+                  <td width="109"><p>участник 1</p></td>
+                  <td width="97"><p>жен</p></td>
+                  <td width="71"><p>16</p></td>
+                  <td width="107"><p>31</p></td>
+                  <td width="107"><p>48</p></td>
+                </tr>
+                <tr>
+                  <td width="24"><p>3</p></td>
+                  <td width="109"><p>участник 2</p></td>
+                  <td width="97"><p>муж</p></td>
+                  <td width="71"><p>25</p></td>
+                  <td width="107"><p>14</p></td>
+                  <td width="107"><p>40</p></td>
+                </tr>
+                <tr>
+                  <td width="24"><p>4</p></td>
+                  <td width="109"><p>участник 3</p></td>
+                  <td width="97"><p>муж</p></td>
+                  <td width="71"><p>16</p></td>
+                  <td width="107"><p>35</p></td>
+                  <td width="107"><p>18</p></td>
+                </tr>
+                <tr>
+                  <td width="24"><p>5</p></td>
+                  <td width="109"><p>участник 4</p></td>
+                  <td width="97"><p>муж</p></td>
+                  <td width="71"><p>73</p></td>
+                  <td width="107"><p>9</p></td>
+                  <td width="107"><p>24</p></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr class="hr-pd_10"> 
+            В столбце A записан номер участника; в столбце B – пол; в столбце C – возраст; в столбце D – балл за тест 1; в столбце E – балл за тест 2.<br>
+            Всего в электронную таблицу были занесены данные по 1000 участников.
+
+            
+            `
+          } // тест 1
+          
+          else if (taskTable === 2){
+            return `
+            В электронную таблицу занесли результаты анонимного тестирования. 
+            Все участники набирали баллы, делая задания для левой и правой руки. 
+            Ниже приведены первые строки получившейся таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td>
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="250">
+<p><strong>A</strong></p>
+</td>
+<td width="56">
+<p><strong>B</strong></p>
+</td>
+<td>
+<p><strong>C</strong></p>
+</td>
+<td width="140">
+<p><strong>D</strong></p>
+</td>
+<td width="150">
+<p><strong>E</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>1</strong></p>
+</td>
+<td width="161">
+<p><em>номер участника</em></p>
+</td>
+<td width="56">
+<p><em>пол</em></p>
+</td>
+<td>
+<p><em>статус</em></p>
+</td>
+<td width="93">
+<p><em>левая рука</em></p>
+</td>
+<td width="122">
+<p><em>правая рука</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>2</strong></p>
+</td>
+<td width="161">
+<p>участник 1</p>
+</td>
+<td width="56">
+<p>жен</p>
+</td>
+<td>
+<p>пенсионер</p>
+</td>
+<td width="93">
+<p>35</p>
+</td>
+<td width="122">
+<p>34</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>3</strong></p>
+</td>
+<td width="161">
+<p>участник 2</p>
+</td>
+<td width="56">
+<p>муж</p>
+</td>
+<td>
+<p>студент</p>
+</td>
+<td width="93">
+<p>57</p>
+</td>
+<td width="122">
+<p>53</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>4</strong></p>
+</td>
+<td width="161">
+<p>участник 3</p>
+</td>
+<td width="56">
+<p>муж</p>
+</td>
+<td>
+<p>пенсионер</p>
+</td>
+<td width="93">
+<p>47</p>
+</td>
+<td width="122">
+<p>64</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>5</strong></p>
+</td>
+<td width="161">
+<p>участник 4</p>
+</td>
+<td width="56">
+<p>муж</p>
+</td>
+<td>
+<p>служащий</p>
+</td>
+<td width="93">
+<p>34</p>
+</td>
+<td width="122">
+<p>58</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A указан номер участника, в столбце B – пол, в столбце C – один из трёх статусов: пенсионер, служащий, студент, в столбцах D, E – показатели тестирования для левой и правой руки.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 участникам. Порядок записей в таблице произвольный.
+`
+
+          } // левая рука
+          
+          else if(taskTable === 3){
+            return `
+            В электронную таблицу занесли результаты мониторинга стоимости бензина трёх марок (92, 95, 98) на бензозаправках города. 
+            На рисунке приведены первые строки получившейся таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+  <td width="47"><p>&nbsp;</p></td>
+  <td width="198"><p><strong>A</strong></p></td>
+  <td width="94"><p><strong>B</strong></p></td>
+  <td width="85"><p><strong>C</strong></p></td>
+</tr>
+<tr>
+<td width="47">
+<p><strong>1</strong></p>
+</td>
+<td width="198">
+<p><strong>Улица</strong></p>
+</td>
+<td width="94">
+<p><strong>Марка</strong></p>
+</td>
+<td width="85">
+<p><strong>Цена</strong></p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p><strong>2</strong></p>
+</td>
+<td width="198">
+<p>Абельмановская</p>
+</td>
+<td width="94">
+<p>92</p>
+</td>
+<td width="85">
+<p>45,80</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p><strong>3</strong></p>
+</td>
+<td width="198">
+<p>Абрамцевская</p>
+</td>
+<td width="94">
+<p>98</p>
+</td>
+<td width="85">
+<p>49,40</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p><strong>4</strong></p>
+</td>
+<td width="198">
+<p>Авиамоторная</p>
+</td>
+<td width="94">
+<p>95</p>
+</td>
+<td width="85">
+<p>49,10</p>
+</td>
+</tr>
+<tr>
+<td width="47">
+<p><strong>5</strong></p>
+</td>
+<td width="198">
+<p>Авиаторов</p>
+</td>
+<td width="94">
+<p>95</p>
+</td>
+<td width="85">
+<p>47,70</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записано название улицы, на которой расположена бензозаправка, в столбце B – марка бензина, который продаётся на этой заправке (одно из чисел 92, 95, 98), 
+в столбце C – стоимость бензина на данной бензозаправке (в рублях, с указанием двух знаков дробной части). 
+<hr class="hr-pd_10">
+На каждой улице может быть расположена только одна заправка, для каждой заправки указана только одна марка бензина. 
+Всего в электронную таблицу были занесены данные по 1000 бензозаправкам. Порядок записей в таблице произвольный.
+
+            `
+          } // Авиаторов
+          
+          else if(taskTable === 4){
+            return `
+            В электронную таблицу занесли данные о тестировании учеников. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="29">&nbsp;</td>
+<td width="80">
+<p><strong>A</strong></p>
+</td>
+<td width="200">
+<p><strong>B</strong></p>
+</td>
+<td width="230">
+<p><strong>C</strong></p>
+</td>
+<td width="100">
+<p><strong>D</strong></p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p><strong>1</strong></p>
+</td>
+<td width="60">
+<p><strong>округ</strong></p>
+</td>
+<td width="115">
+<p><strong>код ученика</strong></p>
+</td>
+<td width="232">
+<p><strong>любимый предмет</strong></p>
+</td>
+<td width="160">
+<p><strong>балл</strong></p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p><strong>2</strong></p>
+</td>
+<td width="60">
+<p>С</p>
+</td>
+<td width="115">
+<p>Ученик 1</p>
+</td>
+<td width="232">
+<p>обществознание</p>
+</td>
+<td width="160">
+<p>246</p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p><strong>3</strong></p>
+</td>
+<td width="60">
+<p>В</p>
+</td>
+<td width="115">
+<p>Ученик 2</p>
+</td>
+<td width="232">
+<p>немецкий язык</p>
+</td>
+<td width="160">
+<p>530</p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p><strong>4</strong></p>
+</td>
+<td width="60">
+<p>Ю</p>
+</td>
+<td width="115">
+<p>Ученик 3</p>
+</td>
+<td width="232">
+<p>русский язык</p>
+</td>
+<td width="160">
+<p>576</p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p><strong>5</strong></p>
+</td>
+<td width="60">
+<p>СВ</p>
+</td>
+<td width="115">
+<p>Ученик 4</p>
+</td>
+<td width="232">
+<p>обществознание</p>
+</td>
+<td width="160">
+<p>304</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записан округ, в котором учится ученик; в столбце B – код ученика; в столбце C – любимый предмет; в столбце D – тестовый балл.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 учеников.
+            `
+          } // балл 246
+          
+          else if(taskTable === 5){
+            return `
+            В электронную таблицу занесли результаты анонимного тестирования студентов. Ниже приведены первые строки получившейся таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td>
+<p>&nbsp;</p>
+</td>
+<td width="200">
+<p><strong>A</strong></p>
+</td>
+<td width="53">
+<p><strong>B</strong></p>
+</td>
+<td width="159">
+<p><strong>C</strong></p>
+</td>
+<td width="85">
+<p><strong>D</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>1</strong></p>
+</td>
+<td width="147">
+<p><em>номер участника</em></p>
+</td>
+<td width="53">
+<p><em>пол</em></p>
+</td>
+<td width="159">
+<p><em>факультет</em></p>
+</td>
+<td width="85">
+<p><em>баллы</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>2</strong></p>
+</td>
+<td width="147">
+<p>участник 1</p>
+</td>
+<td width="53">
+<p>жен.</p>
+</td>
+<td width="159">
+<p>химический</p>
+</td>
+<td width="85">
+<p>21</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>3</strong></p>
+</td>
+<td width="147">
+<p>участник 2</p>
+</td>
+<td width="53">
+<p>муж.</p>
+</td>
+<td width="159">
+<p>математический</p>
+</td>
+<td width="85">
+<p>5</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>4</strong></p>
+</td>
+<td width="147">
+<p>участник 3</p>
+</td>
+<td width="53">
+<p>жен.</p>
+</td>
+<td width="159">
+<p>медицинский</p>
+</td>
+<td width="85">
+<p>15</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>5</strong></p>
+</td>
+<td width="147">
+<p>участник 4</p>
+</td>
+<td width="53">
+<p>муж.</p>
+</td>
+<td width="159">
+<p>математический</p>
+</td>
+<td width="85">
+<p>15</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>6</strong></p>
+</td>
+<td width="147">
+<p>участник 5</p>
+</td>
+<td width="53">
+<p>муж.</p>
+</td>
+<td width="159">
+<p>экономический</p>
+</td>
+<td width="85">
+<p>24</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">    
+В столбце A указан номер участника; в столбце B – пол; в столбце C – один из четырёх факультетов: математический, медицинский, химический, экономический; в столбце D – количество набранных баллов (от 5 до 25).
+<hr class="hr-pd_10"> 
+Всего в электронную таблицу были занесены данные по 1000 участников. Порядок записей в таблице произвольный.   
+            `
+          } // балл 21
+          
+          else if(taskTable === 6){
+            return `
+            В электронную таблицу занесли данные о результатах тестирования. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="24">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="200">
+<p><strong>A</strong></p>
+</td>
+<td width="180">
+<p><strong>B</strong></p>
+</td>
+<td width="180">
+<p><strong>C</strong></p>
+</td>
+<td width="150">
+<p><strong>D</strong></p>
+</td>
+<td width="180">
+<p><strong>E</strong></p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>1</p>
+</td>
+<td width="109">
+<p><strong>номер участника</strong></p>
+</td>
+<td width="97">
+<p><strong>баллы русский язык</strong></p>
+</td>
+<td width="116">
+<p><strong>баллы математика</strong></p>
+</td>
+<td width="107">
+<p><strong>баллы физика</strong></p>
+</td>
+<td width="131">
+<p><strong>баллы информатика</strong></p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>2</p>
+</td>
+<td width="109">
+<p>участник 1</p>
+</td>
+<td width="97">
+<p>79</p>
+</td>
+<td width="116">
+<p>81</p>
+</td>
+<td width="107">
+<p>44</p>
+</td>
+<td width="131">
+<p>85</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>3</p>
+</td>
+<td width="109">
+<p>участник 2</p>
+</td>
+<td width="97">
+<p>98</p>
+</td>
+<td width="116">
+<p>23</p>
+</td>
+<td width="107">
+<p>82</p>
+</td>
+<td width="131">
+<p>89</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>4</p>
+</td>
+<td width="109">
+<p>участник 3</p>
+</td>
+<td width="97">
+<p>48</p>
+</td>
+<td width="116">
+<p>79</p>
+</td>
+<td width="107">
+<p>88</p>
+</td>
+<td width="131">
+<p>90</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>5</p>
+</td>
+<td width="109">
+<p>участник 4</p>
+</td>
+<td width="97">
+<p>94</p>
+</td>
+<td width="116">
+<p>35</p>
+</td>
+<td width="107">
+<p>90</p>
+</td>
+<td width="131">
+<p>40</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записан номер участника; в столбце B – балл по русскому языку; в столбце C – балл по математике; в столбце D – балл по физике; в столбце E – балл по информатике.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 участников.
+            `
+          } // балл 85
+
+          else if(taskTable === 7){
+            return `
+            В электронную таблицу занесли данные наблюдения за погодой в течение одного года. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="29">&nbsp;</td>
+<td width="120">
+<p>A</p>
+</td>
+<td width="140">
+<p>B</p>
+</td>
+<td width="71">
+<p>C</p>
+</td>
+<td width="94">
+<p>D</p>
+</td>
+<td width="58">
+<p>E</p>
+</td>
+<td width="190">
+<p>F</p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p>1</p>
+</td>
+<td width="87">
+<p><strong>Дата</strong></p>
+</td>
+<td width="124">
+<p><strong>Температура</strong></p>
+</td>
+<td width="71">
+<p><strong>Осадки</strong></p>
+</td>
+<td width="94">
+<p><strong>Давление</strong></p>
+</td>
+<td width="58">
+<p><strong>Ветер</strong></p>
+</td>
+<td width="156">
+<p><strong>Скорость ветра</strong></p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p>2</p>
+</td>
+<td width="87">
+<p>1 января</p>
+</td>
+<td width="124">
+<p>0,7</p>
+</td>
+<td width="71">
+<p>15,2</p>
+</td>
+<td width="94">
+<p>748</p>
+</td>
+<td width="58">
+<p>ЮВ</p>
+</td>
+<td width="156">
+<p>4,2</p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p>3</p>
+</td>
+<td width="87">
+<p>2 января</p>
+</td>
+<td width="124">
+<p>0,4</p>
+</td>
+<td width="71">
+<p>4,6</p>
+</td>
+<td width="94">
+<p>751</p>
+</td>
+<td width="58">
+<p>В</p>
+</td>
+<td width="156">
+<p>4,7</p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p>4</p>
+</td>
+<td width="87">
+<p>3 января</p>
+</td>
+<td width="124">
+<p>–1,9</p>
+</td>
+<td width="71">
+<p>1,4</p>
+</td>
+<td width="94">
+<p>747</p>
+</td>
+<td width="58">
+<p>С</p>
+</td>
+<td width="156">
+<p>2,4</p>
+</td>
+</tr>
+<tr>
+<td width="29">
+<p>5</p>
+</td>
+<td width="87">
+<p>4 января</p>
+</td>
+<td width="124">
+<p>–7,7</p>
+</td>
+<td width="71">
+<p>0,2</p>
+</td>
+<td width="94">
+<p>752</p>
+</td>
+<td width="58">
+<p>З</p>
+</td>
+<td width="156">
+<p>4,7</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записана дата наблюдения; в столбце B – среднесуточная температура воздуха для указанной даты; в столбце C – количество выпавших осадков (в миллиметрах) для указанной даты; в столбце D – среднесуточное атмосферное давление (в миллиметрах ртутного столба). В столбце E записано направление ветра для указанной даты – одно из восьми возможных значений: «СЗ», «С», «СВ», «В», «ЮВ», «Ю», «ЮЗ», «З». В столбце F записана среднесуточная скорость ветра (в метрах в секунду).
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по всем 365 дням года в хронологическом порядке.
+            `
+          } // ветер
+
+          else if(taskTable === 8){
+            return `
+            В электронную таблицу занесли данные о численности населения городов разных стран. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="30">&nbsp;</td>
+<td width="250">
+<p><strong>A</strong></p>
+</td>
+<td width="115">
+<p><strong>B</strong></p>
+</td>
+<td width="112">
+<p><strong>C</strong></p>
+</td>
+</tr>
+<tr>
+<td width="30">
+<p><strong>1</strong></p>
+</td>
+<td width="160">
+<p><strong>Город</strong></p>
+</td>
+<td width="115">
+<p><strong>Численность населения</strong></p>
+</td>
+<td width="112">
+<p><strong>Страна</strong></p>
+</td>
+</tr>
+<tr>
+<td width="30">
+<p><strong>2</strong></p>
+</td>
+<td width="160">
+<p>Асмун</p>
+</td>
+<td width="115">
+<p>91,40</p>
+</td>
+<td width="112">
+<p>Египет</p>
+</td>
+</tr>
+<tr>
+<td width="30">
+<p><strong>3</strong></p>
+</td>
+<td width="160">
+<p>Винер-Нойштадт</p>
+</td>
+<td width="115">
+<p>39,94</p>
+</td>
+<td width="112">
+<p>Австрия</p>
+</td>
+</tr>
+<tr>
+<td width="30">
+<p><strong>4</strong></p>
+</td>
+<td width="160">
+<p>Люлебургаз</p>
+</td>
+<td width="115">
+<p>100,79</p>
+</td>
+<td width="112">
+<p>Турция</p>
+</td>
+</tr>
+<tr>
+<td width="30">
+<p><strong>5</strong></p>
+</td>
+<td width="160">
+<p>Фёклабрук</p>
+</td>
+<td width="115">
+<p>11,95</p>
+</td>
+<td width="112">
+<p>Австрия</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A указано название города; в столбце B – численность населения (тыс. человек); в столбце C – название страны.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 городов Порядок записей в таблице произвольный.
+
+            `
+          } // Египет
+
+          else if(taskTable === 9){
+            return `
+            В электронную таблицу занесли данные о результатах тестирования. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="20">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="260">
+<p><strong>A</strong></p>
+</td>
+<td width="120">
+<p><strong>B</strong></p>
+</td>
+<td width="117">
+<p><strong>C</strong></p>
+</td>
+<td width="80">
+<p><strong>D</strong></p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>1</strong></p>
+</td>
+<td width="201">
+<p><em>Ученик</em></p>
+</td>
+<td width="120">
+<p><em>Район</em></p>
+</td>
+<td width="117">
+<p><em>Математика</em></p>
+</td>
+<td width="80">
+<p><em>Физика</em></p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>2</strong></p>
+</td>
+<td width="201">
+<p>Шамшин Владислав</p>
+</td>
+<td width="120">
+<p>Майский</p>
+</td>
+<td width="117">
+<p>65</p>
+</td>
+<td width="80">
+<p>79</p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>3</strong></p>
+</td>
+<td width="201">
+<p>Гришин Борис</p>
+</td>
+<td width="120">
+<p>Заречный</p>
+</td>
+<td width="117">
+<p>52</p>
+</td>
+<td width="80">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>4</strong></p>
+</td>
+<td width="201">
+<p>Огородников Николай</p>
+</td>
+<td width="120">
+<p>Подгорный</p>
+</td>
+<td width="117">
+<p>60</p>
+</td>
+<td width="80">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>5</strong></p>
+</td>
+<td width="201">
+<p>Богданов Виктор</p>
+</td>
+<td width="120">
+<p>Центральный</p>
+</td>
+<td width="117">
+<p>98</p>
+</td>
+<td width="80">
+<p>86</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записан номер участника; в столбце B – балл по русскому языку; в столбце C – балл по математике; в столбце D – балл по физике; в столбце E – балл по информатике.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 участников.
+            
+            `
+          } // балл 79
+
+          // class="table_16" style="text-align: center; align-items: center;"
+
+          else if(taskTable === 10){
+            return `
+            В электронную таблицу занесли информацию о грузоперевозках, совершённых некоторым автопредприятием с 1 по 9 октября. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="25">&nbsp;</td>
+<td width="97">
+<p>A</p>
+</td>
+<td width="129">
+<p>B</p>
+</td>
+<td width="115">
+<p>C</p>
+</td>
+<td width="116">
+<p>D</p>
+</td>
+<td width="82">
+<p>E</p>
+</td>
+<td width="76">
+<p>F</p>
+</td>
+</tr>
+<tr>
+<td width="25">
+<p>1</p>
+</td>
+<td width="97">
+<p><strong>Дата</strong></p>
+</td>
+<td width="129">
+<p><strong>Пункт отправления</strong></p>
+</td>
+<td width="115">
+<p><strong>Пункт назначения</strong></p>
+</td>
+<td width="116">
+<p><strong>Расстояние</strong></p>
+</td>
+<td width="82">
+<p><strong>Расход бензина</strong></p>
+</td>
+<td width="76">
+<p><strong>Масса груза</strong></p>
+</td>
+</tr>
+<tr>
+<td width="25">
+<p>2</p>
+</td>
+<td width="97">
+<p>1 октября</p>
+</td>
+<td width="129">
+<p>Липки</p>
+</td>
+<td width="115">
+<p>Березки</p>
+</td>
+<td width="116">
+<p>432</p>
+</td>
+<td width="82">
+<p>63</p>
+</td>
+<td width="76">
+<p>770</p>
+</td>
+</tr>
+<tr>
+<td width="25">
+<p>3</p>
+</td>
+<td width="97">
+<p>1 октября</p>
+</td>
+<td width="129">
+<p>Орехово</p>
+</td>
+<td width="115">
+<p>Дубки</p>
+</td>
+<td width="116">
+<p>121</p>
+</td>
+<td width="82">
+<p>17</p>
+</td>
+<td width="76">
+<p>670</p>
+</td>
+</tr>
+<tr>
+<td width="25">
+<p>4</p>
+</td>
+<td width="97">
+<p>1 октября</p>
+</td>
+<td width="129">
+<p>Осинки</p>
+</td>
+<td width="115">
+<p>Вязово</p>
+</td>
+<td width="116">
+<p>333</p>
+</td>
+<td width="82">
+<p>47</p>
+</td>
+<td width="76">
+<p>830</p>
+</td>
+</tr>
+<tr>
+<td width="25">
+<p>5</p>
+</td>
+<td width="97">
+<p>1 октября</p>
+</td>
+<td width="129">
+<p>Липки</p>
+</td>
+<td width="115">
+<p>Вязово</p>
+</td>
+<td width="116">
+<p>384</p>
+</td>
+<td width="82">
+<p>54</p>
+</td>
+<td width="76">
+<p>730</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+Каждая строка таблицы содержит запись об одной перевозке.<hr class="hr-pd_10">
+
+В столбце A записана дата перевозки (от «1 октября» до «9 октября»); в столбце B – название населённого пункта отправления перевозки; в столбце C – название населённого пункта назначения перевозки; в столбце D – расстояние, на которое была осуществлена перевозка (в километрах); в столбце E – расход бензина на всю перевозку (в литрах); в столбце F – масса перевезённого груза (в килограммах).
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 370 перевозкам в хронологическом порядке.
+            `
+          } // липки
+
+          else if(taskTable === 11){
+            return `
+            В электронную таблицу занесли данные о калорийности продуктов. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="28">&nbsp;</td>
+<td width="161">
+<p><strong>А</strong></p>
+</td>
+<td width="110">
+<p><strong>В</strong></p>
+</td>
+<td width="110">
+<p><strong>С</strong></p>
+</td>
+<td width="150">
+<p><strong>D</strong></p>
+</td>
+<td width="139">
+<p><strong>Е</strong></p>
+</td>
+</tr>
+<tr>
+<td width="28">
+<p><strong>1</strong></p>
+</td>
+<td width="161">
+<p>Продукт</p>
+</td>
+<td width="84">
+<p>Жиры, г</p>
+</td>
+<td width="86">
+<p>Белки, г</p>
+</td>
+<td width="113">
+<p>Углеводы, г</p>
+</td>
+<td width="139">
+<p>Калорийность, Ккал</p>
+</td>
+</tr>
+<tr>
+<td width="28">
+<p><strong>2</strong></p>
+</td>
+<td width="161">
+<p>Арахис</p>
+</td>
+<td width="84">
+<p>45,2</p>
+</td>
+<td width="86">
+<p>26,3</p>
+</td>
+<td width="113">
+<p>9,9</p>
+</td>
+<td width="139">
+<p>552</p>
+</td>
+</tr>
+<tr>
+<td width="28">
+<p><strong>3</strong></p>
+</td>
+<td width="161">
+<p>Арахис жареный</p>
+</td>
+<td width="84">
+<p>52,0</p>
+</td>
+<td width="86">
+<p>26,0</p>
+</td>
+<td width="113">
+<p>13,4</p>
+</td>
+<td width="139">
+<p>626</p>
+</td>
+</tr>
+<tr>
+<td width="28">
+<p><strong>4</strong></p>
+</td>
+<td width="161">
+<p>Горох отварной</p>
+</td>
+<td width="84">
+<p>0,8</p>
+</td>
+<td width="86">
+<p>10,5</p>
+</td>
+<td width="113">
+<p>20,4</p>
+</td>
+<td width="139">
+<p>130</p>
+</td>
+</tr>
+<tr>
+<td width="28">
+<p><strong>5</strong></p>
+</td>
+<td width="161">
+<p>Горошек зелёный</p>
+</td>
+<td width="84">
+<p>0,2</p>
+</td>
+<td width="86">
+<p>5,0</p>
+</td>
+<td width="113">
+<p>8,3</p>
+</td>
+<td width="139">
+<p>55</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записан продукт; в столбце B – содержание в нём жиров; в столбце C – содержание белков; в столбце D – содержание углеводов; в столбце Е – калорийность этого продукта.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 продуктов.
+            `
+          } // арахис
+
+          else if(taskTable === 12){
+            return `
+            В электронную таблицу занесли данные о тестировании учеников по трём предметам. Ниже приведены первые пять строк таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="24">
+<p>&nbsp;</p>
+</td>
+<td width="114">
+<p><strong>A</strong></p>
+</td>
+<td width="114">
+<p><strong>B</strong></p>
+</td>
+<td width="124">
+<p><strong>C</strong></p>
+</td>
+<td width="113">
+<p><strong>D</strong></p>
+</td>
+<td width="128">
+<p><strong>E</strong></p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>1</strong></p>
+</td>
+<td width="114">
+<p><strong>Код ученика</strong></p>
+</td>
+<td width="114">
+<p><strong>Район</strong></p>
+</td>
+<td width="124">
+<p><strong>Русский язык</strong></p>
+</td>
+<td width="113">
+<p><strong>Математика</strong></p>
+</td>
+<td width="128">
+<p><strong>Информатика</strong></p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>2</strong></p>
+</td>
+<td width="114">
+<p>Ученик 1</p>
+</td>
+<td width="114">
+<p>Майский</p>
+</td>
+<td width="124">
+<p>27</p>
+</td>
+<td width="113">
+<p>36</p>
+</td>
+<td width="128">
+<p>48</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>3</strong></p>
+</td>
+<td width="114">
+<p>Ученик 2</p>
+</td>
+<td width="114">
+<p>Заречный</p>
+</td>
+<td width="124">
+<p>30</p>
+</td>
+<td width="113">
+<p>51</p>
+</td>
+<td width="128">
+<p>15</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>4</strong></p>
+</td>
+<td width="114">
+<p>Ученик 3</p>
+</td>
+<td width="114">
+<p>Подгорный</p>
+</td>
+<td width="124">
+<p>54</p>
+</td>
+<td width="113">
+<p>97</p>
+</td>
+<td width="128">
+<p>98</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>5</strong></p>
+</td>
+<td width="114">
+<p>Ученик 4</p>
+</td>
+<td width="114">
+<p>Центральный</p>
+</td>
+<td width="124">
+<p>66</p>
+</td>
+<td width="113">
+<p>96</p>
+</td>
+<td width="128">
+<p>32</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записаны коды учеников; в столбце B – район проживания; в столбцах C, D и E – тестовые баллы по русскому языку, математике и информатике соответственно. 
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 учеников.
+            
+            `
+          } // майский 48
+
+          else if(taskTable === 13){
+            return `
+            В электронную таблицу занесли данные олимпиады по математике. Ниже приведены первые пять строк таблицы.
+               <hr class="hr-pd_10">
+               <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="24">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="103">
+<p>A</p>
+</td>
+<td width="75">
+<p>B</p>
+</td>
+<td width="91">
+<p>C</p>
+</td>
+<td width="83">
+<p>D</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>1</p>
+</td>
+<td width="103">
+<p><strong>номер участника</strong></p>
+</td>
+<td width="75">
+<p><strong>номер школы</strong></p>
+</td>
+<td width="91">
+<p><strong>класс</strong></p>
+</td>
+<td width="83">
+<p><strong>баллы</strong></p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>2</p>
+</td>
+<td width="103">
+<p>участник 1</p>
+</td>
+<td width="75">
+<p>38</p>
+</td>
+<td width="91">
+<p>8</p>
+</td>
+<td width="83">
+<p>55</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>3</p>
+</td>
+<td width="103">
+<p>участник 2</p>
+</td>
+<td width="75">
+<p>32</p>
+</td>
+<td width="91">
+<p>9</p>
+</td>
+<td width="83">
+<p>329</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>4</p>
+</td>
+<td width="103">
+<p>участник 3</p>
+</td>
+<td width="75">
+<p>30</p>
+</td>
+<td width="91">
+<p>8</p>
+</td>
+<td width="83">
+<p>252</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>5</p>
+</td>
+<td width="103">
+<p>участник 4</p>
+</td>
+<td width="75">
+<p>50</p>
+</td>
+<td width="91">
+<p>8</p>
+</td>
+<td width="83">
+<p>202</p>
+</td>
+</tr>
+</tbody>
+</table>
+ <hr class="hr-pd_10">
+ В столбце A записан номер участника; в столбце B – номер школы; в столбце C – класс; в столбце D – набранные баллы.
+ <hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 участников.
+            `
+          } // 38 балл 55
+
+          else if(taskTable === 14){
+            return `
+            В электронную таблицу занесли данные о товарах, хранящихся на складах в разных округах. Ниже приведены первые пять строк таблицы.
+             <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody style="text-align: center; align-items: center;">
+<tr>
+<td width="24">&nbsp;</td>
+<td width="100">
+<p><strong>A</strong></p>
+</td>
+<td width="120">
+<p><strong>B</strong></p>
+</td>
+<td width="152">
+<p><strong>C</strong></p>
+</td>
+<td width="171">
+<p><strong>D</strong></p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>1</strong></p>
+</td>
+<td width="60">
+<p><strong>Округ</strong></p>
+</td>
+<td width="70">
+<p><strong>Товары</strong></p>
+</td>
+<td width="152">
+<p><strong>Номер склада</strong></p>
+</td>
+<td width="171">
+<p><strong>Стоимость&nbsp;</strong>(<strong>руб.</strong>)</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>2</strong></p>
+</td>
+<td width="60">
+<p>С</p>
+</td>
+<td width="70">
+<p>Товар 1</p>
+</td>
+<td width="152">
+<p>8</p>
+</td>
+<td width="171">
+<p>5634</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>3</strong></p>
+</td>
+<td width="60">
+<p>В</p>
+</td>
+<td width="70">
+<p>Товар 2</p>
+</td>
+<td width="152">
+<p>1</p>
+</td>
+<td width="171">
+<p>27223</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>4</strong></p>
+</td>
+<td width="60">
+<p>Ю</p>
+</td>
+<td width="70">
+<p>Товар 3</p>
+</td>
+<td width="152">
+<p>3</p>
+</td>
+<td width="171">
+<p>3004</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p><strong>5</strong></p>
+</td>
+<td width="60">
+<p>СВ</p>
+</td>
+<td width="70">
+<p>Товар 4</p>
+</td>
+<td width="152">
+<p>3</p>
+</td>
+<td width="171">
+<p>28971</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A записан код округа, в котором находится склад с товарами; в столбце B – товары; в столбце C – номер склада; в столбце D – стоимость товара в рублях.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 товаров.
+            
+            `
+          } //5634
+
+
+
+
+          // else if(taskTable === 3){
+          //   return ``
+          // }
+
+        }
       switch(typeTask){
+
         case 1:
-          answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task1} Ниже приведены первые пять строк таблицы.<hr class="hr-pd_10"> 
-          <img class="img-13_2" src="../../../img/task14/task14_${taskCounter}.png"><hr class="hr-pd_10"> 
-          ${task2}<br>
-          ${task3}<br>          
+          answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          
+          <hr class="hr-pd_10">
+
+          ${Tab14(taskTable)}
+
+          <hr class="hr-pd_10">
+                  
           Откройте файл с данной электронной таблицей (расположение файла Вам сообщат организаторы экзамена). 
-          На основании данных, содержащихся в этой таблице, выполните задания.<hr class="hr-pd_10">          
+          На основании данных, содержащихся в этой таблице, выполните задания.
+          <hr class="hr-pd_10">  
+   
           ${task4}<hr class="hr-pd_10"> 
           ${task5}<hr class="hr-pd_10">          
           ${task6}<hr class="hr-pd_10"> 

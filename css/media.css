@@ -892,6 +892,9 @@
     padding: 10px 5px;
     font-size: 65%;
   }
+  .task-numbers__block .table_14 td p {
+    font-size: 85%;
+  }
 }
 @media (max-width: 400px) {
   .controls {
