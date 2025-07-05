@@ -20,13 +20,12 @@ async function fetchTasks(taskKey) {
     tasksCache.set(taskKey, data); // Сохраняем в кэш
     totalTasksLoaded += data.length;
     countData[taskKey] = data.length;
-    console.log(`Загружено ${data.length} задач из ${taskKey}`);
+    //console.log(`Загружено ${data.length} задач из ${taskKey}`);
     setupFilters(taskKey, data); // Настраиваем фильтры после загрузки
     if(showTaskCount2){
       showTaskCount2.innerHTML = `<hr class="hr-pd_5">Общее количество задач: ${totalTasksLoaded}`
     }
     
-
     // Добавляем задачи в общий массив
     data.forEach(task => {
       task.source = taskKey; // Сохраняем источник задачи

@@ -2182,8 +2182,8 @@ int main(){
       switch(typeTask){
         case 1:
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task1} Ниже приведены первые пять строк таблицы.
-          <img class="img-13_2" src="../../../img/task14/task14_${taskCounter}.png">
+          ${task1} Ниже приведены первые пять строк таблицы.<hr class="hr-pd_10"> 
+          <img class="img-13_2" src="../../../img/task14/task14_${taskCounter}.png"><hr class="hr-pd_10"> 
           ${task2}<br>
           ${task3}<br>          
           Откройте файл с данной электронной таблицей (расположение файла Вам сообщат организаторы экзамена). 

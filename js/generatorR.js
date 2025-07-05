@@ -264,7 +264,7 @@ async function displayTasks() {
 
 // Вспомогательная функция для создания текста результата
 function getResultText(countResult, total) {
-    if (countResult < 5) {
+    if (countResult < 6) {
         return `Ваша оценка: 2 <span style="padding: 5px;" class="bg_red">Не зачёт</span> <br><br> Количество баллов: ${countResult} из ${total} `;
     } else if (countResult < 11) {
         return `Ваша оценка: 3 <span style="padding: 5px;" class="bg_yellow">Зачёт</span> <br><br> Количество баллов: ${countResult} из ${total}`;
