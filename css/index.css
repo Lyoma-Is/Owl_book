@@ -345,6 +345,7 @@ main .btn-primary:active {
 }
 .task-numbers__block .table_14, .slide .table_14 {
   border-collapse: collapse;
+  margin: auto;
 }
 .task-numbers__block .table_14 td, .slide .table_14 td {
   text-align: center;

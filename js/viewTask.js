@@ -3229,7 +3229,7 @@ int main(){
             `
           } // балл 79
 
-          // class="table_16" style="text-align: center; align-items: center;"
+          // class="table_14" style="text-align: center; align-items: center;"
 
           else if(taskTable === 10){
             return `
@@ -3392,7 +3392,7 @@ int main(){
 <tbody style="text-align: center; align-items: center;">
 <tr>
 <td width="28">&nbsp;</td>
-<td width="161">
+<td width="250">
 <p><strong>А</strong></p>
 </td>
 <td width="110">
@@ -3663,7 +3663,7 @@ int main(){
 <td width="24">
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="103">
+<td width="150">
 <p>A</p>
 </td>
 <td width="75">
@@ -3884,7 +3884,124 @@ int main(){
 Всего в электронную таблицу были занесены данные по 1000 товаров.
             
             `
-          } //5634
+          } // 5634
+
+          else if(taskTable === 15){
+            return `
+            В электронную таблицу занесли результаты тестирования учащихся по математике и физике. На рисунке приведены первые строки получившейся таблицы.
+            <hr class="hr-pd_10">
+            <table class="table_14">
+<tbody >
+<tr>
+<td width="20">
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="260">
+<p><strong>A</strong></p>
+</td>
+<td width="120">
+<p><strong>B</strong></p>
+</td>
+<td width="117">
+<p><strong>C</strong></p>
+</td>
+<td width="80">
+<p><strong>D</strong></p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>1</strong></p>
+</td>
+<td width="201">
+<p><em>Ученик</em></p>
+</td>
+<td width="120">
+<p><em>Район</em></p>
+</td>
+<td width="117">
+<p><em>Математика</em></p>
+</td>
+<td width="80">
+<p><em>Физика</em></p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>2</strong></p>
+</td>
+<td width="201">
+<p>Шамшин Владислав</p>
+</td>
+<td width="120">
+<p>Майский</p>
+</td>
+<td width="117">
+<p>65</p>
+</td>
+<td width="80">
+<p>79</p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>3</strong></p>
+</td>
+<td width="201">
+<p>Гришин Борис</p>
+</td>
+<td width="120">
+<p>Заречный</p>
+</td>
+<td width="117">
+<p>52</p>
+</td>
+<td width="80">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>4</strong></p>
+</td>
+<td width="201">
+<p>Огородников Николай</p>
+</td>
+<td width="120">
+<p>Подгорный</p>
+</td>
+<td width="117">
+<p>60</p>
+</td>
+<td width="80">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td width="20">
+<p><strong>5</strong></p>
+</td>
+<td width="201">
+<p>Богданов Виктор</p>
+</td>
+<td width="120">
+<p>Центральный</p>
+</td>
+<td width="117">
+<p>98</p>
+</td>
+<td width="80">
+<p>86</p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="hr-pd_10">
+В столбце A указаны фамилия и имя учащегося; в столбце B – район города, в котором расположена школа учащегося; в столбцах C, D – баллы, полученные соответственно по математике и физике. По каждому предмету можно было набрать от 0 до 100 баллов.
+<hr class="hr-pd_10">
+Всего в электронную таблицу были занесены данные по 1000 учащихся. Порядок записей в таблице произвольный.         
+            `
+          } // физика 79
 
 
 
@@ -3906,8 +4023,7 @@ int main(){
           <hr class="hr-pd_10">
                   
           Откройте файл с данной электронной таблицей (расположение файла Вам сообщат организаторы экзамена). 
-          На основании данных, содержащихся в этой таблице, выполните задания.
-          <hr class="hr-pd_10">  
+          На основании данных, содержащихся в этой таблице, выполните задания. <hr class="hr-pd_10">  
    
           ${task4}<hr class="hr-pd_10"> 
           ${task5}<hr class="hr-pd_10">          
