@@ -42,11 +42,12 @@ export {tasks};
 
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS} = item;
-   // const generateCounter = (taskCounter) => `<p class="p-num">№ ${taskCounter}</p>`;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num resh">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
-    const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
+
+    // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
+    const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
    
     const generateAuthor = () => `${!taskAuthor ? "": `<em>${taskAuthor}</em>`}`
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
@@ -2168,7 +2169,7 @@ int main(){
           В этом случае разбиение текста на строки должно соответствовать стандартной ширине абзаца.<br>
           Интервал между заголовком текста и текстом, между абзацами текста, между текстом и таблицей не менее 12 пунктов, но не более 24 пунктов.<hr class="hr-pd_10">
           Текст сохраните в файле, имя которого Вам сообщат организаторы.<br>
-          Файл ответа необходимо сохранить в одном из следующих форматов: *.odt, или *.doc, или *.docx.<hr class="hr-pd_10">
+          Файл ответа необходимо сохранить в одном из следующих форматов: *.odt, или *.doc, или *.docx.<br><em>${task4}</em><hr class="hr-pd_10">
           <hr>
           <img class="img-13_2" src="../../../img/task13.2/task13.2_${taskCounter}.png"
           `
