@@ -2169,9 +2169,11 @@ int main(){
           В этом случае разбиение текста на строки должно соответствовать стандартной ширине абзаца.<br>
           Интервал между заголовком текста и текстом, между абзацами текста, между текстом и таблицей не менее 12 пунктов, но не более 24 пунктов.<hr class="hr-pd_10">
           Текст сохраните в файле, имя которого Вам сообщат организаторы.<br>
-          Файл ответа необходимо сохранить в одном из следующих форматов: *.odt, или *.doc, или *.docx.<br><em>${task4}</em><hr class="hr-pd_10">
+          Файл ответа необходимо сохранить в одном из следующих форматов: *.odt, или *.doc, или <a style="text-decoration: none; color: black;" href="../../../src/inf_file/task13/13.2.docx">*.docx</a>.
+          <br><em>${task4}</em><hr class="hr-pd_10">
           <hr>
-          <img class="img-13_2" src="../../../img/task13.2/task13.2_${taskCounter}.png"
+          
+          <img class="img-13_2" src="../../../img/task13.2/task13.2_${taskCounter}.png"<hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
