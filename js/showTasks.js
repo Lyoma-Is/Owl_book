@@ -1,3 +1,6 @@
+
+// showTasks.js
+
 import generateTaskHTML from "./viewTask.js";
 import { tasks } from "./viewTask.js";
 
@@ -13,7 +16,7 @@ function createSlider(tasksHTML, correctAnswers) {
         console.error('Контейнер слайдера не найден');
         return null;
     }
-
+    
     sliderContainer.innerHTML = '';
 
     const slider = document.createElement('div');
@@ -31,6 +34,7 @@ function createSlider(tasksHTML, correctAnswers) {
         slide.innerHTML = taskHTML;
         slider.appendChild(slide);
         slides.push(slide);
+        
     });
 
     const navigation = document.createElement('div');
@@ -93,11 +97,14 @@ function createSlider(tasksHTML, correctAnswers) {
     };
     
 }
+let correctAnswer = [];
+
+
 
 // ------------------ Проверка ответов ------------------
 function setupCheckButton(slider, correctAnswers) {
     const button = document.querySelector('#button-finish');
-
+    
     if (!button) return;
     
     document.querySelectorAll('.resh').forEach(el => {el.classList.add('reshenie');});
@@ -131,7 +138,7 @@ function setupCheckButton(slider, correctAnswers) {
             }
 
         });
-
+        
         const resultHTML = `
             <div id="answer_results">
                 <p class="centerResult">${getResultText(score, inputs.length)}</p>
@@ -151,6 +158,7 @@ function getResultText(score, total) {
 }
 
 function createResultsTable(userAnswers, correctAnswers) {
+    
     return `
         <table style="width:100%; border-collapse:collapse; margin-top:15px;"><tbody>
             ${userAnswers.map((answer, i) => {
@@ -168,6 +176,7 @@ function createResultsTable(userAnswers, correctAnswers) {
             }).join('')}
         </tbody></table>
     `;
+    
 }
 
 // ------------------ Загрузка задач ------------------
@@ -192,9 +201,23 @@ async function loadAllTasks(taskKeys) {
 
 // ------------------ Отображение задач ------------------
 function displayTasksByVariantWithSlider(tasksToDisplay) {
+    // const correctAnswers = {};
+    // tasksToDisplay.forEach(task => {
+    //     correctAnswers[task.source] = task.taskAnswer;
+    // });
+
+    // const tasksHTML = tasksToDisplay.map(task => generateTaskHTML(task.source, task, false));
+    // const slider = createSlider(tasksHTML, correctAnswers);
+    // setupCheckButton(slider, correctAnswers);
+
     const correctAnswers = {};
+    // Очищаем массив перед добавлением новых ответов
+    correctAnswer.length = 0;
+    
     tasksToDisplay.forEach(task => {
         correctAnswers[task.source] = task.taskAnswer;
+        // Добавляем правильный ответ в массив correctAnswer
+        correctAnswer.push(task.taskAnswer);
     });
 
     const tasksHTML = tasksToDisplay.map(task => generateTaskHTML(task.source, task, false));
@@ -202,6 +225,7 @@ function displayTasksByVariantWithSlider(tasksToDisplay) {
     setupCheckButton(slider, correctAnswers);
 }
 
+export {correctAnswer}
 // ------------------ Варианты ------------------
 
 function createVariants() {
@@ -266,3 +290,14 @@ async function init() {
 
 // Единый обработчик загрузки страницы
 document.addEventListener('DOMContentLoaded', init);
+
+
+
+
+
+
+
+
+
+
+

@@ -53,16 +53,42 @@ li {
 }
 
 .header{   
+    
     .header-top{
+        position: relative;
         display: flex;
         align-items: center;
+        
         gap: 40px;
         background-color: $back-top-color; 
         .logo{
             .logo-img{
                 width: 80px;
             }       
-        }    
+        } 
+        // & > *:last-child {
+        //     margin-left: auto;
+        // }
+    }
+}
+
+#button-print{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    right: 0;
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+    img{
+        
+        width: 55px;
+    }
+    &:hover{
+        transition: all 0.3s ease-in-out;
+        -webkit-box-shadow: 0 0 0  5px rgba(0, 0, 0, 0.5);
+         box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
     }
 }
 #button-finish{
@@ -71,11 +97,13 @@ li {
     
     text-align: center;
     background-color: transparent;
-    border: 1px solid ;
+    border: 1px solid;
     cursor: pointer;
     font-size: 25px;
     padding: 10px 15px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0 0 0 10px;
+    border-top: none;
+    border-right: none;
     transition: all 0.3s ease-in-out;
     &:hover{
         background-color: #e0e0e0; 
@@ -135,7 +163,7 @@ main{
                         font-size: 24px;
                     }
                     a:hover{
-                        color: red;
+                        color: red ;
                     }
                 }
             }         

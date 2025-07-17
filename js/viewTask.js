@@ -43,11 +43,11 @@ export {tasks};
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS} = item;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
-    const generateHeader = () => `<details><summary class="p-num resh">Решение</summary><hr class="hr-pd_10">`;
+    const generateHeader = () => `<details><summary class="p-num resh print">Решение</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
 
     // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
-    const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
+    const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
    
     const generateAuthor = () => `${!taskAuthor ? "": `<em>${taskAuthor}</em>`}`
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
@@ -71,60 +71,60 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
-                ${taskAnswer[3] === "м" ? `
-                1) Один символ кодируется ${taskAnswer[1]} бит = ${taskAnswer[1]/8 < 2 ?  `${taskAnswer[1]/8} байт. ` : `${taskAnswer[1]/8} байта.`}<hr class="hr-pd_10">
+                ${taskAn[3] === "м" ? `
+                1) Один символ кодируется ${taskAn[1]} бит = ${taskAn[1]/8 < 2 ?  `${taskAn[1]/8} байт. ` : `${taskAn[1]/8} байта.`}<hr class="hr-pd_10">
 
-                2) Вычеркнутое (Удалённое) слово занимает ${taskAnswer[2]} байта.<hr class="hr-pd_10">
+                2) Вычеркнутое (Удалённое) слово занимает ${taskAn[2]} байта.<hr class="hr-pd_10">
 
-                3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов.<hr class="hr-pd_10">
+                3) Количество символов в слове ${taskAn[2]}/${taskAn[1]/8} = ${taskAn[2]/(taskAn[1]/8)} символов.<hr class="hr-pd_10">
                 
-                4) C учетом пробела и запятой: ${(taskAnswer[2]/(taskAnswer[1]/8))} – 2 = ${(taskAnswer[2]/(taskAnswer[1]/8))-2} символа.
+                4) C учетом пробела и запятой: ${(taskAn[2]/(taskAn[1]/8))} – 2 = ${(taskAn[2]/(taskAn[1]/8))-2} символа.
 
                 <hr class="hr-pd_20">
-                ${taskAnswer[4] === "к" ?  
-                `<p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-4} букв (без кавычек) – ${taskAnswer[0]}.</p>`: 
-                taskAnswer[4] === "и"  ? `<p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-2} букв (без имени) – ${taskAnswer[0]}.</p>`:
-                taskAnswer[4] === "д"  ? `<p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-3} букв (без дефиса) – ${taskAnswer[0]}.</p>`:
-                taskAnswer[4] === "п"  ? `<p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-2} букв (приставка) – ${taskAnswer[0]}.</p>`:
+                ${taskAn[4] === "к" ?  
+                `<p>Слово из ${(taskAn[2]/(taskAn[1]/8))-4} букв (без кавычек) – ${taskAn[0]}.</p>`: 
+                taskAn[4] === "и"  ? `<p>Слово из ${(taskAn[2]/(taskAn[1]/8))-2} букв (без имени) – ${taskAn[0]}.</p>`:
+                taskAn[4] === "д"  ? `<p>Слово из ${(taskAn[2]/(taskAn[1]/8))-3} букв (без дефиса) – ${taskAn[0]}.</p>`:
+                taskAn[4] === "п"  ? `<p>Слово из ${(taskAn[2]/(taskAn[1]/8))-2} букв (приставка) – ${taskAn[0]}.</p>`:
                 
-                `<p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-2} букв – ${taskAnswer[0]}.</p>`}
+                `<p>Слово из ${(taskAn[2]/(taskAn[1]/8))-2} букв – ${taskAnswer}.</p>`}
                 <hr class="hr-pd_20">
-                Ответ: <b>${taskAnswer[0]}</b>
+                Ответ: <b>${taskAnswer}</b>
                 ` :
 
-                taskAnswer[3] === "мм" ? `
-                1) Один символ кодируется ${taskAnswer[1]} байтами. <hr class="hr-pd_10">
+                taskAn[3] === "мм" ? `
+                1) Один символ кодируется ${taskAn[1]} байтами. <hr class="hr-pd_10">
 
-                2) Вычеркнутое (Удалённое) слово занимает ${taskAnswer[2]} бит = ${taskAnswer[2]/8} байт.<hr class="hr-pd_10">
+                2) Вычеркнутое (Удалённое) слово занимает ${taskAn[2]} бит = ${taskAn[2]/8} байт.<hr class="hr-pd_10">
 
-                3) Количество символов в слове ${taskAnswer[2]/8}/${taskAnswer[1]} = ${taskAnswer[2]/8/taskAnswer[1]} символов. <hr class="hr-pd_10">
+                3) Количество символов в слове ${taskAn[2]/8}/${taskAn[1]} = ${taskAn[2]/8/taskAn[1]} символов. <hr class="hr-pd_10">
 
-                4) C учетом пробела и запятой: ${taskAnswer[2]/8/taskAnswer[1]} – 2 = ${(taskAnswer[2]/8/taskAnswer[1])-2} символа.
+                4) C учетом пробела и запятой: ${taskAn[2]/8/taskAn[1]} – 2 = ${(taskAn[2]/8/taskAn[1])-2} символа.
 
                 <hr class="hr-pd_20">
-                ${taskAnswer[4] === "к" ? 
-                `<p>Слово из ${(taskAnswer[2]/8/taskAnswer[1])-4} букв (без кавычек)– ${taskAnswer[0]}.</p>`: 
+                ${taskAn[4] === "к" ? 
+                `<p>Слово из ${(taskAn[2]/8/taskAn[1])-4} букв (без кавычек)– ${taskAn[0]}.</p>`: 
                 
-                `<p>Слово из ${(taskAnswer[2]/8/taskAnswer[1])-2} букв – ${taskAnswer[0]}.</p>`}
+                `<p>Слово из ${(taskAn[2]/8/taskAn[1])-2} букв – ${taskAnswer}.</p>`}
                 
                 <hr class="hr-pd_20">
-                Ответ: <b>${taskAnswer[0]}</b>
+                Ответ: <b>${taskAnswer}</b>
                 
                 `: `
-                1) Один символ кодируется ${taskAnswer[1]} бит = ${taskAnswer[1]/8 < 2 ?  `${taskAnswer[1]/8} байт. ` : `${taskAnswer[1]/8} байта.`}<hr class="hr-pd_10">
+                1) Один символ кодируется ${taskAn[1]} бит = ${taskAn[1]/8 < 2 ?  `${taskAn[1]/8} байт. ` : `${taskAn[1]/8} байта.`}<hr class="hr-pd_10">
 
-                2) Добавленное слово занимает ${taskAnswer[2]} байта.<hr class="hr-pd_10">
+                2) Добавленное слово занимает ${taskAn[2]} байта.<hr class="hr-pd_10">
 
-                3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов.<hr class="hr-pd_10">
+                3) Количество символов в слове ${taskAn[2]}/${taskAn[1]/8} = ${taskAn[2]/(taskAn[1]/8)} символов.<hr class="hr-pd_10">
                 
-                4) C учетом пробела и запятой: ${(taskAnswer[2]/(taskAnswer[1]/8))} – 2 = ${(taskAnswer[2]/(taskAnswer[1]/8))-2} символа.
+                4) C учетом пробела и запятой: ${(taskAn[2]/(taskAn[1]/8))} – 2 = ${(taskAn[2]/(taskAn[1]/8))-2} символа.
 
                 <hr class="hr-pd_20">
-                ${taskAnswer[4] === "к" ? 
-                `<p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-4} букв (без кавычек) – ${taskAnswer[0]}.</p>`: 
-                `<p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-2} букв – ${taskAnswer[0]}.</p>`}
+                ${taskAn[4] === "к" ? 
+                `<p>Слово из ${(taskAn[2]/(taskAn[1]/8))-4} букв (без кавычек) – ${taskAn[0]}.</p>`: 
+                `<p>Слово из ${(taskAn[2]/(taskAn[1]/8))-2} букв – ${taskAnswer}.</p>`}
                 <hr class="hr-pd_20">
-                Ответ: <b>${taskAnswer[0]}</b>
+                Ответ: <b>${taskAnswer}</b>
                 
                 `} `;
             answerBlock += generateFooter(); 
@@ -147,26 +147,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             answerBlock += generateDate();
             answerBlock += generateHeader();
             answerBlock += `
-                  <p>1) Один символ кодируется ${taskAnswer[1]} бит = ${taskAnswer[1]/8 < 2 ?  `${taskAnswer[1]/8} байт ` : `${taskAnswer[1]/8} байта`}</p> 
+                  <p>1) Один символ кодируется ${taskAn[1]} бит = ${taskAn[1]/8 < 2 ?  `${taskAn[1]/8} байт ` : `${taskAn[1]/8} байта`}</p> 
                   <hr class="hr-pd_10">
-                  <p>2) ${taskAnswer[3] == "м" ? 
-                  `Вычеркнутое слово занимает ${taskAnswer[2]} байта</p> 
-                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов` : 
-                  `Добавленное слово занимает ${taskAnswer[2]} байта</p>
-                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAnswer[2]}/${taskAnswer[1]/8} = ${taskAnswer[2]/(taskAnswer[1]/8)} символов`} 
+                  <p>2) ${taskAn[3] == "м" ? 
+                  `Вычеркнутое слово занимает ${taskAn[2]} байта</p> 
+                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAn[2]}/${taskAn[1]/8} = ${taskAn[2]/(taskAn[1]/8)} символов` : 
+                  `Добавленное слово занимает ${taskAn[2]} байта</p>
+                  <hr class="hr-pd_10"><p>3) Количество символов в слове ${taskAn[2]}/${taskAn[1]/8} = ${taskAn[2]/(taskAn[1]/8)} символов`} 
                   </p> 
                   <hr class="hr-pd_10">
-                  <p>4) C учетом пробела: ${(taskAnswer[2]/(taskAnswer[1]/8))} – 1 = ${(taskAnswer[2]/(taskAnswer[1]/8))-1} символа</p>
+                  <p>4) C учетом пробела: ${(taskAn[2]/(taskAn[1]/8))} – 1 = ${(taskAn[2]/(taskAn[1]/8))-1} символа</p>
                   <hr class="hr-pd_20">
-                  <p>Слово из ${(taskAnswer[2]/(taskAnswer[1]/8))-1} букв – ${taskAnswer[0]}.</p>
+                  <p>Слово из ${(taskAn[2]/(taskAn[1]/8))-1} букв – ${taskAnswer}.</p>
                   <hr class="hr-pd_20">
-                  Ответ: <b>${taskAnswer[0]}</b>`; 
+                  Ответ: <b>${taskAnswer}</b>`; 
             answerBlock += generateFooter(); 
             if(tumbler === false){
               answerBlock += generateInput();
             }
             return answerBlock
-          }
+      }
     }
     if (taskKey === 'two'){
       let Nomer = 2
@@ -176,7 +176,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
             <p>${task1}</p>
             
-            ${taskAnswer[2] === 1 ? `
+            ${taskAn[2] === 1 ? `
             <hr class="hr-pd_20">
             <span class="span-centr span-centr__font">${task2}</span>
             <hr class="hr-pd_20">
@@ -292,9 +292,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-           <p>${taskAnswer[1]}&emsp;---&emsp; ${taskAnswer[3]}</p> 
+           <p>${taskAn[1]}&emsp;---&emsp; ${taskAn[3]}</p> 
            <hr class="hr-pd_20">
-           <p><b>Ответ:</b> ${taskAnswer[0]}</p>
+           <p><b>Ответ:</b> ${taskAnswer}</p>
            <hr class="hr-pd_10">`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -367,9 +367,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <p>${taskAnswer[1]} – <b>${taskAnswer[0]}</b></p>
+            <p>${taskAn[1]} – <b>${taskAnswer}</b></p>
             <hr class="hr-pd_20">
-            <p><b>Ответ:</b> ${taskAnswer[0]}</p>
+            <p><b>Ответ:</b> ${taskAnswer}</p>
             <hr class="hr-pd_10">`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -429,21 +429,24 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <p>${taskAnswer[1]} – <b>${taskAnswer[0]}</b></p>
-            ${task5 === "" ? `<hr class="hr-pd_20">` : 
+            <p>${taskAn[1]} – <b>${taskAnswer}</b></p>
+            ${task5 === "" ? 
+              `
+              <hr class="hr-pd_20">` : 
               `
               <hr class="hr-pd_20">
               <p>${task5}</p> 
               <hr class="hr-pd_20">
               `
             }        
-            <p><b>Ответ:</b> ${taskAnswer[0]}</p>
+            <p><b>Ответ:</b> ${taskAnswer}</p>
             <hr class="hr-pd_10">`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
           return answerBlock
+  
       }
     }
     if (taskKey === 'three'){
@@ -576,9 +579,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <hr class="hr-pd_10">
               <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
               <hr class="hr-pd_20">
-              Кратчайший путь: ${taskAnswer[1]} = ${taskAnswer[0]} км
+              Кратчайший путь: ${taskAn[1]} = ${taskAn[0]} км
               <hr class="hr-pd_20">
-              Ответ: <b>${taskAnswer[0]}</b>`;
+              Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -639,9 +642,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <hr class="hr-pd_10">
                 <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
                 <hr class="hr-pd_20">
-                Кратчайший путь: ${taskAnswer[1]} = ${taskAnswer[0]} км
+                Кратчайший путь: ${taskAn[1]} = ${taskAn[0]} км
                 <hr class="hr-pd_20">
-                Ответ: <b>${taskAnswer[0]}</b>`;
+                Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -702,9 +705,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <hr class="hr-pd_10">
                 <img class="img-task_9" src="../../../img/task4/task4/task4_${taskCounter}_a.png">
                 <hr class="hr-pd_20">
-                Кратчайший путь: ${taskAnswer[1]} = ${taskAnswer[0]} км
+                Кратчайший путь: ${taskAn[1]} = ${taskAn[0]} км
                 <hr class="hr-pd_20">
-                Ответ: <b>${taskAnswer[0]}</b>`;
+                Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
@@ -2071,8 +2074,8 @@ int main(){
         case 1:
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
-          <p>В ответе укажите только число.</p>      
-          <hr class="hr-pd_10">
+          <p>В ответе укажите только число.</p> 
+          <hr class="hr-pd_20">     
           
           `
           answerBlock += generateDate();
@@ -2099,7 +2102,7 @@ int main(){
           Используя информацию и иллюстративный материал, содержащийся в каталоге <b>${task1[0]}</b>, создайте презентацию из трёх слайдов на тему <b>«${task1[1]}»</b>.<br>
           
            ${task3}<br><hr class="hr-pd_10">
-          <details ><summary >Развернуть описание</summary><hr class="hr-pd_10">
+          <details class="open-del"><summary >Развернуть описание</summary><hr class="hr-pd_10">
           Все слайды должны быть выполнены в едином стиле, каждый слайд должен быть озаглавлен.<br>
           Презентацию сохраните в файле, имя которого Вам сообщат организаторы экзамена. Файл ответа необходимо сохранить в одном из следующих форматов: *.odp, *.ppt, *.pptx.
           <hr class="hr-pd_20">

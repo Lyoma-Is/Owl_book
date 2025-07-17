@@ -5,6 +5,7 @@ import { tasks } from "./viewTask.js";
 let variants = [];
 const tasksCache = new Map();
 let allTasks = [];
+let correctAnswerVars = []; 
 
 // ------------------ Слайдер ------------------
 function createSlider(tasksHTML, correctAnswers) {
@@ -91,8 +92,9 @@ function createSlider(tasksHTML, correctAnswers) {
         },
         getCurrentSlide: () => currentSlide
     };
-    
 }
+
+
 
 // ------------------ Проверка ответов ------------------
 function setupCheckButton(slider, correctAnswers) {
@@ -109,7 +111,6 @@ function setupCheckButton(slider, correctAnswers) {
         let score = 0;
 
         inputs.forEach((input) => {
-
             const taskId = input.closest('.slide')?.getAttribute('data-task-id');
             const correct = Array.isArray(correctAnswers[taskId])
                 ? correctAnswers[taskId][0]?.toString().toUpperCase()
@@ -129,7 +130,6 @@ function setupCheckButton(slider, correctAnswers) {
             if (reshOtv){  
                 reshOtv.classList.remove('reshenie');
             }
-
         });
 
         const resultHTML = `
@@ -193,43 +193,29 @@ async function loadAllTasks(taskKeys) {
 // ------------------ Отображение задач ------------------
 function displayTasksByVariantWithSlider(tasksToDisplay) {
     const correctAnswers = {};
+    
+    
     tasksToDisplay.forEach(task => {
         correctAnswers[task.source] = task.taskAnswer;
+        correctAnswerVars.push(task.taskAnswer);
     });
-
+    
     const tasksHTML = tasksToDisplay.map(task => generateTaskHTML(task.source, task, false));
     const slider = createSlider(tasksHTML, correctAnswers);
-    setupCheckButton(slider, correctAnswers);
+    if (slider) {
+        setupCheckButton(slider, correctAnswers);
+    }
 }
 
 // ------------------ Варианты ------------------
-// function createVariants() {
-//     const block = document.querySelector('.vars-block_2025');
-//     if (!block) return;
-
-//     block.innerHTML = variants.map((variant, i) =>
-//         `<a id="variant${i+1}" class="vars-block__inner" href="../../pages/variants/tasksOgeInf/showTasksVars.html" data-variant-index="${i}">${variant.name}</a>`
-//     ).join('');
-
-//     document.querySelectorAll('.vars-block__inner').forEach(link => {
-//         link.addEventListener('click', (e) => {
-//             e.preventDefault();
-//             const variantIndex = parseInt(link.dataset.variantIndex);
-//             localStorage.setItem('selectedVariant', JSON.stringify(variants[variantIndex]));
-//             window.location.href = link.href;
-//         });
-//     });
-// }
-
-
 function createVariants() {
-    // Получаем секции для разных годов
     const block2025 = document.querySelector('.vars-block_2025');
     const block2026 = document.querySelector('.vars-block_2026');
 
-    // Группируем варианты по годам
+    if (!block2025 && !block2026) return;
+
     const variantsByYear = variants.reduce((acc, variant) => {
-        const year = variant.year;
+        const year = variant.year || 2025; // Добавлено значение по умолчанию
         if (!acc[year]) {
             acc[year] = [];
         }
@@ -237,11 +223,8 @@ function createVariants() {
         return acc;
     }, {});
 
-    // Функция для создания HTML группы вариантов (в обратном порядке)
     const createYearGroupHTML = (yearVariants) => {
-        // Создаем копию массива и разворачиваем его
         const reversedVariants = [...yearVariants].reverse();
-
         return reversedVariants.map((variant, i) => `
             <a id="variant${i+1}" 
                class="vars-block__inner" 
@@ -252,14 +235,14 @@ function createVariants() {
         `).join('');
     };
 
-    // Заполняем секцию 2025 года
-    block2025.innerHTML = createYearGroupHTML(variantsByYear[2025]);
+    if (block2025 && variantsByYear[2025]) {
+        block2025.innerHTML = createYearGroupHTML(variantsByYear[2025]);
+    }
 
-    // Заполняем секцию 2026 года
-     block2026.innerHTML = createYearGroupHTML(variantsByYear[2026]);
-    
+    if (block2026 && variantsByYear[2026]) {
+        block2026.innerHTML = createYearGroupHTML(variantsByYear[2026]);
+    }
 
-    // Добавляем обработчики событий для всех ссылок вариантов
     document.querySelectorAll('.vars-block__inner').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -274,7 +257,6 @@ function createVariants() {
 async function loadVariants() {
     try {
         const response = await fetch('../../src/oge_inf/showVariants.json');
-        //const response = await fetch('https://raw.githubusercontent.com/Lyoma-Is/Owl_book/refs/heads/main/src/oge_inf/showVariants.json');
         if (!response.ok) throw new Error('Не удалось загрузить варианты');
         variants = await response.json();
         createVariants();
@@ -282,23 +264,21 @@ async function loadVariants() {
         //console.error('Ошибка загрузки вариантов:', e);
     }
 }
+
 function updateBreadcrumbWithVariant() {
     const selectedVariant = JSON.parse(localStorage.getItem('selectedVariant'));
     if (!selectedVariant) return;
 
     const breadcrumbLastLink = document.querySelector('.breadcrumb .bread-last a');
-    if (!breadcrumbLastLink) return;
-
-    // Use the variant's name property instead of calculating index
-    breadcrumbLastLink.innerHTML = `${selectedVariant.name}`;
-    
+    if (breadcrumbLastLink) {
+        breadcrumbLastLink.innerHTML = `${selectedVariant.name}`;
+    }
 }
 
 // ------------------ Инициализация ------------------
 async function init() {
     await loadVariants();
     
-    // Обновляем хлебные крошки только если мы на странице варианта
     if (window.location.pathname.includes('showTasksVars.html')) {
         updateBreadcrumbWithVariant();
         
@@ -314,5 +294,8 @@ async function init() {
     }
 }
 
-// Единый обработчик загрузки страницы
+// Экспорт
+export { correctAnswerVars };
+
+// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', init);

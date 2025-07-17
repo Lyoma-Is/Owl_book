@@ -12,7 +12,7 @@ $font-size17: 17px;
                 ul{
                     li{
                         a{
-                            font-size: 20px;
+                            font-size: 120%;
                         }
                     }
                 }         
@@ -39,16 +39,7 @@ $font-size17: 17px;
     }
     main{  
         .main-block{
-            .aside-left{ 
-                width: 27%;
-                ul{
-                    li{
-                        a{
-                            font-size: 20px;
-                        }
-                    }
-                }         
-            }
+            
             .aside-main{
                 font-size: 17px;
                 a{
@@ -165,6 +156,20 @@ $font-size17: 17px;
 }
 
 @media (max-width: 1050px){
+    main{
+        .main-block{
+            .aside-left{ 
+                
+                ul{
+                    li{
+                        a{
+                            font-size: 110%;
+                        }
+                    }
+                }         
+            }
+        }
+    }
     .breadcrumb {    
         font-size: 18px;
         .breadcrumb-item{
@@ -209,6 +214,20 @@ $font-size17: 17px;
             font-size: 20px;
         }
     }
+    main{  
+        .main-block{
+            .aside-left{ 
+                ul{
+                    li{
+                        a{
+                            font-size: 99%;
+                        }
+                    }
+                }         
+            }
+            
+        } 
+    }//main
     main{     
        .label-text {
             font-size: 17px;
@@ -254,8 +273,22 @@ $font-size17: 17px;
     #button-finish{
         font-size: 25px;
         padding: 10px 15px;
-        border-radius: 10px 0 0 10px;  
+        
     } 
+    main{  
+        .main-block{
+            .aside-left{ 
+                ul{
+                    li{
+                        a{
+                            font-size: 90%;
+                        }
+                    }
+                }         
+            }
+            
+        } 
+    }//main
     main{  
         .slider-navigation{
             gap: 10px;
@@ -266,16 +299,7 @@ $font-size17: 17px;
             font-size: 20px;
         }
         .main-block{
-            .aside-left{ 
-                width: 35%;
-                ul{
-                    li{
-                        a{
-                            font-size: 20px;
-                        }
-                    }
-                }         
-            }
+            
             .aside-main{
                 font-size: 17px;
                 a{
@@ -476,6 +500,22 @@ $font-size17: 17px;
 }
 
 @media (max-width: 700px){
+    main{  
+        .main-block{
+            .aside-left{ 
+                ul{
+                    li{
+                        a{
+                            font-size: 80%;
+                        }
+                    }
+                }         
+            }
+            .aside-main{
+                font-size: 20px;
+            }
+        } 
+    }//main
     main{
         .search-box-find{
             flex-direction: column;
@@ -526,10 +566,27 @@ $font-size17: 17px;
         }
 }
 @media (max-width: 600px){
+    main{  
+        .main-block{
+            .aside-left{ 
+                width: 40%;
+                ul{
+                    li{
+                        a{
+                            font-size: 100%;
+                        }
+                    }
+                }         
+            }
+            
+        } 
+    }//main
     .container{
         width: 100%;
     }
-
+    #button-print{
+        display: none;
+    }
     .controls { 
         gap: 10px;
         padding: 20px 0;
@@ -579,7 +636,6 @@ $font-size17: 17px;
     #button-finish{
         font-size: 18px;
         padding: 10px 15px;
-        border-radius: 10px 0 0 10px;  
         
     } 
     main {
@@ -621,17 +677,7 @@ $font-size17: 17px;
             flex-direction: column;
         }
         .main-block{
-            .aside-left{ 
-                width: 35%;
-                ul{
-                    li{
-                        a{
-                            font-size: 15px;
-                            
-                        }
-                    }
-                }         
-            }
+            
             .aside-main{
                 font-size: 12px;
                 
@@ -998,6 +1044,20 @@ $font-size17: 17px;
     }
 }
 @media (max-width: 650px){
+    main{
+        .main-block{
+            .aside-left{ 
+                width: 25%;
+                ul{
+                    li{
+                        a{
+                            font-size: 90%;
+                        }
+                    }
+                }         
+            }
+        }
+    }
     .controls { 
         gap: 10px;
         padding: 20px 0;
@@ -1026,7 +1086,39 @@ $font-size17: 17px;
         }
     }
 }
+@media (max-width: 550px){
+    main{
+        .main-block{
+            .aside-left{ 
+                width: 30%;
+                ul{
+                    li{
+                        a{
+                            font-size: 90%;
+                        }
+                    }
+                }         
+            }
+        }
+    }
+    
+}
 @media (max-width: 500px){
+    main{  
+        .main-block{
+            .aside-left{ 
+                width: 35%;
+                ul{
+                    li{
+                        a{
+                            font-size: 90%;
+                        }
+                    }
+                }         
+            }
+            
+        } 
+    }//main
     .controls { 
         gap: 10px;
         padding: 20px 0;

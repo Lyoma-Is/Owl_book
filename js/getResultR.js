@@ -7,7 +7,7 @@ button.addEventListener('click', function () {
     let arrayInput = [];
     let arrayAnswer = [];
     let countResult = 0;
-
+    let correctAnswerGen = [];
     let ansRes = document.getElementById("answer_results");
     while (ansRes.firstChild) {
         ansRes.removeChild(ansRes.firstChild);
@@ -38,9 +38,10 @@ button.addEventListener('click', function () {
 
         arrayInput.push(userInput);
         arrayAnswer.push(correct);
+        
     }
 
-    
+
     // Создание текста с оценкой
     let pResult = document.createElement('p');
     pResult.classList.add("centerResult");
