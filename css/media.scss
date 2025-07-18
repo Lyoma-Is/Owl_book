@@ -1175,7 +1175,7 @@ $font-size17: 17px;
         //     }
         .main-block .aside-left{
            ul{
-            padding-left: 20px;
+            padding-left: 10px;
             
             }  
         } 
@@ -1201,7 +1201,23 @@ $font-size17: 17px;
     }
     
 }
-
+@media (max-width: 450px){
+    main{  
+        .main-block{
+            .aside-left{ 
+                width: 40%;
+                ul{
+                    li{
+                        a{
+                            font-size: 100%;
+                        }
+                    }
+                }         
+            }
+            
+        } 
+    }//main
+}
 @media (max-width: 400px){
     .controls { 
         gap: 10px;

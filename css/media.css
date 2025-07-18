@@ -910,7 +910,7 @@
     width: 30px;
   }
   main .main-block .aside-left ul {
-    padding-left: 20px;
+    padding-left: 10px;
   }
   .vars-block .vars-block__inner {
     padding: 10px 5px;
@@ -918,6 +918,14 @@
   }
   .task-numbers__block .table_14 td p {
     font-size: 85%;
+  }
+}
+@media (max-width: 450px) {
+  main .main-block .aside-left {
+    width: 40%;
+  }
+  main .main-block .aside-left ul li a {
+    font-size: 100%;
   }
 }
 @media (max-width: 400px) {
