@@ -1,7 +1,10 @@
+
 //document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
+
+
 const footerText = document.querySelector('.footer-text');
 if (footerText) {
-  footerText.innerHTML = `<b>© OwlExams.ru</b>`;
+  footerText.innerHTML = `<b>© OwlExams.ru 2025</b>`;
 }
 const container = document.querySelector('main .container');
 container.insertAdjacentHTML('beforeend', '<div class="btn-up btn-up_hide"></div>');
@@ -29,6 +32,7 @@ const btnUp = {
     }
 };
 btnUp.addEventListener();
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const checkboxesContainer = document.querySelector('.checkbox-container');

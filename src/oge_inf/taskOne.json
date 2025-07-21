@@ -2,7 +2,9 @@
     {
         "taskCounter": 1055,
         "typeTask": 1,
+        
         "taskAuthor": "Основная волна 16.06.25",
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Рентгений",
         
@@ -16,7 +18,9 @@
     {
         "taskCounter": 1054,
         "typeTask": 1,
+        
         "taskAuthor": "Основная волна 06.06.25",
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Менделевий",
         
@@ -30,7 +34,9 @@
     {
         "taskCounter": 1053,
         "typeTask": 1,
+        
         "taskAuthor": "Основная волна 26.05.25",
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "ОБЖ",
         
@@ -47,6 +53,7 @@
     {
         "taskCounter": 393,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Мой",
         
@@ -63,6 +70,7 @@
     {
         "taskCounter": 392,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Милый",
         
@@ -79,6 +87,7 @@
     {
         "taskCounter": 391,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Лук",
         
@@ -92,6 +101,7 @@
     {
         "taskCounter": 390,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Морковь",
         
@@ -105,6 +115,7 @@
     {
         "taskCounter": 389,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Свёкла",
         
@@ -118,6 +129,7 @@
     {
         "taskCounter": 388,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Стул",
         
@@ -131,6 +143,7 @@
     {
         "taskCounter": 387,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Шрек",
         
@@ -144,6 +157,7 @@
     {
         "taskCounter": 386,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Рататуй",
         
@@ -157,6 +171,7 @@
     {
         "taskCounter": 385,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Полукресло",
         
@@ -170,6 +185,7 @@
     {
         "taskCounter": 384,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Кровать",
         
@@ -183,6 +199,7 @@
     {
         "taskCounter": 383,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Белоснежка",
         
@@ -196,6 +213,7 @@
     {
         "taskCounter": 382,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Конёк-Горбунок",
         
@@ -209,6 +227,7 @@
     {
         "taskCounter": 381,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Пумба",
         
@@ -222,6 +241,7 @@
     {
         "taskCounter": 380,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Пиноккио",
         
@@ -235,6 +255,7 @@
     {
         "taskCounter": 379,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Диван",
         
@@ -248,6 +269,7 @@
     {
         "taskCounter": 378,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Кресло",
         
@@ -261,6 +283,7 @@
     {
         "taskCounter": 377,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Винни-Пух",
         
@@ -274,6 +297,7 @@
     {
         "taskCounter": 376,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Оттоманка",
         
@@ -287,6 +311,7 @@
     {
         "taskCounter": 375,
         "typeTask": 1,
+        "taskKec": [1, 1, 2],
         
         "taskAnswer": "Апельсин",
         
@@ -298,11 +323,12 @@
         "task3": "Ученик вычеркнул из списка название одного из фруктов. Заодно он вычеркнул ставшие лишними запятые и пробелы  — два пробела не должны идти подряд.", 
 
         "task4": "При этом размер нового предложения в данной кодировке оказался на 20 байт меньше, чем размер исходного предложения. Напишите в ответе вычеркнутое название фрукта.",
-        "taskNum": "! 10867"
+        "taskNum": "10867"
     },
     {
         "taskCounter": 374,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Информатика",
         
@@ -319,6 +345,7 @@
     {
         "taskCounter": 373,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Литература",
         
@@ -335,6 +362,7 @@
     {
         "taskCounter": 372,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Попов",
         
@@ -348,6 +376,7 @@
     {
         "taskCounter": 371,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Фуксия",
         
@@ -361,6 +390,7 @@
     {
         "taskCounter": 370,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Тамаринд",
         
@@ -374,6 +404,7 @@
     {
         "taskCounter": 369,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Бор",
         
@@ -387,6 +418,7 @@
     {
         "taskCounter": 368,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Гелий",
         
@@ -400,6 +432,7 @@
     {
         "taskCounter": 367,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Джаботикаба",
         
@@ -413,6 +446,7 @@
     {
         "taskCounter": 366,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Биология",
         
@@ -429,6 +463,7 @@
     {
         "taskCounter": 365,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Янтарный",
         
@@ -442,6 +477,7 @@
     {
         "taskCounter": 364,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Канареечный",
         
@@ -455,6 +491,7 @@
     {
         "taskCounter": 363,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Кислород",
         
@@ -468,6 +505,7 @@
     {
         "taskCounter": 362,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Фиолетовый",
         
@@ -481,6 +519,7 @@
     {
         "taskCounter": 361,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Синий",
         
@@ -494,6 +533,7 @@
     {
         "taskCounter": 360,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Кукуруза",
         
@@ -507,6 +547,7 @@
     {
         "taskCounter": 359,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Бор",
         
@@ -520,6 +561,7 @@
     {
         "taskCounter": 358,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Мангустин",
         
@@ -533,6 +575,7 @@
     {
         "taskCounter": 357,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Дуриан",
         
@@ -546,6 +589,7 @@
     {
         "taskCounter": 356,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Кюри",
         
@@ -559,6 +603,7 @@
     {
         "taskCounter": 355,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Же",
         
@@ -575,6 +620,7 @@
     {
         "taskCounter": 354,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Азот",
         
@@ -588,6 +634,7 @@
     {
         "taskCounter": 353,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Джоуль",
         
@@ -601,6 +648,7 @@
     {
         "taskCounter": 352,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Утреннему",
         
@@ -617,6 +665,7 @@
     {
         "taskCounter": 351,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Алгебра",
         
@@ -633,6 +682,7 @@
     {
         "taskCounter": 350,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "География",
         
@@ -649,6 +699,7 @@
     {
         "taskCounter": 349,
         "typeTask": 1,
+        "taskKec": [1, 1, 2],
         
         "taskAnswer": "Лиственница",
         
@@ -657,11 +708,12 @@
         "task2": "«Ель, кедр, сосна, кипарис, лиственница, можжевельник  — хвойные растения».",
         "task3": "Ученик вычеркнул из списка название одного из растений. Заодно он вычеркнул ставшие лишними запятые и пробелы  — два пробела не должны идти подряд.", 
         "task4": "При этом размер нового предложения в данной кодировке оказался на 26 байт меньше, чем размер исходного предложения. Напишите в ответе вычеркнутое название хвойного растения.",
-        "taskNum": "! 10307"
+        "taskNum": "10307"
     },
     {
         "taskCounter": 348,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Не",
         
@@ -678,6 +730,7 @@
     {
         "taskCounter": 347,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Химия",
         
@@ -694,6 +747,7 @@
     {
         "taskCounter": 346,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Ом",
         
@@ -707,6 +761,7 @@
     {
         "taskCounter": 345,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Водород",
         
@@ -720,6 +775,7 @@
     {
         "taskCounter": 344,
         "typeTask": 1,
+        "taskKec": [1, 1, 2],
         
         "taskAnswer": "Ягуар",
         
@@ -728,11 +784,12 @@
         "task2": "«Лев, тигр, ягуар, гепард, пантера, ягуарунди  — кошачьи».",
         "task3": "Ученик вычеркнул из списка название одного из представителей семейства кошачьих. Заодно он вычеркнул ставшие лишними запятые и пробелы  — два пробела не должны идти подряд.", 
         "task4": "При этом размер нового предложения в данной кодировке оказался на 14 байт меньше, чем размер исходного предложения. Напишите в ответе вычеркнутое название представителя семейства кошачьих.",
-        "taskNum": "! 10308"
+        "taskNum": "10308"
     },
     {
         "taskCounter": 343,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Красный",
         
@@ -746,6 +803,7 @@
     {
         "taskCounter": 342,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Курчатов",
         
@@ -759,6 +817,7 @@
     {
         "taskCounter": 341,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Натрий",
         
@@ -772,6 +831,7 @@
     {
         "taskCounter": 340,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Гуава",
         
@@ -785,6 +845,7 @@
     {
         "taskCounter": 339,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Баклажановый",
         
@@ -798,6 +859,7 @@
     {
         "taskCounter": 338,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Про",
         
@@ -814,6 +876,7 @@
     {
         "taskCounter": 337,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Физика",
         
@@ -830,6 +893,7 @@
     {
         "taskCounter": 336,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Навестим",
         
@@ -846,6 +910,7 @@
     {
         "taskCounter": 335,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Нетерпеливого",
         
@@ -862,6 +927,7 @@
     {
         "taskCounter": 334,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Картофель",
         
@@ -875,6 +941,7 @@
     {
         "taskCounter": 65,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Гром",
         
@@ -891,6 +958,7 @@
     {
         "taskCounter": 64,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Таинственный",
         
@@ -907,6 +975,7 @@
     {
         "taskCounter": 63,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Вздыхать",
         
@@ -923,6 +992,7 @@
     {
         "taskCounter": 62,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Издавала",
         
@@ -939,6 +1009,7 @@
     {
         "taskCounter": 61,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "по",
         
@@ -955,6 +1026,7 @@
     {
         "taskCounter": 60,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Правил",
         
@@ -971,6 +1043,7 @@
     {
         "taskCounter": 59,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Думать",
         
@@ -987,6 +1060,7 @@
     {
         "taskCounter": 58,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Скользя",
         
@@ -1003,6 +1077,7 @@
     {
         "taskCounter": 57,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Дядя",
         
@@ -1019,6 +1094,7 @@
     {
         "taskCounter": 56,
         "typeTask": 2,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Пустые",
         
@@ -1032,6 +1108,7 @@
     {
         "taskCounter": 55,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Алый",
         
@@ -1045,6 +1122,7 @@
     {
         "taskCounter": 54,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Маугли",
         
@@ -1058,6 +1136,7 @@
     {
         "taskCounter": 53,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Пуф",
         
@@ -1071,7 +1150,9 @@
     {
         "taskCounter": 52,
         "typeTask": 1,
+        
         "taskAuthor": "Демоверсия 2025",
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Раскладушка",
         
@@ -1085,6 +1166,7 @@
     {
         "taskCounter": 51,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Малефисента",
         
@@ -1098,6 +1180,7 @@
     {
         "taskCounter": 50,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Человек-паук",
         
@@ -1111,6 +1194,7 @@
     {
         "taskCounter": 49,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Тумбочка",
         
@@ -1124,6 +1208,7 @@
     {
         "taskCounter": 46,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Личи",
         
@@ -1137,6 +1222,7 @@
     {
         "taskCounter": 47,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Горох",
         
@@ -1150,6 +1236,7 @@
     {
         "taskCounter": 48,
         "typeTask": 1,
+        "taskKec": [1, 1, 1],
         
         "taskAnswer": "Репа",
         

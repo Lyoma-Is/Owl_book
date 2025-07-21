@@ -418,6 +418,56 @@ main{
         }
     }
 }
+// .task-numbers__block{
+    
+// }
+.inform-block{
+     position: absolute;
+     width: 100%;
+     padding: 0 10px 10px;
+     border: 1px solid;
+     line-height: 1.5;
+    // left: 45px;
+     
+     border-radius: 10px;
+     z-index: 1;
+     background-color: #fdbc5b;
+    p{
+        color:black;  
+    }
+     
+}
+.text-inform{
+    position: relative;
+    font-size: 65%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: end;
+    img{
+        width: 3%; 
+        cursor: pointer;
+    } 
+}
+.close-inform-button {
+  background: transparent; //#e78e08
+  border: none;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fd0b03;
+ 
+  
+}
+.inform-block {
+  display: none;
+}
+
+.inform-block.show {
+  display: block;
+}
+
 .info-taskThree{
     padding: 15px;
     font-size: 25px;
@@ -430,8 +480,7 @@ main{
             border: 1px solid black;
         }
     }
-    
-    
+       
 }
 .number-block{
     padding: 4px 10px;

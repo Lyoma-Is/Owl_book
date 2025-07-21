@@ -3,6 +3,7 @@
         "taskCounter": 1310,
         "typeTask": 4,
         "task": "наибольшее",
+        "taskKec": [1, 10, 1],
         "taskAnswer": 305,
         "taskAn": [100110001, 406, 130],
 
@@ -12,6 +13,7 @@
         "taskCounter": 1309,
         "typeTask": 4,
         "task": "наибольшее",
+        "taskKec": [1, 10, 1],
         "taskAnswer": 369,
         "taskAn": [100100110, 463, 171],
 
@@ -21,6 +23,7 @@
         "taskCounter": 1308,
         "typeTask": 4,
         "task": "наибольшее",
+        "taskKec": [1, 10, 1],
         "taskAnswer": 491,
         "taskAn": [111101011, 706, "1D6"],
 
@@ -31,6 +34,7 @@
         "typeTask": 4,
         "task": "наименьшее",
         
+        "taskKec": [1, 10, 1],
         "taskAnswer": 308,
         "taskAn": [101101000, 464, "1DA"],
 
@@ -41,6 +45,7 @@
         "typeTask": 4,
         "task": "наибольшее",
         "taskAuthor": "Основная волна 16.06.25",
+        "taskKec": [1, 10, 1],
         "taskAnswer": 300,
         "taskAn": [100001000, 454, "D5"],
 
@@ -51,6 +56,7 @@
         "typeTask": 4,
         "task": "наибольшее",
         "taskAuthor": "Основная волна 06.06.25",
+        "taskKec": [1, 10, 1],
         "taskAnswer": 498,
         "taskAn": [111110010, 630, "15C"],
 
@@ -60,6 +66,7 @@
         "taskCounter": 1066,
         "typeTask": 3,
         "taskAuthor": "Основная волна 26.05.25",
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1076,
         "taskAn": [11011011, 1110, 111, "+", "+"],
 
@@ -68,6 +75,7 @@
     {
         "taskCounter": 737,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [69, 1000101, 0],
@@ -77,6 +85,7 @@
     {
         "taskCounter": 736,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 3,
 
         "taskAn": [69, 1000101, 1],
@@ -86,6 +95,7 @@
     {
         "taskCounter": 735,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1000101,
 
         "taskAn": [69, 1000101, 2],
@@ -95,6 +105,7 @@
     {
         "taskCounter": 734,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 11001100,
 
         "taskAn": [204, 11001100, 2],
@@ -104,6 +115,7 @@
     {
         "taskCounter": 733,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [135, 10000111, 1],
@@ -113,6 +125,7 @@
     {
         "taskCounter": 732,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [141, 10001101, 1],
@@ -122,6 +135,7 @@
     {
         "taskCounter": 731,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 3,
 
         "taskAn": [100, 1100100, 1],
@@ -131,6 +145,7 @@
     {
         "taskCounter": 730,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 11001001,
 
         "taskAn": [201, 11001001, 2],
@@ -140,6 +155,7 @@
     {
         "taskCounter": 729,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [211, 11010011, 1],
@@ -149,6 +165,7 @@
     {
         "taskCounter": 728,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1011010,
 
         "taskAn": [90, 1011010, 2],
@@ -158,6 +175,7 @@
     {
         "taskCounter": 727,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [105, 1101001, 1],
@@ -167,6 +185,7 @@
      {
         "taskCounter": 726,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [121, 1111001, 1],
@@ -176,6 +195,7 @@
     {
         "taskCounter": 725,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 6,
 
         "taskAn": [140, 1101111, 1],
@@ -185,6 +205,7 @@
     {
         "taskCounter": 724,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 6,
 
         "taskAn": [126, 1111110, 1],
@@ -194,6 +215,7 @@
     {
         "taskCounter": 723,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [156, 10011100, 1],
@@ -203,6 +225,7 @@
     {
         "taskCounter": 722,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1010111,
 
         "taskAn": [87, 1010111, 2],
@@ -212,6 +235,7 @@
     {
         "taskCounter": 721,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [110, 1101110, 1],
@@ -221,6 +245,7 @@
     {
         "taskCounter": 720,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1100010,
 
         "taskAn": [98, 1100010, 2],
@@ -230,6 +255,7 @@
     {
         "taskCounter": 719,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [101, 1100101, 1],
@@ -239,6 +265,7 @@
     {
         "taskCounter": 718,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [151 , 10010111, 1],
@@ -248,6 +275,7 @@
     {
         "taskCounter": 717,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 3,
 
         "taskAn": [100, 1100100, 1],
@@ -257,6 +285,7 @@
     {
         "taskCounter": 716,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [100, 1100100, 0],
@@ -266,6 +295,7 @@
     {
         "taskCounter": 715,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [149, 10010101, 0],
@@ -275,6 +305,7 @@
     {
         "taskCounter": 714,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [149, 10010101, 1],
@@ -284,6 +315,7 @@
     {
         "taskCounter": 713,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 2,
 
         "taskAn": [516, 1000000100, 1],
@@ -293,6 +325,7 @@
     {
         "taskCounter": 712,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [143, 10001111, 1],
@@ -302,6 +335,7 @@
     {
         "taskCounter": 711,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1111110,
 
         "taskAn": [126, 1111110, 2],
@@ -311,6 +345,7 @@
     {
         "taskCounter": 710,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 6,
 
         "taskAn": [125, 1111101, 1],
@@ -320,6 +355,7 @@
     {
         "taskCounter": 709,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 2,
 
         "taskAn": [144, 10010000, 1],
@@ -329,6 +365,7 @@
     {
         "taskCounter": 708,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [147, 10010011, 1],
@@ -338,6 +375,7 @@
     {
         "taskCounter": 707,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [147, 10010011, 0],
@@ -347,6 +385,7 @@
     {
         "taskCounter": 706,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [142, 10001110, 1],
@@ -356,6 +395,7 @@
     {
         "taskCounter": 705,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 3,
 
         "taskAn": [140, 10001100, 1],
@@ -365,6 +405,7 @@
     {
         "taskCounter": 704,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 6,
 
         "taskAn": [119, 1110111, 1],
@@ -374,6 +415,7 @@
     {
         "taskCounter": 703,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 2,
 
         "taskAn": [136, 10001000, 1],
@@ -383,6 +425,7 @@
     {
         "taskCounter": 702,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [167, 10100111, 1],
@@ -392,6 +435,7 @@
     {
         "taskCounter": 701,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [157, 10011101, 1],
@@ -401,6 +445,7 @@
     {
         "taskCounter": 700,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 3,
 
         "taskAn": [134, 10000110, 1],
@@ -410,6 +455,7 @@
     {
         "taskCounter": 699,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 11000111,
 
         "taskAn": [199, 11000111, 2],
@@ -419,6 +465,7 @@
     {
         "taskCounter": 698,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1,
 
         "taskAn": [126, 1111110, 0],
@@ -428,6 +475,7 @@
     {
         "taskCounter": 697,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 3,
 
         "taskAn": [259, 100000011, 1],
@@ -437,6 +485,7 @@
     {
         "taskCounter": 696,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 54,
 
         "taskAn": [110110, 54, 1],
@@ -446,6 +495,7 @@
     {
         "taskCounter": 695,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 57,
 
         "taskAn": [111001, 57, 1],
@@ -455,6 +505,7 @@
     {
         "taskCounter": 694,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 311,
 
         "taskAn": [100110111, 311, 1],
@@ -464,6 +515,7 @@
     {
         "taskCounter": 693,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 169,
 
         "taskAn": [10101001, 169, 1],
@@ -473,6 +525,7 @@
     {
         "taskCounter": 692,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 46,
 
         "taskAn": [101110, 46, 1],
@@ -482,6 +535,7 @@
     {
         "taskCounter": 691,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 107,
 
         "taskAn": [1101011, 107, 1],
@@ -491,6 +545,7 @@
     {
         "taskCounter": 690,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 93,
 
         "taskAn": [1011101, 93, 1],
@@ -500,6 +555,7 @@
     {
         "taskCounter": 689,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 47,
 
         "taskAn": [101111, 47, 2],
@@ -509,6 +565,7 @@
     {
         "taskCounter": 688,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 75,
 
         "taskAn": [1001011, 75, 2],
@@ -518,6 +575,7 @@
     {
         "taskCounter": 687,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 210,
 
         "taskAn": [11010010, 210, 2],
@@ -527,6 +585,7 @@
     {
         "taskCounter": 686,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 218,
 
         "taskAn": [11011010, 218, 2],
@@ -536,6 +595,7 @@
     {
         "taskCounter": 685,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 109,
 
         "taskAn": [1101101 , 109, 0],
@@ -545,6 +605,7 @@
     {
         "taskCounter": 684,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 45,
 
         "taskAn": [101101, 45, 2],
@@ -554,6 +615,7 @@
     {
         "taskCounter": 683,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 101,
 
         "taskAn": [1100101, 101, 2],
@@ -563,6 +625,7 @@
     {
         "taskCounter": 682,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 49,
 
         "taskAn": [110001, 49, 2],
@@ -572,6 +635,7 @@
     {
         "taskCounter": 681,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 43,
 
         "taskAn": [101011, 43, 2],
@@ -581,6 +645,7 @@
     {
         "taskCounter": 680,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 123,
 
         "taskAn": [1111011, 123, 2],
@@ -590,6 +655,7 @@
     {
         "taskCounter": 679,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 120,
 
         "taskAn": [1111000, 120, 2],
@@ -599,6 +665,7 @@
     {
         "taskCounter": 678,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 206,
 
         "taskAn": [11001110, 206, 2],
@@ -608,6 +675,7 @@
     {
         "taskCounter": 677,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 53,
 
         "taskAn": [110101, 53, 2],
@@ -617,6 +685,7 @@
     {
         "taskCounter": 676,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 51,
 
         "taskAn": [110011, 51, 2],
@@ -626,6 +695,7 @@
     {
         "taskCounter": 675,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 102,
 
         "taskAn": [1100110, 102, 2],
@@ -635,6 +705,7 @@
     {
         "taskCounter": 674,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 47,
 
         "taskAn": [101111, 47, 2],
@@ -644,6 +715,7 @@
     {
         "taskCounter": 673,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 102,
 
         "taskAn": [1100110, 102, 0],
@@ -653,6 +725,7 @@
     {
         "taskCounter": 672,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 93,
 
         "taskAn": [1011101, 93, 2],
@@ -662,6 +735,7 @@
     {
         "taskCounter": 671,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 202,
 
         "taskAn": [11001010, 202, 2],
@@ -671,6 +745,7 @@
     {
         "taskCounter": 670,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 38,
 
         "taskAn": [100110, 38, 2],
@@ -680,6 +755,7 @@
     {
         "taskCounter": 669,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 85,
 
         "taskAn": [1010101, 85, 0],
@@ -689,6 +765,7 @@
     {
         "taskCounter": 668,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 85,
 
         "taskAn": [1010101, 85, 2],
@@ -698,6 +775,7 @@
     {
         "taskCounter": 667,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 86,
 
         "taskAn": [1010110, 86, 0],
@@ -707,6 +785,7 @@
     {
         "taskCounter": 666,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 113,
 
         "taskAn": [1110001, 113, 0],
@@ -716,6 +795,7 @@
     {
         "taskCounter": 665,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 83,
 
         "taskAn": [1010011, 83, 0],
@@ -725,6 +805,7 @@
     {
         "taskCounter": 664,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 105,
 
         "taskAn": [1101001, 105, 0],
@@ -734,6 +815,7 @@
     {
         "taskCounter": 663,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 166,
 
         "taskAn": [10100110, 166, 0],
@@ -743,6 +825,7 @@
     {
         "taskCounter": 45,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 245,
         "taskAn": [111110101, 1001, 101, "-", "+"],
 
@@ -752,6 +835,7 @@
         "taskCounter": 44,
         "typeTask": 3,
         "taskAuthor": "Демоверсия 2025",
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1039,
         "taskAn": [10111101, 1101, 111, "+", "+"],
 
@@ -760,6 +844,7 @@
     {
         "taskCounter": 43,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 571,
         "taskAn": [11111011, 1101, 101, "+", "-"],
 
@@ -768,6 +853,7 @@
     {
         "taskCounter": 42,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 451,
         "taskAn": [10111011, 1011, 101, "+", "-"],
 
@@ -776,6 +862,7 @@
     {
         "taskCounter": 41,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 530,
         "taskAn": [11011011, 1110, 111, "+", "-"],
 
@@ -784,6 +871,7 @@
     {
         "taskCounter": 40,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 360,
         "taskAn": [110111, 1101, 110, "+", "-"],
 
@@ -792,6 +880,7 @@
     {
         "taskCounter": 39,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 518,
         "taskAn": [10111111, 1110, 101, "+", "-"],
 
@@ -800,6 +889,7 @@
     {
         "taskCounter": 38,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1007,
         "taskAn": [11101101, 1001, 101, "+", "+"],
 
@@ -808,6 +898,7 @@
     {
         "taskCounter": 37,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 439,
         "taskAn": [1110111, 1101, 101, "+", "-"],
 
@@ -816,6 +907,7 @@
     {
         "taskCounter": 36,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 953,
         "taskAn": [1110111, 1101, 101, "+", "+"],
 
@@ -824,6 +916,7 @@
     {
         "taskCounter": 35,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 439,
         "taskAn": [10101111, 1011, 101, "+", "-"],
 
@@ -832,6 +925,7 @@
     {
         "taskCounter": 34,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 953,
         "taskAn": [10101111, 1011, 101, "+", "+"],
 
@@ -840,6 +934,7 @@
     {
         "taskCounter": 33,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1023,
         "taskAn": [10101101, 1101, 111, "+", "+"],
 
@@ -848,6 +943,7 @@
     {
         "taskCounter": 32,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1076,
         "taskAn": [11011011, 1110, 111, "+", "+"],
 
@@ -856,6 +952,7 @@
     {
         "taskCounter": 31,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1087,
         "taskAn": [11101111, 1100, 110, "+", "+"],
 
@@ -864,6 +961,7 @@
     {
         "taskCounter": 30,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1087,
         "taskAn": [11101101, 1101, 111, "+", "+"],
 
@@ -872,6 +970,7 @@
     {
         "taskCounter": 29,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 477,
         "taskAn": [10101101, 1101, 111, "+", "-"],
 
@@ -880,6 +979,7 @@
     {
         "taskCounter": 28,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 965,
         "taskAn": [10111011, 1011, 101, "+", "+"],
 
@@ -888,6 +988,7 @@
     {
         "taskCounter": 27,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 471,
         "taskAn": [11011111, 1011, 111, "+", "-"],
 
@@ -896,6 +997,7 @@
     {
         "taskCounter": 26,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1032,
         "taskAn": [10111111, 1110, 101, "+", "+"],
 
@@ -904,6 +1006,7 @@
     {
         "taskCounter": 25,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1031,
         "taskAn": [10111110, 1110, 101, "+", "+"],
 
@@ -912,6 +1015,7 @@
     {
         "taskCounter": 24,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 904,
         "taskAn": [110111, 1101, 110, "+", "+"],
 
@@ -920,6 +1024,7 @@
     {
         "taskCounter": 23,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1017,
         "taskAn": [11011111, 1011, 111, "+", "+"],
 
@@ -928,6 +1033,7 @@
     {
         "taskCounter": 22,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1085,
         "taskAn": [11111011, 1101, 101, "+", "+"],
 
@@ -936,6 +1042,7 @@
     {
         "taskCounter": 21,
         "typeTask": 3,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 831,
         "taskAn": [110101, 1011, 101, "+", "+"],
 
@@ -944,6 +1051,7 @@
     {
         "taskCounter": 20,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 101,
 
         "taskAn": [1100101, 101, 0],
@@ -953,6 +1061,7 @@
     {
         "taskCounter": 19,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 107,
 
         "taskAn": [1101011, 107, 0],
@@ -962,6 +1071,7 @@
     {
         "taskCounter": 18,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 108,
 
         "taskAn": [1101100, 108, 0],
@@ -971,6 +1081,7 @@
     {
         "taskCounter": 17,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 103,
 
         "taskAn": [1100111, 103, 0],
@@ -980,6 +1091,7 @@
     {
         "taskCounter": 16,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 99,
 
         "taskAn": [1100011, 99, 0],
@@ -989,6 +1101,7 @@
     {
         "taskCounter": 15,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 115,
 
         "taskAn": [1110011, 115, 0],
@@ -998,6 +1111,7 @@
     {
         "taskCounter": 14,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 118,
 
         "taskAn": [1110110, 118, 0],
@@ -1007,6 +1121,7 @@
     {
         "taskCounter": 13,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 117,
 
         "taskAn": [1110101, 117, 0],
@@ -1016,6 +1131,7 @@
     {
         "taskCounter": 12,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 121,
 
         "taskAn": [1111001, 121, 0],
@@ -1025,6 +1141,7 @@
     {
         "taskCounter": 11,
         "typeTask": 2,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 74,
 
         "taskAn": [1001010, 74, 0],
@@ -1034,6 +1151,7 @@
     {
         "taskCounter": 1,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1001011,
 
         "taskAn": [75, 1001011, 2],
@@ -1043,6 +1161,7 @@
     {
         "taskCounter": 2,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 10111101,
 
         "taskAn": [189, 10111101, 2],
@@ -1052,6 +1171,7 @@
     {
         "taskCounter": 3,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 1101111,
 
         "taskAn": [111, 1101111, 2],
@@ -1061,6 +1181,7 @@
     {
         "taskCounter": 4,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [139, 10001011, 1],
@@ -1070,6 +1191,7 @@
     {
         "taskCounter": 5,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 4,
 
         "taskAn": [305, 100110001, 1],
@@ -1079,6 +1201,7 @@
     {
         "taskCounter": 6,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 2,
 
         "taskAn": [68, 1000100, 1],
@@ -1088,6 +1211,7 @@
     {
         "taskCounter": 7,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 2,
 
         "taskAn": [130, 10000010, 1],
@@ -1097,6 +1221,7 @@
     {
         "taskCounter": 8,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 6,
 
         "taskAn": [245, 11110101, 1],
@@ -1106,6 +1231,7 @@
     {
         "taskCounter": 9,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 5,
 
         "taskAn": [122, 1111010, 1],
@@ -1115,6 +1241,7 @@
     {
         "taskCounter": 10,
         "typeTask": 1,
+        "taskKec": [1, 10, 1],
         "taskAnswer": 3,
 
         "taskAn": [143, 10001111, 0],

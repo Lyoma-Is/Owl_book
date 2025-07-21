@@ -16,6 +16,9 @@
   .container {
     width: 100%;
   }
+  .text-inform img {
+    width: 4%;
+  }
   main .main-block .aside-main {
     font-size: 17px;
   }
@@ -364,6 +367,9 @@
   }
   .vars-block .vars-block__inner {
     font-size: 80%;
+  }
+  .text-inform img {
+    width: 5%;
   }
 }
 @media (max-width: 700px) {
@@ -952,6 +958,9 @@
   }
   .checkbox-item label {
     font-size: 14px;
+  }
+  .text-inform img {
+    width: 6%;
   }
   main .main-block .aside-left {
     width: 40%;

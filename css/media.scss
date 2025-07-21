@@ -37,6 +37,11 @@ $font-size17: 17px;
         width: 100%;
         //width: 800px;
     }
+    .text-inform{
+        img{
+            width: 4%;     
+        }
+    }
     main{  
         .main-block{
             
@@ -497,6 +502,11 @@ $font-size17: 17px;
             font-size: 80%;
         }
     }//vars-block
+    .text-inform{
+        img{
+            width: 5%;     
+        }
+    }
 }
 
 @media (max-width: 700px){
@@ -1244,6 +1254,11 @@ $font-size17: 17px;
         }
         label{
             font-size: 14px;
+        }
+    }
+    .text-inform{
+        img{
+            width: 6%;     
         }
     }
     main{

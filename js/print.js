@@ -155,7 +155,7 @@ function preparePrintView() {
                     width: calc(50% - 10px);
                     box-sizing: border-box;
                 }
-                .download-btn, .answer-block, .download, .print, .hr-between {
+                .download-btn, .answer-block, .download, .print, .hr-between, .text-inform {
                          display: none !important;
                 }
                 hr:nth-last-child(-n + 5) {
@@ -195,7 +195,7 @@ function preparePrintView() {
                         column-fill: auto;
                     }
 
-                    .download-btn, .answer-block, .download, .print {
+                    .download-btn, .answer-block, .download, .print, .text-inform {
                          display: none;
                     }
 
@@ -261,73 +261,4 @@ function preparePrintView() {
         }
     });
 }
-
-
-// @media print {
-//                     /* Общие стили печати */
-//                     .print-options, .no-print {
-//                         display: none !important;
-//                     }
-//                     * {
-//                         font-size: 10px !important;
-//                         background-color: #fff !important;
-//                         color: #000 !important;
-//                     }
-//                     body {
-//                         padding: 0 !important;
-//                         margin: 0 !important;
-//                     }
-
-//                     /* Настройка страницы */
-//                     @page {
-//                         size: landscape;
-//                         margin: 10mm;
-//                     }
-
-//                     /* Стили заданий - разрешаем разрывы */
-//                     .print-task {
-//                         page-break-inside: auto !important;  /* Разрешаем разрывы */
-//                         break-inside: auto !important;
-//                         margin-bottom: 15pt;
-//                         padding: 0;
-//                         border: none !important;
-//                     }
-
-//                     /* Двухколоночный макет */
-//                     .print-content.horizontal {
-//                         column-count: 2 !important;
-//                         column-gap: 15mm !important;
-//                         column-fill: auto !important;
-//                         display: block !important;
-//                     }
-                    
-//                     .print-content.horizontal .print-task {
-//                         width: 100% !important;
-//                         float: none !important;
-//                         margin-right: 0 !important;
-//                         display: inline-block !important;
-//                         vertical-align: top;
-//                     }
-
-//                     /* Заголовок задания при разрыве */
-//                     .print-task h3, .print-task h4 {
-//                         page-break-after: avoid;
-//                     }
-
-//                     /* Ответы на новой странице */
-//                     .correct-answers-section {
-//                         page-break-before: always !important;
-//                         background: none !important;
-//                         padding: 0 !important;
-//                         margin-top: 10mm !important;
-//                     }
-
-//                     /* Скрытие ненужных элементов */
-//                     .download-btn, .answer-block, .download, .print, .hr-between {
-//                         display: none !important;
-//                     }
-//                     hr:nth-last-child(-n + 6) {
-//                         display: none !important;
-//                     }
-//                 }
 

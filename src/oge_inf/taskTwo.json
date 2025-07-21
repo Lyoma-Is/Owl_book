@@ -4,6 +4,8 @@
         "typeTask": 3,
         "taskAuthor": "Основная волна 16.06.25",
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЖАТЬ",
         
         "taskAn": ["ЖАТЬ", "8 / 1 / 20 / 30"],
@@ -19,6 +21,8 @@
         "taskCounter": 1056,
         "typeTask": 2,
         "taskAuthor": "Основная волна 06.06.25",
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "КОД",
         
@@ -41,6 +45,8 @@
         "typeTask": 1,
         "taskAuthor": "Основная волна 26.05.25",
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "АГ | ГА",
         
         "taskAn": ["АГ | ГА", "• – / • – – • / – – • / • – / • • / – – •", 1, "А - П - Г - А - И - Г"],
@@ -61,6 +67,8 @@
         "taskCounter": 332,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "7",
         
         "taskAn": ["7", "– • • / • – • • / – / – • • / – / • – / –", 1, "Д - Л - Т - Д - Т - А - Т"],
@@ -80,6 +88,8 @@
     {
         "taskCounter": 331,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "5",
         
@@ -102,6 +112,8 @@
         "taskCounter": 330,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 2],
+        
         "taskAnswer": "5",
         
         "taskAn": ["5", "# + / + ^ # / # / ^ # / ^", 2, "Л - З - И - К - Й"],
@@ -117,11 +129,13 @@
         "К", "^ #", 
         "Л", "# +"],
         "date": "",
-        "taskNum": "! 18241"
+        "taskNum": "18241"
     },
     {
         "taskCounter": 329,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ПОЛЕТ",
         
@@ -144,6 +158,8 @@
         "taskCounter": 328,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЕН | НЕ",
         
         "taskAn": ["ЕН | НЕ", "– – – / – • / • / – • / • / – – • • / •", 1, "О - Н - Е - Н - Е - З - Е"],
@@ -163,6 +179,8 @@
     {
         "taskCounter": 327,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ЛЗИКЙ",
         
@@ -185,6 +203,8 @@
         "taskCounter": 326,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "6",
         
         "taskAn": ["6", "– • / • – / • • / – – • / • – / – – – •", 1, "Н - А - И - Г - А - Ч"],
@@ -204,6 +224,8 @@
     {
         "taskCounter": 325,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ДТ | ТД",
         
@@ -225,6 +247,8 @@
         "taskCounter": 324,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЖУ | УЖ",
         
         "taskAn": ["ЖУ | УЖ", "• • • – / • • – / • • • – / • – / • • –", 1, "Ж - У - Ж - А - У"],
@@ -244,6 +268,8 @@
     {
         "taskCounter": 323,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ДЕ | ЕД",
         
@@ -266,6 +292,8 @@
         "taskCounter": 322,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "НАИГАЧ",
         
         "taskAn": ["НАИГАЧ", "– • / • – / • • / – – • / • – / – – – •", 1, "Н - А - И - Г - А - Ч"],
@@ -285,6 +313,8 @@
     {
         "taskCounter": 321,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ЕН | НЕ",
         
@@ -306,6 +336,8 @@
         "taskCounter": 320,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "НОЕЗЕЕ",
         
         "taskAn": ["НОЕЗЕЕ", " – • / – – – / • / – – • • / • / •", 1, "Н - О - Е - З - Е - Е"],
@@ -325,6 +357,8 @@
     {
         "taskCounter": 319,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ОЛИМП",
         
@@ -347,6 +381,8 @@
         "taskCounter": 318,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЛИМОН",
         
         "taskAn": ["ЛИМОН", "* @ / @ ~ * / * / ~ * / ~", 2, "Л - И - М - О - Н"],
@@ -367,6 +403,8 @@
     {
         "taskCounter": 317,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "МННРЛ",
         
@@ -390,6 +428,8 @@
         "taskCounter": 316,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ГБДАДА",
         
         "taskAn": ["ГБДАДА", "~ + / ο + + / ο ~ / ~ / ο ~ / ~", 2, "Г - Б - Д - А - Д - А"],
@@ -412,6 +452,8 @@
         "taskCounter": 315,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "МАМГЮКА",
         
         "taskAn": ["МАМГЮКА", "– – / • – / – – / – – • / • • – – / – • – / • –", 1, "М - А - М - Г - Ю - К - А"],
@@ -432,6 +474,8 @@
         "taskCounter": 314,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ННКНЛКИ",
         
         "taskAn": ["ННКНЛКИ", "– • / – • / – • – / – • / • – • • / – • – / • •", 1, "Н - Н - К - Н - Л - К - И"],
@@ -451,6 +495,8 @@
     {
         "taskCounter": 313,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "МННРЛ",
         
@@ -474,6 +520,8 @@
         "taskCounter": 312,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "НК | КН",
         
         "taskAn": ["НК | КН", "– • / – • / – • – / – • / • – • • / – • – / • •", 1, "Н - Н - К - Н - Л - К - И"],
@@ -493,6 +541,8 @@
     {
         "taskCounter": 311,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "АТ | ТА",
         
@@ -515,6 +565,8 @@
         "typeTask": 1,
         "taskAuthor": "Демоверсия 2025",
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "АБ | БА",
         
         "taskAn": ["АБ | БА", ".o..o / .o.oo / .o..o / ..o.. / ..o..", 2, "Б - В - Б - А - А"],
@@ -535,6 +587,8 @@
     {
         "taskCounter": 309,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ГБЕАЕА",
         
@@ -558,6 +612,8 @@
         "taskCounter": 308,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЦХТТУ",
         
         "taskAn": ["ЦХТТУ", "− * / * * / + + * / + + * / + −", 2, "Ц - Х - Т - Т - У"],
@@ -580,6 +636,8 @@
         "taskCounter": 307,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ТА | АТ",
         
         "taskAn": ["ТА | АТ", "• • • – / – / • – / • – / • • – / – / • – / –", 1, "Ж - Т - А - А - У - Т - А - Т"],
@@ -599,6 +657,8 @@
     {
         "taskCounter": 306,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ОЛПМН",
         
@@ -621,6 +681,8 @@
         "taskCounter": 305,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "АДЖЛДЛАЛ",
         
         "taskAn": ["АДЖЛДЛАЛ", "• – / – • • / • – • • / – / – • • / – / • – / –", 1, "А - Д - Ж - Л - Д - Л - А - Л"],
@@ -640,6 +702,8 @@
     {
         "taskCounter": 304,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "МННРЛ",
         
@@ -663,6 +727,8 @@
         "taskCounter": 303,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "НЕ | ЕН",
         
         "taskAn": ["НЕ | ЕН", "– • / – – – / • / – – • • / • / • / – •", 1, "Н - О - Е - З - Е - Е - Н"],
@@ -683,6 +749,8 @@
         "taskCounter": 302,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "УА | АУ",
         
         "taskAn": ["УА | АУ", "• • – / • – / • • • – / • – / –  /• • –", 1, "У - А - Ж - А - Т - У"],
@@ -702,6 +770,8 @@
     {
         "taskCounter": 301,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ГБДАДА",
         
@@ -725,6 +795,8 @@
         "taskCounter": 300,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЕН | НЕ",
         
         "taskAn": ["ЕН | НЕ", "• / – • / • / – – • • / – – – / • / • / – •", 1, "Е - Н - Е - З - О - Е - Е - Н"],
@@ -744,6 +816,8 @@
     {
         "taskCounter": 299,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "В",
         
@@ -766,6 +840,8 @@
         "taskCounter": 298,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "БАВГ",
         
         "taskAn": ["БАВГ", "# / ~ / # + / + ~ #", 2, "Б - А - В - Г"],
@@ -786,6 +862,8 @@
     {
         "taskCounter": 297,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ВВОД",
         
@@ -808,6 +886,8 @@
         "taskCounter": 296,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "РОВ",
         
         "taskAn": ["РОВ", "010 / 111 / 011"],
@@ -828,6 +908,8 @@
     {
         "taskCounter": 295,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ВОР",
         
@@ -850,6 +932,8 @@
         "taskCounter": 294,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "РОД",
         
         "taskAn": ["РОД", "010 / 111 / 100"],
@@ -870,6 +954,8 @@
     {
         "taskCounter": 293,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "СОН",
         
@@ -892,6 +978,8 @@
         "taskCounter": 292,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ОДА",
         
         "taskAn": ["ОДА", "111 / 100 / 01"],
@@ -912,6 +1000,8 @@
     {
         "taskCounter": 291,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "НОС",
         
@@ -934,6 +1024,8 @@
         "taskCounter": 290,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ОВОД",
         
         "taskAn": ["ОВОД", "111 / 011 / 111 / 100"],
@@ -954,6 +1046,8 @@
     {
         "taskCounter": 289,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "АДА",
         
@@ -976,6 +1070,8 @@
         "taskCounter": 288,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ОДА",
         
         "taskAn": ["ОДА", "111 / 100 / 01"],
@@ -996,6 +1092,8 @@
     {
         "taskCounter": 287,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "КОД",
         
@@ -1018,6 +1116,8 @@
         "taskCounter": 286,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "СОДА",
         
         "taskAn": ["СОДА", "000 / 111 / 100 / 01"],
@@ -1038,6 +1138,8 @@
     {
         "taskCounter": 285,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ВОДА",
         
@@ -1060,6 +1162,8 @@
         "taskCounter": 284,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "АДА",
         
         "taskAn": ["АДА", "01 / 100 / 01"],
@@ -1080,6 +1184,8 @@
     {
         "taskCounter": 283,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ДО",
         
@@ -1102,6 +1208,8 @@
         "taskCounter": 282,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ДВОР",
         
         "taskAn": ["ДВОР", "100 / 011 / 111 / 010"],
@@ -1122,6 +1230,8 @@
     {
         "taskCounter": 281,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "РУДА",
         
@@ -1144,6 +1254,8 @@
         "taskCounter": 280,
         "typeTask": 2,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "САН",
         
         "taskAn": ["САН", "000 / 01 / 10"],
@@ -1165,6 +1277,8 @@
         "taskCounter": 279,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ДАТЬ",
         
         "taskAn": ["ДАТЬ", "5 / 1 / 20 / 30"],
@@ -1179,6 +1293,8 @@
     {
         "taskCounter": 278,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "БИТЬ",
         
@@ -1195,6 +1311,8 @@
         "taskCounter": 277,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ТВИД",
         
         "taskAn": ["ТВИД", "20 / 3 / 10 / 5"],
@@ -1209,6 +1327,8 @@
     {
         "taskCounter": 276,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ВИД",
         
@@ -1225,6 +1345,8 @@
         "taskCounter": 275,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ВЕДИ",
         
         "taskAn": ["ВЕДИ", "3 / 6 / 5 / 10 "],
@@ -1239,6 +1361,8 @@
     {
         "taskCounter": 274,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ЖАТЬ",
         
@@ -1255,6 +1379,8 @@
         "taskCounter": 273,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ВИЗА",
         
         "taskAn": ["ВИЗА", "3 / 10 / 9 / 1"],
@@ -1269,6 +1395,8 @@
     {
         "taskCounter": 272,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ДЕТИ",
         
@@ -1285,6 +1413,8 @@
         "taskCounter": 271,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ВИТЬ",
         
         "taskAn": ["ВИТЬ", "3 / 10 / 20 / 30"],
@@ -1299,6 +1429,8 @@
     {
         "taskCounter": 270,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ВИД",
         
@@ -1315,6 +1447,8 @@
         "taskCounter": 269,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ВЕЗИ",
         
         "taskAn": ["ВЕЗИ", "3 / 6 / 9 / 10"],
@@ -1329,6 +1463,8 @@
     {
         "taskCounter": 80,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ВЕДИ",
         
@@ -1345,6 +1481,8 @@
         "taskCounter": 79,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЖАТЬ",
         
         "taskAn": ["ЖАТЬ", "8 / 1 / 20 / 30"],
@@ -1359,6 +1497,8 @@
     {
         "taskCounter": 78,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ВЕЗИ",
         
@@ -1375,6 +1515,8 @@
         "taskCounter": 77,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ДЕДА",
         
         "taskAn": ["ДЕДА", "5 / 6 / 5 / 1"],
@@ -1389,6 +1531,8 @@
     {
         "taskCounter": 76,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ГАТЬ",
         
@@ -1405,6 +1549,8 @@
         "taskCounter": 75,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ДАТА",
         
         "taskAn": ["ДАТА", "5 / 1 / 20 / 1"],
@@ -1419,6 +1565,8 @@
     {
         "taskCounter": 74,
         "typeTask": 3,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "БИТЬ",
         
@@ -1435,6 +1583,8 @@
         "taskCounter": 73,
         "typeTask": 3,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ТВИД",
         
         "taskAn": ["ТВИД", "20 / 3 / 10 / 5"],
@@ -1449,6 +1599,8 @@
     {
         "taskCounter": 72,
         "typeTask": 2,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "ДАР",
         
@@ -1471,6 +1623,8 @@
         "taskCounter": 71,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ЛЕСКА",
         
         "taskAn": ["ЛЕСКА", "# + / + ^ # / # / ^ # / ^", 2, "Л - Е - С - К - А"],
@@ -1492,6 +1646,8 @@
         "taskCounter": 70,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "ТАТУАЖ",
         
         "taskAn": ["ТАТУАЖ", "– / • – / – / • • – / • – / • • • –", 1, "Т - А - Т - У - А - Ж"],
@@ -1511,6 +1667,8 @@
     {
         "taskCounter": 69,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "НМАУАСМ",
         
@@ -1532,6 +1690,8 @@
         "taskCounter": 68,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "АМУНСАН",
         
         "taskAn": ["АМУНСАН", "• – / – – / • • – / – • / • • • / • – / – •", 1, "А - М - У - Н - С - А - Н"],
@@ -1552,6 +1712,8 @@
         "taskCounter": 67,
         "typeTask": 1,
         
+        "taskKec": [1, 2, 1],
+        
         "taskAnswer": "УЖАТАХТ",
         
         "taskAn": ["УЖАТАХТ", "• • – / • • • – / • – / – / • – / • • • • / –", 1, "У - Ж - А - Т - А - Х - Т"],
@@ -1571,6 +1733,8 @@
     {
         "taskCounter": 66,
         "typeTask": 1,
+        
+        "taskKec": [1, 2, 1],
         
         "taskAnswer": "АИНГЧАН",
         

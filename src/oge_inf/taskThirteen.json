@@ -2,6 +2,7 @@
     {
         "taskCounter": 1357,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Шиншилла"],
         "task2": [2, 4],
@@ -13,6 +14,7 @@
     {
         "taskCounter": 1356,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Енот-полоскун"],
         "task2": [1, 3],
@@ -24,6 +26,7 @@
     {
         "taskCounter": 1355,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Рысь"],
         "task2": [2, 6],
@@ -35,6 +38,7 @@
     {
         "taskCounter": 1354,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Морская свинка"],
         "task2": [3, 5],
@@ -46,6 +50,7 @@
     {
         "taskCounter": 1353,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Шелковица"],
         "task2": [4, 8],
@@ -57,6 +62,7 @@
     {
         "taskCounter": 1352,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Китайская хохлатая собака"],
         "task2": [2, 4],
@@ -68,6 +74,7 @@
     {
         "taskCounter": 1351,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Крыса"],
         "task2": [2, 6],
@@ -79,6 +86,7 @@
     {
         "taskCounter": 1350,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Бурый медведь"],
         "task2": [3, 2],
@@ -90,6 +98,7 @@
     {
         "taskCounter": 1349,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Эстрагон"],
         "task2": [2, 4],
@@ -101,6 +110,7 @@
     {
         "taskCounter": 1348,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Ежевика"],
         "task2": [4, 3],
@@ -112,6 +122,7 @@
     {
         "taskCounter": 1347,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Малина"],
         "task2": [2, 4],
@@ -123,6 +134,7 @@
     {
         "taskCounter": 1346,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Норка"],
         "task2": [4, 3],
@@ -134,6 +146,7 @@
     {
         "taskCounter": 1345,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Белка"],
         "task2": [4, 7],
@@ -145,6 +158,7 @@
     {
         "taskCounter": 1344,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Базилик"],
         "task2": [2, 6],
@@ -156,6 +170,7 @@
     {
         "taskCounter": 1343,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Лисица обыкновенная"],
         "task2": [4, 8],
@@ -167,6 +182,7 @@
     {
         "taskCounter": 1342,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Леопард"],
         "task2": [3, 2],
@@ -178,6 +194,7 @@
     {
         "taskCounter": 1341,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Дегу"],
         "task2": [1, 3],
@@ -189,6 +206,7 @@
     {
         "taskCounter": 1340,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Домовая мышь"],
         "task2": [1, 1],
@@ -200,6 +218,7 @@
     {
         "taskCounter": 1339,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Барбарис"],
         "task2": [3, 5],
@@ -211,6 +230,7 @@
     {
         "taskCounter": 1338,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Немецкая овчарка"],
         "task2": [1, 1],
@@ -222,6 +242,7 @@
     {
         "taskCounter": 1337,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Сибирский бурундук"],
         "task2": [4, 9],
@@ -233,6 +254,7 @@
     {
         "taskCounter": 1336,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Рябина"],
         "task2": [2, 4],
@@ -244,6 +266,7 @@
     {
         "taskCounter": 1335,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Басéнджи"],
         "task2": [1, 3],
@@ -255,6 +278,7 @@
     {
         "taskCounter": 1334,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Боярышник"],
         "task2": [4, 8],
@@ -266,6 +290,7 @@
     {
         "taskCounter": 1333,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Бордер-колли"],
         "task2": [4, 7],
@@ -277,6 +302,7 @@
     {
         "taskCounter": 1332,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Носухи"],
         "task2": [2, 4],
@@ -288,6 +314,7 @@
     {
         "taskCounter": 1331,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Розмарин"],
         "task2": [4, 7],
@@ -299,6 +326,7 @@
     {
         "taskCounter": 1330,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Мопсы"],
         "task2": [3, 2],
@@ -310,6 +338,7 @@
     {
         "taskCounter": 1329,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Гепард"],
         "task2": [2, 4],
@@ -321,6 +350,7 @@
     {
         "taskCounter": 1328,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Облепиха"],
         "task2": [3, 5],
@@ -332,6 +362,7 @@
     {
         "taskCounter": 1327,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Земляника"],
         "task2": [2, 6],
@@ -343,6 +374,7 @@
     {
         "taskCounter": 1326,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Шалфей"],
         "task2": [1, 3],
@@ -354,6 +386,7 @@
     {
         "taskCounter": 1325,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Черника"],
         "task2": [4, 3],
@@ -365,6 +398,7 @@
     {
         "taskCounter": 1324,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Большая панда"],
         "task2": [4, 7],
@@ -376,6 +410,7 @@
     {
         "taskCounter": 1323,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Ленивец"],
         "task2": [2, 4],
@@ -387,6 +422,7 @@
     {
         "taskCounter": 1322,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Лабрадор"],
         "task2": [3, 5],
@@ -398,6 +434,7 @@
     {
         "taskCounter": 1321,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Нутрия"],
         "task2": [2, 4],
@@ -409,6 +446,7 @@
     {
         "taskCounter": 1320,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Жимолость"],
         "task2": [1, 1],
@@ -420,6 +458,7 @@
     {
         "taskCounter": 1319,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Лев"],
         "task2": [4, 8],
@@ -431,6 +470,7 @@
     {
         "taskCounter": 1318,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Сервал"],
         "task2": [4, 7],
@@ -442,6 +482,7 @@
     {
         "taskCounter": 1317,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Голубика"],
         "task2": [2, 4],
@@ -453,6 +494,7 @@
     {
         "taskCounter": 1316,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Пекинес"],
         "task2": [4, 8],
@@ -464,6 +506,7 @@
     {
         "taskCounter": 1315,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Домашняя кошка"],
         "task2": [4, 3],
@@ -475,6 +518,7 @@
     {
         "taskCounter": 1314,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Ирга"],
         "task2": [4, 7],
@@ -486,6 +530,7 @@
     {
         "taskCounter": 1313,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Карело-финская лайка"],
         "task2": [2, 6],
@@ -497,6 +542,7 @@
     {
         "taskCounter": 1312,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Дикие кошки"],
         "task2": [2, 4],
@@ -507,6 +553,7 @@
     {
         "taskCounter": 1311,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Ондатра"],
         "task2": [4, 3],
@@ -517,6 +564,7 @@
     {
         "taskCounter": 1297,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "taskAuthor": "Основная волна 16.06.25",
         "task1": ["DEMO-13", "Коала"],
@@ -528,6 +576,7 @@
     {
         "taskCounter": 1296,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "taskAuthor": "Основная волна 06.06.25",
         "task1": ["DEMO-13", "Такса"],
@@ -540,6 +589,7 @@
         "taskCounter": 1292,
         "typeTask": 1,
         "taskAuthor": "Демоверсия 2025",
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Хомяк"],
         "task2": [3, 2],
@@ -550,6 +600,7 @@
     {
         "taskCounter": 922,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Малая панда"],
         "task2": [3, 5],
@@ -560,6 +611,7 @@
     {
         "taskCounter": 921,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "taskAuthor": "Основная волна 26.05.25",
         "task1": ["DEMO-13", "Белый медведь"],
@@ -571,6 +623,7 @@
     {
         "taskCounter": 920,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Душица"],
         "task2": [3, 2],
@@ -581,6 +634,7 @@
     {
         "taskCounter": 919,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Ягуар"],
         "task2": [3, 5],
@@ -591,6 +645,7 @@
     {
         "taskCounter": 918,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Бишон фризе"],
         "task2": [2, 4],
@@ -601,6 +656,7 @@
     {
         "taskCounter": 917,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Брусника"],
         "task2": [1, 1],
@@ -611,6 +667,7 @@
     {
         "taskCounter": 916,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Крыжовник"],
         "task2": [1, 3],
@@ -621,6 +678,7 @@
     {
         "taskCounter": 915,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Каракал"],
         "task2": [1, 3],
@@ -631,6 +689,7 @@
     {
         "taskCounter": 914,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["ЗАДАНИЕ 13", "Инжир"],
         "task2": [1, 2],
@@ -641,6 +700,7 @@
     {
         "taskCounter": 913,
         "typeTask": 1,
+        "taskKec": [1, 13.1, 1],
         "taskAnswer": "",
         "task1": ["DEMO-13", "Тигр"],
         "task2": [1, 1],
