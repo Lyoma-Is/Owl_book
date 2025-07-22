@@ -151,6 +151,13 @@ function preparePrintView() {
                    
                    
                 }
+                .tasks-blocks{
+                    border: none !important;
+                    margin-bottom: 0 !important;
+                    padding: 0 !important;
+                    background-color: transparent !important;
+                    
+                }
                 .print-content.horizontal .print-task {
                     width: calc(50% - 10px);
                     box-sizing: border-box;

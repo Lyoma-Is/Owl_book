@@ -315,6 +315,7 @@ main{
     padding: 20px;
     font-size: 25px;
     line-height: 2rem;
+    
     .p-num{
         font-size: 20px;
     }
@@ -418,9 +419,14 @@ main{
         }
     }
 }
-// .task-numbers__block{
-    
+// .tasks-blocks{
+//     border: 1px solid;
+//     margin-bottom: 20px;
+//     padding: 20px;
+//     background-color: #dfd186; //#dfd186
+//     border-radius: 10px;
 // }
+
 .inform-block{
      position: absolute;
      width: 100%;
@@ -433,13 +439,16 @@ main{
      z-index: 1;
      background-color: #fdbc5b;
     p{
-        color:black;  
+        color:black;
+          
     }
     div{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        
     }
-     
+    
 }
 .text-inform{
     position: relative;

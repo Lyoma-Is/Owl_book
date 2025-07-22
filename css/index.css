@@ -392,6 +392,7 @@ main .btn-primary:active {
 .inform-block div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .text-inform {

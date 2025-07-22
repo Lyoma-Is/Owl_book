@@ -51,7 +51,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     
     
     const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10">
-      <div class="text-inform"><div class="inform-block"></div>
+      <div class="text-inform" data-task-counter="${taskCounter}"><div class="inform-block"></div>
         ${ !taskKec ? ``:
           taskKec[2] === 1 ? 
           `<img id="text-inform-button" src="../../../img/inform2.svg">`:
@@ -67,13 +67,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD12 = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
-
+    const beginTask = () => `<div class="tasks-blocks">`;
+    const endTask = () => `</div>`;
     let answerBlock = "";
-
+ //   answerBlock += beginTask();
+ //   answerBlock += endTask();
     if (taskKey === 'one'){
       let Nomer = 1
       switch(typeTask){
-         case 1:         
+         case 1: 
+            answerBlock += beginTask();  
             answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""}  ${generateHard()}</p><hr class="hr-pd_10">
               <p>${task1}</p>
               <hr class="hr-pd_20">
@@ -146,8 +149,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             if(tumbler === false){
               answerBlock += generateInput();
             }
+            answerBlock += endTask();
             return answerBlock
          case 2:
+            answerBlock += beginTask();
             answerBlock += `
                 <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
 
@@ -180,6 +185,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             if(tumbler === false){
               answerBlock += generateInput();
             }
+            answerBlock += endTask();
             return answerBlock
       }
     }
@@ -2061,6 +2067,7 @@ int main(){
       let Nomer = 11
       switch(typeTask){
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
           <p>${task2}</p>      
@@ -2080,6 +2087,7 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInputD();
           } 
+          answerBlock += endTask();
           return answerBlock
          }
     }

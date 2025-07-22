@@ -5,9 +5,9 @@ import { tasks } from "./viewTask.js";
 const tasksCache = new Map();
 let totalTasksLoaded = 0;
 let allTasks = []; // Массив для хранения всех задач
-let allTaskKec = [];
+let allTaskKec = {};
 let countData = {};
-let allTaskKec2 = {}
+
 async function fetchTasks(taskKey) {
   try {
     // Если задачи уже в кэше - используем их
@@ -36,11 +36,10 @@ async function fetchTasks(taskKey) {
     data.forEach(task => {
       task.source = taskKey; // Сохраняем источник задачи
       allTasks.push(task);
-      allTaskKec.push(data[0].taskKec);
-     
-      allTaskKec2[task.taskCounter] = task.taskKec
+      
+      allTaskKec[task.taskCounter] = task.taskKec
     });
-
+  
     return data;
   } catch (error) {
     console.error(`Ошибка загрузки ${taskKey}:`, error);
@@ -48,7 +47,8 @@ async function fetchTasks(taskKey) {
   }
 
 }
-//console.log(allTaskKec2)
+
+
 const showTaskCount = document.querySelector('.show-box');
 const countLabel = document.createElement('label');
 countLabel.className = 'label-text';
@@ -103,6 +103,7 @@ function displayTasks(taskKey, tasksToDisplay) {
   
   output.innerHTML = tasksToDisplay.map(item => generateTaskHTML(taskKey, item)).join('');
   countLabel.innerHTML = `<hr class="hr-pd_5">Количество загруженных задач: ${countData[taskKey]}`
+  
 }
 
 // Инициализация
@@ -119,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   searchBtn.addEventListener('click', () => {
       const taskNumber = parseInt(searchInput.value, 10);
+      
       if (isNaN(taskNumber) || taskNumber < 1) {
           resultContainer.innerHTML = '<p class="error">Введите корректный номер задачи!</p>';
           return;
@@ -194,7 +196,6 @@ if (taskSort) {
 `
 }
 
-
 document.addEventListener('click', function(e) {
   if (e.target && e.target.id === 'text-inform-button') {
     const textInform = e.target.closest('.text-inform');
@@ -208,47 +209,46 @@ document.addEventListener('click', function(e) {
       console.log('Не найден элемент .inform-block');
       return;
     }
+    const currentPage = window.location.pathname.split('/').pop();
 
-    // Определяем текущую страницу
-    const currentPage = window.location.pathname.split('/').pop().slice(0, -5);
-    //console.log('Текущая страница:', currentPage);
-
-    // Соответствие страниц и КЭС
     const PAGE_TO_KEC = {
-      'taskOnePage': 1,
-      'taskTwoPage': 2,
-      'taskThreePage': 3,
-      'taskFourPage': 4,
-      'taskFivePage': 5,
-      'taskSixPage': 6,
-      'taskSevenPage': 7,
-      'taskEightPage': 8,
-      'taskNinePage': 9,
-      'taskTenPage': 10,
-      'taskElevenPage': 11,
-      'taskTwelvePage': 12,
-      'taskThirteenPage': 13.1,
-      'taskThirteenTwoPage': 13.2,
-      'taskFourteenPage': 14,
-      'taskFifteenPage': 15,
-      'taskSixteenPage': 16
+      'taskOnePage.html': 1,
+      'taskTwoPage.html': 2,
+      'taskThreePage.html': 3,
+      'taskFourPage.html': 4,
+      'taskFivePage.html': 5,
+      'taskSixPage.html': 6,
+      'taskSevenPage.html': 7,
+      'taskEightPage.html': 8,
+      'taskNinePage.html': 9,
+      'taskTenPage.html': 10,
+      'taskElevenPage.html': 11,
+      'taskTwelvePage.html': 12,
+      'taskThirteenPage.html': '13.1',
+      'taskThirteenTwoPage.html': '13.2',
+      'taskFourteenPage.html': 14,
+      'taskFifteenPage.html': 15,
+      'taskSixteenPage.html': 16
     };
 
-    // Получаем номер КЭС для текущей страницы
     const Kec = PAGE_TO_KEC[currentPage];
     if (!Kec) {
       console.error('Не определен КЭС для страницы:', currentPage);
       return;
     }
+    const textInformElement = e.target.closest('.text-inform');
+    const taskCounter = parseInt(textInformElement.getAttribute('data-task-counter'));  
+    const foundTask = allTasks.find(task => task.taskCounter === taskCounter);
+    let valuesSource;
 
-    // Находим запись в allTaskKec, где taskKec совпадает с текущим Kec
-    const taskData = allTaskKec.find(task => task[1] === Kec);
-    if (!taskData) {
-      console.error('Не найдены данные для КЭС:', Kec);
-      return;
-    }
+    const taskEntries = Object.entries(allTaskKec);
+    taskEntries.forEach(([key, value]) => {
+      if ( +key === foundTask.taskCounter){
+        valuesSource = value[2];
+        
+      }       
+    });
 
-    // Описания КЭС
     const KEC_DESCRIPTIONS = {
       1: "КЭС: 2.2 Информационный объём данных. Бит – минимальная единица количества информации – двоичный разряд. Единицы измерения информационного объёма данных. Бит, байт, килобайт, мегабайт, гигабайт. Скорость передачи данных. Единицы скорости передачи данных.",
       2: "КЭС: 2.1 Дискретность данных. Возможность описания непрерывных объектов и процессов с помощью дискретных данных. Символ. Алфавит. Мощность алфавита. Двоичный алфавит. Количество всевозможных слов (кодовых комбинаций) фиксированной длины в двоичном алфавите. Преобразование любого алфавита к двоичному. Количество различных слов фиксированной длины в алфавите определённой мощности. Кодирование символов одного алфавита с помощью кодовых слов в другом алфавите, кодовая таблица, декодирование. Кодирование текстов. Равномерный код. Неравномерный код. Кодировка ASCII. Восьмибитные кодировки. Понятие о кодировках UNICODE. Декодирование сообщений с использованием равномерного и неравномерного кода. Информационный объём текста.",
@@ -271,7 +271,7 @@ document.addEventListener('click', function(e) {
 
     // Формируем содержимое с кнопкой закрытия
     let content = `
-      <div><p></p><button class="close-inform-button">✕</button></div>
+      <div><p style="font-size: 130%;">Источник: ${ valuesSource === 1 ? `Банк ФИПИ`: valuesSource === 2 ? `Решу ОГЭ`: `Другой источник`}</p><button class="close-inform-button">✕</button></div>
       <div class="inform-content">
         <p>${KEC_DESCRIPTIONS[Kec]}</p>
       </div>
