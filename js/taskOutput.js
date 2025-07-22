@@ -271,7 +271,7 @@ document.addEventListener('click', function(e) {
 
     // Формируем содержимое с кнопкой закрытия
     let content = `
-    <button class="close-inform-button">✕</button>
+      <div><p></p><button class="close-inform-button">✕</button></div>
       <div class="inform-content">
         <p>${KEC_DESCRIPTIONS[Kec]}</p>
       </div>

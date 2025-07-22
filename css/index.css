@@ -389,6 +389,10 @@ main .btn-primary:active {
 .inform-block p {
   color: black;
 }
+.inform-block div {
+  display: flex;
+  justify-content: space-between;
+}
 
 .text-inform {
   position: relative;
