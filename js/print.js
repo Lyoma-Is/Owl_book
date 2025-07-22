@@ -166,7 +166,8 @@ function preparePrintView() {
                         font-size: 10px !important;
                     }
                     body {
-                       padding: 0;
+                       padding: 20px 0 0 0;
+
                        background-color: #fff !important;    
                     }
                     .print-options, .no-print {
@@ -216,7 +217,7 @@ function preparePrintView() {
                 <button onclick="printVertical()">Вертикальная печать</button>
                 <button onclick="printHorizontal()">Горизонтальная печать</button>
             </div>
-            <h2 style="text-align: center;">${variantName}</h2>
+            <h2 style="text-align: center; padding-top: 20px;">${variantName}</h2>
             <div class="print-content vertical task-numbers__block">
                 ${fullPrintContent}
             </div>
