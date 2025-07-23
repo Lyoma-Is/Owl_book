@@ -151,7 +151,7 @@ function setupCheckButton(slider, correctAnswers) {
 }
 
 function getResultText(score, total) {
-    if (score < 6) return `Ваша оценка: 2 <span style="padding: 5px;" class="bg_red">Не зачёт</span> <br><br> Количество баллов: ${score} из ${total}`;
+    if (score < 5) return `Ваша оценка: 2 <span style="padding: 5px;" class="bg_red">Не зачёт</span> <br><br> Количество баллов: ${score} из ${total}`;
     if (score < 11) return `Ваша оценка: 3 <span style="padding: 5px;" class="bg_yellow">Зачёт</span> <br><br> Количество баллов: ${score} из ${total}`;
     if (score < 16) return `Ваша оценка: 4 <span style="padding: 5px;" class="bg_green">Зачёт</span> <br><br> Количество баллов: ${score} из ${total}`;
     return `Ваша оценка: 5 <span style="padding: 5px;" class="bg_green">Зачёт</span> <br><br> Количество баллов: ${score} из ${total}`;
