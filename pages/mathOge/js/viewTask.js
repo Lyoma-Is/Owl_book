@@ -1,6 +1,6 @@
 const tasks = {
 
-  six: '../../../src/oge_math/taskSix.json',
+  six: '../../src/oge_math/taskSix.json',
 
 };
  

@@ -42,7 +42,7 @@ async function fetchTasks(taskKey) {
   
     return data;
   } catch (error) {
-    console.error(`Ошибка загрузки ${taskKey}:`, error);
+    //console.error(`Ошибка загрузки ${taskKey}:`, error);
     return [];
   }
 
