@@ -139,10 +139,14 @@ main .main-block .aside-left ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 20px;
 }
+main .main-block .aside-left ul li {
+  padding-bottom: 25px;
+}
 main .main-block .aside-left ul li a {
-  font-size: 24px;
+  font-size: 150%;
 }
 main .main-block .aside-left ul li a:hover {
   color: red;

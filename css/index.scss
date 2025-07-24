@@ -157,10 +157,12 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                 padding: 20px;
                 li{
+                    padding-bottom: 25px;
                     a{
-                        font-size: 24px;
+                        font-size: 150%;
                     }
                     a:hover{
                         color: red ;
