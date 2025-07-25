@@ -30,8 +30,6 @@ async function fetchTasks(taskKey) {
       showTaskCount2.innerHTML = `<hr class="hr-pd_5">Общее количество задач: ${totalTasksLoaded}`
     }
 
-   
-
     // Добавляем задачи в общий массив
     data.forEach(task => {
       task.source = taskKey; // Сохраняем источник задачи
