@@ -1,5 +1,205 @@
 [   
     {
+        "taskCounter": 40,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "19,84",
+        
+        "task1": "3,2 • 6,2",
+
+        "taskNum": "3A4787"
+    },
+    {
+        "taskCounter": 39,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "13,3",
+        
+        "task1": "8,7 + 4,6",
+
+        "taskNum": "99D38E"
+    },
+    {
+        "taskCounter": 38,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "9,4",
+        
+        "task1": "6,8 + 2,6",
+
+        "taskNum": "C3738C"
+    },
+    {
+        "taskCounter": 37,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "-4,5",
+        
+        "task1": "4,9 − 9,4",
+
+        "taskNum": "BDCC81"
+    },
+    {
+        "taskCounter": 36,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "-1,9",
+        
+        "task1": "5,7 − 7,6",
+
+        "taskNum": "0F5B83"
+    },
+    {
+        "taskCounter": 35,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "16,12",
+        
+        "task1": "5,2 • 3,1",
+
+        "taskNum": "8F6C3D"
+    },
+    {
+        "taskCounter": 34,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "17,25",
+        
+        "task1": "2,3 • 7,5",
+
+        "taskNum": "D09E3C"
+    },
+    {
+        "taskCounter": 33,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "-3,5",
+        
+        "task1": "4,7 − 8,2",
+
+        "taskNum": "76FB33"
+    },
+    {
+        "taskCounter": 32,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "3,6",
+        
+        "task1": "6,1 − 2,5",
+
+        "taskNum": "A10E69"
+    },
+    {
+        "taskCounter": 31,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "58,32",
+        
+        "task1": "8,1 • 7,2",
+
+        "taskNum": "12AD6B"
+    },
+    {
+        "taskCounter": 30,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "10,1",
+        
+        "task1": "7,9 + 2,2",
+
+        "taskNum": "9570E3"
+    },
+    {
+        "taskCounter": 29,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "36,85",
+        
+        "task1": "6,7 • 5,5",
+
+        "taskNum": "C702ED"
+    },
+    {
+        "taskCounter": 28,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "14,7",
+        
+        "task1": "8,8 + 5,9",
+
+        "taskNum": "5719EA"
+    },
+    {
+        "taskCounter": 27,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "12",
+        
+        "task2": ["4,8", "0,4"],
+
+        "taskNum": "7545EE"
+    },
+    {
+        "taskCounter": 26,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "70,29",
+        
+        "task1": "9,9 • 7,1",
+
+        "taskNum": "DE80C5"
+    },
+    {
+        "taskCounter": 25,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "40,81",
+        
+        "task1": "7,7 • 5,3",
+
+        "taskNum": "003CC0"
+    },
+    {
+        "taskCounter": 24,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "-0,5",
+        
+        "task1": "3,6 − 4,1",
+
+        "taskNum": "6B40A0"
+    },
+    {
+        "taskCounter": 23,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "7",
+        
+        "task2": ["8,4", "1,2"],
+
+        "taskNum": "FD4058"
+    },
+    {
+        "taskCounter": 22,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "8,16",
+        
+        "task1": "1,6 • 5,1",
+
+        "taskNum": "AFE6DF"
+    },
+    {
+        "taskCounter": 21,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": "5",
+        
+        "task2": ["6,5", "1,3"],
+
+        "taskNum": "DB17DA"
+    },
+    {
         "taskCounter": 20,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
