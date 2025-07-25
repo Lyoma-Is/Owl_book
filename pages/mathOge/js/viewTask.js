@@ -58,7 +58,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     if (taskKey === 'six'){
       let Nomer = 6
       switch(typeTask){
-        
+        // — • 
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
@@ -87,7 +87,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">`
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Найдите значение выражения: 
+          <math style="font-size: 140%">
+            <mfrac >
+              <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+              <mn style="padding-top: 5px;">${task1[1]}</mn>
+            </mfrac>
+          </math>
+          &thinsp;${task1[4]}&thinsp;
+          <math style="font-size: 140%">
+            <mfrac >
+              <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+              <mn style="padding-top: 5px;">${task1[3]}</mn>
+            </mfrac>
+          </math>
+          `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
