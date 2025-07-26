@@ -123,7 +123,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task1}<hr class="hr-pd_10">
-          <img style="display: block; margin: 0 auto; width: 60%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
+          <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
           ${task2}<hr class="hr-pd_10">
           <div style="display: flex; justify-content: space-around;"><p>${task3[0]}</p><p>${task3[1]}</p><p>${task3[2]}</p><p> ${task3[3]}</p></div>
           <hr class="hr-pd_20">
@@ -190,7 +190,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task1[6] ? 
+          ${task1.length === 7 ? 
             `
             Какое из чисел&thinsp;
             <math style="font-size: 140%">
@@ -219,7 +219,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             </math>&thinsp; принадлежит отрезку [${task1[5]}; ${task1[6]}] ?
             <hr class="hr-pd_40">
             ` :
-            task1[5] ? 
+            task1.length === 6 ? 
             `Одно из чисел&thinsp;
             <math style="font-size: 140%">
               <mfrac >
@@ -246,18 +246,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               </mfrac>
             </math>&thinsp;
             отмечено на числовой прямой точкой ${task1[5]}.<hr class="hr-pd_10">
-            <img style="display: block; margin: 0 auto; width: 60%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
+            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
             Какое это число?<hr class="hr-pd_20">
-            ` :  
+            ` :  task1.length === 2 ? 
+            `Какому из данных промежутков принадлежит число&thinsp;
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                  <mn style="padding-top: 5px;">${task1[1]}</mn>
+                </mfrac>
+              </math>&thinsp; ?
+            ` :
             `
             На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 125%">√</span>${task1[4]}. Какая это точка?
             <hr class="hr-pd_20">
-            <img style="display: block; margin: 0 auto; width: 60%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
             <hr class="hr-pd_30">      
             `}
           
          
-          ${task1[5] ? 
+          ${task1.length === 6 ? 
           `<div style="display: flex; justify-content: space-around;">
             <p> 1)
               <math style="font-size: 140%">
@@ -292,14 +300,24 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               </math>
             </p>
           </div>`
-          : 
+          : task1.length === 2 ? 
+          `
+          <hr class="hr-pd_30">
+          <div style="display: flex; justify-content: space-around;">
+            <p>1) ${task2[0]}</p>
+            <p>2) ${task2[1]}</p>
+            <p>3) ${task2[2]}</p>
+            <p>4) ${task2[3]}</p>
+          </div>
+          ` 
+          :
           `
           
           <div style="display: flex; justify-content: space-around;">
-            <p>1) ${task1[0]}</p>
-            <p>2) ${task1[1]}</p>
-            <p>3) ${task1[2]}</p>
-            <p>4) ${task1[3]}</p>
+            <p>1) точка ${task1[0]}</p>
+            <p>2) точка ${task1[1]}</p>
+            <p>3) точка ${task1[2]}</p>
+            <p>4) точка ${task1[3]}</p>
           </div>
           `}
           
