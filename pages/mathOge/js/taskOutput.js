@@ -149,8 +149,8 @@ document.getElementById('select-task').addEventListener('change', function() {
 const taskPage = document.getElementById('select-task');
 taskPage.innerHTML = ` 
 <option value="taskFoundPage.html">Выберите задание по типу</option>
-
 <option value="taskSixPage.html">6. Числа и вычисления.</option>
+<option value="taskSevenPage.html">7. Числовые неравенства. Координатная прямая.</option>
 
 `
 
@@ -159,7 +159,7 @@ taskPage.innerHTML = `
 //<option value="taskThreePage.html">3. .</option>
 //<option value="taskFourPage.html">4. .</option>
 //<option value="taskFivePage.html">5. .</option>
-//<option value="taskSevenPage.html">7. .</option>
+//
 //<option value="taskEightPage.html">8..</option>
 //<option value="taskNinePage.html">9. .</option>
 //<option value="taskTenPage.html">10. .</option>
@@ -241,7 +241,7 @@ document.addEventListener('click', function(e) {
       4: "КЭС: ",
       5: "КЭС: ",
       6: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.",
-      7: "КЭС: ",
+      7: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.<br>КЭС: 1.4 Действительные числа. Арифметические операции с действительными числами.<br> КЭС: 6.1 Координатная прямая.",
       8: "КЭС: ",
       9: "КЭС: ",
       10: "КЭС: ",

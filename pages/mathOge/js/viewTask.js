@@ -1,7 +1,7 @@
 const tasks = {
 
   six: '../../src/oge_math/taskSix.json',
-
+  seven: '../../src/oge_math/taskSeven.json',
 };
  
 export {tasks};
@@ -52,7 +52,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const beginTask = () => `<div class="tasks-blocks">`;
     const endTask = () => `</div>`;
     let answerBlock = "";
- //   answerBlock += beginTask();
+ //   answerBlock += beginTask(); <sup>2</sup>   — • &thinsp; √
  //   answerBlock += endTask();
 
     if (taskKey === 'six'){
@@ -115,6 +115,208 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     } 
-    
+    if (taskKey === 'seven'){
+      let Nomer = 7
+      switch(typeTask){
+       
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task1}<hr class="hr-pd_10">
+          <img style="display: block; margin: 0 auto; width: 60%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
+          ${task2}<hr class="hr-pd_10">
+          <div style="display: flex; justify-content: space-around;"><p>${task3[0]}</p><p>${task3[1]}</p><p>${task3[2]}</p><p> ${task3[3]}</p></div>
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task1[3] ? 
+            `
+            Какое из следующих чисел заключено между числами &thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[1]}</mn>
+              </mfrac>
+            </math>&thinsp; и&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                <mn style="padding-top: 5px;">${task1[3]}</mn>
+              </mfrac>
+            </math>&thinsp;
+            ?&thinsp;
+            ` : 
+            task1[1] ? 
+            `
+            Между какими целыми числами заключено число &thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[1]}</mn>
+              </mfrac>
+            </math>&thinsp; ?&thinsp;
+            ` : 
+            `
+            Между какими числами заключено число <span style="font-size: 125%">√</span>${task1[0]} ?
+        
+            
+            `}<hr class="hr-pd_40"> 
+           <div style="display: flex; justify-content: space-around;"><p>${task2[0]}</p><p>${task2[1]}</p><p>${task2[2]}</p><p> ${task2[3]}</p></div>
+          <hr class="hr-pd_40"> 
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task1[6] ? 
+            `
+            Какое из чисел&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp;;&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[1]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp;;&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp;;&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[3]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp; принадлежит отрезку [${task1[5]}; ${task1[6]}] ?
+            <hr class="hr-pd_40">
+            ` :
+            task1[5] ? 
+            `Одно из чисел&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp;;&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[1]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp;;&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp;;&thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[3]}</mn>
+                <mn style="padding-top: 5px;">${task1[4]}</mn>
+              </mfrac>
+            </math>&thinsp;
+            отмечено на числовой прямой точкой ${task1[5]}.<hr class="hr-pd_10">
+            <img style="display: block; margin: 0 auto; width: 60%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
+            Какое это число?<hr class="hr-pd_20">
+            ` :  
+            `
+            На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 125%">√</span>${task1[4]}. Какая это точка?
+            <hr class="hr-pd_20">
+            <img style="display: block; margin: 0 auto; width: 60%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+            <hr class="hr-pd_30">      
+            `}
+          
+         
+          ${task1[5] ? 
+          `<div style="display: flex; justify-content: space-around;">
+            <p> 1)
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                  <mn style="padding-top: 5px;">${task1[4]}</mn>
+                </mfrac>
+              </math>
+            </p>
+            <p> 2)
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[1]}</mn>
+                  <mn style="padding-top: 5px;">${task1[4]}</mn>
+                </mfrac>
+              </math>
+            </p>
+            <p> 3)
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                  <mn style="padding-top: 5px;">${task1[4]}</mn>
+                </mfrac>
+              </math>
+            </p>
+            <p> 4)
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[3]}</mn>
+                  <mn style="padding-top: 5px;">${task1[4]}</mn>
+                </mfrac>
+              </math>
+            </p>
+          </div>`
+          : 
+          `
+          
+          <div style="display: flex; justify-content: space-around;">
+            <p>1) ${task1[0]}</p>
+            <p>2) ${task1[1]}</p>
+            <p>3) ${task1[2]}</p>
+            <p>4) ${task1[3]}</p>
+          </div>
+          `}
+          
+          <hr class="hr-pd_20">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
    
 }

@@ -1,0 +1,124 @@
+[   
+    {
+        "taskCounter": 90,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 1,
+        
+        "task1": "На координатной прямой отмечены числа a и b.",
+
+        "task2": "Какое из следующих неравенств верно?",
+
+        "task3": ["1) ab<sup>2</sup> < 0", "2) b − a < 0", "3) ab > 0", "4) a + b > 0"],
+
+        "taskNum": "6F944F"
+    },
+    {
+        "taskCounter": 89,
+        "typeTask": 2,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 1,
+        
+        "task1": [73],
+
+        "task2": ["1) 8 и 9", "2) 72 и 74", "3) 24 и 26", "4) 4 и 5"],
+
+        "taskNum": "E34047"
+    },
+    {
+        "taskCounter": 88,
+        "typeTask": 2,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 4,
+        
+        "task1": [17, 19, 13, 14],
+
+        "task2": ["1) 0,6", "2) 0,7", "3) 0,8", "4) 0,9"],
+
+        "taskNum": "98B04E"
+    },
+    {
+        "taskCounter": 87,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 1,
+        
+        "task1": "На координатной прямой отмечены числа x и y.",
+
+        "task2": "Какое из следующих неравенств верно?",
+
+        "task3": ["1) y − x > 0", "2) x<sup>2</sup>y < 0", "3) xy > 0", "4) x + y < 0"],
+
+        "taskNum": "9BFC49"
+    },
+    {
+        "taskCounter": 86,
+        "typeTask": 3,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 1,
+        
+        "task1": ["A", "B", "C", "D", 28],
+
+
+        "taskNum": "9DCF4D"
+    },
+    {
+        "taskCounter": 85,
+        "typeTask": 3,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 3,
+        
+        "task1": [45, 52, 68, 77, 19, 3, 4],
+
+
+        "taskNum": "73D345"
+    },
+    {
+        "taskCounter": 84,
+        "typeTask": 3,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 3,
+        
+        "task1": [58, 69, 76, 83, 13, "A"],
+
+
+        "taskNum": "7C7947"
+    },
+    {
+        "taskCounter": 83,
+        "typeTask": 2,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 1,
+        
+        "task1": [110, 13],
+
+        "task2": ["1) 8 и 9", "2) 9 и 10", "3) 10 и 11", "4) 11 и 12"],
+
+        "taskNum": "F2CF43"
+    },
+    {
+        "taskCounter": 82,
+        "typeTask": 3,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 2,
+        
+        "task1": [55, 64, 72, 79, 19, "A"],
+
+
+        "taskNum": "F1F841"
+    },
+    {
+        "taskCounter": 81,
+        "typeTask": 1,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 1,
+        
+        "task1": "На координатной прямой отмечены числа x и y.",
+
+        "task2": "Какое из приведённых утверждений для этих чисел верно?",
+
+        "task3": ["1) x + y > 0", "2) xy<sup>2</sup> < 0", "3) x − y < 0", "4) x<sup>2</sup>y > 0"],
+
+        "taskNum": "453B45"
+    }
+]
