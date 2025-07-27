@@ -123,8 +123,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task1}<hr class="hr-pd_10">
-          <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
-          ${task2}<hr class="hr-pd_10">
+          <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_20">
+          ${task2}<hr class="hr-pd_30">
           <div style="display: flex; justify-content: space-around;"><p>${task3[0]}</p><p>${task3[1]}</p><p>${task3[2]}</p><p> ${task3[3]}</p></div>
           <hr class="hr-pd_20">
           `
@@ -248,7 +248,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             отмечено на числовой прямой точкой ${task1[5]}.<hr class="hr-pd_10">
             <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
             Какое это число?<hr class="hr-pd_20">
-            ` :  task1.length === 2 ? 
+            ` :  task1.length == 2 ? 
             `Какому из данных промежутков принадлежит число&thinsp;
               <math style="font-size: 140%">
                 <mfrac >
@@ -256,6 +256,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <mn style="padding-top: 5px;">${task1[1]}</mn>
                 </mfrac>
               </math>&thinsp; ?
+            ` : 
+            task1.length === 9 ? `
+            На координатной прямой точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]} соответствуют числам
+            ${task1[4]}; ${task1[5]}; ${task1[6]}; ${task1[7]}.<hr class="hr-pd_20">
+            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+            
+            Какой точке соответствует число ${task1[8]} ? <hr class="hr-pd_30">
             ` :
             `
             На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 125%">√</span>${task1[4]}. Какая это точка?
@@ -265,7 +272,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `}
           
          
-          ${task1.length === 6 ? 
+          ${task1.length === 6 || task1.length === 7? 
           `<div style="display: flex; justify-content: space-around;">
             <p> 1)
               <math style="font-size: 140%">
@@ -310,7 +317,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>4) ${task2[3]}</p>
           </div>
           ` 
-          :
+          : task1.length === 5 || task1.length === 9 ? 
           `
           
           <div style="display: flex; justify-content: space-around;">
@@ -319,7 +326,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>3) точка ${task1[2]}</p>
             <p>4) точка ${task1[3]}</p>
           </div>
-          `}
+          ` : ``}
           
           <hr class="hr-pd_20">
           
