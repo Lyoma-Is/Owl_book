@@ -2,6 +2,7 @@ const tasks = {
 
   six: '../../src/oge_math/taskSix.json',
   seven: '../../src/oge_math/taskSeven.json',
+  eight: '../../src/oge_math/taskEight.json'
 };
  
 export {tasks};
@@ -12,7 +13,7 @@ export {tasks};
   // four:  '../../../src/oge_inf/taskFour.json',
   // five: '../../../src/oge_inf/taskFive.json',
   //   seven: '../../../src/oge_inf/taskSeven.json',
-  // eight: '../../../src/oge_inf/taskEight.json',
+  // ,
   // nine: '../../../src/oge_inf/taskNine.json',
   // ten: '../../../src/oge_inf/taskTen.json',
   // eleven: '../../../src/oge_inf/taskEleven.json',
@@ -58,7 +59,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     if (taskKey === 'six'){
       let Nomer = 6
       switch(typeTask){
-        // — • 
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
@@ -170,7 +170,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             </math>&thinsp; ?&thinsp;
             ` : 
             `
-            Между какими числами заключено число <span style="font-size: 125%">√</span>${task1[0]} ?
+            Между какими числами заключено число <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span> ?
         
             
             `}<hr class="hr-pd_40"> 
@@ -330,6 +330,53 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           <hr class="hr-pd_20">
           
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
+    // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
+    if (taskKey === 'eight'){
+      let Nomer = 8
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Найдите значение выражения: 
+          ${ task === 1 ? 
+            `
+            a<sup style="font-size: 75%;">${task1[0]}</sup>&thinsp; •&thinsp; a<sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; :&thinsp; a<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}
+
+            `
+            :``}
+          
+          
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_10">
+            <p>a<sup style="font-size: 75%;">${task1[0]} + ${task1[1]} — ${task1[2]}</sup> = a<sup style="font-size: 75%;">${task1[0] + task1[1] - task1[2]}</sup> = ${task1[3]}<sup style="font-size: 75%;">${task1[0] + task1[1] - task1[2]}</sup> = ${Math.pow(task1[3], task1[0] + task1[1] - task1[2])}</p>
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+    
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();

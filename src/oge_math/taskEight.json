@@ -1,0 +1,24 @@
+[   
+    {
+        "taskCounter": 122,
+        "typeTask": 1,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 64,
+        "task": 1,
+
+        "task1": [13, 11, 21, 4],
+
+        "taskNum": "1FCC0B"
+    },
+    {
+        "taskCounter": 121,
+        "typeTask": 1,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 32,
+        "task": 1,
+
+        "task1": [8, 17, 20, 2],
+
+        "taskNum": "F89C42"
+    }
+]
