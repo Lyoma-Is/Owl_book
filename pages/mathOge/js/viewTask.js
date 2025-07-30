@@ -263,7 +263,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
             
             Какой точке соответствует число ${task1[8]} ? <hr class="hr-pd_30">
-            ` :
+            ` : task1[0] === 0 ? 
+            `
+            ${task2}<hr class="hr-pd_10">
+            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+           <hr class="hr-pd_20">
+           Какая из разностей ${task1[1]}, ${task1[2]}, ${task1[3]} отрицательна?<hr class="hr-pd_20">
+            ` 
+            :
             `
             На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 125%">√</span>${task1[4]}. Какая это точка?
             <hr class="hr-pd_20">
@@ -272,7 +279,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `}
           
          
-          ${task1.length === 6 || task1.length === 7? 
+          ${task1.length === 6 || task1.length === 7 ? 
           `<div style="display: flex; justify-content: space-around;">
             <p> 1)
               <math style="font-size: 140%">
@@ -317,7 +324,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>4) ${task2[3]}</p>
           </div>
           ` 
-          : task1.length === 5 || task1.length === 9 ? 
+          : (task1.length === 5 || task1.length === 9) && task1[0] !== 0? 
           `
           
           <div style="display: flex; justify-content: space-around;">
@@ -326,7 +333,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>3) точка ${task1[2]}</p>
             <p>4) точка ${task1[3]}</p>
           </div>
-          ` : ``}
+          ` 
+          : task1[0] === 0 ? 
+          `
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-around;">
+            <p>1) ${task1[1]}</p>
+            <p>2) ${task1[2]}</p>
+            <p>3) ${task1[3]}</p>
+            <p>4) ${task1[4]}</p>
+          </div>
+          ` 
+          : ``}
           
           <hr class="hr-pd_20">
           
@@ -352,7 +370,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(task === 2) 
           return `${task1[4] === "u" ? 
         `<p>a<sup style="font-size: 75%;">${task1[0]} + (${task1[1]} • ${task1[2]})</sup> = a<sup style="font-size: 75%;">${task1[0] + task1[1] * task1[2]}</sup> = ${task1[3]}<sup style="font-size: 75%;">${task1[0] + task1[1] * task1[2]}</sup> = ${Math.pow(task1[3], task1[0] + task1[1] * task1[2])}</p>` :
-        `<p>a<sup style="font-size: 75%;">${task1[0]} + (${task1[1]} • ${task1[2]})</sup> = a<sup style="font-size: 75%;">${task1[0] + task1[1] * task1[2]}</sup> = ${task1[3]}<sup style="font-size: 75%;">${(task1[0] * task1[1]) - task1[2]}</sup> = ${Math.pow(task1[3], (task1[0] * task1[1]) - task1[2])}</p>`}`
+        `<p>a<sup style="font-size: 75%;">(${task1[0]} • ${task1[1]}) — ${task1[2]}</sup> = a<sup style="font-size: 75%;">${task1[0] * task1[1] - task1[2]}</sup> = ${task1[3]}<sup style="font-size: 75%;">${(task1[0] * task1[1]) - task1[2]}</sup> = ${Math.pow(task1[3], (task1[0] * task1[1]) - task1[2])}</p>`}`
+        else if(task === 3)
+          return `${task1[4] === "a3" ? 
+          `<p>a<sup style="font-size: 75%;">${task1[0]} + ${task1[1]} — ${task1[2]}</sup> = a<sup style="font-size: 75%;">${task1[0] + task1[1] - task1[2]}</sup> = ${task1[3]}<sup style="font-size: 75%;">${task1[0] + task1[1] - task1[2]}</sup> = ${Math.pow(task1[3], task1[0] + task1[1] - task1[2])}</p>` 
+          : task1[4] === "a2" ? 
+          `<p>a<sup style="font-size: 75%;">${task1[0]} • ${task1[1]} — ${task1[2]}</sup> = a<sup style="font-size: 75%;">${task1[0] * task1[1] - task1[2]}</sup> = ${task1[3]}<sup style="font-size: 75%;">${(task1[0] * task1[1]) - task1[2]}</sup> = ${Math.pow(task1[3], (task1[0] * task1[1]) - task1[2])}</p>`
+          :
+          `<p>a<sup style="font-size: 75%;">(${task1[0]} • ${task1[1]} + ${task1[2]}) — ${task1[3]}</sup> = a<sup style="font-size: 75%;">${(task1[0] * task1[1] + task1[2]) - task1[3]}</sup> = ${task1[4]}<sup style="font-size: 75%;">${(task1[0] * task1[1] + task1[2]) - task1[3]}</sup> = ${Math.pow(task1[4], (task1[0] * task1[1] + task1[2]) - task1[3])}</p>`}`
       }
 
       switch(typeTask){
@@ -361,14 +386,92 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Найдите значение выражения: 
           ${ task === 1 ? 
-            `a<sup style="font-size: 75%;">${task1[0]}</sup>&thinsp; •&thinsp; a<sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; :&thinsp; a<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}`
+            `a<sup style="font-size: 75%;">${task1[0]}</sup>&thinsp; •&thinsp; a<sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; :&thinsp; a<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]} <hr class="hr-pd_20">`
             : task === 2 ? 
             `${task1[4] === "u" ? 
-              `a<sup style="font-size: 75%;">${task1[0]}</sup>&thinsp;&thinsp;•&thinsp; (a<sup style="font-size: 75%;">${task1[1]}</sup>)<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}` : 
-              `(a<sup style="font-size: 75%;">${task1[0]}</sup>)&thinsp;<sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; :&thinsp; a<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}`}`
-            :
+              `a<sup style="font-size: 75%;">${task1[0]}</sup>&thinsp;&thinsp;•&thinsp; (a<sup style="font-size: 75%;">${task1[1]}</sup>)<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}<hr class="hr-pd_20">` : 
+              `(a<sup style="font-size: 75%;">${task1[0]}</sup>)&thinsp;<sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; :&thinsp; a<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}<hr class="hr-pd_20">`}`
+            : task === 3 ? `
+              ${task1[4] === "a2" ? 
+                `
+                <math style="font-size: 140%">
+              <mfrac>
+              <msup>
+                <mrow>
+                 <mn>(&thinsp;</mn>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">a</mn>
+                    <mn style="padding-top: 5px;">${task1[0]}</mn>
+                  </msup>
+                  <mn>)</mn>
+                </mrow>
 
-            ``}
+                <mn>${task1[1]}</mn>
+                </msup>
+                <msup>
+                  <mn style="padding-bottom: 5px;">a</mn>
+                  <mn style="padding-top: 5px;">${task1[2]}</mn> 
+                </msup>
+              </mfrac>
+            </math>&thinsp;
+            при a = ${task1[3]}
+                ` 
+                : task1[4] === "a3" ?
+              `<math style="font-size: 140%">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">a</mn>
+                    <mn style="padding-top: 5px;">${task1[0]}</mn>
+                  </msup>
+                  <mo>•</mo>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">&thinsp;a</mn>
+                    <mn style="padding-top: 5px;">${task1[1]}</mn> 
+                  </msup>  
+                </mrow>
+                <msup>
+                  <mn style="padding-bottom: 5px;">a</mn>
+                  <mn style="padding-top: 5px;">${task1[2]}</mn> 
+                </msup>
+              </mfrac>
+            </math>&thinsp;
+            при a = ${task1[3]}` 
+            : 
+            `
+            <math style="font-size: 140%">
+              <mfrac>
+              <mrow>
+                <msup>
+                  <mrow>
+                  <mn>(&thinsp;</mn>
+                    <msup>
+                      <mn style="padding-bottom: 5px;">a</mn>
+                      <mn style="padding-top: 5px;">${task1[0]}</mn>
+                    </msup>
+                    <mn>)</mn>
+                  </mrow>
+                  <mn>${task1[1]}</mn>
+                  </msup>
+                  <mo>•&thinsp;</mo>
+                  <msup>
+                      <mn style="padding-bottom: 5px;">a</mn>
+                      <mn style="padding-top: 5px;">${task1[2]}</mn>
+                  </msup>
+               </mrow>
+                <msup>
+                  <mn style="padding-bottom: 5px;">a</mn>
+                  <mn style="padding-top: 5px;">${task1[3]}</mn> 
+                </msup>
+              </mfrac>
+            </math>&thinsp;
+            при a = ${task1[4]}
+            `}
+            
+            <hr class="hr-pd_20">
+            ` :
+
+            ` `}
           `
           
           answerBlock += generateDate();
