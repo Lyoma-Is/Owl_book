@@ -262,7 +262,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${task1[4]}; ${task1[5]}; ${task1[6]}; ${task1[7]}.<hr class="hr-pd_20">
             <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
             
-            Какой точке соответствует число ${task1[8]} ? <hr class="hr-pd_30">
+            Какой точке соответствует число:&thinsp; ${task1[8]} ? <hr class="hr-pd_30">
             ` : task1[0] === 0 ? 
             `
             ${task2}<hr class="hr-pd_10">
