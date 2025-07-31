@@ -1,5 +1,737 @@
 [   
     {
+        "taskCounter": 255,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [0, "a−b", "a−c", "c−b", "ни одна из них"],
+        "task3": "отрицательна",
+
+        "task2": "На координатной прямой отмечены числа a, b и c.",
+
+        "taskNum": "3069CE"
+    },
+    {
+        "taskCounter": 254,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [69, 80, 90, 92, 11, 7, 8],
+
+        "taskNum": "3C8CC9"
+    },
+    {
+        "taskCounter": 253,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [83],
+
+        "task2": ["1) 4 и 5", "2) 27 и 29", "3) 82 и 84", "4) 9 и 10"],
+
+        "taskNum": "6D8DC8"
+    },
+    {
+        "taskCounter": 252,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": "На координатной прямой отмечены числа х и у.",
+
+        "task2": "Какое из следующих неравенств верно?",
+
+        "task3": ["1) xy > 0", "2)  x<sup>2</sup>y < 0", "3) x + y > 0", "4) x − y < 0"],
+
+        "taskNum": "6985CA"
+    },
+    {
+        "taskCounter": 251,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": ["A", "B", "C", "D", 96],
+
+        "taskNum": "E53CC3"
+    },
+    {
+        "taskCounter": 250,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [56],
+
+        "task2": ["1) 55 и 57", "2) 3 и 4", "3) 19 и 21", "4) 7 и 8"],
+
+        "taskNum": "9C31C3"
+    },
+    {
+        "taskCounter": 249,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [1, "A", "B", "C", "D", 116, 15, "", "", ""],
+
+        "taskNum": "A9D8C0"
+    },
+    {
+        "taskCounter": 248,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [0, "b−a", "c−b", "c−a", "ни одна из них"],
+        "task3": "положительна",
+
+        "task2": "На координатной прямой отмечены числа a, b и c.",
+
+        "taskNum": "DBE8C2"
+    },
+    {
+        "taskCounter": 247,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [1, "A", "B", "C", "D", 80, 11, "", "", ""],
+
+        "taskNum": "1D51CF"
+    },
+    {
+        "taskCounter": 246,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": ["A", "B", "C", "D", "− 0,39", "− 0,09", "− 0,93", "0,03", "− 0,09"],
+
+        "taskNum": "F742C9"
+    },
+    {
+        "taskCounter": 245,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [5, 11],
+
+        "task2": ["[0,2 ; 0,3]", "[0,3 ; 0,4]", "[0,4 ; 0,5]", "[0,5 ; 0,6]"],
+
+        "taskNum": "F81BCF"
+    },
+    {
+        "taskCounter": 244,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": ["A", "B", "C", "D", 45],
+
+        "taskNum": "6BFAAA"
+    },
+    {
+        "taskCounter": 243,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [124, 15],
+
+        "task2": ["1) 8 и 9", "2) 9 и 10", "3) 10 и 11", "4) 11 и 12"],
+
+        "taskNum": "648BA1"
+    },
+    {
+        "taskCounter": 242,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [3, 4, 8, 14, 17, ""],
+
+        "taskNum": "CAB6AD"
+    },
+    {
+        "taskCounter": 241,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": ["A", "B", "C", "D", 53],
+
+        "taskNum": "54D6A9"
+    },
+    {
+        "taskCounter": 240,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [1, "A", "B", "C", "D", 132, 17, "", "", ""],
+
+        "taskNum": "227CAA"
+    },
+    {
+        "taskCounter": 239,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [27],
+
+        "task2": ["1) 2 и 3", "2) 5 и 6", "3) 12 и 14", "4) 26 и 28"],
+
+        "taskNum": "7112A5"
+    },
+    {
+        "taskCounter": 238,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [58, 72, 87, 91, 17, 4, 5],
+
+        "taskNum": "0F25A1"
+    },
+    {
+        "taskCounter": 237,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [8, 15, 12, 19],
+
+        "task2": ["1) 0,4", "2) 0,5", "3) 0,6", "4) 0,7"],
+
+        "taskNum": "69755C"
+    },
+    {
+        "taskCounter": 236,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [43, 49, 58, 64, 15, "A"],
+
+        "taskNum": "69B952"
+    },
+    {
+        "taskCounter": 235,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [1, "A", "B", "C", "D", 63, 11, "", "", ""],
+
+        "taskNum": "E2C456"
+    },
+    {
+        "taskCounter": 234,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [0, "q−p", "q−r", "r−p", "ни одна из них"],
+        "task3": "положительна",
+
+        "task2": "На координатной прямой отмечены числа p, q и r.",
+
+        "taskNum": "A7075E"
+    },
+    {
+        "taskCounter": 233,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [4, 6, 8, 13, 7, ""],
+
+        "taskNum": "A6FF59"
+    },
+    {
+        "taskCounter": 232,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [1, "A", "B", "C", "D", 92, 9, "", "", ""],
+
+        "taskNum": "DF4D5B"
+    },
+    {
+        "taskCounter": 231,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [4, 9],
+
+        "task2": ["[0,1 ; 0,2]", "[0,2 ; 0,3]", "[0,3 ; 0,4]", "[0,4 ; 0,5]"],
+
+        "taskNum": "1B7550"
+    },
+    {
+        "taskCounter": 230,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [7, 9],
+
+        "task2": ["[0,5 ; 0,6]", "[0,6 ; 0,7]", "[0,7 ; 0,8]", "[0,8 ; 0,9]"],
+
+        "taskNum": "B04F56"
+    },
+    {
+        "taskCounter": 229,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": ["A", "B", "C", "D", "− 0,502", "0,25", "0,205", "0,52", "0,25"],
+
+        "taskNum": "714C50"
+    },
+    {
+        "taskCounter": 228,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [160, 11],
+
+        "task2": ["1) 12 и 13", "2) 13 и 14", "3) 14 и 15", "4) 15 и 16"],
+
+        "taskNum": "4DD651"
+    },
+    {
+        "taskCounter": 227,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [5, 17, 7, 19],
+
+        "task2": ["1) 0,2", "2) 0,3", "3) 0,4", "4) 0,5"],
+
+        "taskNum": "432550"
+    },
+    {
+        "taskCounter": 226,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [5, 9],
+
+        "task2": ["[0,5 ; 0,6]", "[0,6 ; 0,7]", "[0,7 ; 0,8]", "[0,8 ; 0,9]"],
+
+        "taskNum": "EDFEDE"
+    },
+    {
+        "taskCounter": 225,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [5, 13],
+
+        "task2": ["[0,2 ; 0,3]", "[0,3 ; 0,4]", "[0,4 ; 0,5]", "[0,5 ; 0,6]"],
+
+        "taskNum": "9A90D8"
+    },
+    {
+        "taskCounter": 224,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": "На координатной прямой отмечены числа a и b.",
+
+        "task2": "Какое из следующих неравенств верно?",
+
+        "task3": ["1) a + b > 0", "2)  a<sup>2</sup>b<0", "3) ab > 0", "4) a − b < 0"],
+
+        "taskNum": "9995D6"
+    },
+    {
+        "taskCounter": 223,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": "На координатной прямой отмечено число a.",
+
+        "task2": "Какое из утверждений для этого числа является верным?",
+
+        "task3": ["1) a − 6 < 0", "2)  a − 7 > 0", "3) 6 − a > 0", "4) 8 − a < 0"],
+
+        "taskNum": "CBA7D0"
+    },
+    {
+        "taskCounter": 222,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [3, 7],
+
+        "task2": ["[0,1 ; 0,2]", "[0,2 ; 0,3]", "[0,3 ; 0,4]", "[0,4 ; 0,5]"],
+
+        "taskNum": "5E67D4"
+    },
+    {
+        "taskCounter": 221,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [4, 11, 7, 17],
+
+        "task2": ["1) 0,1", "2) 0,2", "3) 0,3", "4) 0,4"],
+
+        "taskNum": "D427DD"
+    },
+    {
+        "taskCounter": 220,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [2, 4, 8, 9, 17, ""],
+
+        "taskNum": "2099DE"
+    },
+    {
+        "taskCounter": 219,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [190, 17],
+
+        "task2": ["1) 10 и 11", "2) 11 и 12", "3) 12 и 13", "4) 13 и 14"],
+
+        "taskNum": "2FC0DC"
+    },
+    {
+        "taskCounter": 218,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [172, 15],
+
+        "task2": ["1) 9 и 10", "2) 10 и 11", "3) 11 и 12", "4) 12 и 13"],
+
+        "taskNum": "B64AD1"
+    },
+    {
+        "taskCounter": 217,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [0, "a−b", "c−a", "b−c", "ни одна из них"],
+        "task3": "положительна",
+
+        "task2": "На координатной прямой отмечены числа a, b и c.",
+
+        "taskNum": "8C0E23"
+    },
+    {
+        "taskCounter": 216,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [1, "A", "B", "C", "D", 73, 14, "", "", ""],
+
+        "taskNum": "EA4E23"
+    },
+    {
+        "taskCounter": 215,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": "На координатной прямой отмечено число a.",
+
+        "task2": "Какое из утверждений для этого числа является верным?",
+
+        "task3": ["1) a − 4 < 0", "2)  a − 6 > 0", "3) 6 − a > 0", "4) 7 − a < 0"],
+
+        "taskNum": "9DBC28"
+    },
+    {
+        "taskCounter": 214,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [1, "A", "B", "C", "D", 58, 7, "", "", ""],
+
+        "taskNum": "973F29"
+    },
+    {
+        "taskCounter": 213,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [9, 19, 5, 9],
+
+        "task2": ["1) 0,2", "2) 0,3", "3) 0,4", "4) 0,5"],
+
+        "taskNum": "96A124"
+    },
+    {
+        "taskCounter": 212,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": ["A", "B", "C", "D", "− 0,74", "− 0,047", "0,07", "− 0,407", "− 0,047"],
+
+        "taskNum": "D2322E"
+    },
+    {
+        "taskCounter": 211,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [47, 57, 61, 65, 14, 3, 4],
+
+        "taskNum": "DDAD2E"
+    },
+    {
+        "taskCounter": 210,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [1, "A", "B", "C", "D", 100, 21, "", "", ""],
+
+        "taskNum": "DEB12D"
+    },
+    {
+        "taskCounter": 209,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [8, 13, 12, 17],
+
+        "task2": ["1) 0,6", "2) 0,7", "3) 0,8", "4) 0,9"],
+
+        "taskNum": "103326"
+    },
+    {
+        "taskCounter": 208,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [58],
+
+        "task2": ["1) 19 и 21", "2) 57 и 59", "3) 3 и 4", "4) 7 и 8"],
+
+        "taskNum": "BC1F2C"
+    },
+    {
+        "taskCounter": 207,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": "На координатной прямой отмечено число a.",
+
+        "task2": "Какое из утверждений для этого числа является верным?",
+
+        "task3": ["1) 7 − a > 0", "2)  a − 5 < 0", "3) a − 8 > 0", "4) 6 − a < 0"],
+
+        "taskNum": "B3D324"
+    },
+    {
+        "taskCounter": 206,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [2, 17, 4, 19],
+
+        "task2": ["1) 0", "2) 0,1", "3) 0,2", "4) 0,3"],
+
+        "taskNum": "76A62C"
+    },
+    {
+        "taskCounter": 205,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [0, "q−p", "r−q", "p−r", "ни одна из них"],
+        "task3": "отрицательна",
+
+        "task2": "На координатной прямой отмечены числа p, q и r.",
+
+        "taskNum": "01C720"
+    },
+    {
+        "taskCounter": 204,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": "На координатной прямой отмечено число a.",
+
+        "task2": "Какое из утверждений для этого числа является верным?",
+
+        "task3": ["1) 8 − a < 0", "2)  8 − a < 0", "3) 8 − a > 0", "4) a − 6 > 0"],
+
+        "taskNum": "F9B223"
+    },
+    {
+        "taskCounter": 203,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [0, " y−x", "x−z", "z−y", "ни одна из них"],
+        "task3": "отрицательна",
+
+        "task2": "На координатной прямой отмечены числа x, y и z.",
+
+        "taskNum": "F38B2D"
+    },
+    {
+        "taskCounter": 202,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": "На координатной прямой отмечены числа х и у.",
+
+        "task2": "Какое из следующих неравенств верно?",
+
+        "task3": ["1) xy > 0", "2)  x<sup>2</sup>y < 0", "3) x + y < 0", "4) x − y ≥ 0"],
+
+        "taskNum": "F08D22"
+    },
+    {
+        "taskCounter": 201,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [1,"A", "B", "C", "D", 100, 19, "", "", ""],
+
+
+        "taskNum": "32F618"
+    },
+    {
+        "taskCounter": 200,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": ["A", "B", "C", "D", 68],
+
+
+        "taskNum": "63AD19"
+    },
+    {
+        "taskCounter": 199,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 3,
+        
+        "task1": [0, " p−r", "p−q", "r−q", "ни одна из них"],
+        "task3": "отрицательна",
+
+        "task2": "На координатной прямой отмечены числа p, q и r.",
+
+        "taskNum": "68B11A"
+    },
+    {
+        "taskCounter": 198,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [68, 79, 82, 89, 13, 5, 6],
+
+        "taskNum": "9DA310"
+    },
+    {
+        "taskCounter": 197,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": [0, " z−x", "z−y", "y−x", "ни одна из них"],
+        "task3": "отрицательна",
+
+        "task2": "На координатной прямой отмечены числа x, y и z.",
+
+        "taskNum": "D0C118"
+    },
+    {
+        "taskCounter": 196,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 2,
+        
+        "task1": [9, 13],
+
+        "task2": ["[0,5 ; 0,6]", "[0,6 ; 0,7]", "[0,7 ; 0,8]", "[0,8 ; 0,9]"],
+
+        "taskNum": "2CFE17"
+    },
+    {
+        "taskCounter": 195,
+        "typeTask": 2,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 1,
+        
+        "task1": [15, 11, 13, 9],
+
+        "task2": ["1) 1,4", "2) 1,5", "3) 1,6", "4) 1,7"],
+
+        "taskNum": "1B8B19"
+    },
+    {
+        "taskCounter": 194,
+        "typeTask": 1,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": "На координатной прямой отмечены числа a и b.",
+
+        "task2": "Какое из следующих неравенств верно?",
+
+        "task3": ["1) ab > 0", "2)  ab<sup>2</sup> < 0", "3) a + b < 0", "4) a − b > 0"],
+
+        "taskNum": "B59F1A"
+    },
+    {
+        "taskCounter": 193,
+        "typeTask": 3,
+        "taskKec": [1, 7, 1],
+        "taskAnswer": 4,
+        
+        "task1": ["A", "B", "C", "D", "− 0,205", "− 0,052", "0,02", "0,008", "0,02"],
+
+        "taskNum": "BA6A17"
+    },
+    {
         "taskCounter": 192,
         "typeTask": 2,
         "taskKec": [1, 7, 1],
@@ -92,6 +824,7 @@
         "taskAnswer": 2,
         "task":  "",
         "task1": [0, "q−p", "q−r", "r−p", "ни одна из них"],
+        "task3": "отрицательна",
 
         "task2": "На координатной прямой отмечены числа p, q и r.",
 

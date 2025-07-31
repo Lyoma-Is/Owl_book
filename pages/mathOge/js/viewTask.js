@@ -268,11 +268,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${task2}<hr class="hr-pd_10">
             <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
            <hr class="hr-pd_20">
-           Какая из разностей ${task1[1]}, ${task1[2]}, ${task1[3]} отрицательна?<hr class="hr-pd_20">
+           Какая из разностей ${task1[1]}, ${task1[2]}, ${task1[3]} ${task3}?<hr class="hr-pd_20">
+            ` 
+            : task1[0] === 1  && task1.length === 10? 
+            `
+            На координатной прямой отмечены точки ${task1[1]}, ${task1[2]}, ${task1[3]}, ${task1[4]}. 
+            <hr class="hr-pd_20">
+            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+            <hr class="hr-pd_20">
+            Одна из них соответствует числу&thinsp; 
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[5]}</mn>
+                <mn style="padding-top: 5px;">${task1[6]}</mn>
+              </mfrac>
+            </math>.&thinsp; Какая это точка?
+            <hr class="hr-pd_30"> 
             ` 
             :
             `
-            На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 125%">√</span>${task1[4]}. Какая это точка?
+            На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[4]}</span>. Какая это точка?
             <hr class="hr-pd_20">
             <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
             <hr class="hr-pd_30">      
@@ -324,7 +339,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>4) ${task2[3]}</p>
           </div>
           ` 
-          : (task1.length === 5 || task1.length === 9) && task1[0] !== 0? 
+          : ((task1.length === 5 || task1.length === 9) && task1[0] !== 0)? 
           `
           
           <div style="display: flex; justify-content: space-around;">
@@ -344,7 +359,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>4) ${task1[4]}</p>
           </div>
           ` 
-          : ``}
+          : task1.length === 10 ? 
+          
+          `<div style="display: flex; justify-content: space-around;">
+            <p>1) точка ${task1[1]}</p>
+            <p>2) точка ${task1[2]}</p>
+            <p>3) точка ${task1[3]}</p>
+            <p>4) точка ${task1[4]}</p>
+          </div>` :
+          
+          ``}
           
           <hr class="hr-pd_20">
           
