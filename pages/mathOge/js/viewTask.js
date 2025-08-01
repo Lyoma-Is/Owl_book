@@ -402,6 +402,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `<p>a<sup style="font-size: 75%;">${task1[0]} • ${task1[1]} — ${task1[2]}</sup> = a<sup style="font-size: 75%;">${task1[0] * task1[1] - task1[2]}</sup> = ${task1[3]}<sup style="font-size: 75%;">${(task1[0] * task1[1]) - task1[2]}</sup> = ${Math.pow(task1[3], (task1[0] * task1[1]) - task1[2])}</p>`
           :
           `<p>a<sup style="font-size: 75%;">(${task1[0]} • ${task1[1]} + ${task1[2]}) — ${task1[3]}</sup> = a<sup style="font-size: 75%;">${(task1[0] * task1[1] + task1[2]) - task1[3]}</sup> = ${task1[4]}<sup style="font-size: 75%;">${(task1[0] * task1[1] + task1[2]) - task1[3]}</sup> = ${Math.pow(task1[4], (task1[0] * task1[1] + task1[2]) - task1[3])}</p>`}`
+        else if(task === 4)
+          return `<p>${task1[0]}<sup style="font-size: 75%;">${task1[1]} + ${task1[2]} — ${task1[3]}</sup> = ${task1[0]}<sup style="font-size: 75%;">${task1[1] + task1[2] - task1[3]}</sup> = ${Math.pow(task1[0], task1[1] + task1[2] - task1[3])}</p>`
+        else if (task === 5){
+           let countStepen = 0;
+           let ch = task1[2];
+           while(ch > 0 ){
+              if (ch % task1[0] === 0){
+                 countStepen += 1
+                 ch /= task1[0]
+              }
+              else {break;}        
+           }
+           
+           return `
+           <p>${task1[2]} = ${task1[0]}<sup style="font-size: 75%;">${countStepen}</sup></p><hr class="hr-pd_10">
+           <p>${task1[0]}<sup style="font-size: 75%;">${task1[1]}</sup> : ${task1[0]}<sup style="font-size: 75%;">${countStepen}</sup> = ${task1[0]}<sup style="font-size: 75%;">${task1[1]} — ${countStepen}</sup> = ${task1[0]}<sup style="font-size: 75%;">${task1[1]  - countStepen}</sup> = ${Math.pow(task1[0], task1[1] - countStepen)}</p>`
+        }
+        else 
+          return `...`
+        
       }
 
       switch(typeTask){
@@ -425,17 +445,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                  <mn>(&thinsp;</mn>
                   <msup>
                     <mn style="padding-bottom: 5px;">a</mn>
-                    <mn style="padding-top: 5px;">${task1[0]}</mn>
+                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
                   </msup>
                   <mn>)</mn>
                 </mrow>
-
-                <mn>${task1[1]}</mn>
-                </msup>
-                <msup>
-                  <mn style="padding-bottom: 5px;">a</mn>
-                  <mn style="padding-top: 5px;">${task1[2]}</mn> 
-                </msup>
+                <mn >${task1[1]}</mn>
+              </msup>
+              <msup>
+                <mn style="padding-bottom: 5px;">a</mn>
+                <mn style="padding-top: 5px;">${task1[2]}</mn> 
+              </msup>
               </mfrac>
             </math>&thinsp;
             при a = ${task1[3]}
@@ -446,7 +465,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <mrow>
                   <msup>
                     <mn style="padding-bottom: 5px;">a</mn>
-                    <mn style="padding-top: 5px;">${task1[0]}</mn>
+                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
                   </msup>
                   <mo>•</mo>
                   <msup>
@@ -511,6 +530,203 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           } 
           return answerBlock
         case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Найдите значение выражения: 
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Найдите значение выражения: &thinsp;
+          ${task === 4 ? 
+            `
+            <math style="font-size: 140%">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                    <mn style="padding-top: 5px;">${task1[1]}</mn>
+                  </msup>
+                  <mo>•</mo>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">&thinsp;${task1[0]}</mn>
+                    <mn style="padding-top: 5px;">${task1[2]}</mn> 
+                  </msup>  
+                </mrow>
+                <msup>
+                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                  <mn style="padding-top: 5px;">${task1[3]}</mn> 
+                </msup>
+              </mfrac>
+            </math>&thinsp;
+            ` 
+            : task === 5 ? 
+            `
+            <math style="font-size: 140%">
+              <mfrac>
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                    <mn style="padding-top: 5px;">${task1[1]}</mn>
+                  </msup> 
+                </mrow>   
+                  <mn style="padding-top: 5px;">${task1[2]}</mn>         
+              </mfrac>
+            </math>&thinsp;
+            `
+            : task === 6 ? 
+            `
+            <math style="font-size: 140%">
+              <mfrac>
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[1]}</mn>
+                    <mn style="padding-top: 5px;">${task1[2]}</mn>  
+                  </msup> 
+                </mrow>           
+              </mfrac>
+              <mn>&thinsp; • &thinsp;</mn> 
+              <mfrac>
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[1]}</mn>
+                    <mn style="padding-top: 5px;">${task1[3]}</mn>  
+                  </msup> 
+                </mrow>           
+              </mfrac>
+            </math>&thinsp;
+            ` 
+            : task === 7 ? 
+            `
+            <math style="font-size: 140%">
+              <mfrac>
+                <msup>
+                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                    <mn style="padding-top: 5px;">${task1[1]}</mn>  
+                  </msup> 
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                    <mn style="padding-top: 5px;">${task1[3]}</mn>  
+                  </msup> 
+                  <mn>&thinsp; • &thinsp;</mn> 
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[4]}</mn>
+                    <mn style="padding-top: 5px;">${task1[5]}</mn>  
+                  </msup> 
+                </mrow>           
+              </mfrac>            
+            </math>&thinsp;
+
+            ` 
+            : task === 8 ? 
+            `
+            <math style="font-size: 140%">
+              <mfrac>  
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                    <mn style="padding-top: 5px;">${task1[1]}</mn>  
+                  </msup> 
+                  <mn>&thinsp; • &thinsp;</mn> 
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                    <mn style="padding-top: 5px;">${task1[3]}</mn>  
+                  </msup> 
+                </mrow>  
+                <msup>
+                  <mn style="padding-bottom: 5px;">${task1[4]}</mn>
+                  <mn style="padding-top: 5px;">${task1[5]}</mn>  
+                </msup>          
+              </mfrac>            
+            </math>&thinsp;
+
+            ` 
+            : task === 9 ? 
+            `
+            <math style="font-size: 140%">
+              <mfrac> 
+               
+              <msup>
+                <mrow>
+                  <mn style="padding-bottom: 5px;">(${task1[0]}</mn> 
+                  <mn>&thinsp; • &thinsp;</mn> 
+                  <mn style="padding-bottom: 5px;">${task1[1]})</mn> 
+                </mrow>  
+                 <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                </msup>
+                <mrow>
+                <msup>
+                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                  <mn style="padding-top: 5px;">${task1[3]}</mn>     
+                </msup> 
+                <mn>&thinsp; • &thinsp;</mn>
+                <msup>
+                  <mn style="padding-bottom: 5px;">${task1[1]}</mn>
+                  <mn style="padding-top: 5px;">${task1[4]}</mn>     
+                </msup> 
+                </mrow>         
+              </mfrac>            
+            </math>&thinsp;
+            
+            ` 
+            : task === 10 ? 
+            `
+            <math style="font-size: 140%">
+              <mfrac> 
+                <msup>
+                  <mrow>
+                    <mn>(&thinsp;</mn>
+                    <msup>
+                      <mn style="padding-bottom: 5px;">${task1[0]}</mn> 
+                      <mn style="padding-bottom: 5px;">${task1[1]}</mn> 
+                    </msup>
+                    <mn>)</mn>
+                  </mrow>  
+                  <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                </msup>
+
+                <mrow>
+                  <msup>
+                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                    <mn style="padding-top: 5px;">${task1[3]}</mn>     
+                  </msup> 
+                </mrow>         
+              </mfrac>            
+            </math>&thinsp;
+
+            ` 
+            : task === 11 ? 
+            `${task1[0]} <sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; •&thinsp; ( ${task1[0]}<sup style="font-size: 75%;">${task1[2]}</sup> ) <sup style="font-size: 75%;">${task1[3]}</sup>`
+            :
+            ``}
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_10">
+            ${eightAnswer(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 4:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
     
