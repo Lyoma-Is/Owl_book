@@ -419,6 +419,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            <p>${task1[2]} = ${task1[0]}<sup style="font-size: 75%;">${countStepen}</sup></p><hr class="hr-pd_10">
            <p>${task1[0]}<sup style="font-size: 75%;">${task1[1]}</sup> : ${task1[0]}<sup style="font-size: 75%;">${countStepen}</sup> = ${task1[0]}<sup style="font-size: 75%;">${task1[1]} — ${countStepen}</sup> = ${task1[0]}<sup style="font-size: 75%;">${task1[1]  - countStepen}</sup> = ${Math.pow(task1[0], task1[1] - countStepen)}</p>`
         }
+        else if (task === 21){
+          return `${task1[8] === "+" ? 
+            `<p>a<sup>2</sup> + 2ab + b<sup>2</sup> = (a + b)<sup>2</sup></p>` 
+            : 
+            `<p>a<sup>2</sup> — 2ab + b<sup>2</sup> = (a — b)<sup>2</sup></p>`}`
+        }
         else 
           return `...`
         
@@ -533,10 +539,29 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Найдите значение выражения: 
+          <span style="font-size: 170%;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">${task1[0]}a<sup>2</sup> ${task1[8]} ${task1[1]}ab ${task1[9]} ${task1[2]}b<sup>2</sup></span>
+
+          &thinsp; при a = ${task1[3]}
+          <math style="font-size: 140%">
+            <mfrac>
+              <mn style="padding-bottom: 5px;">${task1[5]}</mn>
+              <mn style="padding-top: 5px;">${task1[7]}</mn>      
+            </mfrac>
+          </math>&thinsp;
+          и
+          &thinsp;b = ${task1[4]}
+          <math style="font-size: 140%">
+            <mfrac>
+              <mn style="padding-bottom: 5px;">${task1[6]}</mn>
+              <mn style="padding-top: 5px;">${task1[7]}</mn>      
+            </mfrac>
+          </math>&thinsp;
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_10">
+            ${eightAnswer(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
