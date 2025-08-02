@@ -170,7 +170,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             </math>&thinsp; ?&thinsp;
             ` : 
             `
-            Между какими числами заключено число <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span> ?
+            Между какими числами заключено число <span style="font-size: 140%; margin-right: -2px;">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span> ?
         
             
             `}<hr class="hr-pd_40"> 
@@ -287,7 +287,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
             :
             `
-            На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[4]}</span>. Какая это точка?
+            На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 140%; margin-right: -2px;">√</span><span  style="border-top: 0.14em solid ">${task1[4]}</span>. Какая это точка?
             <hr class="hr-pd_20">
             <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
             <hr class="hr-pd_30">      
@@ -539,7 +539,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Найдите значение выражения: 
-          <span style="font-size: 170%;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">${task1[0]}a<sup>2</sup> ${task1[8]} ${task1[1]}ab ${task1[9]} ${task1[2]}b<sup>2</sup></span>
+          ${task === 21 ? 
+            `
+            <span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">${task1[0]}a<sup>2</sup> ${task1[8]} ${task1[1]}ab ${task1[9]} ${task1[2]}b<sup>2</sup></span>
 
           &thinsp; при a = ${task1[3]}
           <math style="font-size: 140%">
@@ -556,6 +558,41 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <mn style="padding-top: 5px;">${task1[7]}</mn>      
             </mfrac>
           </math>&thinsp;
+            ` 
+            : task === 22 ? 
+            `
+            ${task1[3] === "—" ? 
+              `<span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">a<sup>${task1[0]}</sup> • (— a)<sup>${task1[1]}</sup></span> &thinsp; при a = ${task1[2]}`
+              : 
+              `<span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">(— a)<sup>${task1[0]}</sup> • a<sup>${task1[1]}</sup></span> &thinsp; при a = ${task1[2]}`}
+            ` 
+            : task === 23 ? 
+            `
+            
+            <span style="font-size: 250%; font-family: sans-serif;  margin-right: -2px;">√</span><span style="border-top: 0.12em solid; padding-top: 1.2em;">&thinsp;
+            <math style="font-size: 140%">
+            <mfrac>
+              <mrow>
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <msup>
+                  <mn style="padding-bottom: 5px;">a</mn> 
+                  <mn style="padding-top: 5px;">${task1[1]}</mn> 
+                </msup> 
+              </mrow> 
+              <mrow>
+                <msup>
+                  <mn style="padding-bottom: 5px;">a</mn> 
+                  <mn style="padding-top: 5px;">${task1[2]}</mn> 
+                </msup> 
+              </mrow>   
+            </mfrac>
+          </math>
+          </span>&thinsp;
+          при a = ${task1[3]}
+            `
+            :
+            ``}
+          
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -735,6 +772,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
             : task === 11 ? 
             `${task1[0]} <sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; •&thinsp; ( ${task1[0]}<sup style="font-size: 75%;">${task1[2]}</sup> ) <sup style="font-size: 75%;">${task1[3]}</sup>`
+            : task === 12 ? 
+            `
+            `
             :
             ``}
           
