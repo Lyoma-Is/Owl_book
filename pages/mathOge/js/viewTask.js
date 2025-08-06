@@ -886,7 +886,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           </math>
 
           ` 
-          :task === 32 ? 
+          : task === 32 ? 
           `
           ${task1[0] === 1 ? 
             `<math style="font-size: 140%; padding-top: 1px;">
@@ -919,11 +919,54 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </mfrac>
               </math>
 
-          `}
+          `} `
+          : task === 33 ? 
+           `
+           <span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+           <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[0]} • ${task1[1]}</span> 
+           &thinsp;•
+           <span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+           <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[2]}</span>
+           ` 
+           : task === 34 ? 
             
-          `
-          :
-           ``}
+           `${task1[3] === "+" ? 
+            `(<span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[0]}</span> 
+              &thinsp;+ ${task1[1]} )<sup>2</sup> — 
+              ${task1[2]}<span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[0]}</span>` 
+            :
+            `(<span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[0]}</span> 
+              &thinsp;— ${task1[1]} )<sup>2</sup> +
+              ${task1[2]}<span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[0]}</span>
+            `}` 
+           : task === 35 ? 
+           `
+           ${task1[2] === "+" ? 
+            `
+            (<span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[0]}</span> 
+              &thinsp;+ <span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[1]}</span> ) &thinsp;• 
+              <span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[1]}</span>
+            ` 
+            : 
+            `
+            (<span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[0]}</span> 
+              &thinsp;— <span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[1]}</span> ) &thinsp;• 
+              <span style="font-size: 120%; margin-right: -6px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.11em solid; padding-top: 0.1em;">${task1[1]}</span>
+            `} `
+           :
+           ``
+
+          }
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
