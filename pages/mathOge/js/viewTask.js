@@ -588,8 +588,53 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             </mfrac>
           </math>
           </span>&thinsp;
-          при a = ${task1[3]}
+          при a = ${task1[3]} 
             `
+            : task === 24 ? 
+            `
+            <math style="font-size: 140%">
+            <mfrac>
+            <msup>
+              <mrow>
+                <msup>
+                  <mn style="padding-bottom: 5px;">a</mn> 
+                  <mn style="padding-bottom: 5px;">${task1[0]}</mn> 
+                </msup> 
+                <mn> • &thinsp;</mn>
+                <mn>(</mn>
+                <msup>
+                  <mn style="padding-bottom: 5px;">b</mn> 
+                  <mn style="padding-bottom: 5px;">${task1[1]}</mn> 
+                </msup>
+                <mn>)</mn>
+               
+              </mrow> 
+               <mn style="padding-bottom: 5px;">${task1[2]}</mn> 
+              </msup>
+              <mrow>
+                <msup>
+                  <mn style="padding-bottom: 5px;">(a • b)</mn> 
+                  <mn style="padding-top: 5px;">${task1[3]}</mn> 
+                </msup> 
+              </mrow>   
+            </mfrac>
+          </math>&thinsp; 
+          при a = ${task1[4]} и b = <span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">${task1[4]}</span>
+
+            `
+            : task === 25 ? 
+            `
+            <span style="font-size: 250%; font-family: sans-serif;  margin-right: -2px;">√</span><span style="border-top: 0.12em solid; padding-top: 1.2em;">&thinsp;
+            <math style="font-size: 140%; padding-top: 1px;">
+            <mfrac>
+                  <mn style="padding-bottom: 5px;">1</mn> 
+                  <mn style="padding-top: 5px;">${task1[0]}</mn> 
+            </mfrac>
+          </math>
+         &thinsp; • &thinsp;x<sup>${task1[1]}</sup> y<sup>${task1[2]}</sup>
+          </span>&thinsp;
+          при x = ${task1[3]} и y = ${task1[4]}
+            ` 
             :
             ``}
           
