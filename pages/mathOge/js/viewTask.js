@@ -635,6 +635,29 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           </span>&thinsp;
           при x = ${task1[3]} и y = ${task1[4]}
             ` 
+            : task === 26 ? 
+            `
+            <span style="font-size: 250%; font-family: sans-serif;  margin-right: -2px;">√</span><span style="border-top: 0.12em solid; padding-top: 1.2em;">&thinsp;
+              <math style="font-size: 140%; padding-top: 1px;">
+                <mfrac>
+                  <mrow>
+                    <msup>
+                      <mn style="padding-bottom: 5px;">${task1[0]}x</mn> 
+                      <mn style="padding-top: 5px;">${task1[1]}</mn> 
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <msup>
+                      <mn style="padding-bottom: 5px;">y</mn> 
+                      <mn style="padding-top: 5px;">${task1[2]}</mn> 
+                    </msup>
+                  </mrow>
+                </mfrac>
+              </math>
+            </span>&thinsp;
+          при x = ${task1[3]} и y = ${task1[4]}
+
+            `
             :
             ``}
           
@@ -839,11 +862,74 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 4:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-    
+          Найдите значение выражения: &thinsp;
+          ${task === 31 ? 
+          `
+          <math style="font-size: 140%; padding-top: 1px;">
+            <mfrac>
+              <mn style=" padding-bottom: 2px;">
+                <mrow>
+                  <span style="font-size: 170%; margin-right: -5px;">√</span>
+                  <span style="border-top: 0.16em solid; padding-top: 0.2em;">${task1[0]}</span>
+                  •
+                  <span style="font-size: 170%; margin-right: -5px;">√</span>
+                  <span style="border-top: 0.16em solid; padding-top: 0.2em;">${task1[1]}</span>
+                </mrow>
+              </mn>
+              <mn style=" padding-top: 2px;">
+                <mrow>
+                    <span style="font-size: 170%; margin-right: -5px;">√</span>
+                    <span style="border-top: 0.16em solid; padding-top: 0.2em;">${task1[2]}</span>
+                </mrow>
+               </mn>
+            </mfrac>
+          </math>
+
+          ` 
+          :task === 32 ? 
+          `
+          ${task1[0] === 1 ? 
+            `<math style="font-size: 140%; padding-top: 1px;">
+                <mfrac>   
+                    <msup style="padding-bottom: 4px;">  
+                      <mn>
+                        <mrow>(${task1[1]}
+                        <span style="font-size: 120%; margin-right: -5px; font-family: sans-serif;">√</span>
+                        <span style="border-top: 0.12em solid; padding-top: 0.1em;">${task1[2]}</span> ) </mrow>
+                      </mn>
+                      <mn>${task1[3]}</mn>
+                    </msup>
+                    <mn style="padding-top: 5px;">${task1[4]}</mn>
+                </mfrac>
+              </math>` 
+          : 
+          `
+          <math style="font-size: 140%; padding-top: 1px;">
+                <mfrac>   
+                    
+                    <mn style="padding-bottom: 5px;">${task1[4]}</mn>
+                    <msup style="padding-top: 5px;">  
+                      <mn>
+                        <mrow>(${task1[1]}
+                        <span style="font-size: 120%; margin-right: -5px; font-family: sans-serif;">√</span>
+                        <span style="border-top: 0.12em solid; padding-top: 0.1em;">${task1[2]}</span> ) </mrow>
+                      </mn>
+                      <mn>${task1[3]}</mn>
+                    </msup>
+                </mfrac>
+              </math>
+
+          `}
+            
+          `
+          :
+           ``}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_10">
+            ${eightAnswer(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
