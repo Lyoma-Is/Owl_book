@@ -2,7 +2,8 @@ const tasks = {
 
   six: '../../src/oge_math/taskSix.json',
   seven: '../../src/oge_math/taskSeven.json',
-  eight: '../../src/oge_math/taskEight.json'
+  eight: '../../src/oge_math/taskEight.json',
+  nine: '../../../src/oge_math/taskNine.json'
 };
  
 export {tasks};
@@ -14,7 +15,7 @@ export {tasks};
   // five: '../../../src/oge_inf/taskFive.json',
   //   seven: '../../../src/oge_inf/taskSeven.json',
   // ,
-  // nine: '../../../src/oge_inf/taskNine.json',
+  // 
   // ten: '../../../src/oge_inf/taskTen.json',
   // eleven: '../../../src/oge_inf/taskEleven.json',
   // twelve: '../../../src/oge_inf/taskTwelve.json',
@@ -1007,6 +1008,55 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
             <hr class="hr-pd_10">
             ${eightAnswer(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
+    if (taskKey === 'nine'){
+      let Nomer = 9
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 1 ? 
+            `
+            Решите уравнение: ${task1[0]}x<sup>2</sup> = ${task1[1]}x.<hr class="hr-pd_10">
+            Если уравнение имеет более одного корня, в ответ запишите меньший из корней.
+            <hr class="hr-pd_20">
+            `
+            : task === 2 ? 
+            `
+            Решите уравнение: x<sup>2</sup> — ${task1[0]} = 0.<hr class="hr-pd_10">
+            Если уравнение имеет более одного корня, в ответ запишите ${task1[1] === "" ? `меньший` : `больший `} из корней.
+            <hr class="hr-pd_20">
+            `
+            : 
+            ``}
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();

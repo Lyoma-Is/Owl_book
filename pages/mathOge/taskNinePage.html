@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/ico.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../css/pageOge.css"/>
+    <link rel="stylesheet" href="../../css/variantTasksInf.css">
+    <link rel="stylesheet" href="../../css/media.css">
+    <title>ОГЭ Математика</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"> <a href="../../index.html"><img class="logo-img" src="../../img/logo.png" alt="logo"></a></div>
+                <section class="breadcrumb">
+                    <ul class="breadcrumb-item">
+                        <li><a href="../../index.html">Главная</a></li>
+                        <li><a href="../../pages/mathOge/taskFoundPage.html">Математика ОГЭ</a></li> 
+                        <li class="last"><a href="../../pages/mathOge/taskNinePage.html">Банк Заданий. Задание 9</a></li>  
+                    </ul>
+                </section>
+            </div>         
+        </div>        
+    </header>
+    
+    <main>
+        <div class="container">
+           <div class="search-box__inner">
+            <div class="search-box">
+                <label for="taskNumber" class="label-text">Поиск по номеру:</label>
+                <div class="search-box-find">
+                <input id="taskNumber" placeholder="Введите номер задачи">
+                <button id="searchBtn" class="btn-primary">Показать задачу</button>
+                </div>
+            </div>   
+            <div class="show-box">
+                <label class="label-text">Поиск по типу:</label>
+                <select id="select-task"></select>
+            </div> 
+        </div>
+        <hr class="hr-between">
+           <div class="select-task">
+                <div class="select-task__inner">
+                    <label for="taskType">Выберите тип задачи</label>
+                    <select  id="taskType">
+                        <option value='0'>Показать все типы</option>
+                        <option value='1'>Тип 1. Квадратные уравнения.</option>
+                        <option value='2'>Тип 2. Линейные уравнения.</option>
+                        <!-- <option value='3'>Тип 3. .</option>
+                        <option value='4'>Тип 4. .</option> -->
+                        
+                    </select>
+                </div>
+                <div class="select-task__inner">
+                    <label for="taskSort">Сортировка</label>
+                    <select  id="taskSort"></select>
+                </div>
+           </div>
+           <hr class="hr-between">
+           <div id="result" class="task-nine-numbers__block task-numbers__block" style="text-align: justify;"></div>
+           
+        </div>
+    </main>
+
+    <footer class="footer"><div class="container"><p class="footer-text"></p></div></footer>
+    <script src="../../pages/mathOge/js/something.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="module" src="../../pages/mathOge/js/taskOutput.js"></script>
+    <script type="module" src="../../pages/mathOge/js/viewTask.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

@@ -152,6 +152,7 @@ taskPage.innerHTML = `
 <option value="taskSixPage.html">6. Числа и вычисления.</option>
 <option value="taskSevenPage.html">7. Числовые неравенства. Координатная прямая.</option>
 <option value="taskEightPage.html">8. Вычисления степенных и иррациональных выражений.</option>
+<option value="taskNinePage.html">9. Уравнения, системы уравнений.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -161,7 +162,7 @@ taskPage.innerHTML = `
 //<option value="taskFivePage.html">5. .</option>
 //
 //<option value="taskEightPage.html">8..</option>
-//<option value="taskNinePage.html">9. .</option>
+//
 //<option value="taskTenPage.html">10. .</option>
 //<option value="taskElevenPage.html">11. .</option>
 //<option value="taskTwelvePage.html">12. .</option>
@@ -243,7 +244,7 @@ document.addEventListener('click', function(e) {
       6: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.",
       7: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.<br>КЭС: 1.4 Действительные числа. Арифметические операции с действительными числами.<br> КЭС: 6.1 Координатная прямая.",
       8: "КЭС: 2.2 Степень с целым показателем. Степень с рациональным показателем. Свойства степени.",
-      9: "КЭС: ",
+      9: "КЭС: 3.1 Целые и дробно-рациональные уравнения. Системы и совокупности уравнений.",
       10: "КЭС: ",
       11: "КЭС: ",
       12: "КЭС: ",
