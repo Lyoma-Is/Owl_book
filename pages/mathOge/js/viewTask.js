@@ -894,7 +894,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <msup style="padding-bottom: 4px;">  
                       <mn>
                         <mrow>(${task1[1]}
-                        <span style="font-size: 120%; margin-right: -5px; font-family: sans-serif;">√</span>
+                        <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
                         <span style="border-top: 0.12em solid; padding-top: 0.1em;">${task1[2]}</span> ) </mrow>
                       </mn>
                       <mn>${task1[3]}</mn>
@@ -911,7 +911,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <msup style="padding-top: 5px;">  
                       <mn>
                         <mrow>(${task1[1]}
-                        <span style="font-size: 120%; margin-right: -5px; font-family: sans-serif;">√</span>
+                        <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
                         <span style="border-top: 0.12em solid; padding-top: 0.1em;">${task1[2]}</span> ) </mrow>
                       </mn>
                       <mn>${task1[3]}</mn>
@@ -971,6 +971,28 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               &thinsp;• <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
               <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[4]}</span>
            ` 
+           : task === 37 ? 
+           `
+           ${task1[2] === 1 ? 
+            `
+            (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> — ${task1[1]})
+              (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> + ${task1[1]})
+            ` 
+            : 
+            `(<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> —
+              <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>)
+              (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> +
+              <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
+              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>)
+            `}
+           
+
+           `
            :
            ``
 
