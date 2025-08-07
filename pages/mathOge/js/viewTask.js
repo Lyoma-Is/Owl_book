@@ -991,7 +991,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>)
             `}
            
-
+           `
+           : task === 38 ? 
+           `
+           <span style="font-size: 130%; margin-right: -2px; font-family: sans-serif;">√</span>
+            <span style="border-top: 0.1em solid; padding-top: 0.2em;">${task1[0]}<sup>${task1[1]}</sup></span>
            `
            :
            ``

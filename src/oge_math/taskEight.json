@@ -1,5 +1,115 @@
 [   
     {
+        "taskCounter": 560,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 32,
+        "task": 38,
+
+        "task1": [4, 5],
+
+        "taskNum": "572D8D"
+    },
+    {
+        "taskCounter": 559,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 8,
+        "task": 38,
+
+        "task1": [4, 3],
+
+        "taskNum": "06A483"
+    },
+    {
+        "taskCounter": 558,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 27,
+        "task": 38,
+
+        "task1": [3, 6],
+
+        "taskNum": "5D11ED"
+    },
+    {
+        "taskCounter": 557,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 81,
+        "task": 38,
+
+        "task1": [9, 4],
+
+        "taskNum": "FFC5E0"
+    },
+    {
+        "taskCounter": 556,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 16,
+        "task": 38,
+
+        "task1": [4, 4],
+
+        "taskNum": "C81FCE"
+    },
+    {
+        "taskCounter": 555,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 64,
+        "task": 38,
+
+        "task1": [4, 6],
+
+        "taskNum": "6DEBD3"
+    },
+    {
+        "taskCounter": 554,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 64,
+        "task": 38,
+
+        "task1": [8, 4],
+
+        "taskNum": "4FB8B1"
+    },
+    {
+        "taskCounter": 553,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 36,
+        "task": 38,
+
+        "task1": [6, 4],
+
+        "taskNum": "03A10C"
+    },
+    {
+        "taskCounter": 552,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 27,
+        "task": 38,
+
+        "task1": [9, 3],
+
+        "taskNum": "81F1F8"
+    },
+    {
+        "taskCounter": 551,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 125,
+        "task": 38,
+
+        "task1": [5, 6],
+
+        "taskNum": "038EFE"
+    },
+    {
         "taskCounter": 550,
         "typeTask": 4,
         "taskKec": [1, 8, 1],
