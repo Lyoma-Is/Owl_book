@@ -3,7 +3,7 @@ const tasks = {
   six: '../../src/oge_math/taskSix.json',
   seven: '../../src/oge_math/taskSeven.json',
   eight: '../../src/oge_math/taskEight.json',
-  nine: '../../../src/oge_math/taskNine.json'
+  nine: '../../src/oge_math/taskNine.json'
 };
  
 export {tasks};
@@ -1035,8 +1035,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Если уравнение имеет более одного корня, в ответ запишите ${task1[1] === "" ? `меньший` : `больший `} из корней.
             <hr class="hr-pd_20">
             `
-            : 
-            ``}
+            : task === 3 ? 
+            `
+            Решите уравнение: ${task1[0]}x<sup>2</sup> — ${task1[1]}x + ${task1[2]} = 0.<hr class="hr-pd_10">
+            Если уравнение имеет более одного корня, в ответ запишите ${task1[3] === "" ? `меньший` : `больший `} из корней.
+            <hr class="hr-pd_20">
+            `
+            : task === 4 ? 
+            `
+            Найдите корень уравнения: ${task1[0]} ( x ${task1[3]==="" ? `—` : `+`} ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]} ) = ${task1[2].toString().length === 2 ? `— ${task1[2].toString().slice(1)}` : task1[2]}
+            `
+            :
+            `
+            `}
           `
           
           answerBlock += generateDate();
