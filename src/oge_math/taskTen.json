@@ -1,4 +1,1159 @@
-[   
+[  
+    {
+        "taskCounter": 756,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 7,
+
+        "task1": [12, 2, 6, 4],
+
+        "taskNum": "C0A48A"
+    },
+    {
+        "taskCounter": 755,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,15",
+        "task": 7,
+
+        "task1": [20, 3, 3, 14],
+
+        "taskNum": "F42D3E"
+    },
+    {
+        "taskCounter": 754,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 7,
+
+        "task1": [12, 3, 6, 3],
+
+        "taskNum": "9843EE"
+    },
+    {
+        "taskCounter": 753,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,2",
+        "task": 7,
+
+        "task1": [10, 2, 2, 6],
+
+        "taskNum": "325E90"
+    },
+    {
+        "taskCounter": 752,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,3",
+        "task": 7,
+
+        "task1": [30, 1, 9, 20],
+
+        "taskNum": "571A91"
+    },
+    {
+        "taskCounter": 751,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,25",
+        "task": 7,
+
+        "task1": [12, 1, 3, 8],
+
+        "taskNum": "403F9D"
+    },
+    {
+        "taskCounter": 750,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,2",
+        "task": 7,
+
+        "task1": [15, 4, 3, 8],
+
+        "taskNum": "CA1AC7"
+    },
+    {
+        "taskCounter": 749,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,25",
+        "task": 7,
+
+        "task1": [12, 3, 3, 6],
+
+        "taskNum": "F63ACC"
+    },
+    {
+        "taskCounter": 748,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,1",
+        "task": 7,
+
+        "task1": [10, 1, 1, 8],
+
+        "taskNum": "4AE9CB"
+    },
+    {
+        "taskCounter": 747,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,3",
+        "task": 7,
+
+        "task1": [10, 5, 3, 2],
+
+        "taskNum": "EBC2A7"
+    },
+    {
+        "taskCounter": 746,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,25",
+        "task": 7,
+
+        "task1": [20, 2, 5, 13],
+
+        "taskNum": "EEA95C"
+    },
+    {
+        "taskCounter": 745,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,3",
+        "task": 7,
+
+        "task1": [30, 3, 9, 18],
+
+        "taskNum": "8C8720"
+    },
+    {
+        "taskCounter": 744,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,4",
+        "task": 7,
+
+        "task1": [15, 3, 6, 6],
+
+        "taskNum": "CD69F9"
+    },
+    {
+        "taskCounter": 743,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,1",
+        "task": 7,
+
+        "task1": [20, 2, 2, 16],
+
+        "taskNum": "11C4F5"
+    },
+    {
+        "taskCounter": 742,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,1",
+        "task": 7,
+
+        "task1": [30, 6, 3, 21],
+
+        "taskNum": "83D04F"
+    },
+    {
+        "taskCounter": 741,
+        "typeTask": 7,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,1",
+        "task": 7,
+
+        "task1": [10, 5, 1, 4],
+
+        "taskNum": "B60144"
+    },
+    {
+        "taskCounter": 740,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,4",
+        "task": 6,
+
+        "task1": [145, 8, 15, 27, 13, "фиолетовой или синей"],
+
+        "taskNum": "940130"
+    },
+    {
+        "taskCounter": 739,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,65",
+        "task": 6,
+
+        "task1": [120, 6, 32, 32, 46, "красной или фиолетовой"],
+
+        "taskNum": "9D5D3B"
+    },
+    {
+        "taskCounter": 738,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,56",
+        "task": 6,
+
+        "task1": [100, 3, 37, 8, 17, "красной или чёрной"],
+
+        "taskNum": "E493B0"
+    },
+    {
+        "taskCounter": 737,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,42",
+        "task": 6,
+
+        "task1": [200, 3, 31, 25, 38, "красной или чёрной"],
+
+        "taskNum": "546631"
+    },
+    {
+        "taskCounter": 736,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,25",
+        "task": 6,
+
+        "task1": [112, 3, 17, 44, 29, "красной или чёрной"],
+
+        "taskNum": "ABB466"
+    },
+    {
+        "taskCounter": 735,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,4",
+        "task": 6,
+
+        "task1": [255, 7, 46, 31, 36, "зелёной или синей"],
+
+        "taskNum": "395CE9"
+    },
+    {
+        "taskCounter": 734,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 6,
+
+        "task1": [138, 3, 34, 23, 11, "красной или чёрной"],
+
+        "taskNum": "4B46C1"
+    },
+    {
+        "taskCounter": 733,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 6,
+
+        "task1": [272, 7, 11, 37, 26, "зелёной или синей"],
+
+        "taskNum": "84E3AC"
+    },
+    {
+        "taskCounter": 732,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 6,
+
+        "task1": [200, 4, 23, 9, 8, "синей или чёрной"],
+
+        "taskNum": "8C91D2"
+    },
+    {
+        "taskCounter": 731,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,75",
+        "task": 6,
+
+        "task1": [165, 4, 37, 16, 46, "синей или чёрной"],
+
+        "taskNum": "4B04DB"
+    },
+    {
+        "taskCounter": 730,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,75",
+        "task": 6,
+
+        "task1": [84, 6, 22, 9, 41, "красной или фиолетовой"],
+
+        "taskNum": "050024"
+    },
+    {
+        "taskCounter": 729,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 6,
+
+        "task1": [264, 3, 38, 30, 8, "красной или чёрной"],
+
+        "taskNum": "1CFDBD"
+    },
+    {
+        "taskCounter": 728,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 6,
+
+        "task1": [132, 5, 34, 39, 5, "зелёной или чёрной"],
+
+        "taskNum": "1FFC7C"
+    },
+    {
+        "taskCounter": 727,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 6,
+
+        "task1": [144, 4, 30, 24, 18, "синей или чёрной"],
+
+        "taskNum": "3FAA0C"
+    },
+    {
+        "taskCounter": 726,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 6,
+
+        "task1": [170, 3, 47, 33, 14, "красной или чёрной"],
+
+        "taskNum": "065F02"
+    },
+    {
+        "taskCounter": 725,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,56",
+        "task": 6,
+
+        "task1": [100, 3, 37, 8, 17, "красной или чёрной"],
+
+        "taskNum": "C53DF2"
+    },
+    {
+        "taskCounter": 724,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 6,
+
+        "task1": [206, 2, 20, 8, 12, "красной или синей"],
+
+        "taskNum": "34D340"
+    },
+    {
+        "taskCounter": 723,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,81",
+        "task": 6,
+
+        "task1": ["0,19", 1],
+
+        "taskNum": "A6EB8D"
+    },
+    {
+        "taskCounter": 722,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,78",
+        "task": 6,
+
+        "task1": ["0,22", 1],
+
+        "taskNum": "777883"
+    },
+    {
+        "taskCounter": 721,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,94",
+        "task": 6,
+
+        "task1": ["0,06", 1],
+
+        "taskNum": "016532"
+    },
+    {
+        "taskCounter": 720,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,89",
+        "task": 6,
+
+        "task1": ["0,11", 1],
+
+        "taskNum": "FC5569"
+    },
+    {
+        "taskCounter": 719,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,71",
+        "task": 6,
+
+        "task1": ["0,29", 1],
+
+        "taskNum": "9860EB"
+    },
+    {
+        "taskCounter": 718,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,91",
+        "task": 6,
+
+        "task1": ["0,09", 1],
+
+        "taskNum": "534EEA"
+    },
+    {
+        "taskCounter": 717,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,86",
+        "task": 6,
+
+        "task1": ["0,14", 1],
+
+        "taskNum": "D0099F"
+    },
+    {
+        "taskCounter": 716,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,72",
+        "task": 6,
+
+        "task1": ["0,28", 1],
+
+        "taskNum": "4FB6A5"
+    },
+    {
+        "taskCounter": 715,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,74",
+        "task": 6,
+
+        "task1": ["0,26", 1],
+
+        "taskNum": "57DE2A"
+    },
+    {
+        "taskCounter": 714,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,92",
+        "task": 6,
+
+        "task1": ["0,08", 1],
+
+        "taskNum": "78C522"
+    },
+    {
+        "taskCounter": 713,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,93",
+        "task": 6,
+
+        "task1": ["0,07", 1],
+
+        "taskNum": "143AB7"
+    },
+    {
+        "taskCounter": 712,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,88",
+        "task": 6,
+
+        "task1": ["0,12", 1],
+
+        "taskNum": "02DBB6"
+    },
+    {
+        "taskCounter": 711,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,87",
+        "task": 6,
+
+        "task1": ["0,13", 1],
+
+        "taskNum": "DC157C"
+    },
+    {
+        "taskCounter": 710,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,79",
+        "task": 6,
+
+        "task1": ["0,21", 1],
+
+        "taskNum": "F36B72"
+    },
+    {
+        "taskCounter": 709,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 6,
+
+        "task1": ["0,2", 1],
+
+        "taskNum": "AD5102"
+    },
+    {
+        "taskCounter": 708,
+        "typeTask": 6,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,98",
+        "task": 6,
+
+        "task1": ["0,02", 1],
+
+        "taskNum": "C0AE4C"
+    },
+    {
+        "taskCounter": 707,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,45",
+        "task": 5,
+
+        "task1": [11, 3, 6, "не из России", 4],
+
+        "taskNum": "20BB62"
+    },
+    {
+        "taskCounter": 706,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,65",
+        "task": 5,
+
+        "task1": [13, 5, 2, "из России", 1],
+
+        "taskNum": "7B5DEC"
+    },
+    {
+        "taskCounter": 705,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,55",
+        "task": 5,
+
+        "task1": [11, 3, 6, "из России", 1],
+
+        "taskNum": "AD359F"
+    },
+    {
+        "taskCounter": 704,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,45",
+        "task": 5,
+
+        "task1": [11, 3, 6, "из Норвегии или Швеции", 4],
+
+        "taskNum": "2EB028"
+    },
+    {
+        "taskCounter": 703,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,35",
+        "task": 5,
+
+        "task1": [13, 5, 2, "не из России", 4],
+
+        "taskNum": "96041D"
+    },
+    {
+        "taskCounter": 702,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,35",
+        "task": 5,
+
+        "task1": [13, 5, 2, "из Норвегии или Швеции", 4],
+
+        "taskNum": "29D579"
+    },
+    {
+        "taskCounter": 701,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,1",
+        "task": 5,
+
+        "task1": [7, 2, 1, "из Норвегии", 2],
+
+        "taskNum": "4DC1F1"
+    },
+    {
+        "taskCounter": 700,
+        "typeTask": 5,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,1",
+        "task": 5,
+
+        "task1": [7, 1, 2, "из Швеции", 3],
+
+        "taskNum": "AF1E46"
+    },
+    {
+        "taskCounter": 699,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,9",
+        "task": 4,
+
+        "task1": [150, 15],
+
+        "taskNum": "050586"
+    },
+    {
+        "taskCounter": 698,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,88",
+        "task": 4,
+
+        "task1": [75, 9],
+
+        "taskNum": "B1D764"
+    },
+    {
+        "taskCounter": 697,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,95",
+        "task": 4,
+
+        "task1": [100, 5],
+
+        "taskNum": "CE37E1"
+    },
+    {
+        "taskCounter": 696,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,98",
+        "task": 4,
+
+        "task1": [150, 3],
+
+        "taskNum": "29EFE2"
+    },
+    {
+        "taskCounter": 695,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,91",
+        "task": 4,
+
+        "task1": [100, 9],
+
+        "taskNum": "FABBE7"
+    },
+    {
+        "taskCounter": 694,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,98",
+        "task": 4,
+
+        "task1": [200, 4],
+
+        "taskNum": "CF739A"
+    },
+    {
+        "taskCounter": 693,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 4,
+
+        "task1": [75, 15],
+
+        "taskNum": "0A799D"
+    },
+    {
+        "taskCounter": 692,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,95",
+        "task": 4,
+
+        "task1": [80, 4],
+
+        "taskNum": "078690"
+    },
+    {
+        "taskCounter": 691,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,9",
+        "task": 4,
+
+        "task1": [50, 5],
+
+        "taskNum": "151DAD"
+    },
+    {
+        "taskCounter": 690,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,92",
+        "task": 4,
+
+        "task1": [100, 8],
+
+        "taskNum": "8E355E"
+    },
+    {
+        "taskCounter": 689,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,96",
+        "task": 4,
+
+        "task1": [100, 4],
+
+        "taskNum": "ACB5DF"
+    },
+    {
+        "taskCounter": 688,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,86",
+        "task": 4,
+
+        "task1": [50, 7],
+
+        "taskNum": "38A413"
+    },
+    {
+        "taskCounter": 687,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,88",
+        "task": 4,
+
+        "task1": [50, 6],
+
+        "taskNum": "3DF513"
+    },
+    {
+        "taskCounter": 686,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,96",
+        "task": 4,
+
+        "task1": [150, 6],
+
+        "taskNum": "725B1B"
+    },
+    {
+        "taskCounter": 685,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,88",
+        "task": 4,
+
+        "task1": [150, 18],
+
+        "taskNum": "2BD043"
+    },
+    {
+        "taskCounter": 684,
+        "typeTask": 4,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,85",
+        "task": 4,
+
+        "task1": [80, 12],
+
+        "taskNum": "FD6745"
+    },
+    {
+        "taskCounter": 683,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,4",
+        "task": 3,
+
+        "task1": [20, 8, 12, "Вася"],
+
+        "taskNum": "531087"
+    },
+    {
+        "taskCounter": 682,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,55",
+        "task": 3,
+
+        "task1": [20, 11, 9, "Илюша"],
+
+        "taskNum": "46908F"
+    },
+    {
+        "taskCounter": 681,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,3",
+        "task": 3,
+
+        "task1": [20, 6, 14, "Володя"],
+
+        "taskNum": "55A03C"
+    },
+    {
+        "taskCounter": 680,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,96",
+        "task": 3,
+
+        "task1": [25, 24, 1, "Андрюша"],
+
+        "taskNum": "4A823F"
+    },
+    {
+        "taskCounter": 679,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,88",
+        "task": 3,
+
+        "task1": [25, 22, 3, "Коля"],
+
+        "taskNum": "98F369"
+    },
+    {
+        "taskCounter": 678,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,2",
+        "task": 3,
+
+        "task1": [10, 2, 8, "Андрюша"],
+
+        "taskNum": "F27069"
+    },
+    {
+        "taskCounter": 677,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,7",
+        "task": 3,
+
+        "task1": [20, 14, 6, "Володя"],
+
+        "taskNum": "2C7FA8"
+    },
+    {
+        "taskCounter": 676,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,84",
+        "task": 3,
+
+        "task1": [25, 21, 4, "Саша"],
+
+        "taskNum": "03BD20"
+    },
+    {
+        "taskCounter": 675,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 3,
+
+        "task1": [15, 12, 3, "Миша"],
+
+        "taskNum": "B0C31E"
+    },
+    {
+        "taskCounter": 674,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,4",
+        "task": 3,
+
+        "task1": [10, 4, 6, "Володя"],
+
+        "taskNum": "D9D0B2"
+    },
+    {
+        "taskCounter": 673,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,75",
+        "task": 3,
+
+        "task1": [20, 15, 5, "Витя"],
+
+        "taskNum": "080EB1"
+    },
+    {
+        "taskCounter": 672,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,45",
+        "task": 3,
+
+        "task1": [20, 9, 11, "Саша"],
+
+        "taskNum": "300973"
+    },
+    {
+        "taskCounter": 671,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,72",
+        "task": 3,
+
+        "task1": [25, 18, 7, "Володя"],
+
+        "taskNum": "0A9675"
+    },
+    {
+        "taskCounter": 670,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,3",
+        "task": 3,
+
+        "task1": [10, 3, 7, "Миша"],
+
+        "taskNum": "CC4705"
+    },
+    {
+        "taskCounter": 669,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 3,
+
+        "task1": [20, 10, 10, "Коля"],
+
+        "taskNum": "CC4705"
+    },
+    {
+        "taskCounter": 668,
+        "typeTask": 3,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,5",
+        "task": 3,
+
+        "task1": [10, 5, 5, "Витя"],
+
+        "taskNum": "D9C5FA"
+    },
+    {
+        "taskCounter": 667,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,7",
+        "task": 2,
+
+        "task1": [30, 9, "Серёжа"],
+
+        "taskNum": "B46B39"
+    },
+    {
+        "taskCounter": 666,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,9",
+        "task": 2,
+
+        "task1": [20, 2, "Саша"],
+
+        "taskNum": "C2E4EF"
+    },
+    {
+        "taskCounter": 665,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 2,
+
+        "task1": [60, 12, "Олег"],
+
+        "taskNum": "46ABC3"
+    },
+    {
+        "taskCounter": 664,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 2,
+
+        "task1": [40, 8, "Сеня"],
+
+        "taskNum": "805657"
+    },
+    {
+        "taskCounter": 663,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,84",
+        "task": 2,
+
+        "task1": [25, 4, "Костя"],
+
+        "taskNum": "33105C"
+    },
+    {
+        "taskCounter": 662,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,7",
+        "task": 2,
+
+        "task1": [40, 12, "Оскар"],
+
+        "taskNum": "7BD659"
+    },
+    {
+        "taskCounter": 661,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,95",
+        "task": 2,
+
+        "task1": [40, 2, "Саша"],
+
+        "taskNum": "7FDDD5"
+    },
+    {
+        "taskCounter": 660,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 2,
+
+        "task1": [35, 7, "Стас"],
+
+        "taskNum": "A10E2C"
+    },
+    {
+        "taskCounter": 659,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,78",
+        "task": 2,
+
+        "task1": [50, 11, "Серёжа"],
+
+        "taskNum": "A54F2A"
+    },
+    {
+        "taskCounter": 658,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,9",
+        "task": 2,
+
+        "task1": [50, 5, "Сеня"],
+
+        "taskNum": "A9F422"
+    },
+    {
+        "taskCounter": 657,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,8",
+        "task": 2,
+
+        "task1": [25, 5, "Стас"],
+
+        "taskNum": "73C42C"
+    },
+    {
+        "taskCounter": 656,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,94",
+        "task": 2,
+
+        "task1": [50, 3, "Яша"],
+
+        "taskNum": "D5F1B9"
+    },
+    {
+        "taskCounter": 655,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,86",
+        "task": 2,
+
+        "task1": [50, 7, "Оскар"],
+
+        "taskNum": "FC81F0"
+    },
+    {
+        "taskCounter": 654,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,95",
+        "task": 2,
+
+        "task1": [20, 1, "Андрей"],
+
+        "taskNum": "FFCFFF"
+    },
+    {
+        "taskCounter": 653,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,9",
+        "task": 2,
+
+        "task1": [40, 4, "Яша"],
+
+        "taskNum": "65D842"
+    },
+    {
+        "taskCounter": 652,
+        "typeTask": 2,
+        "taskKec": [1, 10, 1],
+        "taskAnswer": "0,65",
+        "task": 2,
+
+        "task1": [20, 7, "Оскар"],
+
+        "taskNum": "C67C4E"
+    },
     {
         "taskCounter": 651,
         "typeTask": 1,

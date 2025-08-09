@@ -55,7 +55,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const beginTask = () => `<div class="tasks-blocks">`;
     const endTask = () => `</div>`;
     let answerBlock = "";
- //   answerBlock += beginTask(); <sup>2</sup>   — • &thinsp; √
+ //   answerBlock += beginTask(); <sup>2</sup>   — • &thinsp; √   &nbsp;
  //   answerBlock += endTask();
 
     if (taskKey === 'six'){
@@ -1103,17 +1103,164 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `
 
         }
+        else if(item === 2){
+          return `
+           ${task1[0]} — ${task1[1]} = ${task1[0] - task1[1]} выученные билеты.<br>
+           ${task1[0] - task1[1]} / ${task1[0]} = ${(task1[0] - task1[1]) / task1[0]}
+          `
+        }
+        else if(item === 3){
+          return `
+           ${task1[1]} / ${task1[0]} = ${(task1[1]) / task1[0]}
+          `
+        }
+        else if(item === 4){
+          return `
+           ${task1[0]} — ${task1[1]} = ${task1[0] - task1[1]} исправных.<br>
+           ${task1[0] - task1[1]} / ${task1[0]} = ${(task1[0] - task1[1]) / task1[0]}
+          `
+        }
+        else if(item === 5){
+          return `
+           ${task1[4] === 3 ? 
+            `
+            Всего спортсменов: ${task1[0]} + ${task1[1]} + ${task1[2]} = ${task1[0] + task1[1] + task1[2]}.<br>
+            ${task1[3]}: ${task1[1]}<br>
+            ${task1[1]} / ${task1[0] + task1[1] + task1[2]} = ${task1[1] / (task1[0] + task1[1] + task1[2])}
+
+            ` : task1[4] === 2 ? 
+            `
+            Всего спортсменов: ${task1[0]} + ${task1[1]} + ${task1[2]} = ${task1[0] + task1[1] + task1[2]}.<br>
+            ${task1[3]}: ${task1[2]}<br>
+            ${task1[2]} / ${task1[0] + task1[1] + task1[2]} = ${task1[2] / (task1[0] + task1[1] + task1[2])}
+
+            ` : task1[4] === 4 ? 
+            `
+            Всего спортсменов: ${task1[0]} + ${task1[1]} + ${task1[2]} = ${task1[0] + task1[1] + task1[2]}.<br>
+            ${task1[3]}: ${ task1[1] + task1[2]}<br>
+            ${ task1[1] + task1[2]} / ${task1[0] + task1[1] + task1[2]} = ${(task1[1] + task1[2]) / (task1[0] + task1[1] + task1[2])}
+
+            ` : task1[4] === 1 ? 
+            `
+            Всего спортсменов: ${task1[0]} + ${task1[1]} + ${task1[2]} = ${task1[0] + task1[1] + task1[2]}.<br>
+            ${task1[3]}: ${task1[0]}<br>
+            ${task1[0]} / ${task1[0] + task1[1] + task1[2]} = ${task1[0] / (task1[0] + task1[1] + task1[2])}
+
+            ` :
+            ``}
+           
+          `
+        }
+        //   <sup>2</sup>   — • &thinsp; √   &nbsp;
+        else if(item === 6){
+          
+          return `
+          ${task1[1] === 1 ? 
+            `
+            Вероятность достоверного события равен единице то есть: P(A) = 1<br>
+            
+            1 — ${task1[0]} = ${
+              task1[0].length === 4 ? 
+              (1-(task1[0].replace(",", "."))).toFixed(2).toString().replace(".", ",")
+              :
+              (1-(task1[0].replace(",", "."))).toString().replace(".", ",")
+            }
+            ` 
+            : task1[1] === 2 ? 
+            `
+            ${task1[0]} — ${task1[2]} — ${task1[3]} — ${task1[4]} = ${task1[0]-task1[2]-task1[3]-task1[4]}.<br>
+            Чёрных и синих ручек: ${task1[0]-task1[2]-task1[3]-task1[4]} / 2 = ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} поровну.<br>
+            Всего красных и синих ручек: ${task1[2]} + ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} = ${task1[2] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)}<br>
+            ${task1[2] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)} / ${task1[0]} = ${(task1[2] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)) / task1[0]}
+            `
+            : task1[1] === 3 ? 
+            `
+            ${task1[0]} — ${task1[2]} — ${task1[3]} — ${task1[4]} = ${task1[0]-task1[2]-task1[3]-task1[4]}.<br>
+            Чёрных и синих ручек: ${task1[0]-task1[2]-task1[3]-task1[4]} / 2 = ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} поровну.<br>
+            Всего красных и чёрных ручек: ${task1[2]} + ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} = ${task1[2] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)}<br>
+            ${task1[2] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)} / ${task1[0]} = ${(task1[2] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)) / task1[0]}
+            `
+            : task1[1] === 4 ? 
+            `
+            ${task1[0]} — ${task1[2]} — ${task1[3]} — ${task1[4]} = ${task1[0]-task1[2]-task1[3]-task1[4]}.<br>
+            Чёрных и синих ручек: ${task1[0]-task1[2]-task1[3]-task1[4]} / 2 = ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} поровну.<br>
+            Всего синих и чёрных ручек: ${(task1[0]-task1[2]-task1[3]-task1[4])}<br>
+            ${((task1[0]-task1[2]-task1[3]-task1[4]))} / ${task1[0]} = ${(((task1[0]-task1[2]-task1[3]-task1[4]))) / task1[0]}
+            `
+            : task1[1] === 5 ? 
+            `
+            ${task1[0]} — ${task1[2]} — ${task1[3]} — ${task1[4]} = ${task1[0]-task1[2]-task1[3]-task1[4]}.<br>
+            Чёрных и синих ручек: ${task1[0]-task1[2]-task1[3]-task1[4]} / 2 = ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} поровну.<br>
+            Всего зелёных и чёрных ручек: ${task1[3]} + ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} = ${task1[3] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)}<br>
+            ${task1[3] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)} / ${task1[0]} = ${(task1[3] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)) / task1[0]}
+            `
+            : task1[1] === 6 ? 
+            `
+            ${task1[0]} — ${task1[2]} — ${task1[3]} — ${task1[4]} = ${task1[0]-task1[2]-task1[3]-task1[4]}.<br>
+            Чёрных и синих ручек: ${task1[0]-task1[2]-task1[3]-task1[4]} / 2 = ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} поровну.<br>
+            Всего красных и фиолетовых ручек: ${task1[2]} + ${task1[4]} = ${task1[2]+task1[4]}<br>
+            ${task1[2]+task1[4]} / ${task1[0]} = ${(task1[2]+task1[4]) / task1[0]}
+            `
+            : task1[1] === 7 ? 
+            `
+            ${task1[0]} — ${task1[2]} — ${task1[3]} — ${task1[4]} = ${task1[0]-task1[2]-task1[3]-task1[4]}.<br>
+            Чёрных и синих ручек: ${task1[0]-task1[2]-task1[3]-task1[4]} / 2 = ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} поровну.<br>
+            Всего зелёных и синих ручек: ${task1[3]} + ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} = ${task1[3] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)}<br>
+            ${task1[3] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)} / ${task1[0]} = ${(task1[3] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)) / task1[0]}
+            `
+            : task1[1] === 8 ? 
+            `
+            ${task1[0]} — ${task1[2]} — ${task1[3]} — ${task1[4]} = ${task1[0]-task1[2]-task1[3]-task1[4]}.<br>
+            Чёрных и синих ручек: ${task1[0]-task1[2]-task1[3]-task1[4]} / 2 = ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} поровну.<br>
+            Всего фиолетовых и синих ручек: ${task1[4]} + ${(task1[0]-task1[2]-task1[3]-task1[4]) / 2} = ${task1[4] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)}<br>
+            ${task1[4] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)} / ${task1[0]} = ${(task1[4] + ((task1[0]-task1[2]-task1[3]-task1[4]) / 2)) / task1[0]}
+            `
+            :
+            ``}
+          `
+        }
+        else if(item === 7){
+          return `
+          ${task1[2]} / ${task1[0]} = ${task1[2]/task1[0]}
+          `
+        }
         else{
           return `...`
         }
       }
-
+      function numberToWordsRu(num) {
+        const words = {
+            0: 'ноль',
+            1: 'один',
+            2: 'два',
+            3: 'три',
+            4: 'четыре',
+            5: 'пять',
+            6: 'шесть',
+            7: 'семь',
+            8: 'восемь',
+            9: 'девять',
+            10: 'десять',
+            11: 'одиннадцать',
+            12: 'двенадцать',
+            13: 'тринадцать',
+            14: 'четырнадцать',
+            15: 'пятнадцать',
+            16: 'шестнадцать',
+            17: 'семнадцать',
+            18: 'восемнадцать',
+            19: 'девятнадцать',
+            20: 'двадцать'
+        };
+        return  words[num]
+      }
       switch(typeTask){
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           У бабушки ${task1[0]} чашек:  ${task1[1]} с красными цветами, остальные с синими. Бабушка наливает чай в случайно выбранную чашку. 
           Найдите вероятность того,что это будет чашка с <b>синими</b> цветами.
+          <hr class="hr-pd_20">
           `
           
           answerBlock += generateDate();
@@ -1131,12 +1278,119 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          
+          На экзамене ${task1[0]} билетов, ${task1[2]} <b>не выучил</b> ${task1[1]} из них. Найдите вероятность того, что ему попадётся выученный билет.
+          <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Родительский комитет закупил ${task1[0]} пазлов для подарков детям в связи с окончанием учебного года, 
+          из них ${task1[1]} с машинами и ${task1[2]} с видами городов. Подарки распределяются случайным образом между ${task1[0]} детьми, 
+          среди которых есть ${task1[3]}. Найдите вероятность того, что ${task1[3].slice(0, -1)}е достанется пазл с машиной.
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          В среднем из ${task1[0]} карманных фонариков, поступивших в продажу, <b>${numberToWordsRu(task1[1])}</b> неисправных. 
+          Найдите вероятность того, что выбранный наудачу в магазине фонарик окажется <b>исправен</b>.
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 5:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          В лыжных гонках участвуют ${task1[0]} спортсменов из России, ${task1[1]} спортсмен из Швеции и ${task1[2]} спортсмена из Норвегии. 
+          Порядок, в котором спортсмены стартуют, определяется жребием. 
+          Найдите вероятность того, что первым будет стартовать спортсмен <b>${task1[3]}</b>.
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 6:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task1[1] === 1 ? 
+            `Вероятность того, что новая шариковая ручка пишет плохо (или не пишет), равна ${task1[0]}. 
+             Покупатель в магазине выбирает одну шариковую ручку. Найдите вероятность того, что эта ручка пишет хорошо.` 
+            : 
+            `
+            В магазине канцтоваров продаётся ${task1[0]} ручек: ${task1[2]}&nbsp;красных, ${task1[3]}&nbsp;зелёных, ${task1[4]}&nbsp;фиолетовых, 
+            остальные синие и чёрные, их поровну. 
+            Найдите вероятность того, что случайно выбранная в этом магазине ручка будет <b>${task1[5]}</b>.`}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 7:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          В фирме такси в данный момент свободно ${task1[0]} машин: ${task1[1]}&nbsp;чёрных, ${task1[2]}&nbsp;жёлтая и ${task1[3]}&nbsp;зелёных. 
+          По вызову выехала одна из машин, случайно оказавшаяся ближе всего к заказчику. 
+          Найдите вероятность того, что к нему приедет <b>жёлтое такси</b>.
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
