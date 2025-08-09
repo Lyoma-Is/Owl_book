@@ -3,7 +3,8 @@ const tasks = {
   six: '../../src/oge_math/taskSix.json',
   seven: '../../src/oge_math/taskSeven.json',
   eight: '../../src/oge_math/taskEight.json',
-  nine: '../../src/oge_math/taskNine.json'
+  nine: '../../src/oge_math/taskNine.json',
+  ten: '../../src/oge_math/taskTen.json'
 };
  
 export {tasks};
@@ -16,7 +17,7 @@ export {tasks};
   //   seven: '../../../src/oge_inf/taskSeven.json',
   // ,
   // 
-  // ten: '../../../src/oge_inf/taskTen.json',
+  // ,
   // eleven: '../../../src/oge_inf/taskEleven.json',
   // twelve: '../../../src/oge_inf/taskTwelve.json',
   // thirteen: '../../../src/oge_inf/taskThirteen.json',
@@ -1083,6 +1084,59 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
+    if (taskKey === 'ten'){
+      let Nomer = 10
+      function reshTen(item){
+        if (item === 1){
+          return `
+           ${task1[0]} — ${task1[1]} = ${task1[0] - task1[1]} с синими цветами.<br>
+           ${task1[0] - task1[1]} / ${task1[0]} = ${(task1[0] - task1[1]) / task1[0]}
+          `
+
+        }
+        else{
+          return `...`
+        }
+      }
+
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          У бабушки ${task1[0]} чашек:  ${task1[1]} с красными цветами, остальные с синими. Бабушка наливает чай в случайно выбранную чашку. 
+          Найдите вероятность того,что это будет чашка с <b>синими</b> цветами.
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();

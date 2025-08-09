@@ -152,7 +152,8 @@ taskPage.innerHTML = `
 <option value="taskSixPage.html">6. Числа и вычисления.</option>
 <option value="taskSevenPage.html">7. Числовые неравенства. Координатная прямая.</option>
 <option value="taskEightPage.html">8. Вычисления степенных и иррациональных выражений.</option>
-<option value="taskNinePage.html">9. Уравнения, системы уравнений.</option>
+<option value="taskNinePage.html">9. Уравнения, Квадратные уравнения.</option>
+<option value="taskTenPage.html">10. Теория вероятностей.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -161,9 +162,9 @@ taskPage.innerHTML = `
 //<option value="taskFourPage.html">4. .</option>
 //<option value="taskFivePage.html">5. .</option>
 //
-//<option value="taskEightPage.html">8..</option>
 //
-//<option value="taskTenPage.html">10. .</option>
+//
+//
 //<option value="taskElevenPage.html">11. .</option>
 //<option value="taskTwelvePage.html">12. .</option>
 //<option value="taskThirteenPage.html">13.</option>
@@ -245,7 +246,7 @@ document.addEventListener('click', function(e) {
       7: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.<br>КЭС: 1.4 Действительные числа. Арифметические операции с действительными числами.<br> КЭС: 6.1 Координатная прямая.",
       8: "КЭС: 2.2 Степень с целым показателем. Степень с рациональным показателем. Свойства степени.",
       9: "КЭС: 3.1 Целые и дробно-рациональные уравнения. Системы и совокупности уравнений.",
-      10: "КЭС: ",
+      10: "КЭС: 8.2 Вероятность",
       11: "КЭС: ",
       12: "КЭС: ",
       13.1: "КЭС: ",
@@ -257,7 +258,13 @@ document.addEventListener('click', function(e) {
 
     // Формируем содержимое с кнопкой закрытия
     let content = `
-      <div><p style="font-size: 130%;">Источник: ${ valuesSource === 1 ? `Банк ФИПИ`: valuesSource === 2 ? `Решу ОГЭ`: `Другой источник`}</p><button class="close-inform-button">✕</button></div>
+      <div><p style="font-size: 130%;">Источник: ${ 
+        valuesSource === 1 ? `Банк ФИПИ`: 
+        valuesSource === 2 ? `Решу ОГЭ`: 
+        `Другой источник`
+      
+      
+      }</p><button class="close-inform-button">✕</button></div>
       <div class="inform-content">
         <p>${KEC_DESCRIPTIONS[Kec]}</p>
       </div>
