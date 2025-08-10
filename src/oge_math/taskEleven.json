@@ -1,0 +1,58 @@
+[  
+    {
+        "taskCounter": 760,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 312,
+        "task": 31,
+
+        "task1": [3, 2, 1],
+
+        "task2": ["− ", 3, "x"],
+
+        "task3": ["", 5, 3, " x − 1"],
+
+        "task4": ["− 2x<sup>2</sup> + 2x + 3"],
+
+        "taskNum": "C1EF4B"
+    },
+    {
+        "taskCounter": 759,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 321,
+        "task": 21,
+
+        "task1": ["a < 0, c > 0", "a > 0, c < 0", "a > 0, c > 0"],
+
+        "taskNum": "0CB842"
+    },
+    {
+        "taskCounter": 758,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 213,
+        "task": 31,
+
+        "task1": [1, 3, 2],
+
+        "task2": ["", 1, "x"],
+
+        "task3": ["", 1, 3, " x + 2"],
+
+        "task4": ["− 4x<sup>2</sup> + 20x − 22"],
+
+        "taskNum": "F2AF4A"
+    },
+    {
+        "taskCounter": 757,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 321,
+        "task": 21,
+
+        "task1": ["a > 0, c > 0", "a < 0, c > 0", "a > 0, c < 0"],
+
+        "taskNum": "FADB4B"
+    }
+]

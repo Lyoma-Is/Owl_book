@@ -4,7 +4,8 @@ const tasks = {
   seven: '../../src/oge_math/taskSeven.json',
   eight: '../../src/oge_math/taskEight.json',
   nine: '../../src/oge_math/taskNine.json',
-  ten: '../../src/oge_math/taskTen.json'
+  ten: '../../src/oge_math/taskTen.json',
+  eleven: '../../src/oge_math/taskEleven.json'
 };
  
 export {tasks};
@@ -18,13 +19,13 @@ export {tasks};
   // ,
   // 
   // ,
-  // eleven: '../../../src/oge_inf/taskEleven.json',
-  // twelve: '../../../src/oge_inf/taskTwelve.json',
-  // thirteen: '../../../src/oge_inf/taskThirteen.json',
-  // thirteentwo: '../../../src/oge_inf/taskThirteenTwo.json',
-  // fourteen: '../../../src/oge_inf/taskFourteen.json',
-  // fifteen: '../../../src/oge_inf/taskFifteen.json',
-  // sixteen: '../../../src/oge_inf/taskSixteen.json'
+  // ,
+  // twelve: '../../../src/oge_math/taskTwelve.json',
+  // thirteen: '../../../src/oge_math/taskThirteen.json',
+  // thirteentwo: '../../../src/oge_math/taskThirteenTwo.json',
+  // fourteen: '../../../src/oge_math/taskFourteen.json',
+  // fifteen: '../../../src/oge_math/taskFifteen.json',
+  // sixteen: '../../../src/oge_math/taskSixteen.json'
 
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec} = item;
@@ -125,7 +126,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task1}<hr class="hr-pd_10">
-          <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_20">
+          <img style="display: block; margin: 0 auto; width: 70%;" src="../../pages/mathOge/img/task7/7_${taskCounter}.png"><hr class="hr-pd_20">
           ${task2}<hr class="hr-pd_30">
           <div style="display: flex; justify-content: space-around;"><p>${task3[0]}</p><p>${task3[1]}</p><p>${task3[2]}</p><p> ${task3[3]}</p></div>
           <hr class="hr-pd_20">
@@ -1391,6 +1392,145 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
             <hr class="hr-pd_20">
             ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    }
+    if (taskKey === 'eleven'){
+      let Nomer = 11
+      function delEleven(item){
+         if(task === 31){
+           if (item === 1){
+             return `
+              ${task3[0]}
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task3[1]}</mn>
+                  <mn style="padding-top: 5px;">${task3[2]}</mn>
+                </mfrac>
+              </math>${task3[3]}
+              `
+           }
+           else if (item === 2){
+            return `
+              ${task2[0]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[1]}</mn>
+                  <mn style="padding-top: 5px;">${task2[2]}</mn>
+                </mfrac>
+              </math>&thinsp;
+              `
+           }
+           else if (item === 3){
+            return `${task4[0]}` 
+
+           }
+         }
+         
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `
+            На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.<hr class="hr-pd_10">
+            <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>А) ${task1[0]}</p> 
+            <p>Б) ${task1[1]}</p> 
+            <p>В) ${task1[2]}</p>
+            </div>
+
+            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+            </div><hr class="hr-pd_20">
+            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            <table class="table_16">
+              <tr>
+                <td style="padding: 5px 10px;">A</td>
+                <td style="padding: 5px 10px;">Б</td>
+                <td style="padding: 5px 10px;">В</td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+              </tr>
+            </table>
+            `
+            : ``
+
+          }
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Установите соответствие между функциями и их графиками.<hr class="hr-pd_10">
+          <b><u>ФУНКЦИИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>А) y = ${delEleven(task1[0])}</p> 
+            <p>Б) y = ${delEleven(task1[1])}</p> 
+            <p>В) y = ${delEleven(task1[2])}</p>
+            </div>
+
+            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+            </div><hr class="hr-pd_20">
+            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            <table class="table_16">
+              <tr>
+                <td style="padding: 5px 10px;">A</td>
+                <td style="padding: 5px 10px;">Б</td>
+                <td style="padding: 5px 10px;">В</td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+              </tr>
+            </table>
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
