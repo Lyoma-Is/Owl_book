@@ -1404,7 +1404,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     if (taskKey === 'eleven'){
       let Nomer = 11
       function delEleven(item){
-         if(task === 31){
+         if(task === 31 || task === 32){
            if (item === 1){
              return `
               ${task3[0]}
@@ -1427,7 +1427,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               `
            }
            else if (item === 3){
-            return `${task4[0]}` 
+            return `
+            ${task4[3]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task4[1]}</mn>
+                  <mn style="padding-top: 5px;">${task4[2]}</mn>
+                </mfrac>
+              </math>
+            ${task4[0]}` 
 
            }
          }
@@ -1437,7 +1444,107 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          
+          ${task === 11 ? 
+            `
+            На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;kx&nbsp;+&nbsp;b</i>. 
+            Установите соответствие между знаками коэффициентов k и b и графиками функций.<hr class="hr-pd_10">
+            ${task1[3]=== 2 ? 
+              `<b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                  <p>А) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                  <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                  <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+              </div><hr class="hr-pd_20">
+              <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>1) ${task1[0]}</p> 
+            <p>2) ${task1[1]}</p> 
+            <p>3) ${task1[2]}</p>
+            </div>
+            <hr class="hr-pd_20">
+            `
+              :
+              `<b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>А) ${task1[0]}</p> 
+            <p>Б) ${task1[1]}</p> 
+            <p>В) ${task1[2]}</p>
+            </div>
+
+            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+            </div><hr class="hr-pd_20">`}
+            
+            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            <table class="table_16">
+              <tr>
+                <td style="padding: 5px 10px;">A</td>
+                <td style="padding: 5px 10px;">Б</td>
+                <td style="padding: 5px 10px;">В</td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+              </tr>
+            </table>
+            `
+            : task === 12 ? 
+            
+            `${task1[3] === 2 ? 
+              `Установите соответствие между графиками функций и формулами, которые их задают.
+               <hr class="hr-pd_10">
+             <b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                <p>А) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+            </div>
+            <hr class="hr-pd_20"><b><u>${task6 === 1 ? `ФУНКЦИИ` : task6 === 2 ? `ФОРМУЛЫ`: `КОЭФФИЦИЕНТЫ`}</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>1) ${task1[0]}</p> 
+            <p>2) ${task1[1]}</p> 
+            <p>3) ${task1[2]}</p>
+            </div><hr class="hr-pd_20">
+           ` 
+              : 
+              `Установите соответствие между функциями и их графиками.
+            <hr class="hr-pd_10">
+            <b><u>${task6 === 1 ? `ФУНКЦИИ` : `КОЭФФИЦИЕНТЫ`}</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>А) ${task1[0]}</p> 
+            <p>Б) ${task1[1]}</p> 
+            <p>В) ${task1[2]}</p>
+            </div>
+
+            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+            </div><hr class="hr-pd_20">`}
+              
+            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            <table class="table_16">
+              <tr>
+                <td style="padding: 5px 10px;">A</td>
+                <td style="padding: 5px 10px;">Б</td>
+                <td style="padding: 5px 10px;">В</td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+              </tr>
+            </table>
+            `
+            :
+             ``
+
+          }
           `
           
           answerBlock += generateDate();
@@ -1455,7 +1562,40 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 21 ? 
             `
-            На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.<hr class="hr-pd_10">
+            ${task1[3] === 2 ? 
+              `
+              На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.<hr class="hr-pd_10">
+            <b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                <p>А) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+            </div><hr class="hr-pd_20">
+            <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>1) ${task1[0]}</p> 
+            <p>2) ${task1[1]}</p> 
+            <p>3) ${task1[2]}</p>
+            </div>
+            
+            <hr class="hr-pd_20">
+            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            <table class="table_16">
+              <tr>
+                <td style="padding: 5px 10px;">A</td>
+                <td style="padding: 5px 10px;">Б</td>
+                <td style="padding: 5px 10px;">В</td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+                <td style="padding: 5px;">&thinsp;</td>
+              </tr>
+            </table>
+              
+              `
+              : 
+              `На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.<hr class="hr-pd_10">
             <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-around;">
             <p>А) ${task1[0]}</p> 
@@ -1481,7 +1621,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <td style="padding: 5px;">&thinsp;</td>
                 <td style="padding: 5px;">&thinsp;</td>
               </tr>
-            </table>
+            </table>`
+
+            }
+            
             `
             : ``
 
@@ -1501,7 +1644,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Установите соответствие между функциями и их графиками.<hr class="hr-pd_10">
-          <b><u>ФУНКЦИИ</u></b><hr class="hr-pd_20">
+          ${ task === 31 ? 
+            `<b><u>ФУНКЦИИ</u></b><hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-around;">
             <p>А) y = ${delEleven(task1[0])}</p> 
             <p>Б) y = ${delEleven(task1[1])}</p> 
@@ -1513,7 +1657,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
+            </div><hr class="hr-pd_20">` 
+            : task === 32 ?
+            `<hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around; align-items: flex-start;">
+                <p>A) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
+                <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
+                <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
             </div><hr class="hr-pd_20">
+            <b><u>ФУНКЦИИ</u></b><hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-around;">
+            <p>1) y = ${delEleven(task1[0])}</p> 
+            <p>2) y = ${delEleven(task1[1])}</p> 
+            <p>3) y = ${delEleven(task1[2])}</p>
+            </div><hr class="hr-pd_20">
+            ` : ``}
+          
             В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
             <table class="table_16">
               <tr>
