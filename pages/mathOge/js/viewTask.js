@@ -1401,6 +1401,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     }
+    // "task2": ["", "", "", "", "", "", "", "", ""],
     if (taskKey === 'eleven'){
       let Nomer = 11
       function delEleven(item){
@@ -1457,18 +1458,62 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               </div><hr class="hr-pd_20">
               <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-around;">
-            <p>1) ${task1[0]}</p> 
-            <p>2) ${task1[1]}</p> 
-            <p>3) ${task1[2]}</p>
+            <p>1) 
+            ${task2[0]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[1]}</mn>
+                  <mn style="padding-top: 5px;">${task2[2]}</mn>
+                </mfrac>
+              </math>
+            ${task1[0]}</p> 
+
+            <p>2) 
+            ${task2[3]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[4]}</mn>
+                  <mn style="padding-top: 5px;">${task2[5]}</mn>
+                </mfrac>
+              </math>
+            ${task1[1]}</p> 
+
+            <p>3) 
+            ${task2[6]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[7]}</mn>
+                  <mn style="padding-top: 5px;">${task2[8]}</mn>
+                </mfrac>
+              </math>
+            ${task1[2]}</p>
             </div>
             <hr class="hr-pd_20">
             `
               :
               `<b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-around;">
-            <p>А) ${task1[0]}</p> 
-            <p>Б) ${task1[1]}</p> 
-            <p>В) ${task1[2]}</p>
+            <p>А) 
+            ${task2[0]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[1]}</mn>
+                  <mn style="padding-top: 5px;">${task2[2]}</mn>
+                </mfrac>
+              </math>
+            ${task1[0]}</p> 
+            <p>Б) 
+            ${task2[3]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[4]}</mn>
+                  <mn style="padding-top: 5px;">${task2[5]}</mn>
+                </mfrac>
+              </math>
+            ${task1[1]}</p> 
+            <p>В) 
+            ${task2[6]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[7]}</mn>
+                  <mn style="padding-top: 5px;">${task2[8]}</mn>
+                </mfrac>
+              </math>
+            ${task1[2]}</p>
             </div>
 
             <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
@@ -1505,9 +1550,32 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             </div>
             <hr class="hr-pd_20"><b><u>${task6 === 1 ? `ФУНКЦИИ` : task6 === 2 ? `ФОРМУЛЫ`: `КОЭФФИЦИЕНТЫ`}</u></b><hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-around;">
-            <p>1) ${task1[0]}</p> 
-            <p>2) ${task1[1]}</p> 
-            <p>3) ${task1[2]}</p>
+            <p>1) 
+            ${task2[0]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[1]}</mn>
+                  <mn style="padding-top: 5px;">${task2[2]}</mn>
+                </mfrac>
+              </math>
+            ${task1[0]}</p> 
+
+            <p>2) 
+            ${task2[3]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[4]}</mn>
+                  <mn style="padding-top: 5px;">${task2[5]}</mn>
+                </mfrac>
+              </math>
+            ${task1[1]}</p> 
+
+            <p>3) 
+            ${task2[6]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[7]}</mn>
+                  <mn style="padding-top: 5px;">${task2[8]}</mn>
+                </mfrac>
+              </math>
+            ${task1[2]}</p>
             </div><hr class="hr-pd_20">
            ` 
               : 
@@ -1515,9 +1583,30 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <hr class="hr-pd_10">
             <b><u>${task6 === 1 ? `ФУНКЦИИ` : `КОЭФФИЦИЕНТЫ`}</u></b><hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-around;">
-            <p>А) ${task1[0]}</p> 
-            <p>Б) ${task1[1]}</p> 
-            <p>В) ${task1[2]}</p>
+            <p>А) 
+            ${task2[0]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[1]}</mn>
+                  <mn style="padding-top: 5px;">${task2[2]}</mn>
+                </mfrac>
+              </math>
+            ${task1[0]}</p> 
+            <p>Б) 
+            ${task2[3]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[4]}</mn>
+                  <mn style="padding-top: 5px;">${task2[5]}</mn>
+                </mfrac>
+              </math>
+            ${task1[1]}</p> 
+            <p>В) 
+            ${task2[6]}<math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task2[7]}</mn>
+                  <mn style="padding-top: 5px;">${task2[8]}</mn>
+                </mfrac>
+              </math>
+            ${task1[2]}</p>
             </div>
 
             <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
