@@ -5,7 +5,8 @@ const tasks = {
   eight: '../../src/oge_math/taskEight.json',
   nine: '../../src/oge_math/taskNine.json',
   ten: '../../src/oge_math/taskTen.json',
-  eleven: '../../src/oge_math/taskEleven.json'
+  eleven: '../../src/oge_math/taskEleven.json',
+  twelve: '../../src/oge_math/taskTwelve.json'
 };
  
 export {tasks};
@@ -20,7 +21,7 @@ export {tasks};
   // 
   // ,
   // ,
-  // twelve: '../../../src/oge_math/taskTwelve.json',
+  // 
   // thirteen: '../../../src/oge_math/taskThirteen.json',
   // thirteentwo: '../../../src/oge_math/taskThirteenTwo.json',
   // fourteen: '../../../src/oge_math/taskFourteen.json',
@@ -450,18 +451,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <math style="font-size: 140%">
               <mfrac>
               <msup>
-                <mrow>
+                <mrow style="padding-bottom: 5px;">
                  <mn>(&thinsp;</mn>
                   <msup>
-                    <mn style="padding-bottom: 5px;">a</mn>
-                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                    <mn >a</mn>
+                    <mn >${task1[0]}</mn>
                   </msup>
                   <mn>)</mn>
                 </mrow>
                 <mn >${task1[1]}</mn>
               </msup>
               <msup>
-                <mn style="padding-bottom: 5px;">a</mn>
+                <mn >a</mn>
                 <mn style="padding-top: 5px;">${task1[2]}</mn> 
               </msup>
               </mfrac>
@@ -1779,6 +1780,163 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
+    if (taskKey === 'twelve'){
+      let Nomer = 12
+      function reshTwelve(item){
+        if(item === 11){
+          return `
+          ${task1[0] === 1 ? 
+            `
+            d<sub>1</sub> =
+            <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">2 • S</mn>
+                  <mrow style="padding-top: 5px;" >
+                  <msub>
+                    <mn>d</mn>
+                    <mn>2</mn>
+                  </msub>
+                  &nbsp;
+                  <mi>sin&nbsp;α</mi>
+                </mrow>
+                </mfrac>
+              </math>
+              = ( 2 • ${task1[4]} ) / ( ${task1[1]} •&thinsp; <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[2]} </mn>  
+                  <mn style="padding-top: 5px;">${task1[3]}</mn>
+                </mfrac>
+               
+              </math> ) = ${(2*task1[4]*task1[3])/(task1[1]*task1[2])}
+            `
+            :
+            `d<sub>2</sub> =
+            <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">2 • S</mn>
+                  <mrow style="padding-top: 5px;" >
+                  <msub>
+                    <mn>d</mn>
+                    <mn>1</mn>
+                  </msub>
+                  &nbsp;
+                  <mi>sin&nbsp;α</mi>
+                </mrow>
+                </mfrac>
+              </math>
+              = ( 2 • ${task1[4]} ) / ( ${task1[1]} •&thinsp; <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[2]} </mn>  
+                  <mn style="padding-top: 5px;">${task1[3]}</mn>
+                </mfrac>
+               
+              </math> ) = ${(2*task1[4]*task1[3])/(task1[1]*task1[2])}`}
+          `
+        }
+        else if(item === 21){
+          return `
+          R &thinsp;=&thinsp; <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">a</mn>  
+                  <msup style="padding-top: 5px;">
+                    <mn >ω</mn>  
+                    <mn >2</mn>
+                  </msup>
+                </mfrac>
+              </math> &thinsp;=&thinsp;
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[1]} </mn>  
+                  <msup >
+                    <mn style="padding-bottom: 5px;">${task1[0]} </mn>  
+                    <mn style="padding-top: 5px;">2</mn>
+                 </msup> 
+                </mfrac>   
+              </math> &thinsp;=&thinsp;
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[1]} </mn>  
+                  <mn style="padding-top: 5px;">${task1[0]*task1[0]} </mn>   
+                </mfrac>   
+              </math> &thinsp;=&thinsp;
+              ${task1[1]/(task1[0]*task1[0])}
+
+          `
+        }
+        else{
+          return `...`
+        }
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Площадь четырёхугольника можно вычислить по формуле 
+          S&nbsp;=&nbsp;<math style="font-size: 140%">
+              <mfrac>
+                <mrow style="padding-bottom: 5px;" >
+                  <msub>
+                    <mn>d</mn>
+                    <mn>1</mn>
+                  </msub>
+                  &nbsp;
+                  <msub>
+                    <mn>d</mn>
+                    <mn>2</mn>
+                  </msub>
+                  &nbsp;
+                  <mi>sin&nbsp;α</mi>
+                </mrow>     
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>
+          </math>&thinsp; , 
+          где d<sub>1</sub> и d<sub>2</sub> — длины диагоналей четырёхугольника, α — угол между диагоналями.
+          Пользуясь этой формулой, найдите длину диагонали d<sub>${task1[0] === 2 ? `2` : `1`}</sub>,<br>
+          если d<sub>1</sub>&nbsp;=&nbsp;${task1[1]}, 
+          sin&nbsp;α&nbsp;=&nbsp;
+          <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 4px;">${task1[2]}</mn>
+                  <mn style="padding-top: 5px;">${task1[3]}</mn>
+                </mfrac>
+              </math> , 
+          a S&nbsp;=&nbsp;${task1[4]} .
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwelve(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Центростремительное ускорение при движении по окружности (в м/c<sup>2</sup>) вычисляется по формуле α&nbsp;=&nbsp;ω<sup>2</sup>&nbsp;R, 
+          где ω — угловая скорость (в c<sup>−1</sup>), R — радиус окружности (в метрах). 
+          Пользуясь этой формулой, <i>найдите радиус R</i>, если угловая скорость равна ${task1[0]} c<sup>−1</sup>, 
+          а центростремительное ускорение равно ${task1[1]}&nbsp;м&nbsp;/&nbsp;с&nbsp;<sup>2</sup>. Ответ дайте в метрах.
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwelve(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
