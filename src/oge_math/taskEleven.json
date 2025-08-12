@@ -1,5 +1,264 @@
 [  
     {
+        "taskCounter": 858,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 123,
+        "task": 31,
+
+        "task1": [3, 1, 2],
+
+        "task2": ["− ", "12", "x"],
+
+        "task3": ["− ", "3", "4", " x − 1"],
+
+        "task4": ["− x<sup>2</sup> − x + 5", "", "", ""],
+
+        "taskNum": "66CE75"
+    },
+    {
+        "taskCounter": 857,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 231,
+        "task": 21,
+
+        "task1": ["a > 0, c > 0", "a > 0, c < 0", "a < 0, c > 0",2],
+        
+        "taskNum": "9E5481"
+    },
+    {
+        "taskCounter": 856,
+        "typeTask": 1,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 231,
+        "task": 12,
+     
+        "task1": ["k < 0, b < 0", "k > 0, b > 0", "k > 0, b < 0",2],
+        "task6": 3,
+        "task2": ["", "", "", "", "", "", "", "", ""],
+        
+        "taskNum": "924380"
+    },
+    {
+        "taskCounter": 855,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 312,
+        "task": 21,
+
+        "task1": ["a < 0, c > 0", "a > 0, c < 0", "a > 0, c > 0",2],
+        
+        "taskNum": "1AE583"
+    },
+    {
+        "taskCounter": 854,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 123,
+        "task": 31,
+
+        "task1": [1, 2, 3],
+
+        "task2": ["", "1", "2x"],
+
+        "task3": ["", "1", "3", " x + 6"],
+
+        "task4": ["− 2x<sup>2</sup> − 6x − 1", "", "", ""],
+
+        "taskNum": "757E85"
+    },
+    {
+        "taskCounter": 853,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 321,
+        "task": 21,
+
+        "task1": ["a > 0, c > 0", "a < 0, c > 0", "a > 0, c < 0"],
+        
+        "taskNum": "023E8E"
+    },
+    {
+        "taskCounter": 852,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 132,
+        "task": 31,
+
+        "task1": [3, 1, 2],
+
+        "task2": ["− ", "4", "x"],
+
+        "task3": ["", "5", "3", " x + 6"],
+
+        "task4": ["2x<sup>2</sup> + 16x + 29", "", "", ""],
+
+        "taskNum": "403D85"
+    },
+    {
+        "taskCounter": 851,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 321,
+        "task": 32,
+
+        "task1": [1, 3, 2],
+
+        "task2": ["√x ", "", ""],
+
+        "task3": ["—", "1", "2", " x"],
+
+        "task4": ["— x<sup>2</sup> — 2", "", "", ""],
+
+        "taskNum": "89503D"
+    },
+    {
+        "taskCounter": 850,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 132,
+        "task": 32,
+
+        "task1": [2, 1, 3],
+
+        "task2": ["√x ", "", ""],
+
+        "task3": ["", "", "", "2x — 4"],
+
+        "task4": ["x<sup>2</sup> — 4", "", "", ""],
+
+        "taskNum": "63D731"
+    },
+    {
+        "taskCounter": 849,
+        "typeTask": 3,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 213,
+        "task": 32,
+
+        "task1": [3, 1, 2],
+
+        "task2": ["— ", "1", "x"],
+
+        "task3": ["", "", "", "— x"],
+
+        "task4": ["— x<sup>2</sup>", "", "", ""],
+
+        "taskNum": "E1FC38"
+    },
+    {
+        "taskCounter": 848,
+        "typeTask": 1,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 312,
+        "task": 12,
+     
+        "task1": ["y = − x", "y = − 1", "y = x − 1",2],
+        "task6": 2,
+        "task2": ["", "", "", "", "", "", "", "", ""],
+        
+        "taskNum": "CE7D3E"
+    },
+    {
+        "taskCounter": 847,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 213,
+        "task": 21,
+
+        "task1": ["a > 0, c < 0", "a < 0, c > 0", "a > 0, c > 0"],
+        
+        "taskNum": "CBCD34"
+    },
+    {
+        "taskCounter": 846,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 123,
+        "task": 21,
+
+        "task1": ["a > 0, c < 0", "a > 0, c > 0", "a < 0, c > 0",2],
+        
+        "taskNum": "A7A733"
+    },
+    {
+        "taskCounter": 845,
+        "typeTask": 1,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 123,
+        "task": 12,
+     
+        "task1": ["x + 2", "x − 2", "x + 2",2],
+        "task6": 1,
+        "task2": ["y = ", "2", "5", "y = ", "2", "5", "y = − ", "2", "5"],
+        
+        "taskNum": "55E138"
+    },
+    {
+        "taskCounter": 844,
+        "typeTask": 1,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 132,
+        "task": 12,
+     
+        "task1": ["y = − 2", "y = x − 2", "y = − 2x",2],
+        "task6": 2,
+        "task2": ["", "", "", "", "", "", "", "", ""],
+        
+        "taskNum": "1CFC32"
+    },
+    {
+        "taskCounter": 843,
+        "typeTask": 1,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 231,
+        "task": 12,
+     
+        "task1": ["x − 5", "x + 5", "x − 5"],
+        "task6": 1,
+        "task2": ["y = − ", "2", "3", "y = ", "2", "3", "y = ", "2", "3"],
+        
+        "taskNum": "11B131"
+    },
+    {
+        "taskCounter": 842,
+        "typeTask": 1,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 213,
+        "task": 12,
+     
+        "task1": ["x − 2", "x − 2", "x + 2"],
+        "task6": 1,
+        "task2": ["y = ", "1", "2", "y = − ", "1", "2", "y = − ", "1", "2"],
+        
+        "taskNum": "89E064"
+    },
+    {
+        "taskCounter": 841,
+        "typeTask": 2,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 231,
+        "task": 21,
+
+        "task1": ["a > 0, c < 0", "a > 0, c > 0", "a < 0, c > 0",2],
+        
+        "taskNum": "646563"
+    },
+    {
+        "taskCounter": 840,
+        "typeTask": 1,
+        "taskKec": [1, 11, 1],
+        "taskAnswer": 312,
+        "task": 11,
+
+        "task1": ["k < 0, b < 0", "k > 0, b > 0", "k < 0, b > 0",2],
+        "task6": 3,
+        "task2": ["", "", "", "", "", "", "", "", ""],
+        
+        "taskNum": "661D6B"
+    },
+    {
         "taskCounter": 839,
         "typeTask": 1,
         "taskKec": [1, 11, 1],
@@ -316,7 +575,7 @@
         "taskAnswer": 312,
         "task": 32,
 
-        "task1": [3, 2, 1],
+        "task1": [2, 3, 1],
 
         "task2": ["− ", "1", "x"],
 
@@ -480,7 +739,7 @@
         "taskAnswer": 312,
         "task": 31,
 
-        "task1": [3, 2, 1],
+        "task1": [1, 3, 2],
 
         "task2": ["", "9", "x"],
 
