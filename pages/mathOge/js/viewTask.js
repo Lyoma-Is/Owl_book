@@ -1816,7 +1816,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <mn style="padding-top: 5px;">${task1[3]}</mn>
                 </mfrac>
                
-              </math> ) = ${(2*task1[4]*task1[3])/(task1[1]*task1[2])}
+              </math> ) = ${(2*task1[4]*task1[3])/(task1[1]*task1[2])} 
             `
             :
             `d<sub>2</sub> =
@@ -1839,7 +1839,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <mn style="padding-top: 5px;">${task1[3]}</mn>
                 </mfrac>
                
-              </math> ) = ${(2*task1[4]*task1[3])/(task1[1]*task1[2])}`}
+              </math> ) = ${(2*task1[4]*task1[3])/(task1[1]*task1[2])}`} 
           `
         }
         else if(item === 21){
@@ -1868,8 +1868,46 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <mn style="padding-top: 5px;">${task1[0]*task1[0]} </mn>   
                 </mfrac>   
               </math> &thinsp;=&thinsp;
-              ${task1[1]/(task1[0]*task1[0])}
+              ${task1[1]/(task1[0]*task1[0])} 
 
+          `
+        }
+        else if(item === 31){
+          return `
+          R &thinsp;=&thinsp; <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">P</mn>  
+                  <msup style="padding-top: 5px;">
+                    <mn >I</mn>  
+                    <mn >2</mn>
+                  </msup>
+                </mfrac>
+              </math> &thinsp;=&thinsp;
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[0]} </mn>  
+                  <msup >
+                    <mn style="padding-bottom: 5px;">${task1[1]} </mn>  
+                    <mn style="padding-top: 5px;">2</mn>
+                 </msup> 
+                </mfrac>   
+              </math> &thinsp;=&thinsp;
+              <math style="font-size: 140%">
+                <mfrac >
+                  <mn style="padding-bottom: 5px;">${task1[0]} </mn>  
+                  <mn style="padding-top: 5px;">${task1[1]*task1[1]} </mn>   
+                </mfrac>   
+              </math> &thinsp;=&thinsp;
+              ${task1[0]/(task1[1]*task1[1])} 
+
+          `
+        }
+        else if(item === 41){
+          return `
+          ${task1[1] === 1 ? 
+            `C = 6000 + 4100 * n = 6000 + 4100 * ${task1[0]} = ${6000 + 4100*task1[0]}` 
+            : 
+            `C = 6500 + 4000 * n = 6500 + 4000 * ${task1[0]} = ${6500 + 4000*task1[0]}`}
           `
         }
         else{
@@ -1929,8 +1967,53 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Центростремительное ускорение при движении по окружности (в м/c<sup>2</sup>) вычисляется по формуле α&nbsp;=&nbsp;ω<sup>2</sup>&nbsp;R, 
           где ω — угловая скорость (в c<sup>−1</sup>), R — радиус окружности (в метрах). 
-          Пользуясь этой формулой, <i>найдите радиус R</i>, если угловая скорость равна ${task1[0]} c<sup>−1</sup>, 
-          а центростремительное ускорение равно ${task1[1]}&nbsp;м&nbsp;/&nbsp;с&nbsp;<sup>2</sup>. Ответ дайте в метрах.
+          Пользуясь этой формулой, <b>найдите радиус R</b>, если угловая скорость равна <b>${task1[0]} c<sup>−1</sup></b>, 
+          а центростремительное ускорение равно <b>${task1[1]}&nbsp;м&nbsp;/&nbsp;с&nbsp;<sup>2</sup></b>. Ответ дайте в метрах.
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwelve(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Мощность постоянного тока (в ваттах) вычисляется по формуле P = I<sup>2</sup> R, где I&nbsp;—&nbsp;сила тока (в амперах), R&nbsp;—&nbsp;сопротивление (в омах). 
+          Пользуясь этой формулой, <b>найдите сопротивление R</b>, если мощность составляет <b>${task1[0]} Вт</b>, а сила тока равна <b>${task1[1]} А</b>. Ответ дайте в омах.
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwelve(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `          
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task1[1] === 1 ? 
+            `
+          В фирме «Родник» стоимость (в рублях) колодца из железобетонных колец рассчитывается по формуле C&nbsp;=&nbsp;6000&nbsp;+&nbsp;4100n, 
+          где n — число колец, установленных в колодце. Пользуясь этой формулой, рассчитайте стоимость колодца из ${task1[0]} колец. Ответ дайте в рублях.
+            ` 
+            :
+          `        
+          В фирме «Чистая вода» стоимость (в рублях) колодца из железобетонных колец рассчитывается по формуле C&nbsp;=&nbsp;6500&nbsp;+&nbsp;4000n, 
+          где n — число колец, установленных в колодце. Пользуясь этой формулой, рассчитайте стоимость колодца из ${task1[0]} колец. Ответ дайте в рублях.
+          `}
+          
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
