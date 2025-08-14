@@ -1,0 +1,568 @@
+[  
+    {
+        "taskCounter": 1069,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 21,
+
+        "task1": "x<sup>2</sup> − 49 < 0",
+
+        "task2": [
+        
+        "нет решений", 
+
+        "(− ∞ ; +∞)",
+
+        "(− 7 ; 7)",
+
+        "(− ∞ ; −7) ∪ (7 ; +∞)"],
+
+        "taskNum": "F9A32A"
+    },
+    {
+        "taskCounter": 1068,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 22,
+
+        "task1": "x<sup>2</sup> > 36",
+
+        "task2": [1, 1, 1, 1],
+
+        "taskNum": "6D8017"
+    },
+    {
+        "taskCounter": 1067,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 22,
+
+        "task1": "x<sup>2</sup> ≤ 36",
+
+        "task2": [1, 1, 1, 1],
+
+        "taskNum": "981215"
+    },
+    {
+        "taskCounter": 1066,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 23,
+
+        "task2": [
+        
+        "x<sup>2</sup> − 9 > 0", 
+
+        "x<sup>2</sup> + 9 > 0",
+
+        "x<sup>2</sup> − 9 < 0",
+
+        "x<sup>2</sup> + 9 < 0"],
+
+        "taskNum": "A4B517"
+    },
+    {
+        "taskCounter": 1065,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 23,
+
+        "task2": [
+        
+        "x<sup>2</sup> + 64 ≥ 0", 
+
+        "x<sup>2</sup> − 64 ≤ 0",
+
+        "x<sup>2</sup> − 64 ≥ 0",
+
+        "x<sup>2</sup> + 64 ≤ 0"],
+
+        "taskNum": "21F913"
+    },
+    {
+        "taskCounter": 1064,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 22,
+
+        "task1": "81x<sup>2</sup> > 64",
+
+        "task2": [1, 1, 1, 1],
+
+        "taskNum": "150B1F"
+    },
+    {
+        "taskCounter": 1063,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 23,
+
+        "task2": [
+        
+        "x<sup>2</sup> − 5x ≤ 0", 
+
+        "x<sup>2</sup> − 25 ≤ 0",
+
+        "x<sup>2</sup> − 5x ≥ 0",
+
+        "x<sup>2</sup> − 25 ≥ 0"],
+
+        "taskNum": "BB6210"
+    },
+    {
+        "taskCounter": 1062,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 22,
+
+        "task1": "8x − x<sup>2</sup> > 0",
+
+        "task2": [1, 1, 1, 1],
+
+        "taskNum": "6C04BC"
+    },
+    {
+        "taskCounter": 1061,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 23,
+
+        "task2": [
+        
+        "x<sup>2</sup> − 1 ≤ 0", 
+
+        "x<sup>2</sup> − x ≥ 0",
+
+        "x<sup>2</sup> − 1 ≥ 0",
+
+        "x<sup>2</sup> − x ≤ 0"],
+
+        "taskNum": "5FF975"
+    },
+    {
+        "taskCounter": 1060,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 23,
+
+        "task2": [
+        
+        "x<sup>2</sup> − 16 ≤ 0", 
+
+        "x<sup>2</sup> − 4x ≤ 0",
+
+        "x<sup>2</sup> − 4x ≥ 0",
+
+        "x<sup>2</sup> − 16 ≥ 0"],
+
+        "taskNum": "5FF975"
+    },
+    {
+        "taskCounter": 1059,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 21,
+
+        "task1": "x<sup>2</sup> − 25 > 0",
+
+        "task2": [
+        
+        "(− ∞ ; −5) ∪ (5 ; +∞)", 
+
+        "(− 5 ; 5)",
+
+        "нет решений",
+
+        "(− ∞ ; +∞)"],
+
+        "taskNum": "512B74"
+    },
+    {
+        "taskCounter": 1058,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 21,
+
+        "task1": "x<sup>2</sup> − 49 > 0",
+
+        "task2": [
+        
+        "(− 7 ; 7)", 
+
+        "нет решений",
+
+        "(− ∞ ; +∞)",
+
+        "(− ∞ ; −7) ∪ (7 ; +∞)"],
+
+        "taskNum": "1C9177"
+    },
+    {
+        "taskCounter": 1057,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 23,
+
+        "task2": [
+        
+        "x<sup>2</sup> − 7x < 0", 
+
+        "x<sup>2</sup> − 49 > 0",
+
+        "x<sup>2</sup> − 7x > 0",
+
+        "x<sup>2</sup> − 49 < 0"],
+
+        "taskNum": "076578"
+    },
+    {
+        "taskCounter": 1056,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 23,
+
+        "task2": [
+        
+        "x<sup>2</sup> − 8x < 0", 
+
+        "x<sup>2</sup> − 64 < 0",
+
+        "x<sup>2</sup> − 8x > 0",
+
+        "x<sup>2</sup> − 64 > 0"],
+
+        "taskNum": "3ADF0E"
+    },
+    {
+        "taskCounter": 1055,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 22,
+
+        "task1": "81x<sup>2</sup>  ≤ 16",
+
+        "task2": [1, 1, 1, 1],
+
+        "taskNum": "E34C05"
+    },
+    {
+        "taskCounter": 1054,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 21,
+
+        "task1": "5x − x<sup>2</sup> > 0",
+
+        "task2": [
+        "(-∞; 0) ∪ (5; +∞)", 
+
+        "(0; 5)",
+
+        "(5; +∞)",
+
+        "(0; +∞)"],
+
+        "taskNum": "54EC0A"
+    },
+    {
+        "taskCounter": 1053,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 22,
+
+        "task1": "x<sup>2</sup> < 9",
+
+        "task2": [1, 1, 1, 1],
+
+        "taskNum": "8C1FFA"
+    },
+    {
+        "taskCounter": 1052,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 21,
+
+        "task1": "6x − x<sup>2</sup> ≥ 0",
+
+        "task2": [
+        "[ 0; +∞)", 
+
+        "(-∞; 0 ] ∪ [ 6; +∞)",
+
+        "[ 0; 6 ]",
+
+        "[ 6; +∞)"],
+
+        "taskNum": "A4CBFE"
+    },
+    {
+        "taskCounter": 1051,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 21,
+
+        "task1": "x<sup>2</sup>  − 25 < 0",
+
+        "task2": [
+        "(-∞; +∞)", 
+
+        "нет решений",
+
+        "(− 5 ; 5)",
+
+        "(− ∞ ; −5) ∪ (5 ; +∞)"],
+
+        "taskNum": "B9AFF7"
+    },
+    {
+        "taskCounter": 1050,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 23,
+
+        "task2": [
+        "x<sup>2</sup> − 36 < 0",
+
+        "x<sup>2</sup> − 6x < 0", 
+
+        "x<sup>2</sup> − 6x > 0",
+
+        "x<sup>2</sup> − 36 > 0"],
+
+        "taskNum": "7F05FC"
+    },
+    {
+        "taskCounter": 1049,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 23,
+
+        "task2": [
+        "x<sup>2</sup> − 6x < 0", 
+
+        "x<sup>2</sup> − 6x > 0",
+
+        "x<sup>2</sup> − 36 < 0",
+
+        "x<sup>2</sup> − 36 > 0"],
+
+        "taskNum": "4F79F5"
+    },
+    {
+        "taskCounter": 1048,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 21,
+
+        "task1": "8x − x<sup>2</sup> ≤ 0",
+
+        "task2": [
+        "[ 8; +∞)", 
+
+        "[0; 8]",
+
+        "(-∞; 0 ] ∪ [ 8; +∞)",
+
+        "[ 0; +∞)"],
+
+        "taskNum": "8FB94A"
+    },
+    {
+        "taskCounter": 1047,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 22,
+
+        "task1": "6x − x<sup>2</sup> > 0",
+
+        "task2": [1, 1, 1, 1],
+
+        "taskNum": "37EB4D"
+    },
+    {
+        "taskCounter": 1046,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 21,
+
+        "task1": "x<sup>2</sup>  − 36 > 0",
+
+        "task2": [
+        "(-∞; +∞)", 
+
+        "(-∞; -6) ∪ (6; +∞)",
+
+        "(-6; 6)",
+
+        "нет решений"],
+
+        "taskNum": "2FAC43"
+    },
+    {
+        "taskCounter": 1045,
+        "typeTask": 2,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 21,
+
+        "task1": "x − x<sup>2</sup> < 0",
+
+        "task2": ["(0; 1)", "(0 ; +∞)", "(1 ; +∞)", "(− ∞ ; 0) ∪ (1 ; +∞)"],
+
+        "taskNum": "F4404E"
+    },
+    {
+        "taskCounter": 1044,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 11,
+
+        "task1": "− 3 − x ≥ x − 6",
+
+        "task2": ["(− ∞ ; 1,5 ]", "[ 1,5 ; +∞)", "(− ∞ ; 4,5 ]", "[ 4,5 ; +∞)"],
+
+        "taskNum": "9B2464"
+    },
+    {
+        "taskCounter": 1043,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 11,
+
+        "task1": "− 3 − 3x < 7x − 9",
+
+        "task2": ["(− ∞ ; 0,6)", "(− ∞ ; 1,2)", "(0,6 ; +∞)", "(1,2 ; +∞)"],
+
+        "taskNum": "7EB067"
+    },
+    {
+        "taskCounter": 1042,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 11,
+
+        "task1": "− 3 − 5x ≤ x + 3",
+
+        "task2": ["(− ∞ ; 0 ]", "[ − 1 ; +∞)", "[ 0 ; +∞)", "(− ∞ ; −1 ]"],
+
+        "taskNum": "4D8D6A"
+    },
+    {
+        "taskCounter": 1041,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 11,
+
+        "task1": "− 3 − x < 4x + 7",
+
+        "task2": ["(− ∞ ; −0,8)", "(− 2 ; +∞)", "(− ∞ ; −2)", "(− 0,8 ; +∞)"],
+
+        "taskNum": "FC6D5A"
+    },
+    {
+        "taskCounter": 1040,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 11,
+
+        "task1": "6 − 7x ≤ 3x − 7",
+
+        "task2": ["[ 0,1 ; +∞)", "(− ∞ ; 1,3 ]", "[ 1,3 ; +∞)", "(− ∞ ; 0,1 ]"],
+
+        "taskNum": "E225DC"
+    },
+    {
+        "taskCounter": 1039,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 11,
+
+        "task1": "− 3 − 3x > 7x − 9",
+
+        "task2": ["(0,6 ; +∞)", "(− ∞ ; 1,2)", "(1,2 ; +∞)", "(− ∞ ; 0,6)"],
+
+        "taskNum": "B4D411"
+    },
+    {
+        "taskCounter": 1038,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 11,
+
+        "task1": "3 − 2x ≥ 8x − 1",
+
+        "task2": ["[ − 0,2 ; +∞)", "(− ∞ ; 0,4 ]", "[ 0,4 ; +∞)", "(− ∞ ; −0,2 ]"],
+
+        "taskNum": "7FAC18"
+    },
+    {
+        "taskCounter": 1037,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 11,
+
+        "task1": "− 9 − 6x < 9x + 9",
+
+        "task2": ["(− ∞ ; −1,2)", "(− 1,2 ; +∞)", "(0 ; +∞)", "(− ∞ ; 0)"],
+
+        "taskNum": "420818"
+    },
+    {
+        "taskCounter": 1036,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 11,
+
+        "task1": "− 3 − x > 4x + 7",
+
+        "task2": ["(− ∞ ; −0,8)", "(− ∞ ; −2)", "(− 2 ; +∞)", "(− 0,8 ; +∞)"],
+
+        "taskNum": "5265FD"
+    },
+    {
+        "taskCounter": 1035,
+        "typeTask": 1,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 11,
+
+        "task1": "− 9 − 6x > 9x + 9",
+
+        "task2": ["(− ∞ ; −1,2)", "(0 ; +∞)", "(− 1,2 ; +∞)", "(− ∞ ; 0)"],
+
+        "taskNum": "72B7F0"
+    }
+]

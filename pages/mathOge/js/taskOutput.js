@@ -156,6 +156,7 @@ taskPage.innerHTML = `
 <option value="taskTenPage.html">10. Теория вероятностей.</option>
 <option value="taskElevenPage.html">11. Графики функций.</option>
 <option value="taskTwelvePage.html">12. Расчёты по формулам.</option>
+<option value="taskThirteenPage.html">13. Не­ра­вен­ства, системы неравенств.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -169,7 +170,7 @@ taskPage.innerHTML = `
 //
 //
 //
-//<option value="taskThirteenPage.html">13.</option>
+//
 //<option value="taskThirteenTwoPage.html">13.2 .</option>
 //<option value="taskFourteenPage.html">14. .</option>
 //<option value="taskFifteenPage.html">15. .</option>
@@ -213,8 +214,7 @@ document.addEventListener('click', function(e) {
       'taskTenPage.html': 10,
       'taskElevenPage.html': 11,
       'taskTwelvePage.html': 12,
-      'taskThirteenPage.html': '13.1',
-      'taskThirteenTwoPage.html': '13.2',
+      'taskThirteenPage.html': 13,
       'taskFourteenPage.html': 14,
       'taskFifteenPage.html': 15,
       'taskSixteenPage.html': 16
@@ -251,8 +251,7 @@ document.addEventListener('click', function(e) {
       10: "КЭС: 8.2 Вероятность.",
       11: "КЭС: 5.1 Функция, способы задания функции. График функции. Область определения и множество значений функции. Нули функции. Промежутки знакопостоянства. Промежутки монотонности функции. Максимумы и минимумы функции. Наибольшее и наименьшее значение функции на промежутке.<br>КЭС: 6.2 Декартовы координаты на плоскости.",
       12: "КЭС:	1.5 Приближённые вычисления, правила округления, прикидка и оценка результата вычислений.<br>КЭС: 2.1 Буквенные выражения (выражения с переменными).<br>КЭС: 2.2 Степень с целым показателем. Степень с рациональным показателем. Свойства степени.<br>КЭС: 2.5 Арифметический корень натуральной степени. Действия с арифметическими корнями натуральной степени.",
-      13.1: "КЭС: ",
-      13.2: "КЭС: ",
+      13: "КЭС: ",
       14: "КЭС: ",
       15: "КЭС: ",
       16: "КЭС: "

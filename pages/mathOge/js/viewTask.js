@@ -6,7 +6,8 @@ const tasks = {
   nine: '../../src/oge_math/taskNine.json',
   ten: '../../src/oge_math/taskTen.json',
   eleven: '../../src/oge_math/taskEleven.json',
-  twelve: '../../src/oge_math/taskTwelve.json'
+  twelve: '../../src/oge_math/taskTwelve.json',
+  thirteen: '../../src/oge_math/taskThirteen.json'
 };
  
 export {tasks};
@@ -17,13 +18,7 @@ export {tasks};
   // four:  '../../../src/oge_inf/taskFour.json',
   // five: '../../../src/oge_inf/taskFive.json',
   //   seven: '../../../src/oge_inf/taskSeven.json',
-  // ,
-  // 
-  // ,
-  // ,
-  // 
-  // thirteen: '../../../src/oge_math/taskThirteen.json',
-  // thirteentwo: '../../../src/oge_math/taskThirteenTwo.json',
+
   // fourteen: '../../../src/oge_math/taskFourteen.json',
   // fifteen: '../../../src/oge_math/taskFifteen.json',
   // sixteen: '../../../src/oge_math/taskSixteen.json'
@@ -2217,6 +2212,88 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
             <hr class="hr-pd_20">
             ${reshTwelve(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
+    if (taskKey === 'thirteen'){
+      let Nomer = 13
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Укажите решение неравенства: ${task1}.
+          <hr class="hr-pd_20">
+          <div >
+            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
+            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
+            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>4) ${task2[3]}</p>
+          </div>
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          ${task === 21 ? 
+            `
+          Укажите решение неравенства: ${task1}.
+          <hr class="hr-pd_20">
+          <div >
+            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
+            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
+            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>4) ${task2[3]}</p>
+          </div>`
+            : task === 22 ? 
+            `
+          Укажите решение неравенства: ${task1}.
+          <hr class="hr-pd_20">
+          <div style="display: flex; flex-direction: column; align-items: flex-start; vertical-align: middle;">
+            <p>1) ${task2[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p><hr class="hr-pd_10">
+            <p>2) ${task2[1] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_2.png">`: `нет решений`}</p><hr class="hr-pd_10">
+            <p>3) ${task2[2] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_3.png">`: `нет решений`}</p><hr class="hr-pd_10">
+            <p>4) ${task2[3] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_4.png">`: `нет решений`}</p>
+          </div>
+            `
+            : task === 23 ? 
+            `
+          Укажите неравенство, решение которого изображено на рисунке:
+          <hr class="hr-pd_10">
+          <img style="width: 18em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_0.png">
+          <hr class="hr-pd_20">
+          <div >
+            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
+            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
+            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>4) ${task2[3]}</p>
+          </div>
+            `
+            :
+            ``}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
