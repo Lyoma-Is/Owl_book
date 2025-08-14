@@ -1,5 +1,436 @@
 [  
     {
+        "taskCounter": 1129,
+        "typeTask": 4,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 41,
+
+        "task1": "-9 + 3x < 0",
+
+        "task2": "2 - 3x > -10",
+
+       "task3": [
+
+            "(-∞; 3)",
+
+            "(-∞; 4)",
+
+            "(3; +∞)",
+
+            "(3; 4)"
+        ],
+
+        "taskNum": "C7D64D"
+    },
+    {
+        "taskCounter": 1128,
+        "typeTask": 4,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 42,
+
+        "task1": "х + 2,7 ≤ 0",
+
+        "task2": "х + 4 ≥ 1",
+
+        "task3": [1,1,1,1],
+
+        "taskNum": "AA0F48"
+    },
+    {
+        "taskCounter": 1127,
+        "typeTask": 4,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 41,
+
+        "task1": "х - 2,6 ≤ 0",
+
+        "task2": "х - 1 ≥ 1",
+
+        "task3": [
+
+            "[2; 2,6]",
+
+            "(-∞; 2,6]",
+
+            "(-∞; 2,6] ∪ [2.6; +∞)",
+
+            "[2; +∞)"
+        ],
+
+        "taskNum": "5A6749"
+    },
+    {
+        "taskCounter": 1126,
+        "typeTask": 4,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 42,
+
+        "task1": "х − 4 ≥ 0",
+
+        "task2": "х − 0,3 ≥ 1",
+
+        "task3": [1,1,1,1],
+
+        "taskNum": "D2DF4D"
+    },
+    {
+        "taskCounter": 1125,
+        "typeTask": 4,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 42,
+
+        "task1": "х + 3 ≥ − 2",
+
+        "task2": "х + 1,1 ≥ 0",
+
+        "task3": [1,1,1,1],
+
+        "taskNum": "244745"
+    },
+    {
+        "taskCounter": 1124,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 32,
+
+        "task1": "(x+5)(x-2) < 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "E66E87"
+    },
+    {
+        "taskCounter": 1123,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 32,
+
+        "task1": "(x+8)(x-3) < 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "A98B8E"
+    },
+    {
+        "taskCounter": 1122,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 32,
+
+        "task1": "(x+4)(x-8) > 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "44B682"
+    },
+    {
+        "taskCounter": 1121,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 32,
+
+        "task1": "(x+1)(x-9) > 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "3A9361"
+    },
+    {
+        "taskCounter": 1120,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 31,
+
+        "task1": "(x+1)(x-7) ≥ 0",
+
+        "task2": [
+            "(− ∞ ; -1] ∪ [7 ; +∞)",
+            "[-1 ; +∞)",
+            "[-1; 7]",
+            "[7 ; +∞)"
+        ],
+
+        "taskNum": "51E76F"
+    },
+    {
+        "taskCounter": 1119,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 31,
+
+        "task1": "(x+4)(x-8) ≤ 0",
+
+        "task2": [
+            "(− ∞ ; 8]",
+            "(− ∞ ; -4] ∪ [8 ; +∞)",
+            "[-4; 8]",
+            "(− ∞ ; -4]"
+        ],
+
+        "taskNum": "B5976E"
+    },
+    {
+        "taskCounter": 1118,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 31,
+
+        "task1": "(x+3)(x-8) ≥ 0",
+
+        "task2": [
+            "[-3; 8]",
+            "(− ∞ ; -3] ∪ [8 ; +∞)",
+            "[8 ; +∞)",
+            "[-3 ; +∞)"
+        ],
+
+        "taskNum": "4EF368"
+    },
+    {
+        "taskCounter": 1117,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 32,
+
+        "task1": "(x+4)(x-9) ≥ 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "1F76A4"
+    },
+    {
+        "taskCounter": 1116,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 32,
+
+        "task1": "(x+2)(x-4) ≤ 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "98745C"
+    },
+    {
+        "taskCounter": 1115,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 31,
+
+        "task1": "(x+2)(x-7) ≤ 0",
+
+        "task2": [
+        "[-2 ; 7]",
+
+        "(− ∞ ; -2] ∪ [7; +∞)",
+
+         "(− ∞ ; 7]",
+
+        "(− ∞ ; -2]"
+
+        ],
+
+        "taskNum": "195351"
+    },
+    {
+        "taskCounter": 1114,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 32,
+
+        "task1": "(x+2)(x−7) > 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "84371B"
+    },
+    {
+        "taskCounter": 1113,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 31,
+
+        "task1": "(x+5)(x−9) > 0",
+
+        "task2": [
+        "(-5 ; +∞)",
+
+        "(-5 ; 9)",
+
+         "(9 ; +∞)",
+
+        "(-∞ ; -5) ∪ (9 ; +∞)"
+
+        ],
+
+        "taskNum": "4B9815"
+    },
+    {
+        "taskCounter": 1112,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 31,
+
+        "task1": "(x+3)(x-5) ≤ 0",
+
+        "task2": [
+        "(-∞; -3]",
+
+        "[-3; 5]",
+
+         "(-∞; 5]",
+
+        "(-∞; -3] ∪ [5; +∞)"
+
+        ],
+
+        "taskNum": "E7C3B5"
+    },
+    {
+        "taskCounter": 1111,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 32,
+
+        "task1": "(x+3)(x-7) ≤ 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "7DE6BF"
+    },
+    {
+        "taskCounter": 1110,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 32,
+
+        "task1": "(x+1)(x-6) ≤ 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "4E1FB9"
+    },
+    {
+        "taskCounter": 1109,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 31,
+
+        "task1": "(x+9)(x-4) < 0",
+
+        "task2": [
+        "(− 9 ; 4)",
+
+        "(− ∞ ; -9) ∪ (4 ; +∞)",
+
+         "(− ∞ ; -9)",
+
+        "(− ∞ ; 4)"
+
+        ],
+
+        "taskNum": "35567C"
+    },
+    {
+        "taskCounter": 1108,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 4,
+        "task": 31,
+
+        "task1": "(x+6)(x-1) < 0",
+
+        "task2": [
+        "(− ∞ ; 1)",
+
+        "(− ∞ ; -6)",
+
+         "(− ∞ ; -6) ∪ (1 ; + ∞)",
+
+        "(− 6 ; 1)"
+
+        ],
+
+        "taskNum": "676971"
+    },
+    {
+        "taskCounter": 1107,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 3,
+        "task": 31,
+
+        "task1": "(x +3)(x - 6) > 0",
+
+        "task2": [
+        "(6 ; +∞)",
+
+        "(-3 ; +∞)",
+
+         "(-∞;-3 ) ∪ (6 ; +∞)",
+
+        "(-3 ; 6)"
+
+        ],
+
+        "taskNum": "59917D"
+    },
+    {
+        "taskCounter": 1106,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 1,
+        "task": 32,
+
+        "task1": "(x+2)(x-8) ≥ 0",
+
+        "task2": [1,1,1,1],
+
+        "taskNum": "5B9FF3"
+    },
+    {
+        "taskCounter": 1105,
+        "typeTask": 3,
+        "taskKec": [1, 13, 1],
+        "taskAnswer": 2,
+        "task": 31,
+
+        "task1": "(x+2)(x-10) > 0",
+
+        "task2": [
+        "(-2; 10)",
+
+        "(-∞;-2) ∪ (10;+∞)",
+
+         "(10; +∞)",
+
+        "(-2; +∞)"
+
+        ],
+
+        "taskNum": "289E4B"
+    },
+    {
         "taskCounter": 1104,
         "typeTask": 2,
         "taskKec": [1, 13, 1],
