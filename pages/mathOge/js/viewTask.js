@@ -7,7 +7,8 @@ const tasks = {
   ten: '../../src/oge_math/taskTen.json',
   eleven: '../../src/oge_math/taskEleven.json',
   twelve: '../../src/oge_math/taskTwelve.json',
-  thirteen: '../../src/oge_math/taskThirteen.json'
+  thirteen: '../../src/oge_math/taskThirteen.json',
+  fourteen: '../../src/oge_math/taskFourteen.json',
 };
  
 export {tasks};
@@ -17,9 +18,7 @@ export {tasks};
   // three: '../../../src/oge_inf/taskThree.json',
   // four:  '../../../src/oge_inf/taskFour.json',
   // five: '../../../src/oge_inf/taskFive.json',
-  //   seven: '../../../src/oge_inf/taskSeven.json',
 
-  // fourteen: '../../../src/oge_math/taskFourteen.json',
   // fifteen: '../../../src/oge_math/taskFifteen.json',
   // sixteen: '../../../src/oge_math/taskSixteen.json'
 
@@ -2409,27 +2408,252 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>4) ${task3[3] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_4.png">`: `нет решений`}</p>
           </div>
             `
-            : task === 43 ? 
-            `
-          Укажите решение системы неравенств:
-          <hr class="hr-pd_10">
-          <img style="width: 18em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_0.png">
-          <hr class="hr-pd_20">
-          <div >
-            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
-            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
-            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
-            <p>4) ${task2[3]}</p>
-          </div>
-            `
-            :
-            ``}
+            : ``}
           
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
+    if (taskKey === 'fourteen'){
+      let Nomer = 14
+      function reshFourteen(item){
+        if (item === 11){
+          return `
+          a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
+          <hr class="hr-pd_10">
+          a<sub>${task1[3]}</sub> = ${task1[1]} + ${task1[2]} • (${task1[3]} — 1) = ${task1[1] + task1[2]*(task1[3] - 1)}
+          `
+        }
+        else if(item === 12){
+          return `
+          a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
+          <hr class="hr-pd_10">
+          a<sub>${task1[3]}</sub> = ${task1[1]} + ${task1[2]} • (${task1[3]} — 1) = ${task1[1] + task1[2]*(task1[3] - 1)}
+          <hr class="hr-pd_10">
+          S<sub>n</sub> = 
+          &thinsp;<math style="font-size: 140%">
+              <mfrac >
+                <mrow>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>1</mn>
+                  </msub>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>n</mn>
+                  </msub>
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>
+            </math> n
+            <hr class="hr-pd_10">
+            S<sub>${task1[0]}</sub> = &thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mrow style="padding-bottom: 5px;">   
+                  <mn>${task1[1]}</mn>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <mn>${task1[1] + task1[2]*(task1[3] - 1)}</mn>               
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>  
+            </math> &thinsp;• ${task1[0]} = ${ ((task1[1] + (task1[1] + task1[2]*(task1[3] - 1)))/2)*task1[0]}
+
+          `
+        }
+        else if(item === 13){
+          return `
+          a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
+          <hr class="hr-pd_10">
+          d = &thinsp;<math style="font-size: 140%">
+              <mfrac >
+                <mrow style="padding-bottom: 5px;">
+                  <msub>
+                    <mn>a</mn>
+                    <mn>n</mn>
+                  </msub>
+                  <mn>&thinsp;—&thinsp;</mn>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>1</mn>
+                  </msub>
+                </mrow>
+                <mn style="padding-top: 5px;">n — 1</mn>
+              </mfrac>
+            </math>
+            <hr class="hr-pd_20">
+            a<sub>n</sub> = ${task1[2]}, &thinsp;a<sub>1</sub> = ${task1[1]}
+            <hr class="hr-pd_20">
+            d = &thinsp;<math style="font-size: 140%">
+              <mfrac >
+                <mrow style="padding-bottom: 5px;">               
+                  <mn>${task1[2]}</mn>
+                  <mn>&thinsp;—&thinsp;</mn>
+                  <mn>${task1[1]}</mn>
+                </mrow>
+                <mn style="padding-top: 5px;">${task1[4]} — ${task1[3]}</mn>
+              </mfrac>
+            </math> = <math style="font-size: 140%">
+              <mfrac >
+                <mrow style="padding-bottom: 5px;">               
+                  <mn>${task1[2]-task1[1]}</mn>
+                  
+                </mrow>
+                <mn style="padding-top: 5px;">${task1[4]-task1[3]}</mn>
+              </mfrac>
+            </math> = ${(task1[2]-task1[1])/(task1[4]-task1[3])}
+            <hr class="hr-pd_20">
+            a<sub>1</sub> = a<sub>n</sub> — d • (n — 1) = ${task1[2]} — ${(task1[2]-task1[1])/(task1[4]-task1[3])} • (${task1[4]} — 1) = ${task1[2] -((task1[2]-task1[1])/(task1[4]-task1[3]))*(task1[4]-1)}
+            <hr class="hr-pd_20">
+            a<sub>n</sub> = a<sub>1</sub> + d • (n — 1) = ${task1[2] -((task1[2]-task1[1])/(task1[4]-task1[3]))*(task1[4]-1)} + ${(task1[2]-task1[1])/(task1[4]-task1[3])} • (${task1[0]} — 1) = ${task1[2] -((task1[2]-task1[1])/(task1[4]-task1[3]))*(task1[4]-1) + (task1[2]-task1[1])/(task1[4]-task1[3])*(task1[0]-1)}
+            <hr class="hr-pd_20">
+          `
+        }
+        else if(item === 21){
+          return `
+          ${task1[2]} / ${task1[0]} = ${task1[2]/task1[0]}
+          <hr class="hr-pd_10">
+          2<sup>${task1[2]/task1[0]}</sup> = ${Math.pow(2,(task1[2]/task1[0]))}
+          <hr class="hr-pd_10">
+          ${task1[1]} / ${Math.pow(2,(task1[2]/task1[0]))} = ${task1[1] / Math.pow(2,(task1[2]/task1[0]))}
+          `
+        }
+        else if(item === 31){
+          return `
+          ${task1[0]} • ${task1[1]} = ${task1[0]*task1[1]}<hr class="hr-pd_10">
+          ${task1[2]} - ${task1[0]*task1[1]} = ${task1[2] - task1[0]*task1[1]}
+          `
+        }
+        else{return `...`}
+
+      }
+      function numberToWordsRu(num) {
+        const words = {
+            1: 'первом',
+            2: 'втором',
+            3: 'третьем',
+            4: 'четвёртом',
+            5: 'пятом',
+            6: 'шестом',
+            7: 'седьмом',
+            8: 'восьмом',
+            9: 'девятом',
+            10: 'десятом',
+            11: 'одиннадцатом',
+            12: 'двенадцатом',
+            13: 'тринадцатом',
+            14: 'четырнадцатом',
+            15: 'пятнадцатом',
+            16: 'шестнадцатом',
+            17: 'семнадцатом',
+            18: 'восемнадцатом',
+            19: 'девятнадцатом',
+            20: 'двадцатом'
+        };
+        return  words[num]
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            В амфитеатре ${task1[0]} рядов. В первом ряду ${task1[1]} мест, а в каждом следующем на ${task1[2]} места больше, чем в предыдущем. 
+            Сколько мест в ${numberToWordsRu(task1[3])} ряду амфитеатра?
+            `
+            : 
+            task === 12 ? 
+            `
+            В амфитеатре ${task1[0]} рядов. В первом ряду ${task1[1]} мест, а в каждом следующем на ${task1[2]} места больше, чем в предыдущем. Сколько всего мест в амфитеатре?
+            `
+            : task === 13 ? 
+            `
+            В амфитеатре ${task1[0]} рядов, причём в каждом следующем ряду на одно и то же число мест больше, чем в предыдущем. 
+            В ${numberToWordsRu(task1[3])} ряду ${task1[1]} мест, а в ${numberToWordsRu(task1[4])} ряду ${task1[2]} мест. Сколько мест в последнем ряду амфитеатра?
+            `
+            :
+             ``}
+          
+
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          В ходе распада радиоактивного изотопа его масса уменьшается вдвое каждые ${task1[0]} минут. 
+          В начальный момент масса изотопа составляла ${task1[1]} мг. Найдите массу изотопа через ${task1[2]} минуты. 
+          Ответ дайте в миллиграммах.
+
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          При проведении опыта вещество равномерно охлаждали в течение 10 минут. 
+          При этом каждую минуту его температура уменьшалась на ${task1[0]} °C. 
+          Найдите температуру вещества в градусах Цельсия через ${task1[1]} минуты после начала опыта, 
+          если начальная температура вещества составляла ${task1[2]} °C.
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
