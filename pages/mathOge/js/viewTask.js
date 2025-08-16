@@ -2964,9 +2964,20 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
           В треугольнике ABC угол C равен ${task1[0]}°. Найдите внешний угол при вершине C. Ответ дайте в градусах.
-          <hr class="hr-pd_10">
-          <img style="display: block; margin: 0 0 0 900px; width: 10em; " src="../../pages/mathOge/img/task15/15_${taskCounter}.png">
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_${taskCounter}.png"></div>
+            `
+            : task === 12 ? 
+            `
+          В треугольнике ABC известно, что AB=BC, ∠ABC = ${task1[0]}°. Найдите угол BCA. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task15/15_${taskCounter}.png"></div>
+           
+            ` 
+            : ``}
           <hr class="hr-pd_20">
           `
           

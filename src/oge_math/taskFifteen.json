@@ -1,5 +1,16 @@
 [  
     {
+        "taskCounter": 1278,
+        "typeTask": 1,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 36,
+        "task": 12,
+
+        "task1": [108],
+
+        "taskNum": "64AC4E"
+    },
+    {
         "taskCounter": 1277,
         "typeTask": 1,
         "taskKec": [1, 15, 1],
