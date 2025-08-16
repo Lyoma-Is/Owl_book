@@ -2426,6 +2426,33 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     } 
     if (taskKey === 'fourteen'){
       let Nomer = 14
+      function numberToWords(num) {
+        const words = {
+            0: 'ноль',
+            1: 'один',
+            2: 'два',
+            3: 'три',
+            4: 'четыре',
+            5: 'пять',
+            6: 'шесть',
+            7: 'семь',
+            8: 'восемь',
+            9: 'девять',
+            10: 'десять',
+            11: 'одиннадцать',
+            12: 'двенадцать',
+            13: 'тринадцать',
+            14: 'четырнадцать',
+            15: 'пятнадцать',
+            16: 'шестнадцать',
+            17: 'семнадцать',
+            18: 'восемнадцать',
+            19: 'девятнадцать',
+            20: 'двадцать'
+        };
+        return  words[num]
+      }
+
       function reshFourteen(item){
         if (item === 11){
           return `
@@ -2533,6 +2560,23 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return `
           ${task1[0]} • ${task1[1]} = ${task1[0]*task1[1]}<hr class="hr-pd_10">
           ${task1[2]} - ${task1[0]*task1[1]} = ${task1[2] - task1[0]*task1[1]}
+          `
+        }
+        else if(item === 41){
+          return `
+          ${task1[2]} / ${task1[1]} = <b>${task1[2]/task1[1]}</b> 
+          <hr class="hr-pd_10">
+          ${task1[3]}<b><sup>${task1[2]/task1[1]}</sup></b> = ${Math.pow(task1[3],task1[2]/task1[1])}
+          <hr class="hr-pd_10">
+          ${task1[0]} • ${Math.pow(task1[3],task1[2]/task1[1])} = ${task1[0]*Math.pow(task1[3],task1[2]/task1[1])}
+
+          `
+        }
+        else if(item === 51){
+          
+          return `
+          ...
+
           `
         }
         else{return `...`}
@@ -2646,7 +2690,30 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 4:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
-          
+          В ходе биологического эксперимента в чашку Петри с питательной средой поместили колонию микроорганизмов массой ${task1[0]} мг. 
+          За каждые 30 минут масса колонии увеличивается в ${task1[1]} раза. 
+          Найдите массу колонии микроорганизмов через ${task1[2]} минут после начала эксперимента.
+          Ответ дайте в миллиграммах.
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 5:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          Каучуковый мячик с силой бросили на асфальт. Отскочив, мячик подпрыгнул на ${task1[0]} м, 
+          а при каждом следующем прыжке он поднимался на высоту в ${numberToWords(task1[2])} раза меньше предыдущей. 
+          При каком по счёту прыжке мячик в первый раз не достигнет высоты ${task1[1]} см?
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
