@@ -158,6 +158,7 @@ taskPage.innerHTML = `
 <option value="taskTwelvePage.html">12. Расчёты по формулам.</option>
 <option value="taskThirteenPage.html">13. Не­ра­вен­ства, системы неравенств.</option>
 <option value="taskFourteenPage.html">14. Задачи на прогрессии.</option>
+<option value="taskFifteenPage.html">15. Треугольник.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -168,7 +169,7 @@ taskPage.innerHTML = `
 //
 
 //
-//<option value="taskFifteenPage.html">15. .</option>
+//
 //<option value="taskSixteenPage.html">16. .</option>
 
 const taskSort = document.getElementById('taskSort');
@@ -248,7 +249,7 @@ document.addEventListener('click', function(e) {
       12: "КЭС:	1.5 Приближённые вычисления, правила округления, прикидка и оценка результата вычислений.<br>КЭС: 2.1 Буквенные выражения (выражения с переменными).<br>КЭС: 2.2 Степень с целым показателем. Степень с рациональным показателем. Свойства степени.<br>КЭС: 2.5 Арифметический корень натуральной степени. Действия с арифметическими корнями натуральной степени.",
       13: "КЭС: 3.2 Целые и дробно-рациональные неравенства. Системы и совокупности неравенств.",
       14: "КЭС: 4.2 Арифметическая и геометрическая прогрессии. Формула сложных процентов.",
-      15: "КЭС: ",
+      15: "КЭС: 7.2 Треугольник.<br>КЭС: 7.5 Измерение геометрических величин.",
       16: "КЭС: "
     };
 

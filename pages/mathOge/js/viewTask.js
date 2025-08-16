@@ -9,6 +9,7 @@ const tasks = {
   twelve: '../../src/oge_math/taskTwelve.json',
   thirteen: '../../src/oge_math/taskThirteen.json',
   fourteen: '../../src/oge_math/taskFourteen.json',
+  fifteen: '../../src/oge_math/taskFifteen.json'
 };
  
 export {tasks};
@@ -19,7 +20,7 @@ export {tasks};
   // four:  '../../../src/oge_inf/taskFour.json',
   // five: '../../../src/oge_inf/taskFive.json',
 
-  // fifteen: '../../../src/oge_math/taskFifteen.json',
+  // ,
   // sixteen: '../../../src/oge_math/taskSixteen.json'
 
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
@@ -51,7 +52,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const beginTask = () => `<div class="tasks-blocks">`;
     const endTask = () => `</div>`;
     let answerBlock = "";
- //   answerBlock += beginTask(); <sup>2</sup>   — • &thinsp; √   &nbsp;
+ //   answerBlock += beginTask(); 
  //   answerBlock += endTask();
 
     if (taskKey === 'six'){
@@ -383,7 +384,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     } 
-    // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
+    
     if (taskKey === 'eight'){
       let Nomer = 8
       function eightAnswer(task){
@@ -1396,7 +1397,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     }
-    // "task2": ["", "", "", "", "", "", "", "", ""],
     if (taskKey === 'eleven'){
       let Nomer = 11
       function delEleven(item){
@@ -2956,5 +2956,46 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     } 
+    // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
+    // <sup>2</sup>   — • &thinsp; √   &nbsp;
+    if (taskKey === 'fifteen'){
+      let Nomer = 15
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          В треугольнике ABC угол C равен ${task1[0]}°. Найдите внешний угол при вершине C. Ответ дайте в градусах.
+          <hr class="hr-pd_10">
+          <img style="display: block; margin: 0 0 0 900px; width: 10em; " src="../../pages/mathOge/img/task15/15_${taskCounter}.png">
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    }
    
 }
