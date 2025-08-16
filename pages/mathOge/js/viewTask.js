@@ -2426,6 +2426,31 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     } 
     if (taskKey === 'fourteen'){
       let Nomer = 14
+      function numberToWordsRu(num) {
+        const words = {
+            1: 'первом',
+            2: 'втором',
+            3: 'третьем',
+            4: 'четвёртом',
+            5: 'пятом',
+            6: 'шестом',
+            7: 'седьмом',
+            8: 'восьмом',
+            9: 'девятом',
+            10: 'десятом',
+            11: 'одиннадцатом',
+            12: 'двенадцатом',
+            13: 'тринадцатом',
+            14: 'четырнадцатом',
+            15: 'пятнадцатом',
+            16: 'шестнадцатом',
+            17: 'семнадцатом',
+            18: 'восемнадцатом',
+            19: 'девятнадцатом',
+            20: 'двадцатом'
+        };
+        return  words[num]
+      }
       function numberToWords(num) {
         const words = {
             0: 'ноль',
@@ -2452,7 +2477,33 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         };
         return  words[num]
       }
-
+      function numberToWord(num) {
+        const words = {
+            1: 'первый',
+            2: 'второй',
+            3: 'третий',
+            4: 'четвёртый',
+            5: 'пятый',
+            6: 'шестой',
+            7: 'седьмой',
+            8: 'восьмой',
+            9: 'девятый',
+            10: 'десятый',
+        };
+        return  words[num]
+      }
+      function jumpBoll(e){
+          let t = task1[0]*100;
+          let k = 1;
+          let l = ""
+          while(t > e){
+            t = t / task1[2]
+           
+            k += 1
+            l += `${numberToWord(k)} прыжок: ${t.toString().length > 6 ? t.toFixed(2): t}<br>`
+          }
+          return l
+      }
       function reshFourteen(item){
         if (item === 11){
           return `
@@ -2572,41 +2623,147 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
           `
         }
-        else if(item === 51){
-          
+        else if(item === 51){  
           return `
-          ...
+          первый прыжок: ${task1[0]*100}<br>
+          ${jumpBoll(task1[1])}
+
+          `
+        }
+        else if(item === 61){  
+          return `
+          a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
+          <hr class="hr-pd_10">
+          d = —${task1[1]}
+          <hr class="hr-pd_10">
+          a<sub>${task1[2]}</sub> = ${task1[0]} — ${task1[1]} • (${task1[2]} — 1) = ${task1[0] - task1[1]*(task1[2] - 1)}
+          <hr class="hr-pd_10">
+          S<sub>n</sub> = 
+          &thinsp;<math style="font-size: 140%">
+              <mfrac >
+                <mrow>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>1</mn>
+                  </msub>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>n</mn>
+                  </msub>
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>
+            </math> n
+            <hr class="hr-pd_10">
+            S<sub>${task1[2]}</sub> = &thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mrow style="padding-bottom: 5px;">   
+                  <mn>${task1[0]}</mn>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <mn>${task1[0] - task1[1]*(task1[2] - 1)}</mn>               
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>  
+            </math> &thinsp;• ${task1[2]} = ${((task1[0] + (task1[0] - task1[1]*(task1[2] - 1)))/2)*task1[2]}
+
+          `
+        }
+        else if(item === 62){  
+          return `
+          a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
+          <hr class="hr-pd_10">
+          d = —${task1[1]}
+          <hr class="hr-pd_10">
+          n = ${task1[0]} / ${task1[1]} = ${task1[0]/task1[1]}
+          <hr class="hr-pd_10">
+          a<sub>${task1[2]}</sub> = ${task1[0]} — ${task1[1]} • (${task1[2]} — 1) = ${task1[0] - task1[1]*(task1[2] - 1)}
+          <hr class="hr-pd_10">
+          S<sub>n</sub> = 
+          &thinsp;<math style="font-size: 140%">
+              <mfrac >
+                <mrow>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>1</mn>
+                  </msub>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>n</mn>
+                  </msub>
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>
+            </math> n
+            <hr class="hr-pd_10">
+            S<sub>${task1[2]}</sub> = &thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mrow style="padding-bottom: 5px;">   
+                  <mn>${task1[0]}</mn>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <mn>${task1[0] - task1[1]*(task1[2] - 1)}</mn>               
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>  
+            </math> &thinsp;• ${task1[2]} = ${((task1[0] + (task1[0] - task1[1]*(task1[2] - 1)))/2)*task1[2]}
+
+          `
+        }
+        else if(item === 71){
+          return `
+          ${task1[2]} • (${task1[2]} — 1) / 2 = ${task1[2]*(task1[2]-1) / 2} 
+          <hr class="hr-pd_10">
+          ${task1[2]} • ${task1[0]} + ${task1[2]*(task1[2]-1) / 2} • ${task1[1]} =
+          ${(task1[2]*task1[0]).toFixed(1)} + ${((task1[2]*(task1[2]-1) / 2) * task1[1]).toFixed(1)} =
+          ${(task1[2]*task1[0] + (task1[2]*(task1[2]-1) / 2) * task1[1]).toFixed(1)}
+          `
+
+        }
+        else if(item === 81){
+          return `
+          a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
+          <hr class="hr-pd_10">
+          a<sub>${task1[2]}</sub> = ${task1[0]} + ${task1[1]} • (${task1[2]} — 1) = ${task1[0] + task1[1]*(task1[2] - 1)}
+          <hr class="hr-pd_10">
+          S<sub>n</sub> = 
+          &thinsp;<math style="font-size: 140%">
+              <mfrac >
+                <mrow>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>1</mn>
+                  </msub>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <msub>
+                    <mn>a</mn>
+                    <mn>n</mn>
+                  </msub>
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>
+            </math> n
+            <hr class="hr-pd_10">
+            S<sub>${task1[2]}</sub> = &thinsp;
+            <math style="font-size: 140%">
+              <mfrac >
+                <mrow style="padding-bottom: 5px;">   
+                  <mn>${task1[0]}</mn>
+                  <mn>&thinsp;+&thinsp;</mn>
+                  <mn>${task1[0] + task1[1]*(task1[2] - 1)}</mn>               
+                </mrow>
+                <mn style="padding-top: 5px;">2</mn>
+              </mfrac>  
+            </math> &thinsp;• ${task1[2]} = ${ ((task1[0] + (task1[0] + task1[1]*(task1[2] - 1)))/2)*task1[2]}
 
           `
         }
         else{return `...`}
 
       }
-      function numberToWordsRu(num) {
-        const words = {
-            1: 'первом',
-            2: 'втором',
-            3: 'третьем',
-            4: 'четвёртом',
-            5: 'пятом',
-            6: 'шестом',
-            7: 'седьмом',
-            8: 'восьмом',
-            9: 'девятом',
-            10: 'десятом',
-            11: 'одиннадцатом',
-            12: 'двенадцатом',
-            13: 'тринадцатом',
-            14: 'четырнадцатом',
-            15: 'пятнадцатом',
-            16: 'шестнадцатом',
-            17: 'семнадцатом',
-            18: 'восемнадцатом',
-            19: 'девятнадцатом',
-            20: 'двадцатом'
-        };
-        return  words[num]
-      }
+      
       switch(typeTask){
         case 1:
           answerBlock += `
@@ -2714,6 +2871,75 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           Каучуковый мячик с силой бросили на асфальт. Отскочив, мячик подпрыгнул на ${task1[0]} м, 
           а при каждом следующем прыжке он поднимался на высоту в ${numberToWords(task1[2])} раза меньше предыдущей. 
           При каком по счёту прыжке мячик в первый раз не достигнет высоты ${task1[1]} см?
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 6:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          ${task === 61 ? 
+            `Водитель автомобиля начал торможение. 
+          За секунду после начала торможения автомобиль проехал ${task1[0]}&nbsp;м, а за каждую следующую секунду он проезжал на ${task1[1]}&nbsp;м меньше, чем за предыдущую. 
+          Сколько метров автомобиль прошёл за первые ${task1[2]}&nbsp;секунд торможения?
+            `
+            : task === 62 ?
+            `
+            Водитель автомобиля начал торможение. 
+            За секунду после начала торможения автомобиль проехал ${task1[0]}&nbsp;м, а за каждую следующую секунду он проезжал на ${task1[1]}&nbsp;м меньше, чем за предыдущую. 
+            Сколько метров автомобиль прошёл до полной остановки?
+            `
+            : ``}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 7:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          Поезд начал движение от станции. За первую секунду состав сдвинулся на ${task1[0]}&nbsp;м, 
+          а за каждую следующую секунду он проходил на ${task1[1]}&nbsp;м больше, чем за предыдущую. 
+          Сколько метров состав прошёл за первые ${task1[2]}&nbsp;секунд движения?
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFourteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 8:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          Камень бросают в глубокое ущелье. За первую секунду он пролетает ${task1[0]}&nbsp;м, а за каждую следующую секунду на ${task1[1]}&nbsp;м больше, 
+          чем за предыдущую, до тех пор, пока не достигнет дна ущелья. Сколько метров пролетит камень за первые ${task1[2]}&nbsp;секунд?
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
