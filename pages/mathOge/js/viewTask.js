@@ -2968,16 +2968,42 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
           В треугольнике ABC угол C равен ${task1[0]}°. Найдите внешний угол при вершине C. Ответ дайте в градусах.
           <hr class="hr-pd_20">
-          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_${taskCounter}.png"></div>
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1277.png"></div>
             `
             : task === 12 ? 
             `
           В треугольнике ABC известно, что AB=BC, ∠ABC = ${task1[0]}°. Найдите угол BCA. Ответ дайте в градусах.
           <hr class="hr-pd_20">
-          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task15/15_${taskCounter}.png"></div>
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1278.png"></div>
            
             ` 
-            : ``}
+            : task === 13 ? 
+            `
+            В треугольнике ABC известно, что ∠BAC = ${task1[0]}°, AD — биссектриса. Найдите угол BAD. Ответ дайте в градусах.
+            <hr class="hr-pd_20">
+           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1279.png"></div>
+            `
+            : task === 14 ? 
+            `
+            Один из острых углов прямоугольного треугольника равен ${task1[0]}°. Найдите его другой острый угол. Ответ дайте в градусах.
+           <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task15/15_1281.png"></div>
+           
+            `
+            : task === 15 ? 
+             `В остроугольном треугольнике ABC проведена высота BH, ∠BAC = ${task1[0]}°. Найдите угол ABH. Ответ дайте в градусах.
+             <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_1284.png"></div>
+           
+             `
+             : task === 16 ? 
+             `В треугольнике два угла равны ${task1[0]}° и ${task1[1]}°. Найдите его третий угол. Ответ дайте в градусах.
+             <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1285.png"></div>
+           
+             `
+             : 
+             ``}
           <hr class="hr-pd_20">
           `
           
