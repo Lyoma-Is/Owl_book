@@ -3020,7 +3020,98 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `${
+            task1[1] === "m" ? 
+              `Медиана равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              Найдите сторону этого треугольника.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1345.png"></div>
+           
+              `
+            : 
+            task1[1] === "v" ? 
+              `Высота равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              Найдите сторону этого треугольника.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1350.png"></div>
+           
+              `
+            :
+            task1[1] === "b" ? 
+              `Биссектриса равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              Найдите сторону этого треугольника.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1349.png"></div>
+           
+              `
+            :
+            task1[1] === "sb" ? 
+              `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              Найдите биссектрису этого треугольника.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1349.png"></div>
+           
+              `
+            :  task1[1] === "sm" ? 
+              `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              Найдите медиану этого треугольника.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1345.png"></div>
+           
+              `
+            : task1[1] === "sv" ? 
+              `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              Найдите высоту этого треугольника.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1350.png"></div>
+           
+              `
+            :
+
+            ``}` 
+            : task === 22 ? 
+            `${
+            task1[2] === "g" ? 
+              `Катеты прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите гипотенузу этого треугольника.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>
+           
+              `
+            : 
+            `
+            В прямоугольном треугольнике катет и гипотенуза равны ${task1[0]} и ${task1[1]} соответственно. Найдите другой катет этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>
+           
+            `}` 
+            : task === 23 ? 
+            `
+            В треугольнике ABC известно, что AC = ${task1[0]}, BM — медиана, BM = ${task1[1]}. Найдите AM.
+             <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1356.png"></div>
+           
+            `
+            : task === 24 ? 
+            `
+            Точки M и N являются серединами сторон AB и BC треугольника ABC, сторона AB равна ${task1[0]}, сторона BC равна ${task1[1]}, сторона AC равна ${task1[2]}. 
+            Найдите MN.
+             <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1365.png"></div>
+           
+            `
+            : task === 25 ? 
+            `
+            В равнобедренном треугольнике ABC с основанием AC  внешний угол при вершине C  равен ${task1[0]}° . Найдите величину угла ABC. Ответ дайте в градусах.
+             <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task15/15_1417.png"></div>
+           
+            `
+            :
+            
+            ``}
           
+          <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();

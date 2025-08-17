@@ -1,5 +1,808 @@
 [  
     {
+        "taskCounter": 1417,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 66,
+        "task": 25,
+
+        "task1": [123],
+
+        "taskNum": "C24747"
+    },
+    {
+        "taskCounter": 1416,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 29,
+        "task": 22,
+
+        "task1": [20, 21,"g"],
+
+        "taskNum": "9B2289"
+    },
+    {
+        "taskCounter": 1415,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 31,
+        "task": 24,
+
+        "task1": [42, 44, 62],
+
+        "taskNum": "C4C88B"
+    },
+    {
+        "taskCounter": 1414,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 52,
+        "task": 24,
+
+        "task1": [83, 62, 104],
+
+        "taskNum": "D24F86"
+    },
+    {
+        "taskCounter": 1413,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 30,
+        "task": 22,
+
+        "task1": [16, 34, "k"],
+
+        "taskNum": "328539"
+    },
+    {
+        "taskCounter": 1412,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 18,
+        "task": 21,
+
+        "task1": [9,"sv"],
+
+        "taskNum": "911A31"
+    },
+    {
+        "taskCounter": 1411,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 25,
+        "task": 22,
+
+        "task1": [20, 15, "g"],
+
+        "taskNum": "265E3E"
+    },
+    {
+        "taskCounter": 1410,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 15,
+        "task": 22,
+
+        "task1": [8, 17, "k"],
+
+        "taskNum": "B1D433"
+    },
+    {
+        "taskCounter": 1409,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 7,
+        "task": 23,
+
+        "task1": [14, 10],
+
+        "taskNum": "67E364"
+    },
+    {
+        "taskCounter": 1408,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 64,
+        "task": 24,
+
+        "task1": [95, 80, 128],
+
+        "taskNum": "8B61EB"
+    },
+    {
+        "taskCounter": 1407,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 30,
+        "task": 22,
+
+        "task1": [18, 24, "g"],
+
+        "taskNum": "A0EBE9"
+    },
+    {
+        "taskCounter": 1406,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 18,
+        "task": 21,
+
+        "task1": [9,"b"],
+
+        "taskNum": "D33BE4"
+    },
+    {
+        "taskCounter": 1405,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 18,
+        "task": 21,
+
+        "task1": [12,"sm"],
+
+        "taskNum": "411EE5"
+    },
+    {
+        "taskCounter": 1404,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 50,
+        "task": 22,
+
+        "task1": [30, 40, "g"],
+
+        "taskNum": "33759E"
+    },
+    {
+        "taskCounter": 1403,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 26,
+        "task": 21,
+
+        "task1": [13,"sv"],
+
+        "taskNum": "98F294"
+    },
+    {
+        "taskCounter": 1402,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 22,
+
+        "task1": [7, 25, "k"],
+
+        "taskNum": "A74393"
+    },
+    {
+        "taskCounter": 1401,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 25,
+        "task": 22,
+
+        "task1": [7, 24, "g"],
+
+        "taskNum": "7BF396"
+    },
+    {
+        "taskCounter": 1400,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 17,
+        "task": 23,
+
+        "task1": [34, 26],
+
+        "taskNum": "060099"
+    },
+    {
+        "taskCounter": 1399,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 12,
+        "task": 22,
+
+        "task1": [9, 15, "k"],
+
+        "taskNum": "C3EEC0"
+    },
+    {
+        "taskCounter": 1398,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 28,
+        "task": 23,
+
+        "task1": [56, 48],
+
+        "taskNum": "60B4A9"
+    },
+    {
+        "taskCounter": 1397,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 25,
+        "task": 24,
+
+        "task1": [31, 42, 50],
+
+        "taskNum": "E29AAA"
+    },
+    {
+        "taskCounter": 1396,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 15,
+        "task": 22,
+
+        "task1": [9, 12, "g"],
+
+        "taskNum": "0E7DA8"
+    },
+    {
+        "taskCounter": 1395,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 32,
+        "task": 24,
+
+        "task1": [20, 58, 64],
+
+        "taskNum": "354F50"
+    },
+    {
+        "taskCounter": 1394,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 21,
+
+        "task1": [16, "sb"],
+
+        "taskNum": "A97C55"
+    },
+    {
+        "taskCounter": 1393,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 9,
+        "task": 23,
+
+        "task1": [18, 14],
+
+        "taskNum": "ABDD54"
+    },
+    {
+        "taskCounter": 1392,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 18,
+        "task": 23,
+
+        "task1": [36, 13],
+
+        "taskNum": "D9FB5F"
+    },
+    {
+        "taskCounter": 1391,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 26,
+        "task": 22,
+
+        "task1": [10, 24, "g"],
+
+        "taskNum": "36ECD2"
+    },
+    {
+        "taskCounter": 1390,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 15,
+        "task": 22,
+
+        "task1": [20, 25, "k"],
+
+        "taskNum": "CC5DD4"
+    },
+    {
+        "taskCounter": 1389,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 40,
+        "task": 22,
+
+        "task1": [30, 50, "k"],
+
+        "taskNum": "D4ECD4"
+    },
+    {
+        "taskCounter": 1388,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 20,
+        "task": 22,
+
+        "task1": [12, 16, "g"],
+
+        "taskNum": "D4ECD4"
+    },
+    {
+        "taskCounter": 1387,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 26,
+        "task": 21,
+
+        "task1": [13, "m"],
+
+        "taskNum": "2B00D0"
+    },
+    {
+        "taskCounter": 1386,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 6,
+        "task": 23,
+
+        "task1": [12, 11],
+
+        "taskNum": "1893DC"
+    },
+    {
+        "taskCounter": 1385,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 13,
+        "task": 24,
+
+        "task1": [24, 13, 26],
+
+        "taskNum": "BD7DDF"
+    },
+    {
+        "taskCounter": 1384,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 36,
+        "task": 24,
+
+        "task1": [48, 57, 72],
+
+        "taskNum": "87FC25"
+    },
+    {
+        "taskCounter": 1383,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 16,
+        "task": 22,
+
+        "task1": [12, 20, "k"],
+
+        "taskNum": "38EF21"
+    },
+    {
+        "taskCounter": 1382,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 20,
+        "task": 24,
+
+        "task1": [31, 27, 40],
+
+        "taskNum": "6B712D"
+    },
+     {
+        "taskCounter": 1381,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 26,
+        "task": 23,
+
+        "task1": [52, 36],
+
+        "taskNum": "50022C"
+    },
+    {
+        "taskCounter": 1380,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 18,
+        "task": 21,
+
+        "task1": [12, "sv"],
+
+        "taskNum": "D5802A"
+    },
+    {
+        "taskCounter": 1379,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 22,
+
+        "task1": [26, 39, 48],
+
+        "taskNum": "20402C"
+    },
+    {
+        "taskCounter": 1378,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 40,
+        "task": 22,
+
+        "task1": [9, 41, "k"],
+
+        "taskNum": "26C62D"
+    },
+    {
+        "taskCounter": 1377,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 14,
+        "task": 24,
+
+        "task1": [21, 22, 28],
+
+        "taskNum": "1D9426"
+    },
+    {
+        "taskCounter": 1376,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 13,
+        "task": 22,
+
+        "task1": [12, 5, "g"],
+
+        "taskNum": "7BFD23"
+    },
+    {
+        "taskCounter": 1375,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 22,
+        "task": 21,
+
+        "task1": [11, "m"],
+
+        "taskNum": "EF0911"
+    },
+    {
+        "taskCounter": 1374,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 21,
+        "task": 21,
+
+        "task1": [14, "sb"],
+
+        "taskNum": "AF7118"
+    },
+    {
+        "taskCounter": 1373,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 34,
+        "task": 22,
+
+        "task1": [16, 30, "g"],
+
+        "taskNum": "1DFD1B"
+    },
+    {
+        "taskCounter": 1372,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 22,
+        "task": 21,
+
+        "task1": [11, "b"],
+
+        "taskNum": "79A610"
+    },
+    {
+        "taskCounter": 1371,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 12,
+        "task": 22,
+
+        "task1": [5, 13, "k"],
+
+        "taskNum": "F35611"
+    },
+    {
+        "taskCounter": 1370,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 8,
+        "task": 23,
+
+        "task1": [16, 12],
+
+        "taskNum": "E568B1"
+    },
+    {
+        "taskCounter": 1369,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 37,
+        "task": 24,
+
+        "task1": [66, 37, 74],
+
+        "taskNum": "97C0BA"
+    },
+    {
+        "taskCounter": 1368,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 22,
+        "task": 21,
+
+        "task1": [11, "v"],
+
+        "taskNum": "C200BE"
+    },
+    {
+        "taskCounter": 1367,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 21,
+        "task": 21,
+
+        "task1": [14, "sm"],
+
+        "taskNum": "A911BB"
+    },
+    {
+        "taskCounter": 1366,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 29,
+        "task": 23,
+
+        "task1": [58, 37],
+
+        "taskNum": "2889B5"
+    },
+    {
+        "taskCounter": 1365,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 17,
+        "task": 24,
+
+        "task1": [28, 34, 19],
+
+        "taskNum": "116AB8"
+    },
+    {
+        "taskCounter": 1364,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 15,
+        "task": 21,
+
+        "task1": [10, "sv"],
+
+        "taskNum": "1A37BC"
+    },
+    {
+        "taskCounter": 1363,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 16,
+        "task": 23,
+
+        "task1": [32, 23],
+
+        "taskNum": "77FDB2"
+    },
+    {
+        "taskCounter": 1362,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 21,
+
+        "task1": [16, "sv"],
+
+        "taskNum": "0F89BC"
+    },
+    {
+        "taskCounter": 1361,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 26,
+        "task": 21,
+
+        "task1": [13, "b"],
+
+        "taskNum": "877976"
+    },
+    {
+        "taskCounter": 1360,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 21,
+
+        "task1": [12, "m"],
+
+        "taskNum": "9F9A78"
+    },
+    {
+        "taskCounter": 1359,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 21,
+
+        "task1": [12, "b"],
+
+        "taskNum": "52CB7E"
+    },
+    {
+        "taskCounter": 1358,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 15,
+        "task": 21,
+
+        "task1": [10, "sm"],
+
+        "taskNum": "02147B"
+    },
+    {
+        "taskCounter": 1357,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 19,
+        "task": 23,
+
+        "task1": [38, 17],
+
+        "taskNum": "41017F"
+    },
+    {
+        "taskCounter": 1356,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 27,
+        "task": 23,
+
+        "task1": [54, 43],
+
+        "taskNum": "CF9F09"
+    },
+     {
+        "taskCounter": 1355,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 18,
+        "task": 21,
+
+        "task1": [12, "sb"],
+
+        "taskNum": "ACC20D"
+    },
+    {
+        "taskCounter": 1354,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 12,
+        "task": 22,
+
+        "task1": [16, 20, "k"],
+
+        "taskNum": "6AB9FA"
+    },
+    {
+        "taskCounter": 1353,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 21,
+        "task": 21,
+
+        "task1": [14, "sv"],
+
+        "taskNum": "C404FC"
+    },
+    {
+        "taskCounter": 1352,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 21,
+
+        "task1": [16, "sm"],
+
+        "taskNum": "A05CF1"
+    },
+    {
+        "taskCounter": 1351,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 100,
+        "task": 22,
+
+        "task1": [60, 80, "g"],
+
+        "taskNum": "5256FC"
+    },
+    {
+        "taskCounter": 1350,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 24,
+        "task": 21,
+
+        "task1": [12, "v"],
+
+        "taskNum": "4E59F7"
+    },
+    {
+        "taskCounter": 1349,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 15,
+        "task": 21,
+
+        "task1": [10, "sb"],
+
+        "taskNum": "BD0443"
+    },
+    {
+        "taskCounter": 1348,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 30,
+        "task": 22,
+
+        "task1": [40, 50, "k"],
+
+        "taskNum": "BB7A45"
+    },
+    {
+        "taskCounter": 1347,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 9,
+        "task": 22,
+
+        "task1": [40, 41, "k"],
+
+        "taskNum": "760845"
+    },
+    {
+        "taskCounter": 1346,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 17,
+        "task": 22,
+
+        "task1": [8, 15, "g"],
+
+        "taskNum": "760E4B"
+    },
+    {
+        "taskCounter": 1345,
+        "typeTask": 2,
+        "taskKec": [1, 15, 1],
+        "taskAnswer": 18,
+        "task": 21,
+
+        "task1": [9, "m"],
+
+        "taskNum": "02E441"
+    },
+    {
         "taskCounter": 1344,
         "typeTask": 1,
         "taskKec": [1, 15, 1],
