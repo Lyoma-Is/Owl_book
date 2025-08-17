@@ -514,4 +514,16 @@ main .btn-primary:active {
 
 .btn-up_hide {
   display: none;
+}
+
+.section-site {
+  padding: 20px;
+}
+.section-site h2 {
+  font-size: 2em;
+}
+.section-site a {
+  display: block;
+  padding: 0.5em;
+  font-size: 1.8em;
 }/*# sourceMappingURL=index.css.map */

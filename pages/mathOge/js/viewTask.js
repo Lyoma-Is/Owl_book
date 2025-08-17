@@ -3123,6 +3123,60 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             answerBlock += generateInput();
           } 
           return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `
+            Два катета прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите площадь этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>
+           
+            `
+            : task === 32 ? 
+            `
+            В треугольнике ABC известно, что AB = ${task1[0]}, BC = ${task1[1]}, sin∠ABC = 
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
+                <mn style="padding-top: 5px;">${task1[3]}</mn>
+              </mfrac>
+            </math>.
+            Найдите площадь треугольника ABC.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1419.png"></div>
+           
+            `
+            : 
+
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
         }   
     }
    
