@@ -159,6 +159,7 @@ taskPage.innerHTML = `
 <option value="taskThirteenPage.html">13. Не­ра­вен­ства, системы неравенств.</option>
 <option value="taskFourteenPage.html">14. Задачи на прогрессии.</option>
 <option value="taskFifteenPage.html">15. Треугольник.</option>
+<option value="taskSixteenPage.html">16. Окружность, круг и их элементы.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -166,11 +167,6 @@ taskPage.innerHTML = `
 //<option value="taskThreePage.html">3. .</option>
 //<option value="taskFourPage.html">4. .</option>
 //<option value="taskFivePage.html">5. .</option>
-//
-
-//
-//
-//<option value="taskSixteenPage.html">16. .</option>
 
 const taskSort = document.getElementById('taskSort');
 if (taskSort) {
@@ -250,7 +246,7 @@ document.addEventListener('click', function(e) {
       13: "КЭС: 3.2 Целые и дробно-рациональные неравенства. Системы и совокупности неравенств.",
       14: "КЭС: 4.2 Арифметическая и геометрическая прогрессии. Формула сложных процентов.",
       15: "КЭС: 7.2 Треугольник.<br>КЭС: 7.5 Измерение геометрических величин.",
-      16: "КЭС: "
+      16: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.4 Окружность и круг.<br>КЭС: 7.5 Измерение геометрических величин."
     };
 
     // Формируем содержимое с кнопкой закрытия

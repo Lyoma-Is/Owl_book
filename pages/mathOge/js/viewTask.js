@@ -9,7 +9,8 @@ const tasks = {
   twelve: '../../src/oge_math/taskTwelve.json',
   thirteen: '../../src/oge_math/taskThirteen.json',
   fourteen: '../../src/oge_math/taskFourteen.json',
-  fifteen: '../../src/oge_math/taskFifteen.json'
+  fifteen: '../../src/oge_math/taskFifteen.json',
+  sixteen: '../../src/oge_math/taskSixteen.json'
 };
  
 export {tasks};
@@ -19,9 +20,6 @@ export {tasks};
   // three: '../../../src/oge_inf/taskThree.json',
   // four:  '../../../src/oge_inf/taskFour.json',
   // five: '../../../src/oge_inf/taskFive.json',
-
-  // ,
-  // sixteen: '../../../src/oge_math/taskSixteen.json'
 
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec} = item;
@@ -384,7 +382,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     } 
-    
     if (taskKey === 'eight'){
       let Nomer = 8
       function eightAnswer(task){
@@ -3252,6 +3249,173 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           
           <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    }
+    if (taskKey === 'sixteen'){
+      let Nomer = 16
+      function reshSixteen(item){
+        if(item === 11){
+          return `
+          ${task1[2] === 1 ? 
+            `
+          ∠CAD = ∠CBD = ${task1[1]}°<hr class="hr-pd_10">
+          ∠ABC = ${task1[0]}°<hr class="hr-pd_10">
+          ∠ABC = ∠ABD + ∠CBD<hr class="hr-pd_10">
+          ∠ABD = ∠ABC — ∠CBD = ${task1[0]}° — ${task1[1]}° = ${task1[0]-task1[1]}°<hr class="hr-pd_10">
+          ∠ABD = ${task1[0]-task1[1]}°`
+            :
+             `
+          ∠CAD = ∠CBD = ${task1[1]}°<hr class="hr-pd_10">
+          ∠ABD = ${task1[0]}°<hr class="hr-pd_10">
+          ∠ABC = ∠ABD + ∠CBD = ${task1[0]}° + ${task1[1]}° = ${task1[0]+task1[1]}°<hr class="hr-pd_10">
+        
+          ∠ABC = ${task1[0]+task1[1]}°
+
+             `}`
+        }
+        else if(item === 12){
+          return `
+          ${task1[1] === 1 ? 
+            `
+            180° — ${task1[0]}°  / 2 = ${(180-task1[0])/2}°
+            `
+            : 
+            `
+            180° — ${task1[0]}° • 2 = ${180-task1[0]*2}°
+
+            `}
+          `
+
+        }
+        else if(item === 13){
+          return `
+          90° — ${task1[0]}° = ${(90-task1[0])}°
+          
+          `
+
+        }
+        else if(item === 14){
+          return `
+          ${task1[1] === 1 ? 
+            `
+            ${task1[0]}° / 2 = ${(task1[0])/2}°
+            `
+            : ``}
+          `
+
+        }
+        else{
+          return`...`
+        }
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            ${task1[2] === 1 ? 
+              `
+              Четырёхугольник ABCD вписан в окружность. Угол ABC равен ${task1[0]}°, угол CAD равен ${task1[1]}°. Найдите угол ABD. Ответ дайте в градусах.
+              `
+              : 
+              `
+              Четырёхугольник ABCD вписан в окружность. Угол ABD равен ${task1[0]}°, угол CAD равен ${task1[1]}°. Найдите угол ABC. Ответ дайте в градусах.
+              `}
+          
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1509.png"></div>
+          
+            `
+            : task === 12 ?
+            `
+            ${task1[1] === 1 ?
+              `
+            В окружности с центром в точке O отрезки AC и BD — диаметры. Угол AOD равен ${task1[0]}°. Найдите угол ACB. Ответ дайте в градусах.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1512.png"></div>
+          
+
+              `
+              :
+              `
+              Отрезки AC и BD — диаметры окружности с центром в точке O. Угол ACB равен ${task1[0]}°. Найдите угол AOD. Ответ дайте в градусах.
+              <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1512.png"></div>
+          
+              `}
+            `
+            : task === 13 ? 
+            `
+            На окружности по разные стороны от диаметра AB взяты точки M и N. Известно, что ∠NBA = ${task1[0]}°. 
+            Найдите угол NMB. Ответ дайте в градусах.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1513.png"></div>
+          
+            `
+            : task === 14 ? 
+            `
+            ${task1[1] === 1 ? 
+              `
+            Треугольник ABC вписан в окружность с центромв точке O. Точки O и C лежат в одной полуплоскости относительно прямой AB. 
+            Найдите угол ACB, если угол AOB равен ${task1[0]}°. Ответ дайте в градусах.
+             <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1515.png"></div>
+          
+            ` 
+              : 
+              ``}
+            
+           
+            `
+            :
+             ``}
+
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshSixteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
