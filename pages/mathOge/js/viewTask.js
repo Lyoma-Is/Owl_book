@@ -3147,7 +3147,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1419.png"></div>
            
             `
-            : 
+            : task === 33 ? 
+            `
+            Сторона треугольника равна ${task1[0]}, а высота, проведённая к этой стороне, равна ${task1[1]}. Найдите площадь этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1428.png"></div>
+           
+            `
+            :
 
             ``}
             <hr class="hr-pd_20">
@@ -3165,7 +3172,86 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 4:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 41 ? 
+            `
+            ${task1[2] === "s" ? 
+            `
+          В треугольнике ABC угол C равен 90°, AC = ${task1[0]}, AB = ${task1[1]}. Найдите sinB.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
+            `
+            : task1[2] === "c" ? 
+            `
+          В треугольнике ABC угол C равен 90°, BC = ${task1[0]}, AB = ${task1[1]}. Найдите cosB.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1456.png"></div>
+            `
+            : task1[2] === "t" ? 
+            `
+          В треугольнике ABC угол C равен 90°, BC = ${task1[0]}, AC = ${task1[1]}. Найдите tgB.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
+            `
+            :
+             ``}
+            `
+            : task === 42 ? 
+            `
+            ${task1[3] === "ss" ? 
+              `
+            В треугольнике ABC угол C равен 90°, 
+            sinB =
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[1]}</mn>
+              </mfrac>
+            </math> , 
+            AB = ${task1[2]}. Найдите AC.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
+           
+              `
+              : task1[3] === "sc" ? 
+              `
+            В треугольнике ABC угол C равен 90°, 
+            cosB =
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[1]}</mn>
+              </mfrac>
+            </math> , 
+            AB = ${task1[2]}. Найдите BC.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
+           
+              `
+              : task1[3] === "st" ? 
+              `
+            В треугольнике ABC угол C равен 90°, 
+            tgB =
+            <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[1]}</mn>
+              </mfrac>
+            </math> , 
+            BC = ${task1[2]}. Найдите AC.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
+           
+              `
+              : 
+              ``}
+            
+
+            `
+            :
+            ``}
           
+          
+          <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();

@@ -360,6 +360,17 @@
   .answer-block_11 .download a img {
     width: 45px;
   }
+  .section-site {
+    padding: 20px;
+  }
+  .section-site h2 {
+    font-size: 1.5em;
+  }
+  .section-site a {
+    display: block;
+    padding: 0.5em;
+    font-size: 1.3em;
+  }
 }
 @media (max-width: 750px) {
   main .search-box-find {
@@ -426,6 +437,17 @@
   }
   main .main-block .aside-left ul li a {
     font-size: 100%;
+  }
+  .section-site {
+    padding: 20px;
+  }
+  .section-site h2 {
+    font-size: 1.2em;
+  }
+  .section-site a {
+    display: block;
+    padding: 0.5em;
+    font-size: 1em;
   }
   .container {
     width: 100%;
