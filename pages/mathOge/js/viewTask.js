@@ -3365,6 +3365,224 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           2 • ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} = ${2 * Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)}
           `
         }
+        else if(item === 31){
+          return `
+          90° — ${task1[0]}° = ${90-task1[0]}°
+          `
+        }
+        else if(item === 311){
+          return `
+          AB = 2 • ${task1[0]} = ${2*task1[0]} 
+          <hr class="hr-pd_10">
+          AC<sup>2</sup> = AB<sup>2</sup> — BC<sup>2</sup>
+          <hr class="hr-pd_10">
+          AC<sup>2</sup> = ${2*task1[0]}<sup>2</sup> — ${task1[1]}<sup>2</sup>
+          <hr class="hr-pd_10">
+          AC<sup>2</sup> = ${2*task1[0]*2*task1[0]} — ${task1[1]*task1[1]}
+          <hr class="hr-pd_10">
+          AC<sup>2</sup> = ${2*task1[0]*2*task1[0] - task1[1]*task1[1]}
+          <hr class="hr-pd_10">
+          AC = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${2*task1[0]*2*task1[0] - task1[1]*task1[1]}</span> = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
+          `
+        }
+        else if(item === 312){
+          return `
+          AB = 2 • ${task1[0]} = ${2*task1[0]} 
+          <hr class="hr-pd_10">
+          BC<sup>2</sup> = AB<sup>2</sup> — AC<sup>2</sup>
+          <hr class="hr-pd_10">
+          BC<sup>2</sup> = ${2*task1[0]}<sup>2</sup> — ${task1[1]}<sup>2</sup>
+          <hr class="hr-pd_10">
+          BC<sup>2</sup> = ${2*task1[0]*2*task1[0]} — ${task1[1]*task1[1]}
+          <hr class="hr-pd_10">
+          BC<sup>2</sup> = ${2*task1[0]*2*task1[0] - task1[1]*task1[1]}
+          <hr class="hr-pd_10">
+          BC = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${2*task1[0]*2*task1[0] - task1[1]*task1[1]}</span> = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
+
+
+          `
+        }
+        else if(item === 32){
+          return `
+          r = a • <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span> / 3 = 
+          ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span> • <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span> / 3 =
+          ${task1[0]}
+          
+          `
+        }
+        else if(item === 321){
+          return `
+          R = 
+          <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">a √3</mn>
+                <mn style="padding-top: 5px;">3</mn>
+              </mfrac>
+            </math> 
+          <hr class="hr-pd_10">
+          
+          `
+        }
+        else if(item === 33 || item === 331){
+          return `
+          180° — ${task1[0]}° = ${180-task1[0]}°
+          `
+        }
+        else if(item === 34){
+          return `
+          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> +
+          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> =
+          ${task1[0]*task1[0]*2} + ${task1[0]*task1[0]*2} = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}<hr class="hr-pd_10">
+          d = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}</span> = 
+          ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} <hr class="hr-pd_10">
+          r = d / 2 = = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} / 2 = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2) / 2} 
+          
+          `
+        }
+        else if(item === 35){
+          return `
+          <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">AB</mn>
+                <mn style="padding-top: 5px;">sinC</mn>
+              </mfrac>
+            </math> = 2R
+          <hr class="hr-pd_10">
+          `
+        }
+        else if(item === 36){
+          return `
+          2 • ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span> = 
+          ${2*task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
+          <hr class="hr-pd_10">
+          2a<sup>2</sup> = (${2*task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>)<sup>2</sup>
+          <hr class="hr-pd_10">
+          2a<sup>2</sup> = ${2*task1[0]*2*task1[0]} • 2
+          <hr class="hr-pd_10">
+          a<sup>2</sup> = ${2*task1[0]*2*task1[0]}
+          <hr class="hr-pd_10">
+          a = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${2*task1[0]*2*task1[0]}</span> = ${Math.sqrt(2*task1[0]*2*task1[0])}
+          `
+        }
+        else if(item === 37){
+          return `
+          AB = AC<sup>2</sup> + BC<sup>2</sup>
+          <hr class="hr-pd_10">
+          AB<sup>2</sup> = ${task1[0]*task1[0]} + ${task1[1]*task1[1]}
+          <hr class="hr-pd_10">
+          AB<sup>2</sup> = ${task1[0]*task1[0] + task1[1]*task1[1]}
+          <hr class="hr-pd_10">
+          AB = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] + task1[1]*task1[1]}</span> = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1])}
+          <hr class="hr-pd_10">
+          r = AB / 2 = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1]) / 2}
+
+          `
+        }
+        else if(item === 38){
+          return `
+          <img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1783_a.png">
+          <hr class="hr-pd_10">
+          ${task1.length === 1 ? 
+          `
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${task1[0]}
+          <hr class="hr-pd_10">
+          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
+          <hr class="hr-pd_10">
+          ${task1[0]}<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
+          <hr class="hr-pd_10">
+          ${task1[0]*task1[0]} = x<sup>2</sup> + 4x<sup>2</sup>
+          <hr class="hr-pd_10">
+          5x<sup>2</sup> = ${task1[0]*task1[0]}
+          <hr class="hr-pd_10">
+          x<sup>2</sup> = ${task1[0]*task1[0]} / 5
+          <hr class="hr-pd_10">
+          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] / 5}</span>
+          <hr class="hr-pd_10">
+          S = 2x • 2x =  
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] / 5}</span>
+          •
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] / 5}</span>
+          <hr class="hr-pd_10">
+          S = 4 • ${task1[0]*task1[0]/5} = ${4*task1[0]*task1[0]/5}
+          `
+          : task1.length === 2 ?
+          `
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>
+          <hr class="hr-pd_10">
+          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
+          <hr class="hr-pd_10">
+          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>)<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
+          <hr class="hr-pd_10">
+          ${task1[0]*task1[0]*task1[1]} = x<sup>2</sup> + 4x<sup>2</sup>
+          <hr class="hr-pd_10">
+          5x<sup>2</sup> = ${task1[0]*task1[0]*task1[1]}
+          <hr class="hr-pd_10">
+          x<sup>2</sup> = ${task1[0]*task1[0]*task1[1]} / 5
+          <hr class="hr-pd_10">
+          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0]*task1[1] / 5}</span>
+          <hr class="hr-pd_10">
+          S = 2x • 2x =  
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0]*task1[1] / 5}</span>
+          •
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0]*task1[1] / 5}</span>
+          <hr class="hr-pd_10">
+          S = 4 • ${task1[0]*task1[0]*task1[1]/5} = ${4*task1[0]*task1[0]*task1[1]/5}
+          ` 
+          : task1.length === 4 ?
+          `
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span>
+          <hr class="hr-pd_10">
+          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
+          <hr class="hr-pd_10">
+          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span>)<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
+          <hr class="hr-pd_10">
+          ${task1[0]} = x<sup>2</sup> + 4x<sup>2</sup>
+          <hr class="hr-pd_10">
+          5x<sup>2</sup> = ${task1[0]}
+          <hr class="hr-pd_10">
+          x<sup>2</sup> = ${task1[0]} / 5
+          <hr class="hr-pd_10">
+          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0] / 5}</span>
+          <hr class="hr-pd_10">
+          S = 2x • 2x =  
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0] / 5}</span>
+          •
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0] / 5}</span>
+          <hr class="hr-pd_10">
+          S = 4 • ${task1[0]/5} = ${4*task1[0]/5}
+          ` 
+          : 
+          `
+          DO = x,&thinsp; AD = 2x,&thinsp; 
+          AO = <math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">√${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[1]}</mn>
+              </mfrac>
+            </math> 
+            <hr class="hr-pd_10">
+            AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
+          <hr class="hr-pd_10">
+
+          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span> / ${task1[1]})<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
+          <hr class="hr-pd_10">
+          ${task1[0]/(task1[1]*task1[1])} = x<sup>2</sup> + 4x<sup>2</sup>
+          <hr class="hr-pd_10">
+          5x<sup>2</sup> = ${task1[0]/(task1[1]*task1[1])}
+          <hr class="hr-pd_10">
+          x<sup>2</sup> = ${task1[0]/(task1[1]*task1[1])} / 5
+          <hr class="hr-pd_10">
+          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]/(task1[1]*task1[1]) / 5}</span>
+          <hr class="hr-pd_10">
+          S = 2x • 2x =  
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]/(task1[1]*task1[1]) / 5}</span>
+          •
+          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]/(task1[1]*task1[1]) / 5}</span>
+          <hr class="hr-pd_10">
+          S = 4 • ${task1[0]/(task1[1]*task1[1]) / 5} = ${4*(task1[0]/(task1[1]*task1[1]) / 5)}
+
+          `} `
+        }
         else{
           return`...`
         }
@@ -3537,11 +3755,98 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `
+            Центр окружности, описанной около треугольника ABC, лежит на стороне AB. Найдите угол ABC, если угол BAC равен ${task1[0]}°. Ответ дайте в градусах.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1673.png"></div>
           
+            ` 
+            : task === 311 ? 
+            `
+            Центр окружности, описанной около треугольника ABC, лежит на стороне AB. Радиус окружности равен ${task1[0]}. Найдите AC, если BC = ${task1[1]}.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1689.png"></div>
+          
+            ` 
+            : task === 312 ? 
+            `
+            Центр окружности, описанной около треугольника ABC, лежит на стороне AB. Радиус окружности равен ${task1[0]}. Найдите BC, если AC = ${task1[1]}.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1689.png"></div>
+          
+            ` 
+            : task === 32 ? 
+
+            `
+            Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. Найдите радиус окружности, описанной около этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1674.png"></div>   
+            ` 
+            : task === 321 ? 
+            `
+            Радиус окружности, описанной около равностороннего треугольника, равен ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. Найдите длину стороны этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1674.png"></div>   
+            ` 
+            : task === 33 ? 
+            `
+            Угол A трапеции ABCD с основаниями AD и BC, вписанной в окружность, равен ${task1[0]}°. Найдите угол B этой трапеции. Ответ дайте в градусах.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1675.png"></div>   
+            ` 
+            : task === 331 ? 
+            `
+            Угол A четырёхугольника ABCD, вписанного в окружность, равен ${task1[0]}°. Найдите угол C этого четырёхугольника. Ответ дайте в градусах.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1684.png"></div>   
+            ` 
+            : task === 34 ? 
+            `
+            Сторона квадрата равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>. Найдите радиус окружности, описанной около этого квадрата.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1677.png"></div>   
+            ` 
+            : task === 35 ? 
+            `
+            В треугольнике ABC угол C равен ${task1[0]}°, ${task1.length === 2 ? `AB = ${task1[1]}` : `AB = ${task1[1]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[2]}</span>`}. Найдите радиус окружности, описанной около этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_${taskCounter}.png"></div>   
+            ` 
+            : task === 36 ? 
+            `
+            Радиус окружности, описанной около квадрата, равен  ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>. Найдите длину стороны этого квадрата.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1677.png"></div>   
+            ` 
+            : task === 37 ? 
+            `
+            В треугольнике ABC известно, что AC = ${task1[0]}, BC = ${task1[1]}, угол C равен 90°. Найдите радиус описанной около этого треугольника окружности.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1694.png"></div>   
+            ` 
+            : task === 38 ? 
+            `
+            Точка O является серединой стороны CD квадрата ABCD. Радиус окружности с центром в точке O, проходящей через вершину A, равен 
+            ${task1.length === 1 ? task1[0] : task1.length === 3 ? `<math style="font-size: 140%">
+              <mfrac >
+                <mn style="padding-bottom: 5px;">√${task1[0]}</mn>
+                <mn style="padding-top: 5px;">${task1[1]}</mn>
+              </mfrac>
+            </math>` : task1.length === 4 ? `<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span>`:`${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>`}. 
+            Найдите площадь квадрата ABCD.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1783.png"></div>   
+            ` 
+            :
+            ` `}
+          <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshSixteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
