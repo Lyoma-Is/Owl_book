@@ -2955,6 +2955,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     } 
     // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
     // <sup>2</sup>   — • &thinsp; √   &nbsp;
+    // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>
     if (taskKey === 'fifteen'){
       let Nomer = 15
       switch(typeTask){
@@ -3315,6 +3316,55 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `
 
         }
+        else if(item === 21){
+          return `
+          a = ${task1[0]} • 6 = ${task1[0]*6}
+          `
+        }
+        else if(item === 22){
+          return `
+          r = ${task1[0]} • 3 / 6 = ${task1[0]*3/6}
+          `
+        }
+        else if(item === 23 || item === 24 || item === 25){
+          return `
+          h = r • 2 = ${task1[0]} • 2 = ${task1[0]*2}<hr class="hr-pd_10">
+          
+          `
+        }
+        else if(item === 26){
+          return `
+          a = r • 2 = ${task1[0]} • 2 = ${task1[0]*2}<hr class="hr-pd_10">
+          a<sup>2</sup> = ${task1[0]*2}<sup>2</sup> = ${(task1[0]*2)*(task1[0]*2)}
+          `
+        }
+        else if(item === 27){
+          return `
+          Площадь треугольника равна произведению его полупериметра на радиус вписанной окружности:<hr class="hr-pd_10">
+          S = p • r = ${task1[0]} / 2 • ${task1[2]} = ${task1[0]/ 2 * task1[2]}.<hr class="hr-pd_10">
+          Длина одной из сторон - лишние данные, игнорируем их.
+          `
+        }
+        else if(item === 28){
+          return `
+          r = a / 2 = ${task1[0]} / 2 = ${task1[0]/ 2}
+          `
+        }
+        else if(item === 29 || item === 291){
+          return `
+          AB + CD = BC + AD<hr class="hr-pd_10">
+          AD = AB + CD — BC = ${task1[0] + task1[2]-task1[1]}
+          `
+        }
+        else if(item === 30){
+          return `
+          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> +
+          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> =
+          ${task1[0]*task1[0]*2} + ${task1[0]*task1[0]*2} = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}<hr class="hr-pd_10">
+          d = 2 • <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}</span> = 
+          2 • ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} = ${2 * Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)}
+          `
+        }
         else{
           return`...`
         }
@@ -3400,11 +3450,83 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `Радиус окружности, вписанной в равносторонний треугольник, равен ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. Найдите длину стороны этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1563.png"></div>
           
+            `
+            : task === 22 ? 
+            `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+            Найдите радиус окружности, вписанной в этот треугольник.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1563.png"></div>
+          
+            `
+            : task === 23 ? 
+            `Радиус окружности, вписанной в равнобедренную трапецию, равен ${task1[0]}. Найдите высоту этой трапеции.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1565.png"></div>
+          
+            `
+            : task === 24 ? 
+            `Радиус окружности, вписанной в прямоугольную трапецию, равен ${task1[0]}. Найдите высоту этой трапеции.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1567.png"></div>
+          
+            `
+            : task === 25 ? 
+            `Радиус окружности, вписанной в трапецию, равен ${task1[0]}. Найдите высоту этой трапеции.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1570.png"></div>
+          
+            `
+            : task === 26 ? 
+            `Найдите площадь квадрата, описанного около окружности радиуса ${task1[0]}.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1566.png"></div>
+          
+            `
+            : task === 27 ? 
+            `Периметр треугольника равен ${task1[0]}, одна из сторон равна ${task1[1]}, а радиус вписанной в него окружности равен ${task1[2]}. Найдите площадь этого треугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1568.png"></div>
+          
+            `
+            : task === 28 ? 
+            `Сторона квадрата равна ${task1[0]}. Найдите радиус окружности, вписанной в этот квадрат.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1566.png"></div>
+          
+            `
+            : task === 29 ? 
+            `Четырёхугольник ABCD описан около окружности, AB = ${task1[0]}, BC = ${task1[1]}, CD = ${task1[2]}. Найдите AD.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1571.png"></div>
+          
+            `
+            : task === 291 ? 
+            `Трапеция ABCD с основаниями AD и BC описана около окружности, AB = ${task1[0]}, BC = ${task1[1]}, CD = ${task1[2]}. Найдите AD.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1575.png"></div>
+          
+            `
+            : task === 30 ? 
+            `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>. 
+            Найдите радиус окружности, вписанной в этот треугольник.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task16/16_1574.png"></div>
+          
+            `
+            :
+             ``}
+          <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshSixteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
