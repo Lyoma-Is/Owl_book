@@ -1,16 +1,14 @@
 import generateTaskHTML from "./viewTask.js";
 import { tasks } from "./viewTask.js";
 
-// Кэш для хранения загруженных задач
 const tasksCache = new Map();
 let totalTasksLoaded = 0;
-let allTasks = []; // Массив для хранения всех задач
+let allTasks = []; 
 let allTaskKec = {};
 let countData = {};
 
 async function fetchTasks(taskKey) {
   try {
-    // Если задачи уже в кэше - используем их
     if (tasksCache.has(taskKey)) {
       return tasksCache.get(taskKey);
     }
@@ -19,20 +17,20 @@ async function fetchTasks(taskKey) {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     
     const data = await response.json();
-    tasksCache.set(taskKey, data); // Сохраняем в кэш
+    tasksCache.set(taskKey, data); 
     
     totalTasksLoaded += data.length;
     countData[taskKey] = data.length;
     
     //console.log(`Загружено ${data.length} задач из ${taskKey}`);
-    setupFilters(taskKey, data); // Настраиваем фильтры после загрузки
+    setupFilters(taskKey, data); 
     if(showTaskCount2){
       showTaskCount2.innerHTML = `<hr class="hr-pd_5">Общее количество задач: ${totalTasksLoaded}`
     }
 
-    // Добавляем задачи в общий массив
+   
     data.forEach(task => {
-      task.source = taskKey; // Сохраняем источник задачи
+      task.source = taskKey; 
       allTasks.push(task);
       
       allTaskKec[task.taskCounter] = task.taskKec
@@ -91,11 +89,10 @@ function setupFilters(taskKey, data) {
 
   taskTypeEl?.addEventListener("change", filterTasks);
   taskSortEl?.addEventListener("change", filterTasks);
-  filterTasks(); // Инициализация
+  filterTasks(); 
 }
 
 function displayTasks(taskKey, tasksToDisplay) {
-  // Если переданы несколько задач (из фильтрации)
   const output = document.querySelector(`.task-${taskKey}-numbers__block`);
   if (!output) return;
   
@@ -104,9 +101,8 @@ function displayTasks(taskKey, tasksToDisplay) {
   
 }
 
-// Инициализация
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Загружаем все задачи при старте
   loadAllTasks(Object.keys(tasks));
   
 });
@@ -160,6 +156,7 @@ taskPage.innerHTML = `
 <option value="taskFourteenPage.html">14. Задачи на прогрессии.</option>
 <option value="taskFifteenPage.html">15. Треугольник.</option>
 <option value="taskSixteenPage.html">16. Окружность, круг и их элементы.</option>
+<option value="taskSeventeenPage.html">17. Четырёхугольники.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -209,7 +206,8 @@ document.addEventListener('click', function(e) {
       'taskThirteenPage.html': 13,
       'taskFourteenPage.html': 14,
       'taskFifteenPage.html': 15,
-      'taskSixteenPage.html': 16
+      'taskSixteenPage.html': 16,
+      'taskSeventeenPage.html': 17
     };
 
     const Kec = PAGE_TO_KEC[currentPage];
@@ -246,10 +244,10 @@ document.addEventListener('click', function(e) {
       13: "КЭС: 3.2 Целые и дробно-рациональные неравенства. Системы и совокупности неравенств.",
       14: "КЭС: 4.2 Арифметическая и геометрическая прогрессии. Формула сложных процентов.",
       15: "КЭС: 7.2 Треугольник.<br>КЭС: 7.5 Измерение геометрических величин.",
-      16: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.4 Окружность и круг.<br>КЭС: 7.5 Измерение геометрических величин."
+      16: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.4 Окружность и круг.<br>КЭС: 7.5 Измерение геометрических величин.",
+      17: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.5 Измерение геометрических величин."
     };
 
-    // Формируем содержимое с кнопкой закрытия
     let content = `
       <div><p style="font-size: 130%;">Источник: ${ 
         valuesSource === 1 ? `Банк ФИПИ`: 
@@ -267,14 +265,12 @@ document.addEventListener('click', function(e) {
     informBlock.innerHTML = content;
     informBlock.classList.add('show');
     
-    // Добавляем обработчик для кнопки закрытия
     const closeButton = informBlock.querySelector('.close-inform-button');
     closeButton.addEventListener('click', function() {
       informBlock.classList.remove('show');
     });
   }
   
-  // Обработка клика по кнопке закрытия, если она уже существует
   if (e.target && e.target.classList.contains('close-inform-button')) {
     const informBlock = e.target.closest('.inform-block');
     if (informBlock) {

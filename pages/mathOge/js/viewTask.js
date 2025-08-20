@@ -10,7 +10,8 @@ const tasks = {
   thirteen: '../../src/oge_math/taskThirteen.json',
   fourteen: '../../src/oge_math/taskFourteen.json',
   fifteen: '../../src/oge_math/taskFifteen.json',
-  sixteen: '../../src/oge_math/taskSixteen.json'
+  sixteen: '../../src/oge_math/taskSixteen.json',
+  seventeen: '../../src/oge_math/taskSeventeen.json'
 };
  
 export {tasks};
@@ -2953,9 +2954,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     } 
-    // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
-    // <sup>2</sup>   — • &thinsp; √   &nbsp;
-    // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>
+    
     if (taskKey === 'fifteen'){
       let Nomer = 15
       switch(typeTask){
@@ -3856,5 +3855,106 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     }
+    // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
+    // <sup>2</sup>   — • &thinsp; √   &nbsp; 
+    // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>
+
+    // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
+    if (taskKey === 'seventeen'){
+      let Nomer = 17
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+          Сторона квадрата равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>. Найдите диагональ этого квадрата.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_1795.png"></div>
+          `
+          : task === 12 ? 
+            `
+          Сторона ромба равна ${task1[0]}, а один из углов этого ромба равен ${task1[1]}°. Найдите высоту этого ромба.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1796.png"></div>
+          `
+          : task === 13 ? 
+            `
+          Периметр ромба равен ${task1[0]}, а один из углов равен ${task1[1]}°. Найдите площадь этого ромба.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1798.png"></div>
+          `
+          : task === 131 ? 
+            `
+          Один из углов параллелограмма (ромба) равен ${task1[0]}°. Найдите ${task1[1]} угол этого параллелограмма (ромба). Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1798.png"></div>
+          `
+          : task === 14 ? 
+            `
+          В ромбе ABCD угол ABC равен ${task1[0]}°. Найдите угол ACD. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1799.png"></div>
+          `
+          : task === 15 ? 
+            `
+          Диагональ прямоугольника образует угол ${task1[0]}° с одной из его сторон. Найдите острый угол между диагоналями этого прямоугольника. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1801.png"></div>
+          `
+          : task === 16 ? 
+            `
+          Диагонали AC и BD прямоугольника ABCD пересекаются в точке O, BO = ${task1[0]}, AB = ${task1[1]}. Найдите AC.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1820.png"></div>
+          `
+          :
+             ``}
+          
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
    
 }
