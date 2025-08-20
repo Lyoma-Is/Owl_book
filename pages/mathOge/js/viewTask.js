@@ -3927,7 +3927,75 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          
+          ${task === 21 ? 
+            `
+          Один из углов прямоугольной трапеции равен ${task1[0]}°. Найдите ${task1[1]} угол этой трапеции. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task17/17_1871.png"></div>
+         
+            `
+            : task === 22 ? 
+            `
+          Основания трапеции равны ${task1[0]} и ${task1[1]}. Найдите больший из отрезков, на которые делит среднюю линию этой трапеции одна из её диагоналей.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1872.png"></div>
+         
+            `
+            : task === 23 ? 
+            `
+          Основания трапеции равны ${task1[0]} и ${task1[1]}, а высота равна ${task1[2]}. Найдите среднюю линию этой трапеции.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1873.png"></div>
+         
+            `
+            : task === 24 ? 
+            `
+          Один из углов равнобедренной трапеции равен ${task1[0]}°. Найдите ${task1[1]} угол этой трапеции. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1875.png"></div>
+         
+            `
+            : task === 241 ? 
+            `
+          Сумма двух углов равнобедренной трапеции равна ${task1[0]}°. Найдите ${task1[1]} угол этой трапеции. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1875.png"></div>
+         
+            `
+            :task === 25 ? 
+            `
+          Основания трапеции равны ${task1[0]} и ${task1[1]}, а высота равна ${task1[2]}. Найдите площадь этой трапеции.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1879.png"></div>
+         
+            `
+            : task === 26 ? 
+            `
+          Высота равнобедренной трапеции, проведённая из вершины C, делит основание AD на отрезки длиной ${task1[0]} и ${task1[1]}. Найдите длину основания BC.
+
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1881.png"></div>
+         
+            `
+            : task === 27 ? 
+            `
+          В равнобедренной трапеции известны высота, ${task1[0] === 1 ? `большее`: `меньшее`} основание и угол при основании (см. рисунок). Найдите ${task1[0] === 1 ? `меньшее`: `большее`} основание.
+
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
+         
+            `
+            : task === 28 ? 
+            `
+          В равнобедренной трапеции основания равны ${task1[0]} и ${task1[1]}, а один из углов между боковой стороной и основанием равен 45°. Найдите площадь этой трапеции.
+
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
+         
+            `
+            :
+            ``}
+           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
