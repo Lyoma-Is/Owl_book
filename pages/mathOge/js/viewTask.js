@@ -4010,7 +4010,57 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          
+          ${task === 31 ? 
+            `
+          Диагонали AC и BD параллелограмма ABCD пересекаются в точке O, AC = ${task1[0]}, BD = ${task1[1]}, AB = ${task1[2]}. Найдите DO.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task17/17_1951.png"></div>
+         
+            `
+            : task === 32 ? 
+            `
+          Найдите острый угол параллелограмма ABCD, если биссектриса угла A образует со стороной BC угол, равный ${task1[0]}°. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task17/17_1952.png"></div>
+         
+            `
+            : task === 33 ? 
+            `
+          Диагональ AC параллелограмма ABCD образует с его сторонами углы, равные ${task1[0]}° и ${task1[1]}°. Найдите больший угол этого параллелограмма. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
+         
+            `
+            : task === 34 ? 
+            `
+          Диагональ BD параллелограмма ABCD образует с его сторонами углы, равные ${task1[0]}° и ${task1[1]}°. Найдите меньший угол этого параллелограмма. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
+         
+            `
+            : task === 35 ? 
+            `
+          Площадь параллелограмма равна ${task1[0]}, а две его стороны равны ${task1[1]} и ${task1[2]}. Найдите его высоты. В ответе укажите ${task1[3] === 1 ? `большую`: `меньшую`} высоту.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_1958.png"></div>
+         
+            `
+            : task === 36 ? 
+            `
+          Найдите площадь параллелограмма, изображённого на рисунке.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task1[0] === 2 ? `width: 20em;` : `width: 13em;`} " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
+         
+            `
+            : task === 37 ? 
+            `
+          В ромбе ABCD угол ABC равен ${task1[0]}°. Найдите угол ACD. Ответ дайте в градусах.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em;" src="../../pages/mathOge/img/task17/17_1972.png"></div>
+         
+            `
+            :
+            ``}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
