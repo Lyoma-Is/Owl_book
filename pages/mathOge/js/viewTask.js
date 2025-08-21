@@ -11,7 +11,8 @@ const tasks = {
   fourteen: '../../src/oge_math/taskFourteen.json',
   fifteen: '../../src/oge_math/taskFifteen.json',
   sixteen: '../../src/oge_math/taskSixteen.json',
-  seventeen: '../../src/oge_math/taskSeventeen.json'
+  seventeen: '../../src/oge_math/taskSeventeen.json',
+  eighteen: '../../src/oge_math/taskEighteen.json'
 };
  
 export {tasks};
@@ -4074,5 +4075,107 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     } 
+    if (taskKey === 'eighteen'){
+      let Nomer = 18
+      function reshEghteen(item){
+        if(item === 14){
+          return `
+          (${task1[0]} / ${task1[1]}) • ${task1[2]} = ${task1[0]/task1[1]*task1[2]} 
+          `
+
+        }
+        else{return `...`}
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображён треугольник. Найдите его площадь.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
+          
+            ` 
+            : task === 12 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображён прямоугольный треугольник. Найдите длину его большего катета.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
+          
+            ` 
+            : task === 13 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображён треугольник ABC. Найдите длину его средней линии, параллельной стороне AC.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
+          
+            ` 
+            : task === 14 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображена фигура. Найдите длину отрезка AB  по данным чертежа.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
+          
+            ` 
+            : 
+            `
+            ` 
+            }
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshEghteen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `` 
+            : 
+            `` 
+            }
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `` 
+            : 
+            `` 
+            }
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    }
    
 }

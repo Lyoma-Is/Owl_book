@@ -157,6 +157,7 @@ taskPage.innerHTML = `
 <option value="taskFifteenPage.html">15. Треугольник.</option>
 <option value="taskSixteenPage.html">16. Окружность, круг и их элементы.</option>
 <option value="taskSeventeenPage.html">17. Четырёхугольники.</option>
+<option value="taskEighteenPage.html">18. Фигуры на квадратной решётке.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
