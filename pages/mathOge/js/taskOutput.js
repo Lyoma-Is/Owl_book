@@ -158,6 +158,7 @@ taskPage.innerHTML = `
 <option value="taskSixteenPage.html">16. Окружность, круг и их элементы.</option>
 <option value="taskSeventeenPage.html">17. Четырёхугольники.</option>
 <option value="taskEighteenPage.html">18. Фигуры на квадратной решётке.</option>
+<option value="taskNineteenPage.html">19. Анализ геометрических высказываний.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -209,7 +210,8 @@ document.addEventListener('click', function(e) {
       'taskFifteenPage.html': 15,
       'taskSixteenPage.html': 16,
       'taskSeventeenPage.html': 17,
-      'taskEighteenPage.html': 18
+      'taskEighteenPage.html': 18,
+      'taskNineteenPage.html': 19
     };
 
     const Kec = PAGE_TO_KEC[currentPage];
@@ -248,7 +250,8 @@ document.addEventListener('click', function(e) {
       15: "КЭС: 7.2 Треугольник.<br>КЭС: 7.5 Измерение геометрических величин.",
       16: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.4 Окружность и круг.<br>КЭС: 7.5 Измерение геометрических величин.",
       17: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.5 Измерение геометрических величин.",
-      18: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.4 Окружность и круг.<br>КЭС: 7.5 Измерение геометрических величин."
+      18: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.4 Окружность и круг.<br>КЭС: 7.5 Измерение геометрических величин.",
+      19: "КЭС: 7 Геометрия.<br>КЭС: 7.1 Геометрические фигуры и их свойства."
     };
 
     let content = `

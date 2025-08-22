@@ -12,7 +12,8 @@ const tasks = {
   fifteen: '../../src/oge_math/taskFifteen.json',
   sixteen: '../../src/oge_math/taskSixteen.json',
   seventeen: '../../src/oge_math/taskSeventeen.json',
-  eighteen: '../../src/oge_math/taskEighteen.json'
+  eighteen: '../../src/oge_math/taskEighteen.json',
+  nineteen: '../../src/oge_math/taskNineteen.json'
 };
  
 export {tasks};
@@ -4257,5 +4258,50 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     }
+    if (taskKey === 'nineteen'){
+      let Nomer = 19
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            Какое из следующих утверждений является <b>истинным высказыванием</b>?<hr class="hr-pd_20">
+            <b>1)</b> ${task2}<hr class="hr-pd_20">
+            <b>2)</b> ${task3}<hr class="hr-pd_20">
+            <b>3)</b> ${task4}<hr class="hr-pd_30">
+
+
+            В ответ запишите номер истинного высказывания.
+            `
+            : task === 12 ? 
+            `
+            Какие из следующих утверждений являются <b>истинными высказываниями</b>?<hr class="hr-pd_20">
+            <b>1)</b> ${task2}<hr class="hr-pd_20">
+            <b>2)</b> ${task3}<hr class="hr-pd_20">
+            <b>3)</b> ${task4}<hr class="hr-pd_30">
+
+            В ответе запишите номера выбранных утверждений без пробелов, запятых и других дополнительных символов.
+            `
+            :
+            ``
+          }
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            ${task1[0] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>1)</b> ${task2}<hr class="hr-pd_20">
+            ${task1[1] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>2)</b> ${task3}<hr class="hr-pd_20">
+            ${task1[2] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>3)</b> ${task4}<hr class="hr-pd_30">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
    
 }
