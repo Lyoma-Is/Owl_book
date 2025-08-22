@@ -3266,7 +3266,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     if (taskKey === 'sixteen'){
       let Nomer = 16
       function reshSixteen(item){
-        if(item === 11){
+        if(item === 11 || item === 15){
           return `
           ${task1[2] === 1 ? 
             `
@@ -3646,6 +3646,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               ``}
             
            
+            `
+            : task === 15 ? 
+            `
+            ${task1[2] === 1 ? 
+              `
+              Четырёхугольник ABCD вписан в окружность. Угол ABC равен ${task1[0]}°, угол CAD равен ${task1[1]}°. Найдите угол ABD. Ответ дайте в градусах.
+              `
+              : 
+              `
+              Четырёхугольник ABCD вписан в окружность. Угол ABD равен ${task1[0]}°, угол CAD равен ${task1[1]}°. Найдите угол ABC. Ответ дайте в градусах.
+              `}
+          
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_2071.png"></div>
+          
             `
             :
              ``}
@@ -4082,6 +4097,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return `
           (${task1[0]} / ${task1[1]}) • ${task1[2]} = ${task1[0]/task1[1]*task1[2]} 
           `
+        }
+        else if(item === 15){
+          return `
+          ${task1[0]} / ${task1[1]}  = ${task1[0]/task1[1]} 
+          `
+        }
+        else if(item === 31){
+          return `
+          c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup>
+          <hr class="hr-pd_10">
+          c<sup>2</sup> = ${task1[1]}<sup>2</sup> + ${task1[2]}<sup>2</sup>
+          <hr class="hr-pd_10">
+          c<sup>2</sup> = ${task1[1]*task1[1]} + ${task1[2]*task1[2]}
+          <hr class="hr-pd_10">
+          c<sup>2</sup> = ${task1[1]*task1[1] + task1[2]*task1[2]}
+          <hr class="hr-pd_10">    
+          c = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]*task1[1] + task1[2]*task1[2]}</span>   
+          <hr class="hr-pd_10">
+          c = ${Math.sqrt(task1[1]*task1[1] + task1[2]*task1[2])}
+          `
 
         }
         else{return `...`}
@@ -4118,6 +4153,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
           
             ` 
+            : task === 15 ? 
+            `
+            На клетчатой бумаге изображён треугольник ABC. Во сколько раз отрезок ${task1[2]} отрезка ${task1[3] ? task1[3]: `CM`}?
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
+          
+            ` 
             : 
             `
             ` 
@@ -4141,10 +4183,36 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 21 ? 
-            `` 
-            : 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображён ромб. Найдите длину его большей диагонали.
+         
+            ` 
+            : task === 22 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображена трапеция. Найдите длину её средней линии.
+            ` 
+            : task === 23 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображён параллелограмм. Найдите его площадь.
+           
+            ` 
+            : task === 24 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображена трапеция. Найдите её площадь.
+          
+            ` 
+            : task === 25 ? 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображена ромб. Найдите площадь этого ромба..
+        
+            ` 
+            :
             `` 
             }
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task1[0] === 2 ? `width: 10em;`: task1[0] === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
+          
+            <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -4160,14 +4228,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 31 ? 
-            `` 
+            `
+            На клетчатой бумаге с размером клетки 1×1 изображены две точки. Найдите расстояние между ними.
+            ` 
+            : task === 32 ? 
+            `
+            На клетчатой бумаге изображены два круга. Во сколько раз площадь большего круга больше площади меньшего?
+            ` 
             : 
             `` 
             }
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task1[0] === 2 ? `width: 10em;`: task1[0] === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
+          
+            <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshEghteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
