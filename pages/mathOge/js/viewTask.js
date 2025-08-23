@@ -55,6 +55,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     let answerBlock = "";
  //   answerBlock += beginTask(); 
  //   answerBlock += endTask();
+    function sqrtNum(item){
+      return `<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">&thinsp;${item}&thinsp;</span>`
+    }
+    function drobNum(item1, item2){
+       return `
+          <math style="font-size: 140%">
+            <mfrac >
+              <mn style="padding-bottom: 5px;">${item1}</mn>
+              <mn style="padding-top: 5px;">${item2}</mn>
+            </mfrac>
+          </math>   
+       `
+    }
 
     if (taskKey === 'six'){
       let Nomer = 6
@@ -63,17 +76,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task2 ? 
-            ` Найдите значение выражения: 
-             <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task2[0]}</mn>
-                <mn style="padding-top: 5px;">${task2[1]}</mn>
-              </mfrac>
-            </math>
-
-            ` 
-            : `Найдите значение выражения: ${task1}`}
-          `
+            `Найдите значение выражения:&thinsp; ${drobNum(task2[0], task2[1])}` 
+            : 
+            `Найдите значение выражения:&thinsp; ${task1}`}`
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -88,20 +93,33 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          Найдите значение выражения: 
-          <math style="font-size: 140%">
-            <mfrac >
-              <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-              <mn style="padding-top: 5px;">${task1[1]}</mn>
-            </mfrac>
-          </math>
+          ${task === 22 ? 
+            `
+          Найдите значение выражения:&thinsp; 
+          ${drobNum(task1[0], task1[1])}
           &thinsp;${task1[4]}&thinsp;
-          <math style="font-size: 140%">
-            <mfrac >
-              <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-              <mn style="padding-top: 5px;">${task1[3]}</mn>
-            </mfrac>
-          </math>
+          ${drobNum(task1[2], task1[3])}<hr class="hr-pd_20">
+
+          Представьте полученный результат в виде несократимой обыкновенной дроби. В ответ запишите числитель этой дроби.
+            `
+            : task === 23 ? 
+            `
+          Представьте выражение:&thinsp; 
+          ${drobNum(task1[0], task1[1])}
+          ${task1[4]}
+          ${drobNum(task1[2], task1[3])}
+          в виде дроби со знаменателем ${task1[5]}. В ответ запишите числитель полученной дроби.
+          <hr class="hr-pd_20">
+          `
+            : 
+          `
+          Найдите значение выражения:&thinsp; 
+          ${drobNum(task1[0], task1[1])}
+          &thinsp;${task1[4]}&thinsp;
+          ${drobNum(task1[2], task1[3])}`}
+
+
+          <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -125,7 +143,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${task1}<hr class="hr-pd_10">
           <img style="display: block; margin: 0 auto; width: 70%;" src="../../pages/mathOge/img/task7/7_${taskCounter}.png"><hr class="hr-pd_20">
           ${task2}<hr class="hr-pd_30">
-          <div style="display: flex; justify-content: space-around;"><p>${task3[0]}</p><p>${task3[1]}</p><p>${task3[2]}</p><p> ${task3[3]}</p></div>
+          <div style="display: flex; justify-content: space-around;">
+            <p>${task3[0]}</p>
+            <p>${task3[1]}</p>
+            <p>${task3[2]}</p>
+            <p>${task3[3]}</p>
+          </div>
           <hr class="hr-pd_20">
           `
           
@@ -144,37 +167,24 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task1[3] ? 
             `
-            Какое из следующих чисел заключено между числами &thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[1]}</mn>
-              </mfrac>
-            </math>&thinsp; и&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                <mn style="padding-top: 5px;">${task1[3]}</mn>
-              </mfrac>
-            </math>&thinsp;
-            ?&thinsp;
-            ` : 
+            Какое из следующих чисел заключено между числами: &thinsp;
+            ${drobNum(task1[0], task1[1])}&thinsp; и &thinsp;
+            ${drobNum(task1[2], task1[3])}&thinsp; ?` 
+            : 
             task1[1] ? 
             `
-            Между какими целыми числами заключено число &thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[1]}</mn>
-              </mfrac>
-            </math>&thinsp; ?&thinsp;
+            Между какими целыми числами заключено число:&thinsp; ${drobNum(task1[0], task1[1])}&thinsp; ?
             ` : 
             `
-            Между какими числами заключено число <span style="font-size: 140%; margin-right: -2px;">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span> ?
-        
-            
-            `}<hr class="hr-pd_40"> 
-           <div style="display: flex; justify-content: space-around;"><p>${task2[0]}</p><p>${task2[1]}</p><p>${task2[2]}</p><p> ${task2[3]}</p></div>
+            Между какими числами заключено число ${sqrtNum(task1[0])} ?
+            `}
+            <hr class="hr-pd_40"> 
+           <div style="display: flex; justify-content: space-around;">
+            <p>${task2[0]}</p>
+            <p>${task2[1]}</p>
+            <p>${task2[2]}</p>
+            <p>${task2[3]}</p>
+           </div>
           <hr class="hr-pd_40"> 
           `
           answerBlock += generateDate();
@@ -190,72 +200,38 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task1.length === 7 ? 
+          ${task === 31 ? 
+            `
+            Какое из чисел ${sqrtNum(task1[0])},&thinsp; ${sqrtNum(task1[1])},&thinsp; ${sqrtNum(task1[2])},&thinsp; ${sqrtNum(task1[3])}&thinsp; принадлежит промежутку [${task1[4]} ; ${task1[5]}]
+            <hr class="hr-pd_30">
+            ` : 
+        
+            
+            task1.length === 7 ? 
             `
             Какое из чисел&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp;;&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[1]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp;;&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp;;&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[3]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp; принадлежит отрезку [${task1[5]}; ${task1[6]}] ?
+            ${drobNum(task1[0], task1[4])};&thinsp;
+            ${drobNum(task1[1], task1[4])};&thinsp;
+            ${drobNum(task1[2], task1[4])};&thinsp;
+            ${drobNum(task1[3], task1[4])}&thinsp;
+            принадлежит отрезку [${task1[5]}; ${task1[6]}] ?
             <hr class="hr-pd_40">
             ` :
             task1.length === 6 ? 
             `Одно из чисел&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp;;&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[1]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp;;&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp;;&thinsp;
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[3]}</mn>
-                <mn style="padding-top: 5px;">${task1[4]}</mn>
-              </mfrac>
-            </math>&thinsp;
-            отмечено на числовой прямой точкой ${task1[5]}.<hr class="hr-pd_10">
-            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png><hr class="hr-pd_10">
+            ${drobNum(task1[0], task1[4])};&thinsp;
+            ${drobNum(task1[1], task1[4])};&thinsp;
+            ${drobNum(task1[2], task1[4])};&thinsp;
+            ${drobNum(task1[3], task1[4])}&thinsp;
+            
+            отмечено на числовой прямой точкой ${task1[5] ? task1[5] : ""}.
+            <hr class="hr-pd_10">
+            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+            <hr class="hr-pd_10">
             Какое это число?<hr class="hr-pd_20">
             ` :  task1.length == 2 ? 
             `Какому из данных промежутков принадлежит число&thinsp;
-              <math style="font-size: 140%">
-                <mfrac >
-                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                  <mn style="padding-top: 5px;">${task1[1]}</mn>
-                </mfrac>
-              </math>&thinsp; ?
+              ${drobNum(task1[0], task1[1])} ?
             ` : 
             task1.length === 9 ? `
             На координатной прямой точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]} соответствуют числам
@@ -294,40 +270,24 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `}
           
          
-          ${task1.length === 6 || task1.length === 7 ? 
+          ${
+            task === 31 ? 
+            ` 
+            <div style="display: flex; justify-content: space-around;">
+              <p>1) ${sqrtNum(task1[0])}</p>
+              <p>2) ${sqrtNum(task1[1])}</p>
+              <p>3) ${sqrtNum(task1[2])}</p>
+              <p>4) ${sqrtNum(task1[3])}</p>
+            </div>
+
+            `
+            :
+            task1.length === 6 || task1.length === 7 ? 
           `<div style="display: flex; justify-content: space-around;">
-            <p> 1)
-              <math style="font-size: 140%">
-                <mfrac >
-                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                  <mn style="padding-top: 5px;">${task1[4]}</mn>
-                </mfrac>
-              </math>
-            </p>
-            <p> 2)
-              <math style="font-size: 140%">
-                <mfrac >
-                  <mn style="padding-bottom: 5px;">${task1[1]}</mn>
-                  <mn style="padding-top: 5px;">${task1[4]}</mn>
-                </mfrac>
-              </math>
-            </p>
-            <p> 3)
-              <math style="font-size: 140%">
-                <mfrac >
-                  <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                  <mn style="padding-top: 5px;">${task1[4]}</mn>
-                </mfrac>
-              </math>
-            </p>
-            <p> 4)
-              <math style="font-size: 140%">
-                <mfrac >
-                  <mn style="padding-bottom: 5px;">${task1[3]}</mn>
-                  <mn style="padding-top: 5px;">${task1[4]}</mn>
-                </mfrac>
-              </math>
-            </p>
+            <p> 1) ${drobNum(task1[0], task1[4])}</p>
+            <p> 2) ${drobNum(task1[1], task1[4])}</p>
+            <p> 3) ${drobNum(task1[2], task1[4])}</p>
+            <p> 4) ${drobNum(task1[3], task1[4])}</p>
           </div>`
           : task1.length === 2 ? 
           `
