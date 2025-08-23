@@ -1,15 +1,17 @@
 import generateTaskHTML from "./viewTask.js";
-import {tasks} from "./viewTask.js";
-
+import { tasks } from "./viewTask.js";
 
 // Функция для загрузки JSON
 async function fetchJSON(url) {
     try {
         const response = await fetch(url);
-        if (!response.ok) throw new Error(`Ошибка загрузки: ${response.status}`);
+        if (!response.ok) {
+            console.error(`Ошибка загрузки ${url}: ${response.status}`);
+            return null;
+        }
         return await response.json();
     } catch (error) {
-        console.error('Ошибка загрузки JSON:', error);
+        console.error('Ошибка загрузки JSON:', error, 'URL:', url);
         return null;
     }
 }
@@ -23,11 +25,23 @@ function getRandomItem(arr) {
 // Главная функция генератора задач
 async function generateRandomTasks() {
     const result = {};
+    
+    // Проверяем, что tasks существует и не пустой
+    if (!tasks || Object.keys(tasks).length === 0) {
+        console.error('Объект tasks пустой или не определен');
+        return null;
+    }
+    
+    console.log('Загрузка задач из:', tasks);
+    
     for (const key in tasks) {
+        console.log(`Загрузка задачи ${key} из: ${tasks[key]}`);
         const data = await fetchJSON(tasks[key]);
         if (data) {
             result[key] = getRandomItem(data);
+            console.log(`Задача ${key} успешно загружена`);
         } else {
+            console.error(`Не удалось загрузить задачу ${key}`);
             result[key] = null;
         }
     }
@@ -60,6 +74,7 @@ function createSlider(tasksHTML) {
         slider.appendChild(slide);
         slides.push(slide);
     });
+    
     // Добавляем навигацию с кнопками номеров заданий
     const navigation = document.createElement('div');
     navigation.className = 'slider-navigation';
@@ -68,16 +83,8 @@ function createSlider(tasksHTML) {
     tasksHTML.forEach((_, index) => {
         const btn = document.createElement('button');
         btn.className = `slider-btn ${index === 0 ? 'active' : ''}`;
-        btn.textContent = index + 1;
-        if (index+1 === 13){
-            btn.textContent = "13.1"
-        }
-        if (index+1 === 14){
-            btn.textContent = "13.2"
-        }
-        if (index+1 > 14){
-            btn.textContent = index
-        }
+        btn.textContent = index + 6;
+        
         btn.addEventListener('click', () => goToSlide(index));
         buttons.push(btn);
         navigation.appendChild(btn);
@@ -133,41 +140,55 @@ function createSlider(tasksHTML) {
         getCurrentSlide: () => currentSlide
     };
 }
-
-
-    
+ 
 let correctAnswerGen = [];
-
-let  correctAnswers = {}
+let correctAnswers = {};
 
 async function displayTasks() {
     const generatorDiv = document.querySelector('.task-gen__block');
     if (!generatorDiv) {
-       // console.error('Элемент .task-gen__block не найден!');
+        console.error('Элемент .task-gen__block не найден!');
         return;
     }
 
     const randomTasks = await generateRandomTasks();
 
-    if (!randomTasks.one) {
-        generatorDiv.innerHTML = '<p>Ошибка загрузки задач. Пожалуйста, попробуйте снова.</p>';
+    // Добавляем более детальную проверку ошибок
+    if (!randomTasks) {
+        generatorDiv.innerHTML = '<p>Ошибка: не удалось загрузить конфигурацию задач</p>';
+        return;
+    }
+
+    if (!randomTasks.six) {
+        console.error('Не удалось загрузить первую задачу (six)', randomTasks);
+        generatorDiv.innerHTML = `
+            <p>Ошибка загрузки задач. Возможные причины:</p>
+            <ul>
+                <li>Отсутствуют JSON файлы с задачами</li>
+                <li>Неправильные пути к файлам</li>
+                <li>Проблемы с сервером</li>
+            </ul>
+            <p>Пожалуйста, проверьте консоль для деталей ошибки.</p>
+        `;
         return;
     }
 
     // Сохраняем правильные ответы для проверки
     correctAnswers = {
-        one: randomTasks.one.taskAnswer,
-        two: randomTasks.two.taskAnswer,
-        three: randomTasks.three.taskAnswer,
-        four: randomTasks.four.taskAnswer,
-        five: randomTasks.five.taskAnswer,
-        six: randomTasks.six.taskAnswer,
-        seven: randomTasks.seven.taskAnswer,
-        eight: randomTasks.eight.taskAnswer,
-        nine: randomTasks.nine.taskAnswer,
-        ten: randomTasks.ten.taskAnswer,
-        eleven: randomTasks.eleven.taskAnswer,
-        twelve: randomTasks.twelve.taskAnswer
+        six: randomTasks.six?.taskAnswer,
+        seven: randomTasks.seven?.taskAnswer,
+        eight: randomTasks.eight?.taskAnswer,
+        nine: randomTasks.nine?.taskAnswer,
+        ten: randomTasks.ten?.taskAnswer,
+        eleven: randomTasks.eleven?.taskAnswer,
+        twelve: randomTasks.twelve?.taskAnswer,
+        thirteen: randomTasks.thirteen?.taskAnswer,
+        fourteen: randomTasks.fourteen?.taskAnswer,
+        fifteen: randomTasks.fifteen?.taskAnswer,
+        sixteen: randomTasks.sixteen?.taskAnswer,
+        seventeen: randomTasks.seventeen?.taskAnswer,
+        eighteen: randomTasks.eighteen?.taskAnswer,
+        nineteen: randomTasks.nineteen?.taskAnswer
     };
     
     // Обновляем массив correctAnswerGen
@@ -175,24 +196,27 @@ async function displayTasks() {
    
     // Генерируем HTML для всех задач
     const tasksHTML = [
-        generateTaskHTML('one', randomTasks.one, false),
-        generateTaskHTML('two', randomTasks.two, false),
-        generateTaskHTML('three', randomTasks.three, false),
-        generateTaskHTML('four', randomTasks.four, false),
-        generateTaskHTML('five', randomTasks.five, false),
-        generateTaskHTML('six', randomTasks.six, false),
-        generateTaskHTML('seven', randomTasks.seven, false),
-        generateTaskHTML('eight', randomTasks.eight, false),
-        generateTaskHTML('nine', randomTasks.nine, false),
-        generateTaskHTML('ten', randomTasks.ten, false),
-        generateTaskHTML('eleven', randomTasks.eleven, false),
-        generateTaskHTML('twelve', randomTasks.twelve, false),
-        generateTaskHTML('thirteen', randomTasks.thirteen, false),
-        generateTaskHTML('thirteentwo', randomTasks.thirteentwo, false),
-        generateTaskHTML('fourteen', randomTasks.fourteen, false),
-        generateTaskHTML('fifteen', randomTasks.fifteen, false),
-        generateTaskHTML('sixteen', randomTasks.sixteen, false)
+        randomTasks.six ? generateTaskHTML('six', randomTasks.six, false) : '',
+        randomTasks.seven ? generateTaskHTML('seven', randomTasks.seven, false) : '',
+        randomTasks.eight ? generateTaskHTML('eight', randomTasks.eight, false) : '',
+        randomTasks.nine ? generateTaskHTML('nine', randomTasks.nine, false) : '',
+        randomTasks.ten ? generateTaskHTML('ten', randomTasks.ten, false) : '',
+        randomTasks.eleven ? generateTaskHTML('eleven', randomTasks.eleven, false) : '',
+        randomTasks.twelve ? generateTaskHTML('twelve', randomTasks.twelve, false) : '',
+        randomTasks.thirteen ? generateTaskHTML('thirteen', randomTasks.thirteen, false) : '',
+        randomTasks.fourteen ? generateTaskHTML('fourteen', randomTasks.fourteen, false) : '',
+        randomTasks.fifteen ? generateTaskHTML('fifteen', randomTasks.fifteen, false) : '',
+        randomTasks.sixteen ? generateTaskHTML('sixteen', randomTasks.sixteen, false) : '',
+        randomTasks.seventeen ? generateTaskHTML('seventeen', randomTasks.seventeen, false) : '',
+        randomTasks.eighteen ? generateTaskHTML('eighteen', randomTasks.eighteen, false) : '',
+        randomTasks.nineteen ? generateTaskHTML('nineteen', randomTasks.nineteen, false) : ''
     ].filter(html => html);
+
+    // Проверяем, что есть хотя бы одна задача
+    if (tasksHTML.length === 0) {
+        generatorDiv.innerHTML = '<p>Не удалось загрузить ни одной задачи</p>';
+        return;
+    }
 
     // Очищаем контейнер перед созданием нового слайдера
     generatorDiv.innerHTML = '';
@@ -271,16 +295,15 @@ async function displayTasks() {
        
 }
 
-
-export {correctAnswerGen}
+export { correctAnswerGen }
 
 // Вспомогательная функция для создания текста результата
 function getResultText(countResult, total) {
-    if (countResult < 5) {
+    if (countResult < 7) {
         return `Ваша оценка: 2 <span style="padding: 5px;" class="bg_red">Не зачёт</span> <br><br> Количество баллов: ${countResult} из ${total} `;
-    } else if (countResult < 11) {
+    } else if (countResult < 15) {
         return `Ваша оценка: 3 <span style="padding: 5px;" class="bg_yellow">Зачёт</span> <br><br> Количество баллов: ${countResult} из ${total}`;
-    } else if (countResult < 16) {
+    } else if (countResult < 22) {
         return `Ваша оценка: 4 <span style="padding: 5px;" class="bg_green">Зачёт</span> <br><br> Количество баллов: ${countResult} из ${total}`;
     } else {
         return `Ваша оценка: 5 <span style="padding: 5px;" class="bg_green">Зачёт</span> <br><br> Количество баллов: ${countResult} из ${total}`;
@@ -294,15 +317,15 @@ function createResultsTable(arrayInput, arrayAnswer) {
     `;
 
     for (let i = 0; i < arrayInput.length; i++) {
-        const isCorrect = arrayAnswer[i].includes(' | ') 
-            ? arrayAnswer[i].split(' | ').map(str => str.trim()).includes(arrayInput[i])
-            : arrayInput[i] === arrayAnswer[i];
+        const isCorrect = arrayInput[i] === arrayAnswer[i] || 
+                         (arrayAnswer[i].includes(' | ') && 
+                          arrayAnswer[i].split(' | ').map(str => str.trim()).includes(arrayInput[i]));
 
-        const textColor = arrayInput[i] === "—" ? "" : isCorrect ? " #c0ffc0" : "#ffc0c0";
+        const textColor = arrayInput[i] === "—" ? "" : isCorrect ? "#c0ffc0" : "#ffc0c0";
 
         tableHTML += `
             <tr class="answer-td">
-                <td style="padding: 8px; width: 10%; border: 1px solid #000; border-right: 0;">${i + 1}</td>
+                <td style="padding: 8px; width: 10%; border: 1px solid #000; border-right: 0;">${i + 6}</td>
                 <td style="padding: 8px; width: 30%; border: 1px solid #000; border-left: 0; border-right: 0; background-color: ${textColor};">${arrayInput[i]}</td>
                 <td style="padding: 8px; width: 30%; border: 1px solid #000; border-left: 0; ">${arrayAnswer[i]}</td>
             </tr>
@@ -386,8 +409,3 @@ document.addEventListener('DOMContentLoaded', () => {
     addSliderStyles();
     displayTasks();
 });
-
-
-
-
-

@@ -27,12 +27,8 @@ function preparePrintView() {
         slideClone.removeAttribute('data-task-id');
         slideClone.classList.remove('slide', 'active');
         
-        let taskNumber = index + 1;
-        if (slides.length > 14) {
-            if (index === 12) taskNumber = '13.1';
-            if (index === 13) taskNumber = '13.2';
-            if (index > 13) taskNumber = index;
-        }
+        let taskNumber = index + 6;
+        
     
         const sliderBtn = slideClone.querySelector('.slider-btn');
         if (sliderBtn) sliderBtn.remove();
@@ -40,7 +36,7 @@ function preparePrintView() {
         printContent += `<div class="print-task">${slideClone.innerHTML}</div>`;
         
         // Получение и вывод правильного ответа только для первых 12 заданий
-        if (index < 12) {
+        if (index < 20) {
             
             const correctAnswerForTask = 
                   correctAnswer && correctAnswer.length > 0 ? correctAnswer[index] 
