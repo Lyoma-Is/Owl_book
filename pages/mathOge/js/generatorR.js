@@ -32,14 +32,14 @@ async function generateRandomTasks() {
         return null;
     }
     
-    console.log('Загрузка задач из:', tasks);
+    // console.log('Загрузка задач из:', tasks);
     
     for (const key in tasks) {
-        console.log(`Загрузка задачи ${key} из: ${tasks[key]}`);
+        // console.log(`Загрузка задачи ${key} из: ${tasks[key]}`);
         const data = await fetchJSON(tasks[key]);
         if (data) {
             result[key] = getRandomItem(data);
-            console.log(`Задача ${key} успешно загружена`);
+            // console.log(`Задача ${key} успешно загружена`);
         } else {
             console.error(`Не удалось загрузить задачу ${key}`);
             result[key] = null;

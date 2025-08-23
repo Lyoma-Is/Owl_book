@@ -52,8 +52,6 @@ showTaskCount.appendChild(countLabel);
 
 const showTaskCount2 = document.querySelector('.label-text_two');
 
-
-
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
   console.log(` задач: ${totalTasksLoaded}`);
@@ -193,11 +191,11 @@ document.addEventListener('click', function(e) {
     const currentPage = window.location.pathname.split('/').pop();
 
     const PAGE_TO_KEC = {
-      'taskOnePage.html': 1,
-      'taskTwoPage.html': 2,
-      'taskThreePage.html': 3,
-      'taskFourPage.html': 4,
-      'taskFivePage.html': 5,
+      // 'taskOnePage.html': 1,
+      // 'taskTwoPage.html': 2,
+      // 'taskThreePage.html': 3,
+      // 'taskFourPage.html': 4,
+      // 'taskFivePage.html': 5,
       'taskSixPage.html': 6,
       'taskSevenPage.html': 7,
       'taskEightPage.html': 8,
@@ -233,11 +231,11 @@ document.addEventListener('click', function(e) {
     });
 
     const KEC_DESCRIPTIONS = {
-      1: "КЭС: ",
-      2: "КЭС: ",
-      3: "КЭС: ",
-      4: "КЭС: ",
-      5: "КЭС: ",
+      // 1: "КЭС: ",
+      // 2: "КЭС: ",
+      // 3: "КЭС: ",
+      // 4: "КЭС: ",
+      // 5: "КЭС: ",
       6: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.",
       7: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.<br>КЭС: 1.4 Действительные числа. Арифметические операции с действительными числами.<br>КЭС: 2.5 Арифметический корень натуральной степени. Действия с арифметическими корнями натуральной степени.<br> КЭС: 6.1 Координатная прямая.",
       8: "КЭС: 2.2 Степень с целым показателем. Степень с рациональным показателем. Свойства степени.",

@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const deselectAllBtn = document.querySelector('.deselect-all');
     const generateBtn = document.querySelector('.generate-btn');
     
-    const TOTAL_TASKS = 17; // 1-12, 13.1, 13.2, 14-16
+    const TOTAL_TASKS = 19; 
     const TASKS_PER_ROW = 6;
 
     function initCheckboxes() {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         checkboxesContainer.innerHTML = '';
         const rowsNeeded = Math.ceil(TOTAL_TASKS / TASKS_PER_ROW);
-        let taskCounter = 0;
+        let taskCounter = 5;
 
         for (let row = 0; row < rowsNeeded; row++) {
             const rowDiv = document.createElement('div');
@@ -59,16 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 taskCounter++;
                 if (taskCounter > TOTAL_TASKS) break;
                 
-                let taskId;
-                if (taskCounter <= 12) {
-                    taskId = taskCounter.toString();
-                } else if (taskCounter === 13) {
-                    taskId = '13.1';
-                } else if (taskCounter === 14) {
-                    taskId = '13.2';
-                } else {
-                    taskId = (taskCounter - 1).toString(); // Because we added 13.1 and 13.2
-                }
+                let taskId = taskCounter.toString();;
+                
                 
                 const container = createCheckboxItem(taskId, taskId);
                 rowDiv.appendChild(container);
@@ -127,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
             // Используем абсолютный путь (пример):
-            window.location.href = '../pages/variants/tasksOgeInf/checkVars.html';
+            window.location.href = '../../pages/mathOge/checkVars.html';
 
         } catch (error) {
             console.error('Ошибка:', error);

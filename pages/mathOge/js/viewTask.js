@@ -38,10 +38,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       <div class="text-inform" data-task-counter="${taskCounter}"><div class="inform-block"></div>
         ${ !taskKec ? ``:
           taskKec[2] === 1 ? 
-          `<img id="text-inform-button" src="../../img/inform2.svg">`:
+          `<img id="text-inform-button" src="../../img/inform7.svg">`:
           taskKec[2] === 2 ? 
-          `<img id="text-inform-button" src="../../img/inform6.svg">`:
-          `<img id="text-inform-button" src="../../img/inform5.svg">` }
+          `<img id="text-inform-button" src="../../img/inform8.svg">`:
+          `<img id="text-inform-button" src="../../img/inform9.svg">` }
         <p class="p-num print" style="text-align: right;"> Номер: ${taskNum}</p>
         
       </div>

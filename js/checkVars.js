@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const TOTAL_TASKS = 16;
     const TASKS_PER_ROW = 6;
     const taskDataCache = new Map();
-    const REPEAT_COUNT = 5;
+    let REPEAT_COUNT = parseInt(document.querySelector('.input-colv')?.value) || 5;
+
+    document.querySelector('.input-colv').addEventListener('input', function() {
+        REPEAT_COUNT = parseInt(this.value) || 5;
+    });
 
     // Инициализация чекбоксов
     function initCheckboxes() {

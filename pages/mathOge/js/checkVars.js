@@ -3,7 +3,6 @@ const footerText = document.querySelector('.footer-text');
 if (footerText) {
   footerText.innerHTML = `<b>© OwlExams.ru</b>`;
 }
-
 import generateTaskHTML from "./viewTask.js";
 import { tasks as taskSources } from "./viewTask.js";
 
@@ -17,36 +16,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskOutput = document.querySelector('.task-numbers__block');
     
     // Настройки
-    const TOTAL_TASKS = 16;
+    const TOTAL_TASKS = 19;
     const TASKS_PER_ROW = 6;
     const taskDataCache = new Map();
-    const REPEAT_COUNT = 5;
+    let REPEAT_COUNT = parseInt(document.querySelector('.input-colv')?.value) || 5;
+
+    document.querySelector('.input-colv').addEventListener('input', function() {
+        REPEAT_COUNT = parseInt(this.value) || 5;
+    });
 
     // Инициализация чекбоксов
     function initCheckboxes() {
+        if(!checkboxesContainer){
+           return 0
+        }
         checkboxesContainer.innerHTML = '';
-        
         const rowsNeeded = Math.ceil(TOTAL_TASKS / TASKS_PER_ROW);
-        
+        let taskCounter = 5;
+
         for (let row = 0; row < rowsNeeded; row++) {
             const rowDiv = document.createElement('div');
             rowDiv.className = 'checkbox-row';
             
             for (let col = 1; col <= TASKS_PER_ROW; col++) {
-                const taskNum = row * TASKS_PER_ROW + col;
-                if (taskNum > TOTAL_TASKS) break;
+                taskCounter++;
+                if (taskCounter > TOTAL_TASKS) break;
                 
-                if (taskNum === 13) {
-                    // Специальная обработка для задания 13 (оно разделено на 13.1 и 13.2)
-                    const container13_1 = createCheckboxItem('13.1', '13.1');
-                    rowDiv.appendChild(container13_1);
-                    
-                    const container13_2 = createCheckboxItem('13.2', '13.2');
-                    rowDiv.appendChild(container13_2);
-                    continue;
-                }
+                let taskId = taskCounter.toString();;
                 
-                const container = createCheckboxItem(taskNum.toString(), taskNum.toString());
+                
+                const container = createCheckboxItem(taskId, taskId);
                 rowDiv.appendChild(container);
             }
             
@@ -160,22 +159,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Вспомогательные функции для преобразования номеров заданий
     function getTaskNumber(key) {
         const numberMap = {
-            one: 1, two: 2, three: 3, four: 4, five: 5,
-            six: 6, seven: 7, eight: 8, nine: 9, ten: 10,
-            eleven: 11, twelve: 12, thirteen: '13.1', 
-            thirteentwo: '13.2', fourteen: 14,
-            fifteen: 15, sixteen: 16
+            six: 6, 
+            seven: 7, 
+            eight: 8, 
+            nine: 9, 
+            ten: 10,
+            eleven: 11, 
+            twelve: 12, 
+            thirteen: 13, 
+            fourteen: 14,
+            fifteen: 15, 
+            sixteen: 16,
+            seventeen: 17,
+            eighteen: 18,
+            nineteen: 19
         };
         return numberMap[key] || 0;
     }
     
     function getTaskKey(num) {
         const keyMap = {
-            1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five',
-            6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten',
-            11: 'eleven', 12: 'twelve', '13.1': 'thirteen', 
-            '13.2': 'thirteentwo', 14: 'fourteen',
-            15: 'fifteen', 16: 'sixteen'
+            6: 'six', 
+            7: 'seven', 
+            8: 'eight', 
+            9: 'nine', 
+            10: 'ten',
+            11: 'eleven', 
+            12: 'twelve', 
+            13: 'thirteen', 
+            14: 'fourteen',
+            15: 'fifteen', 
+            16: 'sixteen',
+            17: 'seventeen',
+            18: 'eighteen',
+            19: 'nineteen'
         };
         return keyMap[num] || '';
     }
