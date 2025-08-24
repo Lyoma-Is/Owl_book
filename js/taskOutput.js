@@ -60,7 +60,7 @@ const showTaskCount2 = document.querySelector('.label-text_two');
 
 async function loadAllTasks(taskKeys) {
   await Promise.all(taskKeys.map(fetchTasks));
-  //console.log(`Общее количество загруженных задач: ${totalTasksLoaded}`);
+  console.log(` задач: ${totalTasksLoaded}`);
   
 }
 

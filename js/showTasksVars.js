@@ -211,8 +211,9 @@ function displayTasksByVariantWithSlider(tasksToDisplay) {
 function createVariants() {
     const block2025 = document.querySelector('.vars-block_2025');
     const block2026 = document.querySelector('.vars-block_2026');
+    const block_tr_2026 = document.querySelector('.vars-block_tr-2026');
 
-    if (!block2025 && !block2026) return;
+    if (!block2025) return;
 
     const variantsByYear = variants.reduce((acc, variant) => {
         const year = variant.year || 2025; // Добавлено значение по умолчанию
@@ -241,6 +242,10 @@ function createVariants() {
 
     if (block2026 && variantsByYear[2026]) {
         block2026.innerHTML = createYearGroupHTML(variantsByYear[2026]);
+    }
+
+    if (block_tr_2026 && variantsByYear["tr-2026"]) {
+        block_tr_2026.innerHTML = createYearGroupHTML(variantsByYear["tr-2026"]);
     }
 
     document.querySelectorAll('.vars-block__inner').forEach(link => {
