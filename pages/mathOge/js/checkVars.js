@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskOutput = document.querySelector('.task-numbers__block');
     
     // Настройки
-    const TOTAL_TASKS = 19;
+    const TOTAL_TASKS = 20;
     const TASKS_PER_ROW = 6;
     const taskDataCache = new Map();
     let REPEAT_COUNT = parseInt(document.querySelector('.input-colv')?.value) || 5;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
            return 0
         }
         checkboxesContainer.innerHTML = '';
-        const rowsNeeded = Math.ceil(TOTAL_TASKS / TASKS_PER_ROW);
+        const rowsNeeded = TASKS_PER_ROW;
         let taskCounter = 5;
 
         for (let row = 0; row < rowsNeeded; row++) {
@@ -172,7 +172,8 @@ document.addEventListener('DOMContentLoaded', function() {
             sixteen: 16,
             seventeen: 17,
             eighteen: 18,
-            nineteen: 19
+            nineteen: 19,
+            twenty: 20
         };
         return numberMap[key] || 0;
     }
@@ -192,7 +193,8 @@ document.addEventListener('DOMContentLoaded', function() {
             16: 'sixteen',
             17: 'seventeen',
             18: 'eighteen',
-            19: 'nineteen'
+            19: 'nineteen',
+            20: 'twenty'
         };
         return keyMap[num] || '';
     }

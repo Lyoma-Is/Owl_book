@@ -209,7 +209,8 @@ async function displayTasks() {
         randomTasks.sixteen ? generateTaskHTML('sixteen', randomTasks.sixteen, false) : '',
         randomTasks.seventeen ? generateTaskHTML('seventeen', randomTasks.seventeen, false) : '',
         randomTasks.eighteen ? generateTaskHTML('eighteen', randomTasks.eighteen, false) : '',
-        randomTasks.nineteen ? generateTaskHTML('nineteen', randomTasks.nineteen, false) : ''
+        randomTasks.nineteen ? generateTaskHTML('nineteen', randomTasks.nineteen, false) : '',
+        randomTasks.twenty ? generateTaskHTML('twenty', randomTasks.twenty, false) : ''
     ].filter(html => html);
 
     // Проверяем, что есть хотя бы одна задача
@@ -250,12 +251,7 @@ async function displayTasks() {
     
                 // Проверка ответа с учетом альтернативных вариантов
                 let isCorrect = false;
-                if (correctAnswer.includes(' | ')) {
-                    const alternatives = correctAnswer.split(' | ').map(str => str.trim());
-                    isCorrect = alternatives.includes(userInput);
-                } else {
-                    isCorrect = userInput === correctAnswer;
-                }
+                
     
                 if (isCorrect) {
                     input.classList.add('input_answer-green');
@@ -316,10 +312,8 @@ function createResultsTable(arrayInput, arrayAnswer) {
         <table style="width: 100%; border-collapse: collapse; margin-top: 15px;"><tbody>
     `;
 
-    for (let i = 0; i < arrayInput.length; i++) {
-        const isCorrect = arrayInput[i] === arrayAnswer[i] || 
-                         (arrayAnswer[i].includes(' | ') && 
-                          arrayAnswer[i].split(' | ').map(str => str.trim()).includes(arrayInput[i]));
+    for (let i = 0; i < arrayInput.length-2; i++) {
+        const isCorrect = arrayInput[i] === arrayAnswer[i];
 
         const textColor = arrayInput[i] === "—" ? "" : isCorrect ? "#c0ffc0" : "#ffc0c0";
 

@@ -13,7 +13,8 @@ const tasks = {
   sixteen: '../../src/oge_math/taskSixteen.json',
   seventeen: '../../src/oge_math/taskSeventeen.json',
   eighteen: '../../src/oge_math/taskEighteen.json',
-  nineteen: '../../src/oge_math/taskNineteen.json'
+  nineteen: '../../src/oge_math/taskNineteen.json',
+  twenty: '../../src/oge_math/taskTwenty.json'
 };
  
 export {tasks};
@@ -49,7 +50,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
    
     const generateAuthor = () => `${!taskAuthor ? "": `<em>${taskAuthor}</em>`}`
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
-  
+    const generateInputP = () => `<input id="input_answer" class="input_answer" style="display: none;"></input>`
     const beginTask = () => `<div class="tasks-blocks">`;
     const endTask = () => `</div>`;
     let answerBlock = "";
@@ -4259,6 +4260,101 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
+    if (taskKey === 'twenty'){
+      let Nomer = 20
+      function reshTwenty(item){
+        if (item === 11){
+          return `
+          ${task2} = ${task4[0]} • (${task3})
+          <hr class="hr-pd_10">
+          ${task2} = ${task4[0]*task4[1]}a − ${task4[0]*task4[2]}b + ${task4[0]*task4[3]}
+          <hr class="hr-pd_10">
+          ${task4[0]*task4[1]}a − ${task4[0]*task4[2]}b + ${task4[0]*task4[3]} − (${task2}) = 0
+          <hr class="hr-pd_10">
+          ${task4[0]*task4[1]}a − ${task4[0]*task4[2]}b + ${task4[0]*task4[3]} − ${task4[4]}a + ${task4[5]}b − ${task4[6]} = 0
+          <hr class="hr-pd_10">
+          ${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b + ${task4[0]*task4[3]-task4[6]} = 0
+          <hr class="hr-pd_20">
+          ${task1} = ${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b + ${task4[0]*task4[3]-task4[6]} + ${task4[7]-(task4[0]*task4[3]-task4[6])}
+          <hr class="hr-pd_10">
+          (${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b + ${task4[0]*task4[3]-task4[6]}) + ${task4[7]-(task4[0]*task4[3]-task4[6])}
+          <hr class="hr-pd_10">
+          ( 0 ) + ${task4[7]-(task4[0]*task4[3]-task4[6])} = ${task4[7]-(task4[0]*task4[3]-task4[6])}
+          `
+        }
+        else {return `...`}
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Найдите значение выражения: ${task1}, если ${drobNum(task2, task3)} = ${task4[0]}
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwenty(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+         
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+         
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+         
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
           } 
           return answerBlock
         }   
