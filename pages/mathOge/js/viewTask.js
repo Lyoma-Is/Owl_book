@@ -69,6 +69,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           </math>   
        `
     }
+    function supNum(item1, item2){
+      return `
+      <math>
+        <msup>
+          <mn>${item1}</mn>
+          <mn>${item2}</mn>
+        </msup>
+      </math>  
+      `
+    }
 
     if (taskKey === 'six'){
       let Nomer = 6
@@ -4278,12 +4288,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${task4[0]*task4[1]}a − ${task4[0]*task4[2]}b + ${task4[0]*task4[3]} − ${task4[4]}a + ${task4[5]}b − ${task4[6]} = 0
           <hr class="hr-pd_10">
           ${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b + ${task4[0]*task4[3]-task4[6]} = 0
+          <hr class="hr-pd_10">
+          ${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b =  −${task4[0]*task4[3]-task4[6]}
           <hr class="hr-pd_20">
-          ${task1} = ${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b + ${task4[0]*task4[3]-task4[6]} + ${task4[7]-(task4[0]*task4[3]-task4[6])}
+          ${task1} = (${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b) + ${(task4[0]*task4[3]-task4[6]) + (task4[7]-(task4[0]*task4[3]-task4[6]))}
           <hr class="hr-pd_10">
-          (${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b + ${task4[0]*task4[3]-task4[6]}) + ${task4[7]-(task4[0]*task4[3]-task4[6])}
-          <hr class="hr-pd_10">
-          ( 0 ) + ${task4[7]-(task4[0]*task4[3]-task4[6])} = ${task4[7]-(task4[0]*task4[3]-task4[6])}
+          (−${task4[0]*task4[3]-task4[6]}) + ${(task4[0]*task4[3]-task4[6]) + (task4[7]-(task4[0]*task4[3]-task4[6]))} = ${task4[7]-(task4[0]*task4[3]-task4[6])}
+          
           `
         }
         else {return `...`}
@@ -4292,7 +4303,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          Найдите значение выражения: ${task1}, если ${drobNum(task2, task3)} = ${task4[0]}
+          Найдите значение выражения:&thinsp; ${task1}, если&thinsp; ${drobNum(task2, task3)} = ${task4[0]}
           <hr class="hr-pd_20">
           `
           
@@ -4312,11 +4323,32 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-         
+          Решите уравнение:&thinsp;  
+          ${task === 21 ? `x<sup>3</sup> + ${task1[0]}x<sup>2</sup> = ${task1[1]}x + ${task1[2]}
+           `
+          : task === 22 ? `x<sup>3</sup> + ${task1[0]}x<sup>2</sup> — ${task1[1] === 1 ? `x` : `${task1[1]}x`} — ${task1[2]} = 0
+           `
+          : task === 23 ? `x<sup>4</sup> = (${task1[0] === 1 ? `x` : `${task1[0]}x`} — ${task1[1]})<sup>2</sup>
+           `
+          : task === 24 ? `(x<sup>2</sup> — ${task1[0]})<sup>2</sup> + (x<sup>2</sup> ${task1[3]} ${task1[1] === 1 ? `x` : `${task1[1]}x`} — ${task1[2]})<sup>2</sup> = 0
+           `
+          : task === 25 ? `${task1[0] === 0? `x ` : `(x — ${task1[0]})`}(x<sup>2</sup> + ${task1[1]}x + ${task1[2]}) = ${task1[3]} (x + ${task1[4]})
+           `
+          : task === 26 ? `(x ${task1[4]} ${task1[0]})<sup>4</sup> ${task1[5]} ${task1[1] === 1 ? `` : task1[1]} (x ${task1[6]} ${task1[0]})<sup>2</sup> — ${task1[3]} = 0
+           `
+          : task === 27 ? `x<sup>2</sup> — ${task1[0]}x + ${sqrtNum(`${task1[1]} — x`)} = ${sqrtNum(`${task1[1]} — x`)} + ${task1[2]}
+           `
+          : task === 28 ? `${drobNum(task1[0], supNum(`${task1[3] === 0 ? `x` : `(x — ${task1[3]})`}`, 2))} ${task1[4]} ${drobNum(task1[1],`${task1[3] === 0 ? `x` : `(x — ${task1[3]})`}`)} — ${task1[2]} = 0
+            `
+            : 
+
+            ``}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwenty(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -4334,6 +4366,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
+            ${reshTwenty(task)}
+            <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4349,6 +4383,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwenty(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
