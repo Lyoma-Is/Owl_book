@@ -79,6 +79,35 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       </math>  
       `
     }
+    function sistemNum(item1, item2){
+      return `
+      <math style="font-size: 110%;">
+            <mrow style="display: flex; align-items: center;">
+            <mn  style="font-size: 250%; font-family: MathJax_Size3;">{</mn>
+              <mtable style="vertical-align: middle; ">
+                <mtr >
+                  <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${item1},</mtd>
+                </mtr>
+                <mtr>
+                  <mtd style="padding-top: 5px; text-align: left;">&thinsp;${item2}.</mtd>
+                </mtr>
+              </mtable>
+            </mrow>
+          </math>
+      `
+    }
+    function rowNum(item1, item2){
+      return `
+      <math style="font-size: 140%;">
+        <mfrac>
+          <mrow >
+            <mn>${item1}</mn> 
+            <mn>${item2}</mn>
+          </mrow>  
+        </mfrac>
+      </math>&thinsp;
+      `
+    }
 
     if (taskKey === 'six'){
       let Nomer = 6
@@ -2337,11 +2366,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <mn  style="font-size: 270%; font-family: MathJax_Size3; ">{</mn>
               <mtable style="vertical-align: middle;">
                 <mtr >
-                  <mtd style="padding-bottom: 5px;">&thinsp;${task1},</mtd>
+                  <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1},</mtd>
                 </mtr>
               
                 <mtr>
-                  <mtd style="padding-top: 5px;">&thinsp;${task2}.</mtd>
+                  <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2}.</mtd>
                 </mtr>
               </mtable>
             </mrow>
@@ -2362,11 +2391,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <mn  style="font-size: 270%; font-family: MathJax_Size3; ">{</mn>
               <mtable style="vertical-align: middle;">
                 <mtr >
-                  <mtd style="padding-bottom: 5px;">&thinsp;${task1},</mtd>
+                  <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1},</mtd>
                 </mtr>
               
                 <mtr>
-                  <mtd style="padding-top: 5px;">&thinsp;${task2}.</mtd>
+                  <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2}.</mtd>
                 </mtr>
               </mtable>
             </mrow>
@@ -4360,7 +4389,23 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-         
+          Решите систему уравнений:&thinsp; 
+          ${task === 31 ? 
+            `
+            ${sistemNum(`${task1[0]}${supNum("x", 2)}+ y = ${task1[2]}`, `${task1[1]}${supNum("x", 2)}− y = ${task1[3]}`)}
+            `
+          : task === 32 ? 
+            `
+            ${sistemNum(`${task1[0]}${supNum("x",2)}− ${task1[2]}x = y`, `${task1[1]} x − ${task1[3]} = y`)}
+            `
+          : task === 33 ? 
+            `
+            ${sistemNum(`${task1[0]}${supNum("x",2)} + ${task1[4]}${supNum("y",2)} = ${task1[3]}`, `${task1[1]}${supNum("x",2)} + ${task1[2]}${supNum("y",2)} = ${task1[3]}x`)}
+            `
+            : 
+            ``}
+          
+          <hr class="hr-pd_20"> 
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -4378,7 +4423,23 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 4:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-         
+          Решите неравенство:&thinsp;  
+          ${task === 41 ? 
+            `
+             ${supNum(`(x — ${task1[0]})`, 2)} < ${sqrtNum(task1[1])} (x — ${task1[0]})
+            `
+          : task === 42 ? 
+            `
+            ${drobNum(`—${task1[0]}`, rowNum(`${supNum(`(x ${task1[3]} ${task1[1]})`, 2)}`, ` — ${task1[2]}`))} ≥ 0
+             
+            `
+          : task === 43 ? 
+            `
+            —${drobNum(`${task1[0]}`, rowNum(`${supNum(`x`, 2)}`, `— ${task1[1]}x — ${task1[2]}`))} ≤ 0
+             
+            `
+            :
+            ``}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
