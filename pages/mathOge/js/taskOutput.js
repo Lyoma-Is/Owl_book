@@ -158,6 +158,7 @@ taskPage.innerHTML = `
 <option value="taskEighteenPage.html">18. Фигуры на квадратной решётке.</option>
 <option value="taskNineteenPage.html">19. Анализ геометрических высказываний.</option>
 <option value="taskTwentyPage.html">20. Алгебраические выражения, уравнения, системы уравнений, неравенства.</option>
+<option value="taskTwentyOnePage.html">21. Текстовые задачи.</option>
 `
 
 //<option value="taskOnePage.html">1. .</option>
@@ -211,7 +212,8 @@ document.addEventListener('click', function(e) {
       'taskSeventeenPage.html': 17,
       'taskEighteenPage.html': 18,
       'taskNineteenPage.html': 19,
-      'taskTwentyPage.html': 20
+      'taskTwentyPage.html': 20,
+      'taskTwentyOnePage.html': 21
     };
 
     const Kec = PAGE_TO_KEC[currentPage];
@@ -252,7 +254,9 @@ document.addEventListener('click', function(e) {
       17: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.5 Измерение геометрических величин.",
       18: "КЭС: 7.2 Треугольник.<br>КЭС: 7.3 Многоугольники.<br>КЭС: 7.4 Окружность и круг.<br>КЭС: 7.5 Измерение геометрических величин.",
       19: "КЭС: 7 Геометрия.<br>КЭС: 7.1 Геометрические фигуры и их свойства.",
-      20: "КЭС: 2.1 Буквенные выражения (выражения с переменными).<br>КЭС: 2.3 Многочлены.<br>КЭС: 3.1 Целые и дробно-рациональные уравнения. Системы и совокупности уравнений."
+      20: "КЭС: 2.1 Буквенные выражения (выражения с переменными).<br>КЭС: 2.3 Многочлены.<br>КЭС: 3.1 Целые и дробно-рациональные уравнения. Системы и совокупности уравнений.<br>КЭС: 3.2 Целые и дробно-рациональные неравенства. Системы и совокупности неравенств.",
+      21: "КЭС: 3.3 Решение текстовых задач."
+    
     };
 
     let content = `

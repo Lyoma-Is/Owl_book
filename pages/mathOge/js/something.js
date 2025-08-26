@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const deselectAllBtn = document.querySelector('.deselect-all');
     const generateBtn = document.querySelector('.generate-btn');
     
-    const TOTAL_TASKS = 20; 
+    const TOTAL_TASKS = 21; 
     const TASKS_PER_ROW = 6;
 
     function initCheckboxes() {

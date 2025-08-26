@@ -14,7 +14,8 @@ const tasks = {
   seventeen: '../../src/oge_math/taskSeventeen.json',
   eighteen: '../../src/oge_math/taskEighteen.json',
   nineteen: '../../src/oge_math/taskNineteen.json',
-  twenty: '../../src/oge_math/taskTwenty.json'
+  twenty: '../../src/oge_math/taskTwenty.json',
+  twentyone: '../../src/oge_math/taskTwentyOne.json'
 };
  
 export {tasks};
@@ -4372,6 +4373,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
 
             ``}
+            <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -4440,6 +4442,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             :
             ``}
+            <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -4456,5 +4459,152 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     } 
+    if (taskKey === 'twentyone'){
+      let Nomer = 21
+      function reshTwentyOne(item){
+        if (item === 1){
+          return `
+          
+          `
+        }
+        else {return `...`}
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+          Два автомобиля одновременно отправляются в ${task1[0]}-километровый пробег. 
+          Первый едет со скоростью на ${task1[1]} км/ч большей, чем второй, и прибывает к финишу на ${task1[2]} ч раньше второго. 
+          Найдите скорость первого автомобиля.
+            ` 
+          : task === 12 ? 
+            `
+          Из А в В одновременно выехали два автомобиля. Первый проехал весь путь с постоянной скоростью. 
+          Второй проехал первую половину пути со скоростью ${task1[0]} км/ч, а вторую половину пути проехал со скоростью больше скорости первого на ${task1[1]} км/ч, 
+          в результате чего прибыл в В одновременно с первым автомобилем. Найдите скорость первого автомобиля.
+            ` 
+          : task === 13 ? 
+            `
+          Из А в В одновременно выехали два автомобиля. Первый проехал весь путь с постоянной скоростью. 
+          Второй проехал первую половину пути со скоростью ${task1[0]} км/ч, а вторую половину пути проехал со скоростью больше скорости первого на ${task1[1]} км/ч, 
+          в результате чего прибыл в В одновременно с первым автомобилем. 
+          Найдите скорость первого автомобиля, если известно, что она больше ${task1[2]} км/ч.
+            ` 
+          :
+          ``}
+          
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `
+          Два велосипедиста одновременно отправляются в ${task1[0]}-километровый пробег. 
+          Первый едет со скоростью на ${task1[1]} км/ч большей, чем второй, и прибывает к финишу на ${task1[2]} часа раньше второго. 
+          Найдите скорость велосипедиста, пришедшего к финишу вторым.
+            ` 
+          : task === 22 ? 
+            `
+          Велосипедист выехал с постоянной скоростью из города А в город В, расстояние между которыми равно ${task1[0]} км. 
+          На следующий день он отправился обратно в А, увеличив скорость на ${task1[1]} км/ч. 
+          По пути он сделал остановку на ${task1[2]} часов, в результате чего затратил на обратный путь столько же времени, 
+          сколько на путь из А в В. Найдите скорость велосипедиста на пути <b>из ${task1[3] === 1 ? `А в В` : `В в А`}</b>.
+            ` 
+          : task === 23 ? 
+            `
+          Из двух городов одновременно навстречу друг другу отправились два велосипедиста. 
+          Проехав некоторую часть пути, первый велосипедист сделал остановку на ${task1[0]} минут, 
+          а затем продолжил движение до встречи со вторым велосипедистом. 
+          Расстояние между городами составляет ${task1[1]} км, скорость первого велосипедиста равна ${task1[2]} км/ч, 
+          скорость второго — ${task1[3]} км/ч. 
+          Определите расстояние от города, из которого выехал второй велосипедист, до места встречи.
+            ` 
+            :
+            ``}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `
+          Поезд, двигаясь равномерно со скоростью ${task1[0]} км/ч, проезжает мимо пешехода, 
+          идущего в том же направлении параллельно путям по платформе со скоростью ${task1[1]} км/ч, за ${task1[2]} секунды. 
+          Найдите длину поезда в метрах.
+            `
+          : task === 32 ? 
+            `
+          Поезд, двигаясь равномерно со скоростью ${task1[0]} км/ч, проезжает мимо пешехода, 
+          идущего по платформе параллельно путям со скоростью ${task1[1]} км/ч навстречу поезду, за ${task1[2]} секунд. 
+          Найдите длину поезда в метрах.
+            `
+            : 
+            ``}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        }   
+    }
    
 }

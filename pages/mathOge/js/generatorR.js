@@ -210,7 +210,8 @@ async function displayTasks() {
         randomTasks.seventeen ? generateTaskHTML('seventeen', randomTasks.seventeen, false) : '',
         randomTasks.eighteen ? generateTaskHTML('eighteen', randomTasks.eighteen, false) : '',
         randomTasks.nineteen ? generateTaskHTML('nineteen', randomTasks.nineteen, false) : '',
-        randomTasks.twenty ? generateTaskHTML('twenty', randomTasks.twenty, false) : ''
+        randomTasks.twenty ? generateTaskHTML('twenty', randomTasks.twenty, false) : '',
+        randomTasks.twentyone ? generateTaskHTML('twentyone', randomTasks.twentyone, false) : ''
     ].filter(html => html);
 
     // Проверяем, что есть хотя бы одна задача
@@ -312,7 +313,7 @@ function createResultsTable(arrayInput, arrayAnswer) {
         <table style="width: 100%; border-collapse: collapse; margin-top: 15px;"><tbody>
     `;
 
-    for (let i = 0; i < arrayInput.length-2; i++) {
+    for (let i = 0; i < arrayInput.length-4; i++) {
         const isCorrect = arrayInput[i] === arrayAnswer[i];
 
         const textColor = arrayInput[i] === "—" ? "" : isCorrect ? "#c0ffc0" : "#ffc0c0";
