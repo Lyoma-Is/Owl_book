@@ -4589,7 +4589,269 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 4:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 41 ? 
+            `
+            Первые ${task1[0]} км автомобиль ехал со скоростью ${task1[1]} км/ч, следующие ${task1[2]} км — со скоростью ${task1[3]} км/ч, 
+            а последние ${task1[4]} км — со скоростью ${task1[5]} км/ч. Найдите среднюю скорость автомобиля на протяжении всего пути.
+
+            `
+            : task === 42 ? 
+            `
+            Первую половину пути автомобиль проехал со скоростью ${task1[0]} км/ч, а вторую — со скоростью ${task1[1]} км/ч. 
+            Найдите среднюю скорость автомобиля на протяжении всего пути.
+            `
+            : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 5:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 51 ? 
+            `
+            Два бегуна одновременно стартовали в одном направлении из одного и того же места круговой трассы в беге на несколько кругов. 
+            Спустя один час, когда одному из них оставалось ${task1[0]} км до окончания первого круга, 
+            ему сообщили, что второй бегун пробежал первый круг ${task1[1]} минут назад. 
+            Найдите скорость первого бегуна, если известно, что она на ${task1[2]} км/ч меньше скорости второго.
+            `
+            : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 6:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 61 ? 
+            `
+            Моторная лодка прошла против течения реки ${task1[0]} км и вернулась в пункт отправления, затратив на обратный путь на ${task1[1]} часа меньше, 
+            чем на путь против течения. Найдите скорость лодки в неподвижной воде, если скорость течения реки равна ${task1[2]} км/ч.
+            
+            `
+          : task === 62 ? 
+            `
+            Расстояние между пристанями А и В равно ${task1[0]} км. Из А в В по течению реки отправился плот, 
+            а через час вслед за ним отправилась моторная лодка, которая, прибыв в пункт В, тотчас повернула обратно и возвратилась в А.
+            К этому времени плот проплыл ${task1[1]} км. Найдите скорость лодки в неподвижной воде, если скорость течения реки равна ${task1[2]} км/ч.
+            
+            `
+            : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 7:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 71 ? 
+            `
+           Баржа прошла по течению реки ${task1[0]} км и, повернув обратно, прошла ещё ${task1[1]} км, затратив на весь путь ${task1[2]} часа. 
+           Найдите собственную скорость баржи, если скорость течения реки равна ${task1[3]} км/ч.
+            `
+          : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 8:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 81 ? 
+           `
+           Теплоход проходит по течению реки до пункта назначения ${task1[0]} км и после стоянки возвращается в пункт отправления. 
+           Найдите <b>скорость течения</b>, если скорость теплохода в неподвижной воде равна ${task1[1]} км/ч, стоянка длится ${task1[2]} часов, 
+           а в пункт отправления теплоход возвращается через ${task1[3]} часов после отплытия из него.
+           `
+          : task === 82 ? 
+           `
+           Теплоход проходит по течению реки до пункта назначения ${task1[0]} км и после стоянки возвращается в пункт отправления. 
+           Найдите <b>скорость теплохода</b> в неподвижной воде, если скорость течения равна ${task1[1]} км/ч, стоянка длится ${task1[2]} часов, 
+           а в пункт отправления теплоход возвращается через ${task1[3]} часа после отплытия из него.
+           `
+          : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 9:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 91 ? 
+           `
+           Первый рабочий за час делает на ${task1[0]} деталей больше, чем второй, и выполняет заказ, состоящий из ${task1[1]} деталей, 
+           на ${task1[2]} часа быстрее,
+           чем второй рабочий, выполняющий такой же заказ. Сколько деталей в час делает первый рабочий?
+
+           `
+          : task === 92 ? 
+           `
+           Первый рабочий за час делает на ${task1[0]} деталей больше, чем второй, и выполняет заказ, состоящий из ${task1[1]} деталей, 
+           на ${task1[2]} часа быстрее, 
+           чем второй рабочий, выполняющий такой же заказ. Сколько деталей в час делает второй рабочий?
+           `
+          : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 10:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 101 ? 
+           `
+           Первая труба пропускает на ${task1[0]} литров воды в минуту меньше, чем вторая труба. 
+           Сколько литров воды в минуту пропускает вторая труба, если резервуар объёмом ${task1[1]} литров 
+           она заполняет на ${task1[2]} минут быстрее, чем первая труба?
+           `
+          : task === 102 ? 
+           `
+           Первая труба пропускает на ${task1[0]} литра воды в минуту меньше, чем вторая труба. 
+           Сколько литров воды в минуту пропускает первая труба, если резервуар объёмом ${task1[1]} литров 
+           она заполняет на ${task1[2]} минут дольше, чем вторая труба?
+           `
+          : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 11:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 111 ? 
+           `
+           Имеются два сосуда, содержащие ${task1[0]} кг и ${task1[1]} кг раствора кислоты различной концентрации. 
+           Если их слить вместе, то получится раствор, содержащий ${task1[2]}% кислоты. 
+           Если же слить равные массы этих растворов, то полученный раствор будет содержать ${task1[3]}% кислоты. 
+           Сколько процентов кислоты содержится в первом растворе?
+           
+           `
+          : task === 112 ? 
+           `
+           Имеются два сосуда, содержащие ${task1[0]} кг и ${task1[1]} кг раствора кислоты различной концентрации. 
+           Если их слить вместе, то получим раствор, содержащий ${task1[2]}% кислоты. 
+           Если же слить равные массы этих растворов, то полученный раствор будет содержать ${task1[3]}% кислоты. 
+           Сколько килограммов кислоты содержится во втором растворе?
           
+           `
+          : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 12:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 121 ? 
+           `
+           Свежие фрукты содержат ${task1[0]}% воды, а высушенные — ${task1[1]}%. 
+           Сколько сухих фруктов получится из ${task1[2]} кг свежих фруктов?
+           
+           `
+          : task === 122 ? 
+           `
+           Свежие фрукты содержат ${task1[0]}% воды, а высушенные — ${task1[1]}%. 
+           Сколько требуется свежих фруктов для приготовления ${task1[2]} кг высушенных фруктов?
+           `
+          : 
+            ``}
+            <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
