@@ -15,7 +15,8 @@ const tasks = {
   eighteen: '../../src/oge_math/taskEighteen.json',
   nineteen: '../../src/oge_math/taskNineteen.json',
   twenty: '../../src/oge_math/taskTwenty.json',
-  twentyone: '../../src/oge_math/taskTwentyOne.json'
+  twentyone: '../../src/oge_math/taskTwentyOne.json',
+  twentytwo: '../../src/oge_math/taskTwentyTwo.json'
 };
  
 export {tasks};
@@ -106,7 +107,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <mn>${item2}</mn>
           </mrow>  
         </mfrac>
-      </math>&thinsp;
+      </math>
       `
     }
 
@@ -4866,6 +4867,150 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             answerBlock += generateInputP();
           } 
           return answerBlock
+        }   
+    }
+    if (taskKey === 'twentytwo'){
+      let Nomer = 22
+      function reshTwentyOne(item){
+        if (item === 1){
+          return `
+          
+          `
+        }
+        else {return `...`}
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            Постройте график функции: 
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = <math style="font-size: 140%;">
+                  <mfrac>
+                    <mrow style="padding-bottom: 5px;">
+                      <mn>(</mn>
+                      <mn>${supNum("x", 2)}</mn> 
+                      <mn>${task1}</mn>
+                      <mn>)</mn>
+                      <mn>(${task2})</mn>
+                    </mrow> 
+                    <mn style="padding-top: 5px;">${task3}</mn> 
+                  </mfrac>
+                </math>
+                            
+            <hr class="hr-pd_20">
+            Определите, при каких значениях k прямая y = kx имеет с графиком ровно одну общую точку.
+            ` 
+          : ``}
+          
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `
+          
+            ` 
+          : task === 22 ? 
+            `
+ 
+            ` 
+          : task === 23 ? 
+            `
+          
+            ` 
+            :
+            ``}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `
+         
+            `
+          : task === 32 ? 
+            `
+ 
+            `
+            : 
+            ``}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 41 ? 
+            `
+
+            `
+            : task === 42 ? 
+            `
+           
+            `
+            : 
+            ``}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        
         }   
     }
    
