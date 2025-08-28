@@ -4926,18 +4926,46 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 21 ? 
             `
-          
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp;y = <math style="font-size: 140%;">
+                  <mfrac>
+                    <mn style="padding-bottom: 5px;">${task1[0]}x ${task1[2]}&thinsp;${task1[1]}</mn> 
+                    <mrow style="padding-top: 5px;">
+                      <mn>${task1[0]}</mn>
+                      <mn>${supNum("x", 2)}</mn> 
+                      <mn>${task1[2]}&thinsp; </mn>
+                      <mn>${task1[1] === 1? `x`: `${task1[1]}x`}</mn>
+                    </mrow> 
+                    
+                  </mfrac>
+                </math>
+            <hr class="hr-pd_20">
+            Определите, при каких значениях k прямая y = kx имеет с графиком ровно одну общую точку.
             ` 
           : task === 22 ? 
             `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp;y = ${task2}
+                <math style="font-size: 140%;">
+                  <mfrac>
+                    <mn style="padding-bottom: 5px;">${task1[0]}x ${task1[2]}&thinsp;${task1[1]}</mn> 
+                    <mrow style="padding-top: 5px;">
+                      <mn>${task1[0]}</mn>
+                      <mn>${supNum("x", 2)}</mn> 
+                      <mn>${task1[2]}&thinsp; </mn>
+                      <mn>${task1[1] === 1? `x`: `${task1[1]}x`}</mn>
+                    </mrow> 
+                    
+                  </mfrac>
+                </math>
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m не имеет с графиком общих точек.
  
             ` 
-          : task === 23 ? 
-            `
-          
-            ` 
-            :
-            ``}
+          : 
+          ``}
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
@@ -4958,6 +4986,44 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 31 ? 
             `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; 
+            <math style="font-size: 110%;">
+              <mrow style="display: flex; align-items: center;">
+              <mn>y = </mn>
+              <mn  style="font-size: 380%; font-family: MathJax_Size4;">{</mn>
+                <mtable style="vertical-align: middle; ">
+                  <mtr >
+                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1},</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2},</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task3}.</mtd>
+                  </mtr>
+                </mtable>
+              </mrow>
+            </math>
+            <math style="font-size: 110%;">
+              <mrow style="display: flex; align-items: center;">
+                
+                <mtable style="vertical-align: middle; ">
+                  <mtr >
+                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task4},</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task5},</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task6}.</mtd>
+                  </mtr>
+                </mtable>
+              </mrow>
+            </math>
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
          
             `
           : task === 32 ? 
