@@ -4943,7 +4943,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <hr class="hr-pd_20">
             Определите, при каких значениях k прямая y = kx имеет с графиком ровно одну общую точку.
             ` 
-          : task === 22 ? 
+          :  task === 22 ? 
             `
             Постройте график функции:
             <hr class="hr-pd_20">
@@ -4964,7 +4964,32 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Определите, при каких значениях m прямая y = m не имеет с графиком общих точек.
  
             ` 
-          : 
+          : task === 23 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp;y = 
+                <math style="font-size: 140%;">
+                  <mfrac>
+                    
+                    <mrow style="padding-bottom: 5px;">
+                       <mn>${task1[0]}</mn>
+                      <mn>${supNum("x", 4)}</mn> 
+                      <mn>−&thinsp; </mn>
+                       <mn>${task1[1]}</mn>
+                      <mn>${supNum("x", 2)}</mn> 
+                      <mn>+&thinsp; </mn>
+                      <mn>${task1[2]}</mn>
+                      
+                    </mrow> 
+                    <mn style="padding-top: 5px;">${task2}</mn> 
+                  </mfrac>
+                </math>
+            <hr class="hr-pd_20">
+            и определите, при каких значениях прямая имеет c прямая y = c имеет с графиком ровно одну общую точку. 
+ 
+            ` 
+          :
           ``}
           <hr class="hr-pd_20">
           `
@@ -4992,16 +5017,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <math style="font-size: 110%;">
               <mrow style="display: flex; align-items: center;">
               <mn>y = </mn>
-              <mn  style="font-size: 380%; font-family: MathJax_Size4;">{</mn>
+              <mn  style="font-size: 380%; font-family: MathJax_Size3;">{</mn>
                 <mtable style="vertical-align: middle; ">
                   <mtr >
-                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1},</mtd>
+                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1}</mtd>
                   </mtr>
                   <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2},</mtd>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2}</mtd>
                   </mtr>
                   <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task3}.</mtd>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task3}</mtd>
                   </mtr>
                 </mtable>
               </mrow>
@@ -5028,6 +5053,78 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
           : task === 32 ? 
             `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp;
+            <math style="font-size: 110%;">
+              <mrow style="display: flex; align-items: center;">
+              <mn>y = </mn>
+              <mn  style="font-size: 270%; font-family: MathJax_Size3;">{</mn>
+                <mtable style="vertical-align: middle; ">
+                  <mtr >
+                    <mtd style="padding-bottom: 5px; text-align: left;"> ${supNum(task5,2)}${task1}</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;"> ${task2}</mtd>
+                  </mtr> 
+                </mtable>
+              </mrow>
+            </math>
+            <math style="font-size: 110%;">
+              <mrow style="display: flex; align-items: center;">
+                
+                <mtable style="vertical-align: middle; ">
+                  <mtr >
+                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task3},</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task4}.</mtd>
+                  </mtr>
+                  
+                </mtable>
+              </mrow>
+            </math>
+
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
+ 
+            `
+            : task === 33 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp;
+            <math style="font-size: 110%;">
+              <mrow style="display: flex; align-items: center;">
+              <mn>y = </mn>
+              <mn  style="font-size: 340%; font-family: MathJax_Size3;">{</mn>
+                <mtable style="vertical-align: middle; ">
+                  <mtr >
+                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${supNum(task5,2)}${task1}</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;"> −${drobNum(task2, "x")}</mtd>
+                  </mtr> 
+                </mtable>
+              </mrow>
+            </math>
+            <math style="font-size: 110%;">
+              <mrow style="display: flex; align-items: center;">
+                
+                <mtable style="vertical-align: middle; ">
+                  <mtr >
+                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task3},</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task4}.</mtd>
+                  </mtr>
+                  
+                </mtable>
+              </mrow>
+            </math>
+
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m имеет с графиком ${task1.length > 4 ? `одну или две общие точки`: `ровно одну общую точку`}.
  
             `
             : 
@@ -5053,14 +5150,102 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 41 ? 
             `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = |${supNum("x", 2)} ${task1} |
+            <hr class="hr-pd_20">
+            Какое наибольшее число общих точек может иметь график данной функции с прямой, параллельной оси абсцисс?
+            `
+          : task === 42 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = | x | • ${task1}
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
+            `
+          : task === 43 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = ${task1}
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
+            `
+          : task === 44 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = ${supNum("x", 2)}${task1}
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m имеет с графиком ровно три общие точки.
+            `
+          : task === 45 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = ${task1}${supNum("x", 2)}${task2}
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m имеет с графиком ровно три общие точки.
+            `
+          : task === 46 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = <math style="font-size: 140%;">
+                  <mfrac>
+                    <mrow style="padding-bottom: 5px;">
+                      <mn>(</mn>
+                      <mn>${task1}</mn>
+                      <mn>${supNum("x", 2)}</mn> 
+                      <mn>${task2}</mn>
+                      <mn>)</mn>
+                      <mn> &thinsp;• | x |</mn>
+                    </mrow> 
+                    <mn style="padding-top: 5px;">${task3}</mn> 
+                  </mfrac>
+                </math> 
+            <hr class="hr-pd_20">
+            Определите, при каких значениях m прямая y = m не имеет с графиком ни одной общей точки.
+            `
+          : task === 47 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = <math style="font-size: 140%;">
+                  <mfrac>
+                   <mn style="padding-bottom: 5px;">${task1}</mn> 
+                    <mrow style="padding-top: 5px;">
+                      
+                      <mn>${task2}</mn>
+                      <mn>${supNum("x", 2)}</mn> 
+                     
+                    </mrow> 
+                    
+                  </mfrac>
+                </math> 
+            <hr class="hr-pd_20">
+            Определите, при каких значениях k прямая y = kx не имеет с графиком общих точек.
+            `
+          : task === 48 ? 
+            `
+            Постройте график функции:
+            <hr class="hr-pd_20">
+            &thinsp;&thinsp; y = 
+            ${drobNum(1, 2)}
+            <span style="display: inline-block;  font-size: 2.1em; font-family: san-serif;">(|</span> 
+             ${drobNum("x", task1)} − ${drobNum(task1, "x")}
+             <span style="display: inline-block;  font-size: 2.1em; font-family: san-serif;">|</span>
+              + ${drobNum("x", task1)} + ${drobNum(task1, "x")} 
+              <span style="display: inline-block;  font-size: 2.1em; font-family: san-serif;">)</span>
+            <hr class="hr-pd_20">
+            Определите, при каких значениях k прямая y = kx не имеет с графиком общих точек. 
+            `
+            :
 
             `
-            : task === 42 ? 
-            `
-           
-            `
-            : 
-            ``}
+            
+            `}
             <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
