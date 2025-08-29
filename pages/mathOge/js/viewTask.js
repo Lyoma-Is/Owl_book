@@ -16,7 +16,8 @@ const tasks = {
   nineteen: '../../src/oge_math/taskNineteen.json',
   twenty: '../../src/oge_math/taskTwenty.json',
   twentyone: '../../src/oge_math/taskTwentyOne.json',
-  twentytwo: '../../src/oge_math/taskTwentyTwo.json'
+  twentytwo: '../../src/oge_math/taskTwentyTwo.json',
+  twentythree: '../../src/oge_math/taskTwentyThree.json'
 };
  
 export {tasks};
@@ -5240,6 +5241,200 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <span style="display: inline-block;  font-size: 2.1em; font-family: san-serif;">)</span>
             <hr class="hr-pd_20">
             Определите, при каких значениях k прямая y = kx не имеет с графиком общих точек. 
+            `
+            :
+
+            `
+            
+            `}
+            <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        
+        }   
+    }
+    if (taskKey === 'twentythree'){
+      let Nomer = 23
+      function reshTwentyOne(item){
+        if (item === 1){
+          return `
+          
+          `
+        }
+        else {return `...`}
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            Катет и гипотенуза прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите высоту, проведённую к гипотенузе.
+            
+            ` 
+          : task === 12 ? 
+            `
+            Катеты прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите высоту, проведённую к гипотенузе.
+            
+            ` 
+          : task === 13 ? 
+            `
+            Углы B и C треугольника ABC равны соответственно ${task1[0]}° и ${task1[1]}°. 
+            Найдите BC, если радиус окружности, описанной около треугольника ABC, равен ${task1[2]}.
+            
+            ` 
+          : task === 14 ? 
+            `
+            Точка H является основанием высоты, проведённой из вершины прямого угла B 
+            треугольника ABC к гипотенузе AC. 
+            Найдите AB, если AH = ${task1[0]}, AC = ${task1[1]}.
+      
+            ` 
+          : task === 15 ? 
+            `
+            Отрезки AB и DC лежат на параллельных прямых, а отрезки AC и  BD пересекаются в точке M. 
+            Найдите MC, если AB = ${task1[0]}, DC = ${task1[1]}, AC = ${task1[2]}.
+      
+            ` 
+          : task === 16 ? 
+            `
+            Прямая, параллельная стороне AC треугольника ABC, пересекает стороны AB и BC в точках M и N соответственно. 
+            Найдите BN, если MN = ${task1[0]}, AC = ${task1[1]}, NC = ${task1[2]}.
+      
+            ` 
+          :
+          ``}
+          
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `
+            
+            ` 
+          :  task === 22 ? 
+            `
+           
+            ` 
+          : task === 23 ? 
+            `
+            
+ 
+            ` 
+          :
+          ``}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `
+           
+         
+            `
+          : task === 32 ? 
+            `
+           
+ 
+            `
+            : task === 33 ? 
+            `
+           
+            `
+            : 
+            ``}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 41 ? 
+            `
+           
+            `
+          : task === 42 ? 
+            `
+      
+            `
+          : task === 43 ? 
+            `
+          
+            `
+          : task === 44 ? 
+            `
+         
+            `
+          : task === 45 ? 
+            `
+        
+            `
+          : task === 46 ? 
+            `
+    
+            `
+          : task === 47 ? 
+            `
+ 
+            `
+          : task === 48 ? 
+            `
+       
             `
             :
 

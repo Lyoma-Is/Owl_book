@@ -212,7 +212,8 @@ async function displayTasks() {
         randomTasks.nineteen ? generateTaskHTML('nineteen', randomTasks.nineteen, false) : '',
         randomTasks.twenty ? generateTaskHTML('twenty', randomTasks.twenty, false) : '',
         randomTasks.twentyone ? generateTaskHTML('twentyone', randomTasks.twentyone, false) : '',
-        randomTasks.twentytwo ? generateTaskHTML('twentytwo', randomTasks.twentytwo, false) : ''
+        randomTasks.twentytwo ? generateTaskHTML('twentytwo', randomTasks.twentytwo, false) : '',
+        randomTasks.twentythree ? generateTaskHTML('twentythree', randomTasks.twentythree, false) : ''
     ].filter(html => html);
 
     // Проверяем, что есть хотя бы одна задача
