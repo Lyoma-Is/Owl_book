@@ -5338,16 +5338,34 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 21 ? 
             `
-            
+            Найдите боковую сторону AB трапеции ABCD, если углы ABC и BCD равны соответственно 
+            ${task1[0]}° и ${task1[1]}°, а CD&nbsp;=&nbsp;${task1[2]}.
             ` 
           :  task === 22 ? 
             `
-           
+           Расстояние от точки пересечения диагоналей ромба до одной из его сторон 
+           равно ${task1[0]}, а одна из диагоналей ромба равна ${task1[1]}. Найдите углы ромба.
             ` 
           : task === 23 ? 
             `
-            
+            Высота AH ромба ABCD делит сторону CD на отрезки DH = ${task1[0]} и CH = ${task1[1]}. Найдите высоту ромба.
  
+            ` 
+          : task === 24 ? 
+            `
+            Биссектрисы углов A и B при боковой стороне AB трапеции ABCD пересекаются в точке F. 
+            Найдите AB, если AF = ${task1[0]}, BF = ${task1[1]}.
+            ` 
+          : task === 25 ? 
+            `
+            Биссектриса угла A параллелограмма ABCD пересекает сторону BC в точке K. 
+            Найдите периметр параллелограмма, если BK = ${task1[0]}, CK = ${task1[1]}.
+            ` 
+          : task === 26 ? 
+            `
+            Прямая, параллельная основаниям трапеции ABCD, пересекает её боковые стороны AB и CD
+            в точках E и F соответственно. Найдите длину отрезка EF, 
+            если AD = ${task1[0]}, BC = ${task1[1]}, CF : DF = ${task1[2]} : ${task1[3]}.
             ` 
           :
           ``}
@@ -5371,77 +5389,49 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 31 ? 
             `
-           
-         
+            Отрезки AB и CD являются хордами окружности. Найдите расстояние от центра окружности до хорды CD, 
+            если AB = ${task1[0]}, CD = ${task1[1]}, а расстояние от центра окружности до хорды AB равно ${task1[2]}.
             `
           : task === 32 ? 
             `
-           
+            Точка H является основанием высоты BH, проведённой из вершины прямого угла B прямоугольного треугольника ABC. 
+            Окружность с диаметром BH пересекает стороны AB и CB в точках P и K соответственно. Найдите PK, если BH = ${task1[0]}.
  
             `
             : task === 33 ? 
             `
+            Точка H является основанием высоты BH, проведённой из вершины прямого угла B прямоугольного треугольника ABC. 
+            Окружность с диаметром BH пересекает стороны AB и CB в точках P и K соответственно. Найдите BH, если PK = ${task1[0]}.
+           
+            `
+            : task === 34 ? 
+            `
+            Окружность с центром на стороне AC треугольника ABC проходит через вершину C и касается прямой AB в точке B. 
+            Найдите диаметр окружности, если AB = ${task1[0]}, AC = ${task1[1]}.
+           
+            `
+            : task === 35 ? 
+            `
+            Окружность с центром на стороне AC треугольника ABC проходит через вершину C и касается прямой AB в точке B. 
+            Найдите AC, если диаметр окружности равен ${task1[0]}, а AB = ${task1[1]}.
+           
+            `
+            : task === 36 ? 
+            `
+            Окружность пересекает стороны AB и AC треугольника ABC в точках K и P соответственно и проходит через вершины B и C. 
+            Найдите длину отрезка KP, если AK = ${task1[0]}, а сторона AC в ${task1[1]} раза больше стороны BC.
+           
+            `
+            : task === 37 ? 
+            `
+            Окружность пересекает стороны AB и AC треугольника ABC в точках K и P соответственно и проходит через вершины B и C. 
+            Найдите длину отрезка KP, если AP = ${task1[0]}, а сторона BC в ${task1[1]} раза меньше стороны AB.
            
             `
             : 
             ``}
           
           <hr class="hr-pd_20">
-          `
-          answerBlock += generateDate();
-          answerBlock += generateHeader();
-          answerBlock += `
-            <hr class="hr-pd_20">
-            ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
-            Ответ: <b>${taskAnswer}</b>`;
-          answerBlock += generateFooter();
-          if(tumbler === false){
-            answerBlock += generateInputP();
-            answerBlock += generateInputP();
-          } 
-          return answerBlock
-        case 4:
-          answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task === 41 ? 
-            `
-           
-            `
-          : task === 42 ? 
-            `
-      
-            `
-          : task === 43 ? 
-            `
-          
-            `
-          : task === 44 ? 
-            `
-         
-            `
-          : task === 45 ? 
-            `
-        
-            `
-          : task === 46 ? 
-            `
-    
-            `
-          : task === 47 ? 
-            `
- 
-            `
-          : task === 48 ? 
-            `
-       
-            `
-            :
-
-            `
-            
-            `}
-            <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
