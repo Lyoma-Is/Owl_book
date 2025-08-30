@@ -17,7 +17,8 @@ const tasks = {
   twenty: '../../src/oge_math/taskTwenty.json',
   twentyone: '../../src/oge_math/taskTwentyOne.json',
   twentytwo: '../../src/oge_math/taskTwentyTwo.json',
-  twentythree: '../../src/oge_math/taskTwentyThree.json'
+  twentythree: '../../src/oge_math/taskTwentyThree.json',
+  twentyfour: '../../src/oge_math/taskTwentyFour.json'
 };
  
 export {tasks};
@@ -5429,6 +5430,161 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            
             `
             : 
+            ``}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        
+        }   
+    }
+    // <sub>1</sub>
+    if (taskKey === 'twentyfour'){
+      let Nomer = 24
+      function reshTwentyOne(item){
+        if (item === 1){
+          return `
+          
+          `
+        }
+        else {return `...`}
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            В остроугольном треугольнике ABC проведены высоты AA<sub>1</sub> и CC<sub>1</sub>. Докажите, что углы CC<sub>1</sub>A<sub>1</sub> и CAA<sub>1</sub> равны.  
+                   
+            ` 
+          : task === 12 ? 
+            `
+            В остроугольном треугольнике ABC проведены высоты AA<sub>1</sub> и BB<sub>1</sub>. Докажите, что углы BB<sub>1</sub>A<sub>1</sub> и BAA<sub>1</sub> равны.
+            
+            ` 
+          : task === 13 ? 
+            `
+            В остроугольном треугольнике ABC проведены высоты AA<sub>1</sub> и CC<sub>1</sub>. Докажите, что углы AA<sub>1</sub>C<sub>1</sub> и ACC<sub>1</sub> равны.
+            
+            ` 
+          : task === 14 ? 
+            `
+           В остроугольном треугольнике ABC проведены высоты AA<sub>1</sub> и BB<sub>1</sub>. Докажите, что углы AA<sub>1</sub>B<sub>1</sub> и ABB<sub>1</sub> равны.      
+            ` 
+          : task === 15 ? 
+            `
+           В остроугольном треугольнике ABC проведены высоты BB<sub>1</sub> и CC<sub>1</sub>. Докажите, что углы CC<sub>1</sub>B<sub>1</sub> и CBB<sub>1</sub> равны.      
+            ` 
+          : task === 16 ? 
+            `
+            В остроугольном треугольнике ABC проведены высоты BB<sub>1</sub> и CC<sub>1</sub>. Докажите, что углы BB<sub>1</sub>C<sub>1</sub> и BCC<sub>1</sub> равны.      
+            ` 
+          : task === 17 ? 
+            `
+            В треугольнике ABC с тупым углом ABC проведены высоты AA<sub>1</sub> и CC<sub>1</sub>. Докажите, что треугольники A<sub>1</sub>BC<sub>1</sub> и ABC подобны.      
+            ` 
+          : task === 18 ? 
+            `
+            В треугольнике ABC с тупым углом BAC проведены высоты BB<sub>1</sub> и CC<sub>1</sub>. Докажите, что треугольники AB<sub>1</sub>C<sub>1</sub> и ABC подобны.
+      
+            ` 
+          : task === 19 ? 
+            `
+            В треугольнике ABC с тупым углом ACB проведены высоты AA<sub>1</sub> и BB<sub>1</sub>. Докажите, что треугольники A<sub>1</sub>CB<sub>1</sub> и ACB подобны.
+      
+            ` 
+          :
+          ``}
+          
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `
+            Основания BC и AD трапеции ABCD равны соответственно ${task1[0]} и ${task1[1]}, BD = ${task1[2]}. Докажите, что треугольники CBD и BDA подобны.
+            ` 
+          : task === 22 ? 
+            `
+            ${task1}
+            ` 
+          : task === 23 ? 
+            `
+            ${task1}
+            ` 
+          : task === 24 ? 
+            `
+            ${task1}
+            ` 
+          : task === 25 ? 
+            `
+            ${task1}
+            ` 
+          : task === 26 ? 
+            `
+            ${task1}
+            ` 
+          :
+          ``}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `
+            ${task1}
+            `
+          : task === 32 ? 
+            `
+           ${task1} 
+            `
+            : task === 33 ? 
+            `
+           ${task1}           
+            `
+            :
             ``}
           
           <hr class="hr-pd_20">

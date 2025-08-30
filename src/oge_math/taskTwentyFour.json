@@ -1,0 +1,603 @@
+[  
+    {
+        "taskCounter": 3028,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 33,
+        "task1": "Окружности с центрами в точках I и J не имеют общих точек, и ни одна из них не лежит внутри другой. Внутренняя общая касательная к этим окружностям делит отрезок, соединяющий их центры, в отношении m : n. Докажите, что диаметры этих окружностей относятся как m : n.",
+     
+        "taskNum": "04B467"
+    },
+    {
+        "taskCounter": 3027,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 33,
+        "task1": "Окружности с центрами в точках P и Q не имеют общих точек, и ни одна из них не лежит внутри другой. Внутренняя общая касательная к этим окружностям делит отрезок, соединяющий их центры, в отношении a : b. Докажите, что диаметры этих окружностей относятся как a : b.",
+     
+        "taskNum": "51ABBB"
+    },
+    {
+        "taskCounter": 3026,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 32,
+        "task1": "Окружности с центрами в точках P и Q пересекаются в точках K и L, причём точки P и Q лежат по одну сторону от прямой KL. Докажите, что прямые PQ и KL перпендикулярны.",
+     
+        "taskNum": "40EA31"
+    },
+    {
+        "taskCounter": 3025,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 32,
+        "task1": "Окружности с центрами в точках I и J пересекаются в точках A и B, причём точки I и J лежат по одну сторону от прямой AB. Докажите, что прямые AB и IJ перпендикулярны.",
+     
+        "taskNum": "C60AED"
+    },
+    {
+        "taskCounter": 3024,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 32,
+        "task1": "Окружности с центрами в точках E и F пересекаются в точках C и D, причём точки E и F лежат по одну сторону от прямой CD. Докажите, что прямые CD и EF перпендикулярны.",
+     
+        "taskNum": "B32AEC"
+    },
+    {
+        "taskCounter": 3023,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 32,
+        "task1": "Окружности с центрами в точках M и N пересекаются в точках S и T, причём точки M и N лежат по одну сторону от прямой ST. Докажите, что прямые MN и ST перпендикулярны.",
+     
+        "taskNum": "6BB457"
+    },
+    {
+        "taskCounter": 3022,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 31,
+        "task1": "Известно, что около четырёхугольника ABCD можно описать окружность и что продолжения сторон AB и CD четырёхугольника пересекаются в точке M. Докажите, что треугольники MBC и MDA подобны.",
+     
+        "taskNum": "9B683D"
+    },
+    {
+        "taskCounter": 3021,
+        "typeTask": 3,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 31,
+        "task1": "Известно, что около четырёхугольника ABCD можно описать окружность и что продолжения сторон AD и BC четырёхугольника пересекаются в точке K. Докажите, что треугольники KAB и KCD подобны.",
+     
+        "taskNum": "B81A7C"
+    },
+    {
+        "taskCounter": 3020,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона CD параллелограмма ABCD вдвое больше стороны AD. Точка N — середина стороны CD. Докажите, что AN — биссектриса угла BAD.",
+     
+        "taskNum": "E90E86"
+    },
+    {
+        "taskCounter": 3019,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона BC параллелограмма ABCD вдвое больше стороны AB. Точка K — середина стороны BC. Докажите, что AK — биссектриса угла BAD.",
+     
+        "taskNum": "079233"
+    },
+    {
+        "taskCounter": 3018,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона AD параллелограмма ABCD вдвое больше стороны CD. Точка M — середина стороны AD. Докажите, что CM — биссектриса угла BCD.",
+     
+        "taskNum": "FA5D37"
+    },
+    {
+        "taskCounter": 3017,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона AB параллелограмма ABCD вдвое больше стороны BC. Точка L — середина стороны AB. Докажите, что CL — биссектриса угла BCD.",
+     
+        "taskNum": "9A9096"
+    },
+    {
+        "taskCounter": 3016,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона AB параллелограмма ABCD вдвое больше стороны AD. Точка L — середина стороны AB. Докажите, что DL — биссектриса угла ADC.",
+     
+        "taskNum": "13AC23"
+    },
+    {
+        "taskCounter": 3015,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона CD параллелограмма ABCD вдвое больше стороны BC. Точка N — середина стороны CD. Докажите, что BN — биссектриса угла ABC.",
+     
+        "taskNum": "367AFE"
+    },
+    {
+        "taskCounter": 3014,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона AD параллелограмма ABCD вдвое больше стороны AB. Точка M — середина стороны AD. Докажите, что BM — биссектриса угла ABC.",
+     
+        "taskNum": "006642"
+    },
+    {
+        "taskCounter": 3013,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Сторона BC параллелограмма ABCD вдвое больше стороны CD. Точка K — середина стороны BC. Докажите, что DK — биссектриса угла ADC.",
+     
+        "taskNum": "4E334E"
+    },
+    {
+        "taskCounter": 3012,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов C и D четырёхугольника ABCD пересекаются в точке P, лежащей на стороне AB. Докажите, что точка P равноудалена от прямых BC, CD и AD.",
+     
+        "taskNum": "D57685"
+    },
+    {
+        "taskCounter": 3011,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов A и D четырёхугольника ABCD пересекаются в точке M, лежащей на стороне BC. Докажите, что точка M равноудалена от прямых AB, AD и CD.",
+     
+        "taskNum": "991A27"
+    },
+    {
+        "taskCounter": 3010,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов A и B четырёхугольника ABCD пересекаются в точке K, лежащей на стороне CD. Докажите, что точка K равноудалена от прямых AB, BC и AD.",
+     
+        "taskNum": "730010"
+    },
+    {
+        "taskCounter": 3009,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов B и C четырёхугольника ABCD пересекаются в точке O, лежащей на стороне AD. Докажите, что точка O равноудалена от прямых AB, BC и CD.",
+     
+        "taskNum": "632804"
+    },
+    {
+        "taskCounter": 3008,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Через точку O пересечения диагоналей параллелограмма ABCD проведена прямая, пересекающая стороны BC и AD в точках K и M соответственно. Докажите, что отрезки BK и DM равны.",
+     
+        "taskNum": "18E434"
+    },
+    {
+        "taskCounter": 3007,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Через точку O пересечения диагоналей параллелограмма ABCD проведена прямая, пересекающая стороны BC и AD в точках L и N соответственно. Докажите, что отрезки CL и AN равны.",
+     
+        "taskNum": "3842C4"
+    },
+    {
+        "taskCounter": 3006,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Через точку O пересечения диагоналей параллелограмма ABCD проведена прямая, пересекающая стороны AB и CD в точках P и Q соответственно. Докажите, что отрезки BP и DQ равны.",
+     
+        "taskNum": "B609A6"
+    },
+    {
+        "taskCounter": 3005,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Через точку O пересечения диагоналей параллелограмма ABCD проведена прямая, пересекающая стороны AB и CD в точках E и F соответственно. Докажите, что отрезки AE и CF равны.",
+     
+        "taskNum": "D2ED10"
+    },
+    {
+        "taskCounter": 3004,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "В трапеции ABCD с основаниями AD и BC диагонали пересекаются в точке O. Докажите, что площади треугольников AOB и COD равны.",
+     
+        "taskNum": "DAEC5D"
+    },
+    {
+        "taskCounter": 3003,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "В трапеции ABCD с основаниями AD и BC диагонали пересекаются в точке P. Докажите, что площади треугольников APB и CPD равны.",
+     
+        "taskNum": "2EF3D2"
+    },
+    {
+        "taskCounter": 3002,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов C и D параллелограмма ABCD пересекаются в точке L, лежащей на стороне AB. Докажите, что L — середина AB.",
+     
+        "taskNum": "36C482"
+    },
+    {
+        "taskCounter": 3001,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов A и D параллелограмма ABCD пересекаются в точке K, лежащей на стороне BC. Докажите, что K — середина BC.",
+     
+        "taskNum": "B14289"
+    },
+    {
+        "taskCounter": 3000,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов A и B параллелограмма ABCD пересекаются в точке N, лежащей на стороне CD. Докажите, что N — середина CD.",
+     
+        "taskNum": "C7AA3F"
+    },
+    {
+        "taskCounter": 2999,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Биссектрисы углов B и C параллелограмма ABCD пересекаются в точке M, лежащей на стороне AD. Докажите, что M — середина AD.",
+     
+        "taskNum": "E3F9F8"
+    },
+    {
+        "taskCounter": 2998,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Точка E — середина боковой стороны AB трапеции ABCD. Докажите, что площадь треугольника ECD равна половине площади трапеции.",
+     
+        "taskNum": "955204"
+    },
+    {
+        "taskCounter": 2997,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 24,
+        "task1": "Точка K — середина боковой стороны CD трапеции ABCD. Докажите, что площадь треугольника KAB равна половине площади трапеции.",
+     
+        "taskNum": "ABC508"
+    },
+    {
+        "taskCounter": 2996,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 23,
+        "task1": "Внутри параллелограмма ABCD выбрали произвольную точку F. Докажите, что сумма площадей треугольников BFC и AFD равна половине площади параллелограмма.",
+     
+        "taskNum": "0796BC"
+    },
+    {
+        "taskCounter": 2995,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 23,
+        "task1": "Внутри параллелограмма ABCD выбрали произвольную точку E. Докажите, что сумма площадей треугольников BEC и AED равна половине площади параллелограмма.",
+     
+        "taskNum": "BD4A4E"
+    },
+    {
+        "taskCounter": 2994,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 23,
+        "task1": "На средней линии трапеции ABCD с основаниями AD и BC выбрали произвольную точку K. Докажите, что сумма площадей треугольников BKC и AKD равна половине площади трапеции.",
+     
+        "taskNum": "8A0155"
+    },
+    {
+        "taskCounter": 2993,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 23,
+        "task1": "На средней линии трапеции ABCD с основаниями AD и BC выбрали произвольную точку F. Докажите, что сумма площадей треугольников BFC и AFD равна половине площади трапеции.",
+     
+        "taskNum": "7A5DF6"
+    },
+    {
+        "taskCounter": 2992,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 23,
+        "task1": "На средней линии трапеции ABCD с основаниями AD и BC выбрали произвольную точку E. Докажите, что сумма площадей треугольников BEC и AED равна половине площади трапеции.",
+     
+        "taskNum": "E85022 F57F67"
+    },
+    {
+        "taskCounter": 2991,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 22,
+        "task1": "В выпуклом четырёхугольнике ABCD углы DAC и DBC равны. Докажите, что углы CDB и CAB также равны.",
+     
+        "taskNum": "3AA429"
+    },
+    {
+        "taskCounter": 2990,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 22,
+        "task1": "В выпуклом четырёхугольнике ABCD углы DAC и DBC равны. Докажите, что углы CDB и CAB также равны.",
+     
+        "taskNum": "1F1A22"
+    },
+    {
+        "taskCounter": 2989,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 22,
+        "task1": "В выпуклом четырёхугольнике ABCD углы BCA и BDA равны. Докажите, что углы ABD и ACD также равны.",
+     
+        "taskNum": "367109"
+    },
+    {
+        "taskCounter": 2988,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 22,
+        "task1": "В выпуклом четырёхугольнике ABCD углы CDB и CAB равны. Докажите, что углы BCA и BDA также равны.",
+     
+        "taskNum": "613B4F"
+    },
+    {
+        "taskCounter": 2987,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 19,
+     
+        "taskNum": "A57F97"
+    },
+    {
+        "taskCounter": 2986,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 18,
+     
+        "taskNum": "2FEF51"
+    },
+    {
+        "taskCounter": 2985,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 17,
+     
+        "taskNum": "B35E5A"
+    },
+    {
+        "taskCounter": 2984,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [3, 12, 6],
+     
+        "taskNum": "BE34E8"
+    },
+    {
+        "taskCounter": 2983,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [4.5, 18, 9],
+     
+        "taskNum": "E7E298"
+    },
+    {
+        "taskCounter": 2982,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [7, 28, 14],
+     
+        "taskNum": "7487CE"
+    },
+    {
+        "taskCounter": 2981,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [8, 32, 16],
+     
+        "taskNum": "25581B"
+    },
+    {
+        "taskCounter": 2980,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [2, 32, 8],
+     
+        "taskNum": "9F76F4"
+    },
+    {
+        "taskCounter": 2979,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [5, 20, 10],
+     
+        "taskNum": "A810F6"
+    },
+    {
+        "taskCounter": 2978,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [6, 24, 12],
+     
+        "taskNum": "D294F5"
+    },
+    {
+        "taskCounter": 2977,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [9, 36, 18],
+     
+        "taskNum": "F149FA"
+    },
+    {
+        "taskCounter": 2976,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [5, 45, 15],
+     
+        "taskNum": "9D9F45"
+    },
+    {
+        "taskCounter": 2975,
+        "typeTask": 2,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 21,
+
+        "task1": [4, 64, 16],
+     
+        "taskNum": "BE9A49"
+    },
+    {
+        "taskCounter": 2974,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 16,
+     
+        "taskNum": "39A131"
+    },
+    {
+        "taskCounter": 2973,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 15,
+     
+        "taskNum": "DE7034"
+    },
+    {
+        "taskCounter": 2972,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 14,
+     
+        "taskNum": "6B3568"
+    },
+    {
+        "taskCounter": 2971,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 13,
+     
+        "taskNum": "37CCE6"
+    },
+    {
+        "taskCounter": 2970,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 12,
+     
+        "taskNum": "1B07A7"
+    },
+    {
+        "taskCounter": 2969,
+        "typeTask": 1,
+        "taskKec": [1, 24, 1],
+        "taskAnswer": "...",
+        "task": 11,
+     
+        "taskNum": "DFBC4D"
+    }
+]
