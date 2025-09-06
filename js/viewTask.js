@@ -48,7 +48,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
     // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
     //const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
-    
+   
     
     const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10">
       <div class="text-inform" data-task-counter="${taskCounter}"><div class="inform-block"></div>
@@ -67,6 +67,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_11.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputD12 = () => `<section class="answer-block"><div class="download"><a href="../../../src/inf_file/zadanie_12.rar"><img src="../../../img/download.svg" alt="download">Скачать файлы</a></div><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
+    const generateInputP = () => `<input id="input_answer" class="input_answer" style="display: none;"></input>`
+
     const beginTask = () => `<div class="tasks-blocks">`;
     const endTask = () => `</div>`;
     let answerBlock = "";
@@ -2172,7 +2174,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
-  
+ 
           return answerBlock
          }
     }
@@ -2203,6 +2205,10 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
           return answerBlock
          }
     }
@@ -4065,6 +4071,11 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+           if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
   
           return answerBlock
          }
@@ -4148,6 +4159,10 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
   
           return answerBlock
          }
@@ -4192,6 +4207,10 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
   
           return answerBlock
       

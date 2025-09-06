@@ -229,6 +229,8 @@ async function displayTasks() {
                 if (correctAnswer.includes(' | ')) {
                     const alternatives = correctAnswer.split(' | ').map(str => str.trim());
                     isCorrect = alternatives.includes(userInput);
+                }  else if(correctAnswer ==="") {
+                    isCorrect;
                 } else {
                     isCorrect = userInput === correctAnswer;
                 }
@@ -292,8 +294,8 @@ function createResultsTable(arrayInput, arrayAnswer) {
     let tableHTML = `
         <table style="width: 100%; border-collapse: collapse; margin-top: 15px;"><tbody>
     `;
-
-    for (let i = 0; i < arrayInput.length; i++) {
+    // i < arrayInput.length
+    for (let i = 0; i < 12; i++) {
         const isCorrect = arrayAnswer[i].includes(' | ') 
             ? arrayAnswer[i].split(' | ').map(str => str.trim()).includes(arrayInput[i])
             : arrayInput[i] === arrayAnswer[i];

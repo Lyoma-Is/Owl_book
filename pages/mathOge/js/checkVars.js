@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskOutput = document.querySelector('.task-numbers__block');
     
     // Настройки
-    const TOTAL_TASKS = 24;
+    const TOTAL_TASKS = 25;
     const TASKS_PER_ROW = 6;
     const taskDataCache = new Map();
     let REPEAT_COUNT = parseInt(document.querySelector('.input-colv')?.value) || 5;
@@ -177,7 +177,8 @@ document.addEventListener('DOMContentLoaded', function() {
             twentyone: 21,
             twentytwo: 22,
             twentythree: 23,
-            twentyfour: 24
+            twentyfour: 24,
+            twentyfive: 25
         };
         return numberMap[key] || 0;
     }
@@ -202,7 +203,8 @@ document.addEventListener('DOMContentLoaded', function() {
             21: 'twentyone',
             22: 'twentytwo',
             23: 'twentythree',
-            24: 'twentyfour'
+            24: 'twentyfour',
+            25: 'twentyfive'
         };
         return keyMap[num] || '';
     }

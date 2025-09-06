@@ -18,7 +18,8 @@ const tasks = {
   twentyone: '../../src/oge_math/taskTwentyOne.json',
   twentytwo: '../../src/oge_math/taskTwentyTwo.json',
   twentythree: '../../src/oge_math/taskTwentyThree.json',
-  twentyfour: '../../src/oge_math/taskTwentyFour.json'
+  twentyfour: '../../src/oge_math/taskTwentyFour.json',
+  twentyfive: '../../src/oge_math/taskTwentyFive.json'
 };
  
 export {tasks};
@@ -5429,6 +5430,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Найдите длину отрезка KP, если AP = ${task1[0]}, а сторона BC в ${task1[1]} раза меньше стороны AB.
            
             `
+            : task === 38 ? 
+            `
+            Отрезки AB и CD являются хордами окружности. Найдите длину хорды CD, если AB&nbsp;=&nbsp;${task1[0]}, 
+            а расстояния от центра окружности до хорд AB и CD равны соответственно ${task1[1]} и ${task1[2]}.           
+            `
+            : task === 39 ? 
+            `
+            В прямоугольном треугольнике ABC с прямым углом C известны катеты: AC&nbsp;=&nbsp;${task1[0]}, BC&nbsp;=&nbsp;${task1[1]}. 
+            Найдите медиану CK этого треугольника.        
+            `
             : 
             ``}
           
@@ -5585,6 +5596,177 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            ${task1}           
             `
             :
+            ``}
+          
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        
+        }   
+    }
+    if (taskKey === 'twentyfive'){
+      let Nomer = 25
+      function reshTwentyOne(item){
+        if (item === 1){
+          return `
+          
+          `
+        }
+        else {return `...`}
+      }
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            В треугольнике ABC биссектриса BE и медиана AD перпендикулярны и имеют одинаковую длину, равную ${task1[0]}. Найдите стороны треугольника ABC.
+            ` 
+          : 
+          ``}
+          
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 21 ? 
+            `
+            В равнобедренную трапецию, периметр которой равен ${task1[0]}, 
+            а площадь равна ${task1[1]}, можно вписать окружность. 
+            Найдите расстояние от точки пересечения диагоналей трапеции до её меньшего основания.
+        
+            ` 
+          : task === 22 ? 
+            `
+            Боковые стороны AB и CD трапеции ABCD равны соответственно ${task1[0]} и ${task1[1]}, а основание BC равно ${task1[2]}. 
+            Биссектриса угла ADC проходит через середину стороны AB. Найдите площадь трапеции.
+        
+            ` 
+          : task === 23 ? 
+            `
+            Углы при одном из оснований трапеции равны ${task1[0]}° и ${task1[1]}°, а отрезки, 
+            соединяющие середины противоположных сторон трапеции, равны ${task1[2]} и ${task1[3]}. Найдите основания трапеции.
+        
+            ` 
+          : task === 24 ? 
+            `
+            Середина M стороны AD выпуклого четырёхугольника ABCD равноудалена от всех его вершин. Найдите AD, 
+            если BC = ${task1[0]}, а углы B и C четырёхугольника равны соответственно ${task1[1]}° и ${task1[2]}°.
+            
+            ` 
+          : task === 25 ? 
+            `
+            Биссектрисы углов A и B параллелограмма ABCD пересекаются в точке K. 
+            Найдите площадь параллелограмма, если BC = ${task1[0]}, а расстояние от точки K
+            до стороны AB равно ${task1[1]}.
+            
+            ` 
+          : 
+          ``}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTwentyOne(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInputP();
+            answerBlock += generateInputP();
+          } 
+          return answerBlock
+        case 3:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          ${task === 31 ? 
+            `
+            Окружности радиусов ${task1[0]} и ${task1[1]} касаются внешним образом. 
+            Точки A и B лежат на первой окружности, точки C и D — на второй.
+            При этом AC и BD — общие касательные окружностей. 
+            Найдите расстояние между прямыми AB и CD.
+            
+            `
+          : task === 32 ? 
+            `
+            В трапеции ABCD боковая сторона AB перпендикулярна основанию BC. 
+            Окружность проходит через точки C и D и касается прямой AB в точке E. 
+            Найдите расстояние от точки E до прямой CD, если AD = ${task1[0]}, BC = ${task1[1]}.
+            
+            `
+          : task === 33 ? 
+            `
+            На стороне BC остроугольного треугольника ABC как на диаметре построена полуокружность, пересекающая высоту AD в точке M, 
+            AD = ${task1[0]}, MD = ${task1[1]}, H — точка пересечения высот треугольника ABC. Найдите AH.
+            
+            `
+          : task === 34 ? 
+            `
+            Точки M и N лежат на стороне AC треугольника ABC на расстояниях соответственно ${task1[0]} и ${task1[1]} от вершины A. 
+            Найдите радиус окружности, проходящей через точки M и N и касающейся луча AB, если cos∠BAC&nbsp;=&nbsp;${drobNum(`${task1[2]}√${task1[3]}`, task1[4])} 
+            `
+          : task === 35 ? 
+            `
+            В треугольнике ABC известны длины сторон AB = ${task1[0]}, AC = ${task1[1]}, точка O — центр окружности, описанной около треугольника ABC. 
+            Прямая BD, перпендикулярная прямой AO, пересекает сторону AC в точке D. Найдите CD.
+            `
+          : task === 36 ? 
+            `
+            Четырёхугольник ABCD со сторонами AB = ${task1[0]} и CD = ${task1[1]} вписан в окружность. Диагонали AC и BD пересекаются в точке K, 
+            причём ∠AKB = ${task1[2]}°. Найдите радиус окружности, описанной около этого четырёхугольника.
+            `
+          : task === 37 ? 
+            `
+            В параллелограмме ABCD проведена диагональ AC. Точка O является центром окружности, вписанной в треугольник ABC. 
+            Расстояния от точки O до точки A и прямых AD и AC соответственно равны ${task1[0]}, ${task1[1]} и ${task1[2]}. Найдите площадь параллелограмма ABCD.
+            `
+          : task === 38 ? 
+            `
+            В треугольнике ABC биссектриса угла A делит высоту, проведённую из вершины B, в отношении ${task1[0]}&nbsp;:&nbsp;${task1[1]}, считая от точки B. 
+            Найдите радиус окружности, описанной около треугольника ABC, если BC&nbsp;=&nbsp;${task1[2]}.
+            `
+          : task === 39 ? 
+            `
+            В трапеции ABCD основания AD и BC равны соответственно ${task1[0]} и ${task1[1]}, а сумма углов при основании AD равна 90°. 
+            Найдите радиус окружности, проходящей через точки A и B и касающейся прямой CD, если AB&nbsp;=&nbsp;${task1[2]}.
+        
+            `
+          : task === 391 ? 
+            `
+            Основание AC равнобедренного треугольника ABC равно ${task1[0]}. Окружность радиусом ${task1[1]} с центром вне этого треугольника 
+            касается продолжений боковых сторон треугольника и касается основания AC. Найдите радиус окружности, вписанной в треугольник ABC.
+        
+            `
+          :
             ``}
           
           <hr class="hr-pd_20">
