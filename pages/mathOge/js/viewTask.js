@@ -623,7 +623,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               </mrow>   
             </mfrac>
           </math>&thinsp; 
-          при a = ${task1[4]} и b = <span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">${task1[4]}</span>
+          при a = ${task1[4]} и b = ${sqrtNum(task1[4])}
 
             `
             : task === 25 ? 
@@ -873,17 +873,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <mfrac>
               <mn style=" padding-bottom: 2px;">
                 <mrow>
-                  <span style="font-size: 170%; margin-right: -5px;">√</span>
-                  <span style="border-top: 0.16em solid; padding-top: 0.2em;">${task1[0]}</span>
+                  ${sqrtNum(task1[0])}
                   •
-                  <span style="font-size: 170%; margin-right: -5px;">√</span>
-                  <span style="border-top: 0.16em solid; padding-top: 0.2em;">${task1[1]}</span>
+                  ${sqrtNum(task1[1])}
                 </mrow>
               </mn>
-              <mn style=" padding-top: 2px;">
+              <mn style=" padding-top: 5px;">
                 <mrow>
-                    <span style="font-size: 170%; margin-right: -5px;">√</span>
-                    <span style="border-top: 0.16em solid; padding-top: 0.2em;">${task1[2]}</span>
+                    ${sqrtNum(task1[2])}
                 </mrow>
                </mn>
             </mfrac>
@@ -895,111 +892,63 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${task1[0] === 1 ? 
             `<math style="font-size: 140%; padding-top: 1px;">
                 <mfrac>   
-                    <msup style="padding-bottom: 4px;">  
-                      <mn>
-                        <mrow>(${task1[1]}
-                        <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-                        <span style="border-top: 0.12em solid; padding-top: 0.1em;">${task1[2]}</span> ) </mrow>
-                      </mn>
-                      <mn>${task1[3]}</mn>
-                    </msup>
-                    <mn style="padding-top: 5px;">${task1[4]}</mn>
+                  <msup style="padding-bottom: 4px;">  
+                    <mn>
+                      <mrow>(${task1[1]}${sqrtNum(task1[2])})</mrow>
+                    </mn>
+                    <mn>${task1[3]}</mn>
+                  </msup>
+                  <mn style="padding-top: 5px;">${task1[4]}</mn>
                 </mfrac>
               </math>` 
           : 
           `
           <math style="font-size: 140%; padding-top: 1px;">
-                <mfrac>   
-                    
-                    <mn style="padding-bottom: 5px;">${task1[4]}</mn>
-                    <msup style="padding-top: 5px;">  
-                      <mn>
-                        <mrow>(${task1[1]}
-                        <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-                        <span style="border-top: 0.12em solid; padding-top: 0.1em;">${task1[2]}</span> ) </mrow>
-                      </mn>
-                      <mn>${task1[3]}</mn>
-                    </msup>
-                </mfrac>
-              </math>
+            <mfrac>   
+              <mn style="padding-bottom: 5px;">${task1[4]}</mn>
+                <msup style="padding-top: 5px;">  
+                  <mn>
+                    <mrow>(${task1[1]}${sqrtNum(task1[2])})</mrow>
+                  </mn>
+                  <mn>${task1[3]}</mn>
+                </msup>
+            </mfrac>
+          </math>
 
           `} `
           : task === 33 ? 
            `
-           <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-           <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]} • ${task1[1]}</span> 
-           &thinsp;•
-           <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-           <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[2]}</span>
+           ${sqrtNum(`${task1[0]} • ${task1[1]}`)}&thinsp;• ${sqrtNum(task1[2])}
            ` 
-           : task === 34 ? 
-            
+           : task === 34 ?     
            `${task1[3] === "+" ? 
-            `(<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> 
-              &thinsp;+ ${task1[1]} )<sup>2</sup> — 
-              ${task1[2]}<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span>` 
+            `(${sqrtNum(task1[0])}&thinsp;+ ${task1[1]})<sup>2</sup> — ${task1[2]}${sqrtNum(task1[0])}` 
             :
-            `(<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> 
-              &thinsp;— ${task1[1]} )<sup>2</sup> +
-              ${task1[2]}<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span>
-            `}` 
+            `(${sqrtNum(task1[0])}&thinsp;— ${task1[1]})<sup>2</sup> + ${task1[2]}${sqrtNum(task1[0])}`
+            }` 
+
            : task === 35 ? 
            `
            ${task1[2] === "+" ? 
-            `
-            (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> 
-              &thinsp;+ <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span> ) &thinsp;• 
-              <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>
-            ` 
+            `(${sqrtNum(task1[0])}&thinsp;+ ${sqrtNum(task1[1])}) &thinsp;• ${sqrtNum(task1[0])}` 
             : 
-            `
-            (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> 
-              &thinsp;— <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span> ) &thinsp;• 
-              <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>
-            `} `
+            `(${sqrtNum(task1[0])}&thinsp;— ${sqrtNum(task1[1])}) &thinsp;• ${sqrtNum(task1[0])}`
+           }`
+
            : task === 36 ? 
-           `${task1[0]}<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>
-              &thinsp;• ${task1[2]}<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[3]}</span>
-              &thinsp;• <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[4]}</span>
-           ` 
+           `${task1[0]}${sqrtNum(task1[1])}&thinsp;• ${task1[2]}${sqrtNum(task1[3])}&thinsp;• ${sqrtNum(task1[4])}` 
+           
            : task === 37 ? 
            `
            ${task1[2] === 1 ? 
-            `
-            (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> — ${task1[1]})
-              (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> + ${task1[1]})
-            ` 
+            `(${sqrtNum(task1[0])}— ${task1[1]})(${sqrtNum(task1[0])} + ${task1[1]})` 
             : 
-            `(<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> —
-              <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>)
-              (<span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[0]}</span> +
-              <span style="font-size: 120%; margin-right: -2px; font-family: sans-serif;">√</span>
-              <span style="border-top: 0.1em solid; padding-top: 0.1em;">${task1[1]}</span>)
-            `}
-           
-           `
+            `(${sqrtNum(task1[0])}— ${sqrtNum(task1[1])})(${sqrtNum(task1[0])} + ${sqrtNum(task1[1])})`
+            }`
            : task === 38 ? 
            `
-           <span style="font-size: 130%; margin-right: -2px; font-family: sans-serif;">√</span>
-            <span style="border-top: 0.1em solid; padding-top: 0.2em;">${task1[0]}<sup>${task1[1]}</sup></span>
+           <span style="font-size: 130%; font-family: MathJax_Size3;">√</span>
+           <span style="border-top: 0.099em solid; padding-top: 5px; margin-left: -5px;">&thinsp;${task1[0]}<sup>${task1[1]}</sup>&thinsp;</span>        
            `
            :
            ``
@@ -3027,7 +2976,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${task === 21 ? 
             `${
             task1[1] === "m" ? 
-              `Медиана равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              `Медиана равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите сторону этого треугольника.
               <hr class="hr-pd_20">
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1345.png"></div>
@@ -3035,7 +2984,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               `
             : 
             task1[1] === "v" ? 
-              `Высота равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              `Высота равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите сторону этого треугольника.
               <hr class="hr-pd_20">
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1350.png"></div>
@@ -3043,7 +2992,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               `
             :
             task1[1] === "b" ? 
-              `Биссектриса равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              `Биссектриса равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите сторону этого треугольника.
               <hr class="hr-pd_20">
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1349.png"></div>
@@ -3051,21 +3000,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               `
             :
             task1[1] === "sb" ? 
-              `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              `Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите биссектрису этого треугольника.
               <hr class="hr-pd_20">
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1349.png"></div>
            
               `
             :  task1[1] === "sm" ? 
-              `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              `Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите медиану этого треугольника.
               <hr class="hr-pd_20">
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1345.png"></div>
            
               `
             : task1[1] === "sv" ? 
-              `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
+              `Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите высоту этого треугольника.
               <hr class="hr-pd_20">
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1350.png"></div>
@@ -5461,7 +5410,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         
         }   
     }
-    // <sub>1</sub>
+    // <sub>1</sub>  ${drobNum(`${task1[2]}√${task1[3]}`, task1[4])} 
     if (taskKey === 'twentyfour'){
       let Nomer = 24
       function reshTwentyOne(item){
@@ -5732,7 +5681,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           : task === 34 ? 
             `
             Точки M и N лежат на стороне AC треугольника ABC на расстояниях соответственно ${task1[0]} и ${task1[1]} от вершины A. 
-            Найдите радиус окружности, проходящей через точки M и N и касающейся луча AB, если cos∠BAC&nbsp;=&nbsp;${drobNum(`${task1[2]}√${task1[3]}`, task1[4])} 
+            Найдите радиус окружности, проходящей через точки M и N и касающейся луча AB, 
+            если cos∠BAC = 
+            <table style=" border-collapse: collapse;">
+              <tr style="border-bottom: 1px solid black;">
+                <td>${sqrtNum(task1[3])}</td>
+              </tr>
+              <tr style="border-top: 1px solid black; ">
+                <td style="text-align: center;">${task1[4]}</td>
+              </tr>
+            </table>      
             `
           : task === 35 ? 
             `
