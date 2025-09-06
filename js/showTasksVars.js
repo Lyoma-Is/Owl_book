@@ -112,24 +112,38 @@ function setupCheckButton(slider, correctAnswers) {
 
         inputs.forEach((input) => {
             const taskId = input.closest('.slide')?.getAttribute('data-task-id');
-            const correct = Array.isArray(correctAnswers[taskId])
-                ? correctAnswers[taskId][0]?.toString().toUpperCase()
-                : correctAnswers[taskId]?.toString().toUpperCase();
+            const correct = correctAnswers[taskId]?.toString().toUpperCase();
 
             const user = input.value.toUpperCase().replace(/\s+/g, '');
             input.classList.remove('input_answer-green', 'input_answer-red');
 
-            const isCorrect = correct.split(' | ').includes(user);
+            // const isCorrect = correct.split(' | ').includes(user);
+            
+            // input.classList.add(isCorrect ? 'input_answer-green' : 'input_answer-red');
+            let isCorrect = false;
+                if (correct.includes(' | ')) {
+                    const alternatives = correct.split(' | ').map(str => str.trim());
+                    isCorrect = alternatives.includes(user);
+                }  else if(correct ==="") {
+                    isCorrect;
+                } else {
+                    isCorrect = user === correct;
+                }
+    
+                if (isCorrect) {
+                    input.classList.add('input_answer-green');
+                    score++;
+                } else {
+                    input.classList.add('input_answer-red');
+                } 
 
-            userAnswers.push(user || '—');
-            correctList.push(correct);
-
-            input.classList.add(isCorrect ? 'input_answer-green' : 'input_answer-red');
-            if (isCorrect) score++;
+            //if (isCorrect) score++;
             let reshOtv = document.querySelector('.reshenie');
             if (reshOtv){  
                 reshOtv.classList.remove('reshenie');
-            }
+            } 
+            userAnswers.push(user || '—');
+            correctList.push(correct);
         });
 
         const resultHTML = `
@@ -149,25 +163,54 @@ function getResultText(score, total) {
     if (score < 16) return `Ваша оценка: 4 <span style="padding: 5px;" class="bg_green">Зачёт</span> <br><br> Количество баллов: ${score} из ${total}`;
     return `Ваша оценка: 5 <span style="padding: 5px;" class="bg_green">Зачёт</span> <br><br> Количество баллов: ${score} из ${total}`;
 }
-
+// userAnswers.length
 function createResultsTable(userAnswers, correctAnswers) {
-    return `
-        <table style="width:100%; border-collapse:collapse; margin-top:15px;"><tbody>
-            ${userAnswers.map((answer, i) => {
-                const isCorrect = correctAnswers[i].includes(' | ')
-                    ? correctAnswers[i].split(' | ').includes(answer)
-                    : answer === correctAnswers[i];
-                const color = answer === '—' ? '' : isCorrect ? '#c0ffc0' : '#ffc0c0';
-                return `
-                     <tr class="answer-td">
-                         <td style="padding:8px; width:10%; border:1px solid #000; border-right: 0;" >${i + 1}</td>
-                         <td style="padding:8px; width:30%; border:1px solid #000; border-left: 0; border-right: 0; background-color:${color};">${answer}</td>
-                         <td style="padding:8px; width:30%; border:1px solid #000; border-left: 0;">${correctAnswers[i]}</td>
-                     </tr>
-                `;
-            }).join('')}
-        </tbody></table>
-    `;
+    let tableHTML = `
+    <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+        <tbody>`;
+
+for (let i = 0; i < 12; i++) {
+    const answer = userAnswers[i];
+    const correctAnswer = correctAnswers[i];
+    
+    const isCorrect = correctAnswer.includes(' | ')
+        ? correctAnswer.split(' | ').includes(answer)
+        : answer === correctAnswer;
+
+    const color = answer === '—' ? '' : isCorrect ? '#c0ffc0' : '#ffc0c0';
+    
+    tableHTML += `
+            <tr class="answer-td">
+                <td style="padding:8px; width:10%; border:1px solid #000; border-right: 0;">${i + 1}</td>
+                <td style="padding:8px; width:30%; border:1px solid #000; border-left: 0; border-right: 0; background-color:${color};">${answer}</td>
+                <td style="padding:8px; width:30%; border:1px solid #000; border-left: 0;">${correctAnswer}</td>
+            </tr>`;
+}
+
+tableHTML += `
+        </tbody>
+    </table>`;
+
+return tableHTML;
+    // return `
+    //     <table style="width:100%; border-collapse:collapse; margin-top:15px;"><tbody>
+    //         ${userAnswers.map((answer, i) => {
+    //             const isCorrect = correctAnswers[i].includes(' | ')
+    //                 ? correctAnswers[i].split(' | ').includes(answer)
+    //                 : answer === correctAnswers[i];
+
+
+    //             const color = answer === '—' ? '' : isCorrect ? '#c0ffc0' : '#ffc0c0';
+    //             return `
+    //                  <tr class="answer-td">
+    //                      <td style="padding:8px; width:10%; border:1px solid #000; border-right: 0;" >${i + 1}</td>
+    //                      <td style="padding:8px; width:30%; border:1px solid #000; border-left: 0; border-right: 0; background-color:${color};">${answer}</td>
+    //                      <td style="padding:8px; width:30%; border:1px solid #000; border-left: 0;">${correctAnswers[i]}</td>
+    //                  </tr>
+    //             `;
+    //         }).join('')}
+    //     </tbody></table>
+    // `;
 }
 
 // ------------------ Загрузка задач ------------------
