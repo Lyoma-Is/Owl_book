@@ -1,5 +1,5 @@
 const tasks = {
-
+  onefive: '../../src/oge_math/taskOneFive.json',
   six: '../../src/oge_math/taskSix.json',
   seven: '../../src/oge_math/taskSeven.json',
   eight: '../../src/oge_math/taskEight.json',
@@ -113,7 +113,159 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       </math>
       `
     }
+    if (taskKey === 'onefive'){
+      let Nomer = 1
+      switch(typeTask){
+        case 1:
+          answerBlock += `
+          <p class="p-num"><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Прочитайте внимательно текст и выполните задания 1–5.
+          <hr class="hr-pd_10">
+          ${task === 11 ? 
+            `
+            <table>
+             <tr>
+              <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina1.png"></td>
+              <td> &thinsp; </td>
+              <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina2.png"></td>
+             </tr>
+             <tr>
+              <td>Рис. 1</td>
+              <td> &thinsp; </td>
+              <td>Рис. 2</td>
+             </tr>
+            </table>
+            <hr class="hr-pd_10">
+            Автомобильное колесо представляет из себя металлический диск с установленной на него резиновой шиной. 
+            Диаметр диска совпадает с диаметром внутреннего отверстия в шине.
+            <br>
+            Для маркировки автомобильных шин применяется единая система обозначений. Например, 195/65 R15 (рис. 1).
+            <br>
+            Первое число означает ширину шины в миллиметрах (размер B на рис. 2). 
+            <br>
+            Второе число — высота боковины шины H в процентах от ширины шины. 
+            Например, шина с маркировкой 195/65 R15 имеет ширину B = 195 мм и высоту боковины  H = 195 • 0,65 = 126,75 (мм).
+            <br>
+            Буква R означает, что шина имеет радиальную конструкцию, то есть нити каркаса в боковине шины расположены вдоль радиусов колеса. 
+            Такие шины применяются на всех легковых автомобилях.
+            За буквой R следует диаметр диска d в дюймах (в одном дюйме 25,4 мм). 
+            Таким образом, общий диаметр колеса D можно найти, зная диаметр диска и высоту боковины.
+            <br>
+            Завод производит легковые автомобили определённой модели и устанавливает на них колёса с шинами 215/65 R16.
+            <hr class="hr-pd_30">
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ.
+            Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td colspan="2" rowspan="2">Ширина шины (мм)</td>
+                  <td colspan="3">Диаметр диска (дюймы)</td>
+                </tr>
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[3]}</td>
+                  <td>${task1[6]}</td>
+                  <td>${task1[7]}</td>
+                  <td>${task1[8]}</td>
+                  
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[4]}</td>
+                  <td>${task1[9]}</td>
+                  <td>${task1[10]}</td>
+                  <td>${task1[11]}</td>
+             
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[5]}</td>
+                  <td>${task1[12]}</td>
+                  <td>${task1[13]}</td>
+                  <td>${task1[14]}</td>
+                  
+                </tr>
+            </table>
+            <hr class="hr-pd_10">
+            Шины какой наибольшей ширины можно устанавливать на автомобиль, если диаметр диска равен 17 дюймам? Ответ дайте в миллиметрах. 
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>         
+            <hr class="hr-pd_10">
+            <hr class="hr-between">
+            <hr class="hr-pd_30">
 
+            <b>Задание ${Nomer+1}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task2}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
+            <hr class="hr-pd_10">
+            <hr class="hr-between">
+            <hr class="hr-pd_30">
+
+            <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task3}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
+            <hr class="hr-pd_10">
+            <hr class="hr-between">
+            <hr class="hr-pd_30">
+
+            <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task4}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>         
+            <hr class="hr-pd_10">
+            <hr class="hr-between">
+            <hr class="hr-pd_30">
+
+            <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task5}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div>         
+            <hr class="hr-pd_10">
+            <hr class="hr-between">
+            <hr class="hr-pd_30">
+
+            `
+            : 
+            ``
+
+          }
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 2:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }   
+    } 
     if (taskKey === 'six'){
       let Nomer = 6
       switch(typeTask){
@@ -2909,8 +3061,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           } 
           return answerBlock
         }   
-    } 
-    
+    }     
     if (taskKey === 'fifteen'){
       let Nomer = 15
       switch(typeTask){

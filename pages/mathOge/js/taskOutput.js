@@ -142,7 +142,9 @@ document.getElementById('select-task').addEventListener('change', function() {
 
 const taskPage = document.getElementById('select-task');
 taskPage.innerHTML = ` 
+
 <option value="taskFoundPage.html">Выберите задание по типу</option>
+<option value="taskOneFivePage.html">1-5. Задачи с практическим содержанием.</option>
 <option value="taskSixPage.html">6. Числа и вычисления.</option>
 <option value="taskSevenPage.html">7. Числовые неравенства. Координатная прямая.</option>
 <option value="taskEightPage.html">8. Вычисления степенных и иррациональных выражений.</option>
@@ -202,6 +204,7 @@ document.addEventListener('click', function(e) {
       // 'taskThreePage.html': 3,
       // 'taskFourPage.html': 4,
       // 'taskFivePage.html': 5,
+      'taskOneFivePage.html': 1,
       'taskSixPage.html': 6,
       'taskSevenPage.html': 7,
       'taskEightPage.html': 8,
@@ -248,6 +251,7 @@ document.addEventListener('click', function(e) {
       // 3: "КЭС: ",
       // 4: "КЭС: ",
       // 5: "КЭС: ",
+      1: "КЭС: 3.3 Решение текстовых задач.",
       6: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.",
       7: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.<br>КЭС: 1.4 Действительные числа. Арифметические операции с действительными числами.<br>КЭС: 2.5 Арифметический корень натуральной степени. Действия с арифметическими корнями натуральной степени.<br> КЭС: 6.1 Координатная прямая.",
       8: "КЭС: 2.2 Степень с целым показателем. Степень с рациональным показателем. Свойства степени.",

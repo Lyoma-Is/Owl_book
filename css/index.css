@@ -380,6 +380,29 @@ main .btn-primary:active {
   padding: 5px;
 }
 
+table.iksweb {
+  width: 90%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: auto;
+}
+
+table.iksweb, table.iksweb td, table.iksweb th {
+  border: 1px solid #595959;
+}
+
+table.iksweb td, table.iksweb th {
+  padding: 3px;
+  width: -1em;
+  height: 1.5em;
+}
+
+table.iksweb th {
+  background: #4e6982;
+  color: #fff;
+  font-weight: normal;
+}
+
 .inform-block {
   position: absolute;
   width: 100%;
