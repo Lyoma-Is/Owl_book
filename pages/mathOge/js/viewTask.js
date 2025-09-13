@@ -35,6 +35,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
+    const generateFooter15 = () => `</details><hr class="hr-pd_20">`;
 
     // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
     //const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
@@ -193,10 +194,88 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <hr class="hr-pd_10">
             Шины какой наибольшей ширины можно устанавливать на автомобиль, если диаметр диска равен 17 дюймам? Ответ дайте в миллиметрах. 
             <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>         
-            <hr class="hr-pd_10">    
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
-          : ``}
+          : task === 12 ? 
+            `
+            <details><summary>Развернуть описание</summary>
+            <table>
+             <tr>
+              <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina1.png"></td>
+              <td> &thinsp; </td>
+              <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina2.png"></td>
+             </tr>
+             <tr>
+              <td>Рис. 1</td>
+              <td> &thinsp; </td>
+              <td>Рис. 2</td>
+             </tr>
+            </table>
+            <hr class="hr-pd_10">
+            Автомобильное колесо представляет из себя металлический диск с установленной на него резиновой шиной. 
+            Диаметр диска совпадает с диаметром внутреннего отверстия в шине.
+            <br>
+            Для маркировки автомобильных шин применяется единая система обозначений. Например, 195/65 R15 (рис. 1).
+            <br>
+            Первое число означает ширину шины в миллиметрах (размер B на рис. 2). 
+            <br>
+            Второе число — высота боковины шины H в процентах от ширины шины. 
+            Например, шина с маркировкой 195/65 R15 имеет ширину B = 195 мм и высоту боковины  H = 195 • 0,65 = 126,75 (мм).
+            <br>
+            Буква R означает, что шина имеет радиальную конструкцию, то есть нити каркаса в боковине шины расположены вдоль радиусов колеса. 
+            Такие шины применяются на всех легковых автомобилях.
+            За буквой R следует диаметр диска d в дюймах (в одном дюйме 25,4 мм). 
+            Таким образом, общий диаметр колеса D можно найти, зная диаметр диска и высоту боковины.
+            <br>
+            Завод производит легковые автомобили определённой модели и устанавливает на них колёса с шинами 225/60 R18.        
+            </details><hr class="hr-pd_30">
+
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
+            Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td colspan="3" rowspan="2">Ширина шины (мм)</td>
+                  <td colspan="4">Диаметр диска (дюймы)</td>
+                </tr>
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>
+                  <td>${task1[3]}</td>
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[4]}</td>
+                  <td>${task1[7]}</td>
+                  <td>${task1[8]}</td>
+                  <td>${task1[9]}</td>
+                  <td>${task1[10]}</td>
+                  
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[5]}</td>
+                  <td>${task1[11]}</td>
+                  <td>${task1[12]}</td>
+                  <td>${task1[13]}</td>
+                  <td>${task1[14]}</td>
+             
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[6]}</td>
+                  <td>${task1[15]}</td>
+                  <td>${task1[16]}</td>
+                  <td>${task1[17]}</td>
+                  <td>${task1[18]}</td>      
+                </tr>
+                
+            </table>
+            <hr class="hr-pd_10">
+            Шины какой наибольшей ширины можно устанавливать на автомобиль, если диаметр диска равен 19 дюймам? Ответ дайте в миллиметрах. 
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
+          ` 
+          : 
+          ``}
 
           
           `
@@ -204,104 +283,90 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer[0]}</b>`;
-          answerBlock += generateFooter();
+          answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
 
 
           // 2
           answerBlock +=`
-          ${task === 11 ? 
-            `
-            <b>Задание ${Nomer+1}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
-            ${task2}
-            <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
-            <hr class="hr-pd_10">
-            
-            `  :  ``} `
+          <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
+          <hr class="hr-pd_10">          
+           ${task2}
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
+          ` 
          answerBlock += generateHeader();
          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer[1]}</b>`;
-          answerBlock += generateFooter();
+          answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
 
 
           // 3
-          answerBlock +=`
-          ${task === 11 ? 
-            `
+          answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
             <hr class="hr-pd_10">
             ${task3}
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
-            <hr class="hr-pd_10">
-            
             ` 
-            :  ``} `
          answerBlock += generateHeader();
          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer[2]}</b>`;
-          answerBlock += generateFooter();
+          answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
 
 
           // 4
           answerBlock +=`
-          ${task === 11 ? 
-            `
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
             <hr class="hr-pd_10">
             ${task4}
             <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>         
-            <hr class="hr-pd_10">
-            
-            `  : ``}
-          
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer[3]}</b>`;
-          answerBlock += generateFooter();
+          answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
 
 
           // 5
           answerBlock +=`
-          ${task === 11 ? 
-            `
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
             <hr class="hr-pd_10">
             ${task5}
             <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div>         
-            <hr class="hr-pd_10">
-            
-            `  :  ``}
-          
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
+      
           `
          answerBlock += generateHeader();
          answerBlock += `
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer[4]}</b>`;
-          answerBlock += generateFooter();
+          answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          
           answerBlock += generateDate();
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
           return answerBlock
         case 2:
           answerBlock += `
