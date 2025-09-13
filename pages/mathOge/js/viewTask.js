@@ -39,7 +39,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
     //const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
     
-    
+    // <details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10"> </details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">
     const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10">
       <div class="text-inform" data-task-counter="${taskCounter}"><div class="inform-block"></div>
         ${ !taskKec ? ``:
@@ -123,6 +123,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <hr class="hr-pd_10">
           ${task === 11 ? 
             `
+            <details><summary>Развернуть описание</summary>
             <table>
              <tr>
               <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina1.png"></td>
@@ -151,9 +152,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             За буквой R следует диаметр диска d в дюймах (в одном дюйме 25,4 мм). 
             Таким образом, общий диаметр колеса D можно найти, зная диаметр диска и высоту боковины.
             <br>
-            Завод производит легковые автомобили определённой модели и устанавливает на них колёса с шинами 215/65 R16.
-            <hr class="hr-pd_30">
-            <b>Задание ${Nomer}</b>. Впишите правильный ответ.
+            Завод производит легковые автомобили определённой модели и устанавливает на них колёса с шинами 215/65 R16.        
+            </details><hr class="hr-pd_30">
+
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
             <hr class="hr-pd_10">
             <table class="iksweb">
@@ -192,69 +194,119 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Шины какой наибольшей ширины можно устанавливать на автомобиль, если диаметр диска равен 17 дюймам? Ответ дайте в миллиметрах. 
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>         
-            <hr class="hr-pd_10">
-            <hr class="hr-between">
-            <hr class="hr-pd_30">
+            <hr class="hr-pd_10">    
+          ` 
+          : ``}
 
+          
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[0]}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+
+
+          // 2
+          answerBlock +=`
+          ${task === 11 ? 
+            `
             <b>Задание ${Nomer+1}</b>. Впишите правильный ответ.
             <hr class="hr-pd_10">
             ${task2}
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
             <hr class="hr-pd_10">
-            <hr class="hr-between">
-            <hr class="hr-pd_30">
+            
+            `  :  ``} `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[1]}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
 
+
+          // 3
+          answerBlock +=`
+          ${task === 11 ? 
+            `
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
             <hr class="hr-pd_10">
             ${task3}
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             <hr class="hr-pd_10">
-            <hr class="hr-between">
-            <hr class="hr-pd_30">
+            
+            ` 
+            :  ``} `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[2]}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
 
+
+          // 4
+          answerBlock +=`
+          ${task === 11 ? 
+            `
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
             <hr class="hr-pd_10">
             ${task4}
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>         
             <hr class="hr-pd_10">
-            <hr class="hr-between">
-            <hr class="hr-pd_30">
+            
+            `  : ``}
+          
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[3]}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
 
+
+          // 5
+          answerBlock +=`
+          ${task === 11 ? 
+            `
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
             <hr class="hr-pd_10">
             ${task5}
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div>         
             <hr class="hr-pd_10">
-            <hr class="hr-between">
-            <hr class="hr-pd_30">
-
-            `
-            : 
-            ``
-
-          }
-          <hr class="hr-pd_20">
-          `
+            
+            `  :  ``}
           
-          answerBlock += generateDate();
-          answerBlock += generateHeader();
-          answerBlock += `
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
             <hr class="hr-pd_20">
-            Ответ: <b>${taskAnswer}</b>`;
+            Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += generateDate();
           return answerBlock
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           `
-          answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
@@ -5832,9 +5884,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           : task === 34 ? 
             `
             Точки M и N лежат на стороне AC треугольника ABC на расстояниях соответственно ${task1[0]} и ${task1[1]} от вершины A. 
-            Найдите радиус окружности, проходящей через точки M и N и касающейся луча AB, 
-            если cos∠BAC = 
-            <table style=" border-collapse: collapse;">
+            Найдите радиус окружности, проходящей через точки M и N и касающейся луча AB, если 
+            cos∠BAC = <table style = "display: inline-block; border-collapse: collapse;">
               <tr style="border-bottom: 1px solid black;">
                 <td>${sqrtNum(task1[3])}</td>
               </tr>

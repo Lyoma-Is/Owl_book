@@ -83,7 +83,11 @@ function createSlider(tasksHTML) {
     tasksHTML.forEach((_, index) => {
         const btn = document.createElement('button');
         btn.className = `slider-btn ${index === 0 ? 'active' : ''}`;
-        btn.textContent = index + 6;
+        if(index === 0){
+            btn.textContent = "1-5"
+        }
+        if(index > 0)
+        btn.textContent = index + 5;
         
         btn.addEventListener('click', () => goToSlide(index));
         buttons.push(btn);
@@ -175,6 +179,11 @@ async function displayTasks() {
 
     // Сохраняем правильные ответы для проверки
     correctAnswers = {
+        onefive1: randomTasks.onefive?.taskAnswer[0],
+        onefive2: randomTasks.onefive?.taskAnswer[1],
+        onefive3: randomTasks.onefive?.taskAnswer[2],
+        onefive4: randomTasks.onefive?.taskAnswer[3],
+        onefive5: randomTasks.onefive?.taskAnswer[4],
         six: randomTasks.six?.taskAnswer,
         seven: randomTasks.seven?.taskAnswer,
         eight: randomTasks.eight?.taskAnswer,
@@ -196,6 +205,7 @@ async function displayTasks() {
    
     // Генерируем HTML для всех задач
     const tasksHTML = [
+        randomTasks.onefive ? generateTaskHTML('onefive', randomTasks.onefive, false) : '',
         randomTasks.six ? generateTaskHTML('six', randomTasks.six, false) : '',
         randomTasks.seven ? generateTaskHTML('seven', randomTasks.seven, false) : '',
         randomTasks.eight ? generateTaskHTML('eight', randomTasks.eight, false) : '',
@@ -242,29 +252,27 @@ async function displayTasks() {
             let arrayInput = [];
             let arrayAnswer = [];
             let countResult = 0;
-            
+
             // Проверяем каждый ответ
             inputs.forEach((input, index) => {
-                
                 const taskId = input.closest('.slide').getAttribute('data-task-id') || 
-                              Object.keys(correctAnswers)[index];
+                            Object.keys(correctAnswers)[index];
                 
-                const correctAnswer = correctAnswers[taskId]?.toString().toUpperCase() || '';
-                const userInput = input.value.toUpperCase().replaceAll(' ', '');
-    
+                const correctAnswer = correctAnswers[taskId]?.toString().toUpperCase().replaceAll(' ', '').replaceAll(',', '.').replaceAll('.', '.') || '';
+                const userInput = input.value.toString().toUpperCase().replaceAll(' ', '').replaceAll(',', '.').replaceAll('.', '.');
+
                 input.classList.remove('input_answer-green', 'input_answer-red', 'input_answer');
-    
-                // Проверка ответа с учетом альтернативных вариантов
-                let isCorrect = false;
-                
-    
+
+                // Проверка ответа - сравниваем введенный ответ с правильным
+                const isCorrect = userInput === correctAnswer && userInput !== '';
+
                 if (isCorrect) {
                     input.classList.add('input_answer-green');
                     countResult++;
                 } else {
                     input.classList.add('input_answer-red');
                 } 
-     
+
                 arrayInput.push(userInput || '—');
                 arrayAnswer.push(correctAnswer);
                 
@@ -272,9 +280,8 @@ async function displayTasks() {
                 if (reshOtv){  
                     reshOtv.classList.remove('reshenie');
                 }
-                
             });
-    
+
             // Создаем HTML для слайда с результатами
             let resultsHTML = `
                 <div id="answer_results">
@@ -286,14 +293,12 @@ async function displayTasks() {
             // Обновляем или создаем слайд с результатами
             const resultsIndex = slider.updateResultsSlide(resultsHTML);
             slider.goToSlide(resultsIndex);
-    
+
             // Показываем блок с разбором
             let razOtv = document.querySelector('.details-raz_otv'); 
             if (razOtv) {razOtv.classList.remove('details-raz_otv'); }
-            
         });
-    } 
-       
+    }       
 }
 
 export { correctAnswerGen }
@@ -311,22 +316,30 @@ function getResultText(countResult, total) {
     } 
 }
 
-// Вспомогательная функция для создания таблицы результатов
+
 function createResultsTable(arrayInput, arrayAnswer) {
     let tableHTML = `
-        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;"><tbody>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+        <thead>
+            <tr>
+                <th style="padding: 8px; border: 1px solid #000; width: 10%; text-align: center;">№</th>
+                <th style="padding: 8px; border: 1px solid #000; width: 30%; text-align: center;">Ваш ответ</th>
+                <th style="padding: 8px; border: 1px solid #000; width: 30%; text-align: center;">Правильный ответ</th>
+            </tr>
+        </thead>
+        <tbody>
     `;
-    //arrayInput.length
-    for (let i = 0; i < 14; i++) {
+    
+  
+    for (let i = 0; i < 19; i++) {
         const isCorrect = arrayInput[i] === arrayAnswer[i];
-
         const textColor = arrayInput[i] === "—" ? "" : isCorrect ? "#c0ffc0" : "#ffc0c0";
 
         tableHTML += `
             <tr class="answer-td">
-                <td style="padding: 8px; width: 10%; border: 1px solid #000; border-right: 0;">${i + 6}</td>
-                <td style="padding: 8px; width: 30%; border: 1px solid #000; border-left: 0; border-right: 0; background-color: ${textColor};">${arrayInput[i]}</td>
-                <td style="padding: 8px; width: 30%; border: 1px solid #000; border-left: 0; ">${arrayAnswer[i]}</td>
+                <td style="padding: 8px; border: 1px solid #000; text-align: center;">${i + 1}</td>
+                <td style="padding: 8px; border: 1px solid #000; background-color: ${textColor}; text-align: center;">${arrayInput[i] || "—"}</td>
+                <td style="padding: 8px; border: 1px solid #000; text-align: center;">${arrayAnswer[i] || "—"}</td>
             </tr>
         `;
     }

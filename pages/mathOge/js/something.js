@@ -1,7 +1,4 @@
 
-//document.querySelector('.footer-text').innerHTML = `<b>© OwlExams.ru</b>`;
-
-
 const footerText = document.querySelector('.footer-text');
 if (footerText) {
   footerText.innerHTML = `<b>© OwlExams.ru 2025</b>`;
@@ -40,34 +37,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const deselectAllBtn = document.querySelector('.deselect-all');
     const generateBtn = document.querySelector('.generate-btn');
     
-    const TOTAL_TASKS = 25; 
-    const TASKS_PER_ROW = 6;
+    const TOTAL_TASKS = 25; // От 1 до 25
 
     function initCheckboxes() {
         if(!checkboxesContainer){
            return 0
         }
         checkboxesContainer.innerHTML = '';
-        const rowsNeeded = TASKS_PER_ROW;
-        let taskCounter = 5;
-
-        for (let row = 0; row < rowsNeeded; row++) {
-            const rowDiv = document.createElement('div');
-            rowDiv.className = 'checkbox-row';
-            
-            for (let col = 1; col <= TASKS_PER_ROW; col++) {
-                taskCounter++;
-                if (taskCounter > TOTAL_TASKS) break;
-                
-                let taskId = taskCounter.toString();;
-                
-                
-                const container = createCheckboxItem(taskId, taskId);
-                rowDiv.appendChild(container);
-            }
-            
-            checkboxesContainer.appendChild(rowDiv);
+        
+        // Создаем одну строку для всех чекбоксов
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'checkbox-row';
+        
+        // Первый чекбокс "1-5"
+        const firstContainer = createCheckboxItem("1-5", "1-5");
+        rowDiv.appendChild(firstContainer);
+        
+        // Чекбоксы от 6 до 25
+        for (let taskNum = 6; taskNum <= TOTAL_TASKS; taskNum++) {
+            const taskId = taskNum.toString();
+            const container = createCheckboxItem(taskId, taskId);
+            rowDiv.appendChild(container);
         }
+        
+        checkboxesContainer.appendChild(rowDiv);
+
+        // Восстанавливаем выбранные задания из localStorage
+        const selectedTasks = JSON.parse(localStorage.getItem('selectedTasks')) || [];
+        selectedTasks.forEach(task => {
+            const checkbox = document.querySelector(`.task-checkbox[value="${task}"]`);
+            if (checkbox) checkbox.checked = true;
+        });
     }
 
     function createCheckboxItem(value, labelText) {
@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if(!selectAllBtn || !deselectAllBtn || !generateBtn){return 0 }
+    
     selectAllBtn.addEventListener('click', function() {
         document.querySelectorAll('.task-checkbox').forEach(checkbox => {
             checkbox.checked = true;
@@ -128,4 +129,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     initCheckboxes();
+    
+    // Если есть сохраненные задания, устанавливаем их
+    const selectedTasks = JSON.parse(localStorage.getItem('selectedTasks')) || [];
+    if (selectedTasks.length > 0) {
+        selectedTasks.forEach(task => {
+            const checkbox = document.querySelector(`.task-checkbox[value="${task}"]`);
+            if (checkbox) checkbox.checked = true;
+        });
+    }
 });
