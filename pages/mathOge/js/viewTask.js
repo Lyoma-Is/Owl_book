@@ -31,7 +31,7 @@ export {tasks};
   // five: '../../../src/oge_inf/taskFive.json',
 
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
-    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec} = item;
+    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, task7, task8, task9, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec} = item;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
@@ -122,9 +122,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Прочитайте внимательно текст и выполните задания 1–5.
           <hr class="hr-pd_10">
-          ${task === 11 ? 
-            `
-            <details><summary>Развернуть описание</summary>
+          <details><summary>Развернуть описание</summary>
             <table>
              <tr>
               <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina1.png"></td>
@@ -143,19 +141,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <br>
             Для маркировки автомобильных шин применяется единая система обозначений. Например, 195/65 R15 (рис. 1).
             <br>
-            Первое число означает ширину шины в миллиметрах (размер B на рис. 2). 
+            Первое число (число 195 в приведённом примере) означает ширину шины в миллиметрах (размер B на рис. 2). 
             <br>
-            Второе число — высота боковины шины H в процентах от ширины шины. 
+            Второе число (число 65 в приведённом примере) — высота боковины шины H в процентах от ширины шины (100 • H/B).<br>
             Например, шина с маркировкой 195/65 R15 имеет ширину B = 195 мм и высоту боковины  H = 195 • 0,65 = 126,75 (мм).
             <br>
             Буква R означает, что шина имеет радиальную конструкцию, то есть нити каркаса в боковине шины расположены вдоль радиусов колеса. 
             Такие шины применяются на всех легковых автомобилях.
             За буквой R следует диаметр диска d в дюймах (в одном дюйме 25,4 мм). 
             Таким образом, общий диаметр колеса D можно найти, зная диаметр диска и высоту боковины.
-            <br>
-            Завод производит легковые автомобили определённой модели и устанавливает на них колёса с шинами 215/65 R16.        
+            <br>        
+            ${task8}
             </details><hr class="hr-pd_30">
-
+          ${task === 11 ? 
+            `
+            
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
             <hr class="hr-pd_10">
@@ -192,43 +192,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>
             </table>
             <hr class="hr-pd_10">
-            Шины какой наибольшей ширины можно устанавливать на автомобиль, если диаметр диска равен 17 дюймам? Ответ дайте в миллиметрах. 
+            ${task9}
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
           : task === 12 ? 
             `
-            <details><summary>Развернуть описание</summary>
-            <table>
-             <tr>
-              <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina1.png"></td>
-              <td> &thinsp; </td>
-              <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/shina2.png"></td>
-             </tr>
-             <tr>
-              <td>Рис. 1</td>
-              <td> &thinsp; </td>
-              <td>Рис. 2</td>
-             </tr>
-            </table>
-            <hr class="hr-pd_10">
-            Автомобильное колесо представляет из себя металлический диск с установленной на него резиновой шиной. 
-            Диаметр диска совпадает с диаметром внутреннего отверстия в шине.
-            <br>
-            Для маркировки автомобильных шин применяется единая система обозначений. Например, 195/65 R15 (рис. 1).
-            <br>
-            Первое число означает ширину шины в миллиметрах (размер B на рис. 2). 
-            <br>
-            Второе число — высота боковины шины H в процентах от ширины шины. 
-            Например, шина с маркировкой 195/65 R15 имеет ширину B = 195 мм и высоту боковины  H = 195 • 0,65 = 126,75 (мм).
-            <br>
-            Буква R означает, что шина имеет радиальную конструкцию, то есть нити каркаса в боковине шины расположены вдоль радиусов колеса. 
-            Такие шины применяются на всех легковых автомобилях.
-            За буквой R следует диаметр диска d в дюймах (в одном дюйме 25,4 мм). 
-            Таким образом, общий диаметр колеса D можно найти, зная диаметр диска и высоту боковины.
-            <br>
-            Завод производит легковые автомобили определённой модели и устанавливает на них колёса с шинами 225/60 R18.        
-            </details><hr class="hr-pd_30">
 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
@@ -270,11 +239,60 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 
             </table>
             <hr class="hr-pd_10">
-            Шины какой наибольшей ширины можно устанавливать на автомобиль, если диаметр диска равен 19 дюймам? Ответ дайте в миллиметрах. 
+            ${task9}
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
-          : 
+          : task === 13 ? 
+            `   
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
+            Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td colspan="2" rowspan="2">Ширина шины (мм)</td>
+                  <td colspan="3">Диаметр диска (дюймы)</td>
+                </tr>
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[3]}</td>
+                  <td>${task1[7]}</td>
+                  <td>${task1[8]}</td>
+                  <td>${task1[9]}</td>
+                  
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[4]}</td>
+                  <td>${task1[10]}</td>
+                  <td>${task1[11]}</td>
+                  <td>${task1[12]}</td>
+             
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[5]}</td>
+                  <td>${task1[13]}</td>
+                  <td>${task1[14]}</td>
+                  <td>${task1[15]}</td>
+                  
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[6]}</td>
+                  <td>${task1[16]}</td>
+                  <td>${task1[17]}</td>
+                  <td>${task1[18]}</td>
+                  
+                </tr>
+            </table>
+            <hr class="hr-pd_10">
+            ${task9}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
+          ` 
+          :
           ``}
 
           
