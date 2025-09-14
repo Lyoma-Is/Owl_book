@@ -292,6 +292,166 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
+          : task === 14 ? 
+            `   
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
+            Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td colspan="2" rowspan="2">Ширина шины (мм)</td>
+                  <td colspan="3">Диаметр диска (дюймы)</td>
+                </tr>
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[3]}</td>
+                  <td>${task1[8]}</td>
+                  <td>${task1[9]}</td>
+                  <td>${task1[10]}</td>      
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[4]}</td>
+                  <td>${task1[11]}</td>
+                  <td>${task1[12]}</td>
+                  <td>${task1[13]}</td>
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[5]}</td>
+                  <td>${task1[14]}</td>
+                  <td>${task1[15]}</td>
+                  <td>${task1[16]}</td>  
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[6]}</td>
+                  <td>${task1[17]}</td>
+                  <td>${task1[18]}</td>
+                  <td>${task1[19]}</td>       
+                </tr>
+                <tr>
+                  <td colspan="2">${task1[7]}</td>
+                  <td>${task1[20]}</td>
+                  <td>${task1[21]}</td>
+                  <td>${task1[22]}</td>          
+                </tr>
+            </table>
+            <hr class="hr-pd_10">
+            ${task9}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
+          ` 
+          : task === 15 ? 
+            `   
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
+            Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td colspan="3" rowspan="2">Ширина шины (мм)</td>
+                  <td colspan="4">Диаметр диска (дюймы)</td>
+                </tr>
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>
+                  <td>${task1[3]}</td>
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[4]}</td>
+                  <td>${task1[9]}</td>
+                  <td>${task1[10]}</td>
+                  <td>${task1[11]}</td>  
+                  <td>${task1[12]}</td>    
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[5]}</td>
+                  <td>${task1[13]}</td>
+                  <td>${task1[14]}</td>
+                  <td>${task1[15]}</td>
+                  <td>${task1[16]}</td>
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[6]}</td>
+                  <td>${task1[17]}</td>
+                  <td>${task1[18]}</td>
+                  <td>${task1[19]}</td>  
+                  <td>${task1[20]}</td>
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[7]}</td>
+                  <td>${task1[21]}</td>
+                  <td>${task1[22]}</td>
+                  <td>${task1[23]}</td>  
+                  <td>${task1[24]}</td>     
+                </tr>
+                
+            </table>
+            <hr class="hr-pd_10">
+            ${task9}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
+          ` 
+          : task === 16 ? 
+            `   
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
+            Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td colspan="3" rowspan="2">Ширина шины (мм)</td>
+                  <td colspan="4">Диаметр диска (дюймы)</td>
+                </tr>
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>
+                  <td>${task1[3]}</td>
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[4]}</td>
+                  <td>${task1[9]}</td>
+                  <td>${task1[10]}</td>
+                  <td>${task1[11]}</td>  
+                  <td>${task1[12]}</td>    
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[5]}</td>
+                  <td>${task1[13]}</td>
+                  <td>${task1[14]}</td>
+                  <td>${task1[15]}</td>
+                  <td>${task1[16]}</td>
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[6]}</td>
+                  <td>${task1[17]}</td>
+                  <td>${task1[18]}</td>
+                  <td>${task1[19]}</td>  
+                  <td>${task1[20]}</td>
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[7]}</td>
+                  <td>${task1[21]}</td>
+                  <td>${task1[22]}</td>
+                  <td>${task1[23]}</td>  
+                  <td>${task1[24]}</td>     
+                </tr>
+                <tr>
+                  <td colspan="3">${task1[8]}</td>
+                  <td>${task1[25]}</td>
+                  <td>${task1[26]}</td>
+                  <td>${task1[27]}</td>  
+                  <td>${task1[28]}</td>     
+                </tr>
+                
+            </table>
+            <hr class="hr-pd_10">
+            ${task9}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
+          ` 
           :
           ``}
 
