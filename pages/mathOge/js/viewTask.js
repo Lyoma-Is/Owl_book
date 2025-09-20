@@ -548,18 +548,688 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num">№ ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Прочитайте внимательно текст и выполните задания 1–5.
+          <hr class="hr-pd_10">
+          Хозяин дачного участка строит баню с парным отделением. Парное отделение имеет размеры: длина 3,5 м, ширина 2,2 м, высота 2 м. 
+          Окон в парном отделении нет, для доступа внутрь планируется дверь шириной 60 см, высота дверного проёма 1,8 м. 
+          Для прогрева парного отделения можно использовать электрическую или дровяную печь. В таблице представлены характеристики трёх печей.
+          <hr class="hr-pd_10">
+          <table class="iksweb">
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>
+                  <td>${task1[3]}</td>
+                  <td>${task1[4]}</td>
+                </tr>
+                <tr>
+                  <td>${task1[5]}</td>
+                  <td>${task1[6]}</td>
+                  <td>${task1[7]}</td>
+                  <td>${task1[8]}</td>
+                  <td>${task1[9]}</td>
+                  
+                </tr>
+                <tr>
+                  <td>${task1[10]}</td>
+                  <td>${task1[11]}</td>
+                  <td>${task1[12]}</td>
+                  <td>${task1[13]}</td>
+                  <td>${task1[14]}</td>
+             
+                </tr>
+                <tr>
+                  <td>${task1[15]}</td>
+                  <td>${task1[16]}</td>
+                  <td>${task1[17]}</td>
+                  <td>${task1[18]}</td>   
+                  <td>${task1[19]}</td>  
+                </tr>
+                
+            </table>
+            <hr class="hr-pd_10">
+            Для установки дровяной печи дополнительных затрат не потребуется. 
+            Установка электрической печи потребует подведения специального кабеля, что обойдётся в 6500 руб.
+            <hr class="hr-pd_20">
           `
+          // 1
+          answerBlock +=` 
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
+            <hr class="hr-pd_10"> 
+            ${task9}
+            <hr class="hr-pd_10">
+            Заполните таблицу, в бланк ответов перенесите последовательность трёх цифр без пробелов, запятых и других дополнительных символов.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td>${task8[0]}</td>
+                  <td>${task8[1]}</td>
+                  <td>${task8[2]}</td>
+                  <td>${task8[3]}</td>            
+                </tr>
+                <tr>
+                  <td>${task8[4]}</td>
+                  <td>${task8[5]}</td>
+                  <td>${task8[6]}</td>
+                  <td>${task8[7]}</td>
+                </tr>            
+            </table>
+            
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> `
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
-            Ответ: <b>${taskAnswer}</b>`;
-          answerBlock += generateFooter();
+            Ответ: <b>${taskAnswer[0]}</b>`;
+          answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+          // 2
+          answerBlock +=`
+          <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
+          <hr class="hr-pd_10">          
+           ${task2}
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
+          ` 
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[1]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+          // 3
+          answerBlock +=`   
+            <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task3}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
+            ` 
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[2]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+
+          // 4
+          answerBlock +=`
+            <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task4}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[3]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+
+          // 5
+          answerBlock +=`
+            <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            Хозяин выбрал дровяную печь (рис. 1). Чертёж передней панели печи показан на рисунке 2.
+            <hr class="hr-pd_20">
+            <table>
+             <tr>
+              <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/pech1.png"></td>
+              <td> &thinsp; </td>
+              <td> &thinsp; </td>
+              <td> &thinsp; </td>
+              <td><img style="display: block;  width: 22em; " src="../../pages/mathOge/img/task1/pech2_${taskCounter}.png"></td>
+             </tr>
+             <tr>
+              <td>Рис. 1</td>
+              <td> &thinsp; </td>
+              <td> &thinsp; </td>
+              <td> &thinsp; </td>
+              <td>Рис. 2</td>
+             </tr>
+            </table>
+            <hr class="hr-pd_20">
+            Печь снабжена кожухом вокруг дверцы топки. 
+            Верхняя часть кожуха выполнена в виде арки, приваренной к передней стенке печки по дуге окружности с центром
+            в середине нижней части кожуха (рис. 2).<br>
+            Для установки печки хозяину понадобилось узнать радиус закругления арки R. 
+            Размеры кожуха в сантиметрах показаны на рисунке. Найдите радиус закругления арки в сантиметрах.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
+            
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[4]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          }
+          answerBlock += generateDate();
+        
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
           return answerBlock
-        }   
+        case 3:
+          answerBlock += `
+          <p class="p-num">№ ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Прочитайте внимательно текст и выполните задания 1–5.
+          <hr class="hr-pd_10">
+          Общепринятые форматы листов бумаги обозначают буквой А и цифрой: А0, А1, А2 и так далее. 
+          Лист формата А0 имеет форму прямоугольника площадью 1 кв. м. Если лист формата А0 разрезать пополам параллельно меньшей стороне, получатся два одинаковых листа формата А1. 
+          Если лист А1 разрезать пополам таким же образом, получатся два листа формата А2 и т.д.
+          <hr class="hr-pd_10">
+          <img style="display: block;  width: 22em; " src="../../pages/mathOge/img/task1/list.png">
+          <hr class="hr-pd_10">
+          Отношение большей стороны к меньшей стороне листа каждого формата одно и то же, поэтому листы всех форматов подобны. 
+          Это нужно, чтобы пропорции текста и его расположение на листе сохранялись при изменении формата листа.
+          <hr class="hr-pd_20">
+          `
+          // 1
+          answerBlock +=` 
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
+            <hr class="hr-pd_10"> 
+            ${task9}
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td>            
+                </tr>
+                <tr>
+                  <td>${task1[3]}</td>
+                  <td>${task1[4]}</td>
+                  <td>${task1[5]}</td>
+                </tr>
+                <tr>
+                  <td>${task1[6]}</td>
+                  <td>${task1[7]}</td>
+                  <td>${task1[8]}</td>
+                </tr>
+                <tr>
+                  <td>${task1[9]}</td>
+                  <td>${task1[10]}</td>
+                  <td>${task1[11]}</td>
+                </tr>
+                <tr>
+                  <td>${task1[12]}</td>
+                  <td>${task1[13]}</td>
+                  <td>${task1[14]}</td>
+                </tr>            
+            </table>
+            <hr class="hr-pd_20">
+            Установите соответствие между форматами и номерами листов. Заполните таблицу, в бланк ответов перенесите последовательность 
+            четырёх цифр, соответствующих номерам листов, без пробелов, запятых и дополнительных символов.
+            <hr class="hr-pd_20">
+            <table class="iksweb" style="width: 60%; text-align: center;">
+                <tr>
+                  <td style="width: 5%;">${task8[0]}</td>
+                  <td style="width: 5%;">${task8[1]}</td>
+                  <td style="width: 5%;">${task8[2]}</td>  
+                  <td style="width: 5%;">${task8[3]}</td>           
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td> 
+                </tr>         
+            </table>
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> `
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[0]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+          // 2
+          answerBlock +=`
+          <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
+          <hr class="hr-pd_10">          
+           ${task2}
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
+          ` 
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[1]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+          // 3
+          answerBlock +=`   
+            <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task3}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
+            ` 
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[2]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+
+          // 4
+          answerBlock +=`
+            <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task4}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[3]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+
+          // 5
+          answerBlock +=`
+            <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task5}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
+            
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[4]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          }
+          answerBlock += generateDate();
+        
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          return answerBlock
+        case 4:
+          answerBlock += `
+          <p class="p-num">№ ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          Прочитайте внимательно текст и выполните задания 1–5.
+          <hr class="hr-pd_10">
+          <img style="display: block;  width: 100%; " src="../../pages/mathOge/img/task1/float1.png">
+          <hr class="hr-pd_10">
+          На рисунке изображён план двухкомнатной квартиры в многоэтажном жилом доме. 
+          Сторона одной клетки на плане соответствует 0,4 м, а условные обозначения двери и окна приведены в правой части рисунка.
+          Вход в квартиру находится в коридоре. Слева от входа в квартиру находится санузел, а в противоположном конце коридора — дверь в кладовую. 
+          Рядом с кладовой находится спальня, из которой можно пройти на одну из застеклённых лоджий. 
+          Самое большое по площади помещение — гостиная, откуда можно попасть в коридор и на кухню. 
+          Из кухни также можно попасть на застеклённую лоджию.
+          <hr class="hr-pd_20">
+          `
+          // 1
+          answerBlock +=` 
+            <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
+            <hr class="hr-pd_10"> 
+            Для объектов, указанных в таблице, определите, какими цифрами они обозначены на плане. 
+            Заполните таблицу, в бланк перенесите последовательность четырёх цифр без пробелов, запятых и других дополнительных символов.
+            <hr class="hr-pd_10">
+            <table class="iksweb">
+                <tr>
+                  <td>${task1[0]}</td>
+                  <td>${task1[1]}</td>
+                  <td>${task1[2]}</td> 
+                  <td>${task1[3]}</td>
+                  <td>${task1[4]}</td>           
+                </tr>
+                <tr>     
+                  <td>${task1[5]}</td>
+                  <td>${task1[6]}</td>
+                  <td>${task1[7]}</td>
+                  <td>${task1[8]}</td>
+                  <td>${task1[9]}</td>
+                </tr>             
+            </table>
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> `
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[0]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+          // 2
+          answerBlock +=`
+          <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
+          <hr class="hr-pd_10">          
+           ${task2}
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
+          ` 
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[1]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+          // 3
+          answerBlock +=`   
+            <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task3}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
+            ` 
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[2]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+
+          // 4
+          answerBlock +=`
+            <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task4}
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[3]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+
+
+          // 5
+          answerBlock +=`
+            <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
+            <hr class="hr-pd_10">
+            ${task === 41 ? 
+              `
+               ${task8}
+            <hr class="hr-pd_10">
+            <table class="iksweb" style="width: 95%; font-size: 1em;">
+                <tr>
+                    <td >Модель</td>
+                    <td >Вместимость барабана (кг)</td>
+                    <td > Тип загрузки</td>
+                    <td >Стоимость (руб.)</td>
+                    <td >Стоимость подключения (руб.)</td>
+                    <td >Стоимость доставки (%) от стоимости машины</td>
+                    <td >Габариты (высота × ширина × глубина, см)</td>
+                </tr>
+                <tr >
+                    <td >A</td>
+                    <td>7</td>
+                    <td>верт.</td>
+                    <td>28 000</td>
+                    <td>1 700</td>
+                    <td>бесплатно</td>
+                    <td>85×60×45</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>5</td>
+                    <td>фронт.</td>
+                    <td>24 000</td>
+                    <td>4 500</td>
+                    <td>10</td>
+                    <td>85×60×40</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>5</td>
+                    <td>фронт.</td>
+                    <td>25 000</td>
+                    <td>5 000</td>
+                    <td>10</td>
+                    <td>85×60×40</td>
+                </tr>
+                <tr>
+                    <td>Г</td>
+                    <td>6,5</td>
+                    <td>фронт.</td>
+                    <td>24 000</td>
+                    <td>4 500</td>
+                    <td>10</td>
+                    <td>85×60×44</td>
+                </tr>
+                <tr>
+                    <td>Д</td>
+                    <td>6</td>
+                    <td>фронт.</td>
+                    <td>28 000</td>
+                    <td>1 700</td>
+                    <td>бесплатно</td>
+                    <td>85×60×45</td>
+                </tr>
+                <tr>
+                    <td>Е</td>
+                    <td>6</td>
+                    <td>верт.</td>
+                    <td>27 600</td>
+                    <td>2 300</td>
+                    <td>бесплатно</td>
+                    <td>89×60×40</td>
+                </tr>
+                <tr>
+                    <td>Ж</td>
+                    <td>6</td>
+                    <td>верт.</td>
+                    <td>27 585</td>
+                    <td>1 900</td>
+                    <td>10</td>
+                    <td>89×60×40</td>
+                </tr>
+                <tr>
+                    <td>З</td>
+                    <td>6</td>
+                    <td>фронт.</td>
+                    <td>20 000</td>
+                    <td>6 300</td>
+                    <td>15</td>
+                    <td>85×60×42</td>
+                </tr>
+                <tr>
+                    <td>И</td>
+                    <td>5</td>
+                    <td>фронт.</td>
+                    <td>27 000</td>
+                    <td>1 800</td>
+                    <td>бесплатно</td>
+                    <td>85×60×40</td>
+                </tr>
+                <tr>
+                    <td>К</td>
+                    <td>5</td>
+                    <td>верт.</td>
+                    <td>27 000</td>
+                    <td>1 800</td>
+                    <td>бесплатно</td>
+                    <td>85×60×40</td>
+                </tr>
+        </table>
+        <hr class="hr-pd_20">
+             ${task5}
+              ` 
+              : task === 42 ? 
+              `
+               ${task8}
+            <hr class="hr-pd_10">
+            <table class="iksweb" style="width: 95%; font-size: 1em;">
+                <tr>
+                    <td >Модель</td>
+                    <td >Вместимость барабана (кг)</td>
+                    <td > Тип загрузки</td>
+                    <td >Стоимость (руб.)</td>
+                    <td >Стоимость подключения (руб.)</td>
+                    <td >Стоимость доставки (%) от стоимости машины</td>
+                    <td >Габариты (высота × ширина × глубина, см)</td>
+                </tr>
+                <tr >
+                    <td >A</td>
+                    <td>7</td>
+                    <td>верт.</td>
+                    <td>28 000</td>
+                    <td>1 700</td>
+                    <td>бесплатно</td>
+                    <td>85×60×45</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>5</td>
+                    <td>фронт.</td>
+                    <td>24 000</td>
+                    <td>4 500</td>
+                    <td>10</td>
+                    <td>85×60×40</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>5</td>
+                    <td>фронт.</td>
+                    <td>25 000</td>
+                    <td>5 000</td>
+                    <td>10</td>
+                    <td>85×60×40</td>
+                </tr>
+                <tr>
+                    <td>Г</td>
+                    <td>6,5</td>
+                    <td>фронт.</td>
+                    <td>24 000</td>
+                    <td>4 500</td>
+                    <td>10</td>
+                    <td>85×60×44</td>
+                </tr>
+                <tr>
+                    <td>Д</td>
+                    <td>6</td>
+                    <td>фронт.</td>
+                    <td>28 000</td>
+                    <td>1 700</td>
+                    <td>бесплатно</td>
+                    <td>85×60×45</td>
+                </tr>
+                <tr>
+                    <td>Е</td>
+                    <td>6</td>
+                    <td>верт.</td>
+                    <td>27 600</td>
+                    <td>2 300</td>
+                    <td>бесплатно</td>
+                    <td>89×60×40</td>
+                </tr>
+                <tr>
+                    <td>Ж</td>
+                    <td>6</td>
+                    <td>верт.</td>
+                    <td>27 585</td>
+                    <td>1 900</td>
+                    <td>10</td>
+                    <td>89×60×40</td>
+                </tr>
+                <tr>
+                    <td>З</td>
+                    <td>6</td>
+                    <td>фронт.</td>
+                    <td>20 000</td>
+                    <td>6 300</td>
+                    <td>15</td>
+                    <td>85×60×42</td>
+                </tr>
+                <tr>
+                    <td>И</td>
+                    <td>5</td>
+                    <td>фронт.</td>
+                    <td>27 000</td>
+                    <td>1 800</td>
+                    <td>бесплатно</td>
+                    <td>85×60×40</td>
+                </tr>
+                <tr>
+                    <td>К</td>
+                    <td>5</td>
+                    <td>верт.</td>
+                    <td>27 000</td>
+                    <td>1 800</td>
+                    <td>10</td>
+                    <td>85×60×40</td>
+                </tr>
+        </table>
+        <hr class="hr-pd_20">
+             ${task5}
+              ` 
+              : 
+              ``}
+           
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
+            
+          `
+         answerBlock += generateHeader();
+         answerBlock += `
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer[4]}</b>`;
+          answerBlock += generateFooter15();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          }
+          answerBlock += generateDate();
+        
+          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          return answerBlock
+        }
+          
     } 
     if (taskKey === 'six'){
       let Nomer = 6
