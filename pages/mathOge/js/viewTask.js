@@ -1209,7 +1209,37 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         <hr class="hr-pd_20">
              ${task5}
               ` 
-              : 
+              : task === 43 ? 
+              `
+               ${task8}
+            <hr class="hr-pd_10">
+            <table class="iksweb" style="width: 95%; font-size: 1em;">
+                <tr>
+                    <td>Тарифный план</td>
+                    <td>Абонентская плата</td>
+                    <td>Плата за трафик</td>
+                </tr>
+                <tr>
+                    <td>${task9[0]}</td>
+                    <td>${task9[1]}</td>
+                    <td>${task9[2]}</td>
+                </tr>
+                <tr >
+                    <td>${task9[3]}</td>
+                    <td>${task9[4]}</td>
+                    <td>${task9[5]}</td>
+                </tr>
+                <tr>
+                    <td>${task9[6]}</td>
+                    <td>${task9[7]}</td>
+                    <td>${task9[8]}</td>
+                </tr>
+         
+        </table>
+        <hr class="hr-pd_20">
+             ${task5}
+              ` 
+              :
               ``}
            
             <hr class="hr-pd_20">
