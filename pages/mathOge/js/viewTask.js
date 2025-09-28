@@ -2302,8 +2302,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num">№ ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Прочитайте внимательно текст и выполните задания 1–5.
           <hr class="hr-pd_10">
-          ${task === 71 ? 
-            `
+
             На рисунке точками показано количество минут исходящих вызовов и трафик мобильного интернета в гигабайтах, израсходованных абонентом 
             в процессе пользования смартфоном, за каждый месяц 2019 года. Для удобства точки, соответствующие минутам и гигабайтам, 
             соединены сплошными и пунктирными линиями соответственно.
@@ -2336,10 +2335,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             </table>
             <hr class="hr-pd_20">
             Абонент не пользовался услугами связи в роуминге. За весь год абонент отправил 110 SMS.
-
-            ` 
-            :
-            ``}   
+  
           <hr class="hr-pd_20">
           `
           // 1
