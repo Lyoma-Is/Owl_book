@@ -127,48 +127,44 @@ li {
 main {
   flex: 1;
 }
-main .main-block {
+main .main-block .aside-left .aside-list {
   display: flex;
-  height: 100%;
+  justify-content: left;
+  flex-wrap: wrap;
 }
-main .main-block .aside-left {
-  width: 20%;
-  border-right: 3px solid rgb(233, 199, 105);
+main .main-block .aside-left .aside-list li {
+  font-size: clamp(1em, 3vw, 1.6em);
+  padding: 0 clamp(0.8em, 2vw, 1.2em) 0 20px;
+  line-height: clamp(1.8em, 5vw, 2em);
 }
-main .main-block .aside-left ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-}
-main .main-block .aside-left ul li {
-  padding-bottom: 25px;
-}
-main .main-block .aside-left ul li a {
-  font-size: 150%;
-}
-main .main-block .aside-left ul li a:hover {
+main .main-block .aside-left .aside-list li a:hover {
   color: red;
 }
 main .main-block .aside-main {
   display: block;
   margin: 0 20px;
-  font-size: 22px;
+}
+main .main-block .aside-main details {
+  font-size: clamp(1em, 3vw, 1.6em);
+  padding: 20px 0;
+}
+main .main-block .aside-main details summary {
+  cursor: pointer;
 }
 main .main-block .aside-main h2 {
   padding: 20px 0;
+  font-size: clamp(0.8em, 3vw, 1em);
 }
 main .main-block .aside-main a {
-  line-height: 2.5rem;
+  font-size: clamp(0.5em, 3vw, 0.8em);
+  line-height: clamp(1.8em, 5vw, 2em);
   text-decoration: underline;
   color: blue;
-  font-size: 25px;
 }
 main .p-vars {
   text-align: center;
   padding: 20px 20px 0 20px;
-  font-size: 30px;
+  font-size: clamp(1.2em, 3vw, 2.6em);
 }
 main .p-vars a:hover {
   text-decoration: underline;
@@ -403,6 +399,14 @@ table.iksweb th {
   font-weight: normal;
 }
 
+.tasks-blocks {
+  border: 1px solid;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
 .inform-block {
   position: absolute;
   width: 100%;
@@ -495,7 +499,7 @@ table.iksweb th {
 }
 
 .h1_center {
-  font-size: 250%;
+  font-size: clamp(1.2em, 3vw, 3em);
   padding: 20px 0 0 0;
   text-align: center;
 }

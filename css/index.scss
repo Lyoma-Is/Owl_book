@@ -147,23 +147,15 @@ li {
 main{
     flex: 1;
     .main-block{
-        display: flex;
-        height: 100%;
-        .aside-left{ 
-            
-            width: calc(100% - 80%);
-            border-right: 3px solid $back-top-color;
-            ul{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                padding: 20px;
+        .aside-left{  
+            .aside-list{
+                display: flex;    
+                justify-content: left;
+                flex-wrap:wrap;
                 li{
-                    padding-bottom: 25px;
-                    a{
-                        font-size: 150%;
-                    }
+                    font-size: clamp(1em, 3vw, 1.6em);
+                    padding: 0 clamp(0.8em, 2vw, 1.2em) 0 20px;
+                    line-height: clamp(1.8em, 5vw, 2em); 
                     a:hover{
                         color: red ;
                     }
@@ -172,19 +164,27 @@ main{
         }
         .aside-main{
             display: block;
-            //text-align: center;
             margin: 0 20px;
-            font-size: 22px;
+            //text-align: center;
+            //font-size: 22px;
+            details{
+                font-size: clamp(1em, 3vw, 1.6em);
+                padding: 20px 0; 
+                summary{
+                    cursor: pointer;        
+                }  
+            }
+           
+            
             h2{
-                padding: 20px 0;
-                
+                padding: 20px 0;  
+                font-size: clamp(0.8em, 3vw, 1em);   
             }
             a{
-                
-                line-height: 2.5rem;
+                font-size: clamp(0.5em, 3vw, 0.8em);
+                line-height: clamp(1.8em, 5vw, 2em);
                 text-decoration:underline;
                 color: blue;
-                font-size: 25px;
             }
         }
     }
@@ -192,8 +192,7 @@ main{
     .p-vars{
         text-align: center;
         padding: 20px 20px 0 20px;
-        font-size: 30px;
-        
+        font-size: clamp(1.2em, 3vw, 2.6em);   
         a:hover{
             text-decoration:underline;
             color: red;
@@ -438,17 +437,17 @@ table.iksweb td,table.iksweb th {
 	height: 1.5em;
 }
 table.iksweb th {
-	    background: #4e6982;
+	background: #4e6982;
 	color: #fff; 
 	font-weight: normal;
 }
-// .tasks-blocks{
-//     border: 1px solid;
-//     margin-bottom: 20px;
-//     padding: 20px;
-//     background-color: #dfd186; //#dfd186
-//     border-radius: 10px;
-// }
+.tasks-blocks{
+    border: 1px solid;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff; //#dfd186
+    border-radius: 10px;
+}
 
 .inform-block{
      position: absolute;
@@ -548,7 +547,7 @@ table.iksweb th {
     }
 }
 .h1_center{
-    font-size: 250%;
+    font-size: clamp(1.2em, 3vw, 3em);
     padding: 20px 0 0 0;
     text-align: center;
 }
