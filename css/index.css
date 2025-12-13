@@ -399,14 +399,6 @@ table.iksweb th {
   font-weight: normal;
 }
 
-.tasks-blocks {
-  border: 1px solid;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
 .inform-block {
   position: absolute;
   width: 100%;

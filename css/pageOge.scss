@@ -7,8 +7,8 @@ $back-top-color:  rgb(233, 199, 105);
 .vars-block{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
-    gap: 10px 0;
+    padding: 25px;
+    gap: 10px 10px;
     align-items: center;
     .vars-block__inner{
 
@@ -17,7 +17,7 @@ $back-top-color:  rgb(233, 199, 105);
         margin: 5px;
         text-align: center;
         
-        font-size: clamp(0.8em, 3vw, 1.7em);
+        font-size: clamp(0.8em, 3vw, 1.4em);
         padding: clamp(0.6em, 3vw, 0.9em);
         transition: all 0.3s ease-in-out;
         text-decoration: none;

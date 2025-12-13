@@ -46,7 +46,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const generateHeader = () => `<details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10">`;
     const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
 
-    // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
+    //const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
     //const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
    
     
@@ -156,7 +156,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
          case 2:
             answerBlock += beginTask();
             answerBlock += `
-                <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
+                <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p>
+                <hr class="hr-pd_10">
+                
 
                 <p>${task1}</p>
                 <hr class="hr-pd_20">
@@ -195,7 +197,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       let Nomer = 2
       switch(typeTask){
         case 1:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
             <p>${task1}</p>
             
@@ -323,9 +326,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
         case 2:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
           <p>${task1}</p>
            <hr class="hr-pd_20">
@@ -398,9 +403,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
         case 3:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
           <p>${task1}</p>
             <hr class="hr-pd_20">
@@ -468,6 +475,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
   
       }
@@ -476,7 +484,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       let Nomer = 3
       switch(typeTask){
         case 1:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
            <hr class="hr-pd_20">
@@ -507,9 +516,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
         case 2:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
            <hr class="hr-pd_20">
@@ -540,6 +551,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
       }
     }
@@ -548,7 +560,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch (typeTask) {
 
         case 1:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
           
@@ -609,9 +622,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
         case 2:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
             <p>${task1}</p>
             
@@ -672,9 +687,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock                              
         case 3:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
             <p>${task1}</p>
             
@@ -735,6 +752,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock  
         }    
     }
@@ -1194,7 +1212,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       }    
       switch(typeTask){
         case 1:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
           <hr class="hr-pd_10">
@@ -1219,9 +1238,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
         case 2:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
             <p>${task1}</p>
             <hr class="hr-pd_10">
@@ -1246,9 +1267,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           }
+          answerBlock += endTask();
           return answerBlock
         case 3:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
               <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
               <p>${task1}</p>
               <hr class="hr-pd_10">
@@ -1273,6 +1296,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
       } 
     }
@@ -1281,6 +1305,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         
         case 1:
+          answerBlock += beginTask();
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Ниже приведена программа, записанная на трёх языках программирования.
@@ -1351,8 +1376,10 @@ return 0; } </pre>
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
         case 2:
+          answerBlock += beginTask();
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Ниже приведена программа, записанная на трёх языках программирования.
@@ -1426,6 +1453,7 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
         }   
     } 
@@ -1433,6 +1461,7 @@ int main(){
       let Nomer = 7
       switch(typeTask){    
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>Доступ к файлу <b style="font-weight: 500;">${task1[0]}</b>, 
              находящемуся на сервере <b style="font-weight: 500;">${task1[1]}</b>, 
@@ -1454,9 +1483,12 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask();
           return answerBlock
       }
-    }  
+    } 
+ //   answerBlock += beginTask();
+ //   answerBlock += beginTask(); answerBlock += endTask(); 
     if (taskKey === 'eight'){
       let Nomer = 8
       let k = task
@@ -1597,6 +1629,7 @@ int main(){
       } 
       switch(typeTask){       
         case 1: 
+          answerBlock += beginTask(); 
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
           <hr class="hr-pd_10">
@@ -1717,8 +1750,10 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         case 2:
+          answerBlock += beginTask(); 
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()} </p> <hr class="hr-pd_10">
           <p>В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для обозначения логической операции «И» – символ «&».
          <hr class="hr-pd_10">
@@ -1778,8 +1813,10 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         case 3:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()} </p> <hr class="hr-pd_10">
           <p>Некоторый сегмент сети Интернет состоит из 1000 сайтов. Поисковый сервер в автоматическом режиме составил таблицу ключевых слов для сайтов этого сегмента. Вот её фрагмент.</p>
           <hr class="hr-pd_20">
@@ -1860,6 +1897,7 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
       }
     } 
@@ -1867,6 +1905,7 @@ int main(){
       let Nomer = 9
       switch(typeTask){
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>На рисунке  — схема дорог,
           ${task2[3] === 'п' ? "связывающих пункты": 
@@ -1887,8 +1926,10 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         case 2:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
@@ -1907,8 +1948,10 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         case 3:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>На рисунке  — схема дорог, связывающих города ${task2[0]}. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. 
           Сколько существует различных путей ${task2[1]}<b>${task2[2]}</b>?</p>
@@ -1927,6 +1970,7 @@ int main(){
         if(tumbler === false){
           answerBlock += generateInput();
         } 
+        answerBlock += endTask(); 
         return answerBlock
       }
     }    
@@ -1966,7 +2010,8 @@ int main(){
       } 
       switch(typeTask){     
         case 1:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
             Переведите число <b>${taskAn[0]}</b> из десятичной системы счисления в двоичную систему счисления.
             ${taskAn[2] === 0 ? `Сколько нулей содержит полученное число? В ответе укажите одно число – количество нулей.` :
@@ -1983,9 +2028,11 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         case 2:
-          answerBlock =`
+          answerBlock += beginTask();
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
             ${taskAn[2] === 1 ? `Переведите число <b>${taskAn[0]}</b> из двоичной системы счисления в десятичную систему счисления. В ответе запишите полученное число.`: 
               taskAn[2] === 2 ? `Некоторое число в двоичной системе счисления записывается как <b>${taskAn[0]}</b>. Запишите это число в десятичной системе.`: 
@@ -2002,6 +2049,7 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         case 3:
           let summaAns = 0;
@@ -2013,7 +2061,8 @@ int main(){
           const operator2 = taskAn[4]; // Второй оператор
   
           summaAns = num1 + (operator1 === "+" ? num2 : -num2) + (operator2 === "+" ? num3 : -num3);
-          answerBlock =`
+          answerBlock += beginTask(); 
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
             <p>Вычислите значение арифметического выражения:</p>
             <hr class="hr-pd_10">
@@ -2037,9 +2086,11 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         case 4:
-          answerBlock =`
+          answerBlock += beginTask(); 
+          answerBlock +=`
             <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
             <p>Определите <b>${task}</b> среди чисел, записанных в двоичной, восьмеричной и шестнадцатеричной системах счисления:</p>
             <hr class="hr-pd_10">
@@ -2062,6 +2113,7 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInput();
           } 
+          answerBlock += endTask(); 
           return answerBlock
         } 
     }  
@@ -2097,6 +2149,7 @@ int main(){
       let Nomer = 12
       switch(typeTask){
         case 1:
+          answerBlock += beginTask(); 
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           <p>${task1}</p>
           <p>В ответе укажите только число.</p> 
@@ -2116,6 +2169,7 @@ int main(){
           if(tumbler === false){
             answerBlock += generateInputD12();
           } 
+          answerBlock += endTask(); 
           return answerBlock
          }
     }
@@ -2123,6 +2177,7 @@ int main(){
       let Nomer = 13.1
       switch(typeTask){
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Используя информацию и иллюстративный материал, содержащийся в каталоге <b>${task1[0]}</b>, создайте презентацию из трёх слайдов на тему <b>«${task1[1]}»</b>.<br>
           
@@ -2174,6 +2229,7 @@ int main(){
           `
           answerBlock += generateDate();
           answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += endTask(); 
  
           return answerBlock
          }
@@ -2182,6 +2238,7 @@ int main(){
       let Nomer = 13.2
       switch(typeTask){
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Создайте в текстовом редакторе документ и напишите в нём следующий текст, точно воспроизведя всё оформление текста, имеющееся в образце.<hr class="hr-pd_10">
           Данный текст должен быть набран шрифтом размером 14 пунктов обычного начертания. Отступ первой строки абзацев основного текста – 1 см.<hr class="hr-pd_10">
@@ -2209,6 +2266,7 @@ int main(){
             answerBlock += generateInputP();
             answerBlock += generateInputP();
           } 
+          answerBlock += endTask(); 
           return answerBlock
          }
     }
@@ -4037,18 +4095,14 @@ int main(){
 Всего в электронную таблицу были занесены данные по 1000 учащихся. Порядок записей в таблице произвольный.         
             `
           } // физика 79
-
-
-
-
           // else if(taskTable === 3){
           //   return ``
           // }
 
         }
       switch(typeTask){
-
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
           
           <hr class="hr-pd_10">
@@ -4076,7 +4130,7 @@ int main(){
             answerBlock += generateInputP();
             answerBlock += generateInputP();
           } 
-  
+          answerBlock += endTask(); 
           return answerBlock
          }
     }
@@ -4084,6 +4138,7 @@ int main(){
       let Nomer = 15
       switch(typeTask){
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Дайте развернутый ответ.
           <hr class="hr-pd_10"> 
@@ -4163,6 +4218,7 @@ int main(){
             answerBlock += generateInputP();
             answerBlock += generateInputP();
           } 
+          answerBlock += endTask(); 
   
           return answerBlock
          }
@@ -4171,6 +4227,7 @@ int main(){
       let Nomer = 16
       switch(typeTask){
         case 1:
+          answerBlock += beginTask();
           answerBlock += `<p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Дайте развернутый ответ.<hr class="hr-pd_10">
           ${task1}<hr class="hr-pd_10">
@@ -4211,7 +4268,7 @@ int main(){
             answerBlock += generateInputP();
             answerBlock += generateInputP();
           } 
-  
+          answerBlock += endTask(); 
           return answerBlock
       
       }
