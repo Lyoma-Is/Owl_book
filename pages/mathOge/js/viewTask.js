@@ -5981,7 +5981,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           •
           2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] / 5}</span>
           <hr class="hr-pd_10">
-          S = 4 • ${task1[0]*task1[0]/5} = ${4*task1[0]*task1[0]/5}
+          S = 4 • ${task1[0]*task1[0]/5} = ${4*task1[0]*task1[0]/5}<br>
+          -----------------------------------------------------<br>
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
+          ${task1[0]}<sup>2</sup> • 0.8 = ${task1[0]*task1[0]} • 0.8 = ${task1[0]*task1[0]*0.8}<br>
+          -----------------------------------------------------
           `
           : task1.length === 2 ?
           `
@@ -6004,7 +6008,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           •
           2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0]*task1[1] / 5}</span>
           <hr class="hr-pd_10">
-          S = 4 • ${task1[0]*task1[0]*task1[1]/5} = ${4*task1[0]*task1[0]*task1[1]/5}
+          S = 4 • ${task1[0]*task1[0]*task1[1]/5} = ${4*task1[0]*task1[0]*task1[1]/5}<br>
+          -----------------------------------------------------<br>
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
+          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>)<sup>2</sup> • 0.8 = 
+          ${task1[0]*task1[0]} • ${task1[1]} • 0.8 = ${task1[0]*task1[0]*task1[1]*0.8}<br>
+          -----------------------------------------------------
           ` 
           : task1.length === 4 ?
           `
@@ -6027,7 +6036,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           •
           2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0] / 5}</span>
           <hr class="hr-pd_10">
-          S = 4 • ${task1[0]/5} = ${4*task1[0]/5}
+          S = 4 • ${task1[0]/5} = ${4*task1[0]/5}<br>
+          -----------------------------------------------------<br>
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
+          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">${task1[0]}</span>)<sup>2</sup> • 0.8 = 
+          ${task1[0]} • 0.8 = ${task1[0]*0.8}<br>
+          -----------------------------------------------------
           ` 
           : 
           `
@@ -6057,8 +6071,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           •
           2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]/(task1[1]*task1[1]) / 5}</span>
           <hr class="hr-pd_10">
-          S = 4 • ${task1[0]/(task1[1]*task1[1]) / 5} = ${4*(task1[0]/(task1[1]*task1[1]) / 5)}
-
+          S = 4 • ${task1[0]/(task1[1]*task1[1]) / 5} = ${4*(task1[0]/(task1[1]*task1[1]) / 5)}<br>
+          -----------------------------------------------------<br>
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
+          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid;">${task1[0]}</span> / ${task1[1]})<sup>2</sup> • 0.8 = 
+          (${task1[0]} / ${task1[1]*task1[1]}) • 0.8 = ${task1[0]/(task1[1]*task1[1])*0.8}<br> 
+          -----------------------------------------------------
           `} `
         }
         else{
@@ -6308,7 +6326,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
             : task === 36 ? 
             `
-            Радиус окружности, описанной около квадрата, равен  ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>. Найдите длину стороны этого квадрата.
+            Радиус окружности, описанной около квадрата, равен  ${task1[0]}${sqrtNum(2)}. Найдите длину стороны этого квадрата.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1677.png"></div>   
             ` 
@@ -6321,12 +6339,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 38 ? 
             `
             Точка O является серединой стороны CD квадрата ABCD. Радиус окружности с центром в точке O, проходящей через вершину A, равен 
-            ${task1.length === 1 ? task1[0] : task1.length === 3 ? `<math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">√${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[1]}</mn>
-              </mfrac>
-            </math>` : task1.length === 4 ? `<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span>`:`${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>`}. 
+            ${task1.length === 1 ? task1[0] : task1.length === 3 ? 
+              `
+              ${drobNum(rowNum(`<span style="font-size: 110%; font-family: MathJax_Size3;">√</span>`,`<span style="border-top: 0.099em solid;">${task1[0]}</span>`), task1[1])}
+             ` 
+             : task1.length === 4 ? `<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid; ">${task1[0]}</span>`:`${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>`}. 
             Найдите площадь квадрата ABCD.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1783.png"></div>   
