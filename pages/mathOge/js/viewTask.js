@@ -109,6 +109,29 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       </math>
       `
     }
+    function dropRow(item1, item2){
+      return `
+      <math style="font-size: 140%">
+            <mfrac >
+              <mn>${rowNum(`<span style="font-size: 110%; font-family: MathJax_Size3;">√</span>`,`<span  style="border-top: 0.099em solid ">&thinsp;${item1}&thinsp;</span>`)}</mn>
+              <mn style="padding-top: 5px;">${item2}</mn>
+            </mfrac>
+          </math>   
+      
+      `
+    }
+    function drodRow(item1, item2){
+      return `
+      <math style="font-size: 140%">
+            <mfrac >
+              <mn style="padding-bottom: 5px;">${item1}</mn>
+              <mn style="padding-top: 2px;">${rowNum(`<span style="font-size: 110%; font-family: MathJax_Size3;">√</span>`,`<span  style="border-top: 0.099em solid ">&thinsp;${item2}&thinsp;</span>`)}</mn>
+            </mfrac>
+          </math>   
+      
+      `
+    }
+    const h10 = () => `<hr class="hr-pd_10">` 
     if (taskKey === 'onefive'){
       let Nomer = 1
       function reshOneFive(item){
@@ -5796,12 +5819,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         }
         else if(item === 21){
           return `
-          a = ${task1[0]} • 6 = ${task1[0]*6}
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task16/16_1563_a.png">${h10()}
+          r = ${task1[0]}${sqrtNum(3)} ${h10()}
+          a = r • ${drodRow(6, 3)} = ${task1[0]}${sqrtNum(3)} • ${drodRow(6, 3)} = ${task1[0]} • 6 = ${task1[0]*6}
           `
         }
         else if(item === 22){
           return `
-          r = ${task1[0]} • 3 / 6 = ${task1[0]*3/6}
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task16/16_1563_a.png">${h10()}
+
+          r = a • ${dropRow(3, 6)} = ${task1[0]}${sqrtNum(3)} • ${dropRow(3, 6)} = ${task1[0]} • ${drobNum(3, 6)} = ${task1[0]/2} • ${drobNum(3, 3)} = ${task1[0]*3/6}
           `
         }
         else if(item === 23 || item === 24 || item === 25){
@@ -5845,7 +5872,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         }
         else if(item === 31){
           return `
-          90° — ${task1[0]}° = ${90-task1[0]}°
+          ∠A + ∠B + ∠C = 180°<br>
+          ∠C = 90°<br>
+          ∠A + ∠B = 90°<br>
+          ∠ABC = 90° — ∠BAC = 90° — ${task1[0]}° = ${90-task1[0]}°
           `
         }
         else if(item === 311){
@@ -5860,7 +5890,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <hr class="hr-pd_10">
           AC<sup>2</sup> = ${2*task1[0]*2*task1[0] - task1[1]*task1[1]}
           <hr class="hr-pd_10">
-          AC = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${2*task1[0]*2*task1[0] - task1[1]*task1[1]}</span> = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
+          AC = ${sqrtNum(2*task1[0]*2*task1[0] - task1[1]*task1[1])} = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
           `
         }
         else if(item === 312){
@@ -5875,71 +5905,108 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <hr class="hr-pd_10">
           BC<sup>2</sup> = ${2*task1[0]*2*task1[0] - task1[1]*task1[1]}
           <hr class="hr-pd_10">
-          BC = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${2*task1[0]*2*task1[0] - task1[1]*task1[1]}</span> = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
+          BC = ${sqrtNum(2*task1[0]*2*task1[0] - task1[1]*task1[1])} = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
 
 
           `
         }
         else if(item === 32){
           return `
-          r = a • <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span> / 3 = 
-          ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span> • <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span> / 3 =
-          ${task1[0]}
+          a = ${task1[0]}${sqrtNum(3)}${h10()}
+          r = a • ${dropRow(3, 3)} = ${task1[0]}${sqrtNum(3)} • ${dropRow(3, 3)} = ${task1[0]}
           
           `
         }
         else if(item === 321){
           return `
-          R = 
-          <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">a √3</mn>
-                <mn style="padding-top: 5px;">3</mn>
-              </mfrac>
-            </math> 
-          <hr class="hr-pd_10">
+          r = ${task1[0]}${sqrtNum(3)}${h10()}
+          a = r • ${drodRow(3, 3)} = ${task1[0]}${sqrtNum(3)} • ${drodRow(3, 3)} = ${task1[0]} • 3 = ${task1[0]*3}
+          
           
           `
         }
         else if(item === 33 || item === 331){
           return `
-          180° — ${task1[0]}° = ${180-task1[0]}°
+          Сумма прилежащих углов трапеции равна 180°<br>
+          ∠A + ∠B = 180°<br> ∠C + ∠D = 180°<br> 
+          Сумма противолежащих углов трапеции равна 180°<br>
+          ∠A + ∠C = 180°<br> ∠B + ∠D = 180°<br>
+          ---------------------------------------------------------<br>
+          ∠180° — ∠${task1[0]}° = ∠${180-task1[0]}°
           `
         }
         else if(item === 34){
           return `
-          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> +
-          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> =
-          ${task1[0]*task1[0]*2} + ${task1[0]*task1[0]*2} = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}<hr class="hr-pd_10">
-          d = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}</span> = 
+          <img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1566_a.png">
+          a<sup>2</sup> + a<sup>2</sup> = d<sup>2</sup> <br>
+          d<sup>2</sup> = (${task1[0]}${sqrtNum(2)})<sup>2</sup> + (${task1[0]}${sqrtNum(2)})<sup>2</sup> =
+          ${task1[0]*task1[0]*2} + ${task1[0]*task1[0]*2} = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2} 
+          <hr class="hr-pd_10"> 
+          d = ${sqrtNum(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} = 
           ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} <hr class="hr-pd_10">
-          r = d / 2 = = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} / 2 = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2) / 2} 
-          
-          `
+          r = d / 2 = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} / 2 = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2) / 2} 
+          ${h10()}
+          -----------------------------------------------------<br>
+          Если нужно найти <b>длину стороны a</b>: радиус r умножаем на ${drodRow(2, 2)}<br>
+          a = r • ${drodRow(2, 2)} ${h10()}
+          Если нужно найти <b>радиус окружности r</b>: сторону a разделим на ${sqrtNum(2)}<br> 
+          r = a : ${sqrtNum(2)} = ${task1[0]}${sqrtNum(2)} : ${sqrtNum(2)} = ${task1[0]} ${h10()}
+          -----------------------------------------------------
+          ` 
         }
         else if(item === 35){
           return `
-          <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">AB</mn>
-                <mn style="padding-top: 5px;">sinC</mn>
-              </mfrac>
-            </math> = 2R
+          ${drobNum("AB", "sin C")} = 2R
           <hr class="hr-pd_10">
+          sin C = sin ${task1[0]}° = 
+          ${(task1[0] === 30 || task1[0] === 150) ? `${drobNum(1,2)}`
+          : (task1[0] === 45 || task1[0] === 135) ? `${dropRow(2,2)}`
+          : (task1[0] === 60 || task1[0] === 120) ? `${dropRow(3,2)}` :``}
+          <hr class="hr-pd_10">
+          R = ${drobNum("AB", "2 • sin C")} = 
+          ${task1.length === 3 ? 
+            `
+          ${task1[1]}${sqrtNum(task1[2])} : (2 • 
+          ${(task1[0] === 30 || task1[0] === 150) ? `${drobNum(1,2)}`
+          : (task1[0] === 45 || task1[0] === 135) ? `${dropRow(2,2)}`
+          : (task1[0] === 60 || task1[0] === 120) ? `${dropRow(3,2)}` :``})
+          <hr class="hr-pd_10">
+          R = ${task1[1]}${sqrtNum(task1[2])} : ${sqrtNum(task1[2])} = ${task1[1]}
+            ` 
+            : 
+            `
+            ${task1[1]} : (2 • 
+          ${(task1[0] === 30 || task1[0] === 150) ? `${drobNum(1,2)}`
+          : (task1[0] === 45 || task1[0] === 135) ? `${dropRow(2,2)}`
+          : (task1[0] === 60 || task1[0] === 120) ? `${dropRow(3,2)}` :``})
+          <hr class="hr-pd_10">
+          R = ${task1[1]} : 1 = ${task1[1]}
+            `}
+          
           `
         }
         else if(item === 36){
           return `
-          2 • ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span> = 
-          ${2*task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
-          <hr class="hr-pd_10">
-          2a<sup>2</sup> = (${2*task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>)<sup>2</sup>
-          <hr class="hr-pd_10">
+          <img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1566_a.png">
+          d = 2 • r = 2 • ${task1[0]}${sqrtNum(2)} = ${2*task1[0]}${sqrtNum(2)}
+          ${h10()}
+          a<sup>2</sup> + a<sup>2</sup> = d<sup>2</sup>
+          ${h10()}
+          2a<sup>2</sup> = (${2*task1[0]}${sqrtNum(2)})<sup>2</sup>
+          ${h10()}
           2a<sup>2</sup> = ${2*task1[0]*2*task1[0]} • 2
-          <hr class="hr-pd_10">
+          ${h10()}
           a<sup>2</sup> = ${2*task1[0]*2*task1[0]}
-          <hr class="hr-pd_10">
-          a = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${2*task1[0]*2*task1[0]}</span> = ${Math.sqrt(2*task1[0]*2*task1[0])}
+          ${h10()}
+          a = ${sqrtNum(2*task1[0]*2*task1[0])} = ${Math.sqrt(2*task1[0]*2*task1[0])}
+          ${h10()}
+          -----------------------------------------------------<br>
+          Если нужно найти <b>длину стороны a</b>: радиус r умножаем на ${drodRow(2, 2)}<br>
+          a = r • ${drodRow(2, 2)} = ${task1[0]}${sqrtNum(2)} • ${drodRow(2, 2)} = ${task1[0]} • 2 = ${task1[0]*2}
+          ${h10()}
+          Если нужно найти <b>радиус окружности r</b>: сторону a разделим на ${sqrtNum(2)}<br> 
+          r = a : ${sqrtNum(2)} <br>
+          -----------------------------------------------------
           `
         }
         else if(item === 37){
@@ -5950,7 +6017,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <hr class="hr-pd_10">
           AB<sup>2</sup> = ${task1[0]*task1[0] + task1[1]*task1[1]}
           <hr class="hr-pd_10">
-          AB = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] + task1[1]*task1[1]}</span> = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1])}
+          AB = ${sqrtNum(task1[0]*task1[0] + task1[1]*task1[1])} = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1])}
           <hr class="hr-pd_10">
           r = AB / 2 = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1]) / 2}
 
@@ -6320,7 +6387,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
             : task === 35 ? 
             `
-            В треугольнике ABC угол C равен ${task1[0]}°, ${task1.length === 2 ? `AB = ${task1[1]}` : `AB = ${task1[1]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[2]}</span>`}. Найдите радиус окружности, описанной около этого треугольника.
+            В треугольнике ABC угол C равен ${task1[0]}°, ${task1.length === 2 ? `AB = ${task1[1]}` : `AB = ${task1[1]}${sqrtNum(task1[2])}`}. Найдите радиус окружности, описанной около этого треугольника.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_${taskCounter}.png"></div>   
             ` 
