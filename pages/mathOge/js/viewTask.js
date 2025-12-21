@@ -5459,6 +5459,27 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     }     
     if (taskKey === 'fifteen'){
       let Nomer = 15
+      function reshFifteen(item){
+        if (item === 11){
+          return `
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task15/15_smezh.png">${h10()}
+          
+          Внутренный угол и внешний угол при вершине С — смежные углы, сумма смежных углов равна 180° ${h10()}
+          ∠α + ∠β = 180° ${h10()}
+          Внутренный угол C в треугольнике ABC равен 159° ${h10()}
+          ∠β = 180° — ∠α = 180° — ${task1[0]}° = ${180-task1[0]}° ${h10()}
+
+          `
+
+        }
+        else if (item === 12){
+          return `...`
+        }
+        // else if (item === 12){
+        //   return `...`
+        // }
+        else {return `...`}
+      }
       switch(typeTask){
         case 1:
           answerBlock += `
@@ -5509,6 +5530,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFifteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -5616,6 +5639,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateHeader();
           answerBlock += `
             <hr class="hr-pd_20">
+            ${reshFifteen(task)}
+            <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5661,6 +5686,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFifteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -5755,6 +5782,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshFifteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -6472,7 +6501,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         }   
     }
     // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
-    // <sup>2</sup>   — • &thinsp; √   &nbsp; 
+    // <sup>2</sup>   — • &thinsp; √  ∠ &nbsp; 
     // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>
 
     // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
