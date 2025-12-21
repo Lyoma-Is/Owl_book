@@ -5802,8 +5802,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         }
         else if(item === 13){
           return `
-          90° — ${task1[0]}° = ${(90-task1[0])}°
-          
+          <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1513_a.png"> ${h10()}
+          Угол NBA — вписанный, поэтому он равен половине дуги, на которую он опирается.<br>
+          Следовательно, дуга AB = 2 • ∠ANB 
+          ${h10()}
+          Величина дуги AB равна 180°, ∠ANB = 90°, 
+          ${h10()}
+          откуда ∠NBA + ∠NAB = 90°.
+          ${h10()}
+          ∠NAB = 90° - ∠NBA = 90° - ${task1[0]}°
+          ${h10()}
+          ∠NMB = ∠NAB = ${(90-task1[0])}°
           `
 
         }
@@ -5827,47 +5836,75 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 22){
           return `
           <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task16/16_1563_a.png">${h10()}
-
           r = a • ${dropRow(3, 6)} = ${task1[0]}${sqrtNum(3)} • ${dropRow(3, 6)} = ${task1[0]} • ${drobNum(3, 6)} = ${task1[0]/2} • ${drobNum(3, 3)} = ${task1[0]*3/6}
           `
         }
         else if(item === 23 || item === 24 || item === 25){
           return `
-          h = r • 2 = ${task1[0]} • 2 = ${task1[0]*2}<hr class="hr-pd_10">
-          
+          ${task === 23 ? 
+            `<img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1565_a.png">` 
+            : task === 24 ? 
+            `<img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1567_a.png">` 
+            : task === 25 ? 
+            `<img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1570_a.png">` 
+            :``}
+          ${h10()}
+          h = 2 • r = 2 • ${task1[0]} = ${task1[0]*2} 
+
           `
         }
         else if(item === 26){
           return `
-          a = r • 2 = ${task1[0]} • 2 = ${task1[0]*2}<hr class="hr-pd_10">
-          a<sup>2</sup> = ${task1[0]*2}<sup>2</sup> = ${(task1[0]*2)*(task1[0]*2)}
+          <img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1669_a.png"> ${h10()}
+          a = 2 • r ${h10()}
+          a = 2 • r = 2 • ${task1[0]} = ${task1[0]*2} ${h10()}
+          Площадь квадрата: S = a<sup>2</sup> = ${task1[0]*2}<sup>2</sup> = ${(task1[0]*2)*(task1[0]*2)}
           `
         }
         else if(item === 27){
           return `
-          Площадь треугольника равна произведению его полупериметра на радиус вписанной окружности:<hr class="hr-pd_10">
-          S = p • r = ${task1[0]} / 2 • ${task1[2]} = ${task1[0]/ 2 * task1[2]}.<hr class="hr-pd_10">
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task16/16_1600_a.png">${h10()}
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task16/16_1568_a.png">${h10()}  
+          P = ${task1[0]}, r = ${task1[2]}${h10()} 
+          Площадь треугольника равна произведению его полупериметра на радиус вписанной окружности:${h10()}
+          p = P / 2 = ${task1[0]} / 2 = ${task1[0]/2}${h10()}
+          S = p • r = ${task1[0]/2} • ${task1[2]} = ${task1[0]/2 * task1[2]}.${h10()}
           Длина одной из сторон - лишние данные, игнорируем их.
           `
         }
         else if(item === 28){
           return `
+          <img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1669_a.png"> ${h10()}
+          a = ${task1[0]} ${h10()}
           r = a / 2 = ${task1[0]} / 2 = ${task1[0]/ 2}
           `
         }
         else if(item === 29 || item === 291){
           return `
-          AB + CD = BC + AD<hr class="hr-pd_10">
-          AD = AB + CD — BC = ${task1[0] + task1[2]-task1[1]}
+
+          AB + CD = BC + AD ${h10()}
+          AD = AB + CD — BC = ${task1[0]} + ${task1[1]} - ${task1[2]} ${h10()}
+          AD = ${task1[0] + task1[2]-task1[1]}
           `
         }
         else if(item === 30){
           return `
-          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> +
-          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>)<sup>2</sup> =
-          ${task1[0]*task1[0]*2} + ${task1[0]*task1[0]*2} = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}<hr class="hr-pd_10">
-          d = 2 • <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}</span> = 
-          2 • ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} = ${2 * Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)}
+          <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1574_a.png"> ${h10()}
+          r = ${task1[0]}${sqrtNum(2)} ${h10()}
+          a = d / 2 ${h10()}
+          a<sup>2</sup> = r<sup>2</sup> + r<sup>2</sup>${h10()}
+          a<sup>2</sup> = (${task1[0]}${sqrtNum(2)})<sup>2</sup> + (${task1[0]}${sqrtNum(2)})<sup>2</sup> =
+          ${task1[0]*task1[0]*2} + ${task1[0]*task1[0]*2} = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}
+          ${h10()}
+          a<sup>2</sup> = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2}
+          ${h10()}
+          a = ${sqrtNum(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)}
+          ${h10()}
+          d = 2 • a = 2 • ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} = ${2 * Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)}
+          ${h10()}
+          ------------------------------------------------------------------------------------
+          ${h10()}
+          d = ${task1[0]}${sqrtNum(2)} • ${drodRow(4, 2)} = ${task1[0]} • 4 = ${task1[0]*4}
           `
         }
         else if(item === 31){
@@ -6308,8 +6345,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
             `
             : task === 30 ? 
-            `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">2</span>. 
-            Найдите радиус окружности, вписанной в этот треугольник.
+            `Радиус вписанной в квадрат окружности равен ${task1[0]}${sqrtNum(2)}. 
+            Найдите диагональ этого квадрата.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task16/16_1574.png"></div>
           
