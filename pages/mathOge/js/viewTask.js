@@ -5790,11 +5790,27 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return `
           ${task1[1] === 1 ? 
             `
-            180° — ${task1[0]}°  / 2 = ${(180-task1[0])/2}°
+            ∠BOC + ∠ACB + ∠DBC = 180° 
+            ${h10()}
+            ∠AOD и ∠BOC — вертикальные углы, следовательно ∠AOD = ∠BOC = ${task1[0]}°
+            ${h10()}
+            ∠ACB = ∠DBC
+            ${h10()}
+            ∠ACB + ∠DBC = 180° — ∠BOC = 180° — ${task1[0]}° = ${(180-task1[0])}° 
+            ${h10()}
+            ∠ACB = ${(180-task1[0])}° / 2 = ${(180-task1[0])/2}°
             `
             : 
             `
-            180° — ${task1[0]}° • 2 = ${180-task1[0]*2}°
+            ∠BOC + ∠ACB + ∠DBC = 180° 
+            ${h10()}
+            ∠AOD и ∠BOC — вертикальные углы, следовательно ∠AOD = ∠BOC
+            ${h10()}
+            ∠ACB = ∠DBC = ${task1[0]}°
+            ${h10()}
+            ∠BOC  = 180° — ∠ACB — ∠DBC = 180° — ${task1[0]}° — ${task1[0]}° = ${180-task1[0]*2}°
+            ${h10()}
+            ∠AOD = ${180-task1[0]*2}°
 
             `}
           `
@@ -5803,7 +5819,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 13){
           return `
           <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1513_a.png"> ${h10()}
-          Угол NBA — вписанный, поэтому он равен половине дуги, на которую он опирается.<br>
+          Угол ANB — вписанный, поэтому он равен половине дуги, на которую он опирается.<br>
           Следовательно, дуга AB = 2 • ∠ANB 
           ${h10()}
           Величина дуги AB равна 180°, ∠ANB = 90°, 
@@ -5820,7 +5836,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return `
           ${task1[1] === 1 ? 
             `
-            ${task1[0]}° / 2 = ${(task1[0])/2}°
+            Угол AOB является центральным углом, ∠ACB — вписанным.
+            ${h10()}
+            Оба угла опираются на одну и ту же дугу, следовательно, ∠ACB в два раза меньше ∠AOB. 
+            ${h10()}
+            ∠ACB = ∠AOB / 2 = ${task1[0]}° / 2 = ${(task1[0])/2}°
             `
             : ``}
           `
@@ -6063,123 +6083,105 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 38){
           return `
           <img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1783_a.png">
-          <hr class="hr-pd_10">
+          ${h10()}
           ${task1.length === 1 ? 
           `
-          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${task1[0]}
-          <hr class="hr-pd_10">
-          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
-          <hr class="hr-pd_10">
-          ${task1[0]}<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
-          <hr class="hr-pd_10">
-          ${task1[0]*task1[0]} = x<sup>2</sup> + 4x<sup>2</sup>
-          <hr class="hr-pd_10">
-          5x<sup>2</sup> = ${task1[0]*task1[0]}
-          <hr class="hr-pd_10">
-          x<sup>2</sup> = ${task1[0]*task1[0]} / 5
-          <hr class="hr-pd_10">
-          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] / 5}</span>
-          <hr class="hr-pd_10">
-          S = 2x • 2x =  
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] / 5}</span>
-          •
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0] / 5}</span>
-          <hr class="hr-pd_10">
-          S = 4 • ${task1[0]*task1[0]/5} = ${4*task1[0]*task1[0]/5}<br>
-          -----------------------------------------------------<br>
-          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
-          ${task1[0]}<sup>2</sup> • 0.8 = ${task1[0]*task1[0]} • 0.8 = ${task1[0]*task1[0]*0.8}<br>
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${task1[0]}${h10()}
+
+          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>${h10()}
+
+          ${task1[0]}<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>${h10()}
+
+          ${task1[0]*task1[0]} = x<sup>2</sup> + 4x<sup>2</sup>${h10()}
+
+          5x<sup>2</sup> = ${task1[0]*task1[0]}${h10()}
+
+          x<sup>2</sup> = ${task1[0]*task1[0]} / 5 ${h10()}
+
+          x = ${sqrtNum(task1[0]*task1[0] / 5)} ${h10()}
+  
+          S = 2x • 2x = 2${sqrtNum(task1[0]*task1[0] / 5)} • 2${sqrtNum(task1[0]*task1[0] / 5)} ${h10()}
+      
+          S = 4 • ${task1[0]*task1[0]/5} = ${4*task1[0]*task1[0]/5} ${h10()}
+
+          -----------------------------------------------------${h10()}
+
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8${h10()}
+
+          ${task1[0]}<sup>2</sup> • 0.8 = ${task1[0]*task1[0]} • 0.8 = ${task1[0]*task1[0]*0.8} ${h10()}
           -----------------------------------------------------
           `
           : task1.length === 2 ?
           `
-          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>
-          <hr class="hr-pd_10">
-          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
-          <hr class="hr-pd_10">
-          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>)<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
-          <hr class="hr-pd_10">
-          ${task1[0]*task1[0]*task1[1]} = x<sup>2</sup> + 4x<sup>2</sup>
-          <hr class="hr-pd_10">
-          5x<sup>2</sup> = ${task1[0]*task1[0]*task1[1]}
-          <hr class="hr-pd_10">
-          x<sup>2</sup> = ${task1[0]*task1[0]*task1[1]} / 5
-          <hr class="hr-pd_10">
-          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0]*task1[1] / 5}</span>
-          <hr class="hr-pd_10">
-          S = 2x • 2x =  
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0]*task1[1] / 5}</span>
-          •
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]*task1[0]*task1[1] / 5}</span>
-          <hr class="hr-pd_10">
-          S = 4 • ${task1[0]*task1[0]*task1[1]/5} = ${4*task1[0]*task1[0]*task1[1]/5}<br>
-          -----------------------------------------------------<br>
-          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
-          (${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>)<sup>2</sup> • 0.8 = 
-          ${task1[0]*task1[0]} • ${task1[1]} • 0.8 = ${task1[0]*task1[0]*task1[1]*0.8}<br>
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${task1[0]}${sqrtNum(task1[1])} ${h10()}
+          
+          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup> ${h10()}
+
+          (${task1[0]}${sqrtNum(task1[1])})<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>${h10()}
+
+          ${task1[0]*task1[0]*task1[1]} = x<sup>2</sup> + 4x<sup>2</sup> ${h10()}
+
+          5x<sup>2</sup> = ${task1[0]*task1[0]*task1[1]} ${h10()}
+
+          x<sup>2</sup> = ${task1[0]*task1[0]*task1[1]} / 5 ${h10()}
+
+          x = ${sqrtNum(task1[0]*task1[0]*task1[1] / 5)} ${h10()}
+
+          S = 2x • 2x = 2${sqrtNum(task1[0]*task1[0]*task1[1] / 5)} • 2${sqrtNum(task1[0]*task1[0]*task1[1] / 5)} ${h10()}
+
+          S = 4 • ${task1[0]*task1[0]*task1[1]/5} = ${4*task1[0]*task1[0]*task1[1]/5} ${h10()}
+          ----------------------------------------------------- ${h10()}
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8 ${h10()}
+          (${task1[0]}${sqrtNum(task1[1])})<sup>2</sup> • 0.8 = 
+          ${task1[0]*task1[0]} • ${task1[1]} • 0.8 = ${task1[0]*task1[0]*task1[1]*0.8} ${h10()}
           -----------------------------------------------------
           ` 
           : task1.length === 4 ?
           `
-          DO = x,&thinsp; AD = 2x,&thinsp; AO = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span>
-          <hr class="hr-pd_10">
-          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
-          <hr class="hr-pd_10">
-          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span>)<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
-          <hr class="hr-pd_10">
-          ${task1[0]} = x<sup>2</sup> + 4x<sup>2</sup>
-          <hr class="hr-pd_10">
-          5x<sup>2</sup> = ${task1[0]}
-          <hr class="hr-pd_10">
-          x<sup>2</sup> = ${task1[0]} / 5
-          <hr class="hr-pd_10">
-          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0] / 5}</span>
-          <hr class="hr-pd_10">
-          S = 2x • 2x =  
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0] / 5}</span>
-          •
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0] / 5}</span>
-          <hr class="hr-pd_10">
-          S = 4 • ${task1[0]/5} = ${4*task1[0]/5}<br>
-          -----------------------------------------------------<br>
-          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
-          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid ">${task1[0]}</span>)<sup>2</sup> • 0.8 = 
-          ${task1[0]} • 0.8 = ${task1[0]*0.8}<br>
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${sqrtNum(task1[0])} ${h10()}
+
+          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup> ${h10()}
+          (${sqrtNum(task1[0])})<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup> ${h10()}
+
+          ${task1[0]} = x<sup>2</sup> + 4x<sup>2</sup> ${h10()}
+
+          5x<sup>2</sup> = ${task1[0]} ${h10()}
+
+          x<sup>2</sup> = ${task1[0]} / 5 ${h10()}
+
+          x = ${sqrtNum(task1[0] / 5)} ${h10()}
+
+          S = 2x • 2x = 2${sqrtNum(task1[0] / 5)} • 2${sqrtNum(task1[0] / 5)} ${h10()}
+
+          S = 4 • ${task1[0]/5} = ${4*task1[0]/5} ${h10()}
+          ----------------------------------------------------- ${h10()}
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8 ${h10()}
+          (${sqrtNum(task1[0])})<sup>2</sup> • 0.8 = ${task1[0]} • 0.8 = ${task1[0]*0.8} ${h10()}
           -----------------------------------------------------
           ` 
           : 
           `
-          DO = x,&thinsp; AD = 2x,&thinsp; 
-          AO = <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">√${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[1]}</mn>
-              </mfrac>
-            </math> 
-            <hr class="hr-pd_10">
-            AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>
-          <hr class="hr-pd_10">
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${dropRow(task1[0],task1[1])} ${h10()}
+          
+          AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>${h10()}
 
-          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]}</span> / ${task1[1]})<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup>
-          <hr class="hr-pd_10">
-          ${task1[0]/(task1[1]*task1[1])} = x<sup>2</sup> + 4x<sup>2</sup>
-          <hr class="hr-pd_10">
-          5x<sup>2</sup> = ${task1[0]/(task1[1]*task1[1])}
-          <hr class="hr-pd_10">
-          x<sup>2</sup> = ${task1[0]/(task1[1]*task1[1])} / 5
-          <hr class="hr-pd_10">
-          x = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]/(task1[1]*task1[1]) / 5}</span>
-          <hr class="hr-pd_10">
-          S = 2x • 2x =  
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]/(task1[1]*task1[1]) / 5}</span>
-          •
-          2<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[0]/(task1[1]*task1[1]) / 5}</span>
-          <hr class="hr-pd_10">
-          S = 4 • ${task1[0]/(task1[1]*task1[1]) / 5} = ${4*(task1[0]/(task1[1]*task1[1]) / 5)}<br>
-          -----------------------------------------------------<br>
-          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8<br>
-          (<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span style="border-top: 0.099em solid;">${task1[0]}</span> / ${task1[1]})<sup>2</sup> • 0.8 = 
-          (${task1[0]} / ${task1[1]*task1[1]}) • 0.8 = ${task1[0]/(task1[1]*task1[1])*0.8}<br> 
+          (${sqrtNum(task1[0])} / ${task1[1]})<sup>2</sup> = x<sup>2</sup> + (2x)<sup>2</sup> ${h10()}
+
+          ${task1[0]/(task1[1]*task1[1])} = x<sup>2</sup> + 4x<sup>2</sup> ${h10()}
+
+          5x<sup>2</sup> = ${task1[0]/(task1[1]*task1[1])} ${h10()}
+
+          x<sup>2</sup> = ${task1[0]/(task1[1]*task1[1])} / 5 ${h10()}
+
+          x = ${sqrtNum(task1[0]/(task1[1]*task1[1]) / 5)} ${h10()}
+
+          S = 2x • 2x = 2${sqrtNum(task1[0]/(task1[1]*task1[1]) / 5)} • 2${sqrtNum(task1[0]/(task1[1]*task1[1]) / 5)} ${h10()}
+
+          S = 4 • ${task1[0]/(task1[1]*task1[1]) / 5} = ${4*(task1[0]/(task1[1]*task1[1]) / 5)} ${h10()}
+          ----------------------------------------------------- ${h10()}
+          <b>Лайфхак</b>: возведи в квадрат данное число и умножь на 0.8 ${h10()}
+          (${sqrtNum(task1[0])} / ${task1[1]})<sup>2</sup> • 0.8 = 
+          (${task1[0]} / ${task1[1]*task1[1]}) • 0.8 = ${task1[0]/(task1[1]*task1[1])*0.8} ${h10()}
           -----------------------------------------------------
           `} `
         }
@@ -6394,13 +6396,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 32 ? 
 
             `
-            Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. Найдите радиус окружности, описанной около этого треугольника.
+            Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. Найдите радиус окружности, описанной около этого треугольника.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1674.png"></div>   
             ` 
             : task === 321 ? 
             `
-            Радиус окружности, описанной около равностороннего треугольника, равен ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. Найдите длину стороны этого треугольника.
+            Радиус окружности, описанной около равностороннего треугольника, равен ${task1[0]}${sqrtNum(3)}. Найдите длину стороны этого треугольника.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1674.png"></div>   
             ` 
@@ -6418,7 +6420,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
             : task === 34 ? 
             `
-            Сторона квадрата равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>. Найдите радиус окружности, описанной около этого квадрата.
+            Сторона квадрата равна ${task1[0]}${sqrtNum(2)}. Найдите радиус окружности, описанной около этого квадрата.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1677.png"></div>   
             ` 
@@ -6443,11 +6445,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 38 ? 
             `
             Точка O является серединой стороны CD квадрата ABCD. Радиус окружности с центром в точке O, проходящей через вершину A, равен 
-            ${task1.length === 1 ? task1[0] : task1.length === 3 ? 
-              `
-              ${drobNum(rowNum(`<span style="font-size: 110%; font-family: MathJax_Size3;">√</span>`,`<span style="border-top: 0.099em solid;">${task1[0]}</span>`), task1[1])}
-             ` 
-             : task1.length === 4 ? `<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid; ">${task1[0]}</span>`:`${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]}</span>`}. 
+            ${task1.length === 1 ? task1[0] 
+            : task1.length === 3 ? 
+              `${dropRow(task1[0], task1[1])}` 
+            : task1.length === 4 ? `${sqrtNum(task1[0])}`:`${task1[0]}${sqrtNum(task1[1])}`}. 
             Найдите площадь квадрата ABCD.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1783.png"></div>   
