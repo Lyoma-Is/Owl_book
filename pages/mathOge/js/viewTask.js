@@ -5467,7 +5467,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           Внутренный угол и внешний угол при вершине С — смежные углы, сумма смежных углов равна 180° ${h10()}
           ∠α + ∠β = 180° ${h10()}
           Внутренный угол C в треугольнике ABC равен 159° ${h10()}
-          ∠β = 180° — ∠α = 180° — ${task1[0]}° = ${180-task1[0]}° ${h10()}
+          Внешний угол: ∠β = 180° — ∠α = 180° — ${task1[0]}° = ${180-task1[0]}° ${h10()}
 
           `
 
@@ -5498,6 +5498,54 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return `
           Сумма углов треугольника равна 180°${h10()}
           180° — ${task1[0]}° — ${task1[1]}° = ${180-task1[0]-task1[1]}° ${h10()}
+          `
+        }
+        else if (item === 22){
+          return `
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task15/15_gip.png">${h10()}
+          ${task1[2] === "g" ? 
+          `
+          a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>${h10()}
+          a и b — катеты; c — гипотенуза${h10()} 
+          a = ${task1[0]}${h10()}
+          b = ${task1[1]}${h10()}
+          c<sup>2</sup> = ${task1[0]}<sup>2</sup> + ${task1[1]}<sup>2</sup> = ${task1[0]*task1[0]} + ${task1[1]*task1[1]} = ${task1[0]*task1[0] + task1[1]*task1[1]}${h10()}
+          c<sup>2</sup> = ${task1[0]*task1[0] + task1[1]*task1[1]}${h10()}
+          c = ${sqrtNum(task1[0]*task1[0] + task1[1]*task1[1])} = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1])} ${h10()}
+          `
+          : 
+          `
+          a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>${h10()}
+          a и b — катеты; c — гипотенуза${h10()} 
+          a = ${task1[0]}${h10()}
+          c = ${task1[1]}${h10()}
+
+          b<sup>2</sup> = ${task1[1]}<sup>2</sup> — ${task1[0]}<sup>2</sup> = 
+          ${task1[1]*task1[1]} — ${task1[0]*task1[0]} = ${task1[1]*task1[1] - task1[0]*task1[0]}${h10()}
+
+          c<sup>2</sup> = ${task1[1]*task1[1] - task1[0]*task1[0]}${h10()}
+          c = ${sqrtNum(task1[1]*task1[1] - task1[0]*task1[0])} = ${Math.sqrt(task1[1]*task1[1] - task1[0]*task1[0])} ${h10()}
+
+          `}
+          
+          `
+        }
+        else if (item === 23){
+          return `
+          Медиана BM  делит сторону AC пополам ${h10()}
+          AM = AC / 2 = ${task1[0]} / 2 = ${task1[0]/2}
+          `
+        }
+        else if (item === 25){
+          return `
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task15/15_smezh.png">${h10()}
+          Внутренный угол и внешний угол при вершине С — смежные углы, сумма смежных углов равна 180° ${h10()}
+          В равнобедренном треугольнике углы при основании равны ∠A = ∠C ${h10()}
+          Внутренный угол C равен: 180° — ${task1[0]}° = ${180-task1[0]}° ${h10()}
+          Сумма углов при основнии треугольника равна ${180-task1[0]}° + ${180-task1[0]}° = ${180-task1[0] + 180-task1[0]}°${h10()}
+          ∠ABC = 180° — ${180-task1[0] + 180-task1[0]}° = ${180 - (180-task1[0] + 180-task1[0])}° ${h10()}
+
+          
           `
         }
         // else if (item === 12){
