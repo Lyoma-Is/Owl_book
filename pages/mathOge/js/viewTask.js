@@ -5500,6 +5500,51 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           180° — ${task1[0]}° — ${task1[1]}° = ${180-task1[0]-task1[1]}° ${h10()}
           `
         }
+        else if (item === 21){
+          return `
+          ${task1[1] === "sb" || task1[1] === "sm" || task1[1] === "sv"? 
+            `
+            Поскольку проведена биссектриса, а биссектриса в равностороннем треугольнике является высотой, образовалось 2 прямоугольных треугольника. 
+            К любому из них можно применить теорему Пифагора. К тому же в равностороннем треугольнике биссектриса является медианой, 
+            то есть делит сторону пополам. ${h10()}
+            Значит, сторона равностороннего треугольника будет гипотенузой прямоугольного треугольника, половинка стороны - катетом, и биссектриса - катетом.${h10()}
+            <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_teo.png">${h10()}
+            с =  ${task1[0]}${sqrtNum(3)},&thinsp;&thinsp;&thinsp; b = с / 2 = ${task1[0]/2}${sqrtNum(3)},&thinsp;&thinsp;&thinsp;  а — ? ${h10()}
+            По теореме Пифагора а<sup>2</sup> + b<sup>2</sup> = с<sup>2</sup> ${h10()}
+            а<sup>2</sup> = с<sup>2</sup> — b<sup>2</sup>${h10()}
+            а<sup>2</sup> = (${task1[0]}${sqrtNum(3)})<sup>2</sup> — (${task1[0]/2}${sqrtNum(3)})<sup>2</sup>${h10()}
+            а<sup>2</sup> = ${task1[0]*task1[0]} • 3 — ${task1[0]/2*task1[0]/2} • 3${h10()}
+            а<sup>2</sup> = ${task1[0]*task1[0]*3} — ${(task1[0]/2*task1[0]/2)*3}${h10()}
+            а<sup>2</sup> = ${task1[0]*task1[0]*3 - (task1[0]/2*task1[0]/2)*3}${h10()}
+            a = ${sqrtNum(task1[0]*task1[0]*3 - (task1[0]/2*task1[0]/2)*3)} = ${Math.sqrt(task1[0]*task1[0]*3 - (task1[0]/2*task1[0]/2)*3)}${h10()}
+            `
+            : task1[1] === "b" || task1[1] === "m" || task1[1] === "v"? 
+            `
+            Поскольку проведена биссектриса, а биссектриса в равностороннем треугольнике является высотой, образовалось 2 прямоугольных треугольника. 
+            К любому из них можно применить теорему Пифагора. К тому же в равностороннем треугольнике биссектриса является медианой, 
+            то есть делит сторону пополам. ${h10()}
+            Значит, сторона равностороннего треугольника будет гипотенузой прямоугольного треугольника, половинка стороны - катетом, и биссектриса - катетом.${h10()}
+            <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_teo.png">${h10()}
+            a =  ${task1[0]}${sqrtNum(3)},&thinsp;&thinsp;&thinsp; b = с / 2,&thinsp;&thinsp;&thinsp;  c — ? ${h10()}
+            По теореме Пифагора а<sup>2</sup> + b<sup>2</sup> = с<sup>2</sup> ${h10()}
+
+            с<sup>2</sup> = а<sup>2</sup> + (c/2)<sup>2</sup>${h10()}
+
+            c<sup>2</sup> = (${task1[0]}${sqrtNum(3)})<sup>2</sup> + c<sup>2</sup> / 4${h10()}
+
+            c<sup>2</sup> — c<sup>2</sup> / 4 = ${task1[0]*task1[0]} • 3 ${h10()}
+
+            4 • c<sup>2</sup> — c<sup>2</sup> = ${task1[0]*task1[0]*3} • 4 ${h10()}
+
+            3 • c<sup>2</sup> = ${task1[0]*task1[0]*3*4} ${h10()}
+
+            c<sup>2</sup> = ${task1[0]*task1[0]*4} ${h10()}
+
+            c = ${sqrtNum(task1[0]*task1[0]*4)} = ${Math.sqrt(task1[0]*task1[0]*4)}${h10()}
+            `
+            : ``}
+          `
+        }
         else if (item === 22){
           return `
           <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task15/15_gip.png">${h10()}
@@ -5534,6 +5579,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return `
           Медиана BM  делит сторону AC пополам ${h10()}
           AM = AC / 2 = ${task1[0]} / 2 = ${task1[0]/2}
+          `
+        }
+        else if (item === 24){
+          return `
+          Поскольку отрезок MN соединяет середины двух сторон треугольника ABC, MN является средней линией, 
+          она параллельна AC и равна её половине:${h10()}
+          МN = АС / 2 = ${task1[2]} / 2 = ${task1[2]/2}
           `
         }
         else if (item === 25){
