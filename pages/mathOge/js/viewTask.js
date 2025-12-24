@@ -5600,6 +5600,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           `
         }
+        else if (item === 31){
+          return `
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task15/15_plosh.png">${h10()}
+          a = ${task1[0]};&thinsp;&thinsp; b = ${task1[1]} ${h10()}
+          S = ${drobNum(1,2)} • a • b = ${drobNum(1,2)} • ${task1[0]} • ${task1[1]} = ${1/2*task1[0]*task1[1]}${h10()}
+          `
+        }
+        else if (item === 32){
+          return `
+          <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_plosh2.png">${h10()}
+          a = ${task1[0]};&thinsp;&thinsp; b = ${task1[1]};&thinsp;&thinsp; sina = ${drobNum(task1[2], task1[3])} ${h10()}${h10()}
+          S = ${drobNum(1,2)} • a • b • sina = ${drobNum(1,2)} • ${task1[0]} • ${task1[1]} • ${drobNum(task1[2], task1[3])} 
+          = ${1/2*task1[0]*task1[1]*task1[2]/task1[3]}${h10()}
+
+          `
+        }
         // else if (item === 12){
         //   return `...`
         // }
@@ -5779,8 +5795,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             Два катета прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите площадь этого треугольника.
             <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>
-           
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>     
             `
             : task === 32 ? 
             `
