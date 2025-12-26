@@ -5616,6 +5616,82 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
           `
         }
+        else if (item === 33){
+          return `
+          <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_plosh3.png">${h10()}
+          a = ${task1[0]};&thinsp;&thinsp; h = ${task1[1]} ${h10()}
+          S = ${drobNum(1,2)} • a • h = ${drobNum(1,2)} • ${task1[0]} • ${task1[1]} = ${1/2*task1[0]*task1[1]}${h10()}
+
+          `
+        }
+        else if (item === 41){
+          return `
+          ${task1[2] === "s" ? 
+            `
+            <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_sin.png">${h10()}
+            sinB = ${drobNum("AC", "AB")} = ${drobNum(task1[0], task1[1])} = ${task1[0]/task1[1]}${h10()}
+            `
+            : task1[2] === "c" ? 
+            `
+            <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_sin.png">${h10()}
+            cosB = ${drobNum("AC", "AB")} = ${drobNum(task1[0], task1[1])} = ${task1[0]/task1[1]}${h10()}
+            `
+            : task1[2] === "t" ? 
+            `
+            <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_sin.png">${h10()}
+            tgB = ${drobNum("AC", "BC")} = ${drobNum(task1[1], task1[0])} = ${task1[1]/task1[0]}${h10()}
+            `
+            :``}
+          `
+        }
+        else if (item === 42){
+          return `
+          ${task1[3] === "ss" ? 
+            `
+            <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_sin.png">
+            ${h10()}
+            sinB = ${drobNum(task1[0], task1[1])};&thinsp;&thinsp;&thinsp; AB = ${task1[2]}
+            ${h10()}${h10()}${h10()}${h10()}
+           
+            sinB = ${drobNum("AC", "AB")}
+            ${h10()}${h10()}${h10()}${h10()}
+
+            ${drobNum(task1[0], task1[1])} = ${drobNum("AC", task1[2])}
+            ${h10()}${h10()}${h10()}${h10()}
+
+            AC = ${drobNum(task1[0], task1[1])} • ${task1[2]} = ${task1[0]*task1[2]/task1[1]}
+            `
+            : task1[3] === "sc" ? 
+            `
+            <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_sin.png">${h10()}
+            cosB = ${drobNum(task1[0], task1[1])};&thinsp;&thinsp;&thinsp; BC = ${task1[2]}
+            ${h10()}${h10()}${h10()}${h10()}
+
+            cosB = ${drobNum("AC", "BC")}
+            ${h10()}${h10()}${h10()}${h10()}
+           
+            ${drobNum(task1[0], task1[1])} = ${drobNum("AC", task1[2])}
+            ${h10()}${h10()}${h10()}${h10()}
+
+            AC = ${drobNum(task1[0], task1[1])} • ${task1[2]} = ${task1[0]*task1[2]/task1[1]}
+            `
+            : task1[3] === "st" ? 
+            `
+            <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_sin.png">${h10()}
+            tgB = ${drobNum(task1[0], task1[1])};&thinsp;&thinsp;&thinsp; BC = ${task1[2]}
+            ${h10()}${h10()}${h10()}${h10()}
+
+            tgB = ${drobNum("AC", "BC")}
+            ${h10()}${h10()}${h10()}${h10()}
+           
+            ${drobNum(task1[0], task1[1])} = ${drobNum("AC", task1[2])}
+            ${h10()}${h10()}${h10()}${h10()}
+
+            AC = ${drobNum(task1[0], task1[1])} • ${task1[2]} = ${task1[0]*task1[2]/task1[1]}
+            `
+            :``}
+          `
+        }
         // else if (item === 12){
         //   return `...`
         // }
@@ -5800,12 +5876,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 32 ? 
             `
             В треугольнике ABC известно, что AB = ${task1[0]}, BC = ${task1[1]}, sin∠ABC = 
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                <mn style="padding-top: 5px;">${task1[3]}</mn>
-              </mfrac>
-            </math>.
+            ${drobNum(task1[2], task1[3])}.
             Найдите площадь треугольника ABC.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1419.png"></div>
@@ -5865,59 +5936,27 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             ${task1[3] === "ss" ? 
               `
-            В треугольнике ABC угол C равен 90°, 
-            sinB =
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[1]}</mn>
-              </mfrac>
-            </math> , 
-            AB = ${task1[2]}. Найдите AC.
+            В треугольнике ABC угол C равен 90°, sinB = ${drobNum(task1[0], task1[1])}, AB = ${task1[2]}. Найдите AC.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
            
               `
               : task1[3] === "sc" ? 
               `
-            В треугольнике ABC угол C равен 90°, 
-            cosB =
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[1]}</mn>
-              </mfrac>
-            </math> , 
-            AB = ${task1[2]}. Найдите BC.
+            В треугольнике ABC угол C равен 90°, cosB = ${drobNum(task1[0], task1[1])}, AB = ${task1[2]}. Найдите BC.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
            
               `
               : task1[3] === "st" ? 
               `
-            В треугольнике ABC угол C равен 90°, 
-            tgB =
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mn style="padding-top: 5px;">${task1[1]}</mn>
-              </mfrac>
-            </math> , 
-            BC = ${task1[2]}. Найдите AC.
+            В треугольнике ABC угол C равен 90°, tgB = ${drobNum(task1[0], task1[1])}, BC = ${task1[2]}. Найдите AC.
             <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
-           
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>   
               `
               : 
-              ``}
-            
-
-            `
-            :
-            ``}
-          
-          
-          <hr class="hr-pd_20">
+              ``}`: ``} 
+              <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -6647,13 +6686,34 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
     if (taskKey === 'seventeen'){
       let Nomer = 17
+      function reshSeventeen(item){
+        if (item === 11){
+          return `
+          <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_diag.png">
+          ${h10()}
+          d<sup>2</sup> = a<sup>2</sup> + a<sup>2</sup>${h10()}
+          a = ${task1[0]}${sqrtNum(2)}${h10()}
+          d<sup>2</sup> = (${task1[0]}${sqrtNum(2)})<sup>2</sup> + (${task1[0]}${sqrtNum(2)})<sup>2</sup>${h10()}
+          d<sup>2</sup> = 2 • ${task1[0]*task1[0]} • 2${h10()}
+          d = ${sqrtNum(`2 • ${task1[0]*task1[0]} • 2`)}${h10()} 
+          d = 2 • ${task1[0]} = ${task1[0]*2}${h10()} 
+          
+          `
+        }
+        else if (item === 21){
+          return `.`
+        }
+        else {
+          return `...`
+        }
+      }
       switch(typeTask){
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 11 ? 
             `
-          Сторона квадрата равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>. Найдите диагональ этого квадрата.
+          Сторона квадрата равна ${task1[0]}${sqrtNum(2)}. Найдите диагональ этого квадрата. 
           <hr class="hr-pd_20">
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_1795.png"></div>
           `
@@ -6702,6 +6762,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshSeventeen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -6785,6 +6847,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">            
+            ${reshSeventeen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -6850,6 +6914,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshSeventeen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
