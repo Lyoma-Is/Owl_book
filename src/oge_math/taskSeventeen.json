@@ -708,7 +708,7 @@
         "typeTask": 2,
         "taskKec": [1, 17, 1],
         "taskAnswer": 106,
-        "task": 241,
+        "task": 24,
 
         "task1": [74, "больший"],
 
@@ -1095,7 +1095,7 @@
         "taskAnswer": 10,
         "task": 26,
 
-        "task1": [1,1],
+        "task1": [1, 11],
 
         "taskNum": "7FE0DC"
     },
@@ -1337,7 +1337,7 @@
         "taskAnswer": 8,
         "task": 26,
 
-        "task1": [3,11],
+        "task1": [3, 11],
 
         "taskNum": "1F937D"
     },
@@ -1381,7 +1381,7 @@
         "taskAnswer": 78,
         "task": 25,
 
-        "task1": [1, 17,6],
+        "task1": [7, 19, 6],
 
         "taskNum": "F70300"
     },
@@ -2181,7 +2181,7 @@
         "taskCounter": 1805,
         "typeTask": 1,
         "taskKec": [1, 17, 1],
-        "taskAnswer": 88,
+        "taskAnswer": 92,
         "task": 15,
 
         "task1": [44],

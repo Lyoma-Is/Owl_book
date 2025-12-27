@@ -6680,7 +6680,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         }   
     }
     // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
-    // <sup>2</sup>   — • &thinsp; √  ∠ &nbsp; 
+    // <sup>2</sup>   — • &thinsp; √ ° ∠ &nbsp; 
     // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>
 
     // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
@@ -6700,9 +6700,184 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           `
         }
-        else if (item === 21){
-          return `.`
+        else if (item === 12){
+          return `
+          <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_hei.png">
+          ${h10()}
+          Все стороны ромба равны то есть: a = ${task1[0]}.
+          ${h10()}
+          Катет прямоугольного треугольника, лежащий против угла в 30°, равен половине гипотенузы.
+          ${h10()}
+          Острый угол ромба: 180° — 150° = 30°.
+          ${h10()}
+          Высота ромба равна половине стороны ромба: h = a / 2 
+          ${h10()}
+          h = a / 2 = ${task1[0]} / 2 = ${task1[0]/2}          
+          `
         }
+        else if (item === 13){
+          return `
+          <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task17/17_plosh_paral.png">
+          ${h10()}
+          Периметр ромба равна: P = ${task1[0]}.
+          ${h10()}
+          Сторона ромба равна: a = ${task1[0]} / 4 = ${task1[0]/4}
+          ${h10()}
+          Катет прямоугольного треугольника, лежащий против угла в 30°, равен половине гипотенузы.
+          ${h10()}
+          Острый угол ромба: 180° — 150° = 30°.
+          ${h10()}
+          Высота ромба равна половине стороны ромба: h = a / 2 
+          ${h10()}
+          h = a / 2 = ${task1[0]/4} / 2 = ${task1[0]/4/2}   
+          ${h10()}
+          a = b = ${task1[0]/4}  
+          ${h10()} 
+          Площадь ромба равна:
+          ${h10()} 
+          <b>S = a • b • sin γ</b> = ${task1[0]/4} • ${task1[0]/4} • sin ${task1[1]}° = ${task1[0]/4} • ${task1[0]/4} • ${drobNum(1,2)} = ${task1[0]/4 * task1[0]/4/2}
+          ${h10()} 
+          ИЛИ
+          ${h10()} 
+          <b>S = a • h</b> = ${task1[0]/4} • ${task1[0]/4/2} = ${task1[0]/4 * task1[0]/4/2}
+          
+          `
+        }
+        else if (item === 131){
+          return `
+          Сумма углов прилежащих к одной стороне четырехугольника равна 180°.
+          ${h10()}
+          Больший или меньший угол равен:
+          ${h10()} 
+          180° — ${task1[0]}° = ${180-task1[0]}°
+          `
+        }
+        else if (item === 14){
+          return `
+          Противоложные углы ромба равны, диагональ AC делит угол пополам. 
+          ${h10()}
+          Отсюда треугольник ABC равнобедренный, ∠BCA = ∠DCA, ∠B = ${task1[0]}°
+          ${h10()}
+          ∠BCA = ∠BAC, ∠DCA = ∠DAC.
+          ${h10()}
+          ∠BCD = 180° — ${task1[0]}° = ${180-task1[0]}°
+          ${h10()}
+          ∠ACD = ${180-task1[0]}° / 2 = ${(180-task1[0])/2}°
+
+          `
+        }
+        else if (item === 15){
+          return `
+          <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_ugol_pram.png">${h10()} 
+          Диагонали прямоугольника образуют равнобедренные треугольники, у равнобедренного треугольника углы при основании равны.${h10()} 
+          Сумма углов треугольника равна 180°.${h10()} 
+          ${taskCounter === 1805 ?
+            `
+            <span style="color: red;">
+            В задании ошибка необходимо найти острый угол, угол ${180-task1[0]*2}° тупой. ${h10()}  
+            Либо необходимо найти тупой угол, либо данный угол в задании ${task1[0]}° неправильный.${h10()} 
+            ответ ФИПИ: 88 ${h10()}
+            </span>${h10()}
+            <span style="color: green;">
+            Правильный ответ: 180° — ${task1[0]}° — ${task1[0]}° = ${180-task1[0]*2}°. 
+            </span>${h10()}
+            `
+            :
+            `180° — ${task1[0]}° — ${task1[0]}° = ${180-task1[0]*2}°. `}
+          
+          
+          `
+        }
+        else if (item === 16){
+          return `
+          <img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task17/17_diag_pram.png">${h10()} 
+          При пересечении диагонали прямоульника AO, BO, CO и DO делятся на равные отрезки.${h10()} 
+          Длины диагоналей прямоугольника равны и делятся точкой пересечения пополам. Значит, ${h10()}
+          AC = ВD = 2 • ВО${h10()}
+          АС = 2 • ${task1[0]} = ${task1[0]*2}
+          `
+        }
+        else if (item === 21){
+          return `
+          Сумма углов прилежащих к одной стороне четырехугольника равна 180°.
+          ${h10()}
+          У прямоугольной трапеции два угла 90°.
+          ${h10()} 
+          Соответственно больший или меньший угол равен:
+          ${h10()}
+          180° — ${task1[0]}° = ${180-task1[0]}°
+          `
+        }
+        else if (item === 22){
+          return `
+          Диагональ трапеции образует два треугольника с основаниями ${task1[0]} и ${task1[1]}.
+          ${h10()}
+          Средняя линия меньшего треугольника: ${task1[0]} / 2 = ${task1[0]/2}
+          ${h10()}
+          Средняя линия большего треугольника: ${task1[1]} / 2 = ${task1[1]/2}
+          
+          `
+        }
+        else if (item === 23){
+          return `
+          <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task17/17_linia.png">${h10()} 
+          a = ${task1[0]}, b = ${task1[1]}${h10()} 
+          l = ${drobNum("a + b", 2)} = ${drobNum(`${task1[0]} + ${task1[1]}`, 2)} = ${drobNum(task1[0]+task1[1], 2)} = ${(task1[0]+task1[1])/2}
+          `
+        }
+        else if (item === 24){
+          return `
+          Сумма углов прилежащих к боковой стороне трапеции равна 180°.
+          ${h10()} 
+          ${task1[1] === "меньший" ? 
+            `Меньший угол трапеции равна: 180° — ${task1[0]}° = ${180-task1[0]}°`
+            :
+            `Больший угол трапеции равна: 180° — ${task1[0]}° = ${180-task1[0]}°`}
+          ${h10()} 
+          
+          `
+        }
+        else if (item === 241){
+          return `
+          Сумма углов прилежащих к боковой стороне трапеции равна 180°.
+          ${h10()} 
+          ${task1[1] === "меньший" ? 
+            `
+            Больший угол трапеции равна: ${task1[0]}° / 2 = ${task1[0]/2}°${h10()} 
+            Меньший угол трапеции равна: 180° — ${task1[0]/2}° = ${180 - task1[0]/2}°
+            
+            `
+            :
+            `
+            Меньший угол трапеции равна: ${task1[0]}° / 2 = ${task1[0]/2}°${h10()}
+            Больший угол трапеции равна: 180° — ${task1[0]/2}° = ${180 - task1[0]/2}°`}
+          ${h10()} 
+          
+          `
+        }
+        else if (item === 25){
+          return `
+          <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task17/17_plosh_trap.png">${h10()} 
+          a = ${task1[0]}, b = ${task1[1]}, h = ${task1[2]}${h10()} 
+          S = ${drobNum("a + b", 2)} • h = ${drobNum(`${task1[0]} + ${task1[1]}`, 2)} • ${task1[2]} = 
+          ${drobNum(task1[0]+task1[1], 2)} • ${task1[2]} = ${(task1[0]+task1[1])*task1[2]/2}
+          `
+        } 
+        else if (item === 26){
+          return `
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task17/17_trap.png">
+          ${h10()} 
+          Высота CF делит основание AD на отрезки ${task1[0]} и ${task1[1]}.
+          ${h10()} 
+          AE = FD = ${task1[0]}
+          ${h10()} 
+          BC = EF = ${task1[1]} — ${task1[0]} =  ${task1[1]-task1[0]}
+          
+          `
+        }
+        // else if (item === 21){
+        //   return `.`
+        // }
         else {
           return `...`
         }
@@ -6819,7 +6994,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 26 ? 
             `
           Высота равнобедренной трапеции, проведённая из вершины C, делит основание AD на отрезки длиной ${task1[0]} и ${task1[1]}. Найдите длину основания BC.
-
           <hr class="hr-pd_20">
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1881.png"></div>
          
@@ -6827,7 +7001,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 27 ? 
             `
           В равнобедренной трапеции известны высота, ${task1[0] === 1 ? `большее`: `меньшее`} основание и угол при основании (см. рисунок). Найдите ${task1[0] === 1 ? `меньшее`: `большее`} основание.
-
           <hr class="hr-pd_20">
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
          
