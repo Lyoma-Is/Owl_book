@@ -611,7 +611,7 @@
         "taskAnswer": 13,
         "task": 27,
 
-        "task1": [2],
+        "task1": [2,5,3],
 
         "taskNum": "99B09B"
     },
@@ -644,7 +644,7 @@
         "taskAnswer": 4,
         "task": 27,
 
-        "task1": [1],
+        "task1": [1, 5, 14],
 
         "taskNum": "C56952"
     },
@@ -666,7 +666,7 @@
         "taskAnswer": 17,
         "task": 27,
 
-        "task1": [2],
+        "task1": [2,5,7],
 
         "taskNum": "33462D"
     },
@@ -677,7 +677,7 @@
         "taskAnswer": 5,
         "task": 27,
 
-        "task1": [1],
+        "task1": [1,5,15],
 
         "taskNum": "EFBE26"
     },
@@ -699,7 +699,7 @@
         "taskAnswer": 16,
         "task": 27,
 
-        "task1": [2],
+        "task1": [2, 5, 6],
 
         "taskNum": "D5D947"
     },
