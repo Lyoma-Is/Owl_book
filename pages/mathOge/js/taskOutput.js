@@ -74,8 +74,8 @@ function setupFilters(taskKey, data) {
 
     filteredTasks.sort((a, b) => {
       switch (sortMethod) {
-        case 0: return a.taskCounter - b.taskCounter; // По возрастанию
-        case 1: return b.taskCounter - a.taskCounter; // По убыванию
+        case 0: return a.taskCounter - b.taskCounter; // По возрастанию старые
+        case 1: return b.taskCounter - a.taskCounter; // По убыванию  новые
         case 2: return Math.random() - 0.5;           // Случайный порядок
         default: return 0;
       }
@@ -167,12 +167,6 @@ taskPage.innerHTML = `
 <option value="taskTwentyFivePage.html">25. Геометрическая задача повышенной сложности.</option>
 `
 
-//<option value="taskOnePage.html">1. .</option>
-//<option value="taskTwoPage.html">2. .</option>
-//<option value="taskThreePage.html">3. .</option>
-//<option value="taskFourPage.html">4. .</option>
-//<option value="taskFivePage.html">5. .</option>
-
 const taskSort = document.getElementById('taskSort');
 if (taskSort) {
     taskSort.innerHTML = `
@@ -199,11 +193,7 @@ document.addEventListener('click', function(e) {
     const currentPage = window.location.pathname.split('/').pop();
 
     const PAGE_TO_KEC = {
-      // 'taskOnePage.html': 1,
-      // 'taskTwoPage.html': 2,
-      // 'taskThreePage.html': 3,
-      // 'taskFourPage.html': 4,
-      // 'taskFivePage.html': 5,
+
       'taskOneFivePage.html': 1,
       'taskSixPage.html': 6,
       'taskSevenPage.html': 7,
@@ -246,11 +236,6 @@ document.addEventListener('click', function(e) {
     });
 
     const KEC_DESCRIPTIONS = {
-      // 1: "КЭС: ",
-      // 2: "КЭС: ",
-      // 3: "КЭС: ",
-      // 4: "КЭС: ",
-      // 5: "КЭС: ",
       1: "КЭС: 3.3 Решение текстовых задач.",
       6: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.",
       7: "КЭС: 1.2 Обыкновенные и десятичные дроби, проценты, бесконечные периодические дроби.<br>КЭС: 1.3 Рациональные числа. Арифметические операции с рациональными числами.<br>КЭС: 1.4 Действительные числа. Арифметические операции с действительными числами.<br>КЭС: 2.5 Арифметический корень натуральной степени. Действия с арифметическими корнями натуральной степени.<br> КЭС: 6.1 Координатная прямая.",
