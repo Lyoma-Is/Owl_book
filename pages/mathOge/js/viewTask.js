@@ -7224,31 +7224,194 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     if (taskKey === 'eighteen'){
       let Nomer = 18
       function reshEghteen(item){
-        if(item === 14){
+        if (item === 11){
           return `
-          (${task1[0]} / ${task1[1]}) • ${task1[2]} = ${task1[0]/task1[1]*task1[2]} 
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_plosh_tr.png">${h10()}
+          Основание треугольника: a = ${task1[0]}
+          ${h10()}
+          Высота треугольника: h = ${task1[1]}
+          ${h10()}
+          Площадь треугольника: S = ${drobNum(1,2)} • a • h
+          ${h10()} 
+          S = ${drobNum(1,2)} • ${task1[0]} • ${task1[1]} = ${(1/2)*task1[1]*task1[0]} 
           `
         }
-        else if(item === 15){
+        else if (item === 12){
           return `
+          <img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_plosh.png">
+          ${h10()}
+          a = ${task1[1]}, b = ${task1[0]}
+          ${h10()}
+          Длина меньшего катета равна: ${task[0] > task1[1] ? task1[1] : task1[0]}
+          ${h10()}
+          Длина большего катета равна: ${task[0] > task1[1] ? task1[0] : task1[1]}
+          
+          `
+        }
+        else if (item === 13){
+          return `
+          Средняя линия треугольника: l = ${drobNum(1,2)} • a
+          ${h10()}
+          l = ${drobNum(1,2)} • ${task1[0]} = ${(1/2)*task1[0]}
+          `
+        }
+        else if (item === 14){
+          return `
+          <img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task18/18_fales.png">
+          ${h10()}
+          Длина k = ${task1[0]}
+          ${h10()}
+          Длина h = ${task1[1]}
+          ${h10()}
+          Длина a = ${task1[2]}
+          ${h10()}
+          b = ${drobNum("k", "h")} • a = ${drobNum(task1[0], task1[1])} • ${task1[2]} = ${task1[0]/task1[1]*task1[2]} 
+          `
+        }
+        else if (item === 15){
+          return `
+          Пример<br>
+          <img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task18/18_fales2.png">${h10()}
+          Проведем отрезок AE на стороне где отмечена точка M, также проведем параллельные линии.${h10()}
+          По теореме Фалеса эти линии делят сторону АB на равные отрезки.
+          ${h10()}
+          Длина AM = 3 
+          ${h10()}
+          Длина BM = 1
+          ${h10()}
+          AM длиннее или короче BM в 3 / 1 = 3 раза
+          ${h10()}
+          --------------------------------------------------------------------
+          ${h10()}
+          ${ task1[3] ? `${task1[2]} ${task1[3]} в `: `${task1[2]} CM в  `}
           ${task1[0]} / ${task1[1]}  = ${task1[0]/task1[1]} 
           `
-        }
-        else if(item === 31){
+        } 
+        else if (item === 21){
           return `
+          Длина меньшей диагонали: ${task1[0]}${h10()}
+          Длина большей диагонали: ${task1[1]}
+          `
+        }
+        else if (item === 22){
+          return `
+          <img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task18/18_linia.png">${h10()} 
+          a = ${task1[0]}, b = ${task1[1]}${h10()} 
+          l = ${drobNum("a + b", 2)} = ${drobNum(`${task1[0]} + ${task1[1]}`, 2)} = ${drobNum(task1[0]+task1[1], 2)} = ${(task1[0]+task1[1])/2} 
+          `
+        }
+        else if (item === 23){
+          return `
+          <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task18/18_plosh_paral.png">${h10()} 
+          a = ${task1[1]}, h = ${task1[0]}${h10()}
+          Площадь параллелограмма:${h10()} S = a • h  = ${task1[1]} • ${task1[0]} = ${task1[1]*task1[0]}
+          `
+        }
+        else if (item === 24){
+          return `
+          <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task18/18_plosh_trap.png">${h10()} 
+          a = ${task1[1]}, b = ${task1[0]}, h = ${task1[2]}${h10()} 
+          S = ${drobNum("a + b", 2)} • h = ${drobNum(`${task1[1]} + ${task1[0]}`, 2)} • ${task1[2]} = 
+          ${drobNum(task1[1]+task1[0], 2)} • ${task1[2]} = ${(task1[0]+task1[1])*task1[2]/2}
+          `
+        }
+        else if (item === 25){
+          return `
+          <img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task18/18_plosh_romb.png">${h10()} 
+          d<sub>1</sub> = ${task1[0]}, d<sub>2</sub> = ${task1[1]}
+          ${h10()} 
+          S = ${drobNum(1,2)} • d<sub>1</sub> • d<sub>2</sub> = ${drobNum(1,2)} • ${task1[0]} • ${task1[1]} = ${(1/2)*task1[0]*task1[1]}
+          `
+        }
+        else if (item === 31){
+          return `
+          Пример:${h10()} 
+          Соединим две точки линией, также проведем две линии образовав прямоугольный треугольник.
+          ${h10()} 
+          С помощью Теоремы Пифагора: c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup>  находим расстояние между ними.
+          ${h10()}
+          a = 5, b = 12
+          ${h10()} 
+          <img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task18/18_tr.png">${h10()} 
+          -----------------------------------------------------------------------
+          ${h10()}
+          a = ${task1[2]}, b = ${task1[1]}
+          ${h10()} 
           c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup>
-          <hr class="hr-pd_10">
+          ${h10()}
           c<sup>2</sup> = ${task1[1]}<sup>2</sup> + ${task1[2]}<sup>2</sup>
-          <hr class="hr-pd_10">
+          ${h10()}
           c<sup>2</sup> = ${task1[1]*task1[1]} + ${task1[2]*task1[2]}
-          <hr class="hr-pd_10">
+          ${h10()}
           c<sup>2</sup> = ${task1[1]*task1[1] + task1[2]*task1[2]}
-          <hr class="hr-pd_10">    
-          c = <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">${task1[1]*task1[1] + task1[2]*task1[2]}</span>   
-          <hr class="hr-pd_10">
+          ${h10()}
+          c = ${sqrtNum(task1[1]*task1[1] + task1[2]*task1[2])}   
+          ${h10()}
           c = ${Math.sqrt(task1[1]*task1[1] + task1[2]*task1[2])}
           `
 
+        }
+        else if (item === 32){
+          return `
+          <img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task18/18_plosh_krug.png">${h10()} 
+          Площадь круга: S = 𝜋 • r<sup>2</sup>${h10()}
+          Площадь большего круга: S<sub>1</sub> = 𝜋 • r<sub>1</sub><sup>2</sup>
+          ${h10()}
+          Площадь меньшего круга: S<sub>2</sub> = 𝜋 • r<sub>2</sub><sup>2</sup>
+          ${h10()} 
+          ${
+            task1[3] === 3 ? 
+            `
+            r<sub>1</sub> = ${task1[0]}${h10()} 
+            S<sub>1</sub> = 𝜋 • r<sub>1</sub><sup>2</sup> = 𝜋 • ${task1[0]}<sup>2</sup> = ${task1[0]*task1[0]}𝜋${h10()} 
+            r<sub>2</sub> = ${task1[1]}${h10()} 
+            S<sub>2</sub> = 𝜋 • r<sub>2</sub><sup>2</sup> = 𝜋 • ${task1[1]}<sup>2</sup> = ${task1[1]*task1[1]}𝜋${h10()}
+            Площадь большего круга больше площади меньшего: ${drobNum(rowNum("S","<sub>1</sub>"),rowNum("S",`<sub>2</sub>`))} = 
+            ${drobNum(`${task1[0]*task1[0]}𝜋`, `${task1[1]*task1[1]}𝜋`)} = ${(task1[0]*task1[0])/(task1[1]*task1[1])}
+            `
+            :
+            task1[3] === 1 ? 
+            `
+            r<sub>1</sub><sup>2</sup> = ${task1[0]}<sup>2</sup> + ${task1[1]}<sup>2</sup> = 
+            ${task1[0]*task1[0]} + ${task1[1]*task1[1]} = ${task1[0]*task1[0]+task1[1]*task1[1]}
+            ${h10()}
+            r<sub>1</sub> = ${sqrtNum(task1[0]*task1[0]+task1[1]*task1[1])}
+            ${h10()} 
+            S<sub>1</sub> = 𝜋 • r<sub>1</sub><sup>2</sup> = 𝜋 • (${sqrtNum(task1[0]*task1[0]+task1[1]*task1[1])})<sup>2</sup> = ${task1[0]*task1[0]+task1[1]*task1[1]}𝜋
+            ${h10()} 
+            r<sub>2</sub> = ${task1[2]}
+            ${h10()} 
+            S<sub>2</sub> = 𝜋 • r<sub>2</sub><sup>2</sup> = 𝜋 • ${task1[2]}<sup>2</sup> = ${task1[2]*task1[2]}𝜋
+            ${h10()}
+            Площадь большего круга больше площади меньшего: ${drobNum(rowNum("S","<sub>1</sub>"),rowNum("S",`<sub>2</sub>`))} = 
+            ${drobNum(`${task1[0]*task1[0]+task1[1]*task1[1]}𝜋`, `${task1[2]*task1[2]}𝜋`)} = ${(task1[0]*task1[0]+task1[1]*task1[1])/(task1[2]*task1[2])}
+            `
+            :
+            task1[3] === 2 ? 
+            `
+            r<sub>1</sub> = ${task1[0]}
+            ${h10()}
+            S<sub>1</sub> = 𝜋 • r<sub>2</sub><sup>2</sup> = 𝜋 • ${task1[0]}<sup>2</sup> = ${task1[0]*task1[0]}𝜋
+            ${h10()} 
+            r<sub>2</sub><sup>2</sup> = ${task1[1]}<sup>2</sup> + ${task1[2]}<sup>2</sup> = 
+            ${task1[1]*task1[1]} + ${task1[2]*task1[2]} = ${task1[1]*task1[1]+task1[2]*task1[2]}
+            ${h10()}
+            r<sub>2</sub> = ${sqrtNum(task1[1]*task1[1]+task1[2]*task1[2])}
+            ${h10()} 
+            S<sub>2</sub> = 𝜋 • r<sub>2</sub><sup>2</sup> = 𝜋 • (${sqrtNum(task1[1]*task1[1]+task1[2]*task1[2])})<sup>2</sup> 
+            = ${task1[1]*task1[1]+task1[2]*task1[2]}𝜋
+             
+            
+            
+           
+            ${h10()}
+            Площадь большего круга больше площади меньшего: ${drobNum(rowNum("S","<sub>1</sub>"),rowNum("S",`<sub>2</sub>`))} = 
+            ${drobNum(`${task1[0]*task1[0]}𝜋`, `${task1[1]*task1[1]+task1[2]*task1[2]}𝜋`)} = ${(task1[0]*task1[0])/(task1[1]*task1[1]+task1[2]*task1[2])}
+            `
+            :
+            ``}
+          
+          ` 
         }
         else{return `...`}
       }
@@ -7290,12 +7453,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
           
-            ` 
-            : 
-            `
-            ` 
-            }
-          <hr class="hr-pd_20">
+            ` :``}<hr class="hr-pd_20">
           `
           
           answerBlock += generateDate();
@@ -7337,17 +7495,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             На клетчатой бумаге с размером клетки 1×1 изображена ромб. Найдите площадь этого ромба..
         
             ` 
-            :
-            `` 
-            }
+            : `` } 
             <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task1[0] === 2 ? `width: 10em;`: task1[0] === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
-          
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  
+            ${task2 === 2 ? `width: 10em;`: task2 === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>    
             <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshEghteen(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -7359,19 +7517,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 31 ? 
-            `
-            На клетчатой бумаге с размером клетки 1×1 изображены две точки. Найдите расстояние между ними.
-            ` 
-            : task === 32 ? 
-            `
-            На клетчатой бумаге изображены два круга. Во сколько раз площадь большего круга больше площади меньшего?
-            ` 
-            : 
-            `` 
-            }
+            ` На клетчатой бумаге с размером клетки 1×1 изображены две точки. Найдите расстояние между ними.` 
+          : task === 32 ? 
+            ` На клетчатой бумаге изображены два круга. Во сколько раз площадь большего круга больше площади меньшего? ` 
+            : `` }
             <hr class="hr-pd_20">
-            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task1[0] === 2 ? `width: 10em;`: task1[0] === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
-          
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task2 === 2 ? `width: 10em;`: task2 === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
             <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
