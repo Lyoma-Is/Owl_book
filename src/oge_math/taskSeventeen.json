@@ -1625,7 +1625,7 @@
 
         "task1": [114, "меньший"],
 
-        "taskNum": "C764EF"
+        "taskNum": "F45E6B"
     },
     {
         "taskCounter": 1855,
@@ -2180,7 +2180,7 @@
     {
         "taskCounter": 1805,
         "typeTask": 1,
-        "taskKec": [1, 17, 1],
+        "taskKec": [1, 17, 4],
         "taskAnswer": 92,
         "task": 15,
 

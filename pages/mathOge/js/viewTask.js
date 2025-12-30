@@ -43,6 +43,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `<img id="text-inform-button" src="../../img/inform7.svg">`:
           taskKec[2] === 2 ? 
           `<img id="text-inform-button" src="../../img/inform8.svg">`:
+          taskKec[2] === 4 ? 
+          `<img id="text-inform-button" src="../../img/inform10.svg">`:
           `<img id="text-inform-button" src="../../img/inform9.svg">` }
         <p class="p-num print" style="text-align: right;"> Номер: ${taskNum}</p>
         
@@ -5005,11 +5007,27 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           }
           return l
       }
+      function amfi(e){
+        let l = ``
+        let k = 1
+        let d = task1[2]
+        let rad = task1[1]
+        
+          l += `В ${k} ряду: ${rad} мест.<br>`
+          for(let i = 1; i < e; i++){
+            rad = rad+d
+            l += `В ${i+1} ряду: ${rad} мест.<br>`  
+           }
+           return l
+      }
       function reshFourteen(item){
         if (item === 11){
           return `
+          ${amfi(task1[3])}
+          -------------------------------------------------------------- 
+          ${h10()}
           a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
-          <hr class="hr-pd_10">
+          ${h10()}
           a<sub>${task1[3]}</sub> = ${task1[1]} + ${task1[2]} • (${task1[3]} — 1) = ${task1[1] + task1[2]*(task1[3] - 1)}
           `
         }
@@ -5035,7 +5053,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </mrow>
                 <mn style="padding-top: 5px;">2</mn>
               </mfrac>
-            </math> n
+            </math> • n
             <hr class="hr-pd_10">
             S<sub>${task1[0]}</sub> = &thinsp;
             <math style="font-size: 140%">
@@ -5276,21 +5294,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             : 
             task === 12 ? 
-            `
-            В амфитеатре ${task1[0]} рядов. В первом ряду ${task1[1]} мест, а в каждом следующем на ${task1[2]} места больше, чем в предыдущем. Сколько всего мест в амфитеатре?
+            `В амфитеатре ${task1[0]} рядов. В первом ряду ${task1[1]} мест, а в каждом следующем на ${task1[2]} места больше, чем в предыдущем. Сколько всего мест в амфитеатре?
             `
             : task === 13 ? 
-            `
-            В амфитеатре ${task1[0]} рядов, причём в каждом следующем ряду на одно и то же число мест больше, чем в предыдущем. 
+            `В амфитеатре ${task1[0]} рядов, причём в каждом следующем ряду на одно и то же число мест больше, чем в предыдущем. 
             В ${numberToWordsRu(task1[3])} ряду ${task1[1]} мест, а в ${numberToWordsRu(task1[4])} ряду ${task1[2]} мест. Сколько мест в последнем ряду амфитеатра?
             `
-            :
-             ``}
-          
-
-          <hr class="hr-pd_20">
+            : ``}<hr class="hr-pd_20">
           `
-          
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
