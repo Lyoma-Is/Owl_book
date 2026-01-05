@@ -3569,7 +3569,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           ${task === 4 ? 
             `
-            Найдите корень уравнения:&thinsp; ${task1[0]} ( x ${task1[3]==="" ? `−` : `+`} ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]} ) = ${task1[2].toString().length === 2 ? `— ${task1[2].toString().slice(1)}` : task1[2]}
+            Найдите корень уравнения:&thinsp; ${task1[0]} ( x ${task1[3]==="" ? `−` : `+`} 
+            ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]} ) = ${task1[2].toString().length === 2 ? `— ${task1[2].toString().slice(1)}` : task1[2]}
             `
             : task === 5 ? 
             `
@@ -3577,7 +3578,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             : task === 6 ? 
             `
-            Найдите корень уравнения:&thinsp; ${minusNum(task1[0])} ${task1[4] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`}x = ${minusNum(task1[2])}x ${task1[5] === "" ? `${minusNum(task1[3])}` : `+ ${task1[3]}`}
+            Найдите корень уравнения:&thinsp; ${minusNum(task1[0])} ${task1[4] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`}x = 
+            ${minusNum(task1[2])}x ${task1[5] === "" ? `${minusNum(task1[3])}` : `+ ${task1[3]}`}
             ` 
             : 
             ``}`
