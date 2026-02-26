@@ -391,7 +391,7 @@ main{
         margin: auto; 
         border-collapse: collapse;
         td{
-            vertical-align: top;
+            vertical-align:bottom;
             font-size: 20px;
             border: 1px solid;
             padding: 10px ; 
@@ -600,12 +600,12 @@ table.iksweb th {
 .section-site{
     padding: 20px;
     h2{
-        font-size: 2em;
+        font-size: clamp(0.8em, 3vw, 2.2em);
     }
     a{  
         display: block;
         padding: 0.5em;
-        font-size: 1.8em;
+        font-size: clamp(0.8em, 3vw, 2em);
     }
 }
 

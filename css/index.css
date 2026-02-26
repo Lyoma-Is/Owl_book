@@ -350,7 +350,7 @@ main .btn-primary:active {
   border-collapse: collapse;
 }
 .task-numbers__block .table_6 td, .slide .table_6 td {
-  vertical-align: top;
+  vertical-align: bottom;
   font-size: 20px;
   border: 1px solid;
   padding: 10px;
@@ -539,10 +539,10 @@ table.iksweb th {
   padding: 20px;
 }
 .section-site h2 {
-  font-size: 2em;
+  font-size: clamp(0.8em, 3vw, 2.2em);
 }
 .section-site a {
   display: block;
   padding: 0.5em;
-  font-size: 1.8em;
+  font-size: clamp(0.8em, 3vw, 2em);
 }/*# sourceMappingURL=index.css.map */
