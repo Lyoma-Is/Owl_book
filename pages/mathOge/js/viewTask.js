@@ -26,10 +26,13 @@ export {tasks};
 
   
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
-    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, task7, task8, task9, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec} = item;
+    const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, task7, task8, task9, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec, taskDate} = item;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
     const generateHeader = () => `<details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10">`;
-    const generateFooter = () => `</details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">`;
+    const generateFooter = () => `</details><hr class="hr-pd_20">
+    <p class="p-num print" style="text-align: right;">${!taskDate ? `` : `Добавлено: ${taskDate}`}</p>
+    <hr class="hr-between"><hr class="hr-pd_20">
+    `;
     const generateFooter15 = () => `</details><hr class="hr-pd_20">`;
 
     // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
@@ -46,9 +49,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           taskKec[2] === 4 ? 
           `<img id="text-inform-button" src="../../img/inform10.svg">`:
           `<img id="text-inform-button" src="../../img/inform9.svg">` }
+          
         <p class="p-num print" style="text-align: right;"> Номер: ${taskNum}</p>
         
       </div>
+      
       <hr class="hr-pd_10">`} `;
    
     const generateAuthor = () => `${!taskAuthor ? "": `<em>${taskAuthor}</em>`}`
@@ -3603,7 +3608,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            ${task1[0]} — ${task1[1]} = ${task1[0] - task1[1]} с синими цветами.<br>
            ${task1[0] - task1[1]} / ${task1[0]} = ${(task1[0] - task1[1]) / task1[0]}
           `
-
         }
         else if(item === 2){
           return `
@@ -3726,9 +3730,60 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${task1[2]} / ${task1[0]} = ${task1[2]/task1[0]}
           `
         }
+        else if(item === 8){
+          return `
+          Орёл выпал ${task1[1]} раз, значит, решка выпала ${task1[0]} — ${task1[1]} = ${task1[0]-task1[1]} раз.<br> Всего бросков 20.<br>
+          Не имеет значения какой по счету бросок, для каждого броска вероятность решки будет: ${h10()}
+          ${task1[0]-task1[1]} / ${task1[0]} = ${(task1[0]-task1[1]) / task1[0]}
+          `
+        }
+        else if(item === 9){
+          return `
+          ${task1[0] === 1 ? 
+            `
+          Всего карандашей ${task1[1]+task1[2]}, <b>но один зеленый уже достали</b>,<br>
+          отсюда следует, что осталось ${task1[1]+task1[2]-1} карандашей, и из них зеленых ${task1[2]-1}.<br>
+          ${h10()}
+          ${task1[2]-1} / ${task1[1]+task1[2]-1} = ${(task1[2]-1) / (task1[1]+task1[2]-1)}
+            ` 
+            : 
+            task1[0] === 2 ? 
+            `
+            Всего маркеров ${task1[1]+task1[2]}, из них синих ${task1[2]}. <br>
+            ${task1[2]} / ${task1[1]+task1[2]} = ${task1[2] / (task1[1]+task1[2])}
+            ` 
+            : ``}
+          
+          `
+        }
         else{
           return `...`
         }
+      }
+      function numberToWordsRu2(num) {
+        const words = {
+            1: 'первом',
+            2: 'втором',
+            3: 'третьем',
+            4: 'четвёртом',
+            5: 'пятом',
+            6: 'шестом',
+            7: 'седьмом',
+            8: 'восьмом',
+            9: 'девятом',
+            10: 'десятом',
+            11: 'одиннадцатом',
+            12: 'двенадцатом',
+            13: 'тринадцатом',
+            14: 'четырнадцатом',
+            15: 'пятнадцатом',
+            16: 'шестнадцатом',
+            17: 'семнадцатом',
+            18: 'восемнадцатом',
+            19: 'девятнадцатом',
+            20: 'двадцатом'
+        };
+        return  words[num]
       }
       function numberToWordsRu(num) {
         const words = {
@@ -3900,7 +3955,59 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             answerBlock += generateInput();
           } 
           return answerBlock
-        }   
+        case 8:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          ${h10()}
+          Монету бросили ${task1[0]} раз. Известно, что орёл выпал ${task1[1]} раз. Найдите вероятность того, 
+          что <b>при ${numberToWordsRu2(task1[2])}</b> по счёту броске выпала решка.
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 9:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          ${h10()}
+          ${task1[0] === 1 ? 
+            `
+            Из ящика, где хранятся ${task1[1]} жёлтых и ${task1[2]} зелёных карандашей, не глядя достали два карандаша. 
+            Известно, что первый карандаш оказался зелёным. Найдите вероятность того, что второй карандаш тоже оказался зелёным.
+            ` 
+            : task1[0] === 2 ? 
+            `
+            Под классной доской в лотке лежат ${task1[1]} чёрных и ${task1[2]} синих маркера для доски. 
+            Из коробки берут случайный маркер. Найдите вероятность того, что он окажется синим.
+            
+            ` 
+            : 
+            ``}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        }  
+       
     }
     if (taskKey === 'eleven'){
       let Nomer = 11
