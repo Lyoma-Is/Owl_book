@@ -139,6 +139,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       `
     }
     const h10 = () => `<hr class="hr-pd_10">` 
+    const bordertop = (item) => `<span style="border-top: 2px solid">${item}</span>` 
     if (taskKey === 'onefive'){
       let Nomer = 1
       function reshOneFive(item){
@@ -3756,6 +3757,28 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           `
         }
+        else if(item === 10){
+          return `
+          <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv5.png">
+          <img style="display: inline-block;  width: 16em; " src="../../pages/mathOge/img/task10/sv6.png"><br>
+          ${task1[0] === 1 ? 
+            `Всего точек 10.<br>
+          Точек в событии: ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
+             `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`} — <b>${numberToWordsRu(task1[5])}</b>.<br>
+          Тогда вероятность события равна:<br> ${task1[5]} / 10 = ${task1[5]/ 10} ` 
+            :
+             task1[0] === 2 ? 
+             `
+             Всего исходов: 24 + 18 + 6 + 12 = ${24+18+6+12}<br>
+             Исходов в событии: ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
+             `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`} — <b>${task1[5]}</b>.<br>
+          Тогда вероятность события равна:<br> ${task1[5]} / 60 = ${task1[5]/ 60}
+             `
+            :
+            ``}
+          
+          `
+        }
         else{
           return `...`
         }
@@ -3811,6 +3834,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         };
         return  words[num]
       }
+      const sob1 = (item) => `${item === "+" ? '⋃' : item === "*" ? `∩` : ``}`
+      const sob2 = (item) => `${item === "A" ? "A" : item === "B" ? `B` : item === "B-" ? `${bordertop("B")}` : item === "A-" ? `${bordertop("A")}` : ``}`
       switch(typeTask){
         case 1:
           answerBlock += `
@@ -3991,6 +4016,64 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             
             ` 
             : 
+            ``}
+          <hr class="hr-pd_20">
+          `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 10:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          ${h10()}
+          ${task1[0] === 1 ? 
+            `
+            На рисунке изображена диаграмма Эйлера для случайных событий А  и В  в некотором случайном опыте. 
+            Точками показаны все равновозможные элементарные события опыта.<br>
+             Найдите вероятность события:
+             ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
+             `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`}
+             ${h10()}
+             
+             <div style="display: flex; justify-content: space-between; padding-right: 2em;">
+             <p></p>
+             <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task10/10_3291.png">
+             <p></p>
+             </div>
+             ${h10()}
+            ` 
+          : task1[0] === 2 ? 
+            `
+            На рисунке изображена диаграмма Эйлера для случайных событий А  и В  в некотором случайном опыте с равновозможными исходами. 
+            В каждой области указано, сколько исходов принадлежит этой области.
+            <br>
+             Найдите вероятность события:
+             ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
+             `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`}
+             ${h10()}
+             
+             <div style="display: flex; justify-content: space-between; padding-right: 2em;">
+             <p></p>
+             <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task10/10_3301.png">
+             <p></p>
+             </div>
+             ${h10()}
+
+            ` 
+          : task1[0] === 3 ? 
+            `
+
+            ` 
+          :
             ``}
           <hr class="hr-pd_20">
           `
