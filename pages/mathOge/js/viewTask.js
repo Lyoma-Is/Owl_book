@@ -3776,15 +3776,48 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
              `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`} — <b>${task1[5]}</b>.<br>
           Тогда вероятность события равна:<br> ${task1[5]} / 60 = ${task1[5]/ 60}
              `
-            : task1[0] === 3 ? 
+            : task1[0] === 3 || task1[0] === 4 ? 
             `Вероятность события ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
              `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`} равна: <br>
-            ${task1[5].join(' + ') + ` = ` + task1[5].reduce((el, a) => el + a, 0).toFixed(1)}
+            ${task1[5].join(' + ') + ` = ` + 
+              `${task1[5].reduce((el, a) => el + a, 0).toFixed(2).toString().at(-1) === "0" 
+                ? task1[5].reduce((el, a) => el + a, 0).toFixed(1) 
+                : task1[5].reduce((el, a) => el + a, 0).toFixed(2)}`}
             
             ` 
             :
             ``}
           
+          `
+        }
+        else if(item === 11){
+          return `
+          ${task1[0] === 1 ? 
+            `
+            P(A) = ${drobNum(`N(A)`, `N`)} = ${drobNum(task1[2], task1[1])} = ${task1[2]/task1[1]}
+            `
+            : task1[0] === 2 ? 
+            `<img style="display: block;  width: 20em; " src="../../pages/mathOge/img/task10/svd.png"> ${h10()}
+            -------------------------------------------------------------------------<br>
+            Вероятности вдоль ветки перемножаем, ветки складываем:<br>
+            P(B) = ${task1[1]} • ${task1[2]} + ${task1[3]} • ${task1[4]} =  
+            ${(task1[1]*task1[2] + task1[3]*task1[4]).toFixed(2).toString().at(-1) === "0" 
+              ? (task1[1]*task1[2] + task1[3]*task1[4]).toFixed(1) : (task1[1]*task1[2] + task1[3]*task1[4]).toFixed(2)}
+            `
+            : 
+            ``}
+          `
+        }
+        else if(item === 12){
+          return `
+          При броске двух игральных кубиков каждый кубик может принять одно из 6 значений.<br> 
+          Общее количество возможных комбинаций (исходов) определяется произведением: 6 * 6 = 36<br>
+          Нам подходят комбинации, сумма которых равна 3, 4 или 5. Выпишем их:<br>
+          Сумма равна 3: (1, 2), (2, 1) — 2 исхода.<br>
+          Сумма равна 4: (1, 3), (2, 2), (3, 1) — 3 исхода.<br>
+          Сумма равна 5: (1, 4), (2, 3), (3, 2), (4, 1) — 4 исхода.<br>
+          Общее количество благоприятных исходов: 2 + 3 + 4 = 9<br>
+          9/36=0.25<br>
           `
         }
         else{
@@ -4095,10 +4128,94 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
              ${h10()}
 
             ` 
+          : task1[0] === 4 ? 
+            `
+            На рисунке изображена диаграмма Эйлера для случайных событий А и В в некотором случайном опыте. 
+            Точками показаны все элементарные события и около каждого указана его вероятность.
+            <br>
+             Найдите вероятность события:
+             ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
+             `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`}
+             ${h10()}
+             
+             <div style="display: flex; justify-content: space-between; padding-right: 2em;">
+             <p></p>
+             <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task10/10_3321.png">
+             <p></p>
+             </div>
+             ${h10()}
+
+            ` 
           :
+
             ``}
           <hr class="hr-pd_20">
           `
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 11:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          ${h10()}
+          ${task1[0] === 1 ?  `
+            В случайном опыте N = ${task1[1]} равновозможных элементарных событий, из которых N(A) = ${task1[2]} благоприятствуют событию A. 
+            <br>Вычислите вероятность события A.
+            `
+            : task1[0] === 2 ? 
+            `
+            На рисунке изображено дерево случайного опыта. Найдите вероятность события  В.
+              ${h10()}           
+             <div style="display: flex; justify-content: space-between; padding-right: 2em;">
+             <p></p>
+             <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task10/10_${taskCounter}.png">
+             <p></p>
+             </div>
+             ${h10()}
+            `
+            :
+            ``}
+          <hr class="hr-pd_20">
+          `
+          
+          answerBlock += generateDate();
+          answerBlock += generateHeader();
+          answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshTen(task)}
+            <hr class="hr-pd_20">
+            Ответ: <b>${taskAnswer}</b>`;
+          answerBlock += generateFooter();
+          if(tumbler === false){
+            answerBlock += generateInput();
+          } 
+          return answerBlock
+        case 12:
+          answerBlock += `
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          ${h10()}
+          ${task1[0] === 1 ?  
+            `
+            Симметричный игральный кубик бросают два раза. Найдите вероятность события «сумма выпавших очков равна 3, 4 или 5».
+            `
+            : task1[0] === 2 ? 
+            `
+            
+            `
+            :
+            ``}
+          <hr class="hr-pd_20">
+          `
+          
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
