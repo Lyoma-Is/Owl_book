@@ -3603,6 +3603,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     } 
     if (taskKey === 'ten'){
       let Nomer = 10
+     
       function reshTen(item){
         if (item === 1){
           return `
@@ -3758,6 +3759,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `
         }
         else if(item === 10){
+          
           return `
           <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv5.png">
           <img style="display: inline-block;  width: 16em; " src="../../pages/mathOge/img/task10/sv6.png"><br>
@@ -3774,6 +3776,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
              `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`} — <b>${task1[5]}</b>.<br>
           Тогда вероятность события равна:<br> ${task1[5]} / 60 = ${task1[5]/ 60}
              `
+            : task1[0] === 3 ? 
+            `Вероятность события ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
+             `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`} равна: <br>
+            ${task1[5].join(' + ') + ` = ` + task1[5].reduce((el, a) => el + a, 0).toFixed(1)}
+            
+            ` 
             :
             ``}
           
@@ -4071,6 +4079,20 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
           : task1[0] === 3 ? 
             `
+            На рисунке изображена диаграмма Эйлера для случайных событий А  и В  в некотором случайном опыте. 
+            В каждой из четырёх областей указана вероятность соответствующего события.
+            <br>
+             Найдите вероятность события:
+             ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
+             `${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`}
+             ${h10()}
+             
+             <div style="display: flex; justify-content: space-between; padding-right: 2em;">
+             <p></p>
+             <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task10/10_3311.png">
+             <p></p>
+             </div>
+             ${h10()}
 
             ` 
           :
