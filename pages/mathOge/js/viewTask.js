@@ -3527,13 +3527,48 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     if (taskKey === 'nine'){
       let Nomer = 9
       function minusNum(item){
-        if( item < 0 && (item.toString().length === 2 || item.toString().length === 3)){
-          return `− ${item.toString().slice(1)}`
+        if(item < 0){ return `${item.toString().replace("-", "− ")}`}
+        else{ return item}
+      }
+      //•
+      function reshNine(item){
+        if(item === 1){
+          return `...`
+        }
+        else if(item === 2){
+          return `...`
+        }
+        else if(item === 3){
+          return `...`
+        }
+        else if(item === 4){
+          return `
+          ${task1[0]} (x ${task1[3]==="" ? "−" : `+`} ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]}) = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}<br>
+          ${task1[0]} • x ${task1[3]==="" ? "−" : `+`} ${task1[0]} • ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]} = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}<br>     
+          ${task1[0]}x ${task1[3]==="" ? "−" : `+`} ${task1[3]==="" ? (task1[0]*task1[1]).toString().slice(1) : task1[0]*task1[1]} = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}<br>
+          ${task1[0]}x = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]} ${task1[3]==="" ? "+" : `−`} ${task1[3]==="" ? (task1[0]*task1[1]).toString().slice(1) : task1[0]*task1[1]}<br>
+          ${task1[0]}x = ${(task1[2]<0) ? minusNum((task1[0]*task1[1]*-1) + task1[2]) : task1[3]==="" ? (task1[0]*task1[1]*-1) + task1[2] : (task1[1]>0 && task1[2]>0) ? task1[2]-(task1[0]*task1[1]) : (task1[0]*task1[1]) + task1[2]}<br>
+          x = ${(task1[2]<0) ? minusNum((task1[0]*task1[1]*-1) + task1[2]) : task1[3]==="" ? (task1[0]*task1[1]*-1) + task1[2] : (task1[1]>0 && task1[2]>0) ? task1[2]-(task1[0]*task1[1]) : (task1[0]*task1[1]) + task1[2]} /  ${task1[0]}<br>
+
+          x = ${(task1[2]<0) ? minusNum(((task1[0]*task1[1]*-1) + task1[2])/task1[0]) : task1[3]==="" ? ((task1[0]*task1[1]*-1) + task1[2])/task1[0] : (task1[1]>0 && task1[2]>0) ? (task1[2]-(task1[0]*task1[1]))/task1[0] : ((task1[0]*task1[1]) + task1[2])/task1[0]}<br>
+          `
+        } 
+        else if(item === 5){
+          return `
+          ${minusNum(task1[0])}x ${task1[3] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`} = ${minusNum(task1[2])}x <br>
+          ${minusNum(task1[0])}x ${task1[2]<0 ? `+ ${minusNum(task1[2]).slice(1)}x` : `− ${task1[2]}x`} = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`}<br>
+          ${typeof task1[0] === "number" ? `${minusNum(task1[0]+(task1[2]*-1))}x`: task1[0] === "" ? `${1+(task1[2]*-1)}x`: task1[0] === "− " ? `${minusNum(-1+(1*-1))}x`: ``} = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`}<br>
+          x = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`} / ${typeof task1[0] === "number" ? `${minusNum(task1[0]+(task1[2]*-1))}`: task1[0] === "" ? `${1+(task1[2]*-1)}`: task1[0] === "− " ? `${minusNum(-1+(1*-1))}`: ``}<br>     
+          x = ${taskAnswer}<br>
+          `
+        }
+        else if(item === 6){
+          return `...`
         }
         else{
-          return item
+          return `...`
         }
-        
+
       }
       switch(typeTask){
         case 1:
@@ -3573,16 +3608,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task === 4 ? 
+          ${
+            task === 4 ? 
             `
-            Найдите корень уравнения:&thinsp; ${task1[0]} ( x ${task1[3]==="" ? `−` : `+`} 
-            ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]} ) = ${task1[2].toString().length === 2 ? `— ${task1[2].toString().slice(1)}` : task1[2]}
+            Найдите корень уравнения:&thinsp; ${task1[0]} (x ${task1[3]==="" ? "−" : `+`} 
+            ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]}) = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}
             `
-            : task === 5 ? 
+            : 
+            task === 5 ? 
             `
             Найдите корень уравнения:&thinsp; ${minusNum(task1[0])}x ${task1[3] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`} = ${minusNum(task1[2])}x
             `
-            : task === 6 ? 
+            : 
+            task === 6 ? 
             `
             Найдите корень уравнения:&thinsp; ${minusNum(task1[0])} ${task1[4] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`}x = 
             ${minusNum(task1[2])}x ${task1[5] === "" ? `${minusNum(task1[3])}` : `+ ${task1[3]}`}
@@ -3592,6 +3630,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshNine(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -3762,7 +3802,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           return `
           <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv5.png">
-          <img style="display: inline-block;  width: 16em; " src="../../pages/mathOge/img/task10/sv6.png"><br>
+          <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv6.png"><br>
           ${task1[0] === 1 ? 
             `Всего точек 10.<br>
           Точек в событии: ${task1[1]==="-" ? `${bordertop(`${sob2(task1[3])} ${sob1(task1[2])} ${sob2(task1[4])}`)}`: 
