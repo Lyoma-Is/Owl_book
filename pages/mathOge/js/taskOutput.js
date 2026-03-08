@@ -170,7 +170,7 @@ taskPage.innerHTML = `
 const taskSort = document.getElementById('taskSort');
 if (taskSort) {
     taskSort.innerHTML = `
-       <option value='0'>новые</option>
+       <option value='1'>новые</option>
        <option value='0'>по возрастанию</option>
        <option value='1'>по убыванию</option>
        <option value='2'>случайный порядок</option>

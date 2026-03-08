@@ -138,6 +138,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       
       `
     }
+    const pystota = (item) => `${item === "" ? item=1 : item}`
     const h10 = () => `<hr class="hr-pd_10">` 
     const bordertop = (item) => `<span style="border-top: 2px solid">${item}</span>` 
     if (taskKey === 'onefive'){
@@ -3530,46 +3531,180 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         if(item < 0){ return `${item.toString().replace("-", "− ")}`}
         else{ return item}
       }
-      //•
+      
       function reshNine(item){
+        
         if(item === 1){
-          return `...`
+          return `
+          ${task1[0]}x<sup>2</sup> = ${task1[1]}x
+          ${h10()}
+          ${task1[0]}x<sup>2</sup> — ${task1[1]}x = 0
+          ${h10()}
+          x (${task1[0]}x — ${task1[1]}) = 0
+          ${h10()}
+          x = 0 или ${task1[0]}x — ${task1[1]} = 0
+          ${h10()}
+          ${task1[0]}x = ${task1[1]}
+          ${h10()}
+          x = ${task1[1]} / ${task1[0]}
+          ${h10()}
+          x = ${task1[1]/task1[0]}
+          <br>
+          ------------------------------------
+          <br>
+          x<sub>1</sub> = 0, 
+          ${h10()}
+          x<sub>2</sub> = ${task1[1]/task1[0]}
+          `
         }
         else if(item === 2){
-          return `...`
+          return `
+          x<sup>2</sup> — ${task1[0]} = 0 
+          ${h10()}
+         (x — ${Math.sqrt(task1[0])})(x + ${Math.sqrt(task1[0])}) = 0
+         ${h10()}
+         x<sub>1</sub> = ${Math.sqrt(task1[0])}
+         ${h10()}
+         x<sub>2</sub> = — ${Math.sqrt(task1[0])}
+          `
         }
-        else if(item === 3){
-          return `...`
+        else if(item === 3){      
+          return `
+          <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task9/disc.png">
+          ${task1[0]}x<sup>2</sup> — ${task1[1]}x + ${task1[2]} = 0
+          ${h10()}
+          a = ${pystota(task1[0])}, b = —${task1[1]}, c = ${task1[2]}
+          ${h10()}
+          D = b<sup>2</sup> — 4 • a • c 
+          ${h10()}
+          D = ${task1[1]}<sup>2</sup> — 4 • ${pystota(task1[0])} • ${task1[2]} = ${task1[1]*task1[1]} — ${pystota(task1[0])*task1[2]*4} = ${task1[1]*task1[1]-pystota(task1[0])*task1[2]*4}
+          ${h10()}
+          ${sqrtNum(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4)} = ${Math.sqrt(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4)}
+          ${h10()}${h10()}
+          x<sub>1</sub> = ${drobNum(`${task1[1]} + ${Math.sqrt(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4)}`, "2a" )} =
+          ${drobNum(`${task1[1]+Math.sqrt(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4)}`, 2*pystota(task1[0]) )} = 
+          ${(task1[1]+Math.sqrt(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4))/(2*pystota(task1[0]))}
+          ,${h10()}${h10()}
+          x<sub>2</sub> = ${drobNum(`${task1[1]} — ${Math.sqrt(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4)}`,"2a" )} =
+          ${drobNum(`${task1[1]-Math.sqrt(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4)}`, 2*pystota(task1[0]) )} = 
+          ${(task1[1]-Math.sqrt(task1[1]*task1[1]-pystota(task1[0])*task1[2]*4))/(2*pystota(task1[0]))}
+
+
+          `
         }
         else if(item === 4){
           return `
-          ${task1[0]} (x ${task1[3]==="" ? "−" : `+`} ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]}) = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}<br>
-          ${task1[0]} • x ${task1[3]==="" ? "−" : `+`} ${task1[0]} • ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]} = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}<br>     
-          ${task1[0]}x ${task1[3]==="" ? "−" : `+`} ${task1[3]==="" ? (task1[0]*task1[1]).toString().slice(1) : task1[0]*task1[1]} = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}<br>
-          ${task1[0]}x = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]} ${task1[3]==="" ? "+" : `−`} ${task1[3]==="" ? (task1[0]*task1[1]).toString().slice(1) : task1[0]*task1[1]}<br>
-          ${task1[0]}x = ${(task1[2]<0) ? minusNum((task1[0]*task1[1]*-1) + task1[2]) : task1[3]==="" ? (task1[0]*task1[1]*-1) + task1[2] : (task1[1]>0 && task1[2]>0) ? task1[2]-(task1[0]*task1[1]) : (task1[0]*task1[1]) + task1[2]}<br>
-          x = ${(task1[2]<0) ? minusNum((task1[0]*task1[1]*-1) + task1[2]) : task1[3]==="" ? (task1[0]*task1[1]*-1) + task1[2] : (task1[1]>0 && task1[2]>0) ? task1[2]-(task1[0]*task1[1]) : (task1[0]*task1[1]) + task1[2]} /  ${task1[0]}<br>
+          ${task1[0]} (x ${task1[3]==="" ? "−" : `+`} ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]}) = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}
+          ${h10()}
+          ${task1[0]} • x ${task1[3]==="" ? "−" : `+`} ${task1[0]} • ${task1[3]==="" ? task1[1].toString().slice(1) : task1[1]} = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}${h10()}     
+          ${task1[0]}x ${task1[3]==="" ? "−" : `+`} ${task1[3]==="" ? (task1[0]*task1[1]).toString().slice(1) : task1[0]*task1[1]} = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]}${h10()}
+          ${task1[0]}x = ${task1[2].toString().length === 2 ? `${minusNum(task1[2])}` : task1[2]} ${task1[3]==="" ? "+" : `−`} ${task1[3]==="" ? (task1[0]*task1[1]).toString().slice(1) : task1[0]*task1[1]}${h10()}
+          ${task1[0]}x = ${(task1[2]<0) ? minusNum((task1[0]*task1[1]*-1) + task1[2]) : task1[3]==="" ? (task1[0]*task1[1]*-1) + task1[2] : (task1[1]>0 && task1[2]>0) ? task1[2]-(task1[0]*task1[1]) : (task1[0]*task1[1]) + task1[2]}${h10()}
+          x = ${(task1[2]<0) ? minusNum((task1[0]*task1[1]*-1) + task1[2]) : task1[3]==="" ? (task1[0]*task1[1]*-1) + task1[2] : (task1[1]>0 && task1[2]>0) ? task1[2]-(task1[0]*task1[1]) : (task1[0]*task1[1]) + task1[2]} /  ${task1[0]}${h10()}
 
-          x = ${(task1[2]<0) ? minusNum(((task1[0]*task1[1]*-1) + task1[2])/task1[0]) : task1[3]==="" ? ((task1[0]*task1[1]*-1) + task1[2])/task1[0] : (task1[1]>0 && task1[2]>0) ? (task1[2]-(task1[0]*task1[1]))/task1[0] : ((task1[0]*task1[1]) + task1[2])/task1[0]}<br>
+          x = ${(task1[2]<0) ? minusNum(((task1[0]*task1[1]*-1) + task1[2])/task1[0]) : task1[3]==="" ? ((task1[0]*task1[1]*-1) + task1[2])/task1[0] : (task1[1]>0 && task1[2]>0) ? (task1[2]-(task1[0]*task1[1]))/task1[0] : ((task1[0]*task1[1]) + task1[2])/task1[0]}${h10()}
           `
         } 
         else if(item === 5){
           return `
-          ${minusNum(task1[0])}x ${task1[3] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`} = ${minusNum(task1[2])}x <br>
-          ${minusNum(task1[0])}x ${task1[2]<0 ? `+ ${minusNum(task1[2]).slice(1)}x` : `− ${task1[2]}x`} = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`}<br>
-          ${typeof task1[0] === "number" ? `${minusNum(task1[0]+(task1[2]*-1))}x`: task1[0] === "" ? `${1+(task1[2]*-1)}x`: task1[0] === "− " ? `${minusNum(-1+(1*-1))}x`: ``} = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`}<br>
-          x = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`} / ${typeof task1[0] === "number" ? `${minusNum(task1[0]+(task1[2]*-1))}`: task1[0] === "" ? `${1+(task1[2]*-1)}`: task1[0] === "− " ? `${minusNum(-1+(1*-1))}`: ``}<br>     
-          x = ${taskAnswer}<br>
+          ${minusNum(task1[0])}x ${task1[3] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`} = ${minusNum(task1[2])}x ${h10()}
+          ${minusNum(task1[0])}x ${task1[2]<0 ? `+ ${minusNum(task1[2]).slice(1)}x` : `− ${task1[2]}x`} = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`}${h10()}
+          ${typeof task1[0] === "number" ? `${minusNum(task1[0]+(task1[2]*-1))}x`: task1[0] === "" ? `${1+(task1[2]*-1)}x`: task1[0] === "− " ? `${minusNum(-1+(1*-1))}x`: ``} = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`}${h10()}
+          x = ${task1[3] === "" ? `${minusNum(task1[1]).slice(1)}` : `− ${task1[1]}`} / ${typeof task1[0] === "number" ? `${minusNum(task1[0]+(task1[2]*-1))}`: task1[0] === "" ? `${1+(task1[2]*-1)}`: task1[0] === "− " ? `${minusNum(-1+(1*-1))}`: ``}${h10()}    
+          x = ${taskAnswer}${h10()}
           `
         }
         else if(item === 6){
-          return `...`
+          return `
+          ${minusNum(task1[0])} ${task1[4] === "" ? `${minusNum(task1[1])}` : `+ ${task1[1]}`}x = ${minusNum(task1[2])}x ${task1[5] === "" ? `${minusNum(task1[3])}` : `+ ${task1[3]}`}
+          ${h10()}
+          ${task1[4] === "" ? `${minusNum(task1[1])}` : `${task1[1]}`}x ${task1[2] < 0 ? `+ ${task1[2]*-1}` : `− ${(task1[2])}`}x = ${task1[5] === "" ? `${minusNum(task1[3])}` : `${task1[3]}`} ${ task1[0] < 0 ? ` + ${task1[0].toString().slice(1)}` : `− ${task1[0]}`}
+          ${h10()}
+          ${minusNum(task1[1]+(task1[2]*-1))}x = ${minusNum(task1[3]+(task1[0]*-1))}
+          ${h10()}
+          x = ${minusNum(task1[3]+(task1[0]*-1))} / ${minusNum(task1[1]+(task1[2]*-1))}
+          ${h10()}
+          x = ${taskAnswer}
+
+          `
+        }
+        else if(item === 7){
+          return `
+          ${task1[0] === 1 ? 
+            `
+          ${task1[1]}x − ${task1[2]} = ${task1[3]} + ${task1[4]}x
+          ${h10()}
+          ${task1[1]}x − ${task1[4]}x = ${task1[3]} + ${task1[2]}
+          ${h10()}
+          ${task1[1]-task1[4]}x = ${task1[3]+task1[2]}
+          ${h10()}
+          x = ${task1[3]+task1[2]} / ${task1[1]-task1[4]}
+          ${h10()}
+          x = ${(task1[3]+task1[2])/(task1[1]-task1[4])}
+          ${h10()}
+          `
+          : task1[0] === 2 ?  
+          `
+          ${task1[1]}(x + ${task1[3]}) − ${task1[2]}(x − ${task1[3]}) = ${task1[3]}
+          ${h10()}
+          ${task1[1]} • x + ${task1[1]} • ${task1[3]} − ${task1[2]} • x − ${task1[2]} • (− ${task1[3]}) = ${task1[3]}
+          ${h10()}
+          ${task1[1]}x + ${task1[1]*task1[3]} − ${task1[2]}x + ${task1[2]*task1[3]} = ${task1[3]}
+          ${h10()}
+          ${task1[1]}x − ${task1[2]}x = ${task1[3]} − ${task1[1]*task1[3]} − ${task1[2]*task1[3]}
+          ${h10()}
+          ${task1[1]-task1[2]}x = ${minusNum(task1[3]-task1[1]*task1[3]-task1[2]*task1[3])}
+          ${h10()}
+          x = ${minusNum(task1[3]-task1[1]*task1[3]-task1[2]*task1[3])} / ${task1[1]-task1[2]}
+          ${h10()}
+          x = ${minusNum((task1[3]-task1[1]*task1[3]-task1[2]*task1[3])/(task1[1]-task1[2]))}
+          ${h10()}
+          `
+          : task1[0] === 3 ?  
+          `
+          ${task1[1]}(x − ${task1[2]}) − x = ${task1[2]}
+          ${h10()}
+          ${task1[1]} • x − ${task1[1]} • ${task1[2]} − x = ${task1[2]}
+          ${h10()}
+          ${task1[1]}x − ${task1[1]*task1[2]} − x = ${task1[2]}
+          ${h10()}
+          ${task1[1]}x − x = ${task1[2]} + ${task1[1]*task1[2]}
+          ${h10()}
+          ${task1[1]-1}x = ${task1[2]+task1[1]*task1[2]}
+          ${h10()}
+          x = ${task1[2]+task1[1]*task1[2]} / ${task1[1]-1}
+          ${h10()}
+          x = ${(task1[2]+task1[1]*task1[2])/(task1[1]-1)}
+          ${h10()}
+
+          `
+          : task1[0] === 4 ?  
+          `
+          ${task1[1]}(x − ${task1[2]}) = x + ${task1[2]}
+          ${h10()}
+          ${task1[1]} • x − ${task1[1]} • ${task1[2]} = x + ${task1[2]}
+          ${h10()}
+          ${task1[1]}x − ${task1[1]*task1[2]} = x + ${task1[2]}
+          ${h10()}
+          ${task1[1]}x − x = ${task1[2]} + ${task1[1]*task1[2]}
+          ${h10()}
+          ${task1[1]-1}x = ${task1[2]+task1[1]*task1[2]}
+          ${h10()}
+          x = ${task1[2]+task1[1]*task1[2]} / ${task1[1]-1}
+          ${h10()}
+          x = ${(task1[2]+task1[1]*task1[2])/(task1[1]-1)}
+          ${h10()}
+          `
+          :
+  
+          ``
+          } `
         }
         else{
           return `...`
         }
 
-      }
+      }//•
       switch(typeTask){
         case 1:
           answerBlock += `
@@ -3592,12 +3727,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Если уравнение имеет более одного корня, в ответ запишите ${task1[3] === "" ? `меньший` : `больший `} из корней.
             <hr class="hr-pd_20">
             `
-            : ``}
-          `
+            : ``}`
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshNine(task)}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -3626,7 +3762,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${minusNum(task1[2])}x ${task1[5] === "" ? `${minusNum(task1[3])}` : `+ ${task1[3]}`}
             ` 
             : 
-            ``}`
+            task === 7 ? 
+            `
+            ${task1[0] === 1 ? 
+              `
+              Решите уравнение: ${task1[1]}x − ${task1[2]} = ${task1[3]} + ${task1[4]}x
+              `
+            : task1[0] === 2 ? 
+              `
+              Решите уравнение: ${task1[1]}(x + ${task1[3]}) − ${task1[2]}(x − ${task1[3]}) = ${task1[3]}
+              ` 
+            : task1[0] === 3 ? 
+              `
+              Решите уравнение: ${task1[1]}(x − ${task1[2]}) − x = ${task1[2]}
+              ` 
+            : task1[0] === 4 ? 
+              `
+              Решите уравнение: ${task1[1]}(x − ${task1[2]}) = x + ${task1[2]}
+              ` 
+
+            : ``} `:``}`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
@@ -7064,7 +7219,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
     // <sup>2</sup>   — • &thinsp; √ ° ∠ &nbsp; 
     // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>
-
+    // <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv5.png">
     // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
     if (taskKey === 'seventeen'){
       let Nomer = 17
