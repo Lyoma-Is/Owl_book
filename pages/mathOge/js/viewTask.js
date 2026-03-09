@@ -24,7 +24,7 @@ const tasks = {
  
 export {tasks};
 
-  
+
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, task7, task8, task9, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec, taskDate} = item;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
@@ -140,7 +140,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     }
     const pystota = (item) => `${item === "" ? item=1 : item}`
     const h10 = () => `<hr class="hr-pd_10">` 
-    const bordertop = (item) => `<span style="border-top: 2px solid">${item}</span>` 
+    const bordertop = (item) => `<span style="border-top: 1px solid">${item}</span>` 
+
+    const sqrtN = (item) => `\\(\\sqrt{${item}}\\)`
+    const supN = (item1, item2) => `${item1}^${item2}`
+    const rowN = (item) => `\\(${item}\\)`
+    // ⋅
     if (taskKey === 'onefive'){
       let Nomer = 1
       function reshOneFive(item){
@@ -2712,14 +2717,23 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           в виде дроби со знаменателем ${task1[5]}. В ответ запишите числитель полученной дроби.
           <hr class="hr-pd_20">
           `
-            : 
+          : task === 24 ? 
+            `
+            Найдите значение выражения:&thinsp; 
+            \\(\\frac{${task1[1]}}{\\frac{${task1[1]}}{${task1[2]}} ${task1[4]} \\frac{${task1[1]}}{${task1[3]}}}\\)
+
+            `
+            :
           `
           Найдите значение выражения:&thinsp; 
+          
           ${drobNum(task1[0], task1[1])}
           &thinsp;${task1[4]}&thinsp;
           ${drobNum(task1[2], task1[3])}`}
 
+     
 
+          
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
@@ -2993,96 +3007,33 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          Найдите значение выражения: 
-          ${ task === 1 ? 
-            `a<sup style="font-size: 75%;">${task1[0]}</sup>&thinsp; •&thinsp; a<sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; :&thinsp; a<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]} <hr class="hr-pd_20">`
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          <hr class="hr-pd_10">
+          Найдите значение выражения:&thinsp;&thinsp;
+          ${ 
+            task === 1 ? `
+            \\( a^{${task1[0]}} ⋅ a^{${task1[1]}} : a^{${task1[2]}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}  \\)
+            <hr class="hr-pd_20">`
+
             : task === 2 ? 
             `${task1[4] === "u" ? 
-              `a<sup style="font-size: 75%;">${task1[0]}</sup>&thinsp;&thinsp;•&thinsp; (a<sup style="font-size: 75%;">${task1[1]}</sup>)<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}<hr class="hr-pd_20">` : 
-              `(a<sup style="font-size: 75%;">${task1[0]}</sup>)&thinsp;<sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; :&thinsp; a<sup style="font-size: 75%;">${task1[2]}</sup>&thinsp; при a = ${task1[3]}<hr class="hr-pd_20">`}`
-            : task === 3 ? `
-              ${task1[4] === "a2" ? 
-                `
-                <math style="font-size: 140%">
-              <mfrac>
-              <msup>
-                <mrow style="padding-bottom: 5px;">
-                 <mn>(&thinsp;</mn>
-                  <msup>
-                    <mn >a</mn>
-                    <mn >${task1[0]}</mn>
-                  </msup>
-                  <mn>)</mn>
-                </mrow>
-                <mn >${task1[1]}</mn>
-              </msup>
-              <msup>
-                <mn >a</mn>
-                <mn style="padding-top: 5px;">${task1[2]}</mn> 
-              </msup>
-              </mfrac>
-            </math>&thinsp;
-            при a = ${task1[3]}
-                ` 
-                : task1[4] === "a3" ?
-              `<math style="font-size: 140%">
-              <mfrac>
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">a</mn>
-                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                  </msup>
-                  <mo>•</mo>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">&thinsp;a</mn>
-                    <mn style="padding-top: 5px;">${task1[1]}</mn> 
-                  </msup>  
-                </mrow>
-                <msup>
-                  <mn style="padding-bottom: 5px;">a</mn>
-                  <mn style="padding-top: 5px;">${task1[2]}</mn> 
-                </msup>
-              </mfrac>
-            </math>&thinsp;
-            при a = ${task1[3]}` 
-            : 
-            `
-            <math style="font-size: 140%">
-              <mfrac>
-              <mrow>
-                <msup>
-                  <mrow>
-                  <mn>(&thinsp;</mn>
-                    <msup>
-                      <mn style="padding-bottom: 5px;">a</mn>
-                      <mn style="padding-top: 5px;">${task1[0]}</mn>
-                    </msup>
-                    <mn>)</mn>
-                  </mrow>
-                  <mn>${task1[1]}</mn>
-                  </msup>
-                  <mo>•&thinsp;</mo>
-                  <msup>
-                      <mn style="padding-bottom: 5px;">a</mn>
-                      <mn style="padding-top: 5px;">${task1[2]}</mn>
-                  </msup>
-               </mrow>
-                <msup>
-                  <mn style="padding-bottom: 5px;">a</mn>
-                  <mn style="padding-top: 5px;">${task1[3]}</mn> 
-                </msup>
-              </mfrac>
-            </math>&thinsp;
-            при a = ${task1[4]}
-            `}
-            
-            <hr class="hr-pd_20">
-            ` :
+              `\\(a^{${task1[0]}} ⋅ (a^{${task1[1]}})^{${task1[2]}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)
+              <hr class="hr-pd_20">` 
+              : 
+              ` \\( (a^{${task1[0]}})^{${task1[1]}} : a^{${task1[2]}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)
+              <hr class="hr-pd_20">
+            `}`
 
-            ` `}
-          `
-          
+            : task === 3 ? `
+            ${task1[4] === "a2" ? 
+            `\\(\\frac{(a^{${task1[0]}})^{${task1[1]}}}{a^{${task1[2]}}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)` 
+            : task1[4] === "a3" ?
+
+            `\\(\\frac{a^{${task1[0]}} ⋅ &thinsp;a^{${task1[1]}}}{a^{${task1[2]}}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)` 
+            : 
+
+            `\\(\\frac{(a^{${task1[0]}})^{${task1[1]}} ⋅ &thinsp;a^{${task1[2]}}}{a^{${task1[3]}}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)`} 
+            <hr class="hr-pd_20">` :``}`  
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
@@ -3100,128 +3051,37 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Найдите значение выражения: 
           ${task === 21 ? 
-            `
-            <span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">${task1[0]}a<sup>2</sup> ${task1[8]} ${task1[1]}ab ${task1[9]} ${task1[2]}b<sup>2</sup></span>
+            `\\(
+            \\sqrt{${task1[0]}a^2 ${task1[8]} ${task1[1]}ab ${task1[9]} ${task1[2]}b^2} \\quad при 
+            &thinsp;&thinsp;a = ${task1[3]}\\frac{${task1[5]}}{${task1[7]}}
+            &thinsp;&thinsp;и
+            &thinsp;&thinsp;b = ${task1[4]}\\frac{${task1[6]}}{${task1[7]}}
+            \\)` 
 
-          &thinsp; при a = ${task1[3]}
-          <math style="font-size: 140%">
-            <mfrac>
-              <mn style="padding-bottom: 5px;">${task1[5]}</mn>
-              <mn style="padding-top: 5px;">${task1[7]}</mn>      
-            </mfrac>
-          </math>&thinsp;
-          и
-          &thinsp;b = ${task1[4]}
-          <math style="font-size: 140%">
-            <mfrac>
-              <mn style="padding-bottom: 5px;">${task1[6]}</mn>
-              <mn style="padding-top: 5px;">${task1[7]}</mn>      
-            </mfrac>
-          </math>&thinsp;
-            ` 
             : task === 22 ? 
             `
             ${task1[3] === "—" ? 
-              `<span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">a<sup>${task1[0]}</sup> • (— a)<sup>${task1[1]}</sup></span> &thinsp; при a = ${task1[2]}`
+              `\\( \\sqrt{a^{${task1[0]}} ⋅ (-a)^{${task1[1]}}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[2]} \\)`
               : 
-              `<span style="font-size: 170%; margin-right: -2px;">√</span><span style="border-top: 0.14em solid; padding-top: 4px;">(— a)<sup>${task1[0]}</sup> • a<sup>${task1[1]}</sup></span> &thinsp; при a = ${task1[2]}`}
-            ` 
-            : task === 23 ? 
-            `
+              `\\( \\sqrt{(-a)^{${task1[0]}} ⋅ a^{${task1[1]}}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[2]} \\)`}` 
             
-            <span style="font-size: 250%; font-family: sans-serif;  margin-right: -2px;">√</span><span style="border-top: 0.12em solid; padding-top: 1.2em;">&thinsp;
-            <math style="font-size: 140%">
-            <mfrac>
-              <mrow>
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <msup>
-                  <mn style="padding-bottom: 5px;">a</mn> 
-                  <mn style="padding-top: 5px;">${task1[1]}</mn> 
-                </msup> 
-              </mrow> 
-              <mrow>
-                <msup>
-                  <mn style="padding-bottom: 5px;">a</mn> 
-                  <mn style="padding-top: 5px;">${task1[2]}</mn> 
-                </msup> 
-              </mrow>   
-            </mfrac>
-          </math>
-          </span>&thinsp;
-          при a = ${task1[3]} 
-            `
+            : task === 23 ? 
+            `\\(\\sqrt{\\frac{${task1[0]}a^{${task1[1]}}}{a^{${task1[2]}}}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]} \\)`
+            
             : task === 24 ? 
             `
-            <math style="font-size: 140%">
-            <mfrac>
-            <msup>
-              <mrow>
-                <msup>
-                  <mn style="padding-bottom: 5px;">a</mn> 
-                  <mn style="padding-bottom: 5px;">${task1[0]}</mn> 
-                </msup> 
-                <mn> • &thinsp;</mn>
-                <mn>(</mn>
-                <msup>
-                  <mn style="padding-bottom: 5px;">b</mn> 
-                  <mn style="padding-bottom: 5px;">${task1[1]}</mn> 
-                </msup>
-                <mn>)</mn>
-               
-              </mrow> 
-               <mn style="padding-bottom: 5px;">${task1[2]}</mn> 
-              </msup>
-              <mrow>
-                <msup>
-                  <mn style="padding-bottom: 5px;">(a • b)</mn> 
-                  <mn style="padding-top: 5px;">${task1[3]}</mn> 
-                </msup> 
-              </mrow>   
-            </mfrac>
-          </math>&thinsp; 
-          при a = ${task1[4]} и b = ${sqrtNum(task1[4])}
-
-            `
+            \\(\\frac{a^{${task1[0]}} &thinsp;⋅ &thinsp;(b^{${task1[1]}})^{${task1[2]}}}{(a &thinsp;⋅ &thinsp;b)^{${task1[3]}}} 
+            &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[4]} &thinsp;&thinsp;и &thinsp;&thinsp;b = \\sqrt{${task1[4]}}\\) `
+            
             : task === 25 ? 
-            `
-            <span style="font-size: 250%; font-family: sans-serif;  margin-right: -2px;">√</span><span style="border-top: 0.12em solid; padding-top: 1.2em;">&thinsp;
-            <math style="font-size: 140%; padding-top: 1px;">
-            <mfrac>
-                  <mn style="padding-bottom: 5px;">1</mn> 
-                  <mn style="padding-top: 5px;">${task1[0]}</mn> 
-            </mfrac>
-          </math>
-         &thinsp; • &thinsp;x<sup>${task1[1]}</sup> y<sup>${task1[2]}</sup>
-          </span>&thinsp;
-          при x = ${task1[3]} и y = ${task1[4]}
-            ` 
+            `\\(\\sqrt{\\frac{1}{${task1[0]}} &thinsp;⋅ x^{${task1[1]}} &thinsp;y^{${task1[2]}}}
+            \\quad при &thinsp;x = ${task1[3]} &thinsp;&thinsp;и &thinsp;&thinsp;y = ${task1[4]}\\)` 
+            
             : task === 26 ? 
-            `
-            <span style="font-size: 250%; font-family: sans-serif;  margin-right: -2px;">√</span><span style="border-top: 0.12em solid; padding-top: 1.2em;">&thinsp;
-              <math style="font-size: 140%; padding-top: 1px;">
-                <mfrac>
-                  <mrow>
-                    <msup>
-                      <mn style="padding-bottom: 5px;">${task1[0]}x</mn> 
-                      <mn style="padding-top: 5px;">${task1[1]}</mn> 
-                    </msup>
-                  </mrow>
-                  <mrow>
-                    <msup>
-                      <mn style="padding-bottom: 5px;">y</mn> 
-                      <mn style="padding-top: 5px;">${task1[2]}</mn> 
-                    </msup>
-                  </mrow>
-                </mfrac>
-              </math>
-            </span>&thinsp;
-          при x = ${task1[3]} и y = ${task1[4]}
-
-            `
-            :
-            ``}
-          
-          `
+            `\\(\\sqrt{\\frac{${task1[0]}x^{${task1[1]}}}{y^{${task1[2]}}}} 
+            \\quad при &thinsp;&thinsp;x = ${task1[3]} &thinsp;&thinsp;и &thinsp;&thinsp;y = ${task1[4]}\\)`
+            
+            : ``}`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
@@ -3239,174 +3099,31 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
           Найдите значение выражения: &thinsp;
           ${task === 4 ? 
-            `
-            <math style="font-size: 140%">
-              <mfrac>
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                    <mn style="padding-top: 5px;">${task1[1]}</mn>
-                  </msup>
-                  <mo>•</mo>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">&thinsp;${task1[0]}</mn>
-                    <mn style="padding-top: 5px;">${task1[2]}</mn> 
-                  </msup>  
-                </mrow>
-                <msup>
-                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                  <mn style="padding-top: 5px;">${task1[3]}</mn> 
-                </msup>
-              </mfrac>
-            </math>&thinsp;
-            ` 
+            `\\(\\frac{${task1[0]}^{${task1[1]}} &thinsp;⋅ &thinsp;${task1[0]}^{${task1[2]}}}{${task1[0]}^{${task1[3]}}}\\)` 
+
             : task === 5 ? 
-            `
-            <math style="font-size: 140%">
-              <mfrac>
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                    <mn style="padding-top: 5px;">${task1[1]}</mn>
-                  </msup> 
-                </mrow>   
-                  <mn style="padding-top: 5px;">${task1[2]}</mn>         
-              </mfrac>
-            </math>&thinsp;
-            `
-            : task === 6 ? 
-            `
-            <math style="font-size: 140%">
-              <mfrac>
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[1]}</mn>
-                    <mn style="padding-top: 5px;">${task1[2]}</mn>  
-                  </msup> 
-                </mrow>           
-              </mfrac>
-              <mn>&thinsp; • &thinsp;</mn> 
-              <mfrac>
-                <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[1]}</mn>
-                    <mn style="padding-top: 5px;">${task1[3]}</mn>  
-                  </msup> 
-                </mrow>           
-              </mfrac>
-            </math>&thinsp;
-            ` 
-            : task === 7 ? 
-            `
-            <math style="font-size: 140%">
-              <mfrac>
-                <msup>
-                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                    <mn style="padding-top: 5px;">${task1[1]}</mn>  
-                  </msup> 
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                    <mn style="padding-top: 5px;">${task1[3]}</mn>  
-                  </msup> 
-                  <mn>&thinsp; • &thinsp;</mn> 
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[4]}</mn>
-                    <mn style="padding-top: 5px;">${task1[5]}</mn>  
-                  </msup> 
-                </mrow>           
-              </mfrac>            
-            </math>&thinsp;
-
-            ` 
-            : task === 8 ? 
-            `
-            <math style="font-size: 140%">
-              <mfrac>  
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                    <mn style="padding-top: 5px;">${task1[1]}</mn>  
-                  </msup> 
-                  <mn>&thinsp; • &thinsp;</mn> 
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                    <mn style="padding-top: 5px;">${task1[3]}</mn>  
-                  </msup> 
-                </mrow>  
-                <msup>
-                  <mn style="padding-bottom: 5px;">${task1[4]}</mn>
-                  <mn style="padding-top: 5px;">${task1[5]}</mn>  
-                </msup>          
-              </mfrac>            
-            </math>&thinsp;
-
-            ` 
-            : task === 9 ? 
-            `
-            <math style="font-size: 140%">
-              <mfrac> 
-               
-              <msup>
-                <mrow>
-                  <mn style="padding-bottom: 5px;">(${task1[0]}</mn> 
-                  <mn>&thinsp; • &thinsp;</mn> 
-                  <mn style="padding-bottom: 5px;">${task1[1]})</mn> 
-                </mrow>  
-                 <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                </msup>
-                <mrow>
-                <msup>
-                  <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                  <mn style="padding-top: 5px;">${task1[3]}</mn>     
-                </msup> 
-                <mn>&thinsp; • &thinsp;</mn>
-                <msup>
-                  <mn style="padding-bottom: 5px;">${task1[1]}</mn>
-                  <mn style="padding-top: 5px;">${task1[4]}</mn>     
-                </msup> 
-                </mrow>         
-              </mfrac>            
-            </math>&thinsp;
+              `\\(\\frac{${task1[0]}^{${task1[1]}}}{${task1[2]}}\\)`
             
-            ` 
+            : task === 6 ? 
+              `\\(\\frac{${task1[0]}}{${task1[1]}^{${task1[2]}}} ⋅ \\frac{${task1[0]}}{${task1[1]}^{${task1[3]}}}\\)` 
+            
+            : task === 7 ? 
+              `\\(\\frac{${task1[0]}^{${task1[1]}}}{${task1[2]}^{${task1[3]}} &thinsp;⋅ &thinsp;${task1[4]}^{${task1[5]}}}\\)` 
+            
+            : task === 8 ? 
+              `\\(\\frac{${task1[0]}^{${task1[1]}} &thinsp;⋅ &thinsp;${task1[2]}^{${task1[3]}}}{${task1[4]}^{${task1[5]}}}\\)` 
+            
+            : task === 9 ? 
+              `\\(\\frac{(${task1[0]} &thinsp;⋅ &thinsp;${task1[1]})^{${task1[2]}}}{${task1[0]}^{${task1[3]}} &thinsp;⋅ &thinsp;${task1[1]}^{${task1[4]}}}\\)` 
+           
             : task === 10 ? 
-            `
-            <math style="font-size: 140%">
-              <mfrac> 
-                <msup>
-                  <mrow>
-                    <mn>(&thinsp;</mn>
-                    <msup>
-                      <mn style="padding-bottom: 5px;">${task1[0]}</mn> 
-                      <mn style="padding-bottom: 5px;">${task1[1]}</mn> 
-                    </msup>
-                    <mn>)</mn>
-                  </mrow>  
-                  <mn style="padding-bottom: 5px;">${task1[2]}</mn>
-                </msup>
-
-                <mrow>
-                  <msup>
-                    <mn style="padding-bottom: 5px;">${task1[0]}</mn>
-                    <mn style="padding-top: 5px;">${task1[3]}</mn>     
-                  </msup> 
-                </mrow>         
-              </mfrac>            
-            </math>&thinsp;
-
-            ` 
+              `\\(\\frac{(${task1[0]}^{${task1[1]}})^{${task1[2]}}}{${task1[0]}^{${task1[3]}}}\\)` 
+            
             : task === 11 ? 
-            `${task1[0]} <sup style="font-size: 75%;">${task1[1]}</sup>&thinsp; •&thinsp; ( ${task1[0]}<sup style="font-size: 75%;">${task1[2]}</sup> ) <sup style="font-size: 75%;">${task1[3]}</sup>`
-            : task === 12 ? 
-            `
-            `
-            :
-            ``}
-          
-          `
+              `\\(${task1[0]}^{${task1[1]}} &thinsp;⋅ &thinsp; (${task1[0]}^{${task1[2]}})^{${task1[3]}}\\)`
+            
+            :``}`
+
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
@@ -3421,96 +3138,53 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          ${h10()}
           Найдите значение выражения: &thinsp;
-          ${task === 31 ? 
-          `
-          <math style="font-size: 140%; padding-top: 1px;">
-            <mfrac>
-              <mn style=" padding-bottom: 2px;">
-                <mrow>
-                  ${sqrtNum(task1[0])}
-                  •
-                  ${sqrtNum(task1[1])}
-                </mrow>
-              </mn>
-              <mn style=" padding-top: 5px;">
-                <mrow>
-                    ${sqrtNum(task1[2])}
-                </mrow>
-               </mn>
-            </mfrac>
-          </math>
-
+          ${task === 31 ? `
+          \\( \\frac{\\sqrt{${task1[0]}}&thinsp; ⋅ &thinsp;\\sqrt{${task1[1]}}}{\\sqrt{${task1[2]}}} \\)     
           ` 
-          : task === 32 ? 
-          `
+          : task === 32 ? ` 
           ${task1[0] === 1 ? 
-            `<math style="font-size: 140%; padding-top: 1px;">
-                <mfrac>   
-                  <msup style="padding-bottom: 4px;">  
-                    <mn>
-                      <mrow>(${task1[1]}${sqrtNum(task1[2])})</mrow>
-                    </mn>
-                    <mn>${task1[3]}</mn>
-                  </msup>
-                  <mn style="padding-top: 5px;">${task1[4]}</mn>
-                </mfrac>
-              </math>` 
+            `\\( \\frac{(${task1[1]}\\sqrt{${task1[2]}})^${task1[3]}}{${task1[4]}} \\)`
           : 
-          `
-          <math style="font-size: 140%; padding-top: 1px;">
-            <mfrac>   
-              <mn style="padding-bottom: 5px;">${task1[4]}</mn>
-                <msup style="padding-top: 5px;">  
-                  <mn>
-                    <mrow>(${task1[1]}${sqrtNum(task1[2])})</mrow>
-                  </mn>
-                  <mn>${task1[3]}</mn>
-                </msup>
-            </mfrac>
-          </math>
+            `\\( \\frac{${task1[4]}}{(${task1[1]}\\sqrt{${task1[2]}})^${task1[3]}} \\)`
+          }`
 
-          `} `
-          : task === 33 ? 
-           `
-           ${sqrtNum(`${task1[0]} • ${task1[1]}`)}&thinsp;• ${sqrtNum(task1[2])}
-           ` 
-           : task === 34 ?     
-           `${task1[3] === "+" ? 
-            `(${sqrtNum(task1[0])}&thinsp;+ ${task1[1]})<sup>2</sup> — ${task1[2]}${sqrtNum(task1[0])}` 
+          : task === 33 ? `
+          ${sqrtN(`${task1[0]} ⋅ ${task1[1]}`)} ${rowN(`⋅`)} ${sqrtN(task1[2])
+          }` 
+
+          : task === 34 ? `
+          ${task1[3] === "+" ? 
+            `\\((\\sqrt{${task1[0]}} + ${task1[1]})^2 - ${task1[2]}\\sqrt{${task1[0]}}\\)` 
             :
-            `(${sqrtNum(task1[0])}&thinsp;— ${task1[1]})<sup>2</sup> + ${task1[2]}${sqrtNum(task1[0])}`
-            }` 
+            `\\((\\sqrt{${task1[0]}} - ${task1[1]})^2 + ${task1[2]}\\sqrt{${task1[0]}}\\)` 
+          }` 
 
-           : task === 35 ? 
-           `
+          : task === 35 ? `
            ${task1[2] === "+" ? 
-            `(${sqrtNum(task1[0])}&thinsp;+ ${sqrtNum(task1[1])}) &thinsp;• ${sqrtNum(task1[0])}` 
+            `(${sqrtN(task1[0])} + ${sqrtN(task1[1])}) • ${sqrtN(task1[0])}` 
             : 
-            `(${sqrtNum(task1[0])}&thinsp;— ${sqrtNum(task1[1])}) &thinsp;• ${sqrtNum(task1[0])}`
-           }`
+            `(${sqrtN(task1[0])} — ${sqrtN(task1[1])}) • ${sqrtN(task1[0])}`
+          }`
 
-           : task === 36 ? 
-           `${task1[0]}${sqrtNum(task1[1])}&thinsp;• ${task1[2]}${sqrtNum(task1[3])}&thinsp;• ${sqrtNum(task1[4])}` 
-           
-           : task === 37 ? 
-           `
+          : task === 36 ? `
+          \\(${task1[0]}\\sqrt{${task1[1]}} ⋅ ${task1[2]}\\sqrt{${task1[3]}} ⋅ \\sqrt{${task1[4]}}\\)
+          ` 
+
+          : task === 37 ? `
            ${task1[2] === 1 ? 
-            `(${sqrtNum(task1[0])}— ${task1[1]})(${sqrtNum(task1[0])} + ${task1[1]})` 
+            `(${sqrtN(task1[0])} — ${rowN(task1[1])})(${sqrtN(task1[0])} + ${rowN(task1[1])})`
             : 
-            `(${sqrtNum(task1[0])}— ${sqrtNum(task1[1])})(${sqrtNum(task1[0])} + ${sqrtNum(task1[1])})`
-            }`
-           : task === 38 ? 
-           `
-           <span style="font-size: 130%; font-family: MathJax_Size3;">√</span>
-           <span style="border-top: 0.099em solid; padding-top: 5px; margin-left: -5px;">&thinsp;${task1[0]}<sup>${task1[1]}</sup>&thinsp;</span>        
-           `
-           :
-           ``
+            `(${sqrtN(task1[0])} — ${sqrtN(task1[1])})(${sqrtN(task1[0])} + ${sqrtN(task1[1])})` 
+          }`
 
-          }
-          `
+          : task === 38 ? `
+          ${sqrtN(supN(task1[0], task1[1]))
+
+          }` :``}`
+
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
@@ -9608,5 +9282,5 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         
         }   
     }
-   
+
 }

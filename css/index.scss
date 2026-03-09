@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     //font-family: 'Arial', sans-serif;  
-    font-family: 'Roboto', sans-serif;
 }
 
 $back-top-color:  rgb(233, 199, 105);
@@ -26,6 +25,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 
 }
 li {
@@ -555,7 +555,7 @@ table.iksweb th {
 .footer{
     .footer-text{
         display: flex;
-        background-color: #faf5ea;
+        background-color: #faf5ea ;
         //background-color: $body-color;
         height: 40px;
         padding-left: 20px;

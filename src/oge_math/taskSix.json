@@ -1,4 +1,15 @@
 [   
+    {
+        "taskCounter": 3391,
+        "taskDate": "2026",
+        "typeTask": 2,
+        "taskKec": [1, 6, 1],
+        "taskAnswer": 17.5,
+        "task": 24,
+        "task1": [4, 1, 30, 45, "+"],
+
+        "taskNum": "D39BF5"
+    },
      {
         "taskCounter": 2332,
         "typeTask": 2,

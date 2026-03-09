@@ -96,7 +96,7 @@ function displayTasks(taskKey, tasksToDisplay) {
   
   output.innerHTML = tasksToDisplay.map(item => generateTaskHTML(taskKey, item)).join('');
   countLabel.innerHTML = `<hr class="hr-pd_5">Количество загруженных задач: ${countData[taskKey]}`
-  
+  MathJax.typesetPromise();
 }
 
 
@@ -292,4 +292,3 @@ document.addEventListener('click', function(e) {
     }
   }
 });
-
