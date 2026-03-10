@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
         }
+        MathJax.typesetPromise();
     }
 
     // Вспомогательные функции для преобразования номеров заданий
@@ -235,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
     generateBtn.addEventListener('click', function(e) {
         e.preventDefault();
         generateTasks();
+        
     });
 
     // Инициализируем чекбоксы при загрузке страницы
@@ -248,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (checkbox) checkbox.checked = true;
         });
         generateTasks();
+        
     }
 
     // Код для кнопки "Наверх"
@@ -283,4 +286,5 @@ document.addEventListener('DOMContentLoaded', function() {
         
         btnUp.addEventListener();
     }
+    
 });

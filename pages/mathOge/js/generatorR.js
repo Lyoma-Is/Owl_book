@@ -298,7 +298,8 @@ async function displayTasks() {
             let razOtv = document.querySelector('.details-raz_otv'); 
             if (razOtv) {razOtv.classList.remove('details-raz_otv'); }
         });
-    }       
+    }  
+    MathJax.typesetPromise();
 }
 
 export { correctAnswerGen }
