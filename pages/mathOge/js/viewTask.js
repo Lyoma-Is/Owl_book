@@ -5063,21 +5063,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${task === 41 ? 
             `
           Укажите решение системы неравенств:<hr class="hr-pd_10">
+          $$
+          \\begin{cases}
+          ${task1}, \\\\
+          ${task2}.
+          \\end{cases}
+          $$
           
-          <math style="font-size: 130%;">
-            <mrow style="display: flex; align-items: center;">
-            <mn  style="font-size: 270%; font-family: MathJax_Size3; ">{</mn>
-              <mtable style="vertical-align: middle;">
-                <mtr >
-                  <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1},</mtd>
-                </mtr>
-              
-                <mtr>
-                  <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2}.</mtd>
-                </mtr>
-              </mtable>
-            </mrow>
-          </math>
           <hr class="hr-pd_20">
           <div >
             <p>1) ${task3[0]}</p><hr class="hr-pd_20">
@@ -5087,22 +5079,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           </div>`
             : task === 42 ? 
             `
-          Укажите решение системы неравенств:<hr class="hr-pd_10">
-          
-          <math style="font-size: 130%;">
-            <mrow style="display: flex; align-items: center;">
-            <mn  style="font-size: 270%; font-family: MathJax_Size3; ">{</mn>
-              <mtable style="vertical-align: middle;">
-                <mtr >
-                  <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1},</mtd>
-                </mtr>
-              
-                <mtr>
-                  <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2}.</mtd>
-                </mtr>
-              </mtable>
-            </mrow>
-          </math>
+          Укажите решение системы неравенств:<hr class="hr-pd_10">        
+          $$
+          \\begin{cases}
+          ${task1}, \\\\
+          ${task2}.
+          \\end{cases}
+          $$
           <hr class="hr-pd_20">
           <div style="display: flex; flex-direction: column; align-items: flex-start; vertical-align: middle;">
             <p>1) ${task3[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p><hr class="hr-pd_10">

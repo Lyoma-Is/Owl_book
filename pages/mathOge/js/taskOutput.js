@@ -91,10 +91,13 @@ function setupFilters(taskKey, data) {
 }
 
 function displayTasks(taskKey, tasksToDisplay) {
-  const output = document.querySelector(`.task-${taskKey}-numbers__block`);
-  if (!output) return;
   
+  const output = document.querySelector(`.task-${taskKey}-numbers__block`);
+  
+  if (!output) return;
+
   output.innerHTML = tasksToDisplay.map(item => generateTaskHTML(taskKey, item)).join('');
+  
   countLabel.innerHTML = `<hr class="hr-pd_5">Количество загруженных задач: ${countData[taskKey]}`
   MathJax.typesetPromise();
 }
