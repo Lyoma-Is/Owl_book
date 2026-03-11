@@ -223,6 +223,7 @@ function displayTasksByVariantWithSlider(tasksToDisplay) {
     const tasksHTML = tasksToDisplay.map(task => generateTaskHTML(task.source, task, false));
     const slider = createSlider(tasksHTML, correctAnswers);
     setupCheckButton(slider, correctAnswers);
+    
 }
 
 export {correctAnswer}

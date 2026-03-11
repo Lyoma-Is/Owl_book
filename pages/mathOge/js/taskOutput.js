@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
           resultContainer.innerHTML = '<p class="error">Задача не найдена.</p>';
       }
+      MathJax.typesetPromise();
   });
 
   searchInput.addEventListener('keypress', (event) => {
@@ -134,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
           searchBtn.click();
       }
   });
+  
 });
 
 document.getElementById('select-task').addEventListener('change', function() {

@@ -145,7 +145,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const sqrtN = (item) => `\\(\\sqrt{${item}}\\)`
     const supN = (item1, item2) => `${item1}^${item2}`
     const rowN = (item) => `\\(${item}\\)`
-    // ⋅
+    
     if (taskKey === 'onefive'){
       let Nomer = 1
       function reshOneFive(item){
@@ -2731,9 +2731,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           &thinsp;${task1[4]}&thinsp;
           ${drobNum(task1[2], task1[3])}`}
 
-     
-
-          
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
@@ -3175,15 +3172,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
           : task === 37 ? `
            ${task1[2] === 1 ? 
-            `(${sqrtN(task1[0])} — ${rowN(task1[1])})(${sqrtN(task1[0])} + ${rowN(task1[1])})`
+            `\\( (\\sqrt{${task1[0]}} - ${task1[1]})(\\sqrt{${task1[0]}} + ${task1[1]}) \\)`
             : 
-            `(${sqrtN(task1[0])} — ${sqrtN(task1[1])})(${sqrtN(task1[0])} + ${sqrtN(task1[1])})` 
+            `\\( (\\sqrt{${task1[0]}} - \\sqrt{${task1[1]}})(\\sqrt{${task1[0]}} + \\sqrt{${task1[1]}}) \\)` 
           }`
 
-          : task === 38 ? `
-          ${sqrtN(supN(task1[0], task1[1]))
-
-          }` :``}`
+          : task === 38 ? `\\( \\sqrt{${task1[0]}^${task1[1]}}\\)` :``}`
 
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -6873,11 +6867,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         }   
     }
-    // <span style="font-size: 140%">√</span><span  style="border-top: 0.14em solid ">${task1[0]}</span>     <span style="font-size: 140%;">√</span><span  style="border-top: 0.13em solid ">25</span>
     // <sup>2</sup>   — • &thinsp; √ ° ∠ &nbsp; 
-    // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>
     // <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv5.png">
-    // <span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">2</span>
+    // ⋅
     if (taskKey === 'seventeen'){
       let Nomer = 17
       function reshSeventeen(item){
@@ -7865,22 +7857,35 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          Решите систему уравнений:&thinsp; 
+          Решите систему уравнений:
           ${task === 31 ? 
             `
-            ${sistemNum(`${task1[0]}${supNum("x", 2)}+ y = ${task1[2]}`, `${task1[1]}${supNum("x", 2)}− y = ${task1[3]}`)}
+            $$
+              \\begin{cases}
+              ${task1[0]}x^2 + y = ${task1[2]},\\\\
+              ${task1[1]}x^2 - y = ${task1[3]}.
+              \\end{cases}
+            $$
             `
           : task === 32 ? 
             `
-            ${sistemNum(`${task1[0]}${supNum("x",2)}− ${task1[2]}x = y`, `${task1[1]} x − ${task1[3]} = y`)}
+            $$
+              \\begin{cases}
+              ${task1[0]}x^2 - ${task1[2]}x = y,\\\\
+              ${task1[1]}x - ${task1[3]} =  y.
+              \\end{cases}
+            $$
             `
           : task === 33 ? 
             `
-            ${sistemNum(`${task1[0]}${supNum("x",2)} + ${task1[4]}${supNum("y",2)} = ${task1[3]}`, `${task1[1]}${supNum("x",2)} + ${task1[2]}${supNum("y",2)} = ${task1[3]}x`)}
+             $$
+              \\begin{cases}
+              ${task1[0]}x^2 + ${task1[4]}y^2 =  ${task1[3]},\\\\
+              ${task1[1]}x^2 + ${task1[2]}y^2 =  ${task1[3]}x.
+              \\end{cases}
+            $$
             `
-            : 
-            ``}
-          
+          :``}
           <hr class="hr-pd_20"> 
           `
           answerBlock += generateDate();
@@ -7898,21 +7903,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          <hr class="hr-pd_10">
           Решите неравенство:&thinsp;  
           ${task === 41 ? 
             `
-             ${supNum(`(x — ${task1[0]})`, 2)} < ${sqrtNum(task1[1])} (x — ${task1[0]})
+            \\((x - ${task1[0]})^2 < \\sqrt{${task1[1]}} &thinsp;(x - ${task1[0]})\\)
+             
             `
           : task === 42 ? 
             `
-            ${drobNum(`—${task1[0]}`, rowNum(`${supNum(`(x ${task1[3]} ${task1[1]})`, 2)}`, ` — ${task1[2]}`))} ≥ 0
-             
+            \\(\\frac{-${task1[0]}}{(x &thinsp;${task1[3]} &thinsp;${task1[1]})^2 &thinsp;- &thinsp;${task1[2]}} ≥ 0\\)  
             `
           : task === 43 ? 
             `
-            —${drobNum(`${task1[0]}`, rowNum(`${supNum(`x`, 2)}`, `— ${task1[1]}x — ${task1[2]}`))} ≤ 0
-             
+            \\(- \\frac{${task1[0]}}{x^2 &thinsp;- &thinsp;${task1[1]}x &thinsp;- &thinsp;${task1[2]}} ≤ 0\\)    
             `
             :
             ``}
