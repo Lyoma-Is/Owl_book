@@ -87,23 +87,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       </math>  
       `
     }
-    function sistemNum(item1, item2){
-      return `
-      <math style="font-size: 110%;">
-            <mrow style="display: flex; align-items: center;">
-            <mn  style="font-size: 250%; font-family: MathJax_Size3;">{</mn>
-              <mtable style="vertical-align: middle; ">
-                <mtr >
-                  <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${item1},</mtd>
-                </mtr>
-                <mtr>
-                  <mtd style="padding-top: 5px; text-align: left;">&thinsp;${item2}.</mtd>
-                </mtr>
-              </mtable>
-            </mrow>
-          </math>
-      `
-    }
     function rowNum(item1, item2){
       return `
       <math style="font-size: 140%;">
@@ -142,10 +125,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const h10 = () => `<hr class="hr-pd_10">` 
     const bordertop = (item) => `<span style="border-top: 1px solid">${item}</span>` 
 
-    const sqrtN = (item) => `\\(\\sqrt{${item}}\\)`
-    const supN = (item1, item2) => `${item1}^${item2}`
-    const rowN = (item) => `\\(${item}\\)`
-    
     if (taskKey === 'onefive'){
       let Nomer = 1
       function reshOneFive(item){
@@ -3148,22 +3127,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `\\( \\frac{${task1[4]}}{(${task1[1]}\\sqrt{${task1[2]}})^${task1[3]}} \\)`
           }`
 
-          : task === 33 ? `
-          ${sqrtN(`${task1[0]} ⋅ ${task1[1]}`)} ${rowN(`⋅`)} ${sqrtN(task1[2])
-          }` 
+          : task === 33 ? `\\(\\sqrt{${task1[0]} ⋅ ${task1[1]}} ⋅ \\sqrt{${task1[2]}}\\)` 
 
           : task === 34 ? `
           ${task1[3] === "+" ? 
             `\\((\\sqrt{${task1[0]}} + ${task1[1]})^2 - ${task1[2]}\\sqrt{${task1[0]}}\\)` 
             :
-            `\\((\\sqrt{${task1[0]}} - ${task1[1]})^2 + ${task1[2]}\\sqrt{${task1[0]}}\\)` 
-          }` 
+            `\\((\\sqrt{${task1[0]}} - ${task1[1]})^2 + ${task1[2]}\\sqrt{${task1[0]}}\\)` }` 
 
           : task === 35 ? `
            ${task1[2] === "+" ? 
-            `(${sqrtN(task1[0])} + ${sqrtN(task1[1])}) • ${sqrtN(task1[0])}` 
+            `\\( (\\sqrt{${task1[0]}} + \\sqrt{${task1[1]}}) ⋅ \\sqrt{${task1[0]}}\\)` 
             : 
-            `(${sqrtN(task1[0])} — ${sqrtN(task1[1])}) • ${sqrtN(task1[0])}`
+            `\\( (\\sqrt{${task1[0]}} - \\sqrt{${task1[1]}}) ⋅ \\sqrt{${task1[0]}}\\)`
           }`
 
           : task === 36 ? `
@@ -8352,7 +8328,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       function reshTwentyOne(item){
         if (item === 1){
           return `
-          
+          ...
           `
         }
         else {return `...`}
@@ -8487,129 +8463,67 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task === 31 ? 
-            `
+          ${
+            task === 31 ? `
             Постройте график функции:
             <hr class="hr-pd_20">
-            &thinsp;&thinsp; 
-            <math style="font-size: 110%;">
-              <mrow style="display: flex; align-items: center;">
-              <mn>y = </mn>
-              <mn  style="font-size: 380%; font-family: MathJax_Size3;">{</mn>
-                <mtable style="vertical-align: middle; ">
-                  <mtr >
-                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${task1}</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task2}</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;${task3}</mtd>
-                  </mtr>
-                </mtable>
-              </mrow>
-            </math>
-            <math style="font-size: 110%;">
-              <mrow style="display: flex; align-items: center;">
-                
-                <mtable style="vertical-align: middle; ">
-                  <mtr >
-                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task4},</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task5},</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task6}.</mtd>
-                  </mtr>
-                </mtable>
-              </mrow>
-            </math>
+            \\(
+            \\begin{cases}
+            ${task1}  \\\\
+            ${task2}  \\\\
+            ${task3}
+            \\end{cases}
+            \\)
+            \\(
+            \\begin{array}{l}
+            \\quad при &thinsp;&thinsp;${task4}, \\\\
+            \\quad при &thinsp;&thinsp;${task5}, \\\\
+            \\quad при &thinsp;&thinsp;${task6},
+            \\end{array}
+            \\)
+            
             <hr class="hr-pd_20">
             Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
          
             `
-          : task === 32 ? 
-            `
+          : task === 32 ? `
             Постройте график функции:
             <hr class="hr-pd_20">
-            &thinsp;&thinsp;
-            <math style="font-size: 110%;">
-              <mrow style="display: flex; align-items: center;">
-              <mn>y = </mn>
-              <mn  style="font-size: 270%; font-family: MathJax_Size3;">{</mn>
-                <mtable style="vertical-align: middle; ">
-                  <mtr >
-                    <mtd style="padding-bottom: 5px; text-align: left;"> ${supNum(task5,2)}${task1}</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;"> ${task2}</mtd>
-                  </mtr> 
-                </mtable>
-              </mrow>
-            </math>
-            <math style="font-size: 110%;">
-              <mrow style="display: flex; align-items: center;">
-                
-                <mtable style="vertical-align: middle; ">
-                  <mtr >
-                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task3},</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task4}.</mtd>
-                  </mtr>
-                  
-                </mtable>
-              </mrow>
-            </math>
-
+            \\(
+            \\begin{cases}
+            ${task5}^2${task1}  \\\\
+            ${task2}
+            \\end{cases}
+            \\)
+            \\(
+            \\begin{aligned}
+            \\quad при &thinsp;&thinsp;${task3}, \\\\
+            \\quad при &thinsp;&thinsp;${task4}.
+            \\end{aligned}
+            \\)
             <hr class="hr-pd_20">
             Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
  
             `
-            : task === 33 ? 
-            `
+          : task === 33 ?  `
             Постройте график функции:
             <hr class="hr-pd_20">
-            &thinsp;&thinsp;
-            <math style="font-size: 110%;">
-              <mrow style="display: flex; align-items: center;">
-              <mn>y = </mn>
-              <mn  style="font-size: 340%; font-family: MathJax_Size3;">{</mn>
-                <mtable style="vertical-align: middle; ">
-                  <mtr >
-                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;${supNum(task5,2)}${task1}</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;"> −${drobNum(task2, "x")}</mtd>
-                  </mtr> 
-                </mtable>
-              </mrow>
-            </math>
-            <math style="font-size: 110%;">
-              <mrow style="display: flex; align-items: center;">
-                
-                <mtable style="vertical-align: middle; ">
-                  <mtr >
-                    <mtd style="padding-bottom: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task3},</mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd style="padding-top: 5px; text-align: left;">&thinsp;при&thinsp;&thinsp; ${task4}.</mtd>
-                  </mtr>
-                  
-                </mtable>
-              </mrow>
-            </math>
-
+            \\(
+            \\begin{cases}
+            ${task5}^2${task1}  \\\\
+            -\\frac{${task2}}{x}
+            \\end{cases}
+            \\)
+            \\(
+            \\begin{aligned}
+            \\quad при &thinsp;&thinsp;${task3}, \\\\
+            \\quad при &thinsp;&thinsp;${task4}.
+            \\end{aligned}
+            \\)
             <hr class="hr-pd_20">
-            Определите, при каких значениях m прямая y = m имеет с графиком ${task1.length > 4 ? `одну или две общие точки`: `ровно одну общую точку`}.
- 
-            `
-            : 
-            ``}
-          
-          <hr class="hr-pd_20">
-          `
+            Определите, при каких значениях m прямая y = m имеет с графиком 
+            ${task1.length > 4 ? `одну или две общие точки`: `ровно одну общую точку`}.`
+          : ``} <hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
