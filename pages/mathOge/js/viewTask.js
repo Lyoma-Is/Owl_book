@@ -6867,9 +6867,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${
            task1[0] === 7 ? 
            `
+           <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task17/17_3392_resh.png"><br>
            Первый угол ромба равен ${task1[1]}°,<br>
            Второй угол ромба равен 180° — ${task1[1]}° = ${180-task1[1]}°.<br>
-           Тогда угол А четырехугольника ABCH равен: 360° — ${task1[1]}° — ${180-task1[1]}° = ${360-(180-task1[1])-90-task1[1]}°<br>
+           Тогда угол А четырехугольника ABCH равен:<br>
+           360° — ${task1[1]}° — ${180-task1[1]}° = ${360-(180-task1[1])-90-task1[1]}°<br>
            Отсюда угол между высотой и большей диагональю ромба:<br>
            180° — ${360-(180-task1[1])-90-task1[1]}° — ${(180-task1[1])/2}° = ${180-90-(180-task1[1])/2}°
            ` 
