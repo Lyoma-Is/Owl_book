@@ -1,5 +1,145 @@
 [  
     {
+        "taskCounter": 3412,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 16,
+        "task": 1,
+
+        "task1": [8, 8, 0.5],
+
+        "taskNum": "AE58DE",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3411,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 720,
+        "task": 1,
+
+        "task1": [8, 60, 0.4],
+
+        "taskNum": "7B0DD9",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3410,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 24,
+        "task": 1,
+
+        "task1": [8, 8, 0.75],
+
+        "taskNum": "3DB928",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3409,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 140,
+        "task": 1,
+
+        "task1": [8, 20, 0.7],
+
+        "taskNum": "3B361E",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3408,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 20,
+        "task": 1,
+
+        "task1": [8, 20, 0.1],
+
+        "taskNum": "07F31C",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3407,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 240,
+        "task": 1,
+
+        "task1": [8, 40, 0.3],
+
+        "taskNum": "3F24B3",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3406,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 40,
+        "task": 1,
+
+        "task1": [8, 10, 0.8],
+
+        "taskNum": "EB07BC",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3405,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 90,
+        "task": 1,
+
+        "task1": [8, 30, 0.2],
+
+        "taskNum": "60B807",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3404,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 120,
+        "task": 1,
+
+        "task1": [8, 20, 0.6],
+
+        "taskNum": "BD1901",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3403,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 18,
+        "task": 1,
+
+        "task1": [8, 12, 0.25],
+
+        "taskNum": "465D48",
+        
+        "taskDate": "2026"
+
+    },
+    {
         "taskCounter": 3402,
         "typeTask": 1,
         "taskKec": [1, 17, 1],

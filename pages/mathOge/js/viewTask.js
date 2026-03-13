@@ -6865,9 +6865,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 1){
           return `
           ${
-           task1[0] === 7 ? 
-           `
-           <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task17/17_3392_resh.png"><br>
+           task1[0] === 7 ?  `
+           <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task17/17_3392_resh.png">
            Первый угол ромба равен ${task1[1]}°,<br>
            Второй угол ромба равен 180° — ${task1[1]}° = ${180-task1[1]}°.<br>
            Тогда угол А четырехугольника ABCH равен:<br>
@@ -6876,7 +6875,53 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            180° — ${360-(180-task1[1])-90-task1[1]}° — ${(180-task1[1])/2}° = ${180-90-(180-task1[1])/2}°
            ` 
            
-           :`` 
+          : task1[0] === 8 ? `
+          <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task17/17_3403_resh.png">
+          Отношение противолежащего катета к прилежащему в прямоугольном треугольнике называется тангенсом острого угла.
+          ${h10()}
+          \\( tgBCA = \\frac{BO}{CO} \\)<br>
+          -----------------------------------------------------------------------     
+          ${h10()}
+          Площадь  ромба равна: \\( S = \\frac{AC &thinsp;⋅ &thinsp;BD}{2}\\)<br>
+          ------------------------------------------------------------------------
+          ${h10()}
+          \\( tgBCA = ${task1[2]} = \\frac{${task1[2]*100}}{100}, \\quad CO = ${task1[1]} / 2 = ${task1[1]/2}\\)
+          ${h10()}
+          \\( \\frac{${task1[2]*100}}{100} = \\frac{BO}{${task1[1]/2}}\\)
+          ${h10()}
+          \\( BO = \\frac{${task1[1]/2} &thinsp;⋅ &thinsp;${task1[2]*100}}{100} = 
+          \\frac{${(task1[1]/2)*(task1[2]*100)}}{100} = ${(task1[1]/2)*(task1[2]*100)/100} 
+          \\quad BD = BO &thinsp;⋅ &thinsp;2 = ${((task1[1]/2)*(task1[2]*100)/100)*2}\\)
+          ${h10()}
+          ------------------------------------------------------------------------
+          ${h10()}
+          \\( S = \\frac{AC &thinsp;⋅ &thinsp;BD}{2} = \\frac{${task1[1]} &thinsp;⋅ &thinsp;${((task1[1]/2)*(task1[2]*100)/100)*2}}{2} = 
+          ${((((task1[1]/2)*(task1[2]*100)/100)*2)*task1[1])/2}\\) 
+
+
+          `
+          : task1[0] === 9 ? `
+          <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task17/17_3403_resh.png">
+          Отношение противолежащего катета к прилежащему в прямоугольном треугольнике называется тангенсом острого угла.
+          ${h10()}
+          \\( tgBCA = \\frac{BO}{CO} \\)
+          ${h10()}
+          В прямоугольном треугольнике квадрат длины гипотенузы равен сумме квадратов длин катетов.
+          ${h10()}
+          \\(a^2 + b^2 = c^2  \\quad где \\quad a, b - катеты; \\quad c - гипотенуза.\\)          
+          ${h10()}
+          Площадь ромба равна произведению его полупериметра на радиус вписанной окружности.
+          ${h10()}
+         \\(S = p ⋅ r\\) <br>где  S - площадь &thinsp;ромба; &thinsp;p&nbsp;—&nbsp;полупериметр ромба (половина периметра); 
+           r&nbsp;—&nbsp;радиус вписанной окружности
+          ${h10()}
+          \\( tgBCA = ${task1[2]} = \\frac{${task1[2]*100}}{100}, \\quad CO = ${task1[1]} / 2 = ${task1[1]/2}\\)
+          ${h10()}
+          \\( \\frac{${task1[2]*100}}{100} = \\frac{BO}{${task1[1]/2}}\\)
+
+          `
+          :
+           `` 
           }`
         }
         else if (item === 12){
@@ -7239,7 +7284,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           ` 
           
-          : ``}<hr class="hr-pd_20">`
+          : task1[0] === 8 ? 
+          `
+          Диагональ AC ромба ABCD равна ${task1[1]}, а tgBCA = ${task1[2]}. Найдите площадь ромба.
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3403.png"></div>
+          
+          ` 
+          
+          : 
+          ``}<hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
