@@ -6862,6 +6862,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           
           `
         }
+        else if(item === 1){
+          return `
+          ${
+           task1[0] === 7 ? 
+           `
+           Первый угол ромба равен ${task1[1]}°,<br>
+           Второй угол ромба равен 180° — ${task1[1]}° = ${180-task1[1]}°.<br>
+           Тогда угол А четырехугольника ABCH равен: 360° — ${task1[1]}° — ${180-task1[1]}° = ${360-(180-task1[1])-90-task1[1]}°<br>
+           Отсюда угол между высотой и большей диагональю ромба:<br>
+           180° — ${360-(180-task1[1])-90-task1[1]}° — ${(180-task1[1])/2}° = ${180-90-(180-task1[1])/2}°
+           ` 
+           
+           :`` 
+          }`
+        }
         else if (item === 12){
           return `
           <img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_hei.png">
@@ -7170,7 +7185,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em> № ${taskCounter}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
+          <hr class="hr-pd_10">
           ${task === 11 ? 
             `
           Сторона квадрата равна ${task1[0]}${sqrtNum(2)}. Найдите диагональ этого квадрата. 
@@ -7213,12 +7229,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <hr class="hr-pd_20">
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1820.png"></div>
           `
-          :
-             ``}
-          
-          <hr class="hr-pd_20">
+          : task1[0] === 7 ? 
           `
+          Один из углов ромба равен ${task1[1]}°. Сколько градусов составляет угол между высотой и большей диагональю ромба?
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task17/17_3392.png"></div>
           
+          ` 
+          
+          : ``}<hr class="hr-pd_20">`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
