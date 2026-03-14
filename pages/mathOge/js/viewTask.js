@@ -6901,6 +6901,25 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
           `
           : task1[0] === 9 ? `
+          <img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task17/17_3413_resh.png">
+          Сумма острых углов прямоугольного треугольника равна 90°
+          ${h10()}
+          ∠AOH = ${task1[1]}°; &thinsp;&thinsp;&thinsp; Найти: ∠ABC
+          ${h10()}
+          ∠AOH + ∠BOH = 90°
+          ${h10()}
+          ∠BOH = 90° — ∠AOH = 90° — ${task1[1]}° = ${90-task1[1]}°
+          ${h10()}
+          ∠BOH + ∠ABO = 90°
+          ${h10()}
+          ∠ABO = 90° — ∠BOH = 90° — ${90-task1[1]}° = ${90-(90-task1[1])}°
+          ${h10()} 
+          ∠ABC = 2 • ∠ABO = 2 • ${90-(90-task1[1])}° = ${(90-(90-task1[1])) + (90-(90-task1[1]))}°
+
+          
+          `
+          :
+          task1[0] === 0 ? `
           <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task17/17_3403_resh.png">
           Отношение противолежащего катета к прилежащему в прямоугольном треугольнике называется тангенсом острого угла.
           ${h10()}
@@ -7291,7 +7310,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3403.png"></div>
           
           ` 
+          : task1[0] === 9 ? 
+          `
+          Перпендикуляр, проведённый из точки пересечения диагоналей ромба к его стороне, образует с одной из его диагоналей угол ${task1[1]}°. 
+          Сколько градусов составляет острый угол ромба?
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_3413.png"></div>
           
+          ` 
           : 
           ``}<hr class="hr-pd_20">`
           answerBlock += generateDate();

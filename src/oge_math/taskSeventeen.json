@@ -1,5 +1,145 @@
 [  
     {
+        "taskCounter": 3422,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 70,
+        "task": 1,
+
+        "task1": [9, 35],
+
+        "taskNum": "912787",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3421,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 80,
+        "task": 1,
+
+        "task1": [9, 40],
+
+        "taskNum": "41B466",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3420,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 56,
+        "task": 1,
+
+        "task1": [9, 28],
+
+        "taskNum": "E7C2DC",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3419,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 78,
+        "task": 1,
+
+        "task1": [9, 39],
+
+        "taskNum": "1E411A",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3418,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 72,
+        "task": 1,
+
+        "task1": [9, 36],
+
+        "taskNum": "F38D13",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3417,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 82,
+        "task": 1,
+
+        "task1": [9, 41],
+
+        "taskNum": "4B751D",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3416,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 58,
+        "task": 1,
+
+        "task1": [9, 29],
+
+        "taskNum": "F72ABD",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3415,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 68,
+        "task": 1,
+
+        "task1": [9, 34],
+
+        "taskNum": "496E7A",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3414,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 76,
+        "task": 1,
+
+        "task1": [9, 38],
+
+        "taskNum": "D31DF8",
+        
+        "taskDate": "2026"
+
+    },
+    {
+        "taskCounter": 3413,
+        "typeTask": 1,
+        "taskKec": [1, 17, 1],
+        "taskAnswer": 64,
+        "task": 1,
+
+        "task1": [9, 32],
+
+        "taskNum": "AEE74D",
+        
+        "taskDate": "2026"
+
+    },
+    {
         "taskCounter": 3412,
         "typeTask": 1,
         "taskKec": [1, 17, 1],
