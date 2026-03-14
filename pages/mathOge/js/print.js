@@ -266,3 +266,245 @@ function preparePrintView() {
     });
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { correctAnswer } from "./showTasks.js";
+// import { correctAnswerVars } from "./showTasksVars.js";
+// import { correctAnswerGen } from "./generatorR.js";
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const btn = document.getElementById("button-print");
+//     if (btn) btn.addEventListener("click", preparePrintView);
+// });
+
+// const randomNumber = Math.floor(Math.random() * 1001) + 1000;
+
+// function getVariantName() {
+//     const el = document.querySelector(".breadcrumb .bread-last a");
+//     return el?.textContent || `Вариант ${randomNumber}`;
+// }
+
+// function getCorrectAnswer(index) {
+//     if (correctAnswer?.length) return correctAnswer[index];
+//     if (correctAnswerVars?.length > index) return correctAnswerVars[index];
+//     if (correctAnswerGen?.length) return correctAnswerGen[index];
+//     return "";
+// }
+
+// function preparePrintView() {
+
+//     const slides = document.querySelectorAll(".slide:not(.results-slide)");
+//     const variantName = getVariantName();
+
+//     let tasksHTML = "";
+//     let answersHTML = `
+//         <div>
+//             <h3 style="text-align:left">
+//                 ${variantName} (ключи)
+//             </h3>
+//         </div>
+//     `;
+
+//     slides.forEach((slide, i) => {
+
+//         const clone = slide.cloneNode(true);
+
+//         clone.classList.remove("slide", "active");
+//         clone.removeAttribute("data-task-id");
+
+//         const sliderBtn = clone.querySelector(".slider-btn");
+//         if (sliderBtn) sliderBtn.remove();
+
+//         tasksHTML += `<div class="print-task">${clone.innerHTML}</div>`;
+
+//         if (i < 20) {
+
+//             const taskNumber = i + 6;
+//             const answer = getCorrectAnswer(i);
+
+//             answersHTML += `
+//                 <table class="answers-table">
+//                     <tr>
+//                         <td>${taskNumber}</td>
+//                         <td>${answer}</td>
+//                     </tr>
+//                 </table>
+//             `;
+//         }
+//     });
+
+//     const printWindow = window.open("", "_blank");
+
+//     printWindow.document.write(createPrintTemplate(variantName, tasksHTML, answersHTML));
+//     printWindow.document.close();
+
+//     copyStyles(printWindow);
+// }
+
+// function createPrintTemplate(title, tasks, answers) {
+
+// return `
+// <!DOCTYPE html>
+// <html lang="ru">
+// <head>
+
+// <meta charset="UTF-8">
+// <title>${title}</title>
+
+// <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+// <style>
+
+// @page{
+//     margin:10mm;
+// }
+
+// body{
+//     font-family:Roboto, sans-serif;
+//     padding:30px 120px;
+//     background:white;
+// }
+
+// .print-options{
+//     display:flex;
+//     justify-content:center;
+//     gap:20px;
+//     margin-bottom:20px;
+// }
+
+// .print-options button{
+//     padding:10px 18px;
+//     border:none;
+//     background:#4CAF50;
+//     color:white;
+//     border-radius:4px;
+//     cursor:pointer;
+// }
+
+// .print-options button:hover{
+//     background:#45a049;
+// }
+
+// .print-task{
+//     page-break-inside:avoid;
+//     margin-bottom:8px;
+// }
+
+// .answers-table{
+//     border-collapse:collapse;
+//     margin-bottom:6px;
+// }
+
+// .answers-table td{
+//     border:1px solid;
+//     padding:6px 14px;
+//     text-align:center;
+// }
+
+// .correct-answers-section{
+//     break-before:page;
+// }
+
+// .horizontal{
+//     column-count:2;
+//     column-gap:20px;
+// }
+
+// @media print{
+
+//     body{
+//         padding:0;
+//         font-size:10px;
+//     }
+
+//     .print-options{
+//         display:none;
+//     }
+
+// }
+
+// </style>
+// </head>
+
+// <body>
+
+// <div class="print-options">
+// <button onclick="setVertical()">Вертикальная</button>
+// <button onclick="setHorizontal()">Горизонтальная</button>
+// </div>
+
+// <h2 style="text-align:center">${title}</h2>
+
+// <div id="content" class="vertical">
+// ${tasks}
+// </div>
+
+// <div class="correct-answers-section">
+// ${answers}
+// </div>
+
+// <script>
+
+// function setVertical(){
+//     document.getElementById('content').className='vertical';
+//     setTimeout(()=>window.print(),100);
+// }
+
+// function setHorizontal(){
+//     document.getElementById('content').className='horizontal';
+//     setTimeout(()=>window.print(),100);
+// }
+
+// </script>
+
+// </body>
+// </html>
+// `;
+// }
+
+// function copyStyles(win){
+
+//     const styles = document.querySelectorAll('link[rel="stylesheet"], style');
+
+//     styles.forEach(style => {
+
+//         if (style.href) {
+
+//             const link = win.document.createElement("link");
+//             link.rel = "stylesheet";
+//             link.href = style.href;
+//             win.document.head.appendChild(link);
+
+//         } else {
+
+//             const styleTag = win.document.createElement("style");
+//             styleTag.textContent = style.textContent;
+//             win.document.head.appendChild(styleTag);
+//         }
+//     });
+// }

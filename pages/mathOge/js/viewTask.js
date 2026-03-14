@@ -6844,7 +6844,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         }   
     }
     // <sup>2</sup>   — • &thinsp; √ ° ∠ &nbsp; 
-    // <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv5.png">
+    // <img style="display: inline-block;  width: 18em; " src="../../pages/mathOge/img/task10/sv5.png"> ABCDFH
     // ⋅
     if (taskKey === 'seventeen'){
       let Nomer = 17
@@ -6897,8 +6897,6 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${h10()}
           \\( S = \\frac{AC &thinsp;⋅ &thinsp;BD}{2} = \\frac{${task1[1]} &thinsp;⋅ &thinsp;${((task1[1]/2)*(task1[2]*100)/100)*2}}{2} = 
           ${((((task1[1]/2)*(task1[2]*100)/100)*2)*task1[1])/2}\\) 
-
-
           `
           : task1[0] === 9 ? `
           <img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task17/17_3413_resh.png">
@@ -6914,9 +6912,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${h10()}
           ∠ABO = 90° — ∠BOH = 90° — ${90-task1[1]}° = ${90-(90-task1[1])}°
           ${h10()} 
-          ∠ABC = 2 • ∠ABO = 2 • ${90-(90-task1[1])}° = ${(90-(90-task1[1])) + (90-(90-task1[1]))}°
-
-          
+          ∠ABC = 2 • ∠ABO = 2 • ${90-(90-task1[1])}° = ${(90-(90-task1[1])) + (90-(90-task1[1]))}°  
+          `
+          : task1[0] === 10 ? `
+          <img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task17/17_3423_resh.png">
+          Сумма прилежащих углов ромба равна 180°
+          ${h10()}
+          ∠D = ${task1[1]}°; &thinsp;&thinsp;&thinsp; Найти: ∠ACB
+          ${h10()}
+          ∠D + ∠C = 180°
+          ${h10()}
+          ∠C = 180° — ∠D = 180° — ${task1[1]}° = ${180-task1[1]}°
+          ${h10()}
+          ∠ACB = ∠C / 2 = ${180-task1[1]}° / 2 = ${(180-task1[1])/2}°
           `
           :
           task1[0] === 0 ? `
@@ -6942,6 +6950,46 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           :
            `` 
           }`
+        }
+        else if(item === 2){
+          return `
+          ${task1[0] === 10 ? `
+            <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task17/17_3434_resh.png">
+            Большее основание AD, меньшее основание BC.
+            ${h10()}
+            Высота CH делит AD на AH = ${task1[2]} и на HD = ${task1[1]}.
+            ${h10()}
+            Проводя высоту BF делим AH на${h10()} AF = HD = ${task1[1]}${h10()} и на${h10()} FH = ${task1[2]} — ${task1[1]} = ${task1[2]-task1[1]}
+            ${h10()}
+            Меньшее основание BC = FH = ${task1[2]-task1[1]}.
+            `       
+            : task1[0] === 11 ? `
+            ∠D = ${task1[1]}°, ∠BAC = ${task1[2]}°
+            ${h10()}
+            Найти: ∠BCA
+            ${h10()}
+            ∠CAD = ∠D — ∠BAC = ${task1[1]}° — ${task1[2]}° = ${task1[1]-task1[2]}°
+            ${h10()}
+            ∠BCA = ∠CAD, так как накрест лежащие углы.
+            ${h10()}
+            ∠BCA = ∠CAD = ${task1[1]-task1[2]}°
+
+            ` 
+            : task1[0] === 12 ? `
+            ∠D = ${task1[1]}°, ∠DCA = ${task1[2]}°
+            ${h10()}
+            Найти: ∠BCA
+            ${h10()}
+            ∠CAD = 180° — ∠D — ∠DCA = 180° — ${task1[1]}° — ${task1[2]}° = ${180-task1[1]-task1[2]}°
+            ${h10()}
+            ∠BCA = ∠CAD, так как накрест лежащие углы.
+            ${h10()}
+            ∠BCA = ∠CAD = ${180-task1[1]-task1[2]}°
+
+            ` 
+            :
+            ``}
+          `
         }
         else if (item === 12){
           return `
@@ -7318,6 +7366,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_3413.png"></div>
           
           ` 
+          : task1[0] === 10 ? 
+          `
+          Острый угол ромба равен ${task1[1]}°. Сколько градусов составляет угол между стороной и меньшей диагональю ромба?
+          <hr class="hr-pd_20">
+          <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_3423.png"></div>
+          
+          ` 
           : 
           ``}<hr class="hr-pd_20">`
           answerBlock += generateDate();
@@ -7399,9 +7454,32 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
          
             `
+            : task1[0] === 10 ? 
+            `
+            Высота равнобедренной трапеции, проведённая из конца её меньшего основания, делит большее основание на отрезки длиной ${task1[1]} и ${task1[2]}. Найдите меньшее основание трапеции.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task17/17_3434.png"></div>
+         
+            `
+            : task1[0] === 11 ? 
+            `
+            В равнобедренной трапеции с основаниями AD и BC угол D равен ${task1[1]}°. Диагональ AC образует со стороной AB угол ${task1[2]}°. 
+            Сколько градусов составляет угол между этой диагональю и меньшим основанием трапеции?
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_3445.png"></div>
+         
+            `
+            : task1[0] === 12 ? 
+            `
+            В равнобедренной трапеции с основаниями AD и BC угол D равен ${task1[1]}°. Диагональ AC образует со стороной CD угол ${task1[2]}°. 
+            Сколько градусов составляет угол между этой диагональю и меньшим основанием трапеции?
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_3445.png"></div>
+         
+            `
             :
             ``}
-           <hr class="hr-pd_20">
+           <hr class="hr-pd_20"> 
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
