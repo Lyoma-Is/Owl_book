@@ -6987,6 +6987,76 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ∠BCA = ∠CAD = ${180-task1[1]-task1[2]}°
 
             ` 
+            : task1[0] === 13 ? `
+            <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task17/17_3467_resh.png">
+            Большее основание AD = ${task1[2]}
+            ${h10()}
+            Меньшее основание BC = ${task1[1]}
+            ${h10()}
+            FH = Меньшее основание BC = ${task1[1]}.
+            ${h10()} 
+            AF = HD => 2AF
+            ${h10()} 
+            AD = AF + FH + HD
+            ${h10()}
+            AD = 2 • AF + FH
+            ${h10()}
+            AF = (AD — FH) / 2
+            ${h10()}
+            AF = (${task1[2]} — ${task1[1]}) / 2
+            ${h10()}
+            AF = ${task1[2]-task1[1]} / 2 = ${(task1[2]-task1[1])/2}
+            ${h10()}
+            Высота CH = AF + FH = ${(task1[2]-task1[1])/2} + ${task1[1]} = ${((task1[2]-task1[1])/2)+task1[1]}
+
+            `       
+            : task1[0] === 14 ? `
+            <img style="display: block;  width: 18em; " src="../../pages/mathOge/img/task17/17_3478_resh.png">
+            Сумма прилежащих углов к одной стороне равнобедренной трапеции равна 180°:<br> ∠A + ∠B = ∠C + ∠D = 180°
+            ${h10()}
+             Сумма противолежащих углов равнобедренной трапеции равна 180°:<br> ∠A + ∠C = ∠B + ∠D = 180°
+            ${h10()}
+            ∠BAC = ${task1[1]}°
+            ${h10()}
+            ∠ACD = ${task1[2]}°
+            ${h10()}
+            Найти: ∠D
+            ${h10()}
+            Найдем x:
+            ∠A + ∠C = (∠BAC + x) + (x + ∠ACD) = 180°
+            ${h10()}
+            ${task1[1]}° + ${task1[2]}° + 2x = 180°
+            ${h10()}
+            2x = 180° — ${task1[1]+task1[2]}° 
+            ${h10()}
+            2x = ${180-task1[1]-task1[2]}° 
+            ${h10()}
+            x = ${180-task1[1]-task1[2]}° / 2
+            ${h10()}
+            x = ${(180-task1[1]-task1[2])/2}° 
+            ${h10()}
+            ∠D = ∠A = x + ∠BAC = ${(180-task1[1]-task1[2])/2}° + ${task1[1]}° = ${(180-task1[1]-task1[2])/2 + task1[1]}°
+
+            `       
+            : task1[0] === 15 ? `
+            ∠A = ∠D = ${task1[1]}°
+            ${h10()}
+            Найти: ∠BAD
+            ${h10()}
+            ∠BAC = ∠CAD
+            ${h10()}
+            ∠A = ∠BAC + ∠CAD = ${task1[1]}°
+            ${h10()}
+            ∠CAD = ${task1[1]}° / 2 = ${task1[1]/2}°
+            ${h10()}
+            ∠BAD + ∠CAD + ∠D = 180°
+            ${h10()}
+            ∠BAD + ${task1[1]/2}° + ${task1[1]}° = 180°
+            ${h10()}
+            ∠BAD = 180° — ${task1[1]/2}° — ${task1[1]}°
+            ${h10()}
+            ∠BAD = ${180 - task1[1]/2 - task1[1]}°
+            `       
             :
             ``}
           `
@@ -7475,6 +7545,31 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Сколько градусов составляет угол между этой диагональю и меньшим основанием трапеции?
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_3445.png"></div>
+         
+            `
+            : task1[0] === 13 ? 
+            `
+            Диагональ равнобедренной трапеции образует с её основанием угол 45°. 
+            Найдите высоту трапеции, если её основания равны ${task1[1]} и ${task1[2]}.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3467.png"></div>
+         
+            `
+            : task1[0] === 14 ? 
+            `
+            Диагональ равнобедренной трапеции образует с боковыми сторонами углы ${task1[1]}° и ${task1[2]}°. 
+            Сколько градусов составляет угол при большем основании трапеции?
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3478.png"></div>
+         
+            `
+            : task1[0] === 15 ? 
+            `
+            В равнобедренной трапеции ABCD угол D равен ${task1[1]}°. 
+            Найдите градусную меру угла ACD, если луч AC является биссектрисой угла BAD.
+
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3488.png"></div>
          
             `
             :
