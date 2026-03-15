@@ -6533,7 +6533,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ` 
           : 
           `
-          DO = x,&thinsp; AD = 2x,&thinsp; AO = ${dropRow(task1[0],task1[1])} ${h10()}
+          DO = x,&thinsp; AD = 2x,&thinsp; AO = \\( \\frac{${task1[0]}}{${task1[1]}}\\) ${h10()}
           
           AO<sup>2</sup> = DO<sup>2</sup> + AD<sup>2</sup>${h10()}
 
@@ -6556,6 +6556,143 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           (${task1[0]} / ${task1[1]*task1[1]}) • 0.8 = ${task1[0]/(task1[1]*task1[1])*0.8} ${h10()}
           -----------------------------------------------------
           `} `
+        }
+        else if(item === 2){
+          return `
+          ${task1[0] === 12 ? `
+
+          <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3498_resh.png">
+          Отношение противолежащего катета к прилежащему в прямоугольном треугольнике называется тангенсом острого угла.
+          ${h10()}
+          \\( tgBCA = \\frac{BO}{CO} \\)
+          ${h10()}
+          В прямоугольном треугольнике квадрат длины гипотенузы равен сумме квадратов длин катетов.
+          ${h10()}
+          \\(a^2 + b^2 = c^2  \\quad где \\quad a, b - катеты; \\quad c - гипотенуза.\\)          
+          ${h10()}
+          Площадь ромба равна произведению его полупериметра на радиус вписанной окружности.
+          ${h10()}
+         \\(S = p ⋅ r \\) <br>где  S - площадь &thinsp;ромба; &thinsp;p&nbsp;—&nbsp;полупериметр ромба (половина периметра); 
+           r&nbsp;—&nbsp;радиус вписанной окружности<br>
+           ---------------------------------------------------------- 
+
+          ${h10()}
+          \\( tgBCA = \\frac{${task1[2]}}{${task1[3]}}, \\quad CO = AC / 2 = ${task1[1]} / 2 = ${task1[1]/2}\\)
+          ${h10()}
+          \\( \\frac{${task1[2]}}{${task1[3]}} = \\frac{BO}{${task1[1]/2}} => BO = \\frac{${task1[2]}}{${task1[3]}} ⋅ ${task1[1]/2} = ${(task1[2]*(task1[1]/2))/task1[3]}\\)
+          ${h10()}
+          \\( BC^2 = BO^2 + CO^2 => BC^2 = ${(task1[2]*(task1[1]/2))/task1[3]}^2 + ${task1[1]/2}^2\\)
+          ${h10()}
+          \\( BC^2 =  ${((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])} + ${(task1[1]/2)*(task1[1]/2)} = 
+          ${((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2)} \\)
+          ${h10()}
+          \\( BC = \\sqrt{${((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2)}} = 
+          ${Math.sqrt(((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2))} \\)
+          ${h10()}
+          Периметр ромба: P = 4 • BC = 4 • ${Math.sqrt(((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2))} =
+          ${4*Math.sqrt(((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2))}
+          ${h10()}
+          Полупериметр ромба: p = P / 2 = ${4*Math.sqrt(((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2))} / 2 =
+          ${2*Math.sqrt(((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2))}
+          ${h10()}
+          Площадь ромба: \\( S = \\frac{AC ⋅ BD}{2} = \\frac{${task1[1]} ⋅ ${((task1[2]*(task1[1]/2))/task1[3])*2}}{2} = 
+          ${(task1[1]*((task1[2]*(task1[1]/2))/task1[3])*2)/2}\\)
+          ${h10()}
+          \\(r = \\frac{S}{p} = \\frac{${(task1[1]*((task1[2]*(task1[1]/2))/task1[3])*2)/2}}{${2*Math.sqrt(((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2))}}
+          = ${((task1[1]*((task1[2]*(task1[1]/2))/task1[3])*2)/2)/(2*Math.sqrt(((task1[2]*(task1[1]/2))/task1[3])*((task1[2]*(task1[1]/2))/task1[3])+(task1[1]/2)*(task1[1]/2)))}
+          \\)
+
+          `
+          : task1[0] === 13 ? `
+
+          <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3498_resh.png">
+          Отношение противолежащего катета к прилежащему в прямоугольном треугольнике называется тангенсом острого угла.
+          ${h10()}
+          \\( tgBCA = \\frac{BO}{CO} \\)
+          ${h10()}
+          В прямоугольном треугольнике квадрат длины гипотенузы равен сумме квадратов длин катетов.
+          ${h10()}
+          \\(a^2 + b^2 = c^2  \\quad где \\quad a, b - катеты; \\quad c - гипотенуза.\\)          
+          ${h10()}
+          Площадь ромба равна произведению его полупериметра на радиус вписанной окружности.
+          ${h10()}
+         \\(S = p ⋅ r \\) <br>где  S - площадь &thinsp;ромба; &thinsp;p&nbsp;—&nbsp;полупериметр ромба (половина периметра); 
+           r&nbsp;—&nbsp;радиус вписанной окружности<br>
+           ---------------------------------------------------------- 
+
+          ${h10()}
+          \\( tgBCA = ${task1[2]} = \\frac{${task1[2]*100}}{100}, \\quad CO = AC / 2 = ${task1[1]} / 2 = ${task1[1]/2}\\)
+          ${h10()}
+          \\( \\frac{${task1[2]*100}}{100} = \\frac{BO}{${task1[1]/2}} => BO = \\frac{${task1[2]*100}}{100} ⋅ ${task1[1]/2} = ${(task1[2]*(task1[1]/2))}\\)
+          ${h10()}
+          \\( BC^2 = BO^2 + CO^2 => BC^2 = ${(task1[2]*(task1[1]/2))}^2 + ${task1[1]/2}^2\\)
+          ${h10()}
+          \\( BC^2 =  ${(task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))} + ${(task1[1]/2)*(task1[1]/2)} = 
+          ${(task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2)} \\)
+          ${h10()}
+          \\( BC = \\sqrt{${(task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2)} } = 
+          ${Math.sqrt((task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2))} \\)
+          ${h10()}
+          Периметр ромба: P = 4 • BC = 4 • ${Math.sqrt((task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2))} =
+          ${4*Math.sqrt((task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2))}
+          ${h10()}
+          Полупериметр ромба: p = P / 2 = ${4*Math.sqrt((task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2))} / 2 =
+          ${2*Math.sqrt((task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2))}
+          ${h10()}
+          Площадь ромба: \\( S = \\frac{AC ⋅ BD}{2} = \\frac{${task1[1]} ⋅ ${(task1[2]*(task1[1]/2))*2}}{2} = 
+          ${(task1[1]*((task1[2]*(task1[1]/2)))*2)/2}\\)
+          ${h10()}
+          \\(r = \\frac{S}{p} = \\frac{${(task1[1]*((task1[2]*(task1[1]/2)))*2)/2}}{${2*Math.sqrt((task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2))}}
+          = ${((task1[1]*((task1[2]*(task1[1]/2)))*2)/2)/(2*Math.sqrt((task1[2]*(task1[1]/2))*(task1[2]*(task1[1]/2))+(task1[1]/2)*(task1[1]/2)))}
+          \\)
+
+          `
+          :
+             
+            ``}`
+        }
+        else if(item === 3){
+          return `
+          ${task1[0] === 9 ? `
+            <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3508_resh.png">
+            ${h10()}
+            \\( AC = ${task1[2]}; \\quad sinCAD = ${task1[1]}\\)
+            ${h10()}
+            \\( sinCAD = \\frac{CD}{AC} => ${task1[1]} = \\frac{CD}{${task1[2]}}\\)
+            ${h10()}
+            \\(CD = ${task1[1]} ⋅ ${task1[2]} = ${(task1[1]*task1[2]).toFixed(0)} \\)
+            ${h10()}
+            \\( AC^2 = CD^2 + AD^2 => ${task1[2]}^2 = ${(task1[1]*task1[2]).toFixed(0)}^2 + AD^2 => AD^2 = ${task1[2]}^2 - ${(task1[1]*task1[2]).toFixed(0)}^2\\)
+            ${h10()}
+            \\(AD^2 = ${task1[2]*task1[2]} - ${((task1[1]*task1[2])*(task1[1]*task1[2])).toFixed(0)} = ${task1[2]*task1[2]-(task1[1]*task1[2])*(task1[1]*task1[2])}\\)
+            ${h10()}
+            \\(AD =  \\sqrt{${task1[2]*task1[2]-(task1[1]*task1[2])*(task1[1]*task1[2])}} = ${Math.sqrt(task1[2]*task1[2]-(task1[1]*task1[2])*(task1[1]*task1[2]))}\\)
+            ${h10()}
+            Площадь прямоугольника: S = AD • CD = ${Math.sqrt(task1[2]*task1[2]-(task1[1]*task1[2])*(task1[1]*task1[2]))} • ${(task1[1]*task1[2]).toFixed(0)} = 
+            ${((task1[1]*task1[2])*Math.sqrt(task1[2]*task1[2]-(task1[1]*task1[2])*(task1[1]*task1[2]))).toFixed(0)}
+            `
+            
+            : task1[0] === 10 ? `
+            <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3508_resh.png">
+            ${h10()}
+            \\( AC = ${task1[3]}; \\quad sinCAD = \\frac{${task1[1]}}{${task1[2]}}\\)
+            ${h10()}
+            \\( sinCAD = \\frac{CD}{AC} => \\frac{${task1[1]}}{${task1[2]}} = \\frac{CD}{${task1[3]}} \\)
+            ${h10()}
+            \\(CD = \\frac{${task1[1]}}{${task1[2]}} ⋅ ${task1[3]} = ${(task1[1]*task1[3]/task1[2]).toFixed(0)} \\)
+            ${h10()}
+            \\( AC^2 = CD^2 + AD^2 => ${task1[3]}^2 = ${task1[1]*task1[3]/task1[2]}^2 + AD^2 => AD^2 = ${task1[3]}^2 - ${task1[1]*task1[3]/task1[2]}^2\\)
+            ${h10()}
+            \\(AD^2 = ${task1[3]*task1[3]} - ${(task1[1]*task1[3]/task1[2])*(task1[1]*task1[3]/task1[2])} = 
+            ${task1[3]*task1[3]-(task1[1]*task1[3]/task1[2])*(task1[1]*task1[3]/task1[2])}\\)
+            ${h10()}
+            \\(AD =  \\sqrt{${task1[3]*task1[3]-(task1[1]*task1[3]/task1[2])*(task1[1]*task1[3]/task1[2])}} = ${Math.sqrt(task1[3]*task1[3]-(task1[1]*task1[3]/task1[2])*(task1[1]*task1[3]/task1[2]))}\\)
+            ${h10()}
+            Площадь прямоугольника: S = AD • CD = ${Math.sqrt(task1[3]*task1[3]-(task1[1]*task1[3]/task1[2])*(task1[1]*task1[3]/task1[2]))} • ${task1[1]*task1[3]/task1[2]} = 
+            ${Math.sqrt(task1[3]*task1[3]-(task1[1]*task1[3]/task1[2])*(task1[1]*task1[3]/task1[2]))*task1[1]*task1[3]/task1[2]}
+            `
+            
+            : ``}`
         }
         else{
           return`...`
@@ -6725,6 +6862,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task16/16_1574.png"></div>
           
             `
+            : task1[0] === 12 ? `
+            Диагональ AC ромба ABCD равна ${task1[1]}, а \\( tgBCA = \\frac{${task1[2]}}{${task1[3]}}\\). Найдите радиус окружности, вписанной в ромб.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3498.png"></div>
+          
+            `
+            : task1[0] === 13 ? `
+            Диагональ AC ромба ABCD равна ${task1[1]}, а tgBCA = ${task1[2]}. Найдите радиус окружности, вписанной в ромб.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3498.png"></div>
+          
+            `
             :
              ``}
           <hr class="hr-pd_20">
@@ -6819,12 +6968,25 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Точка O является серединой стороны CD квадрата ABCD. Радиус окружности с центром в точке O, проходящей через вершину A, равен 
             ${task1.length === 1 ? task1[0] 
             : task1.length === 3 ? 
-              `${dropRow(task1[0], task1[1])}` 
-            : task1.length === 4 ? `${sqrtNum(task1[0])}`:`${task1[0]}${sqrtNum(task1[1])}`}. 
+              `\\( \\frac{${task1[0]}}{${task1[1]}}\\)` 
+            : task1.length === 4 ? `
+            \\( \\sqrt{${task1[0]}}\\)`:`\\( ${task1[0]}\\sqrt{${task1[1]}}\\)`}. 
             Найдите площадь квадрата ABCD.
             <hr class="hr-pd_20">
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1783.png"></div>   
             ` 
+            : task1[0] === 9 ? `
+            Синус угла между стороной и диагональю прямоугольника равен ${task1[1]}. Диаметр описанной около него окружности равен ${task1[2]}. Найдите площадь прямоугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3508.png"></div>   
+            
+            `
+            : task1[0] === 10 ? `
+            Синус угла между стороной и диагональю прямоугольника равен \\(\\frac{${task1[1]}}{${task1[2]}}\\). Диаметр описанной около него окружности равен ${task1[3]}. Найдите площадь прямоугольника.
+            <hr class="hr-pd_20">
+            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3508.png"></div>   
+            
+            `
             :
             ` `}
           <hr class="hr-pd_20">
@@ -6926,30 +7088,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${h10()}
           ∠ACB = ∠C / 2 = ${180-task1[1]}° / 2 = ${(180-task1[1])/2}°
           `
-          :
-          task1[0] === 0 ? `
-          <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task17/17_3403_resh.png">
-          Отношение противолежащего катета к прилежащему в прямоугольном треугольнике называется тангенсом острого угла.
-          ${h10()}
-          \\( tgBCA = \\frac{BO}{CO} \\)
-          ${h10()}
-          В прямоугольном треугольнике квадрат длины гипотенузы равен сумме квадратов длин катетов.
-          ${h10()}
-          \\(a^2 + b^2 = c^2  \\quad где \\quad a, b - катеты; \\quad c - гипотенуза.\\)          
-          ${h10()}
-          Площадь ромба равна произведению его полупериметра на радиус вписанной окружности.
-          ${h10()}
-         \\(S = p ⋅ r\\) <br>где  S - площадь &thinsp;ромба; &thinsp;p&nbsp;—&nbsp;полупериметр ромба (половина периметра); 
-           r&nbsp;—&nbsp;радиус вписанной окружности
-          ${h10()}
-          \\( tgBCA = ${task1[2]} = \\frac{${task1[2]*100}}{100}, \\quad CO = ${task1[1]} / 2 = ${task1[1]/2}\\)
-          ${h10()}
-          \\( \\frac{${task1[2]*100}}{100} = \\frac{BO}{${task1[1]/2}}\\)
-
-          `
-          :
-           `` 
-          }`
+          :`` }`
         }
         else if(item === 2){
           return `

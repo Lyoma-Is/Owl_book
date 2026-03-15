@@ -1,8 +1,278 @@
-[  
+[   
+    {
+        "taskCounter": 3516,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 48,
+        "task": 3,
+
+        "task1": [9, 0.6, 10],
+
+        "taskNum": "2E0233",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3516,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 60,
+        "task": 3,
+
+        "task1": [10, 12, 13, 13],
+
+        "taskNum": "BC5E3B",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3515,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 168,
+        "task": 3,
+
+        "task1": [9, 0.96, 25],
+
+        "taskNum": "47709E",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3514,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 12,
+        "task": 3,
+
+        "task1": [9, 0.6, 5],
+
+        "taskNum": "EBE0C0",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3513,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 168,
+        "task": 3,
+
+        "task1": [9, 0.28, 25],
+
+        "taskNum": "9940C8",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3512,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 120,
+        "task": 3,
+
+        "task1": [10, 15, 17, 17],
+
+        "taskNum": "CD2C58",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3511,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 240,
+        "task": 3,
+
+        "task1": [10, 5, 13, 26],
+
+        "taskNum": "084057",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3510,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 480,
+        "task": 3,
+
+        "task1": [10, 8, 17, 34],
+
+        "taskNum": "04CA75",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3509,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 48,
+        "task": 3,
+
+        "task1": [9, 0.8, 10],
+
+        "taskNum": "F0857F",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3508,
+        "typeTask": 3,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 12,
+        "task": 3,
+
+        "task1": [9, 0.8, 5],
+
+        "taskNum": "967D41",
+
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3507,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 9.6,
+        "task": 2,
+
+        "task1": [13, 32, 0.75],
+
+        "taskNum": "E9B8D4",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3506,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 4.8,
+        "task": 2,
+
+        "task1": [13, 16, 0.75],
+
+        "taskNum": "F3C6D5",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3505,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 7.2,
+        "task": 2,
+
+        "task1": [13, 24, 0.75],
+
+        "taskNum": "136701",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3504,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 2.4,
+        "task": 2,
+
+        "task1": [13, 8, 0.75],
+
+        "taskNum": "3F98F8",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3503,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 6.72,
+        "task": 2,
+
+        "task1": [12, 48, 7, 24],
+
+        "taskNum": "285A97",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3502,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 12,
+        "task": 2,
+
+        "task1": [12, 30, 4, 3],
+
+        "taskNum": "3EE8A1",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3501,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 2.4,
+        "task": 2,
+
+        "task1": [12, 6, 4, 3],
+
+        "taskNum": "D323D4",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3500,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 14.4,
+        "task": 2,
+
+        "task1": [12, 36, 4, 3],
+
+        "taskNum": "EB107F",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3499,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 4.8,
+        "task": 2,
+
+        "task1": [12, 12, 4, 3],
+
+        "taskNum": "A1E947",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
+    {
+        "taskCounter": 3498,
+        "typeTask": 2,
+        "taskKec": [1, 16, 1],
+        "taskAnswer": 13.44,
+        "task": 2,
+
+        "task1": [12, 28, 24, 7],
+
+        "taskNum": "25984A",
+
+        "taskDate": "2026",
+        "taskHard": 2
+    },
     {
         "taskCounter": 2076,
         "typeTask": 1,
-        "taskKec": [1, 17, 1],
+        "taskKec": [1, 16, 1],
         "taskAnswer": 48,
         "task": 15,
 
@@ -13,7 +283,7 @@
     {
         "taskCounter": 2075,
         "typeTask": 1,
-        "taskKec": [1, 17, 1],
+        "taskKec": [1, 16, 1],
         "taskAnswer": 14,
         "task": 15,
 
@@ -24,7 +294,7 @@
     {
         "taskCounter": 2074,
         "typeTask": 1,
-        "taskKec": [1, 17, 1],
+        "taskKec": [1, 16, 1],
         "taskAnswer": 66,
         "task": 15,
 
@@ -35,7 +305,7 @@
     {
         "taskCounter": 2073,
         "typeTask": 1,
-        "taskKec": [1, 17, 1],
+        "taskKec": [1, 16, 1],
         "taskAnswer": 5,
         "task": 15,
 
@@ -46,7 +316,7 @@
     {
         "taskCounter": 2072,
         "typeTask": 1,
-        "taskKec": [1, 17, 1],
+        "taskKec": [1, 16, 1],
         "taskAnswer": 13,
         "task": 15,
 
@@ -57,7 +327,7 @@
     {
         "taskCounter": 2071,
         "typeTask": 1,
-        "taskKec": [1, 17, 1],
+        "taskKec": [1, 16, 1],
         "taskAnswer": 21,
         "task": 15,
 
@@ -3155,7 +3425,7 @@
         "task1": [148, 1],
 
         "taskNum": "53AD0E"
-    },
+    }, 
     {
         "taskCounter": 1513,
         "typeTask": 1,
