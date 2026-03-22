@@ -6692,7 +6692,112 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${Math.sqrt(task1[3]*task1[3]-(task1[1]*task1[3]/task1[2])*(task1[1]*task1[3]/task1[2]))*task1[1]*task1[3]/task1[2]}
             `
             
-            : ``}`
+            : task1[0] === 3111 ? `
+            <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3518_resh.png">
+            ${h10()}
+            \\( OH = \\sqrt{${task1[1]}}, \\quad AH = x, \\quad AB = 2x.\\)
+            ${h10()}
+            \\( BH = 3 ⋅ OH = 3 ⋅ \\sqrt{${task1[1]}} = 3\\sqrt{${task1[1]}} \\)
+            ${h10()}
+            \\(AB^2 = AH^2 + BH^2\\)
+            ${h10()}
+            \\((2x)^2 = x^2 + (3\\sqrt{${task1[1]}})^2\\)
+            ${h10()}
+            \\(4x^2 - x^2 = 9 ⋅ ${task1[1]}\\)
+            ${h10()}
+            \\(3x^2 = ${9*task1[1]}\\)
+            ${h10()}
+            \\(x^2 = ${9*task1[1]}/3 = ${9*task1[1]/3}\\)
+            ${h10()}
+            \\(x = \\sqrt{${9*task1[1]/3}} = ${Math.sqrt(9*task1[1]/3)}\\)
+            ${h10()}
+            Сторона треугольника \\(AB = 2x = 2 ⋅ ${Math.sqrt(9*task1[1]/3)} = ${2*Math.sqrt(9*task1[1]/3)}.\\)
+            `
+            : task1[0] === 3112 ? `
+            <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3518_resh.png">
+            ${h10()}
+            \\( OH = ${task1[1]}\\sqrt{${task1[2]}}, \\quad AH = x, \\quad AB = 2x.\\)
+            ${h10()}
+            \\( BH = 3 ⋅ OH = 3 ⋅ ${task1[1]}\\sqrt{${task1[2]}} = ${task1[1]*3}\\sqrt{${task1[2]}} \\)
+            ${h10()}
+            \\(AB^2 = AH^2 + BH^2\\)
+            ${h10()}
+            \\((2x)^2 = x^2 + (${task1[1]*3}\\sqrt{${task1[2]}})^2\\)
+            ${h10()}
+            \\(4x^2 - x^2 = ${task1[1]*3*task1[1]*3} ⋅ ${task1[2]}\\)
+            ${h10()}
+            \\(3x^2 = ${task1[1]*3*task1[1]*3*task1[2]}\\)
+            ${h10()}
+            \\(x^2 = ${task1[1]*3*task1[1]*3*task1[2]}/3 = ${task1[1]*3*task1[1]*3*task1[2]/3}\\)
+            ${h10()}
+            \\(x = \\sqrt{${task1[1]*3*task1[1]*3*task1[2]/3}} = ${Math.sqrt(task1[1]*3*task1[1]*3*task1[2]/3)}\\)
+            ${h10()}
+            Сторона треугольника \\(AB = 2x = 2 ⋅ ${Math.sqrt(task1[1]*3*task1[1]*3*task1[2]/3)} = ${2*Math.sqrt(task1[1]*3*task1[1]*3*task1[2]/3)}.\\)
+            `
+            : task1[0] === 3113 ? `
+            <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3518_resh.png">
+            ${h10()}
+            \\( OH = \\frac{\\sqrt{${task1[1]}}}{${task1[2]}}, \\quad AH = x, \\quad AB = 2x.\\)
+            ${h10()}
+            \\( BH = 3 ⋅ OH = 3 ⋅ \\frac{\\sqrt{${task1[1]}}}{${task1[2]}} = \\frac{3}{${task1[2]}} ⋅ \\sqrt{${task1[1]}} = ${3/task1[2]}\\sqrt{${task1[1]}}\\)
+            ${h10()}
+            \\(AB^2 = AH^2 + BH^2\\)
+            ${h10()}
+            \\((2x)^2 = x^2 + (${3/task1[2]}\\sqrt{${task1[1]}})^2\\)
+            ${h10()}
+            \\(4x^2 - x^2 = ${3/task1[2]*3/task1[2]} ⋅ ${task1[1]} \\)
+            ${h10()}
+            \\(3x^2 = ${3/task1[2]*3/task1[2]} ⋅ ${task1[1]} \\) 
+            ${h10()}
+            \\(x^2 = (${3/task1[2]*3/task1[2]} ⋅ ${task1[1]}) : 3 = ${3/task1[2]*3/task1[2]} \\)
+            ${h10()}
+            \\(x = \\sqrt{${3/task1[2]*3/task1[2]}} = ${Math.sqrt(3/task1[2]*3/task1[2])}\\)
+            ${h10()}
+            Сторона треугольника \\(AB = 2x = 2 ⋅ ${Math.sqrt(3/task1[2]*3/task1[2])} = ${2*Math.sqrt(3/task1[2]*3/task1[2])}.\\)
+            `
+            : task1[0] === 3114 ? `
+            <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3518_resh.png">
+            ${h10()}
+            \\( OH = \\frac{${task1[1]}\\sqrt{${task1[2]}}}{${task1[3]}}, \\quad AH = x, \\quad AB = 2x.\\)
+            ${h10()}
+            \\( BH = 3 ⋅ OH = 3 ⋅ \\frac{${task1[1]}\\sqrt{${task1[2]}}}{${task1[3]}} = 3 ⋅ \\frac{${task1[1]}}{${task1[3]}} ⋅ \\sqrt{${task1[2]}} \\)
+            ${h10()}
+            \\( BH = \\frac{${3*task1[1]}}{${task1[3]}} ⋅ \\sqrt{${task1[2]}} = ${3*task1[1]/task1[3]} ⋅ \\sqrt{${task1[2]}} = ${3*task1[1]/task1[3]}\\sqrt{${task1[2]}}\\)     
+            ${h10()}
+            \\(AB^2 = AH^2 + BH^2\\)
+            ${h10()}
+            \\((2x)^2 = x^2 + (${3*task1[1]/task1[3]}\\sqrt{${task1[2]}})^2\\)
+            ${h10()}
+            \\(4x^2 - x^2 = ${3*task1[1]/task1[3]*3*task1[1]/task1[3]} ⋅ ${task1[2]} \\)
+            ${h10()}
+            \\(3x^2 = ${3*task1[1]/task1[3]*3*task1[1]/task1[3]} ⋅ ${task1[2]} \\) 
+            ${h10()}
+            \\(x^2 = (${3*task1[1]/task1[3]*3*task1[1]/task1[3]} ⋅ ${task1[2]}) : 3 = ${3*task1[1]/task1[3]*3*task1[1]/task1[3]} \\)
+            ${h10()}
+            \\(x = \\sqrt{${3*task1[1]/task1[3]*3*task1[1]/task1[3]}} = ${Math.sqrt(3*task1[1]/task1[3]*3*task1[1]/task1[3])}\\)
+            ${h10()}
+            Сторона треугольника \\(AB = 2x = 2 ⋅ ${Math.sqrt(3*task1[1]/task1[3]*3*task1[1]/task1[3])} = ${2*Math.sqrt(3*task1[1]/task1[3]*3*task1[1]/task1[3])}.\\)
+            `
+            : 
+            
+            ``}`
+        }
+        else if(item === 401){
+          return `
+          ${task1[0] === 4011 ? `
+            <img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3528_resh.png">
+            ${h10()}
+            ∠ACB = ${task1[1]}°
+            ${h10()}
+            Касательные, проведенные к окружности из одной точки, равны, поэтому  следовательно, треугольник ABC  — равнобедренный.
+            ${h10()}
+            Откуда ∠CAB = ∠CBA = (180° — ∠ACB) / 2 = (180° — ${task1[1]}°) / 2 = ${(180-task1[1])/2}°
+            ${h10()}
+            Касательная перпендикулярна радиусу, проведенному в точку касания, следовательно, ∠CBO = 90°.
+            ${h10()}
+            Тогда ∠AOB = ∠CBO — ∠CBA = 90° — ${(180-task1[1])/2}° = ${90-(180-task1[1])/2}°
+            `:``}
+          `
         }
         else{
           return`...`
@@ -6987,8 +7092,46 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3508.png"></div>   
             
             `
-            :
-            ` `}
+            : task1[0] === 3111 ? `
+              В окружность с центром в точке O вписан равносторонний треугольник. 
+              Расстояние от точки O до сторон треугольника равно \\(\\sqrt{${task1[1]}}\\). Найдите сторону треугольника.     
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
+               
+            ` 
+            : task1[0] === 3112 ? `
+              В окружность с центром в точке O вписан равносторонний треугольник. 
+              Расстояние от точки O до сторон треугольника равно \\(${task1[1]}\\sqrt{${task1[2]}}\\). Найдите сторону треугольника.     
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
+               
+            ` 
+            : task1[0] === 3113 ? `
+              В окружность с центром в точке O вписан равносторонний треугольник. 
+              Расстояние от точки O до сторон треугольника равно \\(\\frac{\\sqrt{${task1[1]}}}{${task1[2]}}\\). Найдите сторону треугольника.     
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
+               
+            ` 
+            : task1[0] === 3114 ? `
+              В окружность с центром в точке O вписан равносторонний треугольник. 
+              Расстояние от точки O до сторон треугольника равно \\(\\frac{${task1[1]}\\sqrt{${task1[2]}}}{${task1[3]}}\\). Найдите сторону треугольника.     
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
+               
+            ` 
+          : task === 401 ? 
+          ` ${task1[0] === 4011 ? `
+              Касательные в точках A и B к окружности с центром в точке O пересекаются под углом ${task1[1]}°. 
+              Найдите угол ABO. Ответ дайте в градусах.
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_3528.png"></div>   
+               
+            `
+
+            : ``}
+          `:
+            ``}
           <hr class="hr-pd_20">
           `
           answerBlock += generateDate();
