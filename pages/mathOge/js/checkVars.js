@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         MathJax.typesetPromise();
     }
+    
 
     // Вспомогательные функции для преобразования номеров заданий
     function getTaskNumber(key) {
@@ -242,6 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализируем чекбоксы при загрузке страницы
     initCheckboxes();
     
+
     // Если есть сохраненные задания, генерируем их сразу
     const selectedTasks = JSON.parse(localStorage.getItem('selectedTasks')) || [];
     if (selectedTasks.length > 0) {

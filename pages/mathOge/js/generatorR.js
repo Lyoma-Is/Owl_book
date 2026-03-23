@@ -304,6 +304,7 @@ async function displayTasks() {
 
 export { correctAnswerGen }
 
+
 // Вспомогательная функция для создания текста результата
 function getResultText(countResult, total) {
     if (countResult < 7) {

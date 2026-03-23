@@ -145,6 +145,19 @@ document.getElementById('select-task').addEventListener('change', function() {
 });
 
 
+document.addEventListener('click', (e) => {
+  if (e.target.id === 'open-this-task') {
+    e.preventDefault();
+    const taskNumber = e.target.textContent.trim().replace('№', '');
+    const searchInput = document.getElementById('taskNumber');
+    const searchBtn = document.getElementById('searchBtn');
+    
+    if (searchInput && searchBtn) {
+      searchInput.value = taskNumber;
+      searchBtn.click();
+    }
+  }
+});
 const taskPage = document.getElementById('select-task');
 taskPage.innerHTML = ` 
 
