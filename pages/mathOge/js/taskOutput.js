@@ -270,7 +270,7 @@ document.addEventListener('click', function(e) {
         valuesSource === 1 ? `Банк ФИПИ`: 
         valuesSource === 2 ? `Решу ОГЭ`: 
         valuesSource === 3 ? `Устаревшие из Банка ФИПИ`:
-        valuesSource === 4 ? `Банк ФИПИ`:
+        valuesSource === 4 ? ``:
         `Другой источник`
       
       

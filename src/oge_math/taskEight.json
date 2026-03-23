@@ -1,5 +1,54 @@
 [   
     {
+        "taskCounter": 3532,
+        "typeTask": 4,
+        "taskKec": [1, 8, 2],
+        "taskAnswer": 5,
+        "task": [409, 4091],
+
+        "task1": [0, 1, 5, 23],
+
+        "taskNum": "401531",
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3531,
+        "typeTask": 4,
+        "taskKec": [1, 8, 2],
+        "taskAnswer": 12,
+        "task": [409, 4091],
+
+        "task1": [0, 1, 6, 35],
+
+        "taskNum": "392685",
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3530,
+        "typeTask": 4,
+        "taskKec": [1, 8, 2],
+        "taskAnswer": 8,
+        "task": [409, 4091],
+
+        "task1": [0, 1, 4, 15],
+
+        "taskNum": "392659",
+        "taskDate": "2026"
+    },
+    {
+        "taskCounter": 3529,
+        "typeTask": 4,
+        "taskKec": [1, 8, 1],
+        "taskAnswer": 4,
+        "task": [409, 4091],
+
+        "task1": [0, 1, 2, 3],
+
+        "taskNum": "A63D02",
+        "taskDate": "2026",
+        "taskAuthor": "Демоверсия 2026"
+    },
+    {
         "taskCounter": 560,
         "typeTask": 4,
         "taskKec": [1, 8, 1],

@@ -2975,6 +2975,29 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
             `<p>a<sup>2</sup> — 2ab + b<sup>2</sup> = (a — b)<sup>2</sup></p>`}`
         }
+        else if(task[0] === 409){
+          return `
+          ${task[1] === 4091 ? `
+            \\( \\frac{1}{${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}}} + \\frac{1}{${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}}}\\)
+         =
+            \\( \\frac{1 ⋅ (${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}})}{(${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}}) ⋅ (${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}})} 
+            + 
+            \\frac{1 ⋅ (${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}})}{(${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}}) ⋅ (${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}})}\\)
+            ${h10()}${h10()}
+            \\( \\frac{(${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}}) + (${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}})}
+            {(${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}}) ⋅ (${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}})} \\)
+            =
+            \\( \\frac{${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}} &thinsp;+ &thinsp;${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}}}
+            {${task1[2]}^2 &thinsp;- &thinsp;(\\sqrt{${task1[3]}})^2} \\)
+            =
+            \\( \\frac{${task1[2]+task1[2]}}{${task1[2]*task1[2]} &thinsp;- &thinsp;${task1[3]}} \\)
+            =
+            \\( \\frac{${task1[2]+task1[2]}}{${task1[2]*task1[2]-task1[3]}} \\)
+            =
+            \\(${(task1[2]+task1[2])/(task1[2]*task1[2]-task1[3])} \\)
+            `: ``}
+          `
+        }
         else 
           return `...`
         
@@ -3153,7 +3176,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `\\( (\\sqrt{${task1[0]}} - \\sqrt{${task1[1]}})(\\sqrt{${task1[0]}} + \\sqrt{${task1[1]}}) \\)` 
           }`
 
-          : task === 38 ? `\\( \\sqrt{${task1[0]}^${task1[1]}}\\)` :``}`
+          : task === 38 ? `\\( \\sqrt{${task1[0]}^${task1[1]}}\\)` 
+          
+          : task[0] === 409 ? `
+          ${task[1] === 4091 ? `
+            \\( \\frac{1}{${task1[2]} &thinsp;+ &thinsp;\\sqrt{${task1[3]}}} + \\frac{1}{${task1[2]} &thinsp;- &thinsp;\\sqrt{${task1[3]}}}\\)
+            `: ``}
+          `:
+          ``}`
 
           answerBlock += generateDate();
           answerBlock += generateHeader();
@@ -5856,6 +5886,42 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             :``}
           `
         }
+        else if (task[0] === 107){
+          return `
+          ${task[1] === 1071 ? `
+            Так как AK = CK, то треугольник AKC равнобедренный, отсюда ∠CAK = ∠C = ${task1[1]}°.
+            ${h10()}
+            Тогда ∠A = 2 • ∠C = 2 • ${task1[1]}° = ${2*task1[1]}°
+            ${h10()}
+            ∠A + ∠B + ∠C = 180°
+            ${h10()}
+            ∠B = 180° — ∠A — ∠C = 180° — ${task1[1]}° — ${2*task1[1]}° = ${180-(task1[1])-(task1[1]*2)}°
+            `: ``}
+          `
+
+        }
+        else if (task[0] === 108){
+          return `
+          ${task[1] === 1081 ? `
+            <img style="display: block;  width: 17em; " src="../../pages/mathOge/img/task15/15_3543_resh.png">
+            Треугольник ABM и треугольник BCM — равнобедренные,${h10()} ∠C = y = ${task1[1]}°, ∠A = x
+            ${h10()} 
+            отсюда ∠BMC = 180° — y — y = 180° — ${task1[1]}° — ${task1[1]}° = ${180-task1[1]-task1[1]}°.
+            ${h10()}
+            Тогда ∠AMB = 180° —  ∠BMC = 180° — ${180-task1[1]-task1[1]}° = ${180-(180-task1[1]-task1[1])}°
+            ${h10()}
+            2x + ∠AMB = 180° ${h10()} 2x + ${180-(180-task1[1]-task1[1])}° = 180° ${h10()} 2x = 180° — ${180-(180-task1[1]-task1[1])}° 
+            ${h10()} 
+            2x =  ${180-(180-(180-task1[1]-task1[1]))}°
+            ${h10()}
+            x =  ${180-(180-(180-task1[1]-task1[1]))}° / 2
+            ${h10()}
+            x =  ${(180-(180-(180-task1[1]-task1[1])))/2}°
+            ${h10()}
+            `: ``}
+          `
+
+        }
         // else if (item === 12){
         //   return `...`
         // }
@@ -5903,7 +5969,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1285.png"></div>
            
              `
-             : 
+             : task[0] === 107 ? `
+              ${task[1] === 1071 ? `
+                В треугольнике ABC проведена биссектриса AK. Найдите градусную меру угла B, если ∠C = ${task1[1]}° и AK = CK.
+                <hr class="hr-pd_20">
+                <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_3533.png"></div>
+           
+                `: ``}
+             `
+             : task[0] === 108 ? `
+              ${task[1] === 1081 ? `
+                В треугольнике ABC проведена медиана BM. Найдите градусную меру угла A, если ∠C = ${task1[1]}° и BM = AM = MC.
+                <hr class="hr-pd_20">
+                <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_3543.png"></div>
+           
+                `: ``}
+             `:
              ``}
           <hr class="hr-pd_20">
           `
