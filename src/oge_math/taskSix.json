@@ -5,7 +5,7 @@
         "typeTask": 2,
         "taskKec": [1, 6, 1],
         "taskAnswer": 17.5,
-        "task": 24,
+        "task": [204, 2041],
         "task1": [4, 1, 30, 42, "+"],
 
         "taskNum": "D39BF5"
@@ -15,8 +15,8 @@
         "typeTask": 2,
         "taskKec": [1, 6, 1],
         "taskAnswer": 22,
-        "task": 23,
-        "task1": [3, 5, 2, 7, "—", 70],
+        "task": [203, 2031],
+        "task1": [3, 5, 2, 7, "-", 70],
 
         "taskNum": "B96DA4"
     },
@@ -25,7 +25,7 @@
         "typeTask": 2,
         "taskKec": [1, 6, 3],
         "taskAnswer": 13,
-        "task": 22,
+        "task": [202, 2021],
         "task1": [23, 30, 1, 10, "+"],
 
         "taskNum": ""
@@ -35,7 +35,7 @@
         "typeTask": 2,
         "taskKec": [1, 6, 3],
         "taskAnswer": 149,
-        "task": 22,
+        "task": [202, 2021],
         "task1": [1, 42, 31, 39, "+"],
 
         "taskNum": ""
@@ -45,7 +45,7 @@
         "typeTask": 2,
         "taskKec": [1, 6, 3],
         "taskAnswer": 20,
-        "task": 22,
+        "task": [202, 2021],
         "task1": [4, 45, 8, 35, "+"],
 
         "taskNum": ""
@@ -55,7 +55,7 @@
         "typeTask": 2,
         "taskKec": [1, 6, 3],
         "taskAnswer": 32,
-        "task": 22,
+        "task": [202, 2021],
         "task1": [1, 10, 11, 18, "+"],
 
         "taskNum": ""
@@ -65,7 +65,7 @@
         "typeTask": 2,
         "taskKec": [1, 6, 3],
         "taskAnswer": 2,
-        "task": 22,
+        "task": [202, 2021],
         "task1": [2, 5, 4, 15, "+"],
 
         "taskNum": ""
@@ -74,8 +74,8 @@
         "taskCounter": 80,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,48",
-        
+        "taskAnswer": 0.48,
+        "task": [201, 2013],
         "task1": [7, 5, 12, 35, "•"],
 
         "taskNum": "683285"
@@ -84,8 +84,8 @@
         "taskCounter": 79,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,15",
-        
+        "taskAnswer": 1.15,
+        "task": [201, 2011],
         "task1": [1, 5, 19, 20, "+"],
 
         "taskNum": "D5ED33"
@@ -94,8 +94,8 @@
         "taskCounter": 78,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-1,15",
-        
+        "taskAnswer": -1.15,
+        "task": [201, 2012],
         "task1": [1, 5, 27, 20, "—"],
 
         "taskNum": "7B1530"
@@ -104,8 +104,8 @@
         "taskCounter": 77,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-4,5",
-        
+        "taskAnswer": -4.5,
+        "task": [201, 2012],
         "task1": [1, 5, 47, 10, "—"],
 
         "taskNum": "54576D"
@@ -114,8 +114,8 @@
         "taskCounter": 76,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "4,5",
-        
+        "taskAnswer": 4.5,
+        "task": [201, 2013],
         "task1": [15, 4, 6, 5, "•"],
 
         "taskNum": "85B5E0"
@@ -124,8 +124,8 @@
         "taskCounter": 75,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,2",
-        
+        "taskAnswer": 1.2,
+        "task": [201, 2013],
         "task1": [9, 5, 2, 3, "•"],
 
         "taskNum": "3D6EE6"
@@ -134,8 +134,8 @@
         "taskCounter": 74,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "4,9",
-        
+        "taskAnswer": 4.9,
+        "task": [201, 2014],
         "task1": [21, 5, 6, 7, " : "],
 
         "taskNum": "9B37E4"
@@ -144,8 +144,8 @@
         "taskCounter": 73,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,24",
-        
+        "taskAnswer": 0.24,
+        "task": [201, 2012],
         "task1": [1, 2, 13, 50, "—"],
 
         "taskNum": "E70E95"
@@ -154,8 +154,8 @@
         "taskCounter": 72,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,52",
-        
+        "taskAnswer": 0.52,
+        "task": [201, 2011],
         "task1": [1, 10, 21, 50, "+"],
 
         "taskNum": "945291"
@@ -164,8 +164,8 @@
         "taskCounter": 71,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,9",
-        
+        "taskAnswer": 0.9,
+        "task": [201, 2011],
         "task1": [1, 25, 43, 50, "+"],
 
         "taskNum": "A76D9D"
@@ -174,8 +174,8 @@
         "taskCounter": 70,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "3,75",
-        
+        "taskAnswer": 3.75,
+        "task": [201, 2013],
         "task1": [3, 5, 25, 4, "•"],
 
         "taskNum": "2EC590"
@@ -184,8 +184,8 @@
         "taskCounter": 69,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-0,1",
-        
+        "taskAnswer": -0.1,
+        "task": [201, 2012],
         "task1": [1, 25, 7, 50, "—"],
 
         "taskNum": "7A2A9D"
@@ -194,8 +194,8 @@
         "taskCounter": 68,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "3,3",
-        
+        "taskAnswer": 3.3,
+        "task": [201, 2014],
         "task1": [6, 5, 4, 11, " : "],
 
         "taskNum": "F8CA9A"
@@ -204,8 +204,8 @@
         "taskCounter": 67,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "2,8",
-        
+        "taskAnswer": 2.8,
+        "task": [201, 2014],
         "task1": [4, 5, 2, 7, " : "],
 
         "taskNum": "E023CC"
@@ -214,8 +214,8 @@
         "taskCounter": 66,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "10,5",
-        
+        "taskAnswer": 10.5,
+        "task": [201, 2013],
         "task1": [15, 2, 7, 5, "•"],
 
         "taskNum": "C609C4"
@@ -224,8 +224,8 @@
         "taskCounter": 65,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,9",
-        
+        "taskAnswer": 0.9,
+        "task": [201, 2013],
         "task1": [3, 4, 6, 5, "•"],
 
         "taskNum": "264CC0"
@@ -234,8 +234,8 @@
         "taskCounter": 64,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,05",
-        
+        "taskAnswer": 1.05,
+        "task": [201, 2014],
         "task1": [7, 8, 5, 6, " : "],
 
         "taskNum": "1527C7"
@@ -244,8 +244,8 @@
         "taskCounter": 63,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,45",
-        
+        "taskAnswer": 0.45,
+        "task": [201, 2013],
         "task1": [2, 5, 9, 8, "•"],
 
         "taskNum": "35B3A3"
@@ -254,8 +254,8 @@
         "taskCounter": 62,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,9",
-        
+        "taskAnswer": 1.9,
+        "task": [201, 2011],
         "task1": [1, 5, 17, 10, "+"],
 
         "taskNum": "5233A3"
@@ -264,8 +264,8 @@
         "taskCounter": 61,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-1,05",
-        
+        "taskAnswer": -1.05,
+        "task": [201, 2012],
         "task1": [1, 10, 23, 20, "—"],
 
         "taskNum": "1FC3AA"
@@ -274,8 +274,8 @@
         "taskCounter": 60,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "4,5",
-        
+        "taskAnswer": 4.5,
+        "task": [201, 2014],
         "task1": [3, 5, 2, 15, " : "],
 
         "taskNum": "79A9AD"
@@ -284,8 +284,8 @@
         "taskCounter": 59,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "7,5",
-        
+        "taskAnswer": 7.5,
+        "task": [201, 2013],
         "task1": [5, 3, 9, 2, "•"],
 
         "taskNum": "4413AF"
@@ -294,8 +294,8 @@
         "taskCounter": 58,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "8,75",
-        
+        "taskAnswer": 8.75,
+        "task": [201, 2014],
         "task1": [15, 4, 3, 7, " : "],
 
         "taskNum": "0C275B"
@@ -304,8 +304,8 @@
         "taskCounter": 57,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-0,68",
-        
+        "taskAnswer": -0.68,
+        "task": [201, 2012],
         "task1": [1, 10, 39, 50, "—"],
 
         "taskNum": "27DDD8"
@@ -314,8 +314,8 @@
         "taskCounter": 56,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,16",
-        
+        "taskAnswer": 1.16,
+        "task": [201, 2011],
         "task1": [1, 2, 33, 50, "+"],
 
         "taskNum": "FBDAD3"
@@ -324,8 +324,8 @@
         "taskCounter": 55,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-1,95",
-        
+        "taskAnswer": -1.95,
+        "task": [201, 2012],
         "task1": [1, 2, 49, 20, "—"],
 
         "taskNum": "98802B"
@@ -334,8 +334,8 @@
         "taskCounter": 54,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "5,25",
-        
+        "taskAnswer": 5.25,
+        "task": [201, 2014],
         "task1": [3, 5, 4, 35, " : "],
 
         "taskNum": "A81C2A"
@@ -344,8 +344,8 @@
         "taskCounter": 53,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "17,5",
-        
+        "taskAnswer": 17.5,
+        "task": [201, 2014],
         "task1": [21, 2, 3, 5, " : "],
 
         "taskNum": "06AC29"
@@ -354,8 +354,8 @@
         "taskCounter": 52,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,32",
-        
+        "taskAnswer": 0.32,
+        "task": [201, 2014],
         "task1": [12, 5, 15, 2, " : "],
 
         "taskNum": "418E22"
@@ -364,8 +364,8 @@
         "taskCounter": 51,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-0,4",
-        
+        "taskAnswer": -0.4,
+        "task": [201, 2012],
         "task1": [1, 2, 9, 10, "—"],
 
         "taskNum": "EA0419"
@@ -374,8 +374,8 @@
         "taskCounter": 50,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "2,1",
-        
+        "taskAnswer": 2.1,
+        "task": [201, 2013],
         "task1": [7, 6, 9, 5, "•"],
 
         "taskNum": "94FE12"
@@ -384,8 +384,8 @@
         "taskCounter": 49,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "2,05",
-        
+        "taskAnswer": 2.05,
+        "task": [201, 2011],
         "task1": [1, 2, 31, 20, "+"],
 
         "taskNum": "EA1574"
@@ -394,8 +394,8 @@
         "taskCounter": 48,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "2,1",
-        
+        "taskAnswer": 2.1,
+        "task": [201, 2011],
         "task1": [1, 4, 37, 20, "+"],
 
         "taskNum": "33FBF3"
@@ -404,8 +404,8 @@
         "taskCounter": 47,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,6",
-        
+        "taskAnswer": 1.6,
+        "task": [201, 2011],
         "task1": [1, 2, 11, 10, "+"],
 
         "taskNum": "3BAEFA"
@@ -414,8 +414,8 @@
         "taskCounter": 46,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,55",
-        
+        "taskAnswer": 1.55,
+        "task": [201, 2011],
         "task1": [1, 10, 29, 20, "+"],
 
         "taskNum": "ED8DF8"
@@ -424,8 +424,8 @@
         "taskCounter": 45,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-2,3",
-        
+        "taskAnswer": -2.3,
+        "task": [201, 2012],
         "task1": [1, 4, 51, 20, "—"],
 
         "taskNum": "3CC449"
@@ -434,8 +434,8 @@
         "taskCounter": 44,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "0,8",
-        
+        "taskAnswer": 0.8,
+        "task": [201, 2014],
         "task1": [14, 5, 7, 2, " : "],
 
         "taskNum": "AA2745"
@@ -444,8 +444,8 @@
         "taskCounter": 43,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,26",
-        
+        "taskAnswer": 1.26,
+        "task": [201, 2011],
         "task1": [1, 5, 53, 50, "+"],
 
         "taskNum": "54924B"
@@ -454,8 +454,8 @@
         "taskCounter": 42,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,8",
-        
+        "taskAnswer": 1.8,
+        "task": [201, 2013],
         "task1": [21, 5, 3, 7, "•"],
 
         "taskNum": "711640"
@@ -464,8 +464,8 @@
         "taskCounter": 41,
         "typeTask": 2,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-0,62",
-        
+        "taskAnswer": -0.62,
+        "task": [201, 2012],
         "task1": [1, 5, 41, 50, "—"],
 
         "taskNum": "097E41"
@@ -474,9 +474,9 @@
         "taskCounter": 40,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "19,84",
-        
-        "task1": "3,2 • 6,2",
+        "taskAnswer": 19.84,
+        "task": [101, 1013],
+        "task1": [3.2, 6.2],
 
         "taskNum": "3A4787"
     },
@@ -484,9 +484,9 @@
         "taskCounter": 39,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "13,3",
-        
-        "task1": "8,7 + 4,6",
+        "taskAnswer": 13.3,
+        "task": [101, 1011],
+        "task1": [8.7, 4.6],
 
         "taskNum": "99D38E"
     },
@@ -494,9 +494,9 @@
         "taskCounter": 38,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "9,4",
-        
-        "task1": "6,8 + 2,6",
+        "taskAnswer": 9.4,
+        "task": [101, 1011],
+        "task1": [6.8, 2.6],
 
         "taskNum": "C3738C"
     },
@@ -504,9 +504,9 @@
         "taskCounter": 37,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-4,5",
-        
-        "task1": "4,9 − 9,4",
+        "taskAnswer": -4.5,
+        "task": [101, 1012],
+        "task1": [4.9, 9.4],
 
         "taskNum": "BDCC81"
     },
@@ -514,9 +514,9 @@
         "taskCounter": 36,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-1,9",
-        
-        "task1": "5,7 − 7,6",
+        "taskAnswer": -1.9,
+        "task": [101, 1012],
+        "task1": [5.7, 7.6],
 
         "taskNum": "0F5B83"
     },
@@ -524,9 +524,9 @@
         "taskCounter": 35,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "16,12",
-        
-        "task1": "5,2 • 3,1",
+        "taskAnswer": 16.12,
+        "task": [101, 1013],
+        "task1": [5.2, 3.1],
 
         "taskNum": "8F6C3D"
     },
@@ -534,9 +534,9 @@
         "taskCounter": 34,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "17,25",
-        
-        "task1": "2,3 • 7,5",
+        "taskAnswer": 17.25,
+        "task": [101, 1013],
+        "task1": [2.3, 7.5],
 
         "taskNum": "D09E3C"
     },
@@ -544,9 +544,9 @@
         "taskCounter": 33,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-3,5",
-        
-        "task1": "4,7 − 8,2",
+        "taskAnswer": -3.5,
+        "task": [101, 1012],
+        "task1": [4.7, 8.2],
 
         "taskNum": "76FB33"
     },
@@ -554,9 +554,9 @@
         "taskCounter": 32,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "3,6",
-        
-        "task1": "6,1 − 2,5",
+        "taskAnswer": 3.6,
+        "task": [101, 1012],
+        "task1": [6.1, 2.5],
 
         "taskNum": "A10E69"
     },
@@ -564,9 +564,9 @@
         "taskCounter": 31,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "58,32",
-        
-        "task1": "8,1 • 7,2",
+        "taskAnswer": 58.32,
+        "task": [101, 1013],
+        "task1": [8.1, 7.2],
 
         "taskNum": "12AD6B"
     },
@@ -574,9 +574,9 @@
         "taskCounter": 30,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "10,1",
-        
-        "task1": "7,9 + 2,2",
+        "taskAnswer": 10.1,
+        "task": [101, 1011],
+        "task1": [7.9, 2.2],
 
         "taskNum": "9570E3"
     },
@@ -584,9 +584,9 @@
         "taskCounter": 29,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "36,85",
-        
-        "task1": "6,7 • 5,5",
+        "taskAnswer": 36.85,
+        "task": [101, 1013],
+        "task1": [6.7, 5.5],
 
         "taskNum": "C702ED"
     },
@@ -594,9 +594,9 @@
         "taskCounter": 28,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "14,7",
-        
-        "task1": "8,8 + 5,9",
+        "taskAnswer": 14.7,
+        "task": [101, 1011],
+        "task1": [8.8, 5.9],
 
         "taskNum": "5719EA"
     },
@@ -604,9 +604,9 @@
         "taskCounter": 27,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "12",
-        
-        "task2": ["4,8", "0,4"],
+        "taskAnswer": 12,
+        "task": [101, 1014],
+        "task1": [4.8, 0.4],
 
         "taskNum": "7545EE"
     },
@@ -614,9 +614,9 @@
         "taskCounter": 26,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "70,29",
-        
-        "task1": "9,9 • 7,1",
+        "taskAnswer": 70.29,
+        "task": [101, 1013],
+        "task1": [9.9, 7.1],
 
         "taskNum": "DE80C5"
     },
@@ -624,9 +624,9 @@
         "taskCounter": 25,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "40,81",
-        
-        "task1": "7,7 • 5,3",
+        "taskAnswer": 40.81,
+        "task": [101, 1013],
+        "task1": [7.7, 5.3],
 
         "taskNum": "003CC0"
     },
@@ -634,9 +634,9 @@
         "taskCounter": 24,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-0,5",
-        
-        "task1": "3,6 − 4,1",
+        "taskAnswer": -0.5,
+        "task": [101, 1012],
+        "task1": [3.6, 4.1],
 
         "taskNum": "6B40A0"
     },
@@ -644,9 +644,9 @@
         "taskCounter": 23,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "7",
-        
-        "task2": ["8,4", "1,2"],
+        "taskAnswer": 7,
+        "task": [101, 1014],
+        "task1": [8.4, 1.2],
 
         "taskNum": "FD4058"
     },
@@ -654,9 +654,9 @@
         "taskCounter": 22,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "8,16",
-        
-        "task1": "1,6 • 5,1",
+        "taskAnswer": 8.16,
+        "task": [101, 1013],
+        "task1": [1.6, 5.1],
 
         "taskNum": "AFE6DF"
     },
@@ -664,9 +664,9 @@
         "taskCounter": 21,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "5",
-        
-        "task2": ["6,5", "1,3"],
+        "taskAnswer": 5,
+        "task": [101, 1014],
+        "task1": [6.5, 1.3],
 
         "taskNum": "DB17DA"
     },
@@ -674,9 +674,9 @@
         "taskCounter": 20,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "4",
-        
-        "task2": ["6,8", "1,7"],
+        "taskAnswer": 4,
+        "task": [101, 1014],
+        "task1": [6.8, 1.7],
 
         "taskNum": "76122A"
     },
@@ -684,9 +684,9 @@
         "taskCounter": 19,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "17,1",
-        
-        "task1": "9,3 + 7,8",
+        "taskAnswer": 17.1,
+        "task": [101, 1011],
+        "task1": [9.3, 7.8],
 
         "taskNum": "C1231C"
     },
@@ -694,9 +694,9 @@
         "taskCounter": 18,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "20,16",
-        
-        "task1": "2,1 • 9,6",
+        "taskAnswer": 20.16,
+        "task": [101, 1013],
+        "task1": [2.1, 9.6],
 
         "taskNum": "52251A"
     },
@@ -704,9 +704,9 @@
         "taskCounter": 17,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,6",
-        
-        "task1": "6,4 − 4,8",
+        "taskAnswer": 1.6,
+        "task": [101, 1012],
+        "task1": [6.4, 4.8],
 
         "taskNum": "95FFBA"
     },
@@ -714,9 +714,9 @@
         "taskCounter": 16,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "3",
-        
-        "task2": ["8,7", "2,9"],
+        "taskAnswer": 3,
+        "task": [101, 1014],
+        "task1": [8.7, 2.9],
 
         "taskNum": "6AB97E"
     },
@@ -724,9 +724,9 @@
         "taskCounter": 15,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "2",
-        
-        "task2": ["8,2", "4,1"],
+        "taskAnswer": 2,
+        "task": [101, 1014],
+        "task1": [8.2, 4.1],
 
         "taskNum": "83F40D"
     },
@@ -734,9 +734,9 @@
         "taskCounter": 14,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "8",
-        
-        "task2": ["9,6", "1,2"],
+        "taskAnswer": 8,
+        "task": [101, 1014],
+        "task1": [9.6, 1.2],
 
         "taskNum": "91AB0C"
     },
@@ -744,9 +744,9 @@
         "taskCounter": 13,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "9",
-        
-        "task2": ["8,1", "0,9"],
+        "taskAnswer": 9,
+        "task": [101, 1014],
+        "task1": [8.1, 0.9],
 
         "taskNum": "EA23F7"
     },
@@ -754,9 +754,9 @@
         "taskCounter": 12,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "11",
-        
-        "task2": ["13,2", "1,2"],
+        "taskAnswer": 11,
+        "task": [101, 1014],
+        "task1": [13.2, 1.2],
 
         "taskNum": "A830FB"
     },
@@ -764,9 +764,9 @@
         "taskCounter": 11,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "6",
-        
-        "task2": ["9,6", "1,6"],
+        "taskAnswer": 6,
+        "task": [101, 1014],
+        "task1": [9.6, 1.6],
 
         "taskNum": "4609FA"
     },
@@ -774,8 +774,9 @@
         "taskCounter": 10,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "18,4",
-        "task1": "9,8 + 8,6",
+        "taskAnswer": 18.4,
+        "task": [101, 1011],
+        "task1": [9.8, 8.6],
 
         "taskNum": "A594B5"
     },
@@ -783,8 +784,9 @@
         "taskCounter": 9,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "-3,4",
-        "task1": "3,9 − 7,3",
+        "taskAnswer": -3.4,
+        "task": [101, 1012],
+        "task1": [3.9, 7.3],
 
         "taskNum": "510AB3"
     },
@@ -792,8 +794,9 @@
         "taskCounter": 8,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "2,7",
-        "task1": "4,4 − 1,7",
+        "taskAnswer": 2.7,
+        "task": [101, 1012],
+        "task1": [4.4, 1.7],
 
         "taskNum": "2909BF"
     },
@@ -801,8 +804,9 @@
         "taskCounter": 7,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "1,4",
-        "task1": "3,3 − 1,9",
+        "taskAnswer": 1.4,
+        "task": [101, 1012],
+        "task1": [3.3, 1.9],
 
         "taskNum": "7E16BF"
     },
@@ -810,17 +814,19 @@
         "taskCounter": 6,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "15,3",
-        "task1": "5,6 + 9,7",
-
+        "taskAnswer": 15.3,
+        "task": [101, 1011],
+        "task1": [5.6, 9.7],
+        
         "taskNum": "4C4EBF"
     },
     {
         "taskCounter": 5,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "13,7",
-        "task1": "8,3 + 5,4",
+        "taskAnswer": 13.7,
+        "task": [101, 1011],
+        "task1": [8.3, 5.4],
 
         "taskNum": "7D3079"
     },
@@ -828,8 +834,9 @@
         "taskCounter": 4,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "12,1",
-        "task1": "8,4 + 3,7",
+        "taskAnswer": 12.1,
+        "task": [101, 1011],
+        "task1": [8.4, 3.7],
 
         "taskNum": "408A76"
     },
@@ -837,8 +844,9 @@
         "taskCounter": 3,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "6,8",
-        "task1": "9,2 − 2,4",
+        "taskAnswer": 6.8,
+        "task": [101, 1012],
+        "task1": [9.2, 2.4],
 
         "taskNum": "314D07"
     },
@@ -846,18 +854,20 @@
         "taskCounter": 2,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "38,27",
-        "task1": "8,9 • 4,3",
-
+        "taskAnswer": 38.27,
+        "task": [101, 1013],
+        "task1": [8.9, 4.3],
+       
         "taskNum": "214904"
     }, 
     {
         "taskCounter": 1,
         "typeTask": 1,
         "taskKec": [1, 6, 1],
-        "taskAnswer": "14,3",
-        "task1": "6,9 + 7,4",
+        "taskAnswer": 14.3,
+        "task": [101, 1011],
+        "task1": [6.9, 7.4],
 
         "taskNum": "21014E"
-    }
+    } 
 ]

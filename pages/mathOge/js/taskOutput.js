@@ -6,7 +6,6 @@ let totalTasksLoaded = 0;
 let allTasks = []; 
 let allTaskKec = {};
 let countData = {};
-
 async function fetchTasks(taskKey) {
   try {
     if (tasksCache.has(taskKey)) {
@@ -27,8 +26,8 @@ async function fetchTasks(taskKey) {
     if(showTaskCount2){
       showTaskCount2.innerHTML = `<hr class="hr-pd_5">Общее количество задач: ${totalTasksLoaded}`
     }
+    
 
-   
     data.forEach(task => {
       task.source = taskKey; 
       allTasks.push(task);
@@ -145,19 +144,20 @@ document.getElementById('select-task').addEventListener('change', function() {
 });
 
 
-document.addEventListener('click', (e) => {
-  if (e.target.id === 'open-this-task') {
-    e.preventDefault();
-    const taskNumber = e.target.textContent.trim().replace('№', '');
-    const searchInput = document.getElementById('taskNumber');
-    const searchBtn = document.getElementById('searchBtn');
+// document.addEventListener('click', (e) => {
+//   if (e.target.id === 'open-this-task') {
+//     e.preventDefault();
+//     const taskNumber = e.target.textContent.trim().replace('№', '');
+//     const searchInput = document.getElementById('taskNumber');
+//     const searchBtn = document.getElementById('searchBtn');
     
-    if (searchInput && searchBtn) {
-      searchInput.value = taskNumber;
-      searchBtn.click();
-    }
-  }
-});
+//     if (searchInput && searchBtn) {
+//       searchInput.value = taskNumber;
+//       searchBtn.click();
+//     }
+//   }
+// });
+
 const taskPage = document.getElementById('select-task');
 taskPage.innerHTML = ` 
 
@@ -188,7 +188,7 @@ taskPage.innerHTML = `
 const taskSort = document.getElementById('taskSort');
 if (taskSort) {
     taskSort.innerHTML = `
-       <option value='1'>новые</option>
+       <option value='1'>Сначала новые</option>
        <option value='0'>по возрастанию</option>
        <option value='1'>по убыванию</option>
        <option value='2'>случайный порядок</option>

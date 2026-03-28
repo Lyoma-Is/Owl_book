@@ -39,7 +39,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     //const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
     
     // <details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10"> </details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">
-    const numberTaskOpen = (item) => `<a id="open-this-task" style="cursor: pointer; color: purple;"> № ${item}</a>` 
+    const numberTaskOpen = (item) => `<a id="open-this-task" style="cursor: pointer;"> № ${item}</a>` //color: purple;
     const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10">
       <div class="text-inform" data-task-counter="${taskCounter}"><div class="inform-block"></div>
         ${ !taskKec ? ``:
@@ -2657,18 +2657,66 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     } 
     if (taskKey === 'six'){
       let Nomer = 6
+      function reshSix(item){
+        if(item === 101){
+          return `
+          ${task[1] === 1011 ? `${task1[0]} + ${task1[1]} = ${(task1[0]+task1[1]).toFixed(1)}`
+            : 
+            task[1] === 1012 ? `${task1[0]} − ${task1[1]} = ${(task1[0]-task1[1]).toFixed(1)}`
+            : 
+            task[1] === 1013 ? `${task1[0]} • ${task1[1]} = ${(task1[0]*task1[1]).toFixed(2)}`
+            : 
+            task[1] === 1014 ? `\\( \\frac{${task1[0]}}{${task1[1]}} = ${(task1[0]/task1[1]).toFixed(0)}\\)
+            `
+            :``}`
+        }
+        else if(item === 201){
+          return `
+          ${task[1] === 2011 ? 
+            `
+            \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;+\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]}}{${task1[1]}} •\\frac{${(task1[3]/task1[1]).toFixed(0)}}{${(task1[3]/task1[1]).toFixed(0)}} &thinsp;+\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]*(task1[3]/task1[1])}}{${task1[1]*(task1[3]/task1[1])}} &thinsp;+\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]*(task1[3]/task1[1])} &thinsp;+ ${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]*(task1[3]/task1[1])+task1[2]}}{${task1[3]}}\\) = 
+            \\( ${(task1[0]*(task1[3]/task1[1])+task1[2])/task1[3]}\\)
+
+            `
+            : ``}
+          `
+        }
+        else {
+          return `...`
+        }
+      }
+
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task2 ? 
-            `Найдите значение выражения:&thinsp; ${drobNum(task2[0], task2[1])}` 
-            : 
-            `Найдите значение выражения:&thinsp; ${task1}`}`
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
           
+          ${
+            task[0] === 101 ? `
+            ${
+              task[1] === 1011 ? `
+              Найдите значение выражения:&thinsp; ${task1[0]} + ${task1[1]} 
+              `
+              : task[1] === 1012 ? `
+              Найдите значение выражения:&thinsp; ${task1[0]} − ${task1[1]} 
+              `
+              : task[1] === 1013 ? `
+              Найдите значение выражения:&thinsp; ${task1[0]} • ${task1[1]} 
+              `
+              : task[1] === 1014 ? `
+              Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}}\\) 
+              `
+              :``} `: ``  }`
+       
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshSix(task[0])}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -2679,43 +2727,52 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task === 22 ? 
-            `
-          Найдите значение выражения:&thinsp; 
-          ${drobNum(task1[0], task1[1])}
-          &thinsp;${task1[4]}&thinsp;
-          ${drobNum(task1[2], task1[3])}<hr class="hr-pd_20">
-
-          Представьте полученный результат в виде несократимой обыкновенной дроби. В ответ запишите числитель этой дроби.
-            `
-            : task === 23 ? 
-            `
-          Представьте выражение:&thinsp; 
-          ${drobNum(task1[0], task1[1])}
-          ${task1[4]}
-          ${drobNum(task1[2], task1[3])}
-          в виде дроби со знаменателем ${task1[5]}. В ответ запишите числитель полученной дроби.
-          <hr class="hr-pd_20">
-          `
-          : task === 24 ? 
-            `
-            Найдите значение выражения:&thinsp; 
-            \\(\\frac{${task1[1]}}{\\frac{${task1[1]}}{${task1[2]}} ${task1[4]} \\frac{${task1[1]}}{${task1[3]}}}\\)
-
-            `
+          ${ 
+            task[0] === 201 ? `
+            ${
+            task[1] === 2011 ? `Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;+\\frac{${task1[2]}}{${task1[3]}}\\)`
             :
-          `
-          Найдите значение выражения:&thinsp; 
-          
-          ${drobNum(task1[0], task1[1])}
-          &thinsp;${task1[4]}&thinsp;
-          ${drobNum(task1[2], task1[3])}`}
+            task[1] === 2012 ? `Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;-\\frac{${task1[2]}}{${task1[3]}}\\)`
+            :
+            task[1] === 2013 ? `Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;•\\frac{${task1[2]}}{${task1[3]}}\\)`
+            :
+            task[1] === 2014 ? `Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;:\\frac{${task1[2]}}{${task1[3]}}\\)`
+            : 
 
-          <hr class="hr-pd_20">
-          `
+            `` }`
+
+            : task[0] === 202 ? `
+            ${
+              task[1] === 2021 ? `
+              Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} ${task1[4]}\\frac{${task1[2]}}{${task1[3]}}\\).
+              ${h10()}
+              Представьте полученный результат в виде несократимой обыкновенной дроби. В ответ запишите числитель этой дроби.`
+            : 
+            `` }` 
+
+            : task[0] === 203 ? `
+            ${
+              task[1] === 2031 ? `
+              Представьте выражение:&thinsp;  \\( \\frac{${task1[0]}}{${task1[1]}} ${task1[4]}\\frac{${task1[2]}}{${task1[3]}}\\)
+              в виде дроби со знаменателем ${task1[5]}.${h10()} В ответ запишите числитель полученной дроби.
+              <hr class="hr-pd_20">`
+            : 
+            ``}`
+
+            : task[0] === 204 ? `
+            ${
+              task[1] === 2041 ? `
+              Найдите значение выражения:&thinsp; \\(\\frac{${task1[1]}}{\\frac{${task1[1]}}{${task1[2]}} ${task1[4]} \\frac{${task1[1]}}{${task1[3]}}}\\)` 
+            
+            : 
+            ``} `
+
+            :``}<hr class="hr-pd_20"> `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
+            <hr class="hr-pd_20">
+            ${reshSix(task[0])}
             <hr class="hr-pd_20">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
