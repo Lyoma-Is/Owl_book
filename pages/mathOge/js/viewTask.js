@@ -2672,7 +2672,8 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         }
         else if(item === 201){
           return `
-          ${task[1] === 2011 ? 
+          ${
+            task[1] === 2011 ? 
             `
             \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;+\\frac{${task1[2]}}{${task1[3]}}\\) = 
             \\( \\frac{${task1[0]}}{${task1[1]}} •\\frac{${(task1[3]/task1[1]).toFixed(0)}}{${(task1[3]/task1[1]).toFixed(0)}} &thinsp;+\\frac{${task1[2]}}{${task1[3]}}\\) = 
@@ -2682,7 +2683,35 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             \\( ${(task1[0]*(task1[3]/task1[1])+task1[2])/task1[3]}\\)
 
             `
-            : ``}
+            : task[1] === 2012 ? 
+            `
+            \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;-\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]}}{${task1[1]}} •\\frac{${(task1[3]/task1[1]).toFixed(0)}}{${(task1[3]/task1[1]).toFixed(0)}} &thinsp;-\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]*(task1[3]/task1[1])}}{${task1[1]*(task1[3]/task1[1])}} &thinsp;-\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]*(task1[3]/task1[1])} &thinsp;- ${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]*(task1[3]/task1[1])-task1[2]}}{${task1[3]}}\\) = 
+            \\( ${(task1[0]*(task1[3]/task1[1])-task1[2])/task1[3]}\\)
+
+            `
+            : task[1] === 2013 ? 
+            `
+            \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;•\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]} &thinsp;• ${task1[2]}}{${task1[1]} &thinsp;• ${task1[3]}} \\) = 
+            \\( \\frac{${task1[0]*task1[2]}}{${task1[1]*task1[3]}} \\) = 
+            \\( ${(task1[0]*task1[2])/(task1[1]*task1[3])} \\) 
+
+            `
+            : task[1] === 2014 ? 
+            `
+            \\( \\frac{${task1[0]}}{${task1[1]}}:\\frac{${task1[2]}}{${task1[3]}}\\) = 
+            \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;•\\frac{${task1[3]}}{${task1[2]}}\\) =
+            \\( \\frac{${task1[0]} &thinsp;• ${task1[3]}}{${task1[1]} &thinsp;• ${task1[2]}} \\) = 
+            \\( \\frac{${task1[0]*task1[3]}}{${task1[1]*task1[2]}} \\) = 
+            \\( ${(task1[0]*task1[3])/(task1[1]*task1[2])} \\) 
+
+            `
+            : 
+            ``}
           `
         }
         else {
@@ -2736,7 +2765,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             :
             task[1] === 2013 ? `Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;•\\frac{${task1[2]}}{${task1[3]}}\\)`
             :
-            task[1] === 2014 ? `Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} &thinsp;:\\frac{${task1[2]}}{${task1[3]}}\\)`
+            task[1] === 2014 ? `Найдите значение выражения:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} :\\frac{${task1[2]}}{${task1[3]}}\\)`
             : 
 
             `` }`
