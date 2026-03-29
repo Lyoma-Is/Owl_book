@@ -2714,6 +2714,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ``}
           `
         }
+        else if(item === 203){
+          return `
+          \\( \\frac{${task1[0]}}{${task1[1]}} ${task1[4]}\\frac{${task1[2]}}{${task1[3]}}\\) = 
+          \\( \\frac{${task1[0]}}{${task1[1]}} •\\frac{${task1[5]/task1[1]}}{${task1[5]/task1[1]}} 
+          ${task1[4]}
+          \\frac{${task1[2]}}{${task1[3]}} •\\frac{${task1[5]/task1[3]}}{${task1[5]/task1[3]}}\\) =
+          \\( \\frac{${task1[0]*(task1[5]/task1[1])}}{${task1[1]*(task1[5]/task1[1])}} 
+          ${task1[4]}
+          \\frac{${task1[2]*(task1[5]/task1[3])}}{${task1[3]*(task1[5]/task1[3])}}\\) =
+          \\( \\frac{${task1[0]*(task1[5]/task1[1])} &thinsp;
+          ${task1[4]}
+          ${task1[2]*(task1[5]/task1[3])}}{${task1[1]*(task1[5]/task1[1])}} \\) =
+          \\( \\frac{${(task1[0]*(task1[5]/task1[1]))-(task1[2]*(task1[5]/task1[3]))}}{${task1[1]*(task1[5]/task1[1])}} \\)
+          `
+        }
         else {
           return `...`
         }
@@ -2813,8 +2828,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
     } 
     if (taskKey === 'seven'){
       let Nomer = 7
-      switch(typeTask){
-       
+      switch(typeTask){      
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
@@ -2843,20 +2857,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 2:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task1[3] ? 
-            `
-            Какое из следующих чисел заключено между числами: &thinsp;
-            ${drobNum(task1[0], task1[1])}&thinsp; и &thinsp;
-            ${drobNum(task1[2], task1[3])}&thinsp; ?` 
-            : 
-            task1[1] ? 
-            `
-            Между какими целыми числами заключено число:&thinsp; ${drobNum(task1[0], task1[1])}&thinsp; ?
-            ` : 
-            `
-            Между какими числами заключено число ${sqrtNum(task1[0])} ?
-            `}
-            <hr class="hr-pd_40"> 
+          ${task[0] === 201 ? `
+            ${
+              task[1] === 2011 ? ` Между какими числами заключено число \\( \\sqrt{${task1[0]}} \\) ?`
+              : 
+              task[1] === 2012 ? ` Между какими целыми числами заключено число:&thinsp; \\( \\frac{${task1[0]}}{${task1[1]}} \\) ?`
+              : 
+              task[1] === 2013 ? ` Какое из следующих чисел заключено между числами: &thinsp; 
+              \\( \\frac{${task1[0]}}{${task1[1]}} \\) и \\( \\frac{${task1[2]}}{${task1[3]}} \\)?`
+              : 
+              ``}`:``
+            }
+          <hr class="hr-pd_40"> 
            <div style="display: flex; justify-content: space-around;">
             <p>${task2[0]}</p>
             <p>${task2[1]}</p>
@@ -2878,137 +2890,129 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 3:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task === 31 ? 
-            `
-            Какое из чисел ${sqrtNum(task1[0])},&thinsp; ${sqrtNum(task1[1])},&thinsp; ${sqrtNum(task1[2])},&thinsp; ${sqrtNum(task1[3])}&thinsp; принадлежит промежутку [${task1[4]} ; ${task1[5]}]
-            <hr class="hr-pd_30">
-            ` : 
-        
-            
-            task1.length === 7 ? 
-            `
-            Какое из чисел&thinsp;
-            ${drobNum(task1[0], task1[4])};&thinsp;
-            ${drobNum(task1[1], task1[4])};&thinsp;
-            ${drobNum(task1[2], task1[4])};&thinsp;
-            ${drobNum(task1[3], task1[4])}&thinsp;
-            принадлежит отрезку [${task1[5]}; ${task1[6]}] ?
-            <hr class="hr-pd_40">
-            ` :
-            task1.length === 6 ? 
-            `Одно из чисел&thinsp;
-            ${drobNum(task1[0], task1[4])};&thinsp;
-            ${drobNum(task1[1], task1[4])};&thinsp;
-            ${drobNum(task1[2], task1[4])};&thinsp;
-            ${drobNum(task1[3], task1[4])}&thinsp;
-            
-            отмечено на числовой прямой точкой ${task1[5] ? task1[5] : ""}.
-            <hr class="hr-pd_10">
-            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-            <hr class="hr-pd_10">
-            Какое это число?<hr class="hr-pd_20">
-            ` :  task1.length == 2 ? 
-            `Какому из данных промежутков принадлежит число&thinsp;
-              ${drobNum(task1[0], task1[1])} ?
-            ` : 
-            task1.length === 9 ? `
-            На координатной прямой точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]} соответствуют числам
-            ${task1[4]}; ${task1[5]}; ${task1[6]}; ${task1[7]}.<hr class="hr-pd_20">
-            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-            
-            Какой точке соответствует число:&thinsp; ${task1[8]} ? <hr class="hr-pd_30">
-            ` : task1[0] === 0 ? 
-            `
-            ${task2}<hr class="hr-pd_10">
-            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-           <hr class="hr-pd_20">
-           Какая из разностей ${task1[1]}, ${task1[2]}, ${task1[3]} ${task3}?<hr class="hr-pd_20">
-            ` 
-            : task1[0] === 1  && task1.length === 10? 
-            `
-            На координатной прямой отмечены точки ${task1[1]}, ${task1[2]}, ${task1[3]}, ${task1[4]}. 
-            <hr class="hr-pd_20">
-            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-            <hr class="hr-pd_20">
-            Одна из них соответствует числу&thinsp; 
-            <math style="font-size: 140%">
-              <mfrac >
-                <mn style="padding-bottom: 5px;">${task1[5]}</mn>
-                <mn style="padding-top: 5px;">${task1[6]}</mn>
-              </mfrac>
-            </math>.&thinsp; Какая это точка?
-            <hr class="hr-pd_30"> 
-            ` 
-            :
-            `
-            На координатной прямой отмечены точки ${task1[0]}, ${task1[1]}, ${task1[2]}, ${task1[3]}. Одна из них соответствует числу <span style="font-size: 140%; margin-right: -2px;">√</span><span  style="border-top: 0.14em solid ">${task1[4]}</span>. Какая это точка?
-            <hr class="hr-pd_20">
-            <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-            <hr class="hr-pd_30">      
-            `}
-          
-         
-          ${
-            task === 31 ? 
-            ` 
-            <div style="display: flex; justify-content: space-around;">
-              <p>1) ${sqrtNum(task1[0])}</p>
-              <p>2) ${sqrtNum(task1[1])}</p>
-              <p>3) ${sqrtNum(task1[2])}</p>
-              <p>4) ${sqrtNum(task1[3])}</p>
-            </div>
+          ${ 
+            task[0] === 301 ? `
+            ${
+              task[1] === 3011 ? `
+              Одно из чисел&thinsp; \\( 
+              \\frac{${task1[0]}}{${task1[4]}},
+              \\frac{${task1[1]}}{${task1[4]}},
+              \\frac{${task1[2]}}{${task1[4]}},
+              \\frac{${task1[3]}}{${task1[4]}}\\)
+              отмечено на числовой прямой точкой ${task1[5] ? task1[5] : ""}.
+              <hr class="hr-pd_10">
+              <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+              <hr class="hr-pd_10">
+              Какое это число?
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-around;">
+                <p> 1) \\(\\frac{${task1[0]}}{${task1[4]}}\\)</p>
+                <p> 2) \\(\\frac{${task1[1]}}{${task1[4]}}\\)</p>
+                <p> 3) \\(\\frac{${task1[2]}}{${task1[4]}}\\)</p>
+                <p> 4) \\(\\frac{${task1[3]}}{${task1[4]}}\\)</p>
+              </div>
+              <hr class="hr-pd_20">
+              ` 
+              :
+              task[1] === 3012 ? `
+              На координатной прямой отмечены точки A, B, C, D. Одна из них соответствует числу \\( \\sqrt{${task1[0]}}\\).<br> Какая это точка?
+              <hr class="hr-pd_40">
+              <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+              <hr class="hr-pd_40">
+              <div style="display: flex; justify-content: space-around;">
+                <p> 1) точка A</p><p> 2) точка B</p><p> 3) точка C</p><p> 4) точка D</p>
+              </div>
+              <hr class="hr-pd_20">
+              `
+              : 
+              task[1] === 3013 ? `
+              На координатной прямой точки A, B, C, D соответствуют числам 
+              &thinsp;${task1[0]}; &thinsp;${task1[1]}; &thinsp;${task1[2]}; &thinsp;${task1[3]}.
+              <hr class="hr-pd_20">
+              <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+              <hr class="hr-pd_20">
+              Какой точке соответствует число: &thinsp;${task1[4]} ?
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-around;">
+                <p> 1) точка A</p><p> 2) точка B</p><p> 3) точка C</p><p> 4) точка D</p>
+              </div>
+              <hr class="hr-pd_20">
+              `
+              : 
+              task[1] === 3014 ? `
+              ${task2}<hr class="hr-pd_10">
+              <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+              <hr class="hr-pd_20">
+              Какая из разностей \\(&thinsp;${task1[1]}, &thinsp;${task1[2]}, &thinsp;${task1[3]}\\) &thinsp;${task3}?
+              <hr class="hr-pd_20">
+              <div style="display: flex; justify-content: space-around;">
+                <p> 1) \\(${task1[1]}\\)</p>
+                <p> 2) \\(${task1[2]}\\)</p>
+                <p> 3) \\(${task1[3]}\\)</p>
+                <p> 4) ${task1[4]}</p>
+              </div>
+              <hr class="hr-pd_20">
+              ` 
+              : 
+              task[1] === 3015 ? `
+              На координатной прямой отмечены точки A, B, C, D.<hr class="hr-pd_10">
+              <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
+              <hr class="hr-pd_20">
+              Одна из них соответствует числу \\(\\frac{${task1[0]}}{${task1[1]}}\\). Какая это точка?
+              <hr class="hr-pd_40">
+              <div style="display: flex; justify-content: space-around;">
+                <p> 1) точка A</p><p> 2) точка B</p><p> 3) точка C</p><p> 4) точка D</p>
+              </div>
+              <hr class="hr-pd_20">
+              ` 
+              :
+              
+              ``}`
+            : 
+            task[0] === 302 ? `
+             ${
+              task[1] === 3021 ? `
+              Какое из чисел \\( \\sqrt{${task1[0]}}\\), \\( \\sqrt{${task1[1]}}\\), \\( \\sqrt{${task1[2]}}\\), \\( \\sqrt{${task1[3]}}\\)
+              &thinsp; принадлежит промежутку \\([${task1[4]} ; ${task1[5]}]\\)
+              <hr class="hr-pd_40">
+                <div style="display: flex; justify-content: space-around;">
+                  <p> 1) \\( \\sqrt{${task1[0]}}\\)</p>
+                  <p> 2) \\( \\sqrt{${task1[1]}}\\)</p>
+                  <p> 3) \\( \\sqrt{${task1[2]}}\\)</p>
+                  <p> 4) \\( \\sqrt{${task1[3]}}\\)</p>
+                </div>
+              <hr class="hr-pd_40">
+              `
+              : task[1] === 3022 ? `
+              Какое из чисел&thinsp; \\( 
+              \\frac{${task1[0]}}{${task1[4]}},
+              \\frac{${task1[1]}}{${task1[4]}},
+              \\frac{${task1[2]}}{${task1[4]}},
+              \\frac{${task1[3]}}{${task1[4]}}\\)
+              принадлежит отрезку  \\([${task1[5]} ; ${task1[6]}]\\)
+              <hr class="hr-pd_40">
+              <div style="display: flex; justify-content: space-around;">
+                <p> 1) \\(\\frac{${task1[0]}}{${task1[4]}}\\)</p>
+                <p> 2) \\(\\frac{${task1[1]}}{${task1[4]}}\\)</p>
+                <p> 3) \\(\\frac{${task1[2]}}{${task1[4]}}\\)</p>
+                <p> 4) \\(\\frac{${task1[3]}}{${task1[4]}}\\)</p>
+              </div>
+              <hr class="hr-pd_40">
+              `
+              : task[1] === 3023 ? `
+              Какому из данных промежутков принадлежит число&thinsp; \\(\\frac{${task1[0]}}{${task1[1]}}\\) ?
+              <hr class="hr-pd_40">
+              <div style="display: flex; justify-content: space-around;">
+                <p> 1) ${task2[0]}</p><p> 2) ${task2[1]}</p><p> 3) ${task2[2]}</p><p> 4) ${task2[3]}</p>
+              </div>
+              <hr class="hr-pd_40">
+              `
+              :
 
+              ``}
+            
             `
-            :
-            task1.length === 6 || task1.length === 7 ? 
-          `<div style="display: flex; justify-content: space-around;">
-            <p> 1) ${drobNum(task1[0], task1[4])}</p>
-            <p> 2) ${drobNum(task1[1], task1[4])}</p>
-            <p> 3) ${drobNum(task1[2], task1[4])}</p>
-            <p> 4) ${drobNum(task1[3], task1[4])}</p>
-          </div>`
-          : task1.length === 2 ? 
-          `
-          <hr class="hr-pd_30">
-          <div style="display: flex; justify-content: space-around;">
-            <p>1) ${task2[0]}</p>
-            <p>2) ${task2[1]}</p>
-            <p>3) ${task2[2]}</p>
-            <p>4) ${task2[3]}</p>
-          </div>
-          ` 
-          : ((task1.length === 5 || task1.length === 9) && task1[0] !== 0)? 
-          `
-          
-          <div style="display: flex; justify-content: space-around;">
-            <p>1) точка ${task1[0]}</p>
-            <p>2) точка ${task1[1]}</p>
-            <p>3) точка ${task1[2]}</p>
-            <p>4) точка ${task1[3]}</p>
-          </div>
-          ` 
-          : task1[0] === 0 ? 
-          `
-          <hr class="hr-pd_20">
-          <div style="display: flex; justify-content: space-around;">
-            <p>1) ${task1[1]}</p>
-            <p>2) ${task1[2]}</p>
-            <p>3) ${task1[3]}</p>
-            <p>4) ${task1[4]}</p>
-          </div>
-          ` 
-          : task1.length === 10 ? 
-          
-          `<div style="display: flex; justify-content: space-around;">
-            <p>1) точка ${task1[1]}</p>
-            <p>2) точка ${task1[2]}</p>
-            <p>3) точка ${task1[3]}</p>
-            <p>4) точка ${task1[4]}</p>
-          </div>` :
-          
-          ``}
-          
-          <hr class="hr-pd_20">
+            : ``}
           
           `
           answerBlock += generateDate();

@@ -609,3 +609,65 @@ table.iksweb th {
     }
 }
 
+/* Стили для кнопки аналогов */
+.analogs-mini-button {
+    margin-left: 10px;
+    padding: 2px 8px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.analogs-mini-button:hover {
+    background-color: #0b7dda;
+}
+
+/* Стили для контейнера аналогов */
+.analogs-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.analogs-header {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.analogs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.analog-item {
+    padding: 5px 8px;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 3px solid #2196F3;
+}
+
+.analog-link {
+    color: #0066cc;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.analog-link:hover {
+    text-decoration: underline;
+    color: #004499;
+}
+
+.no-analogs {
+    color: #999;
+    font-style: italic;
+    padding: 8px;
+    text-align: center;
+}
