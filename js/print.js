@@ -173,7 +173,7 @@ function createAnswerTableRow(taskNumber, answer) {
 }
 
 function createPrintWindow(printContent, correctAnswersContent, variantName, isGeneratedVariant) {
-    const printWindow = window.open('', '_blank', 'width=1000,height=700');
+    const printWindow = window.open('', '_blank');
     if (!printWindow) {
         showError('Пожалуйста, разрешите всплывающие окна для печати');
         return;
@@ -259,7 +259,7 @@ function getBaseStyles() {
             font-family: 'Roboto', sans-serif;
             line-height: 1.5;
             color: #333;
-            padding: 10px 30px;
+            padding: 10px;
             background: #f5f5f5;
         }
         
@@ -280,7 +280,7 @@ function getPrintControlsStyles() {
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
-            z-index: 1000;
+           
         }
         
         .controls-group {
