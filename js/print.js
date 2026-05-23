@@ -555,7 +555,7 @@ function getPrintMediaStyles() {
                     }
             /* Увеличиваем отступы при печати */
             @page {
-                margin: 20mm;
+                margin: 20cm;
             }
             .table_4{           
                 border-collapse: collapse;
