@@ -113,7 +113,7 @@ function cleanSlideForPrint(slide) {
     // Оптимизируем изображения
     const images = slide.querySelectorAll('img');
     images.forEach(img => {
-        img.style.maxWidth = '100%';
+        img.style.maxWidth = '95%';
         img.style.height = 'auto';
     });
 }
@@ -259,7 +259,7 @@ function getBaseStyles() {
             font-family: 'Roboto', sans-serif;
             line-height: 1.5;
             color: #333;
-            padding: 20px;
+            padding: 10px 30px;
             background: #f5f5f5;
         }
         
@@ -371,7 +371,7 @@ function getPrintContentStyles() {
         
         .print-content {
             background: white;
-            padding: 30px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
