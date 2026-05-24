@@ -28,19 +28,19 @@ export {tasks};
 export default function generateTaskHTML(taskKey, item, tumbler = true) {
     const { date, taskNum, taskAn, task, task1, task2, task3, task4, task5, task6, task7, task8, task9, taskAuthor, taskTable, taskAnswer, typeTask, taskCounter, taskHard, taskTableV, taskTableS, taskKec, taskDate} = item;
     const generateHard = () => `${taskHard === 0 ? "" : taskHard === 1 ? "<em>(Базовый)</em>": taskHard === 2 ? "<em>(Средний)</em>": taskHard === 3 ? "<em>(Сложный)</em>":""}` 
-    const generateHeader = () => `<details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10">`;
-    const generateFooter = () => `</details><hr class="hr-pd_20">
+    const generateHeader = () => `<details><summary class="p-num resh print">Показать решение и ответ</summary>${span10()}`;
+    const generateFooter = () => `</details>${span20()}
     <p class="p-num print" style="text-align: right;">${!taskDate ? `` : `Добавлено: ${taskDate}`}</p>
-    <hr class="hr-between"><hr class="hr-pd_20">
+    <hr class="hr-between">${span20()}
     `;
-    const generateFooter15 = () => `</details><hr class="hr-pd_20">`;
+    const generateFooter15 = () => `</details>${span20()}`;
 
-    // const generateDate = () => `${ tumbler ? !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">` : `<hr class="hr-pd_20">`} `;
-    //const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10"><p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p><hr class="hr-pd_10">`} `;
+    // const generateDate = () => `${ tumbler ? !taskNum ? `${span20()}`: `${span10()}<p class="p-num" style="text-align: right;">Номер: ${taskNum}</p>${span10()}` : `${span20()}`} `;
+    //const generateDate = () => `${ !taskNum ? `${span20()}`: `${span10()}<p class="p-num print" style="text-align: right;">Номер: ${taskNum}</p>${span10()}`} `;
     
-    // <details><summary class="p-num resh print">Показать решение и ответ</summary><hr class="hr-pd_10"> </details><hr class="hr-pd_20"><hr class="hr-between"><hr class="hr-pd_20">
+    // <details><summary class="p-num resh print">Показать решение и ответ</summary>${span10()} </details>${span20()}<hr class="hr-between">${span20()}
     const numberTaskOpen = (item) => `<a id="open-this-task" style="cursor: pointer;"> № ${item}</a>` //color: purple;
-    const generateDate = () => `${ !taskNum ? `<hr class="hr-pd_20">`: `<hr class="hr-pd_10">
+    const generateDate = () => `${ !taskNum ? `${span20()}`: `${span10()}
       <div class="text-inform" data-task-counter="${taskCounter}"><div class="inform-block"></div>
         ${ !taskKec ? ``:
           taskKec[2] === 1 ? 
@@ -55,11 +55,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         
       </div>
       
-      <hr class="hr-pd_10">`} `;
+      ${span10()}`} `;
    
     const generateAuthor = () => `${!taskAuthor ? "": `<em>${taskAuthor}</em>`}`
     const generateInput = () => ` <section class="answer-block"><p></p><input id="input_answer" class="input_answer" placeholder="Введите ответ"/></section>`;
     const generateInputP = () => `<input id="input_answer" class="input_answer" style="display: none;"></input>`
+    
+    
+    const span10 = () => `<p class="hr-pd_10"></p>`
+    const span20 = () => `<p class="hr-pd_20"></p>`
     const beginTask = () => `<div class="tasks-blocks">`;
     const endTask = () => `</div>`;
     let answerBlock = "";
@@ -123,7 +127,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       `
     }
     const pystota = (item) => `${item === "" ? item=1 : item}`
-    const h10 = () => `<hr class="hr-pd_10">` 
+    const h10 = () => `${span10()}` 
     const bordertop = (item) => `<span style="border-top: 1px solid">${item}</span>` 
 
     if (taskKey === 'onefive'){
@@ -226,9 +230,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Прочитайте внимательно текст и выполните задания 1–5.
-          <hr class="hr-pd_10">
+          ${span10()}
           
             <table>
              <tr>
@@ -242,7 +246,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <td>Рис. 2</td>
              </tr>
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             Автомобильное колесо представляет из себя металлический диск с установленной на него резиновой шиной. 
             Диаметр диска совпадает с диаметром внутреннего отверстия в шине.
             <br>
@@ -259,13 +263,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Таким образом, общий диаметр колеса D можно найти, зная диаметр диска и высоту боковины.
             <br>        
             ${task8}
-            <hr class="hr-pd_20">
+            ${span20()}
           ${task === 11 ? 
             `
             
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td colspan="2" rowspan="2">Ширина шины (мм)</td>
@@ -298,9 +302,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   
                 </tr>
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task9}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
           : task === 12 ? 
@@ -308,7 +312,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td colspan="3" rowspan="2">Ширина шины (мм)</td>
@@ -345,16 +349,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>
                 
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task9}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
           : task === 13 ? 
             `   
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td colspan="2" rowspan="2">Ширина шины (мм)</td>
@@ -394,16 +398,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   
                 </tr>
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task9}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
           : task === 14 ? 
             `   
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td colspan="2" rowspan="2">Ширина шины (мм)</td>
@@ -445,16 +449,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <td>${task1[22]}</td>          
                 </tr>
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task9}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
           : task === 15 ? 
             `   
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td colspan="3" rowspan="2">Ширина шины (мм)</td>
@@ -496,16 +500,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>
                 
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task9}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
           : task === 16 ? 
             `   
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. <br>
             Завод допускает установку шин с другими маркировками. В таблице показаны разрешённые размеры шин.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td colspan="3" rowspan="2">Ширина шины (мм)</td>
@@ -554,9 +558,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>
                 
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task9}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div>             
           ` 
           :
@@ -566,84 +570,84 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 2
           answerBlock +=`
           <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
-          <hr class="hr-pd_10">          
+          ${span10()}          
            ${task2}
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
           ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[1]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 3
           answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task3}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[2]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 4
           answerBlock +=`
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task4}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[3]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 5
           answerBlock +=`
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task5}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
       
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
@@ -651,17 +655,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           } 
           
           answerBlock += generateDate();
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Прочитайте внимательно текст и выполните задания 1–5.
-          <hr class="hr-pd_10">
+          ${span10()}
           Хозяин дачного участка строит баню с парным отделением. Парное отделение имеет размеры: длина 3,5 м, ширина 2,2 м, высота 2 м. 
           Окон в парном отделении нет, для доступа внутрь планируется дверь шириной 60 см, высота дверного проёма 1,8 м. 
           Для прогрева парного отделения можно использовать электрическую или дровяную печь. В таблице представлены характеристики трёх печей.
-          <hr class="hr-pd_10">
+          ${span10()}
           <table class="iksweb">
                 <tr>
                   <td>${task1[0]}</td>
@@ -695,19 +699,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>
                 
             </table>
-            <hr class="hr-pd_10">
+            ${span10()}
             Для установки дровяной печи дополнительных затрат не потребуется. 
             Установка электрической печи потребует подведения специального кабеля, что обойдётся в 6500 руб.
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           // 1
           answerBlock +=` 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
-            <hr class="hr-pd_10"> 
+            ${span10()} 
             ${task9}
-            <hr class="hr-pd_10">
+            ${span10()}
             Заполните таблицу, в бланк ответов перенесите последовательность трёх цифр без пробелов, запятых и других дополнительных символов.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td>${task8[0]}</td>
@@ -723,80 +727,80 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>            
             </table>
             
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> `
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 2
           answerBlock +=`
           <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
-          <hr class="hr-pd_10">          
+          ${span10()}          
            ${task2}
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
           ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[1]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 3
           answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task3}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[2]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 4
           answerBlock +=`
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task4}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[3]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 5
           answerBlock +=`
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             Хозяин выбрал дровяную печь (рис. 1). Чертёж передней панели печи показан на рисунке 2.
-            <hr class="hr-pd_20">
+            ${span20()}
             <table>
              <tr>
               <td><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task1/pech1.png"></td>
@@ -813,19 +817,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <td>Рис. 2</td>
              </tr>
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             Печь снабжена кожухом вокруг дверцы топки. 
             Верхняя часть кожуха выполнена в виде арки, приваренной к передней стенке печки по дуге окружности с центром
             в середине нижней части кожуха (рис. 2).<br>
             Для установки печки хозяину понадобилось узнать радиус закругления арки R. 
             Размеры кожуха в сантиметрах показаны на рисунке. Найдите радиус закругления арки в сантиметрах.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
             
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
@@ -833,29 +837,29 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           }
           answerBlock += generateDate();
         
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Прочитайте внимательно текст и выполните задания 1–5.
-          <hr class="hr-pd_10">
+          ${span10()}
           Общепринятые форматы листов бумаги обозначают буквой А и цифрой: А0, А1, А2 и так далее. 
           Лист формата А0 имеет форму прямоугольника площадью 1 кв. м. Если лист формата А0 разрезать пополам параллельно меньшей стороне, получатся два одинаковых листа формата А1. 
           Если лист А1 разрезать пополам таким же образом, получатся два листа формата А2 и т.д.
-          <hr class="hr-pd_10">
+          ${span10()}
           <img style="display: block;  width: 22em; " src="../../pages/mathOge/img/task1/list.png">
-          <hr class="hr-pd_10">
+          ${span10()}
           Отношение большей стороны к меньшей стороне листа каждого формата одно и то же, поэтому листы всех форматов подобны. 
           Это нужно, чтобы пропорции текста и его расположение на листе сохранялись при изменении формата листа.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           // 1
           answerBlock +=` 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
-            <hr class="hr-pd_10"> 
+            ${span10()} 
             ${task9}
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td>${task1[0]}</td>
@@ -883,10 +887,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <td>${task1[14]}</td>
                 </tr>            
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             Установите соответствие между форматами и номерами листов. Заполните таблицу, в бланк ответов перенесите последовательность 
             четырёх цифр, соответствующих номерам листов, без пробелов, запятых и дополнительных символов.
-            <hr class="hr-pd_20">
+            ${span20()}
             <table class="iksweb" style="width: 60%; text-align: center;">
                 <tr>
                   <td style="width: 5%;">${task8[0]}</td>
@@ -901,86 +905,86 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <td></td> 
                 </tr>         
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> `
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 2
           answerBlock +=`
           <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
-          <hr class="hr-pd_10">          
+          ${span10()}          
            ${task2}
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
           ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[1]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 3
           answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task3}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[2]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 4
           answerBlock +=`
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task4}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[3]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 5
           answerBlock +=`
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task5}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
             
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
@@ -988,30 +992,30 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           }
           answerBlock += generateDate();
         
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Прочитайте внимательно текст и выполните задания 1–5.
-          <hr class="hr-pd_10">
+          ${span10()}
           <img style="display: block;  width: 100%; " src="../../pages/mathOge/img/task1/float1.png">
-          <hr class="hr-pd_10">
+          ${span10()}
           На рисунке изображён план двухкомнатной квартиры в многоэтажном жилом доме. 
           Сторона одной клетки на плане соответствует 0,4 м, а условные обозначения двери и окна приведены в правой части рисунка.
           Вход в квартиру находится в коридоре. Слева от входа в квартиру находится санузел, а в противоположном конце коридора — дверь в кладовую. 
           Рядом с кладовой находится спальня, из которой можно пройти на одну из застеклённых лоджий. 
           Самое большое по площади помещение — гостиная, откуда можно попасть в коридор и на кухню. 
           Из кухни также можно попасть на застеклённую лоджию.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           // 1
           answerBlock +=` 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
-            <hr class="hr-pd_10"> 
+            ${span10()} 
             Для объектов, указанных в таблице, определите, какими цифрами они обозначены на плане. 
             Заполните таблицу, в бланк перенесите последовательность четырёх цифр без пробелов, запятых и других дополнительных символов.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td>${task1[0]}</td>
@@ -1028,83 +1032,83 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <td>${task1[9]}</td>
                 </tr>             
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> 
             `
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 2
           answerBlock +=`
           <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
-          <hr class="hr-pd_10">          
+          ${span10()}          
            ${task2}
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
           ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[1]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 3
           answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task3}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[2]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 4
           answerBlock +=`
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task4}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[3]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 5
           answerBlock +=`
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task === 41 ? 
               `
                ${task8}
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb" style="width: 95%; font-size: 1em;">
                 <tr>
                     <td >Модель</td>
@@ -1206,13 +1210,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <td>85×60×40</td>
                 </tr>
         </table>
-        <hr class="hr-pd_20">
+        ${span20()}
              ${task5}
               ` 
               : task === 42 ? 
               `
                ${task8}
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb" style="width: 95%; font-size: 1em;">
                 <tr>
                     <td >Модель</td>
@@ -1314,13 +1318,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <td>85×60×40</td>
                 </tr>
         </table>
-        <hr class="hr-pd_20">
+        ${span20()}
              ${task5}
               ` 
               : task === 43 ? 
               `
                ${task8}
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb" style="width: 95%; font-size: 1em;">
                 <tr>
                     <td>Тарифный план</td>
@@ -1344,19 +1348,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>
          
         </table>
-        <hr class="hr-pd_20">
+        ${span20()}
              ${task5}
               ` 
               :
               ``}
            
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
             
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
@@ -1364,17 +1368,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           }
           answerBlock += generateDate();
         
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
           return answerBlock
         case 5:
           answerBlock += `
-          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Прочитайте внимательно текст и выполните задания 1–5.
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task === 51 ? 
             `
             <img style="display: block;  width: 95%; " src="../../pages/mathOge/img/task1/dacha1.png">
-           <hr class="hr-pd_20">
+           ${span20()}
             На плане изображён дачный участок по адресу: п. Сосновка, ул. Зелёная, д. 19 (сторона каждой клетки на плане равна 2 м). 
             Участок имеет прямоугольную форму. Выезд и въезд осуществляются через единственные ворота.
             При входе на участок слева от ворот находится гараж. Справа от ворот находится сарай площадью 24 кв. м, а чуть подальше — жилой дом. 
@@ -1386,7 +1390,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 52 ? 
             `
             <img style="display: block;  width: 95%; " src="../../pages/mathOge/img/task1/dacha2.png">
-           <hr class="hr-pd_20">
+           ${span20()}
           На плане изображено домохозяйство по адресу: с. Авдеево, 3-й Поперечный пер., д. 13 (сторона каждой клетки на плане равна 2 м). 
           Участок имеет прямоугольную форму. Выезд и въезд осуществляются через единственные ворота. При входе на участок справа от ворот находится баня, а слева — гараж, отмеченный на плане цифрой 7. 
           Площадь, занятая гаражом, равна 32 кв. м. Жилой дом находится в глубине территории. Помимо гаража, жилого дома и бани, на участке имеется сарай, расположенный рядом с гаражом, и теплица, построенная на территории огорода (огород отмечен цифрой 2). Перед жилым домом имеются яблоневые посадки.
@@ -1397,7 +1401,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task === 53 ? 
             `
           <img style="display: block;  width: 95%; " src="../../pages/mathOge/img/task1/dacha3.png">
-          <hr class="hr-pd_20">
+          ${span20()}
           На плане изображено домохозяйство по адресу: СНТ «Прибор», 2-я Линия, д. 26 (сторона каждой клетки на плане равна 2 м). 
           Участок имеет прямоугольную форму. Выезд и въезд осуществляются через единственные ворота. <br>
           При входе на участок справа от ворот находится гараж, а слева в углу участка расположен сарай, отмеченный на плане цифрой 1. 
@@ -1410,15 +1414,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ` 
             :
             ``}   
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           // 1
           answerBlock +=` 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
-            <hr class="hr-pd_10"> 
+            ${span10()} 
             Для объектов, указанных в таблице, определите, какими цифрами они обозначены на плане. 
             Заполните таблицу, в бланк перенесите последовательность четырёх цифр без пробелов, запятых и других дополнительных символов.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td>${task1[0]}</td>
@@ -1435,81 +1439,81 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <td>${task1[9]}</td>
                 </tr>             
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> 
             `
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 2
           answerBlock +=`
           <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
-          <hr class="hr-pd_10">          
+          ${span10()}          
            ${task2}
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
           ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[1]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 3
           answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task3}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[2]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 4
           answerBlock +=`
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task4}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[3]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 5
           answerBlock +=`
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task8}
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb" style="width: 95%; font-size: 1em; text-align: left;">
                 <tr>
                     <td></td>
@@ -1533,16 +1537,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <td>${task9[7]}</td>
                 </tr>
         </table>
-        <hr class="hr-pd_20">
+        ${span20()}
              ${task5}
            
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
             
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
@@ -1550,13 +1554,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           }
           answerBlock += generateDate();
         
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
           return answerBlock
         case 6:
           answerBlock += `
-          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Прочитайте внимательно текст и выполните задания 1–5.
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task === 61 ? 
             `
             На рисунке изображён план сельской местности.
@@ -1568,9 +1572,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Четвёртый маршрут пролегает по шоссе до деревни Доломино, от Доломино до Горюново по просёлочной дороге мимо конюшни и от Горюново до Богданово по шоссе. 
             Ещё один маршрут проходит по шоссе до деревни Егорка, по просёлочной дороге мимо конюшни от Егорки до Жилино и по шоссе от Жилино до Богданово.
             Шоссе и просёлочные дороги образуют прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
            <img style="display: block;  width: 75%; " src="../../pages/mathOge/img/task1/plan1.png">
-           <hr class="hr-pd_20">
+           ${span20()}
            По шоссе Таня с дедушкой едут со скоростью 50&nbsp;км/ч, а по просёлочным дорогам — со скоростью 30&nbsp;км/ч. 
            Расстояние от Антоновки до Доломино равно 12 км, от Доломино до Егорки — 4 км, от Егорки до Ванютино — 12 км, 
            от Горюново до Ванютино — 15 км, от Ванютино до Жилино — 9 км, а от Жилино до Богданово — 12 км.
@@ -1582,9 +1586,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             до деревни Полянка, где нужно повернуть под прямым углом направо на другое шоссе, ведущее в село Захарово. 
             Есть и третий маршрут: в деревне Вёсенка можно свернуть на прямую тропинку в село Захарово, которая идёт мимо пруда.
             Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 50%; " src="../../pages/mathOge/img/task1/plan2.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             По шоссе Саша с дедушкой едут со скоростью 20 км/ч, а по лесной дорожке и тропинке — со скоростью 15 км/ч. 
             На плане изображено взаимное расположение населённых пунктов, сторона каждой клетки равна 1 км. 
              ` 
@@ -1594,9 +1598,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Из деревни Осиновка в село Николаево можно проехать по прямой лесной дорожке. Есть более длинный путь: по прямолинейному шоссе через деревню Зябликово до деревни Старая, 
             где нужно повернуть под прямым углом направо на другое шоссе, ведущее в село Николаево. Есть и третий маршрут: в деревне Зябликово можно свернуть на прямую тропинку в село Николаево, 
             которая идёт мимо пруда. Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 50%; " src="../../pages/mathOge/img/task1/plan3.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             По шоссе Гриша с дедушкой едут со скоростью 15 км/ч, а по лесной дорожке и тропинке — со скоростью 10 км/ч. 
             На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 1 км.
           
@@ -1607,9 +1611,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Из деревни Грушёвка в село Абрамово можно проехать по прямой лесной дорожке. Есть более длинный путь: по прямолинейному шоссе через деревню Таловка до деревни Новая, 
             где нужно повернуть под прямым углом направо на другое шоссе, ведущее в село Абрамово. Есть и третий маршрут: в деревне Таловка можно свернуть на прямую тропинку
             в село Абрамово, которая идёт мимо пруда. Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 60%; " src="../../pages/mathOge/img/task1/plan4.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             По шоссе Гриша с дедушкой едут со скоростью 15 км/ч, а по лесной дорожке и тропинке — со скоростью 12 км/ч. 
             На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 2 км.
           ` 
@@ -1620,9 +1624,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             где нужно повернуть под прямым углом направо на другое шоссе, ведущее в село Кленовое. 
             Есть и третий маршрут: в деревне Сосенки можно свернуть на прямую грунтовую дорогу в село Кленовое, которая идёт мимо пруда.
             Шоссе и грунтовые дороги образуют прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 50%; " src="../../pages/mathOge/img/task1/plan5.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             По шоссе Володя с дедушкой едут со скоростью 80 км/ч, а по грунтовой дороге — со скоростью 40 км/ч. 
             На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 4 км.
             
@@ -1635,9 +1639,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             Есть и третий маршрут: в деревне Камышёвка можно свернуть на прямую тропинку в село Майское, которая идёт мимо пруда.
             Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
 
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 60%; " src="../../pages/mathOge/img/task1/plan6.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             По шоссе Полина с дедушкой едут со скоростью 20 км/ч, а по лесной дорожке и тропинке — со скоростью 15 км/ч. 
             На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 2 км.
           ` 
@@ -1648,9 +1652,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 под прямым углом направо на другое шоссе, ведущее в село Иваново. Есть и третий маршрут: в деревне Камышино можно свернуть на прямую тропинку в село Иваново, которая идёт мимо пруда.
 
 Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 50%; " src="../../pages/mathOge/img/task1/plan7.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             По шоссе Саша с дедушкой едут со скоростью 20 км/ч, а по лесной дорожке и тропинке — со скоростью 15 км/ч. 
             На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 1 км.
           ` 
@@ -1661,9 +1665,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 в деревне Калиновка можно свернуть на прямую тропинку в село Ольгино, которая идёт мимо пруда.
 
 Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 60%; " src="../../pages/mathOge/img/task1/plan8.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             По шоссе Ваня с дедушкой едут со скоростью 15 км/ч, а по лесной дорожке
 и тропинке — со скоростью 10 км/ч. На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 1 км.
           ` 
@@ -1673,9 +1677,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 Из деревни Васильевка в село Плодородное можно проехать по прямой лесной дорожке. Есть более длинный путь: по прямолинейному шоссе через деревню Шарковка до деревни Рассвет, где нужно повернуть под прямым углом направо на другое шоссе, ведущее в село Плодородное. Есть и третий маршрут: в деревне Шарковка можно свернуть на прямую тропинку в село Плодородное, которая идёт мимо пруда.
 
 Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 50%; " src="../../pages/mathOge/img/task1/plan9.png">
-            <hr class="hr-pd_20">
+            ${span20()}
          По шоссе Дима с дедушкой едут со скоростью 25 км/ч, а по лесной дорожке и тропинке —
  со скоростью 18 км/ч. На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 3 км.
           ` 
@@ -1686,9 +1690,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 на другое шоссе, ведущее в село Вятское. Есть и третий маршрут: в деревне Куровка можно свернуть на прямую тропинку в село Вятское, которая идёт мимо пруда.
 
 Лесная дорожка и тропинка образуют с шоссе прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 70%; " src="../../pages/mathOge/img/task1/plan10.png">
-            <hr class="hr-pd_20">
+            ${span20()}
          По шоссе Никита с папой едут со скоростью 25 км/ч, а по лесной дорожке
 и тропинке —
  со скоростью 15 км/ч. На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 1 км.
@@ -1701,26 +1705,26 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 в деревне Васильево можно свернуть на прямую грунтовую дорогу в село Княжеское, которая идёт мимо пруда.
 
 Шоссе и грунтовые дороги образуют прямоугольные треугольники.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 70%; " src="../../pages/mathOge/img/task1/plan11.png">
-            <hr class="hr-pd_20">
+            ${span20()}
         По шоссе Серёжа с папой едут со скоростью 60 км/ч, а по грунтовой дороге —
  со скоростью 40 км/ч. На плане изображено взаимное расположение населённых пунктов, длина стороны каждой клетки равна 2 км.
           ` 
             :
 
             ``}   
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           // 1
           answerBlock +=` 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
-            <hr class="hr-pd_10"> 
+            ${span10()} 
             ${task === 61 ? 
               `
             Пользуясь описанием, определите, какими цифрами на плане обозначены деревни.
             Заполните таблицу, в бланк ответов перенесите последовательность четырёх цифр без пробелов, запятых и других дополнительных символов.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td>${task1[0]}</td>
@@ -1742,7 +1746,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               `
               Пользуясь описанием, определите, какими цифрами на плане обозначены населённые пункты.
               Заполните таблицу, в бланк ответов перенесите последовательность трёх цифр без пробелов, запятых и других дополнительных символов.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td>${task1[0]}</td>
@@ -1763,88 +1767,88 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
               ``}
             
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> 
             `
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 2
           answerBlock +=`
           <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
-          <hr class="hr-pd_10">          
+          ${span10()}          
            ${task2}
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
           ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[1]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 3
           answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task3}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[2]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 4
           answerBlock +=`
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task4}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[3]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 5
           answerBlock +=`
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_20">
+            ${span20()}
             ${task === 61 ? 
               `
                ${task5}
-               <hr class="hr-pd_20">
+               ${span20()}
               `
               : task === 62 ? 
               `
               ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
               <table class="iksweb">
                   <tr>
                     <td>Наименование продукта</td>
@@ -1889,14 +1893,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <td>24</td>
                   </tr>
               </table>
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 63 ? 
               `
               ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
               <table class="iksweb">
                
                   <tr>
@@ -1942,14 +1946,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <td>27</td>
                   </tr>
               </table>
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 64 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
               <table class="iksweb">
                
                   <tr>
@@ -1997,14 +2001,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
               </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 65 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
 
               <table class="iksweb">
                  
@@ -2052,14 +2056,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     </tr>
                 </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 66 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
 
               <table class="iksweb">
                 <tr>
@@ -2107,14 +2111,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     
               </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 67 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
 
               <table class="iksweb">
                     <tr>
@@ -2163,14 +2167,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     
               </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 68 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
 
               <table class="iksweb">
                   <tr>
@@ -2219,14 +2223,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     
               </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 69 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
 
               <table class="iksweb">
                   <tr>
@@ -2274,14 +2278,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                        
               </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 691 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
 
               <table class="iksweb">
               <tr>
@@ -2330,14 +2334,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                        
               </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
               : task === 692 ? 
               `
                ${task5}
-              <hr class="hr-pd_20">
+              ${span20()}
 
               <table class="iksweb">
                   <tr>
@@ -2386,7 +2390,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                                      
               </table>
 
-              <hr class="hr-pd_20">
+              ${span20()}
               ${task8}
 
               `
@@ -2399,7 +2403,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
@@ -2407,30 +2411,30 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           }
           answerBlock += generateDate();
         
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
           return answerBlock
         case 7:
           answerBlock += `
-          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Прочитайте внимательно текст и выполните задания 1–5.
-          <hr class="hr-pd_10">
+          ${span10()}
 
             На рисунке точками показано количество минут исходящих вызовов и трафик мобильного интернета в гигабайтах, израсходованных абонентом 
             в процессе пользования смартфоном, за каждый месяц 2019 года. Для удобства точки, соответствующие минутам и гигабайтам, 
             соединены сплошными и пунктирными линиями соответственно.
-            <hr class="hr-pd_20">
+            ${span20()}
             <img style="display: block;  width: 85%; " src="../../pages/mathOge/img/task1/tarif1.png">
-            <hr class="hr-pd_20">
+            ${span20()}
             В течение года абонент пользовался тарифом «Стандартный», абонентская плата по которому составляла 350 рублей в месяц. 
             При условии нахождения абонента на территории РФ в абонентскую плату тарифа «Стандартный» входит:
-            <hr class="hr-pd_10">
-            &thinsp;• пакет минут, включающий 300 минут исходящих вызовов на номера, зарегистрированные на территории РФ;<hr class="hr-pd_10">
-            &thinsp;• пакет интернета, включающий 3 гигабайта мобильного интернета;<hr class="hr-pd_10">
-            &thinsp;• пакет SMS, включающий 120 SMS в месяц;<hr class="hr-pd_10">
+            ${span10()}
+            &thinsp;• пакет минут, включающий 300 минут исходящих вызовов на номера, зарегистрированные на территории РФ;${span10()}
+            &thinsp;• пакет интернета, включающий 3 гигабайта мобильного интернета;${span10()}
+            &thinsp;• пакет SMS, включающий 120 SMS в месяц;${span10()}
             &thinsp;• безлимитные бесплатные входящие вызовы.
-            <hr class="hr-pd_20">
+            ${span20()}
             Стоимость минут, интернета и SMS сверх пакета тарифа указана в таблице.
-            <hr class="hr-pd_20">
+            ${span20()}
             <table class="iksweb" style="width: 65%; font-size: 1em; text-align: left;">
               <tr>
                 <td>Исходящие вызовы</td>
@@ -2445,19 +2449,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <td>2 руб./шт.</td>
               </tr>  
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             Абонент не пользовался услугами связи в роуминге. За весь год абонент отправил 110 SMS.
   
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           // 1
           answerBlock +=` 
             <b>Задание ${Nomer}</b>. Впишите правильный ответ. 
-            <hr class="hr-pd_10"> 
+            ${span10()} 
             ${task1[10]}<br>
             Заполните таблицу, в бланк ответов перенесите числа, соответствующие номерам месяцев, без пробелов, 
             запятых и других дополнительных символов (например, для месяцев май, январь, ноябрь, август в ответ нужно записать число 51118).
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb">
                 <tr>
                   <td>${task1[0]}</td>
@@ -2474,85 +2478,85 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <td>${task1[9]}</td>
                 </tr>             
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[0]}</b></p></div> 
             `
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[0]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 2
           answerBlock +=`
           <b>Задание ${Nomer+1}</b>. Впишите правильный ответ. 
-          <hr class="hr-pd_10">          
+          ${span10()}          
            ${task2}
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[1]}</b></p></div>         
           ` 
          answerBlock += generateHeader();
          answerBlock += `
            
             ${reshOneFive(task7[1])}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[1]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
           // 3
           answerBlock +=`   
             <b>Задание ${Nomer+2}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task3}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[2]}</b></p></div>         
             ` 
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[2]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 4
           answerBlock +=`
             <b>Задание ${Nomer+3}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task4}
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[3]}</b></p></div>            
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[3]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
             answerBlock += generateInput();
           } 
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
 
 
           // 5
           answerBlock +=`
             <b>Задание ${Nomer+4}</b>. Впишите правильный ответ.
-            <hr class="hr-pd_10">
+            ${span10()}
             ${task === 71 ? 
               `
               В конце 2019 года оператор связи предложил абоненту перейти на новый тариф, условия которого приведены в таблице.
-            <hr class="hr-pd_10">
+            ${span10()}
             <table class="iksweb" style="width: 60%; font-size: 1em; text-align: left;">
                <tr>
                   <td>Стоимость перехода на тариф</td>
@@ -2598,7 +2602,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </tr>
             </table>
             *исходящие вызовы на номера, зарегистрированные на территории РФ
-             <hr class="hr-pd_20">
+             ${span20()}
              Абонент решает, перейти ли ему на новый тариф, посчитав, сколько бы он потратил на услуги связи за 2019 г., 
              если бы пользовался им. Если получится меньше, чем он потратил фактически за 2019 г., то абонент примет решение сменить тариф.<br>
              Перейдёт ли абонент на новый тариф? В ответе запишите ежемесячную абонентскую плату по тарифу, который выберет абонент на 2020 год.
@@ -2607,7 +2611,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               `
               Помимо мобильного интернета, абонент использует домашний интернет от провайдера «Омега». 
               Этот интернет-провайдер предлагает три тарифных плана. Условия приведены в таблице.
-              <hr class="hr-pd_20">
+              ${span20()}
               <table class="iksweb">
                 <tr>
                   <td>Тарифный план</td>
@@ -2630,19 +2634,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   <td>${task5[8]}</td>
                 </tr>            
             </table>
-            <hr class="hr-pd_20">
+            ${span20()}
             ${task8}
 
               `}
             
            
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; font-size: 0.7em;"><p></p><p><b>${task6[4]}</b></p></div> 
             
           `
          answerBlock += generateHeader();
          answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer[4]}</b>`;
           answerBlock += generateFooter15();
           if(tumbler === false){
@@ -2650,7 +2654,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           }
           answerBlock += generateDate();
         
-          answerBlock += `<hr class="hr-between"><hr class="hr-pd_20">`
+          answerBlock += `<hr class="hr-between">${span20()}`
           return answerBlock
         }
           
@@ -2737,7 +2741,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p><hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p>${span10()}
           
           ${
             task[0] === 101 ? `
@@ -2759,9 +2763,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshSix(task[0])}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -2770,7 +2774,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${ 
             task[0] === 201 ? `
             ${
@@ -2799,7 +2803,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               task[1] === 2031 ? `
               Представьте выражение:&thinsp;  \\( \\frac{${task1[0]}}{${task1[1]}} ${task1[4]}\\frac{${task1[2]}}{${task1[3]}}\\)
               в виде дроби со знаменателем ${task1[5]}.${h10()} В ответ запишите числитель полученной дроби.
-              <hr class="hr-pd_20">`
+              ${span20()}`
             : 
             ``}`
 
@@ -2811,13 +2815,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
             ``} `
 
-            :``}<hr class="hr-pd_20"> `
+            :``}${span20()} `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshSix(task[0])}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -2831,9 +2835,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){      
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          ${task1}<hr class="hr-pd_10">
-          <img style="display: block; margin: 0 auto; width: 70%;" src="../../pages/mathOge/img/task7/7_${taskCounter}.png"><hr class="hr-pd_20">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
+          ${task1}${span10()}
+          <img style="display: block; margin: 0 auto; width: 70%;" src="../../pages/mathOge/img/task7/7_${taskCounter}.png">${span20()}
           ${task2}<hr class="hr-pd_30">
           <div style="display: flex; justify-content: space-around;">
             <p>${task3[0]}</p>
@@ -2841,13 +2845,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             <p>${task3[2]}</p>
             <p>${task3[3]}</p>
           </div>
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -2856,7 +2860,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task[0] === 201 ? `
             ${
               task[1] === 2011 ? ` Между какими числами заключено число \\( \\sqrt{${task1[0]}} \\) ?`
@@ -2880,7 +2884,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -2889,7 +2893,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${ 
             task[0] === 301 ? `
             ${
@@ -2900,18 +2904,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               \\frac{${task1[2]}}{${task1[4]}},
               \\frac{${task1[3]}}{${task1[4]}}\\)
               отмечено на числовой прямой точкой ${task1[5] ? task1[5] : ""}.
-              <hr class="hr-pd_10">
+              ${span10()}
               <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-              <hr class="hr-pd_10">
+              ${span10()}
               Какое это число?
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-around;">
                 <p> 1) \\(\\frac{${task1[0]}}{${task1[4]}}\\)</p>
                 <p> 2) \\(\\frac{${task1[1]}}{${task1[4]}}\\)</p>
                 <p> 3) \\(\\frac{${task1[2]}}{${task1[4]}}\\)</p>
                 <p> 4) \\(\\frac{${task1[3]}}{${task1[4]}}\\)</p>
               </div>
-              <hr class="hr-pd_20">
+              ${span20()}
               ` 
               :
               task[1] === 3012 ? `
@@ -2922,48 +2926,48 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               <div style="display: flex; justify-content: space-around;">
                 <p> 1) точка A</p><p> 2) точка B</p><p> 3) точка C</p><p> 4) точка D</p>
               </div>
-              <hr class="hr-pd_20">
+              ${span20()}
               `
               : 
               task[1] === 3013 ? `
               На координатной прямой точки A, B, C, D соответствуют числам 
               &thinsp;${task1[0]}; &thinsp;${task1[1]}; &thinsp;${task1[2]}; &thinsp;${task1[3]}.
-              <hr class="hr-pd_20">
+              ${span20()}
               <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-              <hr class="hr-pd_20">
+              ${span20()}
               Какой точке соответствует число: &thinsp;${task1[4]} ?
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-around;">
                 <p> 1) точка A</p><p> 2) точка B</p><p> 3) точка C</p><p> 4) точка D</p>
               </div>
-              <hr class="hr-pd_20">
+              ${span20()}
               `
               : 
               task[1] === 3014 ? `
-              ${task2}<hr class="hr-pd_10">
+              ${task2}${span10()}
               <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-              <hr class="hr-pd_20">
+              ${span20()}
               Какая из разностей \\(&thinsp;${task1[1]}, &thinsp;${task1[2]}, &thinsp;${task1[3]}\\) &thinsp;${task3}?
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-around;">
                 <p> 1) \\(${task1[1]}\\)</p>
                 <p> 2) \\(${task1[2]}\\)</p>
                 <p> 3) \\(${task1[3]}\\)</p>
                 <p> 4) ${task1[4]}</p>
               </div>
-              <hr class="hr-pd_20">
+              ${span20()}
               ` 
               : 
               task[1] === 3015 ? `
-              На координатной прямой отмечены точки A, B, C, D.<hr class="hr-pd_10">
+              На координатной прямой отмечены точки A, B, C, D.${span10()}
               <img style="display: block; margin: 0 auto; width: 70%;" src=../../pages/mathOge/img/task7/7_${taskCounter}.png>
-              <hr class="hr-pd_20">
+              ${span20()}
               Одна из них соответствует числу \\(\\frac{${task1[0]}}{${task1[1]}}\\). Какая это точка?
               <hr class="hr-pd_40">
               <div style="display: flex; justify-content: space-around;">
                 <p> 1) точка A</p><p> 2) точка B</p><p> 3) точка C</p><p> 4) точка D</p>
               </div>
-              <hr class="hr-pd_20">
+              ${span20()}
               ` 
               :
               
@@ -3018,7 +3022,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3057,7 +3061,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            }
            
            return `
-           <p>${task1[2]} = ${task1[0]}<sup style="font-size: 75%;">${countStepen}</sup></p><hr class="hr-pd_10">
+           <p>${task1[2]} = ${task1[0]}<sup style="font-size: 75%;">${countStepen}</sup></p>${span10()}
            <p>${task1[0]}<sup style="font-size: 75%;">${task1[1]}</sup> : ${task1[0]}<sup style="font-size: 75%;">${countStepen}</sup> = ${task1[0]}<sup style="font-size: 75%;">${task1[1]} — ${countStepen}</sup> = ${task1[0]}<sup style="font-size: 75%;">${task1[1]  - countStepen}</sup> = ${Math.pow(task1[0], task1[1] - countStepen)}</p>`
         }
         else if (task === 21){
@@ -3098,20 +3102,20 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
-          <hr class="hr-pd_10">
+          ${span10()}
           Найдите значение выражения:&thinsp;&thinsp;
           ${ 
             task === 1 ? `
             \\( a^{${task1[0]}} ⋅ a^{${task1[1]}} : a^{${task1[2]}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}  \\)
-            <hr class="hr-pd_20">`
+            ${span20()}`
 
             : task === 2 ? 
             `${task1[4] === "u" ? 
               `\\(a^{${task1[0]}} ⋅ (a^{${task1[1]}})^{${task1[2]}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)
-              <hr class="hr-pd_20">` 
+              ${span20()}` 
               : 
               ` \\( (a^{${task1[0]}})^{${task1[1]}} : a^{${task1[2]}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)
-              <hr class="hr-pd_20">
+              ${span20()}
             `}`
 
             : task === 3 ? `
@@ -3123,13 +3127,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
 
             `\\(\\frac{(a^{${task1[0]}})^{${task1[1]}} ⋅ &thinsp;a^{${task1[2]}}}{a^{${task1[3]}}} &thinsp;&thinsp;при &thinsp;&thinsp;a = ${task1[3]}\\)`} 
-            <hr class="hr-pd_20">` :``}`  
+            ${span20()}` :``}`  
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_10">
+            ${span10()}
             ${eightAnswer(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3138,7 +3142,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Найдите значение выражения: 
           ${task === 21 ? 
             `\\(
@@ -3175,9 +3179,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_10">
+            ${span10()}
             ${eightAnswer(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3186,7 +3190,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Найдите значение выражения: &thinsp;
           ${task === 4 ? 
             `\\(\\frac{${task1[0]}^{${task1[1]}} &thinsp;⋅ &thinsp;${task1[0]}^{${task1[2]}}}{${task1[0]}^{${task1[3]}}}\\)` 
@@ -3217,9 +3221,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_10">
+            ${span10()}
             ${eightAnswer(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3279,9 +3283,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_10">
+            ${span10()}
             ${eightAnswer(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3473,33 +3477,33 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 1 ? 
             `
-            Решите уравнение: ${task1[0]}x<sup>2</sup> = ${task1[1]}x.<hr class="hr-pd_10">
+            Решите уравнение: ${task1[0]}x<sup>2</sup> = ${task1[1]}x.${span10()}
             Если уравнение имеет более одного корня, в ответ запишите меньший из корней.
-            <hr class="hr-pd_20">
+            ${span20()}
             `
             : task === 2 ? 
             `
-            Решите уравнение: x<sup>2</sup> — ${task1[0]} = 0.<hr class="hr-pd_10">
+            Решите уравнение: x<sup>2</sup> — ${task1[0]} = 0.${span10()}
             Если уравнение имеет более одного корня, в ответ запишите ${task1[1] === "" ? `меньший` : `больший `} из корней.
-            <hr class="hr-pd_20">
+            ${span20()}
             `
             : task === 3 ? 
             `
-            Решите уравнение: ${task1[0]}x<sup>2</sup> — ${task1[1]}x + ${task1[2]} = 0.<hr class="hr-pd_10">
+            Решите уравнение: ${task1[0]}x<sup>2</sup> — ${task1[1]}x + ${task1[2]} = 0.${span10()}
             Если уравнение имеет более одного корня, в ответ запишите ${task1[3] === "" ? `меньший` : `больший `} из корней.
-            <hr class="hr-pd_20">
+            ${span20()}
             `
             : ``}`
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshNine(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3508,7 +3512,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${
             task === 4 ? 
             `
@@ -3550,9 +3554,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshNine(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3840,18 +3844,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           У бабушки ${task1[0]} чашек:  ${task1[1]} с красными цветами, остальные с синими. Бабушка наливает чай в случайно выбранную чашку. 
           Найдите вероятность того,что это будет чашка с <b>синими</b> цветами.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3860,16 +3864,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           На экзамене ${task1[0]} билетов, ${task1[2]} <b>не выучил</b> ${task1[1]} из них. Найдите вероятность того, что ему попадётся выученный билет.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3878,18 +3882,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Родительский комитет закупил ${task1[0]} пазлов для подарков детям в связи с окончанием учебного года, 
           из них ${task1[1]} с машинами и ${task1[2]} с видами городов. Подарки распределяются случайным образом между ${task1[0]} детьми, 
           среди которых есть ${task1[3]}. Найдите вероятность того, что ${task1[3].slice(0, -1)}е достанется пазл с машиной.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3898,17 +3902,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           В среднем из ${task1[0]} карманных фонариков, поступивших в продажу, <b>${numberToWordsRu(task1[1])}</b> неисправных. 
           Найдите вероятность того, что выбранный наудачу в магазине фонарик окажется <b>исправен</b>.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3917,18 +3921,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 5:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           В лыжных гонках участвуют ${task1[0]} спортсменов из России, ${task1[1]} спортсмен из Швеции и ${task1[2]} спортсмена из Норвегии. 
           Порядок, в котором спортсмены стартуют, определяется жребием. 
           Найдите вероятность того, что первым будет стартовать спортсмен <b>${task1[3]}</b>.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3937,7 +3941,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 6:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task1[1] === 1 ? 
             `Вероятность того, что новая шариковая ручка пишет плохо (или не пишет), равна ${task1[0]}. 
              Покупатель в магазине выбирает одну шариковую ручку. Найдите вероятность того, что эта ручка пишет хорошо.` 
@@ -3947,14 +3951,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             остальные синие и чёрные, их поровну. 
             Найдите вероятность того, что случайно выбранная в этом магазине ручка будет <b>${task1[5]}</b>.`}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3963,18 +3967,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 7:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           В фирме такси в данный момент свободно ${task1[0]} машин: ${task1[1]}&nbsp;чёрных, ${task1[2]}&nbsp;жёлтая и ${task1[3]}&nbsp;зелёных. 
           По вызову выехала одна из машин, случайно оказавшаяся ближе всего к заказчику. 
           Найдите вероятность того, что к нему приедет <b>жёлтое такси</b>.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -3987,14 +3991,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${h10()}
           Монету бросили ${task1[0]} раз. Известно, что орёл выпал ${task1[1]} раз. Найдите вероятность того, 
           что <b>при ${numberToWordsRu2(task1[2])}</b> по счёту броске выпала решка.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4018,14 +4022,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
             : 
             ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4109,14 +4113,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           :
 
             ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4144,15 +4148,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             :
             ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4173,15 +4177,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             :
             ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4233,19 +4237,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;kx&nbsp;+&nbsp;b</i>. 
-            Установите соответствие между знаками коэффициентов k и b и графиками функций.<hr class="hr-pd_10">
+            Установите соответствие между знаками коэффициентов k и b и графиками функций.${span10()}
             ${task1[3]=== 2 ? 
-              `<b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+              `<b><u>ГРАФИКИ</u></b>${span20()}
               <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                   <p>А) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                   <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                   <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
-              </div><hr class="hr-pd_20">
-              <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+              </div>${span20()}
+              <b><u>КОЭФФИЦИЕНТЫ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>1) 
             ${task2[0]}<math style="font-size: 140%">
@@ -4274,10 +4278,10 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               </math>
             ${task1[2]}</p>
             </div>
-            <hr class="hr-pd_20">
+            ${span20()}
             `
               :
-              `<b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+              `<b><u>КОЭФФИЦИЕНТЫ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>А) 
             ${task2[0]}<math style="font-size: 140%">
@@ -4305,14 +4309,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${task1[2]}</p>
             </div>
 
-            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            ${span20()}<b><u>ГРАФИКИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                 <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
-            </div><hr class="hr-pd_20">`}
+            </div>${span20()}`}
             
-            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            В таблице под каждой буквой укажите соответствующий номер.${span10()}
             <table class="table_16">
               <tr>
                 <td style="padding: 5px 10px;">A</td>
@@ -4330,14 +4334,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             
             `${task1[3] === 2 ? 
               `Установите соответствие между графиками функций и формулами, которые их задают.
-               <hr class="hr-pd_10">
-             <b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+               ${span10()}
+             <b><u>ГРАФИКИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                 <p>А) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
             </div>
-            <hr class="hr-pd_20"><b><u>${task6 === 1 ? `ФУНКЦИИ` : task6 === 2 ? `ФОРМУЛЫ`: `КОЭФФИЦИЕНТЫ`}</u></b><hr class="hr-pd_20">
+            ${span20()}<b><u>${task6 === 1 ? `ФУНКЦИИ` : task6 === 2 ? `ФОРМУЛЫ`: `КОЭФФИЦИЕНТЫ`}</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>1) 
             ${task2[0]}<math style="font-size: 140%">
@@ -4365,12 +4369,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </mfrac>
               </math>
             ${task1[2]}</p>
-            </div><hr class="hr-pd_20">
+            </div>${span20()}
            ` 
               : 
               `Установите соответствие между функциями и их графиками.
-            <hr class="hr-pd_10">
-            <b><u>${task6 === 1 ? `ФУНКЦИИ` : `КОЭФФИЦИЕНТЫ`}</u></b><hr class="hr-pd_20">
+            ${span10()}
+            <b><u>${task6 === 1 ? `ФУНКЦИИ` : `КОЭФФИЦИЕНТЫ`}</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>А) 
             ${task2[0]}<math style="font-size: 140%">
@@ -4398,14 +4402,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${task1[2]}</p>
             </div>
 
-            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            ${span20()}<b><u>ГРАФИКИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                 <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
-            </div><hr class="hr-pd_20">`}
+            </div>${span20()}`}
               
-            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            В таблице под каждой буквой укажите соответствующий номер.${span10()}
             <table class="table_16">
               <tr>
                 <td style="padding: 5px 10px;">A</td>
@@ -4428,7 +4432,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4437,27 +4441,27 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
             ${task1[3] === 2 ? 
               `
-              На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.<hr class="hr-pd_10">
-            <b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+              На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.${span10()}
+            <b><u>ГРАФИКИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                 <p>А) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
-            </div><hr class="hr-pd_20">
-            <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+            </div>${span20()}
+            <b><u>КОЭФФИЦИЕНТЫ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>1) ${task1[0]}</p> 
             <p>2) ${task1[1]}</p> 
             <p>3) ${task1[2]}</p>
             </div>
             
-            <hr class="hr-pd_20">
-            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            ${span20()}
+            В таблице под каждой буквой укажите соответствующий номер.${span10()}
             <table class="table_16">
               <tr>
                 <td style="padding: 5px 10px;">A</td>
@@ -4473,21 +4477,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               
               `
               : 
-              `На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.<hr class="hr-pd_10">
-            <b><u>КОЭФФИЦИЕНТЫ</u></b><hr class="hr-pd_20">
+              `На рисунках изображены графики функций вида <i>y&nbsp;=&nbsp;ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c</i>. Установите соответствие между знаками коэффициентов a и c и графиками функций.${span10()}
+            <b><u>КОЭФФИЦИЕНТЫ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>А) ${task1[0]}</p> 
             <p>Б) ${task1[1]}</p> 
             <p>В) ${task1[2]}</p>
             </div>
 
-            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            ${span20()}<b><u>ГРАФИКИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                 <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
-            </div><hr class="hr-pd_20">
-            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            </div>${span20()}
+            В таблице под каждой буквой укажите соответствующий номер.${span10()}
             <table class="table_16">
               <tr>
                 <td style="padding: 5px 10px;">A</td>
@@ -4511,7 +4515,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4520,38 +4524,38 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
-          Установите соответствие между функциями и их графиками.<hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
+          Установите соответствие между функциями и их графиками.${span10()}
           ${ task === 31 ? 
-            `<b><u>ФУНКЦИИ</u></b><hr class="hr-pd_20">
+            `<b><u>ФУНКЦИИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>А) y = ${delEleven(task1[0])}</p> 
             <p>Б) y = ${delEleven(task1[1])}</p> 
             <p>В) y = ${delEleven(task1[2])}</p>
             </div>
 
-            <hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            ${span20()}<b><u>ГРАФИКИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                 <p>1) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>2) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>3) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
-            </div><hr class="hr-pd_20">` 
+            </div>${span20()}` 
             : task === 32 ?
-            `<hr class="hr-pd_20"><b><u>ГРАФИКИ</u></b><hr class="hr-pd_20">
+            `${span20()}<b><u>ГРАФИКИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around; align-items: flex-start;">
                 <p>A) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_1.png"></p> 
                 <p>Б) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_2.png"></p> 
                 <p>В) <img style="width: 11em; vertical-align: top;" src="../../pages/mathOge/img/task11/11_${taskCounter}_3.png"></p>
-            </div><hr class="hr-pd_20">
-            <b><u>ФУНКЦИИ</u></b><hr class="hr-pd_20">
+            </div>${span20()}
+            <b><u>ФУНКЦИИ</u></b>${span20()}
             <div style="display: flex; justify-content: space-around;">
             <p>1) y = ${delEleven(task1[0])}</p> 
             <p>2) y = ${delEleven(task1[1])}</p> 
             <p>3) y = ${delEleven(task1[2])}</p>
-            </div><hr class="hr-pd_20">
+            </div>${span20()}
             ` : ``}
           
-            В таблице под каждой буквой укажите соответствующий номер.<hr class="hr-pd_10">
+            В таблице под каждой буквой укажите соответствующий номер.${span10()}
             <table class="table_16">
               <tr>
                 <td style="padding: 5px 10px;">A</td>
@@ -4568,7 +4572,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4724,7 +4728,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${task1[0] === 1 ?
             `
             𝑣<sup>2</sup> = 2 • E / 𝑚 = 2 • ${task1[2]} • 1000 / ${task1[1]} = ${(2*task1[2]*1000) / task1[1]}
-            <hr class="hr-pd_10">
+            ${span10()}
             𝑣 = <span style="font-size: 150%">√</span><span  style="border-top: 0.16em solid ">${(2*task1[2]*1000) / task1[1]}</span> = ${Math.sqrt((2*task1[2]*1000) / task1[1])}
 
             `
@@ -4743,7 +4747,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
             `
             10<sup>−4</sup> = 0,0001
-            <hr class="hr-pd_10">
+            ${span10()}
             W&nbsp;=&nbsp;<math style="font-size: 140%">
                 <mfrac>
                   <mrow>
@@ -4779,7 +4783,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Площадь четырёхугольника можно вычислить по формуле 
           S&nbsp;=&nbsp;<math style="font-size: 140%">
               <mfrac>
@@ -4815,9 +4819,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwelve(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4826,7 +4830,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Центростремительное ускорение при движении по окружности (в м/c<sup>2</sup>) вычисляется по формуле α&nbsp;=&nbsp;ω<sup>2</sup>&nbsp;R, 
           где ω — угловая скорость (в c<sup>−1</sup>), R — радиус окружности (в метрах). 
           Пользуясь этой формулой, <b>найдите радиус R</b>, если угловая скорость равна <b>${task1[0]} c<sup>−1</sup></b>, 
@@ -4835,9 +4839,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwelve(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4846,16 +4850,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Мощность постоянного тока (в ваттах) вычисляется по формуле P = I<sup>2</sup> R, где I&nbsp;—&nbsp;сила тока (в амперах), R&nbsp;—&nbsp;сопротивление (в омах). 
           Пользуясь этой формулой, <b>найдите сопротивление R</b>, если мощность составляет <b>${task1[0]} Вт</b>, а сила тока равна <b>${task1[1]} А</b>. Ответ дайте в омах.
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwelve(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4864,7 +4868,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `          
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task1[1] === 1 ? 
             `
           В фирме «Родник» стоимость (в рублях) колодца из железобетонных колец рассчитывается по формуле C&nbsp;=&nbsp;6000&nbsp;+&nbsp;4100n, 
@@ -4880,9 +4884,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwelve(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4891,7 +4895,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 5:
           answerBlock += `          
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task1[1] === 1 ? 
             `
             Чтобы перевести значение температуры по шкале Фаренгейта в шкалу Цельсия позволяет формула t<sub>C</sub>&nbsp;=&nbsp;<math style="font-size: 140%">
@@ -4902,22 +4906,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               </math>&nbsp;(t<sub>F</sub>&nbsp;−&nbsp;32), 
 
             где t<sub>C</sub> — температура в градусах Цельсия, t<sub>F</sub> — температура в градусах Фаренгейта. Скольким градусам
-            по шкале Цельсия соответствует <b>${task1[0]} градусов</b> по шкале Фаренгейта?<hr class="hr-pd_20">
+            по шкале Цельсия соответствует <b>${task1[0]} градусов</b> по шкале Фаренгейта?${span20()}
             ` 
             :
           `        
           Чтобы перевести значение температуры по шкале Цельсия в шкалу Фаренгейта, пользуются формулой 
           t<sub>F</sub>&nbsp;=&nbsp;1,8&nbsp;•&nbsp;t<sub>C</sub>&nbsp;+&nbsp;32, где t<sub>C</sub> — температура в градусах Цельсия, t<sub>F</sub> — температура в градусах Фаренгейта. 
-          Скольким градусам по шкале Фаренгейта соответствует <b>${task1[0]} градусов</b> по шкале Цельсия?<hr class="hr-pd_20">
+          Скольким градусам по шкале Фаренгейта соответствует <b>${task1[0]} градусов</b> по шкале Цельсия?${span20()}
           `}
           
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwelve(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4926,7 +4930,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 6:
           answerBlock += `          
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task1[0] === 1 ? 
             `
             Кинетическая энергия тела массой 𝑚 кг, двигающегося со скоростью 𝑣 м/с, вычисляется по формуле 
@@ -4943,23 +4947,23 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 </mfrac>   
               </math> и измеряется в джоулях (Дж). 
               Известно, что автомобиль массой <b>${task1[1]} кг</b> обладает кинетической энергией <b>${task1[2]} тысяч джоулей</b>. 
-              Найдите скорость этого автомобиля в метрах в секунду.<hr class="hr-pd_20">
+              Найдите скорость этого автомобиля в метрах в секунду.${span20()}
             ` 
             :
           `        
            Если тело массой 𝑚 кг подвешено на высоте ℎ м над горизонтальной поверхностью земли, то его потенциальная энергия в джоулях вычисляется по формуле 𝑃 = 𝑚𝑔ℎ
            , где 𝑔 = 9,8 м/с<sup>2</sup> − ускорение свободного падения. 
            Найдите массу тела, подвешенного на высоте <b>${task1[1]} м</b> над поверхностью земли, если его потенциальная энергия равна <b>${task1[2]} джоулям</b>. 
-           Ответ дайте в килограммах.<hr class="hr-pd_20">
+           Ответ дайте в килограммах.${span20()}
           `}
           
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwelve(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -4968,7 +4972,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 7:
           answerBlock += `          
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task1[1] === 1 ? 
             `
             Сила Архимеда, выталкивающая на поверхность погружённое в воду тело, вычисляется по формуле 𝐹&nbsp;=&nbsp;𝜌𝑔𝑉 , 
@@ -4976,7 +4980,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             а 𝑉 — объём тела в кубических метрах. Сила 𝐹 измеряется в ньютонах. 
             Найдите силу Архимеда, действующую на погружённое в воду тело объёмом <b>${task1[0]} куб. м</b>. 
             Ответ дайте в ньютонах.
-            <hr class="hr-pd_20">
+            ${span20()}
             ` 
             :
           `  
@@ -4996,16 +5000,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           , где C — ёмкость конденсатора (в фарадах), а U — разность потенциалов на обкладках конденсатора (в вольтах). 
           Найдите энергию конденсатора ёмкостью 10<sup>−4</sup> фарад, если разность потенциалов на обкладках конденсатора равна ${task1[0]} вольт. Ответ дайте в джоулях.
           
-           <hr class="hr-pd_20">
+           ${span20()}
           `}
           
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwelve(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5019,22 +5023,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Укажите решение неравенства: ${task1}.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div >
-            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
-            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
-            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>1) ${task2[0]}</p>${span20()}
+            <p>2) ${task2[1]}</p>${span20()}
+            <p>3) ${task2[2]}</p>${span20()}
             <p>4) ${task2[3]}</p>
           </div>
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5043,51 +5047,51 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           
           ${task === 21 ? 
             `
           Укажите решение неравенства: ${task1}.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div >
-            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
-            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
-            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>1) ${task2[0]}</p>${span20()}
+            <p>2) ${task2[1]}</p>${span20()}
+            <p>3) ${task2[2]}</p>${span20()}
             <p>4) ${task2[3]}</p>
           </div>`
             : task === 22 ? 
             `
           Укажите решение неравенства: ${task1}.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; flex-direction: column; align-items: flex-start; vertical-align: middle;">
-            <p>1) ${task2[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p><hr class="hr-pd_10">
-            <p>2) ${task2[1] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_2.png">`: `нет решений`}</p><hr class="hr-pd_10">
-            <p>3) ${task2[2] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_3.png">`: `нет решений`}</p><hr class="hr-pd_10">
+            <p>1) ${task2[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p>${span10()}
+            <p>2) ${task2[1] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_2.png">`: `нет решений`}</p>${span10()}
+            <p>3) ${task2[2] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_3.png">`: `нет решений`}</p>${span10()}
             <p>4) ${task2[3] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_4.png">`: `нет решений`}</p>
           </div>
             `
             : task === 23 ? 
             `
           Укажите неравенство, решение которого изображено на рисунке:
-          <hr class="hr-pd_10">
+          ${span10()}
           <img style="width: 18em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_0.png">
-          <hr class="hr-pd_20">
+          ${span20()}
           <div >
-            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
-            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
-            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>1) ${task2[0]}</p>${span20()}
+            <p>2) ${task2[1]}</p>${span20()}
+            <p>3) ${task2[2]}</p>${span20()}
             <p>4) ${task2[3]}</p>
           </div>
             `
             :
             ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5096,51 +5100,51 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           
           ${task === 31 ? 
             `
           Укажите решение неравенства: ${task1}.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div >
-            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
-            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
-            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>1) ${task2[0]}</p>${span20()}
+            <p>2) ${task2[1]}</p>${span20()}
+            <p>3) ${task2[2]}</p>${span20()}
             <p>4) ${task2[3]}</p>
           </div>`
             : task === 32 ? 
             `
           Укажите решение неравенства: ${task1}.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; flex-direction: column; align-items: flex-start; vertical-align: middle;">
-            <p>1) ${task2[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p><hr class="hr-pd_10">
-            <p>2) ${task2[1] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_2.png">`: `нет решений`}</p><hr class="hr-pd_10">
-            <p>3) ${task2[2] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_3.png">`: `нет решений`}</p><hr class="hr-pd_10">
+            <p>1) ${task2[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p>${span10()}
+            <p>2) ${task2[1] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_2.png">`: `нет решений`}</p>${span10()}
+            <p>3) ${task2[2] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_3.png">`: `нет решений`}</p>${span10()}
             <p>4) ${task2[3] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_4.png">`: `нет решений`}</p>
           </div>
             `
             : task === 33 ? 
             `
           Укажите неравенство, решение которого изображено на рисунке:
-          <hr class="hr-pd_10">
+          ${span10()}
           <img style="width: 18em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_0.png">
-          <hr class="hr-pd_20">
+          ${span20()}
           <div >
-            <p>1) ${task2[0]}</p><hr class="hr-pd_20">
-            <p>2) ${task2[1]}</p><hr class="hr-pd_20">
-            <p>3) ${task2[2]}</p><hr class="hr-pd_20">
+            <p>1) ${task2[0]}</p>${span20()}
+            <p>2) ${task2[1]}</p>${span20()}
+            <p>3) ${task2[2]}</p>${span20()}
             <p>4) ${task2[3]}</p>
           </div>
             `
             :
             ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5149,11 +5153,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           
           ${task === 41 ? 
             `
-          Укажите решение системы неравенств:<hr class="hr-pd_10">
+          Укажите решение системы неравенств:${span10()}
           $$
           \\begin{cases}
           ${task1}, \\\\
@@ -5161,38 +5165,38 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           \\end{cases}
           $$
           
-          <hr class="hr-pd_20">
+          ${span20()}
           <div >
-            <p>1) ${task3[0]}</p><hr class="hr-pd_20">
-            <p>2) ${task3[1]}</p><hr class="hr-pd_20">
-            <p>3) ${task3[2]}</p><hr class="hr-pd_20">
+            <p>1) ${task3[0]}</p>${span20()}
+            <p>2) ${task3[1]}</p>${span20()}
+            <p>3) ${task3[2]}</p>${span20()}
             <p>4) ${task3[3]}</p>
           </div>`
             : task === 42 ? 
             `
-          Укажите решение системы неравенств:<hr class="hr-pd_10">        
+          Укажите решение системы неравенств:${span10()}        
           $$
           \\begin{cases}
           ${task1}, \\\\
           ${task2}.
           \\end{cases}
           $$
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; flex-direction: column; align-items: flex-start; vertical-align: middle;">
-            <p>1) ${task3[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p><hr class="hr-pd_10">
-            <p>2) ${task3[1] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_2.png">`: `нет решений`}</p><hr class="hr-pd_10">
-            <p>3) ${task3[2] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_3.png">`: `нет решений`}</p><hr class="hr-pd_10">
+            <p>1) ${task3[0] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_1.png">`: `нет решений`}</p>${span10()}
+            <p>2) ${task3[1] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_2.png">`: `нет решений`}</p>${span10()}
+            <p>3) ${task3[2] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_3.png">`: `нет решений`}</p>${span10()}
             <p>4) ${task3[3] === 1 ? `<img style="width: 14em; vertical-align: middle;" src="../../pages/mathOge/img/task13/13_${taskCounter}_4.png">`: `нет решений`}</p>
           </div>
             `
             : ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5308,9 +5312,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 12){
           return `
           a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
-          <hr class="hr-pd_10">
+          ${span10()}
           a<sub>${task1[3]}</sub> = ${task1[1]} + ${task1[2]} • (${task1[3]} — 1) = ${task1[1] + task1[2]*(task1[3] - 1)}
-          <hr class="hr-pd_10">
+          ${span10()}
           S<sub>n</sub> = 
           &thinsp;<math style="font-size: 140%">
               <mfrac >
@@ -5328,7 +5332,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <mn style="padding-top: 5px;">2</mn>
               </mfrac>
             </math> • n
-            <hr class="hr-pd_10">
+            ${span10()}
             S<sub>${task1[0]}</sub> = &thinsp;
             <math style="font-size: 140%">
               <mfrac >
@@ -5346,7 +5350,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 13){
           return `
           a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
-          <hr class="hr-pd_10">
+          ${span10()}
           d = &thinsp;<math style="font-size: 140%">
               <mfrac >
                 <mrow style="padding-bottom: 5px;">
@@ -5363,9 +5367,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <mn style="padding-top: 5px;">n — 1</mn>
               </mfrac>
             </math>
-            <hr class="hr-pd_20">
+            ${span20()}
             a<sub>n</sub> = ${task1[2]}, &thinsp;a<sub>1</sub> = ${task1[1]}
-            <hr class="hr-pd_20">
+            ${span20()}
             d = &thinsp;<math style="font-size: 140%">
               <mfrac >
                 <mrow style="padding-bottom: 5px;">               
@@ -5384,34 +5388,34 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <mn style="padding-top: 5px;">${task1[4]-task1[3]}</mn>
               </mfrac>
             </math> = ${(task1[2]-task1[1])/(task1[4]-task1[3])}
-            <hr class="hr-pd_20">
+            ${span20()}
             a<sub>1</sub> = a<sub>n</sub> — d • (n — 1) = ${task1[2]} — ${(task1[2]-task1[1])/(task1[4]-task1[3])} • (${task1[4]} — 1) = ${task1[2] -((task1[2]-task1[1])/(task1[4]-task1[3]))*(task1[4]-1)}
-            <hr class="hr-pd_20">
+            ${span20()}
             a<sub>n</sub> = a<sub>1</sub> + d • (n — 1) = ${task1[2] -((task1[2]-task1[1])/(task1[4]-task1[3]))*(task1[4]-1)} + ${(task1[2]-task1[1])/(task1[4]-task1[3])} • (${task1[0]} — 1) = ${task1[2] -((task1[2]-task1[1])/(task1[4]-task1[3]))*(task1[4]-1) + (task1[2]-task1[1])/(task1[4]-task1[3])*(task1[0]-1)}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
         }
         else if(item === 21){
           return `
           ${task1[2]} / ${task1[0]} = ${task1[2]/task1[0]}
-          <hr class="hr-pd_10">
+          ${span10()}
           2<sup>${task1[2]/task1[0]}</sup> = ${Math.pow(2,(task1[2]/task1[0]))}
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task1[1]} / ${Math.pow(2,(task1[2]/task1[0]))} = ${task1[1] / Math.pow(2,(task1[2]/task1[0]))}
           `
         }
         else if(item === 31){
           return `
-          ${task1[0]} • ${task1[1]} = ${task1[0]*task1[1]}<hr class="hr-pd_10">
+          ${task1[0]} • ${task1[1]} = ${task1[0]*task1[1]}${span10()}
           ${task1[2]} - ${task1[0]*task1[1]} = ${task1[2] - task1[0]*task1[1]}
           `
         }
         else if(item === 41){
           return `
           ${task1[2]} / ${task1[1]} = <b>${task1[2]/task1[1]}</b> 
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task1[3]}<b><sup>${task1[2]/task1[1]}</sup></b> = ${Math.pow(task1[3],task1[2]/task1[1])}
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task1[0]} • ${Math.pow(task1[3],task1[2]/task1[1])} = ${task1[0]*Math.pow(task1[3],task1[2]/task1[1])}
 
           `
@@ -5426,11 +5430,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 61){  
           return `
           a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
-          <hr class="hr-pd_10">
+          ${span10()}
           d = —${task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           a<sub>${task1[2]}</sub> = ${task1[0]} — ${task1[1]} • (${task1[2]} — 1) = ${task1[0] - task1[1]*(task1[2] - 1)}
-          <hr class="hr-pd_10">
+          ${span10()}
           S<sub>n</sub> = 
           &thinsp;<math style="font-size: 140%">
               <mfrac >
@@ -5448,7 +5452,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <mn style="padding-top: 5px;">2</mn>
               </mfrac>
             </math> n
-            <hr class="hr-pd_10">
+            ${span10()}
             S<sub>${task1[2]}</sub> = &thinsp;
             <math style="font-size: 140%">
               <mfrac >
@@ -5466,13 +5470,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 62){  
           return `
           a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
-          <hr class="hr-pd_10">
+          ${span10()}
           d = —${task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           n = ${task1[0]} / ${task1[1]} = ${task1[0]/task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           a<sub>${task1[2]}</sub> = ${task1[0]} — ${task1[1]} • (${task1[2]} — 1) = ${task1[0] - task1[1]*(task1[2] - 1)}
-          <hr class="hr-pd_10">
+          ${span10()}
           S<sub>n</sub> = 
           &thinsp;<math style="font-size: 140%">
               <mfrac >
@@ -5490,7 +5494,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <mn style="padding-top: 5px;">2</mn>
               </mfrac>
             </math> n
-            <hr class="hr-pd_10">
+            ${span10()}
             S<sub>${task1[2]}</sub> = &thinsp;
             <math style="font-size: 140%">
               <mfrac >
@@ -5508,7 +5512,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 71){
           return `
           ${task1[2]} • (${task1[2]} — 1) / 2 = ${task1[2]*(task1[2]-1) / 2} 
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task1[2]} • ${task1[0]} + ${task1[2]*(task1[2]-1) / 2} • ${task1[1]} =
           ${(task1[2]*task1[0]).toFixed(1)} + ${((task1[2]*(task1[2]-1) / 2) * task1[1]).toFixed(1)} =
           ${(task1[2]*task1[0] + (task1[2]*(task1[2]-1) / 2) * task1[1]).toFixed(1)}
@@ -5518,9 +5522,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 81){
           return `
           a<sub>n</sub> = a<sub>1</sub> + d • (n — 1)
-          <hr class="hr-pd_10">
+          ${span10()}
           a<sub>${task1[2]}</sub> = ${task1[0]} + ${task1[1]} • (${task1[2]} — 1) = ${task1[0] + task1[1]*(task1[2] - 1)}
-          <hr class="hr-pd_10">
+          ${span10()}
           S<sub>n</sub> = 
           &thinsp;<math style="font-size: 140%">
               <mfrac >
@@ -5538,7 +5542,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                 <mn style="padding-top: 5px;">2</mn>
               </mfrac>
             </math> n
-            <hr class="hr-pd_10">
+            ${span10()}
             S<sub>${task1[2]}</sub> = &thinsp;
             <math style="font-size: 140%">
               <mfrac >
@@ -5560,7 +5564,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             В амфитеатре ${task1[0]} рядов. В первом ряду ${task1[1]} мест, а в каждом следующем на ${task1[2]} места больше, чем в предыдущем. 
@@ -5574,14 +5578,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `В амфитеатре ${task1[0]} рядов, причём в каждом следующем ряду на одно и то же число мест больше, чем в предыдущем. 
             В ${numberToWordsRu(task1[3])} ряду ${task1[1]} мест, а в ${numberToWordsRu(task1[4])} ряду ${task1[2]} мест. Сколько мест в последнем ряду амфитеатра?
             `
-            : ``}<hr class="hr-pd_20">
+            : ``}${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5590,19 +5594,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           В ходе распада радиоактивного изотопа его масса уменьшается вдвое каждые ${task1[0]} минут. 
           В начальный момент масса изотопа составляла ${task1[1]} мг. Найдите массу изотопа через ${task1[2]} минуты. 
           Ответ дайте в миллиграммах.
 
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5611,19 +5615,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}    
           При проведении опыта вещество равномерно охлаждали в течение 10 минут. 
           При этом каждую минуту его температура уменьшалась на ${task1[0]} °C. 
           Найдите температуру вещества в градусах Цельсия через ${task1[1]} минуты после начала опыта, 
           если начальная температура вещества составляла ${task1[2]} °C.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5632,19 +5636,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}    
           В ходе биологического эксперимента в чашку Петри с питательной средой поместили колонию микроорганизмов массой ${task1[0]} мг. 
           За каждые 30 минут масса колонии увеличивается в ${task1[1]} раза. 
           Найдите массу колонии микроорганизмов через ${task1[2]} минут после начала эксперимента.
           Ответ дайте в миллиграммах.
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5653,18 +5657,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 5:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}    
           Каучуковый мячик с силой бросили на асфальт. Отскочив, мячик подпрыгнул на ${task1[0]} м, 
           а при каждом следующем прыжке он поднимался на высоту в ${numberToWords(task1[2])} раза меньше предыдущей. 
           При каком по счёту прыжке мячик в первый раз не достигнет высоты ${task1[1]} см?
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5673,7 +5677,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 6:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}    
           ${task === 61 ? 
             `Водитель автомобиля начал торможение. 
           За секунду после начала торможения автомобиль проехал ${task1[0]}&nbsp;м, а за каждую следующую секунду он проезжал на ${task1[1]}&nbsp;м меньше, чем за предыдущую. 
@@ -5687,14 +5691,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             : ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5703,18 +5707,18 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 7:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}    
           Поезд начал движение от станции. За первую секунду состав сдвинулся на ${task1[0]}&nbsp;м, 
           а за каждую следующую секунду он проходил на ${task1[1]}&nbsp;м больше, чем за предыдущую. 
           Сколько метров состав прошёл за первые ${task1[2]}&nbsp;секунд движения?
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -5723,17 +5727,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 8:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">    
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}    
           Камень бросают в глубокое ущелье. За первую секунду он пролетает ${task1[0]}&nbsp;м, а за каждую следующую секунду на ${task1[1]}&nbsp;м больше, 
           чем за предыдущую, до тех пор, пока не достигнет дна ущелья. Сколько метров пролетит камень за первые ${task1[2]}&nbsp;секунд?
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFourteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -6021,49 +6025,49 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
           В треугольнике ABC угол C равен ${task1[0]}°. Найдите внешний угол при вершине C. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1277.png"></div>
             `
             : task === 12 ? 
             `
           В треугольнике ABC известно, что AB=BC, ∠ABC = ${task1[0]}°. Найдите угол BCA. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1278.png"></div>
            
             ` 
             : task === 13 ? 
             `
             В треугольнике ABC известно, что ∠BAC = ${task1[0]}°, AD — биссектриса. Найдите угол BAD. Ответ дайте в градусах.
-            <hr class="hr-pd_20">
+            ${span20()}
            <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1279.png"></div>
             `
             : task === 14 ? 
             `
             Один из острых углов прямоугольного треугольника равен ${task1[0]}°. Найдите его другой острый угол. Ответ дайте в градусах.
-           <hr class="hr-pd_20">
+           ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task15/15_1281.png"></div>
            
             `
             : task === 15 ? 
              `В остроугольном треугольнике ABC проведена высота BH, ∠BAC = ${task1[0]}°. Найдите угол ABH. Ответ дайте в градусах.
-             <hr class="hr-pd_20">
+             ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_1284.png"></div>
            
              `
              : task === 16 ? 
              `В треугольнике два угла равны ${task1[0]}° и ${task1[1]}°. Найдите его третий угол. Ответ дайте в градусах.
-             <hr class="hr-pd_20">
+             ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1285.png"></div>
            
              `
              : task[0] === 107 ? `
               ${task[1] === 1071 ? `
                 В треугольнике ABC проведена биссектриса AK. Найдите градусную меру угла B, если ∠C = ${task1[1]}° и AK = CK.
-                <hr class="hr-pd_20">
+                ${span20()}
                 <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_3533.png"></div>
            
                 `: ``}
@@ -6071,21 +6075,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
              : task[0] === 108 ? `
               ${task[1] === 1081 ? `
                 В треугольнике ABC проведена медиана BM. Найдите градусную меру угла A, если ∠C = ${task1[1]}° и BM = AM = MC.
-                <hr class="hr-pd_20">
+                ${span20()}
                 <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task15/15_3543.png"></div>
            
                 `: ``}
              `:
              ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFifteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -6094,13 +6098,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `${
             task1[1] === "m" ? 
               `Медиана равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите сторону этого треугольника.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1345.png"></div>
            
               `
@@ -6108,7 +6112,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             task1[1] === "v" ? 
               `Высота равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите сторону этого треугольника.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1350.png"></div>
            
               `
@@ -6116,7 +6120,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             task1[1] === "b" ? 
               `Биссектриса равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите сторону этого треугольника.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1349.png"></div>
            
               `
@@ -6124,21 +6128,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             task1[1] === "sb" ? 
               `Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите биссектрису этого треугольника.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1349.png"></div>
            
               `
             :  task1[1] === "sm" ? 
               `Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите медиану этого треугольника.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1345.png"></div>
            
               `
             : task1[1] === "sv" ? 
               `Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. 
               Найдите высоту этого треугольника.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1350.png"></div>
            
               `
@@ -6149,21 +6153,21 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `${
             task1[2] === "g" ? 
               `Катеты прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите гипотенузу этого треугольника.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>
            
               `
             : 
             `
             В прямоугольном треугольнике катет и гипотенуза равны ${task1[0]} и ${task1[1]} соответственно. Найдите другой катет этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>
            
             `}` 
             : task === 23 ? 
             `
             В треугольнике ABC известно, что AC = ${task1[0]}, BM — медиана, BM = ${task1[1]}. Найдите AM.
-             <hr class="hr-pd_20">
+             ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1356.png"></div>
            
             `
@@ -6171,14 +6175,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             Точки M и N являются серединами сторон AB и BC треугольника ABC, сторона AB равна ${task1[0]}, сторона BC равна ${task1[1]}, сторона AC равна ${task1[2]}. 
             Найдите MN.
-             <hr class="hr-pd_20">
+             ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1365.png"></div>
            
             `
             : task === 25 ? 
             `
             В равнобедренном треугольнике ABC с основанием AC  внешний угол при вершине C  равен ${task1[0]}° . Найдите величину угла ABC. Ответ дайте в градусах.
-             <hr class="hr-pd_20">
+             ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task15/15_1417.png"></div>
            
             `
@@ -6186,14 +6190,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             
             ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFifteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -6202,11 +6206,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             `
             Два катета прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите площадь этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1346.png"></div>     
             `
             : task === 32 ? 
@@ -6214,28 +6218,28 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             В треугольнике ABC известно, что AB = ${task1[0]}, BC = ${task1[1]}, sin∠ABC = 
             ${drobNum(task1[2], task1[3])}.
             Найдите площадь треугольника ABC.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1419.png"></div>
            
             `
             : task === 33 ? 
             `
             Сторона треугольника равна ${task1[0]}, а высота, проведённая к этой стороне, равна ${task1[1]}. Найдите площадь этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task15/15_1428.png"></div>
            
             `
             :
 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFifteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -6244,25 +6248,25 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 41 ? 
             `
             ${task1[2] === "s" ? 
             `
           В треугольнике ABC угол C равен 90°, AC = ${task1[0]}, AB = ${task1[1]}. Найдите sinB.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
             `
             : task1[2] === "c" ? 
             `
           В треугольнике ABC угол C равен 90°, BC = ${task1[0]}, AB = ${task1[1]}. Найдите cosB.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task15/15_1456.png"></div>
             `
             : task1[2] === "t" ? 
             `
           В треугольнике ABC угол C равен 90°, BC = ${task1[0]}, AC = ${task1[1]}. Найдите tgB.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
             `
             :
@@ -6273,33 +6277,33 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${task1[3] === "ss" ? 
               `
             В треугольнике ABC угол C равен 90°, sinB = ${drobNum(task1[0], task1[1])}, AB = ${task1[2]}. Найдите AC.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
            
               `
               : task1[3] === "sc" ? 
               `
             В треугольнике ABC угол C равен 90°, cosB = ${drobNum(task1[0], task1[1])}, AB = ${task1[2]}. Найдите BC.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>
            
               `
               : task1[3] === "st" ? 
               `
             В треугольнике ABC угол C равен 90°, tgB = ${drobNum(task1[0], task1[1])}, BC = ${task1[2]}. Найдите AC.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 8em; " src="../../pages/mathOge/img/task15/15_1450.png"></div>   
               `
               : 
               ``}`: ``} 
-              <hr class="hr-pd_20">
+              ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshFifteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -6315,16 +6319,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return `
           ${task1[2] === 1 ? 
             `
-          ∠CAD = ∠CBD = ${task1[1]}°<hr class="hr-pd_10">
-          ∠ABC = ${task1[0]}°<hr class="hr-pd_10">
-          ∠ABC = ∠ABD + ∠CBD<hr class="hr-pd_10">
-          ∠ABD = ∠ABC — ∠CBD = ${task1[0]}° — ${task1[1]}° = ${task1[0]-task1[1]}°<hr class="hr-pd_10">
+          ∠CAD = ∠CBD = ${task1[1]}°${span10()}
+          ∠ABC = ${task1[0]}°${span10()}
+          ∠ABC = ∠ABD + ∠CBD${span10()}
+          ∠ABD = ∠ABC — ∠CBD = ${task1[0]}° — ${task1[1]}° = ${task1[0]-task1[1]}°${span10()}
           ∠ABD = ${task1[0]-task1[1]}°`
             :
              `
-          ∠CAD = ∠CBD = ${task1[1]}°<hr class="hr-pd_10">
-          ∠ABD = ${task1[0]}°<hr class="hr-pd_10">
-          ∠ABC = ∠ABD + ∠CBD = ${task1[0]}° + ${task1[1]}° = ${task1[0]+task1[1]}°<hr class="hr-pd_10">
+          ∠CAD = ∠CBD = ${task1[1]}°${span10()}
+          ∠ABD = ${task1[0]}°${span10()}
+          ∠ABC = ∠ABD + ∠CBD = ${task1[0]}° + ${task1[1]}° = ${task1[0]+task1[1]}°${span10()}
         
           ∠ABC = ${task1[0]+task1[1]}°
 
@@ -6482,30 +6486,30 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 311){
           return `
           AB = 2 • ${task1[0]} = ${2*task1[0]} 
-          <hr class="hr-pd_10">
+          ${span10()}
           AC<sup>2</sup> = AB<sup>2</sup> — BC<sup>2</sup>
-          <hr class="hr-pd_10">
+          ${span10()}
           AC<sup>2</sup> = ${2*task1[0]}<sup>2</sup> — ${task1[1]}<sup>2</sup>
-          <hr class="hr-pd_10">
+          ${span10()}
           AC<sup>2</sup> = ${2*task1[0]*2*task1[0]} — ${task1[1]*task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           AC<sup>2</sup> = ${2*task1[0]*2*task1[0] - task1[1]*task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           AC = ${sqrtNum(2*task1[0]*2*task1[0] - task1[1]*task1[1])} = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
           `
         }
         else if(item === 312){
           return `
           AB = 2 • ${task1[0]} = ${2*task1[0]} 
-          <hr class="hr-pd_10">
+          ${span10()}
           BC<sup>2</sup> = AB<sup>2</sup> — AC<sup>2</sup>
-          <hr class="hr-pd_10">
+          ${span10()}
           BC<sup>2</sup> = ${2*task1[0]}<sup>2</sup> — ${task1[1]}<sup>2</sup>
-          <hr class="hr-pd_10">
+          ${span10()}
           BC<sup>2</sup> = ${2*task1[0]*2*task1[0]} — ${task1[1]*task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           BC<sup>2</sup> = ${2*task1[0]*2*task1[0] - task1[1]*task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           BC = ${sqrtNum(2*task1[0]*2*task1[0] - task1[1]*task1[1])} = ${Math.sqrt(2*task1[0]*2*task1[0] - task1[1]*task1[1])}
 
 
@@ -6542,9 +6546,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           a<sup>2</sup> + a<sup>2</sup> = d<sup>2</sup> <br>
           d<sup>2</sup> = (${task1[0]}${sqrtNum(2)})<sup>2</sup> + (${task1[0]}${sqrtNum(2)})<sup>2</sup> =
           ${task1[0]*task1[0]*2} + ${task1[0]*task1[0]*2} = ${task1[0]*task1[0]*2 + task1[0]*task1[0]*2} 
-          <hr class="hr-pd_10"> 
+          ${span10()} 
           d = ${sqrtNum(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} = 
-          ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} <hr class="hr-pd_10">
+          ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} ${span10()}
           r = d / 2 = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2)} / 2 = ${Math.sqrt(task1[0]*task1[0]*2 + task1[0]*task1[0]*2) / 2} 
           ${h10()}
           -----------------------------------------------------<br>
@@ -6558,12 +6562,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 35){
           return `
           ${drobNum("AB", "sin C")} = 2R
-          <hr class="hr-pd_10">
+          ${span10()}
           sin C = sin ${task1[0]}° = 
           ${(task1[0] === 30 || task1[0] === 150) ? `${drobNum(1,2)}`
           : (task1[0] === 45 || task1[0] === 135) ? `${dropRow(2,2)}`
           : (task1[0] === 60 || task1[0] === 120) ? `${dropRow(3,2)}` :``}
-          <hr class="hr-pd_10">
+          ${span10()}
           R = ${drobNum("AB", "2 • sin C")} = 
           ${task1.length === 3 ? 
             `
@@ -6571,7 +6575,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${(task1[0] === 30 || task1[0] === 150) ? `${drobNum(1,2)}`
           : (task1[0] === 45 || task1[0] === 135) ? `${dropRow(2,2)}`
           : (task1[0] === 60 || task1[0] === 120) ? `${dropRow(3,2)}` :``})
-          <hr class="hr-pd_10">
+          ${span10()}
           R = ${task1[1]}${sqrtNum(task1[2])} : ${sqrtNum(task1[2])} = ${task1[1]}
             ` 
             : 
@@ -6580,7 +6584,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ${(task1[0] === 30 || task1[0] === 150) ? `${drobNum(1,2)}`
           : (task1[0] === 45 || task1[0] === 135) ? `${dropRow(2,2)}`
           : (task1[0] === 60 || task1[0] === 120) ? `${dropRow(3,2)}` :``})
-          <hr class="hr-pd_10">
+          ${span10()}
           R = ${task1[1]} : 1 = ${task1[1]}
             `}
           
@@ -6613,13 +6617,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         else if(item === 37){
           return `
           AB = AC<sup>2</sup> + BC<sup>2</sup>
-          <hr class="hr-pd_10">
+          ${span10()}
           AB<sup>2</sup> = ${task1[0]*task1[0]} + ${task1[1]*task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           AB<sup>2</sup> = ${task1[0]*task1[0] + task1[1]*task1[1]}
-          <hr class="hr-pd_10">
+          ${span10()}
           AB = ${sqrtNum(task1[0]*task1[0] + task1[1]*task1[1])} = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1])}
-          <hr class="hr-pd_10">
+          ${span10()}
           r = AB / 2 = ${Math.sqrt(task1[0]*task1[0] + task1[1]*task1[1]) / 2}
 
           `
@@ -6978,7 +6982,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             ${task1[2] === 1 ? 
@@ -6990,7 +6994,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               Четырёхугольник ABCD вписан в окружность. Угол ABD равен ${task1[0]}°, угол CAD равен ${task1[1]}°. Найдите угол ABC. Ответ дайте в градусах.
               `}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1509.png"></div>
           
             `
@@ -6999,7 +7003,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ${task1[1] === 1 ?
               `
             В окружности с центром в точке O отрезки AC и BD — диаметры. Угол AOD равен ${task1[0]}°. Найдите угол ACB. Ответ дайте в градусах.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1512.png"></div>
           
 
@@ -7007,7 +7011,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               :
               `
               Отрезки AC и BD — диаметры окружности с центром в точке O. Угол ACB равен ${task1[0]}°. Найдите угол AOD. Ответ дайте в градусах.
-              <hr class="hr-pd_20">
+              ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1512.png"></div>
           
               `}
@@ -7016,7 +7020,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             На окружности по разные стороны от диаметра AB взяты точки M и N. Известно, что ∠NBA = ${task1[0]}°. 
             Найдите угол NMB. Ответ дайте в градусах.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1513.png"></div>
           
             `
@@ -7026,7 +7030,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               `
             Треугольник ABC вписан в окружность с центромв точке O. Точки O и C лежат в одной полуплоскости относительно прямой AB. 
             Найдите угол ACB, если угол AOB равен ${task1[0]}°. Ответ дайте в градусах.
-             <hr class="hr-pd_20">
+             ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1515.png"></div>
           
             ` 
@@ -7046,22 +7050,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
               Четырёхугольник ABCD вписан в окружность. Угол ABD равен ${task1[0]}°, угол CAD равен ${task1[1]}°. Найдите угол ABC. Ответ дайте в градусах.
               `}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_2071.png"></div>
           
             `
             :
              ``}
 
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshSixteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -7070,97 +7074,97 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `Радиус окружности, вписанной в равносторонний треугольник, равен ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. Найдите длину стороны этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1563.png"></div>
           
             `
             : task === 22 ? 
             `Сторона равностороннего треугольника равна ${task1[0]}<span style="font-size: 110%; font-family: MathJax_Size3;">√</span><span  style="border-top: 0.099em solid ">3</span>. 
             Найдите радиус окружности, вписанной в этот треугольник.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1563.png"></div>
           
             `
             : task === 23 ? 
             `Радиус окружности, вписанной в равнобедренную трапецию, равен ${task1[0]}. Найдите высоту этой трапеции.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1565.png"></div>
           
             `
             : task === 24 ? 
             `Радиус окружности, вписанной в прямоугольную трапецию, равен ${task1[0]}. Найдите высоту этой трапеции.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1567.png"></div>
           
             `
             : task === 25 ? 
             `Радиус окружности, вписанной в трапецию, равен ${task1[0]}. Найдите высоту этой трапеции.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1570.png"></div>
           
             `
             : task === 26 ? 
             `Найдите площадь квадрата, описанного около окружности радиуса ${task1[0]}.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1566.png"></div>
           
             `
             : task === 27 ? 
             `Периметр треугольника равен ${task1[0]}, одна из сторон равна ${task1[1]}, а радиус вписанной в него окружности равен ${task1[2]}. Найдите площадь этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1568.png"></div>
           
             `
             : task === 28 ? 
             `Сторона квадрата равна ${task1[0]}. Найдите радиус окружности, вписанной в этот квадрат.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1566.png"></div>
           
             `
             : task === 29 ? 
             `Четырёхугольник ABCD описан около окружности, AB = ${task1[0]}, BC = ${task1[1]}, CD = ${task1[2]}. Найдите AD.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1571.png"></div>
           
             `
             : task === 291 ? 
             `Трапеция ABCD с основаниями AD и BC описана около окружности, AB = ${task1[0]}, BC = ${task1[1]}, CD = ${task1[2]}. Найдите AD.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task16/16_1575.png"></div>
           
             `
             : task === 30 ? 
             `Радиус вписанной в квадрат окружности равен ${task1[0]}${sqrtNum(2)}. 
             Найдите диагональ этого квадрата.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task16/16_1574.png"></div>
           
             `
             : task1[0] === 12 ? `
             Диагональ AC ромба ABCD равна ${task1[1]}, а \\( tgBCA = \\frac{${task1[2]}}{${task1[3]}}\\). Найдите радиус окружности, вписанной в ромб.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3498.png"></div>
           
             `
             : task1[0] === 13 ? `
             Диагональ AC ромба ABCD равна ${task1[1]}, а tgBCA = ${task1[2]}. Найдите радиус окружности, вписанной в ромб.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 16em; " src="../../pages/mathOge/img/task16/16_3498.png"></div>
           
             `
             :
              ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshSixteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -7169,25 +7173,25 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             `
             Центр окружности, описанной около треугольника ABC, лежит на стороне AB. Найдите угол ABC, если угол BAC равен ${task1[0]}°. Ответ дайте в градусах.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1673.png"></div>
           
             ` 
             : task === 311 ? 
             `
             Центр окружности, описанной около треугольника ABC, лежит на стороне AB. Радиус окружности равен ${task1[0]}. Найдите AC, если BC = ${task1[1]}.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1689.png"></div>
           
             ` 
             : task === 312 ? 
             `
             Центр окружности, описанной около треугольника ABC, лежит на стороне AB. Радиус окружности равен ${task1[0]}. Найдите BC, если AC = ${task1[1]}.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_1689.png"></div>
           
             ` 
@@ -7195,49 +7199,49 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
 
             `
             Сторона равностороннего треугольника равна ${task1[0]}${sqrtNum(3)}. Найдите радиус окружности, описанной около этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1674.png"></div>   
             ` 
             : task === 321 ? 
             `
             Радиус окружности, описанной около равностороннего треугольника, равен ${task1[0]}${sqrtNum(3)}. Найдите длину стороны этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1674.png"></div>   
             ` 
             : task === 33 ? 
             `
             Угол A трапеции ABCD с основаниями AD и BC, вписанной в окружность, равен ${task1[0]}°. Найдите угол B этой трапеции. Ответ дайте в градусах.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1675.png"></div>   
             ` 
             : task === 331 ? 
             `
             Угол A четырёхугольника ABCD, вписанного в окружность, равен ${task1[0]}°. Найдите угол C этого четырёхугольника. Ответ дайте в градусах.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1684.png"></div>   
             ` 
             : task === 34 ? 
             `
             Сторона квадрата равна ${task1[0]}${sqrtNum(2)}. Найдите радиус окружности, описанной около этого квадрата.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1677.png"></div>   
             ` 
             : task === 35 ? 
             `
             В треугольнике ABC угол C равен ${task1[0]}°, ${task1.length === 2 ? `AB = ${task1[1]}` : `AB = ${task1[1]}${sqrtNum(task1[2])}`}. Найдите радиус окружности, описанной около этого треугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_${taskCounter}.png"></div>   
             ` 
             : task === 36 ? 
             `
             Радиус окружности, описанной около квадрата, равен  ${task1[0]}${sqrtNum(2)}. Найдите длину стороны этого квадрата.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1677.png"></div>   
             ` 
             : task === 37 ? 
             `
             В треугольнике ABC известно, что AC = ${task1[0]}, BC = ${task1[1]}, угол C равен 90°. Найдите радиус описанной около этого треугольника окружности.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1694.png"></div>   
             ` 
             : task === 38 ? 
@@ -7249,46 +7253,46 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : task1.length === 4 ? `
             \\( \\sqrt{${task1[0]}}\\)`:`\\( ${task1[0]}\\sqrt{${task1[1]}}\\)`}. 
             Найдите площадь квадрата ABCD.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_1783.png"></div>   
             ` 
             : task1[0] === 9 ? `
             Синус угла между стороной и диагональю прямоугольника равен ${task1[1]}. Диаметр описанной около него окружности равен ${task1[2]}. Найдите площадь прямоугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3508.png"></div>   
             
             `
             : task1[0] === 10 ? `
             Синус угла между стороной и диагональю прямоугольника равен \\(\\frac{${task1[1]}}{${task1[2]}}\\). Диаметр описанной около него окружности равен ${task1[3]}. Найдите площадь прямоугольника.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3508.png"></div>   
             
             `
             : task1[0] === 3111 ? `
               В окружность с центром в точке O вписан равносторонний треугольник. 
               Расстояние от точки O до сторон треугольника равно \\(\\sqrt{${task1[1]}}\\). Найдите сторону треугольника.     
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
                
             ` 
             : task1[0] === 3112 ? `
               В окружность с центром в точке O вписан равносторонний треугольник. 
               Расстояние от точки O до сторон треугольника равно \\(${task1[1]}\\sqrt{${task1[2]}}\\). Найдите сторону треугольника.     
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
                
             ` 
             : task1[0] === 3113 ? `
               В окружность с центром в точке O вписан равносторонний треугольник. 
               Расстояние от точки O до сторон треугольника равно \\(\\frac{\\sqrt{${task1[1]}}}{${task1[2]}}\\). Найдите сторону треугольника.     
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
                
             ` 
             : task1[0] === 3114 ? `
               В окружность с центром в точке O вписан равносторонний треугольник. 
               Расстояние от точки O до сторон треугольника равно \\(\\frac{${task1[1]}\\sqrt{${task1[2]}}}{${task1[3]}}\\). Найдите сторону треугольника.     
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task16/16_3518.png"></div>   
                
             ` 
@@ -7296,7 +7300,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           ` ${task1[0] === 4011 ? `
               Касательные в точках A и B к окружности с центром в точке O пересекаются под углом ${task1[1]}°. 
               Найдите угол ABO. Ответ дайте в градусах.
-              <hr class="hr-pd_20">
+              ${span20()}
               <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task16/16_3528.png"></div>   
                
             `
@@ -7304,14 +7308,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : ``}
           `:
             ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshSixteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -7824,53 +7828,53 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 1:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task === 11 ? 
             `
           Сторона квадрата равна ${task1[0]}${sqrtNum(2)}. Найдите диагональ этого квадрата. 
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_1795.png"></div>
           `
           : task === 12 ? 
             `
           Сторона ромба равна ${task1[0]}, а один из углов этого ромба равен ${task1[1]}°. Найдите высоту этого ромба.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1796.png"></div>
           `
           : task === 13 ? 
             `
           Периметр ромба равен ${task1[0]}, а один из углов равен ${task1[1]}°. Найдите площадь этого ромба.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1798.png"></div>
           `
           : task === 131 ? 
             `
           Один из углов параллелограмма (ромба) равен ${task1[0]}°. Найдите ${task1[1]} угол этого параллелограмма (ромба). Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1798.png"></div>
           `
           : task === 14 ? 
             `
           В ромбе ABCD угол ABC равен ${task1[0]}°. Найдите угол ACD. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1799.png"></div>
           `
           : task === 15 ? 
             `
           Диагональ прямоугольника образует угол ${task1[0]}° с одной из его сторон. Найдите острый угол между диагоналями этого прямоугольника. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1801.png"></div>
           `
           : task === 16 ? 
             `
           Диагонали AC и BD прямоугольника ABCD пересекаются в точке O, BO = ${task1[0]}, AB = ${task1[1]}. Найдите AC.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1820.png"></div>
           `
           : task1[0] === 7 ? 
           `
           Один из углов ромба равен ${task1[1]}°. Сколько градусов составляет угол между высотой и большей диагональю ромба?
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 10em; " src="../../pages/mathOge/img/task17/17_3392.png"></div>
           
           ` 
@@ -7878,7 +7882,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           : task1[0] === 8 ? 
           `
           Диагональ AC ромба ABCD равна ${task1[1]}, а tgBCA = ${task1[2]}. Найдите площадь ромба.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3403.png"></div>
           
           ` 
@@ -7886,25 +7890,25 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           `
           Перпендикуляр, проведённый из точки пересечения диагоналей ромба к его стороне, образует с одной из его диагоналей угол ${task1[1]}°. 
           Сколько градусов составляет острый угол ромба?
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_3413.png"></div>
           
           ` 
           : task1[0] === 10 ? 
           `
           Острый угол ромба равен ${task1[1]}°. Сколько градусов составляет угол между стороной и меньшей диагональю ромба?
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 9em; " src="../../pages/mathOge/img/task17/17_3423.png"></div>
           
           ` 
           : 
-          ``}<hr class="hr-pd_20">`
+          ``}${span20()}`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshSeventeen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -7913,60 +7917,60 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
           Один из углов прямоугольной трапеции равен ${task1[0]}°. Найдите ${task1[1]} угол этой трапеции. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task17/17_1871.png"></div>
          
             `
             : task === 22 ? 
             `
           Основания трапеции равны ${task1[0]} и ${task1[1]}. Найдите больший из отрезков, на которые делит среднюю линию этой трапеции одна из её диагоналей.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1872.png"></div>
          
             `
             : task === 23 ? 
             `
           Основания трапеции равны ${task1[0]} и ${task1[1]}, а высота равна ${task1[2]}. Найдите среднюю линию этой трапеции.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1873.png"></div>
          
             `
             : task === 24 ? 
             `
           Один из углов равнобедренной трапеции равен ${task1[0]}°. Найдите ${task1[1]} угол этой трапеции. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1875.png"></div>
          
             `
             : task === 241 ? 
             `
           Сумма двух углов равнобедренной трапеции равна ${task1[0]}°. Найдите ${task1[1]} угол этой трапеции. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1875.png"></div>
          
             `
             :task === 25 ? 
             `
           Основания трапеции равны ${task1[0]} и ${task1[1]}, а высота равна ${task1[2]}. Найдите площадь этой трапеции.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1879.png"></div>
          
             `
             : task === 26 ? 
             `
           Высота равнобедренной трапеции, проведённая из вершины C, делит основание AD на отрезки длиной ${task1[0]} и ${task1[1]}. Найдите длину основания BC.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_1881.png"></div>
          
             `
             : task === 27 ? 
             `
           В равнобедренной трапеции известны высота, ${task1[0] === 1 ? `большее`: `меньшее`} основание и угол при основании (см. рисунок). Найдите ${task1[0] === 1 ? `меньшее`: `большее`} основание.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
          
             `
@@ -7974,14 +7978,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
           В равнобедренной трапеции основания равны ${task1[0]} и ${task1[1]}, а один из углов между боковой стороной и основанием равен 45°. Найдите площадь этой трапеции.
 
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 19em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
          
             `
             : task1[0] === 10 ? 
             `
             Высота равнобедренной трапеции, проведённая из конца её меньшего основания, делит большее основание на отрезки длиной ${task1[1]} и ${task1[2]}. Найдите меньшее основание трапеции.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 11em; " src="../../pages/mathOge/img/task17/17_3434.png"></div>
          
             `
@@ -7989,7 +7993,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             В равнобедренной трапеции с основаниями AD и BC угол D равен ${task1[1]}°. Диагональ AC образует со стороной AB угол ${task1[2]}°. 
             Сколько градусов составляет угол между этой диагональю и меньшим основанием трапеции?
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_3445.png"></div>
          
             `
@@ -7997,7 +8001,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             В равнобедренной трапеции с основаниями AD и BC угол D равен ${task1[1]}°. Диагональ AC образует со стороной CD угол ${task1[2]}°. 
             Сколько градусов составляет угол между этой диагональю и меньшим основанием трапеции?
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 12em; " src="../../pages/mathOge/img/task17/17_3445.png"></div>
          
             `
@@ -8005,7 +8009,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             Диагональ равнобедренной трапеции образует с её основанием угол 45°. 
             Найдите высоту трапеции, если её основания равны ${task1[1]} и ${task1[2]}.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3467.png"></div>
          
             `
@@ -8013,7 +8017,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             Диагональ равнобедренной трапеции образует с боковыми сторонами углы ${task1[1]}° и ${task1[2]}°. 
             Сколько градусов составляет угол при большем основании трапеции?
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3478.png"></div>
          
             `
@@ -8022,20 +8026,20 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             В равнобедренной трапеции ABCD угол D равен ${task1[1]}°. 
             Найдите градусную меру угла ACD, если луч AC является биссектрисой угла BAD.
 
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_3488.png"></div>
          
             `
             :
             ``}
-           <hr class="hr-pd_20"> 
+           ${span20()} 
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">            
+            ${span20()}            
             ${reshSeventeen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8044,53 +8048,53 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             `
           Диагонали AC и BD параллелограмма ABCD пересекаются в точке O, AC = ${task1[0]}, BD = ${task1[1]}, AB = ${task1[2]}. Найдите DO.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task17/17_1951.png"></div>
          
             `
             : task === 32 ? 
             `
           Найдите острый угол параллелограмма ABCD, если биссектриса угла A образует со стороной BC угол, равный ${task1[0]}°. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task17/17_1952.png"></div>
          
             `
             : task === 33 ? 
             `
           Диагональ AC параллелограмма ABCD образует с его сторонами углы, равные ${task1[0]}° и ${task1[1]}°. Найдите больший угол этого параллелограмма. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
          
             `
             : task === 34 ? 
             `
           Диагональ BD параллелограмма ABCD образует с его сторонами углы, равные ${task1[0]}° и ${task1[1]}°. Найдите меньший угол этого параллелограмма. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
          
             `
             : task === 35 ? 
             `
           Площадь параллелограмма равна ${task1[0]}, а две его стороны равны ${task1[1]} и ${task1[2]}. Найдите его высоты. В ответе укажите ${task1[3] === 1 ? `большую`: `меньшую`} высоту.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 14em; " src="../../pages/mathOge/img/task17/17_1958.png"></div>
          
             `
             : task === 36 ? 
             `
           Найдите площадь параллелограмма, изображённого на рисунке.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task1[0] === 2 ? `width: 20em;` : `width: 13em;`} " src="../../pages/mathOge/img/task17/17_${taskCounter}.png"></div>
          
             `
             : task === 37 ? 
             `
           В ромбе ABCD угол ABC равен ${task1[0]}°. Найдите угол ACD. Ответ дайте в градусах.
-          <hr class="hr-pd_20">
+          ${span20()}
           <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 13em;" src="../../pages/mathOge/img/task17/17_1972.png"></div>
          
             `
@@ -8100,9 +8104,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshSeventeen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8308,50 +8312,50 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             На клетчатой бумаге с размером клетки 1×1 изображён треугольник. Найдите его площадь.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
           
             ` 
             : task === 12 ? 
             `
             На клетчатой бумаге с размером клетки 1×1 изображён прямоугольный треугольник. Найдите длину его большего катета.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
           
             ` 
             : task === 13 ? 
             `
             На клетчатой бумаге с размером клетки 1×1 изображён треугольник ABC. Найдите длину его средней линии, параллельной стороне AC.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
           
             ` 
             : task === 14 ? 
             `
             На клетчатой бумаге с размером клетки 1×1 изображена фигура. Найдите длину отрезка AB  по данным чертежа.
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
           
             ` 
             : task === 15 ? 
             `
             На клетчатой бумаге изображён треугольник ABC. Во сколько раз отрезок ${task1[2]} отрезка ${task1[3] ? task1[3]: `CM`}?
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  width: 15em; " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
           
-            ` :``}<hr class="hr-pd_20">
+            ` :``}${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshEghteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8360,7 +8364,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
             На клетчатой бумаге с размером клетки 1×1 изображён ромб. Найдите длину его большей диагонали.
@@ -8386,17 +8390,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         
             ` 
             : `` } 
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  
             ${task2 === 2 ? `width: 10em;`: task2 === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>    
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshEghteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8405,22 +8409,22 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             ` На клетчатой бумаге с размером клетки 1×1 изображены две точки. Найдите расстояние между ними.` 
           : task === 32 ? 
             ` На клетчатой бумаге изображены два круга. Во сколько раз площадь большего круга больше площади меньшего? ` 
             : `` }
-            <hr class="hr-pd_20">
+            ${span20()}
             <div style="display: flex; justify-content: space-between; padding-right: 2em;"><p></p><img style="display: block;  ${task2 === 2 ? `width: 10em;`: task2 === 3 ? `width: 20em;`: `width: 15em;`} " src="../../pages/mathOge/img/task18/18_${taskCounter}.png"></div>
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshEghteen(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8434,12 +8438,12 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
-            Какое из следующих утверждений является <b>истинным высказыванием</b>?<hr class="hr-pd_20">
-            <b>1)</b> ${task2}<hr class="hr-pd_20">
-            <b>2)</b> ${task3}<hr class="hr-pd_20">
+            Какое из следующих утверждений является <b>истинным высказыванием</b>?${span20()}
+            <b>1)</b> ${task2}${span20()}
+            <b>2)</b> ${task3}${span20()}
             <b>3)</b> ${task4}<hr class="hr-pd_30">
 
 
@@ -8447,9 +8451,9 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             : task === 12 ? 
             `
-            Какие из следующих утверждений являются <b>истинными высказываниями</b>?<hr class="hr-pd_20">
-            <b>1)</b> ${task2}<hr class="hr-pd_20">
-            <b>2)</b> ${task3}<hr class="hr-pd_20">
+            Какие из следующих утверждений являются <b>истинными высказываниями</b>?${span20()}
+            <b>1)</b> ${task2}${span20()}
+            <b>2)</b> ${task3}${span20()}
             <b>3)</b> ${task4}<hr class="hr-pd_30">
 
             В ответе запишите номера выбранных утверждений без пробелов, запятых и других дополнительных символов.
@@ -8457,14 +8461,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             :
             ``
           }
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            ${task1[0] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>1)</b> ${task2}<hr class="hr-pd_20">
-            ${task1[1] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>2)</b> ${task3}<hr class="hr-pd_20">
+            ${task1[0] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>1)</b> ${task2}${span20()}
+            ${task1[1] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>2)</b> ${task3}${span20()}
             ${task1[2] === 1 ? `<b style="color: green; ">ВЕРНО</b>`: `<b style="color: red; ">НЕВЕРНО</b>`} <b>3)</b> ${task4}<hr class="hr-pd_30">
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
@@ -8480,19 +8484,19 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         if (item === 11){
           return `
           ${task2} = ${task4[0]} • (${task3})
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task2} = ${task4[0]*task4[1]}a − ${task4[0]*task4[2]}b + ${task4[0]*task4[3]}
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task4[0]*task4[1]}a − ${task4[0]*task4[2]}b + ${task4[0]*task4[3]} − (${task2}) = 0
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task4[0]*task4[1]}a − ${task4[0]*task4[2]}b + ${task4[0]*task4[3]} − ${task4[4]}a + ${task4[5]}b − ${task4[6]} = 0
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b + ${task4[0]*task4[3]-task4[6]} = 0
-          <hr class="hr-pd_10">
+          ${span10()}
           ${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b =  −${task4[0]*task4[3]-task4[6]}
-          <hr class="hr-pd_20">
+          ${span20()}
           ${task1} = (${task4[0]*task4[1]-task4[4]}a − ${task4[0]*task4[2]-task4[5]}b) + ${(task4[0]*task4[3]-task4[6]) + (task4[7]-(task4[0]*task4[3]-task4[6]))}
-          <hr class="hr-pd_10">
+          ${span10()}
           (−${task4[0]*task4[3]-task4[6]}) + ${(task4[0]*task4[3]-task4[6]) + (task4[7]-(task4[0]*task4[3]-task4[6]))} = ${task4[7]-(task4[0]*task4[3]-task4[6])}
           
           `
@@ -8502,17 +8506,17 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Найдите значение выражения:&thinsp; ${task1}, если&thinsp; ${drobNum(task2, task3)} = ${task4[0]}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwenty(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8522,7 +8526,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Решите уравнение:&thinsp;  
           ${task === 21 ? `x<sup>3</sup> + ${task1[0]}x<sup>2</sup> = ${task1[1]}x + ${task1[2]}
            `
@@ -8543,14 +8547,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwenty(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8560,7 +8564,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           Решите систему уравнений:
           ${task === 31 ? 
             `
@@ -8590,14 +8594,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             $$
             `
           :``}
-          <hr class="hr-pd_20"> 
+          ${span20()} 
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwenty(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8608,7 +8612,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
         case 4:
           answerBlock += `
           <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> 
-          <hr class="hr-pd_10">
+          ${span10()}
           Решите неравенство:&thinsp;  
           ${task === 41 ? 
             `
@@ -8625,14 +8629,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             :
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwenty(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8655,7 +8659,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
           Два автомобиля одновременно отправляются в ${task1[0]}-километровый пробег. 
@@ -8678,15 +8682,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           :
           ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8696,7 +8700,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
           Два велосипедиста одновременно отправляются в ${task1[0]}-километровый пробег. 
@@ -8721,14 +8725,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
             :
             ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8738,7 +8742,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             `
           Поезд, двигаясь равномерно со скоростью ${task1[0]} км/ч, проезжает мимо пешехода, 
@@ -8754,14 +8758,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
             ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8771,7 +8775,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 41 ? 
             `
             Первые ${task1[0]} км автомобиль ехал со скоростью ${task1[1]} км/ч, следующие ${task1[2]} км — со скоростью ${task1[3]} км/ч, 
@@ -8785,14 +8789,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8802,7 +8806,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 5:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 51 ? 
             `
             Два бегуна одновременно стартовали в одном направлении из одного и того же места круговой трассы в беге на несколько кругов. 
@@ -8812,14 +8816,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8829,7 +8833,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 6:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 61 ? 
             `
             Моторная лодка прошла против течения реки ${task1[0]} км и вернулась в пункт отправления, затратив на обратный путь на ${task1[1]} часа меньше, 
@@ -8845,14 +8849,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8862,7 +8866,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 7:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 71 ? 
             `
            Баржа прошла по течению реки ${task1[0]} км и, повернув обратно, прошла ещё ${task1[1]} км, затратив на весь путь ${task1[2]} часа. 
@@ -8870,14 +8874,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
           : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8887,7 +8891,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 8:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 81 ? 
            `
            Теплоход проходит по течению реки до пункта назначения ${task1[0]} км и после стоянки возвращается в пункт отправления. 
@@ -8902,14 +8906,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            `
           : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8919,7 +8923,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 9:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 91 ? 
            `
            Первый рабочий за час делает на ${task1[0]} деталей больше, чем второй, и выполняет заказ, состоящий из ${task1[1]} деталей, 
@@ -8935,14 +8939,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            `
           : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8952,7 +8956,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 10:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 101 ? 
            `
            Первая труба пропускает на ${task1[0]} литров воды в минуту меньше, чем вторая труба. 
@@ -8967,14 +8971,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            `
           : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -8984,7 +8988,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 11:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 111 ? 
            `
            Имеются два сосуда, содержащие ${task1[0]} кг и ${task1[1]} кг раствора кислоты различной концентрации. 
@@ -9003,14 +9007,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            `
           : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9020,7 +9024,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 12:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 121 ? 
            `
            Свежие фрукты содержат ${task1[0]}% воды, а высушенные — ${task1[1]}%. 
@@ -9034,14 +9038,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
            `
           : 
             ``}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9064,11 +9068,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             Постройте график функции: 
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = <math style="font-size: 140%;">
                   <mfrac>
                     <mrow style="padding-bottom: 5px;">
@@ -9082,20 +9086,20 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                   </mfrac>
                 </math>
                             
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях k прямая y = kx имеет с графиком ровно одну общую точку.
             ` 
           : ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9105,11 +9109,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp;y = <math style="font-size: 140%;">
                   <mfrac>
                     <mn style="padding-bottom: 5px;">${task1[0]}x ${task1[2]}&thinsp;${task1[1]}</mn> 
@@ -9122,13 +9126,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     
                   </mfrac>
                 </math>
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях k прямая y = kx имеет с графиком ровно одну общую точку.
             ` 
           :  task === 22 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp;y = ${task2}
                 <math style="font-size: 140%;">
                   <mfrac>
@@ -9142,14 +9146,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     
                   </mfrac>
                 </math>
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m не имеет с графиком общих точек.
  
             ` 
           : task === 23 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp;y = 
                 <math style="font-size: 140%;">
                   <mfrac>
@@ -9167,20 +9171,20 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <mn style="padding-top: 5px;">${task2}</mn> 
                   </mfrac>
                 </math>
-            <hr class="hr-pd_20">
+            ${span20()}
             и определите, при каких значениях прямая имеет c прямая y = c имеет с графиком ровно одну общую точку. 
  
             ` 
           :
           ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9190,11 +9194,11 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${
             task === 31 ? `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             \\(
             \\begin{cases}
             ${task1}  \\\\
@@ -9210,13 +9214,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             \\end{array}
             \\)
             
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
          
             `
           : task === 32 ? `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             \\(
             \\begin{cases}
             ${task5}^2${task1}  \\\\
@@ -9229,13 +9233,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             \\quad при &thinsp;&thinsp;${task4}.
             \\end{aligned}
             \\)
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
  
             `
           : task === 33 ?  `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             \\(
             \\begin{cases}
             ${task5}^2${task1}  \\\\
@@ -9248,16 +9252,16 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             \\quad при &thinsp;&thinsp;${task4}.
             \\end{aligned}
             \\)
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m имеет с графиком 
             ${task1.length > 4 ? `одну или две общие точки`: `ровно одну общую точку`}.`
-          : ``} <hr class="hr-pd_20">`
+          : ``} ${span20()}`
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9267,51 +9271,51 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 4:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 41 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = |${supNum("x", 2)} ${task1} |
-            <hr class="hr-pd_20">
+            ${span20()}
             Какое наибольшее число общих точек может иметь график данной функции с прямой, параллельной оси абсцисс?
             `
           : task === 42 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = | x | • ${task1}
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
             `
           : task === 43 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = ${task1}
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m имеет с графиком ровно две общие точки.
             `
           : task === 44 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = ${supNum("x", 2)}${task1}
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m имеет с графиком ровно три общие точки.
             `
           : task === 45 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = ${task1}${supNum("x", 2)}${task2}
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m имеет с графиком ровно три общие точки.
             `
           : task === 46 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = <math style="font-size: 140%;">
                   <mfrac>
                     <mrow style="padding-bottom: 5px;">
@@ -9325,13 +9329,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     <mn style="padding-top: 5px;">${task3}</mn> 
                   </mfrac>
                 </math> 
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях m прямая y = m не имеет с графиком ни одной общей точки.
             `
           : task === 47 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = <math style="font-size: 140%;">
                   <mfrac>
                    <mn style="padding-bottom: 5px;">${task1}</mn> 
@@ -9344,13 +9348,13 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
                     
                   </mfrac>
                 </math> 
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях k прямая y = kx не имеет с графиком общих точек.
             `
           : task === 48 ? 
             `
             Постройте график функции:
-            <hr class="hr-pd_20">
+            ${span20()}
             &thinsp;&thinsp; y = 
             ${drobNum(1, 2)}
             <span style="display: inline-block;  font-size: 2.1em; font-family: san-serif;">(|</span> 
@@ -9358,7 +9362,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
              <span style="display: inline-block;  font-size: 2.1em; font-family: san-serif;">|</span>
               + ${drobNum("x", task1)} + ${drobNum(task1, "x")} 
               <span style="display: inline-block;  font-size: 2.1em; font-family: san-serif;">)</span>
-            <hr class="hr-pd_20">
+            ${span20()}
             Определите, при каких значениях k прямая y = kx не имеет с графиком общих точек. 
             `
             :
@@ -9366,14 +9370,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             `
             
             `}
-            <hr class="hr-pd_20">
+            ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9397,7 +9401,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             Катет и гипотенуза прямоугольного треугольника равны ${task1[0]} и ${task1[1]}. Найдите высоту, проведённую к гипотенузе.
@@ -9436,15 +9440,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           :
           ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9454,7 +9458,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
             Найдите боковую сторону AB трапеции ABCD, если углы ABC и BCD равны соответственно 
@@ -9488,14 +9492,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
           :
           ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9505,7 +9509,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             `
             Отрезки AB и CD являются хордами окружности. Найдите расстояние от центра окружности до хорды CD, 
@@ -9560,14 +9564,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             : 
             ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9592,7 +9596,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             В остроугольном треугольнике ABC проведены высоты AA<sub>1</sub> и CC<sub>1</sub>. Докажите, что углы CC<sub>1</sub>A<sub>1</sub> и CAA<sub>1</sub> равны.  
@@ -9637,15 +9641,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           :
           ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9655,7 +9659,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
             Основания BC и AD трапеции ABCD равны соответственно ${task1[0]} и ${task1[1]}, BD = ${task1[2]}. Докажите, что треугольники CBD и BDA подобны.
@@ -9682,14 +9686,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
           :
           ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9699,7 +9703,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             `
             ${task1}
@@ -9715,14 +9719,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             :
             ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9746,7 +9750,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
       switch(typeTask){
         case 1:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 11 ? 
             `
             В треугольнике ABC биссектриса BE и медиана AD перпендикулярны и имеют одинаковую длину, равную ${task1[0]}. Найдите стороны треугольника ABC.
@@ -9754,15 +9758,15 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           : 
           ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9772,7 +9776,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 2:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 21 ? 
             `
             В равнобедренную трапецию, периметр которой равен ${task1[0]}, 
@@ -9807,14 +9811,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
             ` 
           : 
           ``}
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
@@ -9824,7 +9828,7 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           return answerBlock
         case 3:
           answerBlock += `
-          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> <hr class="hr-pd_10">
+          <p class="p-num"><b>${Nomer}.</b><em>${numberTaskOpen(taskCounter)}</em> ${tumbler ? generateAuthor() : ""} ${generateHard()}</p> ${span10()}
           ${task === 31 ? 
             `
             Окружности радиусов ${task1[0]} и ${task1[1]} касаются внешним образом. 
@@ -9894,14 +9898,14 @@ export default function generateTaskHTML(taskKey, item, tumbler = true) {
           :
             ``}
           
-          <hr class="hr-pd_20">
+          ${span20()}
           `
           answerBlock += generateDate();
           answerBlock += generateHeader();
           answerBlock += `
-            <hr class="hr-pd_20">
+            ${span20()}
             ${reshTwentyOne(task)}
-            <hr class="hr-pd_20">
+            ${span20()}
             Ответ: <b>${taskAnswer}</b>`;
           answerBlock += generateFooter();
           if(tumbler === false){
