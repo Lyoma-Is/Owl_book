@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (checkbox) checkbox.checked = true;
         });
     }
-
+    
     function createCheckboxItem(value, labelText) {
         const container = document.createElement('div');
         container.className = 'checkbox-item';
@@ -121,6 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Сохраняем выбранные задания
         localStorage.setItem('selectedTasks', JSON.stringify(selectedTasks));
+        
+        const collectedAnswers = [];
 
         try {
             // Загружаем данные для выбранных заданий
@@ -144,12 +146,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (data && data.length > 0) {
                         const randomTask = data[Math.floor(Math.random() * data.length)];
                         tasksHTML += generateTaskHTML(taskKey, randomTask);
+
                     }
                 }
             }
             
             // Отображаем задания
             taskOutput.innerHTML = tasksHTML;
+ 
+
             
         } catch (error) {
             console.error('Ошибка генерации:', error);
@@ -160,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
     }
+
 
     // Вспомогательные функции для преобразования номеров заданий
     function getTaskNumber(key) {
@@ -236,3 +242,116 @@ const btnUp = {
     }
 };
 btnUp.addEventListener();
+
+/* ========================================
+ФУНКЦИОНАЛ ПЕЧАТИ
+======================================== */
+
+// Внедряем стили для печати динамически
+function injectPrintStyles() {
+  if (document.getElementById('owl-print-styles')) return;
+  
+  const style = document.createElement('style');
+  style.id = 'owl-print-styles';
+  style.media = 'print';
+  style.textContent = `
+    @media print {
+      header, footer, nav, .controls, .checkbox-container,
+      .generate-btn, .select-all, .deselect-all,
+      .input-colv, .btn-up, #button-print, hr, .text-inform, .print, .download{
+        display: none !important;
+      }
+     *{
+      font-size: 9pt !important; 
+      padding: 2px 0;
+      margin: 2px 0;  
+      line-height: 1.3 !important;
+      -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+      .task-numbers__block {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+            
+      }
+      .task-numbers__block img {
+        max-width: 50% !important;
+        height: auto;
+        page-break-inside: avoid;
+      }
+      a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        color: #555;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// Обработчик кнопки печати
+function initPrintHandler() {
+  const printBtn = document.querySelector('#button-print');
+  if (!printBtn) return;
+  
+  // Основная кнопка
+  printBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    doPrint();
+  });
+  
+  // Клик по img внутри кнопки (если есть)
+  const img = printBtn.querySelector('img');
+  if (img) {
+    img.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      doPrint();
+    });
+    // Убираем лишние события с картинки
+    img.style.pointerEvents = 'none';
+  }
+}
+
+// Логика печати
+function doPrint() {
+  const output = document.querySelector('.task-numbers__block');
+  
+  if (!output || !output.innerHTML.trim()) {
+    alert('📄 Сначала сгенерируйте задания, затем печатайте');
+    return;
+  }
+  
+  // Внедряем стили (если ещё не внедрены)
+  injectPrintStyles();
+  
+  // Добавляем класс для подготовки к печати
+  document.body.classList.add('owl-printing');
+  
+  // Небольшая задержка для применения стилей
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => {
+      document.body.classList.remove('owl-printing');
+    }, 100);
+  }, 50);
+}
+
+// Инициализируем после DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    injectPrintStyles();
+    initPrintHandler();
+  });
+} else {
+  injectPrintStyles();
+  initPrintHandler();
+}
+
